@@ -43,12 +43,12 @@ export default function SignupPage() {
               ["メールアドレス", "email", "email"],
               ["パスワード", "password", "password"],
               ["パスワード確認", "passwordConfirm", "password"],
-              ["ニックネーム（任意）", "nickname", "text"]
+              ["ニックネーム", "nickname", "text"]
             ].map(([label, name, type], i) => (
               <label key={label} className="grid gap-2 font-bold">
                 {label}
                 <div className="relative">
-                  <input name={name} required={i < 3} className="h-14 w-full rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder={i === 0 ? "例）riketokuo@example.com" : ""} type={type} />
+                  <input name={name} required className="h-14 w-full rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder={i === 0 ? "例）riketokuo@example.com" : i === 3 ? "ランキング等に表示される名前" : ""} type={type} />
                   {i === 1 || i === 2 ? <Eye className="absolute right-4 top-4 text-[var(--color-muted)]" size={20} /> : null}
                 </div>
               </label>

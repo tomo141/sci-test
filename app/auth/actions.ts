@@ -12,7 +12,7 @@ const signupSchema = z
     email: z.string().email(),
     password: z.string().min(8),
     passwordConfirm: z.string().min(8),
-    nickname: z.string().max(40).optional(),
+    nickname: z.string().trim().min(1).max(40),
     terms: z.string().optional(),
     marketingConsent: z.string().optional(),
     anonymousSessionId: z.string().optional()
@@ -27,6 +27,13 @@ const loginSchema = z.object({
 
 const resetSchema = z.object({
   email: z.string().email()
+});
+
+const profileSchema = z.object({
+  nickname: z.string().trim().min(1).max(40),
+  fullName: z.string().trim().max(80).optional(),
+  highestEducation: z.string().trim().max(80).optional(),
+  specialty: z.string().trim().max(80).optional()
 });
 
 export async function signupAction(formData: FormData) {
@@ -73,6 +80,36 @@ export async function signupAction(formData: FormData) {
   }
 
   redirect("/mypage");
+}
+
+export async function updateProfileAction(formData: FormData) {
+  const parsed = profileSchema.safeParse(Object.fromEntries(formData));
+  if (!parsed.success) redirect("/mypage?profile=invalid");
+
+  const supabase = await createServerSupabaseClient();
+  const user = await supabase?.auth.getUser();
+  const userId = user?.data.user?.id;
+  if (!supabase || !userId) redirect("/login");
+
+  const { nickname, fullName, highestEducation, specialty } = parsed.data;
+  const { error: profileError } = await supabase
+    .from("profiles")
+    .update({
+      nickname,
+      full_name: fullName || null,
+      updated_at: new Date().toISOString()
+    })
+    .eq("id", userId);
+  if (profileError) redirect(`/mypage?profile=${encodeURIComponent(profileError.message)}`);
+
+  const { error: educationError } = await supabase.from("education_profiles").upsert({
+    user_id: userId,
+    highest_education: highestEducation || null,
+    specialty: specialty || null
+  });
+  if (educationError) redirect(`/mypage?profile=${encodeURIComponent(educationError.message)}`);
+
+  redirect("/mypage?profile=saved");
 }
 
 export async function loginAction(formData: FormData) {
