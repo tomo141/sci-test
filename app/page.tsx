@@ -1,20 +1,17 @@
 import Image from "next/image";
-import { Beaker, BookOpen, Crown, FlaskConical, Trophy } from "lucide-react";
+import { BookOpen, Crown, FlaskConical, Trophy } from "lucide-react";
 import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
-import { ScoreDisplay } from "@/components/ui/ScoreDisplay";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { domains, domainIcons } from "@/src/lib/data/taxonomy";
+import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
+import { LocalScoreSummary } from "@/components/profile/LocalScoreSummary";
 
-const top3 = [
-  ["はやかわ ゆい", 956],
-  ["みずしま こういち", 892],
-  ["おかもと たかし", 881]
-];
+export default async function HomePage() {
+  const top3 = await getPublicLeaderboard(3);
 
-export default function HomePage() {
   return (
     <>
       <SiteHeaderWithAuth />
@@ -65,24 +62,27 @@ export default function HomePage() {
               <AppButton href="/ranking" variant="ghost">もっと見る</AppButton>
             </div>
             <div className="grid gap-4">
-              {top3.map(([name, score], index) => (
-                <div key={name} className="flex items-center justify-between rounded-2xl border border-[var(--color-border)] p-3">
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-accent-yellow-100)] font-black text-[var(--color-warning-700)]">{index + 1}</span>
-                    <p className="font-black">{name}</p>
+              {top3.length ? (
+                top3.map((row, index) => (
+                  <div key={`${row.rank}-${row.nickname}`} className="flex items-center justify-between rounded-2xl border border-[var(--color-border)] p-3">
+                    <div className="flex items-center gap-3">
+                      <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-accent-yellow-100)] font-black text-[var(--color-warning-700)]">{row.rank || index + 1}</span>
+                      <p className="font-black">{row.nickname}</p>
+                    </div>
+                    <p className="text-2xl font-black text-[var(--color-primary-700)]">{row.score}</p>
                   </div>
-                  <p className="text-2xl font-black text-[var(--color-primary-700)]">{score}</p>
+                ))
+              ) : (
+                <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-primary-50)] p-4">
+                  <p className="font-black">ランキングはまだ集計前です</p>
+                  <p className="mt-2 text-sm leading-7 text-[var(--color-ink-soft)]">受験結果が保存されると、公開用ニックネームとスコアだけが表示されます。</p>
                 </div>
-              ))}
+              )}
             </div>
           </AppCard>
           <AppCard>
-            <h2 className="mb-5 text-xl font-black">あなたの科学スコア（サンプル）</h2>
-            <ScoreDisplay score={763} />
-            <div className="mt-4 flex flex-wrap gap-3">
-              <StatusBadge tone="yellow"><Crown size={14} /> Aランク相当</StatusBadge>
-              <StatusBadge>上位 12.4%</StatusBadge>
-            </div>
+            <h2 className="mb-5 text-xl font-black">あなたの科学スコア</h2>
+            <LocalScoreSummary />
             <p className="mt-5 leading-7 text-[var(--color-ink-soft)]">分野別のバランスから、得意分野と次に伸ばす領域を見つけられます。</p>
           </AppCard>
         </section>
