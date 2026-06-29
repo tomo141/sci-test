@@ -5,10 +5,12 @@ import { Download } from "lucide-react";
 import { AppButton } from "@/components/ui/AppButton";
 
 export function SaveResultButton({ score, scoreLow, scoreHigh, answerCount }: { score: number; scoreLow: number; scoreHigh: number; answerCount: number }) {
-  const [status, setStatus] = useState<"idle" | "saving" | "saved" | "login">("idle");
+  const [status, setStatus] = useState<"idle" | "saving" | "saved" | "login" | "error">("idle");
+  const [message, setMessage] = useState("");
 
   const save = async () => {
     setStatus("saving");
+    setMessage("");
     const sessionId = window.localStorage.getItem("sci-test-session-id") || "local-preview";
     const response = await fetch("/api/exam/save", {
       method: "POST",
@@ -19,15 +21,32 @@ export function SaveResultButton({ score, scoreLow, scoreHigh, answerCount }: { 
       setStatus("saved");
       return;
     }
-    setStatus("login");
+    const payload = await response?.json().catch(() => null);
+    if (response?.status === 401) {
+      setStatus("login");
+      setMessage("ランキングに反映するにはログインが必要です。");
+      return;
+    }
+    setStatus("error");
+    setMessage(payload?.error ? `保存できませんでした：${payload.error}` : "保存できませんでした。少し時間をおいてもう一度お試しください。");
   };
 
   if (status === "saved") return <AppButton variant="secondary">保存しました</AppButton>;
-  if (status === "login") return <AppButton href="/signup" variant="secondary">登録して結果を保存</AppButton>;
+  if (status === "login") {
+    return (
+      <div className="grid gap-2">
+        <AppButton href="/login" variant="secondary">ログインして結果を保存</AppButton>
+        <p className="text-sm font-bold text-[var(--color-muted)]">{message}</p>
+      </div>
+    );
+  }
   return (
-    <AppButton onClick={save} disabled={status === "saving"} variant="secondary">
-      <Download />
-      {status === "saving" ? "保存中" : "結果を保存"}
-    </AppButton>
+    <div className="grid gap-2">
+      <AppButton onClick={save} disabled={status === "saving"} variant="secondary">
+        <Download />
+        {status === "saving" ? "保存中" : "結果を保存"}
+      </AppButton>
+      {status === "error" ? <p className="text-sm font-bold text-[var(--color-danger-700)]">{message}</p> : null}
+    </div>
   );
 }

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createServerSupabaseClient } from "@/src/lib/supabase/server";
+import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 
 const saveSchema = z.object({
   sessionId: z.string(),
@@ -16,12 +16,24 @@ export async function POST(request: Request) {
 
   const supabase = await createServerSupabaseClient();
   const user = await supabase?.auth.getUser();
-  const userId = user?.data.user?.id;
+  const authUser = user?.data.user;
+  const userId = authUser?.id;
   if (!supabase || !userId) {
     return NextResponse.json({ error: "login required" }, { status: 401 });
   }
 
-  const { error } = await supabase.from("score_history").insert({
+  const writeClient = createServiceRoleClient() || supabase;
+  const email = authUser.email || "";
+  const nickname = typeof authUser.user_metadata?.nickname === "string" ? authUser.user_metadata.nickname : null;
+  const { error: profileError } = await writeClient.from("profiles").upsert({
+    id: userId,
+    email,
+    nickname,
+    updated_at: new Date().toISOString()
+  });
+  if (profileError) return NextResponse.json({ error: profileError.message }, { status: 500 });
+
+  const { error } = await writeClient.from("score_history").insert({
     user_id: userId,
     session_id: parsed.data.sessionId.startsWith("local-") ? null : parsed.data.sessionId,
     score: parsed.data.score,
