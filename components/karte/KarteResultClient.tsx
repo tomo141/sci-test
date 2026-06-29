@@ -56,6 +56,15 @@ export function KarteResultClient() {
     new Set(answers.map((answer) => answer.domain)).size >= 10 ? "10分野踏破" : null
   ].filter(Boolean) as string[];
 
+  if (!loaded) {
+    return (
+      <AppCard className="mt-6">
+        <h2 className="text-2xl font-black">カルテを読み込んでいます</h2>
+        <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">この端末に保存された回答履歴を確認しています。</p>
+      </AppCard>
+    );
+  }
+
   if (loaded && !answers.length) {
     return (
       <AppCard className="mt-6">
