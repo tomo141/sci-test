@@ -8,6 +8,9 @@ import { domains } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
 import { DomainIcon } from "@/components/ui/DomainIcon";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function RankingPage() {
   const rows = await getPublicLeaderboard(100);
 
