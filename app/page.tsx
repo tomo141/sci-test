@@ -30,7 +30,7 @@ export default async function HomePage() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <AppButton href="/exam" className="text-base">今すぐ腕試しを始める</AppButton>
-                <AppButton href="/exam" variant="secondary" className="text-base">あなたの科学力を診断する</AppButton>
+                <AppButton href="/exam" variant="secondary" className="text-base">本試験を受ける（工事中）</AppButton>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <StatusBadge>ログインなしで受験開始</StatusBadge>
