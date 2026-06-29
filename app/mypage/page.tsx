@@ -24,6 +24,8 @@ type EducationProfileRow = {
   specialty: string | null;
 };
 
+const educationOptions = ["博士号取得済み", "修士号取得済み", "大学卒", "短大卒", "高卒", "中卒", "専門学校卒", "その他"];
+
 export default async function MyPage() {
   const supabase = await createServerSupabaseClient();
   const user = await supabase?.auth.getUser();
@@ -31,7 +33,7 @@ export default async function MyPage() {
 
   const [{ data: profile }, { data: education }, { data: histories }] = userId && supabase
     ? await Promise.all([
-        supabase.from("profiles").select("nickname, full_name, training_unlocked_at, marketing_consent").eq("id", userId).maybeSingle(),
+        supabase.from("profiles").select("nickname, training_unlocked_at, marketing_consent").eq("id", userId).maybeSingle(),
         supabase.from("education_profiles").select("highest_education, specialty").eq("user_id", userId).maybeSingle(),
         supabase.from("score_history").select("score, answer_count, created_at").eq("user_id", userId).order("created_at", { ascending: false }).limit(10)
       ])
@@ -44,6 +46,9 @@ export default async function MyPage() {
   const latest = ((histories || []) as ScoreHistoryRow[])[0];
   const latestScore = latest ? Math.round(Number(latest.score)) : null;
   const answerCount = latest ? Number(latest.answer_count) : 0;
+  const educationRow = education as EducationProfileRow | null;
+  const selectedEducation = new Set((educationRow?.highest_education || "").split(",").filter(Boolean));
+  const nickname = profile?.nickname || (user?.data.user?.user_metadata?.nickname as string | undefined) || "ゲスト";
 
   return (
     <>
@@ -55,7 +60,7 @@ export default async function MyPage() {
           <AppCard className="flex flex-col gap-5 md:flex-row md:items-center">
             <Image src="/characters/tomoyoshi/sheet.png" alt="プロフィール画像" width={150} height={150} className="h-36 w-36 rounded-full object-cover object-[50%_12%]" />
             <div className="flex-1">
-              <h2 className="text-2xl font-black">{profile?.nickname || "ゲスト"} <Pencil className="inline text-[var(--color-primary-700)]" size={18} /></h2>
+              <h2 className="text-2xl font-black">{nickname} <Pencil className="inline text-[var(--color-primary-700)]" size={18} /></h2>
               <p className="mt-2 font-bold text-[var(--color-muted)]">{latestScore ? rankTitle(latestScore) : "結果未保存"}</p>
               {latestScore ? <div className="mt-5"><ScoreDisplay score={latestScore} /></div> : <MyPageLocalSummary />}
               <div className="mt-5 flex flex-wrap gap-3"><AppButton href="#profile-edit" variant="secondary"><Pencil />プロフィール編集</AppButton><AppButton href="/karte"><Download />結果を保存</AppButton></div>
@@ -68,19 +73,22 @@ export default async function MyPage() {
           <form action={updateProfileAction} className="mt-5 grid gap-4 md:grid-cols-2">
             <label className="grid gap-2 text-sm font-bold">
               ニックネーム
-              <input name="nickname" required defaultValue={profile?.nickname || ""} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="ランキング等に表示される名前" />
+              <input name="nickname" required defaultValue={nickname === "ゲスト" ? "" : nickname} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="ランキング等に表示される名前" />
             </label>
-            <label className="grid gap-2 text-sm font-bold">
-              本名（任意）
-              <input name="fullName" defaultValue={profile?.full_name || ""} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="非公開" />
-            </label>
-            <label className="grid gap-2 text-sm font-bold">
-              最終学歴（任意）
-              <input name="highestEducation" defaultValue={(education as EducationProfileRow | null)?.highest_education || ""} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="例）大学卒、大学院修了など" />
-            </label>
-            <label className="grid gap-2 text-sm font-bold">
+            <fieldset className="grid gap-3 text-sm font-bold md:col-span-2">
+              <legend>学歴（複数選択可）</legend>
+              <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+                {educationOptions.map((option) => (
+                  <label key={option} className="flex items-center gap-2 rounded-2xl border border-[var(--color-border)] px-4 py-3">
+                    <input name="education" type="checkbox" value={option} defaultChecked={selectedEducation.has(option)} className="h-5 w-5" />
+                    <span>{option}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+            <label className="grid gap-2 text-sm font-bold md:col-span-2">
               専門分野（任意）
-              <input name="specialty" defaultValue={(education as EducationProfileRow | null)?.specialty || ""} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="例）化学、情報科学など" />
+              <input name="specialty" defaultValue={educationRow?.specialty || ""} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="例）化学、情報科学など" />
             </label>
             <div className="md:col-span-2">
               <AppButton type="submit">プロフィールを保存</AppButton>

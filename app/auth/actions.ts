@@ -31,8 +31,7 @@ const resetSchema = z.object({
 
 const profileSchema = z.object({
   nickname: z.string().trim().min(1).max(40),
-  fullName: z.string().trim().max(80).optional(),
-  highestEducation: z.string().trim().max(80).optional(),
+  education: z.array(z.string().trim().max(40)).max(8),
   specialty: z.string().trim().max(80).optional()
 });
 
@@ -83,7 +82,11 @@ export async function signupAction(formData: FormData) {
 }
 
 export async function updateProfileAction(formData: FormData) {
-  const parsed = profileSchema.safeParse(Object.fromEntries(formData));
+  const parsed = profileSchema.safeParse({
+    nickname: formData.get("nickname"),
+    education: formData.getAll("education"),
+    specialty: formData.get("specialty")
+  });
   if (!parsed.success) redirect("/mypage?profile=invalid");
 
   const supabase = await createServerSupabaseClient();
@@ -91,20 +94,22 @@ export async function updateProfileAction(formData: FormData) {
   const userId = user?.data.user?.id;
   if (!supabase || !userId) redirect("/login");
 
-  const { nickname, fullName, highestEducation, specialty } = parsed.data;
-  const { error: profileError } = await supabase
-    .from("profiles")
-    .update({
-      nickname,
-      full_name: fullName || null,
-      updated_at: new Date().toISOString()
-    })
-    .eq("id", userId);
+  const { nickname, education, specialty } = parsed.data;
+  const email = user.data.user?.email;
+  if (!email) redirect("/login");
+
+  const { error: profileError } = await supabase.from("profiles").upsert({
+    id: userId,
+    email,
+    nickname,
+    full_name: null,
+    updated_at: new Date().toISOString()
+  });
   if (profileError) redirect(`/mypage?profile=${encodeURIComponent(profileError.message)}`);
 
   const { error: educationError } = await supabase.from("education_profiles").upsert({
     user_id: userId,
-    highest_education: highestEducation || null,
+    highest_education: education.length ? education.join(",") : null,
     specialty: specialty || null
   });
   if (educationError) redirect(`/mypage?profile=${encodeURIComponent(educationError.message)}`);
