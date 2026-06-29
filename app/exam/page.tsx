@@ -4,7 +4,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { QuestionFeedbackKind } from "@/src/lib/exam/feedback";
 import { shuffleChoices } from "@/src/lib/exam/shuffleChoices";
 import Link from "next/link";
-import { Clock, Target } from "lucide-react";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -244,7 +243,7 @@ export default function ExamPage() {
             </p>
           ) : null}
         </div>
-        <AppCard className="mb-6 grid gap-5 md:grid-cols-4">
+        <AppCard className="mb-6 grid gap-5 md:grid-cols-3">
           <div>
             <p className="text-sm font-bold text-[var(--color-muted)]">{progressLabel}</p>
             <ProgressBar
@@ -253,9 +252,9 @@ export default function ExamPage() {
             />
           </div>
           <div>
-            <p className="text-sm font-bold text-[var(--color-muted)]">正答数 / 出題数</p>
+            <p className="text-sm font-bold text-[var(--color-muted)]">正答数 / 出題数（正答率）</p>
             <p className="text-3xl font-black text-[var(--color-primary-800)]">
-              {correctCount} / {answers.length}
+              {correctCount} / {answers.length} <span className="text-xl">（{rate}%）</span>
             </p>
           </div>
           <div>
@@ -264,68 +263,43 @@ export default function ExamPage() {
               {estimate.scoreRange[0]} 〜 {estimate.scoreRange[1]}
             </p>
           </div>
-          <div>
-            <p className="text-sm font-bold text-[var(--color-muted)]">経過時間</p>
-            <p className="flex items-center gap-2 text-3xl font-black text-[var(--color-primary-800)]">
-              <Clock />
-              06:48
-            </p>
-          </div>
         </AppCard>
         <div ref={questionTopRef} className="scroll-mt-4" />
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-          <div>
-            {displayQuestion ? (
-              <QuestionCard
-                question={displayQuestion}
-                index={answers.length}
-                selected={selected}
-                answered={answered}
-                feedback={answerFeedback}
-                onChoiceClick={(choiceIndex) => void answer(choiceIndex)}
-                activeFeedback={activeFeedback}
-                onFeedbackChange={setActiveFeedback}
-              />
-            ) : null}
-            <p className="mt-3 text-xs leading-6 text-[var(--color-muted)]">
-              ※検索や生成AIを使わず、今の自分の科学力で挑戦することをおすすめします。正答率が概ね60〜80％になるよう、回答状況に応じて問題の難しさを調整します。
-            </p>
-          </div>
-          <aside className="grid content-start gap-4">
-            <AppCard>
-              <h2 className="mb-4 text-xl font-black">現在の状況</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-sm font-bold text-[var(--color-muted)]">正答率</p>
-                  <p className="text-3xl font-black text-[var(--color-primary-800)]">{rate}%</p>
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-[var(--color-muted)]">診断精度</p>
-                  <p className="text-3xl font-black text-[var(--color-primary-800)]">{estimate.accuracyLabel}</p>
-                </div>
-              </div>
-              <div className="mt-5 flex items-start gap-3 rounded-2xl bg-[var(--color-primary-50)] p-4">
-                <Target className="text-[var(--color-primary-700)]" />
-                <p className="text-sm font-bold leading-7">いいペースだね！この調子でがんばろう！</p>
-              </div>
-            </AppCard>
-            {answered ? (
-              <div className="grid gap-3">
-                <AppButton onClick={next}>次の問題へ</AppButton>
-                {examConfig.canViewQuickResult(answers.length) ? (
-                  <AppButton href="/result" variant="secondary">
-                    終了してカルテを見る
-                  </AppButton>
-                ) : null}
-                {examConfig.canViewKarte(answers.length) ? (
-                  <AppButton href="/karte" variant="secondary">
-                    腕試しカルテを見る
-                  </AppButton>
-                ) : null}
-              </div>
-            ) : null}
-          </aside>
-        </div>
+        <section className="mt-6">
+          {displayQuestion ? (
+            <QuestionCard
+              question={displayQuestion}
+              index={answers.length}
+              selected={selected}
+              answered={answered}
+              feedback={answerFeedback}
+              onChoiceClick={(choiceIndex) => void answer(choiceIndex)}
+              activeFeedback={activeFeedback}
+              onFeedbackChange={setActiveFeedback}
+            />
+          ) : null}
+          {answered ? (
+            <div className="mt-6 grid gap-3 md:grid-cols-2">
+              <AppButton onClick={next}>次の問題へ</AppButton>
+              {examConfig.canViewKarte(answers.length) ? (
+                <AppButton href="/karte" variant="secondary">
+                  腕試しカルテを見る
+                </AppButton>
+              ) : examConfig.canViewQuickResult(answers.length) ? (
+                <AppButton href="/result" variant="secondary">
+                  腕試しカルテを見る
+                </AppButton>
+              ) : (
+                <AppButton href="/karte" variant="secondary">
+                  腕試しカルテを見る
+                </AppButton>
+              )}
+            </div>
+          ) : null}
+          <p className="mt-3 text-xs leading-6 text-[var(--color-muted)]">
+            ※検索や生成AIを使わず、今の自分の科学力で挑戦することをおすすめします。正答率が概ね60〜80％になるよう、回答状況に応じて問題の難しさを調整します。
+          </p>
+        </section>
       </main>
     </>
   );
