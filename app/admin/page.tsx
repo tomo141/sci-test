@@ -4,10 +4,39 @@ import { AppButton } from "@/components/ui/AppButton";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { getAdminDashboardData } from "@/src/lib/admin/dashboard";
+import { isAdminUser } from "@/src/lib/admin/role";
+import { createServerSupabaseClient } from "@/src/lib/supabase/server";
 
 const nav = ["ダッシュボード", "受験状況", "問題管理", "ユーザー管理", "お知らせ管理", "トレーニング管理", "ランキング管理", "メルマガ管理", "設定", "ログ管理"];
 
+function NoAdminAccess() {
+  return (
+    <main className="grid min-h-screen place-items-center bg-[var(--color-page)] p-6">
+      <AppCard className="max-w-xl text-center">
+        <h1 className="text-3xl font-black">管理者権限がありません</h1>
+        <p className="mt-4 leading-8 text-[var(--color-ink-soft)]">
+          このページは管理者メールアドレスでログインしているユーザーのみ閲覧できます。
+        </p>
+        <AppButton href="/" className="mt-6">トップへ戻る</AppButton>
+      </AppCard>
+    </main>
+  );
+}
+
 export default async function AdminPage() {
+  const supabase = await createServerSupabaseClient();
+  const user = await supabase?.auth.getUser();
+  const userId = user?.data.user?.id;
+  const admin = supabase && userId
+    ? await isAdminUser(
+        supabase,
+        userId,
+        user.data.user?.email ?? (user.data.user?.user_metadata?.email as string | undefined)
+      )
+    : false;
+
+  if (!admin) return <NoAdminAccess />;
+
   const dashboard = await getAdminDashboardData();
   const kpis = [
     ["受験開始数", `${dashboard.examStarts.toLocaleString()}人`, "実データ"],

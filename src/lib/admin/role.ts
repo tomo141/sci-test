@@ -46,6 +46,5 @@ export async function isAdminUser(
     return true;
   }
 
-  const { data: profile } = await supabase.from("profiles").select("role").eq("id", userId).maybeSingle();
-  return profile?.role === "admin";
+  return false;
 }
