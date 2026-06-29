@@ -5,7 +5,7 @@ import type { AnswerFeedback } from "@/src/lib/exam/explanation";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl border border-[var(--color-border)] bg-white p-4">
+    <div>
       <p className="font-black text-[var(--color-primary-800)]">{title}</p>
       <div className="mt-2 leading-7 text-[var(--color-ink-soft)]">{children}</div>
     </div>
@@ -14,6 +14,21 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export function QuestionExplanation({ feedback }: { feedback: AnswerFeedback }) {
   const ResultIcon = feedback.isCorrect ? CheckCircle2 : XCircle;
+  const sections = [
+    { title: "解説", body: feedback.conclusion },
+    feedback.detailedExplanation
+      ? { title: "詳しい解説", body: feedback.detailedExplanation }
+      : feedback.basicTerms
+        ? { title: "基本用語", body: feedback.basicTerms }
+        : null,
+    !feedback.isCorrect && feedback.nearMiss ? { title: "惜しいポイント", body: feedback.nearMiss } : null,
+    !feedback.isCorrect && feedback.selectedChoice
+      ? { title: `あなたが選んだ${feedback.selectedChoice.label}について`, body: feedback.selectedChoice.explanation }
+      : null,
+    feedback.basicTerms && feedback.detailedExplanation ? { title: "基本用語", body: feedback.basicTerms } : null
+  ].filter(Boolean) as { title: string; body: React.ReactNode }[];
+  const leftSections = sections.filter((_, index) => index % 2 === 0);
+  const rightSections = sections.filter((_, index) => index % 2 === 1);
 
   return (
     <div className="grid gap-4">
@@ -29,26 +44,22 @@ export function QuestionExplanation({ feedback }: { feedback: AnswerFeedback }) 
         </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <Section title="解説">{feedback.conclusion}</Section>
-
-        {feedback.detailedExplanation ? (
-          <Section title="詳しい解説">{feedback.detailedExplanation}</Section>
-        ) : feedback.basicTerms ? (
-          <Section title="基本用語">{feedback.basicTerms}</Section>
-        ) : null}
-
-        {!feedback.isCorrect && feedback.nearMiss ? (
-          <Section title="惜しいポイント">{feedback.nearMiss}</Section>
-        ) : null}
-
-        {!feedback.isCorrect && feedback.selectedChoice ? (
-          <Section title={`あなたが選んだ${feedback.selectedChoice.label}について`}>
-            <p>{feedback.selectedChoice.explanation}</p>
-          </Section>
-        ) : null}
-
-        {feedback.basicTerms && feedback.detailedExplanation ? <Section title="基本用語">{feedback.basicTerms}</Section> : null}
+      <div className="grid gap-5 md:hidden">
+        {sections.map((section) => (
+          <Section key={section.title} title={section.title}>{section.body}</Section>
+        ))}
+      </div>
+      <div className="hidden gap-8 md:grid md:grid-cols-2">
+        <div className="grid content-start gap-5">
+          {leftSections.map((section) => (
+            <Section key={section.title} title={section.title}>{section.body}</Section>
+          ))}
+        </div>
+        <div className="grid content-start gap-5">
+          {rightSections.map((section) => (
+            <Section key={section.title} title={section.title}>{section.body}</Section>
+          ))}
+        </div>
       </div>
     </div>
   );

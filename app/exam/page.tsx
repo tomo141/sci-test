@@ -26,6 +26,7 @@ const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
 
 export default function ExamPage() {
   const questionTopRef = useRef<HTMLDivElement>(null);
+  const questionTextRef = useRef<HTMLHeadingElement>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -114,6 +115,14 @@ export default function ExamPage() {
     if (selectedIndex === null || !currentQuestion || !shuffledQuestion || !examPlan) return;
     setSelected(selectedIndex);
     setAnswered(true);
+    requestAnimationFrame(() => {
+      const targetTop = questionTextRef.current?.getBoundingClientRect().top;
+      if (targetTop == null) return;
+      const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = "auto";
+      window.scrollTo({ top: window.scrollY + targetTop, behavior: "auto" });
+      document.documentElement.style.scrollBehavior = previousScrollBehavior;
+    });
     const originalChoiceIndex = shuffledQuestion.displayToOriginal[selectedIndex];
     const currentAnswer: ClientExamAnswer = {
       questionId: currentQuestion.id,
@@ -273,13 +282,14 @@ export default function ExamPage() {
               selected={selected}
               answered={answered}
               feedback={answerFeedback}
+              questionTextRef={questionTextRef}
               onChoiceClick={(choiceIndex) => void answer(choiceIndex)}
               activeFeedback={activeFeedback}
               onFeedbackChange={setActiveFeedback}
             />
           ) : null}
           {answered ? (
-            <div className="mt-6 grid gap-3 md:grid-cols-2">
+            <div className="mt-6 grid gap-3">
               <AppButton onClick={next}>次の問題へ</AppButton>
               {examConfig.canViewKarte(answers.length) ? (
                 <AppButton href="/karte" variant="secondary">

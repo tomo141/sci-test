@@ -1,5 +1,6 @@
 "use client";
 
+import type { RefObject } from "react";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { QuestionExplanation } from "@/components/exam/QuestionExplanation";
 import { QuestionFeedbackActions } from "@/components/exam/QuestionFeedbackActions";
@@ -17,7 +18,8 @@ export function QuestionCard({
   onChoiceClick,
   activeFeedback,
   onFeedbackChange,
-  feedback = null
+  feedback = null,
+  questionTextRef
 }: {
   question: Question;
   index: number;
@@ -27,6 +29,7 @@ export function QuestionCard({
   activeFeedback: QuestionFeedbackKind | null;
   onFeedbackChange: (kind: QuestionFeedbackKind | null) => void;
   feedback?: AnswerFeedback | null;
+  questionTextRef?: RefObject<HTMLHeadingElement | null>;
 }) {
   return (
     <div className="rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-card md:p-6">
@@ -34,7 +37,7 @@ export function QuestionCard({
         <StatusBadge>第 {index + 1} 問</StatusBadge>
         <StatusBadge tone="blue">{question.domain}</StatusBadge>
       </div>
-      <h1 className="mb-6 text-2xl font-black leading-10 md:text-3xl">{question.question}</h1>
+      <h1 ref={questionTextRef} className="mb-6 scroll-mt-0 text-2xl font-black leading-10 md:text-3xl">{question.question}</h1>
       <div className="grid gap-4 md:grid-cols-2">
         {question.choices.map((choice, choiceIndex) => {
           const label = String.fromCharCode(65 + choiceIndex);
