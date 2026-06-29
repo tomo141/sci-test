@@ -6,12 +6,12 @@ import { SiteMobileMenu } from "@/components/layout/SiteMobileMenu";
 
 const nav: [string, string][] = [
   ["トップ", "/"],
-  ["検定について", "/terms"],
+  ["検定について", "/about"],
   ["受験する", "/exam"],
   ["トレーニング", "/training"],
   ["ランキング", "/ranking"],
   ["マイページ", "/mypage"],
-  ["ヘルプ", "/privacy"]
+  ["ヘルプ", "/help"]
 ];
 
 type Props = {

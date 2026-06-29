@@ -6,6 +6,7 @@ import { AppCard } from "@/components/ui/AppCard";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { domains } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
+import { DomainIcon } from "@/components/ui/DomainIcon";
 
 export default async function RankingPage() {
   const rows = await getPublicLeaderboard(100);
@@ -45,7 +46,18 @@ export default async function RankingPage() {
             )}
           </section>
           <aside className="grid gap-5">
-            <AppCard><h2 className="mb-4 text-xl font-black">分野選択</h2><div className="grid grid-cols-2 gap-2">{["総合", ...domains].map((d) => <button key={d} className="rounded-xl border border-[var(--color-border)] p-3 text-sm font-bold">{d}</button>)}</div></AppCard>
+            <AppCard>
+              <h2 className="mb-4 text-xl font-black">分野選択</h2>
+              <div className="grid grid-cols-2 gap-2">
+                <button className="rounded-xl border border-[var(--color-primary-700)] bg-[var(--color-primary-50)] p-3 text-sm font-bold text-[var(--color-primary-800)]">総合</button>
+                {domains.map((domain) => (
+                  <button key={domain} className="flex items-center gap-2 rounded-xl border border-[var(--color-border)] p-2 text-left text-xs font-bold">
+                    <DomainIcon domain={domain} size="sm" />
+                    <span>{domain}</span>
+                  </button>
+                ))}
+              </div>
+            </AppCard>
             <AppCard><h2 className="text-xl font-black">あなたの順位</h2><p className="mt-4 text-lg font-bold leading-8 text-[var(--color-ink-soft)]">ログインして結果を保存すると、自分の順位を確認できます。</p><AppButton href="/karte" className="mt-5 w-full">カルテで詳細を見る</AppButton></AppCard>
           </aside>
         </div>

@@ -5,9 +5,10 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { StatusBadge } from "@/components/ui/StatusBadge";
-import { domains, domainIcons } from "@/src/lib/data/taxonomy";
+import { domains } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
 import { LocalScoreSummary } from "@/components/profile/LocalScoreSummary";
+import { DomainIcon } from "@/components/ui/DomainIcon";
 
 export default async function HomePage() {
   const top3 = await getPublicLeaderboard(3);
@@ -48,7 +49,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
             {domains.map((domain) => (
               <AppCard key={domain} className="grid min-h-28 place-items-center text-center">
-                <div className="text-2xl font-black text-[var(--color-primary-700)]">{domainIcons[domain]}</div>
+                <DomainIcon domain={domain} />
                 <p className="mt-2 text-sm font-black">{domain}</p>
               </AppCard>
             ))}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { QuestionFeedbackKind } from "@/src/lib/exam/feedback";
 import { shuffleChoices } from "@/src/lib/exam/shuffleChoices";
 import Link from "next/link";
@@ -26,6 +26,7 @@ import {
 const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
 
 export default function ExamPage() {
+  const questionTopRef = useRef<HTMLDivElement>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -158,6 +159,9 @@ export default function ExamPage() {
     setServerExplanation(null);
     setActiveFeedback(null);
     setShuffleKey((key) => key + 1);
+    requestAnimationFrame(() => {
+      questionTopRef.current?.scrollIntoView({ block: "start" });
+    });
   };
 
   const restartFromBeginning = async () => {
@@ -268,7 +272,8 @@ export default function ExamPage() {
             </p>
           </div>
         </AppCard>
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px]">
+        <div ref={questionTopRef} className="scroll-mt-4" />
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
           <div>
             {displayQuestion ? (
               <QuestionCard
@@ -286,7 +291,7 @@ export default function ExamPage() {
               ※検索や生成AIを使わず、今の自分の科学力で挑戦することをおすすめします。正答率が概ね60〜80％になるよう、回答状況に応じて問題の難しさを調整します。
             </p>
           </div>
-          <aside className="grid gap-4">
+          <aside className="grid content-start gap-4">
             <AppCard>
               <h2 className="mb-4 text-xl font-black">現在の状況</h2>
               <div className="grid grid-cols-2 gap-4">

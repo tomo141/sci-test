@@ -2,16 +2,19 @@
 
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
-export function ScoreHistoryChart() {
-  const data = [
-    { date: "4/10", score: 520 },
-    { date: "4/17", score: 610 },
-    { date: "4/24", score: 580 },
-    { date: "5/1", score: 625 },
-    { date: "5/8", score: 700 },
-    { date: "5/22", score: 730 },
-    { date: "6/12", score: 763 }
-  ];
+type Props = {
+  data: { date: string; score: number }[];
+};
+
+export function ScoreHistoryChart({ data }: Props) {
+  if (!data.length) {
+    return (
+      <div className="grid h-72 place-items-center rounded-2xl bg-[var(--color-primary-50)] p-4 text-center text-sm font-bold leading-7 text-[var(--color-ink-soft)]">
+        結果を保存すると、スコア履歴がここに表示されます。
+      </div>
+    );
+  }
+
   return (
     <div className="h-72 w-full">
       <ResponsiveContainer>
