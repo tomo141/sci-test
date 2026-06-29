@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Download, Pencil, Trophy } from "lucide-react";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -12,7 +12,7 @@ import { ScoreHistoryChart } from "@/components/charts/ScoreHistoryChart";
 export default function MyPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container py-8">
         <h1 className="text-4xl font-black">マイページ</h1>
         <p className="mt-2 font-bold text-[var(--color-ink-soft)]">あなたの学びの記録や成長を確認できます。</p>

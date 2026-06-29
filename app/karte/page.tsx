@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { BookOpen, Crown, Star, Trophy } from "lucide-react";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -16,7 +16,7 @@ export default function KartePage() {
   const domainData = domains.map((name, index) => ({ name, score: [820, 780, 760, 720, 680, 740, 700, 800, 660, 640][index] }));
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container py-8">
         <div className="grid gap-6 md:grid-cols-[1fr_360px] md:items-center">
           <div>

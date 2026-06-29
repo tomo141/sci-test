@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { examConfig } from "@/src/lib/exam/config";
 import { getQuestionById } from "@/src/lib/exam/session";
 import { questions } from "@/src/lib/data/questions";
 import {
@@ -93,8 +94,8 @@ export async function POST(request: Request) {
         score_low: after.scoreRange[0],
         score_high: after.scoreRange[1],
         diagnostic_accuracy: after.accuracyLabel,
-        completed_10_at: after.counts.overall >= 10 ? new Date().toISOString() : null,
-        completed_50_at: after.counts.overall >= 50 ? new Date().toISOString() : null
+        completed_10_at: after.counts.overall >= examConfig.quickResultThreshold ? new Date().toISOString() : null,
+        completed_50_at: examConfig.isCycleComplete(after.counts.overall) ? new Date().toISOString() : null
       })
       .eq("id", parsed.data.sessionId);
   }

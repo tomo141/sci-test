@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Beaker, BookOpen, Crown, FlaskConical, Trophy } from "lucide-react";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -17,7 +17,7 @@ const top3 = [
 export default function HomePage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main>
         <section className="overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(68,132,255,0.14),transparent_32%),linear-gradient(180deg,#fff_0%,#f7faff_100%)] py-10 md:py-16">
           <div className="page-container grid items-center gap-8 md:grid-cols-[1.05fr_0.95fr]">

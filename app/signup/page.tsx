@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, Cloud, Eye, Lock, UserPlus } from "lucide-react";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -12,7 +12,7 @@ import { AnonymousSessionInput } from "@/components/auth/AnonymousSessionInput";
 export default function SignupPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container grid gap-8 py-10 lg:grid-cols-2">
         <AppCard className="relative overflow-hidden">
           <h1 className="text-3xl font-black">ようこそ！<br />全分野科学検定へ</h1>

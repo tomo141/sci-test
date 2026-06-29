@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { examConfig } from "@/src/lib/exam/config";
 import { createServerSupabaseClient } from "@/src/lib/supabase/server";
 import { verifyTurnstile } from "@/src/lib/security/turnstile";
 
@@ -33,7 +34,12 @@ export async function POST(request: Request) {
     .eq("user_id", userId)
     .not("completed_50_at", "is", null);
 
-  if (!count) return NextResponse.json({ error: "50 completed answers required" }, { status: 403 });
+  if (!count) {
+    return NextResponse.json(
+      { error: `${examConfig.questionsPerCycle} completed answers required` },
+      { status: 403 }
+    );
+  }
 
   const { data: latestScore } = await supabase
     .from("score_history")

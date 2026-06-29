@@ -13,6 +13,7 @@ import { QuestionCard } from "@/components/exam/QuestionCard";
 import type { Question } from "@/src/lib/data/questions";
 import { buildAnswerFeedback } from "@/src/lib/exam/explanation";
 import { estimateFromAnswers } from "@/src/lib/scoring/scoring";
+import { examConfig } from "@/src/lib/exam/config";
 import {
   EXAM_PLAN_STORAGE_KEY,
   createExamPlan,
@@ -22,7 +23,7 @@ import {
   type ExamPlan
 } from "@/src/lib/exam/session";
 
-const QUESTIONS_PER_CYCLE = 50;
+const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
 
 export default function ExamPage() {
   const [selected, setSelected] = useState<number | null>(null);
@@ -37,6 +38,7 @@ export default function ExamPage() {
   const [activeFeedback, setActiveFeedback] = useState<QuestionFeedbackKind | null>(null);
   const shuffledQuestion = useMemo(() => {
     if (!currentQuestion) return null;
+    void shuffleKey;
     const shuffled = shuffleChoices(currentQuestion);
     return {
       question: {
@@ -232,6 +234,11 @@ export default function ExamPage() {
         <div className="mb-6">
           <h1 className="text-3xl font-black md:text-4xl">腕試し受験ページ</h1>
           <p className="mt-2 font-bold text-[var(--color-ink-soft)]">いまの実力をチェックしよう！</p>
+          {examConfig.isShortMode ? (
+            <p className="mt-3 rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-bold text-amber-900">
+              検証モード: {QUESTIONS_PER_CYCLE}問で完走（本番は{examConfig.defaultQuestionsPerCycle}問）
+            </p>
+          ) : null}
         </div>
         <AppCard className="mb-6 grid gap-5 md:grid-cols-4">
           <div>
@@ -300,12 +307,12 @@ export default function ExamPage() {
             {answered ? (
               <div className="grid gap-3">
                 <AppButton onClick={next}>次の問題へ</AppButton>
-                {answers.length >= 10 && answers.length < 50 ? (
+                {examConfig.canViewQuickResult(answers.length) ? (
                   <AppButton href="/result" variant="secondary">
                     終了してカルテを見る
                   </AppButton>
                 ) : null}
-                {answers.length >= 50 ? (
+                {examConfig.canViewKarte(answers.length) ? (
                   <AppButton href="/karte" variant="secondary">
                     腕試しカルテを見る
                   </AppButton>

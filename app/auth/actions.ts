@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { z } from "zod";
+import { syncAdminRoleIfAllowed } from "@/src/lib/admin/role";
 import { getAdminEmails, getAppUrl } from "@/src/lib/env";
 import { createServerSupabaseClient } from "@/src/lib/supabase/server";
 import { verifyTurnstile } from "@/src/lib/security/turnstile";
@@ -84,6 +85,13 @@ export async function loginAction(formData: FormData) {
 
   const { error } = await supabase.auth.signInWithPassword(parsed.data);
   if (error) redirect(`/login?error=${encodeURIComponent(error.message)}`);
+
+  const { data: authData } = await supabase.auth.getUser();
+  const loggedInUser = authData.user;
+  if (loggedInUser?.id) {
+    await syncAdminRoleIfAllowed(loggedInUser.id, loggedInUser.email);
+  }
+
   redirect("/mypage");
 }
 

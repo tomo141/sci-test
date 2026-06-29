@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -9,7 +9,7 @@ import { TurnstileBox } from "@/components/ui/TurnstileBox";
 export default function LoginPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container grid min-h-[70vh] place-items-center py-10">
         <AppCard className="w-full max-w-xl">
           <h1 className="text-3xl font-black">ログイン</h1>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { BarChart3, CheckCircle2, Dice5, Target, TrendingUp } from "lucide-react";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -17,7 +17,7 @@ const modes = [
 export default function TrainingPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container py-8">
         <div className="grid gap-6 md:grid-cols-[1fr_380px] md:items-center">
           <div>

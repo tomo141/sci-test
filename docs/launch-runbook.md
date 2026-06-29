@@ -7,8 +7,7 @@
 - Supabaseプロジェクト作成
 - Supabase APIキー確認と `.env.local` / Vercel環境変数登録
 - Vercelプロジェクト作成と本番デプロイ確定
-- Cloudflare DNSで `sci-test.rikei-talk.com` をVercelへ向ける変更
-- Turnstileサイト作成とキー発行
+- Xserver DNSで `sci-test.rikei-talk.com` をVercelへ向ける変更
 - 利用規約・プライバシーポリシーの正式な屋号・代表者名・問い合わせ先確定
 
 ## Supabase
@@ -51,12 +50,20 @@ NEXT_PUBLIC_SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... node scripts/import-q
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - `SUPABASE_SERVICE_ROLE_KEY`
 - `ADMIN_EMAILS`
-- `NEXT_PUBLIC_TURNSTILE_SITE_KEY`
-- `TURNSTILE_SECRET_KEY`
 
-## Cloudflare DNS
+## Xserver DNS
 
-Vercelが提示するCNAMEを `sci-test.rikei-talk.com` に設定します。DNS変更は公開影響があるため、変更直前に内容を確認してください。
+アプリ本体はVercelでホストし、ドメインのDNSだけXserverで管理します。
+
+1. Vercelのプロジェクト設定で `sci-test.rikei-talk.com` をカスタムドメインとして追加する
+2. Vercelが表示するCNAME先（例: `cname.vercel-dns.com`）を控える
+3. Xserverのサーバーパネル → DNSレコード設定で以下を追加する
+   - ホスト名: `sci-test`
+   - 種別: `CNAME`
+   - 内容: Vercelが提示したCNAME先
+4. Vercel側でドメイン検証とSSL証明書の発行を確認する
+
+DNS変更は公開影響があるため、変更直前にレコード内容を確認してください。
 
 ## 公開前チェック
 

@@ -1,4 +1,4 @@
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppCard } from "@/components/ui/AppCard";
 import { siteConfig } from "@/src/lib/site-config";
@@ -6,7 +6,7 @@ import { siteConfig } from "@/src/lib/site-config";
 export default function TermsPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container py-10">
         <AppCard className="prose max-w-none">
           <h1 className="text-3xl font-black">利用規約</h1>

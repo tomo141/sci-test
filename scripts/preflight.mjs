@@ -3,9 +3,7 @@ const requiredEnv = [
   "NEXT_PUBLIC_SUPABASE_URL",
   "NEXT_PUBLIC_SUPABASE_ANON_KEY",
   "SUPABASE_SERVICE_ROLE_KEY",
-  "ADMIN_EMAILS",
-  "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
-  "TURNSTILE_SECRET_KEY"
+  "ADMIN_EMAILS"
 ];
 
 const missing = requiredEnv.filter((name) => !process.env[name]);

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { createServerSupabaseClient } from "@/src/lib/supabase/server";
+import { isAdminUser } from "@/src/lib/admin/role";
+import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 
 function csvEscape(value: unknown) {
   const text = value == null ? "" : String(value);
@@ -12,12 +13,19 @@ export async function GET() {
   const userId = user?.data.user?.id;
   if (!supabase || !userId) return NextResponse.json({ error: "login required" }, { status: 401 });
 
-  const { data: profile } = await supabase.from("profiles").select("role").eq("id", userId).single();
-  if (profile?.role !== "admin") return NextResponse.json({ error: "admin required" }, { status: 403 });
+  const admin = await isAdminUser(
+    supabase,
+    userId,
+    user.data.user?.email ?? (user.data.user?.user_metadata?.email as string | undefined)
+  );
+  if (!admin) return NextResponse.json({ error: "admin required" }, { status: 403 });
 
-  const { data, error } = await supabase
+  const dataClient = createServiceRoleClient() ?? supabase;
+  const { data, error } = await dataClient
     .from("marketing_consents")
-    .select("consented_at, profiles(email,nickname,full_name), profiles(education_profiles(highest_education,specialty)), profiles(score_history(score,answer_count))")
+    .select(
+      "consented_at, profiles(email, nickname, full_name, education_profiles(highest_education, specialty), score_history(score, answer_count, created_at))"
+    )
     .eq("consented", true);
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
@@ -26,8 +34,13 @@ export async function GET() {
   const rows = (data || []).map((row) => {
     const profileRow = Array.isArray(row.profiles) ? row.profiles[0] : row.profiles;
     const education = Array.isArray(profileRow?.education_profiles) ? profileRow.education_profiles[0] : profileRow?.education_profiles;
-    const histories = Array.isArray(profileRow?.score_history) ? profileRow.score_history : [];
-    const latest = histories[histories.length - 1];
+    const histories = Array.isArray(profileRow?.score_history) ? profileRow.score_history : profileRow?.score_history ? [profileRow.score_history] : [];
+    const latest = histories.reduce<(typeof histories)[number] | null>((current, row) => {
+      if (!current) return row;
+      const currentAt = current.created_at ? Date.parse(current.created_at) : 0;
+      const rowAt = row.created_at ? Date.parse(row.created_at) : 0;
+      return rowAt >= currentAt ? row : current;
+    }, null);
     return [
       profileRow?.email,
       row.consented_at,

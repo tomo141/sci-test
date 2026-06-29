@@ -1,3 +1,4 @@
+import { examConfig } from "@/src/lib/exam/config";
 import { domains, type AbilityAxis, type ScienceDomain } from "@/src/lib/data/taxonomy";
 
 export type ExamPlan = {
@@ -13,7 +14,7 @@ export type CoverageSlot = {
 };
 
 const BASIC_AXIS: AbilityAxis = "基礎力";
-const QUESTIONS_PER_CYCLE = 50;
+const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
 
 function hashSeed(seed: string) {
   let hash = 2166136261;

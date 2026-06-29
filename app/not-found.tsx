@@ -1,4 +1,4 @@
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -6,7 +6,7 @@ import { AppCard } from "@/components/ui/AppCard";
 export default function NotFound() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container grid min-h-[60vh] place-items-center py-10">
         <AppCard className="max-w-xl text-center">
           <h1 className="text-3xl font-black">ページが見つかりません</h1>

@@ -1,5 +1,5 @@
 import { Crown, Trophy } from "lucide-react";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -18,7 +18,7 @@ const rows = ["はやかわ ゆい", "みずしま こういち", "おかもと 
 export default function RankingPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container py-8">
         <h1 className="flex items-center gap-3 text-4xl font-black"><Trophy className="text-[var(--color-accent-yellow-600)]" />ランキング</h1>
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px]">

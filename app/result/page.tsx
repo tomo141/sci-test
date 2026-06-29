@@ -1,5 +1,5 @@
 import { Share2, UserPlus } from "lucide-react";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -12,7 +12,7 @@ export default function ResultPage() {
   const chart = domains.map((name, index) => ({ name, score: 520 + ((index * 43) % 210) }));
   return (
     <>
-      <SiteHeader />
+      <SiteHeaderWithAuth />
       <main className="page-container py-8">
         <h1 className="text-3xl font-black md:text-4xl">腕試し速報</h1>
         <p className="mt-2 font-bold text-[var(--color-ink-soft)]">10問到達時点の推定結果です。50問まで進めると科学力カルテが完成します。</p>
