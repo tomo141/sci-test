@@ -1,0 +1,1478 @@
+[
+  {
+    "id": "00000000-0000-4000-8001-000000000081",
+    "title": "原子の中心部",
+    "domain": "化学",
+    "subdomain": "原子分子イオン",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 100,
+    "learning_objective": "原子の構成要素とその位置関係を説明できる",
+    "question_text": "原子の中心部にあり、陽子と中性子からなる部分を何というか。",
+    "choices": [
+      "原子核",
+      "電子殻",
+      "分子",
+      "イオン"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "原子の中心には原子核があり、陽子と中性子を含みます。",
+    "detailed_explanation": "原子は中心の原子核と、その周囲を回る電子からなります。原子核は陽子と中性子から構成され、原子の質量のほとんどを占めます。電子は原子核の外側に存在します。",
+    "distractor_rationales": [
+      "正解。原子核は陽子と中性子からなる原子の中心部です。",
+      "電子殻は電子が存在する領域であり、中心部そのものではありません。",
+      "分子は2つ以上の原子が結合した粒子です。",
+      "イオンは電荷を帯びた原子または原子団です。"
+    ],
+    "common_misconception": "原子全体が小さな球で均一だと誤解しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "原子",
+      "原子核"
+    ],
+    "status": "draft",
+    "basic_terms": "・原子核：原子は中心の原子核と、その周囲を回る電子からなります。\n・原子：中心の原子核と、その周囲を回る電子からなります。\n・電子殻：電子殻は電子が存在する領域であり、中心部そのものではありません。\n・分子：分子は2つ以上の原子が結合した粒子です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000082",
+    "title": "陽イオンの意味",
+    "domain": "化学",
+    "subdomain": "原子分子イオン",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 100,
+    "learning_objective": "陽イオンが電子を失った状態であることを理解する",
+    "question_text": "陽イオンについて正しく述べているのはどれか。",
+    "choices": [
+      "原子より電子を1つ以上失い、正の電荷を帯びる",
+      "原子より電子を1つ以上得て、負の電荷を帯びる",
+      "陽子と中性子の数が等しい状態",
+      "単原子の気体元素も分子である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "陽イオンは電子を失って正の電荷を帯びます。",
+    "detailed_explanation": "金属原子などは外殻の電子を失いやすく、陽子数より電子数が少ない陽イオンになります。例として Na → Na⁺ があります。",
+    "distractor_rationales": [
+      "正解。電子を失うことで正電荷を帯びます。",
+      "電子を得るのは陰イオンの説明です。",
+      "陽子数と中性子数の関係はイオンの定義とは無関係です。",
+      "He や Ne など単原子分子の存在を分子の定義と混同する誤解です。"
+    ],
+    "common_misconception": "陽イオンは「陽子を増やしたイオン」と混同されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "イオン",
+      "陽イオン"
+    ],
+    "status": "draft",
+    "basic_terms": "・イオン：金属原子などは外殻の電子を失いやすく、陽子数より電子数が少ない陽イオンになります。\n・陽イオン：金属原子などは外殻の電子を失いやすく、陽子数より電子数が少ない陽イオンになります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000083",
+    "title": "分子の定義",
+    "domain": "化学",
+    "subdomain": "原子分子イオン",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 150,
+    "learning_objective": "分子が原子の結合体であることを理解する",
+    "question_text": "分子について最も適切な説明はどれか。",
+    "choices": [
+      "2つ以上の原子が化学結合してできた粒子",
+      "分子は原子核から直接構成される",
+      "分子は電子1個から成る粒子",
+      "分子は金属元素同士の結合体である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "分子は原子が結合してできた最小単位です。",
+    "detailed_explanation": "水分子 H₂O や酸素分子 O₂ のように、同種または異種の原子が共有結合などで結合したものを分子といいます。単原子分子（He など）もあります。",
+    "distractor_rationales": [
+      "正解。分子は原子の結合体です。",
+      "分子は原子同士の結合体であり、原子核単体ではありません。",
+      "電子単体は分子ではなく、原子の構成要素です。",
+      "H₂O や CO₂ など非金属・異元素間でも分子は存在します。"
+    ],
+    "common_misconception": "すべての物質が分子からなると誤解されがちです（NaCl などはイオン結晶）。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "分子"
+    ],
+    "status": "draft",
+    "basic_terms": "・分子：水分子 H₂O や酸素分子 O₂ のように、同種または異種の原子が共有結合などで結合したものを分子といいます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000084",
+    "title": "アボガドロ定数",
+    "domain": "化学",
+    "subdomain": "原子分子イオン",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 150,
+    "learning_objective": "モルと粒子数の関係を理解する",
+    "question_text": "1 mol の物質に含まれる粒子数を表す定数として正しいのはどれか。",
+    "choices": [
+      "約 6.0×10²³ 個/mol",
+      "約 1.0×10⁻²³ 個/mol",
+      "約 6.0×10²³ g/mol",
+      "固体でも 22.4 L/mol である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "アボガドロ定数は約 6.0×10²³ mol⁻¹ です。",
+    "detailed_explanation": "1 mol にはアボガドロ定数倍の粒子（原子、分子、イオンなど）が含まれます。22.4 L/mol は標準状態の気体のモル体積であり、粒子数そのものではありません。",
+    "distractor_rationales": [
+      "正解。粒子数と mol を結ぶ定数です。",
+      "桁が逆で、実際の値と大きく異なります。",
+      "g/mol はモル質量の単位であり、粒子数ではありません。",
+      "22.4 L/mol は標準状態の気体のモル体積であり、固体には当てはまりません。"
+    ],
+    "common_misconception": "モル質量とアボガドロ定数を混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "モル",
+      "アボガドロ定数"
+    ],
+    "status": "draft",
+    "basic_terms": "・モル：22.4 L/mol は標準状態の気体のモル体積であり、粒子数そのものではありません。\n・アボガドロ定数：1 mol にはアボガドロ定数倍の粒子（原子、分子、イオンなど）が含まれます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000085",
+    "title": "同位体の意味",
+    "domain": "化学",
+    "subdomain": "原子分子イオン",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 200,
+    "learning_objective": "同位体が原子番号は同じで中性子数が異なる原子であることを理解する",
+    "question_text": "同位体について正しい説明はどれか。",
+    "choices": [
+      "原子番号は同じで中性子数が異なる原子同士",
+      "同じ元素なら質量数も同じ",
+      "同位体は電子数が異なる同種元素の原子",
+      "周期表の別の族に属する元素"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "同位体は陽子数（原子番号）が同じで中性子数が異なります。",
+    "detailed_explanation": "例えば ¹²C と ¹³C はどちらも原子番号6ですが、中性子数が6と7で異なります。化学的性質はほぼ同じですが、質量が異なります。",
+    "distractor_rationales": [
+      "正解。同位体の定義そのものです。",
+      "同位体は同じ元素でも中性子数（質量数）が異なります。",
+      "電子数の違いはイオンの話であり、同位体の定義ではありません。",
+      "別の族の元素は別元素です。"
+    ],
+    "common_misconception": "同位体を「別元素」と誤解する場合があります。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "同位体"
+    ],
+    "status": "draft",
+    "basic_terms": "・同位体：例えば ¹²C と ¹³C はどちらも原子番号6ですが、中性子数が6と7で異なります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000086",
+    "title": "陰イオンの電子数",
+    "domain": "化学",
+    "subdomain": "原子分子イオン",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 200,
+    "learning_objective": "陰イオン形成時の電子数変化を理解する",
+    "question_text": "中性のフッ素原子（原子番号9）が1個の電子を得てフッ化物イオン F⁻ になったとき、イオンの電子数はいくつか。",
+    "choices": [
+      "10",
+      "9",
+      "8",
+      "18"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "中性原子9個の電子に1個加えて10個になります。",
+    "detailed_explanation": "中性の F 原子は電子9個です。1個の電子を得ると F⁻ となり電子数は10個になります。陽子数9は変わりません。",
+    "distractor_rationales": [
+      "正解。9 + 1 = 10 です。",
+      "9は中性原子の電子数で、電子を得た後の数ではありません。",
+      "8は電子を失った場合の数です。",
+      "18は別元素（アルゴン）の電子数です。"
+    ],
+    "common_misconception": "電子を得ても失っても陽子数が変わると誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "イオン",
+      "電子"
+    ],
+    "status": "draft",
+    "basic_terms": "・10：1個の電子を得ると F⁻ となり電子数は10個になります。\n・イオン：中性の F 原子は電子9個です。\n・電子：中性の F 原子は電子9個です。\n・9：中性の F 原子は電子9個です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000087",
+    "title": "質量数と原子番号",
+    "domain": "化学",
+    "subdomain": "原子分子イオン",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 250,
+    "learning_objective": "質量数が陽子数と中性子数の和であることを理解する",
+    "question_text": "原子の質量数について正しい関係式はどれか。",
+    "choices": [
+      "質量数 = 陽子数 + 中性子数",
+      "質量数 = 陽子数 + 電子数",
+      "質量数 = 電子数 + 中性子数",
+      "質量数 = 陽子数 − 中性子数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "質量数は原子核内の陽子数と中性子数の和です。",
+    "detailed_explanation": "質量数 A は原子核を構成する陽子数 Z と中性子数 N の和 A = Z + N で表されます。電子の質量は非常に小さいため質量数にほとんど寄与しません。",
+    "distractor_rationales": [
+      "正解。質量数の定義です。",
+      "電子は原子核の外にあり、質量数には通常含めません。",
+      "電子数と中性子数の和は質量数ではありません。",
+      "差をとる式は定義として成立しません。"
+    ],
+    "common_misconception": "質量数と原子番号を同一視しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "質量数",
+      "原子番号"
+    ],
+    "status": "draft",
+    "basic_terms": "・質量数：A は原子核を構成する陽子数 Z と中性子数 N の和 A = Z + N で表されます。\n・原子番号：質量数 A は原子核を構成する陽子数 Z と中性子数 N の和 A = Z + N で表されます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000088",
+    "title": "モルの意味",
+    "domain": "化学",
+    "subdomain": "物質量濃度",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 250,
+    "learning_objective": "モルが物質量を表す単位であることを理解する",
+    "question_text": "化学における「mol（モル）」の意味として最も適切なのはどれか。",
+    "choices": [
+      "粒子数をアボガドロ定数倍で表した物質量の単位",
+      "溶液の体積を表す単位",
+      "物質の密度を表す単位",
+      "反応速度を表す単位"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "mol は物質量のSI単位です。",
+    "detailed_explanation": "1 mol は 6.0×10²³ 個の粒子に相当する量です。モル質量（g/mol）と組み合わせることで、質量と粒子数を結びつけられます。",
+    "distractor_rationales": [
+      "正解。mol は物質量の単位です。",
+      "体積の単位は L や m³ です。",
+      "密度の単位は g/cm³ などです。",
+      "反応速度は mol/s などで表しますが、mol 自体は量の単位です。"
+    ],
+    "common_misconception": "mol を質量そのもの（グラム）と混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "モル",
+      "物質量"
+    ],
+    "status": "draft",
+    "basic_terms": "・モル：質量（g/mol）と組み合わせることで、質量と粒子数を結びつけられます。\n・物質量：1 mol は 6.0×10²³ 個の粒子に相当する量です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000089",
+    "title": "周期表の横並び",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 300,
+    "learning_objective": "周期表の周期が電子殻の増加と対応することを理解する",
+    "question_text": "周期表で同じ横の列（周期）に並ぶ元素に共通する傾向として最も適切なのはどれか。",
+    "choices": [
+      "電子殻の数（周期数）が同じである",
+      "同じ周期の元素は価電子数も同じ",
+      "同じ周期の元素は金属である",
+      "原子番号が10ずつ増える"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "同じ周期の元素は電子殻の数が同じです。",
+    "detailed_explanation": "周期表の横の列を周期といい、上から1周期、2周期…と数えます。同じ周期の元素は最外殻を含む電子殻の数が同じです。価電子数は族によって変わります。",
+    "distractor_rationales": [
+      "正解。周期数は電子殻の数に対応します。",
+      "価電子数が同じなのは同じ族（縦の列）の元素です。",
+      "周期には金属・非金属・半金属が混在します。",
+      "原子番号は連続的に増えますが、10ずつではありません。"
+    ],
+    "common_misconception": "周期と族の違いを混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "周期表",
+      "周期"
+    ],
+    "status": "draft",
+    "basic_terms": "・周期：表の横の列を周期といい、上から1周期、2周期…と数えます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000090",
+    "title": "同じ族の性質",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 300,
+    "learning_objective": "同族元素が類似した化学的性質を示す理由を理解する",
+    "question_text": "周期表で同じ縦の列（族）に属する元素が似た化学的性質を示す主な理由はどれか。",
+    "choices": [
+      "価電子数（最外殻電子の配置）が同じだから",
+      "同じ族の元素は原子番号も同じ",
+      "同じ元素なら質量数も同じ",
+      "同じ族の元素は常温で同じ状態である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "同族元素は価電子数が同じため性質が似ます。",
+    "detailed_explanation": "化学的性質は主に最外殻の電子（価電子）の振る舞いで決まります。同じ族の元素は価電子数が同じため、反応の仕方が似ます。",
+    "distractor_rationales": [
+      "正解。価電子の配置が化学的性質を決めます。",
+      "原子番号（陽子数）は族ごとに異なります。",
+      "質量数は元素・同位体ごとに異なります。",
+      "常温での状態は族内でも異なります（例：ハロゲン）。"
+    ],
+    "common_misconception": "同じ列だから原子番号も同じと誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "周期表",
+      "族"
+    ],
+    "status": "draft",
+    "basic_terms": "・族：同じ族の元素は価電子数が同じため、反応の仕方が似ます。\n・同じ族の元素は原子番号も同じ：原子番号（陽子数）は族ごとに異なります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000091",
+    "title": "原子半径の周期性",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 350,
+    "learning_objective": "周期表上での原子半径の傾向を理解する",
+    "question_text": "同じ周期内で左から右へ進むにつれ、一般に原子半径はどう変化するか。",
+    "choices": [
+      "小さくなる傾向がある",
+      "大きくなる傾向がある",
+      "電子が増えると半径も増える",
+      "ランダムに変化する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "左から右へ原子核の引きが強まり半径は小さくなります。",
+    "detailed_explanation": "同じ周期では電子殻数は同じですが、原子番号が増えると原子核の正電荷が増え、価電子を強く引き寄せます。そのため原子半径は一般に左から右へ小さくなります。",
+    "distractor_rationales": [
+      "正解。核電荷の増加が主因です。",
+      "大きくなるのは同じ族で下へ進む場合の一般傾向です。",
+      "同周期では核電荷の増加が支配的で、半径は小さくなる傾向があります。",
+      "系統的な周期性があります。"
+    ],
+    "common_misconception": "電子が増えるので半径も必ず増えると誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "周期表",
+      "原子半径"
+    ],
+    "status": "draft",
+    "basic_terms": "・原子半径：そのため原子半径は一般に左から右へ小さくなります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000092",
+    "title": "貴ガスの電子配置",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 350,
+    "learning_objective": "貴ガスが安定な電子配置を持つことを理解する",
+    "question_text": "ヘリウムやネオンなどの貴ガスが化学反応をほとんどおこさない主な理由はどれか。",
+    "choices": [
+      "最外殻電子が安定な配置（閉殻）になっている",
+      "原子核に中性子がない",
+      "貴ガスは常温で液体である",
+      "電子を1個しか持たない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "貴ガスは最外殻が満たされており反応しにくいです。",
+    "detailed_explanation": "貴ガスは最外殻電子が2個（He）または8個（Ne 以降）の安定配置になっています。このため電子の授受を必要とする反応をほとんどおこしません。",
+    "distractor_rationales": [
+      "正解。閉殻配置が安定性の理由です。",
+      "中性子の有無は反応性の主因ではありません。",
+      "ヘリウムやネオンは常温で気体です。",
+      "ヘリウム以外の貴ガスは最外殻8個です。"
+    ],
+    "common_misconception": "貴ガスは「反応しない元素がない」程度の暗記になりがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "貴ガス",
+      "電子配置"
+    ],
+    "status": "draft",
+    "basic_terms": "・貴ガス：最外殻電子が2個（He）または8個（Ne 以降）の安定配置になっています。\n・電子配置：貴ガスは最外殻電子が2個（He）または8個（Ne 以降）の安定配置になっています。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000093",
+    "title": "金属と非金属の位置",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 400,
+    "learning_objective": "周期表上での金属・非金属の分布を理解する",
+    "question_text": "周期表において、一般に非金属元素が多く分布する領域はどれか。",
+    "choices": [
+      "右上",
+      "左下",
+      "非金属元素は周期表の中央部に多い",
+      "周期表の外側"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "非金属は周期表の右上に多く分布します。",
+    "detailed_explanation": "金属元素は左下に、非金属元素は右上に多く分布するのが一般的です。中央付近には半金属（メタロイド）もあります。",
+    "distractor_rationales": [
+      "正解。右上が非金属の領域です。",
+      "左下はアルカリ金属など金属が多い領域です。",
+      "中央部は遷移元素や半金属が多く、非金属は右上に多いです。",
+      "周期表に「外側」という領域はありません。"
+    ],
+    "common_misconception": "周期表の左半分すべてが金属とは限りません。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "周期表",
+      "金属",
+      "非金属"
+    ],
+    "status": "draft",
+    "basic_terms": "・右上：金属元素は左下に、非金属元素は右上に多く分布するのが一般的です。\n・金属：元素は左下に、非金属元素は右上に多く分布するのが一般的です。\n・非金属：金属元素は左下に、非金属元素は右上に多く分布するのが一般的です。\n・左下：金属元素は左下に、非金属元素は右上に多く分布するのが一般的です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000094",
+    "title": "イオン化エネルギー",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 400,
+    "learning_objective": "イオン化エネルギーの周期的傾向を理解する",
+    "question_text": "同じ周期内で左から右へ進むと、一般に最初のイオン化エネルギーはどう変化するか。",
+    "choices": [
+      "大きくなる傾向がある",
+      "小さくなる傾向がある",
+      "同周期ではイオン化エネルギーは変化しない",
+      "最外殻が8個になるとイオン化エネルギーは0になる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "核電荷が増えるほど電子を取り去るのにエネルギーが必要です。",
+    "detailed_explanation": "原子番号が増えると原子核の正電荷が強まり、最外殻電子を引き留める力が増します。そのためイオン化エネルギーは一般に左から右へ大きくなります。",
+    "distractor_rationales": [
+      "正解。核電荷増加に伴いイオン化エネルギーは増加します。",
+      "小さくなるのは同じ族で下へ進む場合の傾向です。",
+      "元素ごとに値は異なり、左から右へ大きくなる傾向があります。",
+      "イオン化エネルギーが0になる元素はありません。"
+    ],
+    "common_misconception": "電子数が増えると取り去りやすいと誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "イオン化エネルギー",
+      "周期表"
+    ],
+    "status": "draft",
+    "basic_terms": "・イオン化エネルギー：そのためイオン化エネルギーは一般に左から右へ大きくなります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000095",
+    "title": "典型元素",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 400,
+    "learning_objective": "典型元素と遷移元素の位置を区別できる",
+    "question_text": "周期表の「典型元素」として最も適切な位置の説明はどれか。",
+    "choices": [
+      "1,2族と13〜18族の元素",
+      "3〜12族の元素",
+      "典型元素はランタノイド・アクチノイドである",
+      "周期表に含まれない元素"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "典型元素は1,2族と13〜18族に属します。",
+    "detailed_explanation": "典型元素（主族元素）は1,2族と13〜18族に位置し、最外殻電子の変化が化学的性質に直結します。3〜12族は遷移元素です。",
+    "distractor_rationales": [
+      "正解。典型元素の範囲です。",
+      "3〜12族は遷移元素です。",
+      "ランタノイド・アクチノイドは内殻遷移元素です。",
+      "すべての元素は周期表に位置づけられます。"
+    ],
+    "common_misconception": "周期表のすべての元素を典型元素と呼ぶ誤用があります。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "典型元素",
+      "周期表"
+    ],
+    "status": "draft",
+    "basic_terms": "・典型元素：（主族元素）は1,2族と13〜18族に位置し、最外殻電子の変化が化学的性質に直結します。\n・3〜12族の元素：3〜12族は遷移元素です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000096",
+    "title": "電気陰性度",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 450,
+    "learning_objective": "電気陰性度が大きい元素ほど電子を引き寄せやすいことを理解する",
+    "question_text": "電気陰性度が大きい元素について正しい説明はどれか。",
+    "choices": [
+      "共有電子対を強く引き寄せる",
+      "電気陰性度が大きい元素は金属である",
+      "電気陰性度が大きい元素は常温で気体である",
+      "電気陰性度が大きいほどイオン化エネルギーは小さい"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "電気陰性度は電子を引き寄せる力の目安です。",
+    "detailed_explanation": "電気陰性度は原子が結合中の電子対をどれだけ強く引き寄せるかを表します。フッ素は電気陰性度が最も大きい元素です。",
+    "distractor_rationales": [
+      "正解。電気陰性度の定義に合致します。",
+      "電気陰性度が大きいのは非金属側（F, O など）です。",
+      "状態（気体・固体）は元素により異なります。",
+      "一般に電気陰性度が大きい元素はイオン化エネルギーも大きい傾向があります。"
+    ],
+    "common_misconception": "電気陰性度とイオン化エネルギーを同一視しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "電気陰性度"
+    ],
+    "status": "draft",
+    "basic_terms": "・電気陰性度：原子が結合中の電子対をどれだけ強く引き寄せるかを表します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000097",
+    "title": "同周期の価電子",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 450,
+    "learning_objective": "同周期内では価電子数が左から右へ増えることを理解する",
+    "question_text": "第3周期（Na〜Ar）の元素について、左から右へ進むにつれ一般に増えるのはどれか。",
+    "choices": [
+      "価電子数",
+      "電子殻の数",
+      "同周期では陽子数は変化しない",
+      "同周期では原子核の直径は変わらない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "同周期では価電子数が1から8まで増えます。",
+    "detailed_explanation": "第3周期では電子殻数は3で共通ですが、Na（1個）から Cl（7個）、Ar（8個）へと価電子数が増えます。陽子数（原子番号）も同時に増えます。",
+    "distractor_rationales": [
+      "正解。同周期では価電子数が増加します。",
+      "電子殻数は同周期内で一定です。",
+      "陽子数（原子番号）も左から右へ増えます。",
+      "原子核の直径も元素ごとに変化します。"
+    ],
+    "common_misconception": "電子殻数と価電子数を混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "価電子",
+      "周期表"
+    ],
+    "status": "draft",
+    "basic_terms": "・価電子数：第3周期では電子殻数は3で共通ですが、Na（1個）から Cl（7個）、Ar（8個）へと価電子数が増えます。\n・価電子：第3周期では電子殻数は3で共通ですが、Na（1個）から Cl（7個）、Ar（8個）へと価電子数が増えます。\n・電子殻の数：電子殻数は同周期内で一定です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000098",
+    "title": "アルカリ金属の性質",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 450,
+    "learning_objective": "アルカリ金属の一般的な化学的性質を理解する",
+    "question_text": "アルカリ金属（Li, Na, K など）に共通する性質として最も適切なのはどれか。",
+    "choices": [
+      "水と激しく反応して水素ガスとアルカリ性の溶液を生じる",
+      "アルカリ金属は水と穏やかに反応する",
+      "アルカリ金属は常温で気体である",
+      "アルカリ金属は2価の陽イオンになる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "アルカリ金属は1価の陽イオンになり、水と激しく反応します。",
+    "detailed_explanation": "アルカリ金属は1個の価電子を失いやすく、水と反応して水素ガスと水酸化物イオンを生成します。反応性は下の族ほど一般に強くなります。",
+    "distractor_rationales": [
+      "正解。アルカリ金属の代表的な性質です。",
+      "アルカリ金属は非常に反応性が高く、水と激しく反応します。",
+      "常温では固体（Cs 以外）です。",
+      "アルカリ金属は1価イオン（M⁺）になります。"
+    ],
+    "common_misconception": "すべての金属が水と穏やかに反応すると誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "アルカリ金属"
+    ],
+    "status": "draft",
+    "basic_terms": "・アルカリ金属：1個の価電子を失いやすく、水と反応して水素ガスと水酸化物イオンを生成します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000099",
+    "title": "ヘリウムの族",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 500,
+    "learning_objective": "ヘリウムが18族（貴ガス）に属することを理解する",
+    "question_text": "元素記号 He のヘリウムが周期表で属する族として正しいのはどれか。",
+    "choices": [
+      "18族（貴ガス）",
+      "1族（アルカリ金属）",
+      "17族（ハロゲン）",
+      "2族（アルカリ土類金属）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ヘリウムは18族の貴ガス元素です。",
+    "detailed_explanation": "ヘリウムは最外殻2個の電子を持つ安定配置の貴ガスです。周期表では18族（0族）に分類されます。",
+    "distractor_rationales": [
+      "正解。He は貴ガスです。",
+      "1族は1個の価電子を持つ金属です。",
+      "17族はハロゲン（F, Cl など）です。",
+      "2族は2個の価電子を失いやすい金属です。"
+    ],
+    "common_misconception": "He は2個の価電子なので2族と誤分類されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "ヘリウム",
+      "貴ガス"
+    ],
+    "status": "draft",
+    "basic_terms": "・18族（貴ガス）：He は貴ガスです。\n・ヘリウム：最外殻2個の電子を持つ安定配置の貴ガスです。\n・貴ガス：ヘリウムは最外殻2個の電子を持つ安定配置の貴ガスです。\n・1族（アルカリ金属）：1族は1個の価電子を持つ金属です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000100",
+    "title": "遷移元素の特徴",
+    "domain": "化学",
+    "subdomain": "周期表",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "difficulty_initial": 500,
+    "learning_objective": "遷移元素が複数の酸化数をとりうることを理解する",
+    "question_text": "遷移元素（3〜12族）の特徴として最も適切なのはどれか。",
+    "choices": [
+      "複数の酸化数を示す元素が多い",
+      "遷移元素は1価の陽イオンになりやすい",
+      "遷移元素は非金属元素である",
+      "遷移元素は常温で気体である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "遷移元素は複数の酸化数を示すことが多いです。",
+    "detailed_explanation": "鉄（Fe²⁺, Fe³⁺）や銅（Cu⁺, Cu²⁺）のように、遷移元素は d 電子に関与して複数の酸化状態をとることがあります。",
+    "distractor_rationales": [
+      "正解。遷移元素の代表的特徴です。",
+      "1価のみはアルカリ金属の特徴です。",
+      "遷移元素は金属元素です。",
+      "遷移元素の多くは常温で固体です。"
+    ],
+    "common_misconception": "酸化数は元素ごとに1つだけと誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "遷移元素"
+    ],
+    "status": "draft",
+    "basic_terms": "・遷移元素：鉄（Fe²⁺, Fe³⁺）や銅（Cu⁺, Cu²⁺）のように、遷移元素は d 電子に関与して複数の酸化状態をとることがあります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000101",
+    "title": "イオン結合の例",
+    "domain": "化学",
+    "subdomain": "化学結合",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 500,
+    "learning_objective": "イオン結合を形成する元素の組み合わせを識別できる",
+    "question_text": "塩化ナトリウム（NaCl）の結合様式として最も適切なのはどれか。",
+    "choices": [
+      "イオン結合",
+      "共有結合",
+      "金属結合",
+      "NaCl は分子間力で結合している"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "NaCl は Na⁺ と Cl⁻ のイオン結合です。",
+    "detailed_explanation": "ナトリウム原子は電子を失い Na⁺、塩素原子は電子を得て Cl⁻ となり、静電気的引力で結合します。これがイオン結合です。",
+    "distractor_rationales": [
+      "正解。金属と非金属の典型的なイオン結合です。",
+      "共有結合は非金属同士（H₂O など）で見られます。",
+      "金属結合は金属単体（Cu など）に見られます。",
+      "NaCl は結晶内で強いイオン結合を形成します。"
+    ],
+    "common_misconception": "NaCl を「分子」NaCl として共有結合と誤解しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "イオン結合",
+      "NaCl"
+    ],
+    "status": "draft",
+    "basic_terms": "・イオン結合：これがイオン結合です。\n・NaCl：ナトリウム原子は電子を失い Na⁺、塩素原子は電子を得て Cl⁻ となり、静電気的引力で結合します。\n・共有結合：共有結合は非金属同士（H₂O など）で見られます。\n・金属結合：金属結合は金属単体（Cu など）に見られます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000102",
+    "title": "共有結合の例",
+    "domain": "化学",
+    "subdomain": "化学結合",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 550,
+    "learning_objective": "共有結合を形成する非金属元素の例を理解する",
+    "question_text": "水分子（H₂O）中の水素原子と酸素原子の結合として最も適切なのはどれか。",
+    "choices": [
+      "共有結合",
+      "イオン結合",
+      "金属結合",
+      "水素結合そのもの"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "H と O は電子対を共有する共有結合です。",
+    "detailed_explanation": "水分子内の O−H 結合は非金属同士の共有結合です。分子間には水素結合も働きますが、原子間結合は共有結合です。",
+    "distractor_rationales": [
+      "正解。非金属同士の共有結合です。",
+      "イオン結合は電荷を帯びたイオン間の結合です。",
+      "金属結合は金属元素内の結合です。",
+      "水素結合は分子間の相互作用であり、O−H 結合そのものではありません。"
+    ],
+    "common_misconception": "水素結合と共有結合を混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "共有結合",
+      "水"
+    ],
+    "status": "draft",
+    "basic_terms": "・共有結合：水分子内の O−H 結合は非金属同士の共有結合です。\n・水：分子内の O−H 結合は非金属同士の共有結合です。\n・イオン結合：イオン結合は電荷を帯びたイオン間の結合です。\n・金属結合：金属結合は金属元素内の結合です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000103",
+    "title": "金属結合の特徴",
+    "domain": "化学",
+    "subdomain": "化学結合",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 550,
+    "learning_objective": "金属結合と自由電子の関係を理解する",
+    "question_text": "金属結合の特徴として最も適切な説明はどれか。",
+    "choices": [
+      "金属原子の価電子が全体で自由に動き回る",
+      "非金属原子同士が電子を完全に移動する",
+      "金属結合は分子間力で説明できる",
+      "金属原子同士は水素結合で結合している"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "金属結合は自由電子（電子気体）モデルで説明されます。",
+    "detailed_explanation": "金属では価電子が原子から離れて全体を動き回り、正イオン格子と自由電子の間の引力が金属結合を形成します。これにより電気伝導性などが生じます。",
+    "distractor_rationales": [
+      "正解。自由電子モデルが金属結合の基本です。",
+      "電子の完全移動はイオン結合のイメージです。",
+      "金属結合は分子間力だけでは説明できません。",
+      "水素結合は金属結合とは別の相互作用です。"
+    ],
+    "common_misconception": "金属結合を「原子同士が共有結合で網目状」と誤解しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "金属結合"
+    ],
+    "status": "draft",
+    "basic_terms": "・金属結合：金属では価電子が原子から離れて全体を動き回り、正イオン格子と自由電子の間の引力が金属結合を形成します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000104",
+    "title": "分子間力の種類",
+    "domain": "化学",
+    "subdomain": "化学結合",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 550,
+    "learning_objective": "分子間力と分子内結合を区別できる",
+    "question_text": "水（H₂O）において、分子と分子の間に働く力として最も重要なのはどれか。",
+    "choices": [
+      "水素結合",
+      "O−H 共有結合",
+      "Na⁺ と Cl⁻ のイオン結合",
+      "金属結合"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "水分子間には水素結合が働きます。",
+    "detailed_explanation": "O−H 共有結合は分子内結合です。水分子同士の間には酸素の電気陰性度の高さにより水素結合が働き、沸点が高くなります。",
+    "distractor_rationales": [
+      "正解。水素結合は分子間力の一種です。",
+      "O−H 結合は分子内の共有結合です。",
+      "イオン結合は NaCl などに見られます。",
+      "金属結合は金属元素内の結合です。"
+    ],
+    "common_misconception": "分子内結合と分子間力を混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "分子間力",
+      "水素結合"
+    ],
+    "status": "draft",
+    "basic_terms": "・水素結合：水分子同士の間には酸素の電気陰性度の高さにより水素結合が働き、沸点が高くなります。\n・分子間力：O−H 共有結合は分子内結合です。\n・O−H 共有結合：分子内結合です。\n・金属結合：金属結合は金属元素内の結合です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000105",
+    "title": "モル質量の計算",
+    "domain": "化学",
+    "subdomain": "物質量濃度",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 600,
+    "learning_objective": "化学式からモル質量を求められる",
+    "question_text": "水 H₂O のモル質量として最も近い値はどれか。（H=1, O=16 g/mol）",
+    "choices": [
+      "18 g/mol",
+      "17 g/mol",
+      "16 g/mol",
+      "34 g/mol"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "1×2 + 16 = 18 g/mol です。",
+    "detailed_explanation": "H₂O は水素2原子と酸素1原子からなり、モル質量 = 1×2 + 16×1 = 18 g/mol です。したがって 1 mol の水は 18 g です。",
+    "distractor_rationales": [
+      "正解。2 + 16 = 18 です。",
+      "17 g/mol は原子量の加算ミス（H を1個と数えた）です。",
+      "16 g/mol は酸素原子1個分のみです。",
+      "34 g/mol は H₂O₂（過酸化水素）のモル質量です。"
+    ],
+    "common_misconception": "化学式の添え字を無視して計算するミスが多いです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "モル質量",
+      "計算"
+    ],
+    "status": "draft",
+    "basic_terms": "・18 g/mol：H₂O は水素2原子と酸素1原子からなり、モル質量 = 1×2 + 16×1 = 18 g/mol です。\n・モル質量：H₂O は水素2原子と酸素1原子からなり、モル質量 = 1×2 + 16×1 = 18 g/mol です。\n・計算：H₂O は水素2原子と酸素1原子からなり、モル質量 = 1×2 + 16×1 = 18 g/mol です。\n・17 g/mol：17 g/mol は原子量の加算ミス（H を1個と数えた）です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000106",
+    "title": "モル濃度",
+    "domain": "化学",
+    "subdomain": "物質量濃度",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 600,
+    "learning_objective": "モル濃度の定義と単位を理解する",
+    "question_text": "0.50 mol の塩化ナトリウムを水500 mL に溶かしたときのモル濃度（mol/L）はいくらか。",
+    "choices": [
+      "1.0 mol/L",
+      "0.50 mol/L",
+      "0.25 mol/L",
+      "2.0 mol/L"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "500 mL = 0.500 L なので 0.50/0.500 = 1.0 mol/L です。",
+    "detailed_explanation": "モル濃度 c = n/V です。n = 0.50 mol、V = 500 mL = 0.500 L より c = 0.50/0.500 = 1.0 mol/L となります。",
+    "distractor_rationales": [
+      "正解。体積を L に換算して計算します。",
+      "0.50 mol/L は体積換算をせず 500 mL をそのまま使った誤りです。",
+      "0.25 mol/L は mol 数を半分にした誤りです。",
+      "2.0 mol/L は体積換算の逆ミスです。"
+    ],
+    "common_misconception": "mL のまま割り算して単位を mol/L にしないミスが多いです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "モル濃度",
+      "計算"
+    ],
+    "status": "draft",
+    "basic_terms": "・1.0 mol/L：n = 0.50 mol、V = 500 mL = 0.500 L より c = 0.50/0.500 = 1.0 mol/L となります。\n・モル濃度：c = n/V です。\n・計算：モル濃度 c = n/V です。\n・0.50 mol/L：0.50 mol/L は体積換算をせず 500 mL をそのまま使った誤りです。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000107",
+    "title": "質量パーセント濃度",
+    "domain": "化学",
+    "subdomain": "物質量濃度",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 600,
+    "learning_objective": "質量パーセント濃度の意味を理解する",
+    "question_text": "質量パーセント濃度 10% の食塩水200 g に含まれる食塩（NaCl）の質量はいくらか。",
+    "choices": [
+      "20 g",
+      "10 g",
+      "2 g",
+      "200 g"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "200 g × 10/100 = 20 g です。",
+    "detailed_explanation": "質量パーセント濃度は（溶質の質量/溶液の質量）×100 です。10% なら溶質は溶液の10%なので 200 × 0.10 = 20 g です。",
+    "distractor_rationales": [
+      "正解。溶液全体に対する割合で計算します。",
+      "10 g は濃度の数値をそのまま質量とした誤りです。",
+      "2 g は百分率の扱いを誤った計算です。",
+      "200 g は溶液全体の質量です。"
+    ],
+    "common_misconception": "濃度の%をグラム数と直接同一視しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "質量パーセント濃度"
+    ],
+    "status": "draft",
+    "basic_terms": "・20 g：10% なら溶質は溶液の10%なので 200 × 0.10 = 20 g です。\n・質量パーセント濃度：（溶質の質量/溶液の質量）×100 です。\n・10 g：10 g は濃度の数値をそのまま質量とした誤りです。\n・2 g：2 g は百分率の扱いを誤った計算です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000108",
+    "title": "pHの意味",
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 650,
+    "learning_objective": "pHが水素イオン濃度の対数尺度であることを理解する",
+    "question_text": "pH = 3 の水溶液について正しい説明はどれか。",
+    "choices": [
+      "酸性で、[H⁺] = 1×10⁻³ mol/L 程度",
+      "中性で、[H⁺] = 1×10⁻⁷ mol/L",
+      "アルカリ性で、[OH⁻] = 1×10⁻³ mol/L 程度",
+      "pH は温度と無関係"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "pH 3 は酸性で水素イオン濃度は 10⁻³ mol/L 程度です。",
+    "detailed_explanation": "pH = −log[H⁺] です。pH 3 なら [H⁺] ≈ 10⁻³ mol/L で酸性です。pH 7 が中性（25°C）、pH 7 より大きいとアルカリ性です。",
+    "distractor_rationales": [
+      "正解。pH 3 は酸性溶液です。",
+      "pH 7 が中性です。",
+      "pH 3 は酸性でありアルカリ性ではありません。",
+      "pH は温度により変化します（Kw が温度依存）。"
+    ],
+    "common_misconception": "pH の対数尺度を線形と誤解し、pH 3 と pH 6 の酸性度差を過小評価しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "pH",
+      "酸塩基"
+    ],
+    "status": "draft",
+    "basic_terms": "・pH：= −log[H⁺] です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000109",
+    "title": "酸化数",
+    "domain": "化学",
+    "subdomain": "酸化還元",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 650,
+    "learning_objective": "単体元素の酸化数が0であることを理解する",
+    "question_text": "単体（元素そのもの）の状態にある原子の酸化数として正しいのはどれか。",
+    "choices": [
+      "0",
+      "単体中の元素の酸化数は+1",
+      "単体中の元素の酸化数は−1",
+      "原子番号と等しい"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "単体中の元素の酸化数は 0 です。",
+    "detailed_explanation": "酸化数の基準として、単体（O₂, Fe, S など）中の原子の酸化数は 0 と定められます。化合物中では一般に異なる値をとります。",
+    "distractor_rationales": [
+      "正解。単体の酸化数は 0 です。",
+      "+1 は水素化合物などの特例ルールと混同されます。",
+      "−1 も特定元素（F など）の特例と混同されます。",
+      "酸化数と原子番号は別概念です。"
+    ],
+    "common_misconception": "単体でも +1 や −1 があると誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "酸化数",
+      "酸化還元"
+    ],
+    "status": "draft",
+    "basic_terms": "・0：酸化数の基準として、単体（O₂, Fe, S など）中の原子の酸化数は 0 と定められます。\n・酸化数：の基準として、単体（O₂, Fe, S など）中の原子の酸化数は 0 と定められます。\n・単体中の元素の酸化数は+1：+1 は水素化合物などの特例ルールと混同されます。\n・単体中の元素の酸化数は−1：−1 も特定元素（F など）の特例と混同されます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000110",
+    "title": "平衡定数",
+    "domain": "化学",
+    "subdomain": "化学平衡",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "difficulty_initial": 650,
+    "learning_objective": "平衡定数が生成物と反応物の濃度比を表すことを理解する",
+    "question_text": "一定温度での化学平衡における平衡定数 K について正しい説明はどれか。",
+    "choices": [
+      "生成物の濃度の積と反応物の濃度の積の比（係数に応じたべき乗）",
+      "反応速度の絶対値",
+      "触媒の量",
+      "初期濃度の合計"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "平衡定数は平衡時の濃度比を表します。",
+    "detailed_explanation": "aA + bB ⇌ cC + dD の平衡定数 K = [C]ᶜ[D]ᵈ/[A]ᵃ[B]ᵇ です。温度が変わると K も変わりますが、触媒は K を変えません。",
+    "distractor_rationales": [
+      "正解。平衡定数の定義です。",
+      "反応速度は別の概念です。",
+      "触媒は平衡位置を変えません。",
+      "初期濃度の合計は平衡定数ではありません。"
+    ],
+    "common_misconception": "平衡定数と反応速度定数を混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学平衡",
+      "平衡定数"
+    ],
+    "status": "draft",
+    "basic_terms": "・平衡定数：aA + bB ⇌ cC + dD の平衡定数 K = [C]ᶜ[D]ᵈ/[A]ᵃ[B]ᵇ です。\n・反応速度の絶対値：反応速度は別の概念です。\n・触媒の量：触媒は平衡位置を変えません。\n・初期濃度の合計：初期濃度の合計は平衡定数ではありません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000111",
+    "title": "酸と塩基の比較",
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "difficulty_initial": 700,
+    "learning_objective": "Brønsted 定義での酸と塩基を区別できる",
+    "question_text": "Brønsted の酸・塩基の定義に基づく説明として正しい組み合わせはどれか。",
+    "choices": [
+      "酸はプロトン（H⁺）を与える物質、塩基は受け取る物質",
+      "酸は電子対を与える、塩基は受け取る",
+      "Brønsted の酸は水溶液で pH 7 より小さい",
+      "酸は金属、塩基は非金属"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "Brønsted 酸は H⁺ 供与体、塩基は H⁺ 受容体です。",
+    "detailed_explanation": "Brønsted-Lowry 定義では酸はプロトン供与体、塩基はプロトン受容体です。Lewis 定義では電子対の授受で定義します。",
+    "distractor_rationales": [
+      "正解。Brønsted 定義です。",
+      "電子対の授受は Lewis 酸・塩基の定義です。",
+      "pH による分類は Arrhenius 的なイメージで、Brønsted 定義そのものではありません。",
+      "酸・塩基と金属・非金属は直接対応しません。"
+    ],
+    "common_misconception": "Brønsted 定義と Lewis 定義を混同しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "酸塩基",
+      "Brønsted"
+    ],
+    "status": "draft",
+    "basic_terms": "・Brønsted：-Lowry 定義では酸はプロトン供与体、塩基はプロトン受容体です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000112",
+    "title": "酸化剤と還元剤",
+    "domain": "化学",
+    "subdomain": "酸化還元",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "difficulty_initial": 700,
+    "learning_objective": "酸化剤が電子を受け取り、還元剤が電子を渡すことを理解する",
+    "question_text": "酸化還元反応における酸化剤と還元剤の関係として正しいのはどれか。",
+    "choices": [
+      "酸化剤は電子を受け取り自身は還元される",
+      "酸化剤は電子を放出し自身は還元される",
+      "還元剤は電子を受け取り自身は酸化される",
+      "酸化剤と還元剤は同じ物質しかなりえない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "酸化剤は電子を受け取り還元され、還元剤は電子を渡して酸化されます。",
+    "detailed_explanation": "酸化剤は相手を酸化（電子を取る）し自身は還元（電子を得る）されます。還元剤は相手を還元（電子を渡す）し自身は酸化されます。",
+    "distractor_rationales": [
+      "正解。酸化剤の役割の定義です。",
+      "電子を放出するのは還元剤です。",
+      "電子を受け取るのは酸化剤です。",
+      "通常は異なる物質が酸化剤・還元剤になります。"
+    ],
+    "common_misconception": "酸化剤が「酸化する側」と誤解され、自身が酸化されると混同されます。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "酸化還元",
+      "酸化剤",
+      "還元剤"
+    ],
+    "status": "draft",
+    "basic_terms": "・酸化剤：相手を酸化（電子を取る）し自身は還元（電子を得る）されます。\n・還元剤：相手を還元（電子を渡す）し自身は酸化されます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000113",
+    "title": "触媒の役割",
+    "domain": "化学",
+    "subdomain": "反応速度",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "difficulty_initial": 750,
+    "learning_objective": "触媒が活性化エネルギーを下げることを理解する",
+    "question_text": "触媒が化学反応に与える効果として最も適切なのはどれか。",
+    "choices": [
+      "活性化エネルギーを下げ、反応速度を大きくする",
+      "平衡定数を大きく変える",
+      "反応が発熱か吸熱かを逆転させる",
+      "反応物を永久に消費する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "触媒は活性化エネルギーを下げて反応を速めます。",
+    "detailed_explanation": "触媒は反応経路を変えて活性化エネルギーを低下させ、正逆両方向の速度を同じ倍率で増やします。平衡位置（K）は変わりません。",
+    "distractor_rationales": [
+      "正解。触媒の基本的役割です。",
+      "平衡定数は温度のみで決まり、触媒は変えません。",
+      "反応熱（ΔH）は触媒で変わりません。",
+      "触媒は反応後も化学変化せず残ります。"
+    ],
+    "common_misconception": "触媒が生成物を増やす（平衡を移動させる）と誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "触媒",
+      "反応速度"
+    ],
+    "status": "draft",
+    "basic_terms": "・触媒：反応経路を変えて活性化エネルギーを低下させ、正逆両方向の速度を同じ倍率で増やします。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000114",
+    "title": "有機化合物の分類",
+    "domain": "化学",
+    "subdomain": "有機基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "difficulty_initial": 750,
+    "learning_objective": "炭化水素と官能基を含む化合物を区別できる",
+    "question_text": "有機化合物の分類として最も適切な組み合わせはどれか。",
+    "choices": [
+      "エタノールは酸素を含む官能基（ヒドロキシ基）を持つ",
+      "メタンは炭素を含まない",
+      "ベンゼンは無機化合物",
+      "有機化合物は水に溶けやすい"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "エタノール C₂H₅OH はヒドロキシ基を持つ有機化合物です。",
+    "detailed_explanation": "有機化合物は基本的に炭素を骨格とします。メタン CH₄ は炭化水素、エタノールはアルコール（−OH）に分類されます。",
+    "distractor_rationales": [
+      "正解。エタノールはアルコール類です。",
+      "メタン CH₄ は代表的な炭化水素です。",
+      "ベンゼン C₆H₆ は有機化合物です。",
+      "多くの有機化合物は水に溶けにくいです。"
+    ],
+    "common_misconception": "有機＝生体由来、無機＝非生体という古い定義を使いがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "有機化合物",
+      "官能基"
+    ],
+    "status": "draft",
+    "basic_terms": "・有機化合物：基本的に炭素を骨格とします。\n・官能基：有機化合物は基本的に炭素を骨格とします。\n・ベンゼンは無機化合物：ベンゼン C₆H₆ は有機化合物です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000115",
+    "title": "合成高分子と天然高分子",
+    "domain": "化学",
+    "subdomain": "高分子材料基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "difficulty_initial": 800,
+    "learning_objective": "合成高分子と天然高分子の例を区別できる",
+    "question_text": "合成高分子の例として最も適切なのはどれか。",
+    "choices": [
+      "ポリエチレン",
+      "デンプン",
+      "セルロース",
+      "タンパク質"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ポリエチレンはエチレンの重合で得る合成高分子です。",
+    "detailed_explanation": "ポリエチレンは石油由来のエチレンを重合させて人工的に作るプラスチックです。デンプン、セルロース、タンパク質は天然高分子です。",
+    "distractor_rationales": [
+      "正解。代表的な合成高分子（プラスチック）です。",
+      "デンプンは植物由来の天然高分子です。",
+      "セルロースは植物の主成分である天然高分子です。",
+      "タンパク質は生体内の天然高分子です。"
+    ],
+    "common_misconception": "すべての高分子がプラスチック（合成）だと誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "高分子",
+      "合成高分子"
+    ],
+    "status": "draft",
+    "basic_terms": "・ポリエチレン：石油由来のエチレンを重合させて人工的に作るプラスチックです。\n・高分子：デンプン、セルロース、タンパク質は天然高分子です。\n・合成高分子：ポリエチレンは石油由来のエチレンを重合させて人工的に作るプラスチックです。\n・デンプン：セルロース、タンパク質は天然高分子です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000116",
+    "title": "pHの誤解",
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "difficulty_initial": 800,
+    "learning_objective": "pHの対数尺度と酸性度の関係を正しく理解する",
+    "question_text": "水溶液の pH について、誤った説明はどれか。",
+    "choices": [
+      "pH が 1 だけ小さくなると酸性度は10倍になる",
+      "pH が 1 だけ小さくなると酸性度は2倍になる",
+      "pH 7 は中性に近い",
+      "pH は水素イオン濃度に関連する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "pH は対数尺度なので1差で10倍、2倍ではありません。",
+    "detailed_explanation": "pH = −log[H⁺] なので pH が 1 小さくなると [H⁺] は 10 倍になります。「2倍」という説明は対数尺度を線形と誤解したものです。",
+    "distractor_rationales": [
+      "正しい説明です（誤りではない）。",
+      "正解（誤った説明）。pH は対数尺度であり2倍ではありません。",
+      "正しい説明です。",
+      "正しい説明です。"
+    ],
+    "common_misconception": "pH の変化を線形（2倍、3倍）で考える典型的誤解です。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "pH",
+      "誤解"
+    ],
+    "status": "draft",
+    "basic_terms": "・pH：= −log[H⁺] なので pH が 1 小さくなると [H⁺] は 10 倍になります。\n・pH 7 は中性に近い：正しい説明です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000117",
+    "title": "触媒と平衡",
+    "domain": "化学",
+    "subdomain": "化学平衡",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "difficulty_initial": 850,
+    "learning_objective": "触媒が平衡位置を変えないことを理解する",
+    "question_text": "触媒を加えた化学平衡系について、誤っている説明はどれか。",
+    "choices": [
+      "正逆両方向の反応速度がともに増える",
+      "平衡に達するまでの時間が短くなることがある",
+      "平衡定数 K は変わらない",
+      "触媒を加えると平衡時の生成物のモル分率が増える"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "触媒は平衡位置を変えず、生成物の割合は変わりません。",
+    "detailed_explanation": "触媒は活性化エネルギーを下げて平衡到達を早めますが、平衡定数も平衡組成も変えません。生成物のモル分率が増えるわけではありません。",
+    "distractor_rationales": [
+      "正しい説明です。",
+      "正しい説明です。",
+      "正しい説明です。",
+      "正解（誤った説明）。触媒は平衡組成を変えません。"
+    ],
+    "common_misconception": "触媒＝生成物が増える、という誤解が最も一般的です。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "触媒",
+      "化学平衡",
+      "誤解"
+    ],
+    "status": "draft",
+    "basic_terms": "・触媒：活性化エネルギーを下げて平衡到達を早めますが、平衡定数も平衡組成も変えません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000118",
+    "title": "化学反応式の係数",
+    "domain": "化学",
+    "subdomain": "物質量濃度",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "difficulty_initial": 850,
+    "learning_objective": "化学反応式の係数がモル比を表すことを理解する",
+    "question_text": "2H₂ + O₂ → 2H₂O の反応について、誤った説明はどれか。",
+    "choices": [
+      "水素2 mol と酸素1 mol が完全反応すると水2 mol できる",
+      "係数の比は 2:1:2 である",
+      "水素分子1個と酸素分子1個が直接反応する",
+      "反応物と生成物で原子数は保存される"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "係数2:1:2 なので H₂ 2分子と O₂ 1分子の組み合わせです。",
+    "detailed_explanation": "化学反応式の係数はモル比を表します。2H₂ + O₂ → 2H₂O では H₂ 2 mol と O₂ 1 mol が反応します。H₂ 1分子と O₂ 1分子では O が不足します。",
+    "distractor_rationales": [
+      "正しい説明です。",
+      "正しい説明です。",
+      "正解（誤った説明）。係数比 2:1 に合いません。",
+      "正しい説明（原子数保存の法則）です。"
+    ],
+    "common_misconception": "係数を無視して 1:1:1 で反応すると誤解しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学反応式",
+      "モル比"
+    ],
+    "status": "draft",
+    "basic_terms": "・化学反応式：の係数はモル比を表します。\n・モル比：化学反応式の係数はモル比を表します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000119",
+    "title": "活性化エネルギー",
+    "domain": "化学",
+    "subdomain": "反応速度",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "difficulty_initial": 900,
+    "learning_objective": "活性化エネルギーと反応速度の関係を理解する",
+    "question_text": "温度を上げると多くの反応で反応速度が大きくなる主な理由として最も適切なのはどれか。",
+    "choices": [
+      "活性化エネルギー以上のエネルギーを持つ粒子の割合が増える",
+      "温度を上げると平衡定数も大きくなる",
+      "触媒が自動的に生成される",
+      "反応物のモル質量が小さくなる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "温度上昇で活性化エネルギーを超える分子が増え速度が上がります。",
+    "detailed_explanation": "反応速度は活性化エネルギー Ea を超える分子の衝突頻度と比例します。温度を上げると分子の運動エネルギー分布が変わり、Ea 以上の分子が増えます。",
+    "distractor_rationales": [
+      "正解。アレニウス的説明の基本です。",
+      "平衡定数は温度依存ですが、必ず大きくなるわけではありません。",
+      "触媒は自動生成されません。",
+      "モル質量は温度で変わりません。"
+    ],
+    "common_misconception": "温度上昇＝すべての分子が反応しやすくなる（100%）と誤解されがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "活性化エネルギー",
+      "反応速度"
+    ],
+    "status": "draft",
+    "basic_terms": "・活性化エネルギー：反応速度は活性化エネルギー Ea を超える分子の衝突頻度と比例します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000120",
+    "title": "プラスチックの主成分",
+    "domain": "化学",
+    "subdomain": "高分子材料基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "difficulty_initial": 900,
+    "learning_objective": "一般プラスチックが炭素を主成分とする高分子であることを理解する",
+    "question_text": "ポリエチレンなどの一般プラスチックについて、最も適切な説明はどれか。",
+    "choices": [
+      "炭素と水素からなる高分子で、石油由来のモノマーを重合して作る",
+      "プラスチックは金属元素からなる",
+      "プラスチックは水分子の連続体である",
+      "使用後すぐに自然界で完全分解される"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ポリエチレンはエチレン（C₂H₄）の重合体です。",
+    "detailed_explanation": "多くのプラスチックは石油由来のモノマー（エチレン、プロピレンなど）を重合させた炭素系高分子です。自然分解には長い時間を要するものが多いです。",
+    "distractor_rationales": [
+      "正解。合成高分子の基本説明です。",
+      "プラスチックは有機高分子であり金属ではありません。",
+      "水分子の連結体ではありません。",
+      "一般プラスチックは容易には生分解されません。"
+    ],
+    "common_misconception": "プラスチック＝有害物質単体、というイメージで化学組成を無視しがちです。",
+    "source_url": "",
+    "source_note": "高校化学・大学一般教養レベルの基礎概念（教科書水準）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "プラスチック",
+      "高分子"
+    ],
+    "status": "draft",
+    "basic_terms": "・プラスチック：多くのプラスチックは石油由来のモノマー（エチレン、プロピレンなど）を重合させた炭素系高分子です。\n・高分子：多くのプラスチックは石油由来のモノマー（エチレン、プロピレンなど）を重合させた炭素系高分子です。"
+  }
+]

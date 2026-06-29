@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "question_text",
+    "choices",
+    "correct_choice_index",
+    "short_explanation",
+    "detailed_explanation",
+    "domain",
+    "subdomain",
+    "ability_axis",
+    "cognitive_type",
+    "difficulty_initial",
+    "distractor_rationales",
+    "source_note",
+    "currentness_type",
+    "tags"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "question_text": { "type": "string", "minLength": 10, "maxLength": 500 },
+    "choices": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "type": "string" } },
+    "correct_choice_index": { "type": "integer", "minimum": 0, "maximum": 3 },
+    "short_explanation": { "type": "string" },
+    "detailed_explanation": { "type": "string" },
+    "domain": { "type": "string" },
+    "subdomain": { "type": "string" },
+    "ability_axis": { "const": "基礎力" },
+    "cognitive_type": {
+      "enum": ["用語・定義", "原理・因果", "基本的な適用", "比較・分類", "誤解・境界"]
+    },
+    "learning_objective": { "type": "string" },
+    "difficulty_initial": { "type": "integer", "minimum": 100, "maximum": 900, "multipleOf": 50 },
+    "difficulty_continuous": { "type": "integer" },
+    "distractor_rationales": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "type": "string" } },
+    "common_misconception": { "type": "string" },
+    "source_url": { "type": "string" },
+    "source_note": { "type": "string" },
+    "currentness_type": { "enum": ["evergreen", "current", "stable"] },
+    "expires_at": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "status": { "enum": ["draft", "published"] }
+  }
+}

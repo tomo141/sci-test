@@ -1,0 +1,65 @@
+:root {
+  --color-ink: #11213f;
+  --color-ink-soft: #334765;
+  --color-primary-900: #0b2f78;
+  --color-primary-800: #0d46b8;
+  --color-primary-700: #1558d6;
+  --color-primary-600: #2467e8;
+  --color-primary-100: #eaf2ff;
+  --color-primary-50: #f5f8ff;
+  --color-accent-yellow-600: #e9a900;
+  --color-accent-yellow-500: #ffc928;
+  --color-accent-yellow-100: #fff5c7;
+  --color-success-700: #138b47;
+  --color-success-100: #e7f8ed;
+  --color-warning-700: #ba6b00;
+  --color-warning-100: #fff3d9;
+  --color-danger-700: #c33131;
+  --color-danger-100: #fff0f0;
+  --color-surface: #ffffff;
+  --color-page: #f8fbff;
+  --color-border: #d8e5fa;
+  --color-border-strong: #a9c7f7;
+  --color-muted: #6b7b96;
+  --color-disabled: #eff3f9;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-page);
+  font-variant-numeric: tabular-nums;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(36, 103, 232, 0.38);
+  outline-offset: 3px;
+}
+
+.page-container {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+  .page-container {
+    width: min(100% - 32px, 1200px);
+  }
+}

@@ -1,0 +1,1562 @@
+[
+  {
+    "id": "00000000-0000-4000-8001-000000000201",
+    "title": "工学 基礎力 力・構造・材料",
+    "question_text": "材料力学で「応力」とは、一般にどの量を指すか。",
+    "choices": [
+      "物体内部の単位面積あたりの力",
+      "物体全体に働く合力",
+      "変形量そのもの",
+      "材料の密度"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "応力は力を断面積で割った内部の力の指標です。",
+    "detailed_explanation": "応力 σ = F/A [Pa] は、外力を断面積で正規化した内部力の尺度です。",
+    "domain": "工学",
+    "subdomain": "力・構造・材料",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "材料力学の基本量「応力」を定義として理解する。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "合力は荷重全体の大きさであり、面積で正規化していません。",
+      "変形に関わる量はひずみや変位です。",
+      "密度は単位体積あたりの質量です。"
+    ],
+    "common_misconception": "応力を変形量や合力と混同しがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "力・構造・材料",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・物体全体に働く合力：合力は荷重全体の大きさであり、面積で正規化していません。\n・変形量そのもの：変形に関わる量はひずみや変位です。\n・材料の密度：密度は単位体積あたりの質量です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000202",
+    "title": "工学 基礎力 力・構造・材料",
+    "question_text": "弾性域における応力とひずみの比を表す材料定数はどれか。",
+    "choices": [
+      "ヤング率",
+      "ポアソン比",
+      "せん断弾性係数",
+      "熱膨張係数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ヤング率 E は σ/ε の比例定数です。",
+    "detailed_explanation": "フックの法則 σ = Eε において E がヤング率です。",
+    "domain": "工学",
+    "subdomain": "力・構造・材料",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "弾性材料定数ヤング率の意味を把握する。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "ポアソン比は縦横ひずみ比です。",
+      "せん断弾性係数はせん断変形の比例定数です。",
+      "熱膨張係数は温度と寸法の関係です。"
+    ],
+    "common_misconception": "各種材料定数を混同しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "力・構造・材料",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・ヤング率：フックの法則 σ = Eε において E がヤング率です。\n・ポアソン比：ポアソン比は縦横ひずみ比です。\n・せん断弾性係数：せん断弾性係数はせん断変形の比例定数です。\n・熱膨張係数：熱膨張係数は温度と寸法の関係です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000203",
+    "title": "工学 基礎力 力・構造・材料",
+    "question_text": "引張試験で材料が著しく永久変形を始める点を一般に何と呼ぶか。",
+    "choices": [
+      "降伏点",
+      "破断点",
+      "比例限界",
+      "クリープ開始点"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "弾性域を超えて塑性変形が始まる点が降伏点です。",
+    "detailed_explanation": "降伏点以降は除荷しても変形が残る塑性域に入ります。",
+    "domain": "工学",
+    "subdomain": "力・構造・材料",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "引張特性曲線上の降伏点を識別する。",
+    "difficulty_initial": 150,
+    "difficulty_continuous": 150,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "破断点は試験片が切れる点です。",
+      "比例限界は弾性域内の上限です。",
+      "クリープは長時間荷重下の現象です。"
+    ],
+    "common_misconception": "破断点と降伏点を同一視しがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "力・構造・材料",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・降伏点：以降は除荷しても変形が残る塑性域に入ります。\n・破断点：破断点は試験片が切れる点です。\n・比例限界：比例限界は弾性域内の上限です。\n・クリープ開始点：クリープは長時間荷重下の現象です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000204",
+    "title": "工学 基礎力 力・構造・材料",
+    "question_text": "はりの曲げに関する断面性能を表す代表量はどれか。",
+    "choices": [
+      "断面二次モーメント",
+      "断面積",
+      "ヤング率",
+      "せん断弾性係数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "曲げ剛性は断面二次モーメント I に比例します。",
+    "detailed_explanation": "曲げ応力は中立軸からの距離と断面形状（I）に依存します。",
+    "domain": "工学",
+    "subdomain": "力・構造・材料",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "曲げ構造で用いる断面性能指標を理解する。",
+    "difficulty_initial": 150,
+    "difficulty_continuous": 150,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "断面積は軸力・引張の抵抗に主に関わります。",
+      "ヤング率は材料定数です。",
+      "せん断弾性係数は材料定数です。"
+    ],
+    "common_misconception": "断面積が曲げ剛性を決めると誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "力・構造・材料",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・断面二次モーメント：正答。定義・原理・適用条件を正しく反映している。\n・断面積：断面積は軸力・引張の抵抗に主に関わります。\n・ヤング率：ヤング率は材料定数です。\n・せん断弾性係数：せん断弾性係数は材料定数です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000205",
+    "title": "工学 基礎力 電気回路基礎",
+    "question_text": "直流回路で、抵抗 R に電流 I が流れるとき両端電圧 V を表す関係はどれか。",
+    "choices": [
+      "V = IR",
+      "V = I/R",
+      "V = R/I",
+      "V = I + R"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "オームの法則 V = IR です。",
+    "detailed_explanation": "オームの法則は線形抵抗素の基本関係です。",
+    "domain": "工学",
+    "subdomain": "電気回路基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "オームの法則を定義として述べられるようにする。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "I を R で割る形は正しくありません。",
+      "R を I で割る形も正しくありません。",
+      "電圧と電流・抵抗は加算関係ではありません。"
+    ],
+    "common_misconception": "V, I, R の関係式を逆転させて覚えるミスが多い。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気回路基礎",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・V = IR：正答。定義・原理・適用条件を正しく反映している。\n・V = I/R：I を R で割る形は正しくありません。\n・V = R/I：R を I で割る形も正しくありません。\n・V = I + R：電圧と電流・抵抗は加算関係ではありません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000206",
+    "title": "工学 基礎力 電気回路基礎",
+    "question_text": "同じ電流路に直列接続した2つの抵抗 R1, R2 の合成抵抗はどれか。",
+    "choices": [
+      "R1 + R2",
+      "1/(1/R1 + 1/R2)",
+      "R1 × R2",
+      "(R1 + R2)/2"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "直列では合成抵抗は和になります。",
+    "detailed_explanation": "直列接続では同じ電流が流れ、R_eq = R1 + R2 です。",
+    "domain": "工学",
+    "subdomain": "電気回路基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "直列抵抗の合成法則を適用できるようにする。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "逆数の和の逆数は並列接続です。",
+      "積は合成抵抗の式ではありません。",
+      "算術平均は一般の合成抵抗ではありません。"
+    ],
+    "common_misconception": "直列と並列の合成式を取り違えやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気回路基礎",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・R1 + R2：直列接続では同じ電流が流れ、R_eq = R1 + R2 です。\n・R1 × R2：積は合成抵抗の式ではありません。\n・(R1 + R2)/2：算術平均は一般の合成抵抗ではありません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000207",
+    "title": "工学 基礎力 電気回路基礎",
+    "question_text": "キルヒホッフの電流則（KCL）が述べる内容として正しいものはどれか。",
+    "choices": [
+      "任意の接続点で流入電流の和は流出電流の和に等しい",
+      "閉路内の起電力の和は電圧降下の和に等しい",
+      "電流は抵抗の小さい経路に集中して流れる",
+      "抵抗値は温度に無関係である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "KCL は接続点での電流の保存則です。",
+    "detailed_explanation": "電荷保存から接続点で ΣI_in = ΣI_out が成り立ちます。",
+    "domain": "工学",
+    "subdomain": "電気回路基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "KCL の内容を他の回路法則と区別できるようにする。",
+    "difficulty_initial": 250,
+    "difficulty_continuous": 250,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "これはキルヒホッフの電圧則（KVL）です。",
+      "電流は並列経路に応じて分配され、1経路に集中しません。",
+      "抵抗値は一般に温度依存があります。"
+    ],
+    "common_misconception": "KCL と KVL を混同しがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気回路基礎",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 電気回路基礎：電荷保存から接続点で ΣI_in = ΣI_out が成り立ちます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000208",
+    "title": "工学 基礎力 電気回路基礎",
+    "question_text": "コンデンサの基本性質として最も適切なものはどれか。",
+    "choices": [
+      "電荷を蓄え、電圧変化に応じて電流が流れる",
+      "直流回路ではコンデンサが電流を一定に保つ",
+      "直流を増幅する",
+      "エネルギーを永久に損失しない抵抗"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "コンデンサは電荷蓄積素子で i = C·dv/dt です。",
+    "detailed_explanation": "コンデンサは電位差に比例して電荷を保持します。",
+    "domain": "工学",
+    "subdomain": "電気回路基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "蓄積素子としてのコンデンサの役割を理解する。",
+    "difficulty_initial": 250,
+    "difficulty_continuous": 250,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "定常直流では充電後に電流はほぼ零に近づき、一定電流源ではありません。",
+      "能動素子による増幅機能はありません。",
+      "抵抗はエネルギーを熱として散逸します。"
+    ],
+    "common_misconception": "コンデンサが直流を常に通すと誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気回路基礎",
+      "用語・定義"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 電気回路基礎：コンデンサは電位差に比例して電荷を保持します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000209",
+    "title": "工学 基礎力 制御入口",
+    "question_text": "負帰還制御の主な効果として最も適切なものはどれか。",
+    "choices": [
+      "目標値と実測値の偏差を小さくする",
+      "外乱を増幅して出力を大きくする",
+      "センサーを不要にする",
+      "ゲインを上げれば応答は速くなる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "負帰還は偏差を検出して補正し安定化・精度向上を図ります。",
+    "detailed_explanation": "出力の一部を入力側に戻し偏差を減らすのが負帰還です。",
+    "domain": "工学",
+    "subdomain": "制御入口",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "負帰還制御の目的を原理レベルで説明できるようにする。",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "外乱増幅は正帰還の危険例です。",
+      "実測値を得るためセンサー等が通常必要です。",
+      "ゲイン過大は振動や遅れを招き、応答の高速化とは限りません。"
+    ],
+    "common_misconception": "フィードバックが常に応答を速くすると誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御入口",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 制御入口：出力の一部を入力側に戻し偏差を減らすのが負帰還です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000210",
+    "title": "工学 基礎力 制御入口",
+    "question_text": "PID制御における P（比例）項が主に担う役割はどれか。",
+    "choices": [
+      "現在の偏差に比例した操作量を与える",
+      "比例項が積分と同様に定常偏差を零にする",
+      "比例項が振動抑制の主な役割を担う",
+      "外乱を物理的に遮断する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "P項は比例動作で偏差に応じた操作量を出力します。",
+    "detailed_explanation": "P は u = Kp·e。I 項が積分作用、D 項が微分作用です。",
+    "domain": "工学",
+    "subdomain": "制御入口",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "PID各項の基本役割を区別できるようにする。",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "定常偏差の除去は積分（I）項の役割であり、P項では残り得ます。",
+      "振動抑制は主に微分（D）項の役割です。",
+      "外乱遮断は P 項の機能ではありません。"
+    ],
+    "common_misconception": "P項だけで定常偏差が零になると誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御入口",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 制御入口：P は u = Kp·e。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000211",
+    "title": "工学 基礎力 制御入口",
+    "question_text": "フィードバック制御系で出力を測定し入力に戻す主な理由はどれか。",
+    "choices": [
+      "モデル誤差や外乱の影響を低減するため",
+      "計算量を増やして処理を複雑化するため",
+      "開ループと同じ性能を保証するため",
+      "センサー故障を無視するため"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "実測に基づく補正で外乱・ばらつきに頑健になります。",
+    "detailed_explanation": "フィードバックは出力情報を用いて誤差を修正します。",
+    "domain": "工学",
+    "subdomain": "制御入口",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "フィードバック制御が必要な理由を因果として説明する。",
+    "difficulty_initial": 350,
+    "difficulty_continuous": 350,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "複雑化自体は設計目的ではありません。",
+      "開ループ同等性能は保証されません。",
+      "センサー故障時は別途安全設計が必要です。"
+    ],
+    "common_misconception": "フィードバックが常に不要と考える誤解があります。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御入口",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 制御入口：フィードバックは出力情報を用いて誤差を修正します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000212",
+    "title": "工学 基礎力 制御入口",
+    "question_text": "開ループ制御の特徴として最も適切なものはどれか。",
+    "choices": [
+      "出力の測定結果を使わず所定の操作を行う",
+      "外乱がなければ開ループでも高精度に追従できる",
+      "外乱があっても自動補正される",
+      "開ループ制御は構造的に振動が生じにくい"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "開ループは出力を戻さない事前決定型の制御です。",
+    "detailed_explanation": "タイマー制御や単純なシーケンス制御が典型例です。",
+    "domain": "工学",
+    "subdomain": "制御入口",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "開ループと閉ループの違いを原理で説明できるようにする。",
+    "difficulty_initial": 350,
+    "difficulty_continuous": 350,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "モデル誤差や外乱があれば開ループは補正できません。",
+      "外乱補正はフィードバックの利点です。",
+      "ゲインや遅れ要素次第で振動も起こり得ます。"
+    ],
+    "common_misconception": "開ループでも常に高精度と誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御入口",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 制御入口：タイマー制御や単純なシーケンス制御が典型例です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000213",
+    "title": "工学 基礎力 エネルギー変換",
+    "question_text": "熱機関の理論的上限効率を決める要因として最も本質的なものはどれか。",
+    "choices": [
+      "高温側と低温側の温度差",
+      "使用する燃料の種類",
+      "機械の潤滑状態の良さ",
+      "設置場所の標高"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "カルノ効率 η = 1 − T_c/T_h で温度差が上限を決めます。",
+    "detailed_explanation": "熱力学第二法則により、温度差なしに100%効率は不可能です。",
+    "domain": "工学",
+    "subdomain": "エネルギー変換",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "熱機関効率の理論限界と温度差の関係を理解する。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "燃料はエンタルピー源ですが上限効率の本質は温度差です。",
+      "潤滑は損失低減の実務要因であり、理論上限の決定要因ではありません。",
+      "標高は本質要因ではありません。"
+    ],
+    "common_misconception": "燃料を変えれば理論上限が無制限に上がると誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "エネルギー変換",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・機械の潤滑状態の良さ：潤滑は損失低減の実務要因であり、理論上限の決定要因ではありません。\n・設置場所の標高：標高は本質要因ではありません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000214",
+    "title": "工学 基礎力 エネルギー変換",
+    "question_text": "電気エネルギーを回転運動に変換する装置として最も適切なものはどれか。",
+    "choices": [
+      "電動機",
+      "変圧器",
+      "整流器",
+      "抵抗器"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "電動機は電磁作用でトルクを発生します。",
+    "detailed_explanation": "変圧器は電圧変換、整流器は交流→直流、抵抗器は電気→熱です。",
+    "domain": "工学",
+    "subdomain": "エネルギー変換",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "代表的なエネルギー変換装置の対応関係を把握する。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "変圧器は電圧変換装置です。",
+      "整流器は交流を直流に変換します。",
+      "抵抗器は主にジュール熱に変換します。"
+    ],
+    "common_misconception": "変圧器も動きを生む装置と混同しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "エネルギー変換",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・電動機：正答。定義・原理・適用条件を正しく反映している。\n・変圧器：電圧変換、整流器は交流→直流、抵抗器は電気→熱です。\n・整流器：変圧器は電圧変換、整流器は交流→直流、抵抗器は電気→熱です。\n・抵抗器：変圧器は電圧変換、整流器は交流→直流、抵抗器は電気→熱です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000215",
+    "title": "工学 基礎力 エネルギー変換",
+    "question_text": "水力発電で、水の位置エネルギーが最終的に変換される主要なエネルギー形式はどれか。",
+    "choices": [
+      "電気エネルギー",
+      "化学エネルギー",
+      "核エネルギー",
+      "光化学エネルギー"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "水のポテンシャル→運動→タービン→発電機で電気に変換します。",
+    "detailed_explanation": "水力は重力ポテンシャルを利用します。",
+    "domain": "工学",
+    "subdomain": "エネルギー変換",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "水力発電のエネルギー変換経路を説明できるようにする。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "化学エネルギー発電は燃料電池等です。",
+      "核エネルギーは核反応による変換です。",
+      "光化学エネルギーは光を利用した化学変換です。"
+    ],
+    "common_misconception": "水力を化学反応による発電と混同する誤解があります。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "エネルギー変換",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・電気エネルギー：正答。定義・原理・適用条件を正しく反映している。\n・化学エネルギー：化学エネルギー発電は燃料電池等です。\n・核エネルギー：核エネルギーは核反応による変換です。\n・光化学エネルギー：光化学エネルギーは光を利用した化学変換です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000216",
+    "title": "工学 基礎力 エネルギー変換",
+    "question_text": "エネルギー変換過程で不可逆的な損失が生じる主な理由として最も適切なものはどれか。",
+    "choices": [
+      "熱力学第二法則により有用エネルギーが散逸するため",
+      "質量保存則が成り立たないため",
+      "設計を最適化すれば変換効率100%が可能なため",
+      "エネルギー総量が増えるため"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "エントロピー増大に伴い、一部は利用しにくい形で失われます。",
+    "detailed_explanation": "摩擦・Joule 熱・不可逆過程でエントロピーが増えます。",
+    "domain": "工学",
+    "subdomain": "エネルギー変換",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "エネルギー変換損失の物理的背景を理解する。",
+    "difficulty_initial": 450,
+    "difficulty_continuous": 450,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "質量保存則は一般に成立します。",
+      "不可逆過程では熱力学第二法則により100%効率は不可能です。",
+      "エネルギー総量の増加ではなく質の低下が問題です。"
+    ],
+    "common_misconception": "損失は単なる設計ミスだけだと考えがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "エネルギー変換",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 エネルギー変換：摩擦・Joule 熱・不可逆過程でエントロピーが増えます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000217",
+    "title": "工学 基礎力 安全係数",
+    "question_text": "安全係数 SF を「許容強度 ÷ 想定最大応力」で定義するとき、SF > 1 が意味することはどれか。",
+    "choices": [
+      "設計が許容強度より余裕を持っている",
+      "想定荷重内であれば材料は破断しない",
+      "荷重を2倍しても安全",
+      "検査が不要になる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "SF > 1 は強度に対して荷重側に余裕があることを示します。",
+    "detailed_explanation": "不確実性・欠陥・疲労等に備えた設計指標です。",
+    "domain": "工学",
+    "subdomain": "安全係数",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "安全係数の定義と設計上の意味を理解する。",
+    "difficulty_initial": 450,
+    "difficulty_continuous": 450,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "SF>1でも不確実性・疲労・欠陥により破断は起こり得ます。",
+      "想定を超える荷重では破断し得ます。",
+      "安全係数は検査の代替ではありません。"
+    ],
+    "common_misconception": "安全係数が絶対的安全保証だと誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "安全係数",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 安全係数：不確実性・欠陥・疲労等に備えた設計指標です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000218",
+    "title": "工学 基礎力 安全係数",
+    "question_text": "構造設計で「許容応力」と「破断強度」を区別する主な理由はどれか。",
+    "choices": [
+      "材料・荷重・使用条件の不確実性に備えるため",
+      "計算を複雑にするため",
+      "材料を意図的に弱くするため",
+      "設計基準を各国で統一するため"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "許容応力は破断強度より小さく、安全側の設計値です。",
+    "detailed_explanation": "破断強度は限界値、許容応力は安全係数等で割り引いた運用上限です。",
+    "domain": "工学",
+    "subdomain": "安全係数",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "許容応力と破断強度の違いを説明できるようにする。",
+    "difficulty_initial": 450,
+    "difficulty_continuous": 450,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "計算複雑化が目的ではありません。",
+      "意図的弱化が目的ではありません。",
+      "基準統一は副次的効果であり、許容応力設定の主目的ではありません。"
+    ],
+    "common_misconception": "許容応力＝破断強度と誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "安全係数",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 安全係数：破断強度は限界値、許容応力は安全係数等で割り引いた運用上限です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000219",
+    "title": "工学 基礎力 安全係数",
+    "question_text": "繰返し荷重を受ける部品で、安全係数を大きく取ることが特に重要な理由はどれか。",
+    "choices": [
+      "疲労破壊が静荷重より低い应力で起こり得るため",
+      "繰返し荷重では材料が硬化して強度が上がるため",
+      "疲労破壊は主に温度変化に依存するため",
+      "繰返し荷重では安全係数が無意味になるため"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "疲労は許容以下の応力でも繰返しで破壊が進行します。",
+    "detailed_explanation": "S-N 線図等で繰返し強度は静強度より低くなります。",
+    "domain": "工学",
+    "subdomain": "安全係数",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "疲労と安全係数の関係を理解する。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "繰返し荷重は疲労破壊を招き、強度が上がるわけではありません。",
+      "疲労は応力振幅・繰返し回数等に依存し、温度だけでは説明できません。",
+      "疲労ほど安全係数が重要です。"
+    ],
+    "common_misconception": "静的安全係数だけで疲労も十分と考えがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "安全係数",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 安全係数：S-N 線図等で繰返し強度は静強度より低くなります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000220",
+    "title": "工学 基礎力 安全係数",
+    "question_text": "不確実性の大きい荷重条件で安全側に設計する際、最も適切な考え方はどれか。",
+    "choices": [
+      "想定最大荷重を過小評価せず、安全係数で余裕を確保する",
+      "平均荷重を設計値とし安全余裕を設けない",
+      "材料の最小強度と荷重の最大値を組み合わせる",
+      "安全係数は1に近いほど効率的な設計になる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "荷重・強度双方の不確実性に備えた余裕設計が必要です。",
+    "detailed_explanation": "過小評価と過信は構造事故の原因になります。",
+    "domain": "工学",
+    "subdomain": "安全係数",
+    "ability_axis": "基礎力",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "不確実性下での安全側設計の考え方を理解する。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "平均荷重では外れ値やピーク荷重に対して脆弱になります。",
+      "強度最小・荷重最大の組み合わせは片側過剰安全の例です。",
+      "SF=1では余裕がなく、不確実性に対して脆弱です。"
+    ],
+    "common_misconception": "平均値設計で十分と誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "安全係数",
+      "原理・因果"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 安全係数：過小評価と過信は構造事故の原因になります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000221",
+    "title": "工学 基礎力 センサー・計測",
+    "question_text": "ひずみを電気信号に変換して計測する代表的な素子はどれか。",
+    "choices": [
+      "ひずみゲージ",
+      "サーミスタ",
+      "圧電素子",
+      "ホール素子"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ひずみゲージは抵抗変化からひずみを求めます。",
+    "detailed_explanation": "金属箔ひずみゲージは ΔR/R ∝ ε の関係を利用します。",
+    "domain": "工学",
+    "subdomain": "センサー・計測",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ひずみ計測の基本原理を理解する。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "サーミスタは温度依存抵抗です。",
+      "圧電素子は力・振動から電荷を得ます。",
+      "ホール素子は磁場検出に用いられます。"
+    ],
+    "common_misconception": "温度センサーとひずみセンサーを混同しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "センサー・計測",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・ひずみゲージ：金属箔ひずみゲージは ΔR/R ∝ ε の関係を利用します。\n・サーミスタ：サーミスタは温度依存抵抗です。\n・圧電素子：圧電素子は力・振動から電荷を得ます。\n・ホール素子：ホール素子は磁場検出に用いられます。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000222",
+    "title": "工学 基礎力 センサー・計測",
+    "question_text": "2種類の異なる金属線を接合点でつないで温度差から起電力を得る計測方式はどれか。",
+    "choices": [
+      "熱電対",
+      "抵抗温度計",
+      "光電セル",
+      "超音波距離計"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "塞贝克効果により温度差が起電力に変換されます。",
+    "detailed_explanation": "熱電対は広い温度範囲で使える接触型温度センサーです。",
+    "domain": "工学",
+    "subdomain": "センサー・計測",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "温度計測の基本原理を理解する。",
+    "difficulty_initial": 550,
+    "difficulty_continuous": 550,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "抵抗温度計は抵抗変化を利用します。",
+      "光電セルは光を電気に変換します。",
+      "超音波距離計は音波伝搬時間を測ります。"
+    ],
+    "common_misconception": "すべての温度センサーが同じ原理だと考えがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "センサー・計測",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・熱電対：広い温度範囲で使える接触型温度センサーです。\n・抵抗温度計：抵抗温度計は抵抗変化を利用します。\n・光電セル：光電セルは光を電気に変換します。\n・超音波距離計：超音波距離計は音波伝搬時間を測ります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000223",
+    "title": "工学 基礎力 センサー・計測",
+    "question_text": "アナログセンサー出力をデジタル値に変換する装置はどれか。",
+    "choices": [
+      "A/Dコンバータ（ADC）",
+      "D/Aコンバータ（DAC）",
+      "オペアンプによる増幅回路",
+      "PLCのプログラム"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ADC は連続値を離散デジタル値に変換します。",
+    "detailed_explanation": "サンプリングと量子化によりデジタル信号化します。",
+    "domain": "工学",
+    "subdomain": "センサー・計測",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "計測系におけるADCの役割を理解する。",
+    "difficulty_initial": 550,
+    "difficulty_continuous": 550,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "DAC はデジタル→アナログ変換です。",
+      "オペアンプは増幅等の回路素子であり、A/D変換装置ではありません。",
+      "PLCプログラム自体は変換装置ではありません。"
+    ],
+    "common_misconception": "DACとADCを混同しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "センサー・計測",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・A/Dコンバータ（ADC）：正答。定義・原理・適用条件を正しく反映している。\n・D/Aコンバータ（DAC）：DAC はデジタル→アナログ変換です。\n・PLCのプログラム：PLCプログラム自体は変換装置ではありません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000224",
+    "title": "工学 基礎力 センサー・計測",
+    "question_text": "微弱信号計測でシールド線や差動入力を用いる主な目的はどれか。",
+    "choices": [
+      "ノイズや同相雑音の影響を低減する",
+      "信号を意図的に飽和させる",
+      "サンプリング周期を長くする",
+      "センサーの感度を永久に零にする"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ノイズ対策でS/N比を改善します。",
+    "detailed_explanation": "シールドは外部電磁ノイズを遮断、差動入力は同相成分を除去します。",
+    "domain": "工学",
+    "subdomain": "センサー・計測",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "計測ノイズ対策の基本を理解する。",
+    "difficulty_initial": 550,
+    "difficulty_continuous": 550,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "飽和は計測不能の原因です。",
+      "サンプリング周期は別の設計パラメータです。",
+      "感度零化は目的ではありません。"
+    ],
+    "common_misconception": "ノイズは無視できると考えがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "センサー・計測",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 センサー・計測：シールドは外部電磁ノイズを遮断、差動入力は同相成分を除去します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000225",
+    "title": "工学 基礎力 製造品質",
+    "question_text": "工程データを統計的に管理し、異常なばらつきを早期検出する手法として最も適切なものはどれか。",
+    "choices": [
+      "統計的工程管理（SPC）",
+      "ブレーンストーミング",
+      "PERT/CPM",
+      "有限要素法"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "SPC は管理図等で工程の安定性を監視します。",
+    "detailed_explanation": "管理限界外れは特殊原因の兆候として調査します。",
+    "domain": "工学",
+    "subdomain": "製造品質",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "SPCの目的と適用場面を理解する。",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "ブレーンストーミングは発想法です。",
+      "PERT/CPM は工程スケジュール管理です。",
+      "有限要素法は解析手法です。"
+    ],
+    "common_misconception": "品質管理＝最終検査だけと考えがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "製造品質",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・統計的工程管理（SPC）：正答。定義・原理・適用条件を正しく反映している。\n・ブレーンストーミング：ブレーンストーミングは発想法です。\n・PERT/CPM：PERT/CPM は工程スケジュール管理です。\n・有限要素法：有限要素法は解析手法です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000226",
+    "title": "工学 基礎力 製造品質",
+    "question_text": "製品寸法の「公差」とは、最も適切に説明できるものはどれか。",
+    "choices": [
+      "許容される寸法の上限と下限の範囲",
+      "設計寸法と中央値を一致させる要求",
+      "検査を省略できる条件",
+      "材料の引張強度の下限"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "公差は設計寸法に対する許容偏差の範囲です。",
+    "detailed_explanation": "機能・組立・コストのバランスで設定されます。",
+    "domain": "工学",
+    "subdomain": "製造品質",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "公差の意味を製造文脈で理解する。",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "公差は許容範囲の定義であり、中央値一致の要求ではありません。",
+      "公差があっても検査は必要です。",
+      "公差は寸法の許容範囲であり強度ではありません。"
+    ],
+    "common_misconception": "公差ゼロが常に最良と誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "製造品質",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・材料の引張強度の下限：公差は寸法の許容範囲であり強度ではありません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000227",
+    "title": "工学 基礎力 製造品質",
+    "question_text": "大量生産品の品質確認で、全数検査の代わりに抜取検査を用いる主な理由はどれか。",
+    "choices": [
+      "検査コストと時間を抑えつつ品質水準を評価する",
+      "抜取検査でも不良品を全数排除できる",
+      "統計を使わず判断できる",
+      "サンプルが不良なら合格とする"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "抜取検査は統計的推定でロット品質を評価します。",
+    "detailed_explanation": "AQL 等の基準に基づき、全数検査とのトレードオフを取ります。",
+    "domain": "工学",
+    "subdomain": "製造品質",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "抜取検査の位置づけを理解する。",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "抜取検査は統計的推定であり、全数排除を保証しません。",
+      "抜取検査は統計的手法です。",
+      "不良サンプルで合格判定はありません。"
+    ],
+    "common_misconception": "抜取検査で不良ゼロが保証されると誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "製造品質",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 製造品質：AQL 等の基準に基づき、全数検査とのトレードオフを取ります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000228",
+    "title": "工学 基礎力 製造品質",
+    "question_text": "製造現場で PDCA サイクルを回す主な目的はどれか。",
+    "choices": [
+      "計画・実行・評価・改善を繰り返し品質を向上させる",
+      "一度計画したら変更禁止とする",
+      "データ収集を省略する",
+      "責任者以外は改善提案しない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "PDCA は継続的改善の枠組みです。",
+    "detailed_explanation": "Plan-Do-Check-Act で問題を特定し再発防止します。",
+    "domain": "工学",
+    "subdomain": "製造品質",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "PDCAの目的を製造品質文脈で理解する。",
+    "difficulty_initial": 650,
+    "difficulty_continuous": 650,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "変更禁止は改善と矛盾します。",
+      "Check にはデータ評価が必要です。",
+      "全員参加の改善が望ましいです。"
+    ],
+    "common_misconception": "PDCAは一度きりの手順だと誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "製造品質",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・責任者以外は改善提案しない：全員参加の改善が望ましいです。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000229",
+    "title": "工学 基礎力 システム工学",
+    "question_text": "要求仕様から設計・実装・検証へ段階的に進む開発モデルとして代表的なものはどれか。",
+    "choices": [
+      "V字モデル",
+      "設計後に検証フェーズを置かないウォーターフォール型モデル",
+      "試作と評価をランダムに繰り返すモデル",
+      "要求定義を省略するモデル"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "V字モデルは各設計段階に対応する検証段階を持ちます。",
+    "detailed_explanation": "要求↔受入試験、基本設計↔結合試験等が対応します。",
+    "domain": "工学",
+    "subdomain": "システム工学",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "V字モデルの基本構造を理解する。",
+    "difficulty_initial": 650,
+    "difficulty_continuous": 650,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "検証なしモデルはシステム工学の原則に反します。",
+      "体系的な段階的開発ではなく、品質保証に不十分です。",
+      "要求定義は出発点です。"
+    ],
+    "common_misconception": "設計だけ行い検証を後回しにする誤解があります。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "システム工学",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・V字モデル：正答。定義・原理・適用条件を正しく反映している。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000230",
+    "title": "工学 基礎力 システム工学",
+    "question_text": "システム工学で「要求」と「設計仕様」を区別する主な理由はどれか。",
+    "choices": [
+      "何を実現すべきか（What）とどう実現するか（How）を分離するため",
+      "要求仕様は設計仕様より詳細に記述するため",
+      "設計仕様は顧客が直接記述するため",
+      "区別すれば開発期間が大幅に短縮されるため"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "要求は目的・制約、設計仕様は実現手段の記述です。",
+    "detailed_explanation": "混同すると過剰仕様や検証不能な要求になります。",
+    "domain": "工学",
+    "subdomain": "システム工学",
+    "ability_axis": "基礎力",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "要求と設計仕様の違いを理解する。",
+    "difficulty_initial": 650,
+    "difficulty_continuous": 650,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "要求は一般に設計より抽象（What）であり、詳細度は逆です。",
+      "設計仕様は設計者が具体化します。",
+      "区別の目的は明確化であり、期間短縮は保証されません。"
+    ],
+    "common_misconception": "要求＝設計図面の詳細だと考えがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "システム工学",
+      "基本的な適用"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 システム工学：混同すると過剰仕様や検証不能な要求になります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000231",
+    "title": "工学 基礎力 システム工学",
+    "question_text": "複数の部品・サブシステムを統合したシステム全体の性能を評価する際、最も重要な視点はどれか。",
+    "choices": [
+      "部品性能の単純和ではなく相互作用とインタフェースを考慮する",
+      "最も高性能な部品の性能でシステム性能が決まる",
+      "インタフェース定義は後工程で十分",
+      "システム要件は部品仕様の自動コピーで足りる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "部分間の相互作用やインタフェースが全体性能を左右します。",
+    "detailed_explanation": "結合試験・システム試験で全体挙動を確認します。",
+    "domain": "工学",
+    "subdomain": "システム工学",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "システムレベル思考の要点を理解する。",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "ボトルネック部品や結合・インタフェースが全体を制約します。",
+      "インタフェース未定義は結合不良の原因です。",
+      "自動コピーでは相互作用を捉えられません。"
+    ],
+    "common_misconception": "部品最適＝システム最適と誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "システム工学",
+      "比較・分類"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 システム工学：結合試験・システム試験で全体挙動を確認します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000232",
+    "title": "工学 基礎力 システム工学",
+    "question_text": "製品を構成する部品一覧と数量・階層関係を表すものとして最も適切なものはどれか。",
+    "choices": [
+      "部品表（BOM: Bill of Materials）",
+      "故障モード影響解析（FMEA）",
+      "管理限界を示す管理図",
+      "カルノサイクル図"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "BOM は構成部品のリストと階層構造を示します。",
+    "detailed_explanation": "設計変更・調達・生産計画で参照されます。",
+    "domain": "工学",
+    "subdomain": "システム工学",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "BOMの役割を他の工学ドキュメントと区別する。",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "FMEA は故障リスク解析です。",
+      "管理図はSPCで用います。",
+      "カルノサイクルは熱力学の概念図です。"
+    ],
+    "common_misconception": "BOMとFMEAを同一視しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "システム工学",
+      "比較・分類"
+    ],
+    "status": "draft",
+    "basic_terms": "・カルノサイクル図：カルノサイクルは熱力学の概念図です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000233",
+    "title": "工学 基礎力 信頼性",
+    "question_text": "修理不能系の平均故障間隔を表す指標として一般的なものはどれか。",
+    "choices": [
+      "MTBF（Mean Time Between Failures）",
+      "MTTR（Mean Time To Repair）",
+      "OEE（Overall Equipment Effectiveness）",
+      "CPK（工程能力指数）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "MTBF は故障と故障の間隔の平均です。",
+    "detailed_explanation": "MTTR は修理時間、OEE は設備総合効率、CPK は工程能力です。",
+    "domain": "工学",
+    "subdomain": "信頼性",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "信頼性指標 MTBF の意味を理解する。",
+    "difficulty_initial": 750,
+    "difficulty_continuous": 750,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "MTTR は修理に要する平均時間です。",
+      "OEE は稼働・性能・良品率の指標です。",
+      "CPK はばらつきの工程能力です。"
+    ],
+    "common_misconception": "MTBFとMTTRを混同しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "信頼性",
+      "比較・分類"
+    ],
+    "status": "draft",
+    "basic_terms": "・CPK（工程能力指数）：CPK はばらつきの工程能力です。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000234",
+    "title": "工学 基礎力 信頼性",
+    "question_text": "単一障害点を避けるために同一機能を二重化する設計手法として最も適切なものはどれか。",
+    "choices": [
+      "冗長化（レダンダンシ）",
+      "値下げ",
+      "公差拡大",
+      "検査省略"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "冗長化は一部故障時も機能継続を図ります。",
+    "detailed_explanation": "待機冗長・並列冗長等の方式があります。",
+    "domain": "工学",
+    "subdomain": "信頼性",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "冗長化の目的を理解する。",
+    "difficulty_initial": 750,
+    "difficulty_continuous": 750,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "値下げは信頼性設計ではありません。",
+      "公差拡大は精度・品質に影響します。",
+      "検査省略はリスクを増やします。"
+    ],
+    "common_misconception": "部品を増やすだけで信頼性が下がると誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "信頼性",
+      "比較・分類"
+    ],
+    "status": "draft",
+    "basic_terms": "・冗長化（レダンダンシ）：正答。定義・原理・適用条件を正しく反映している。\n・値下げ：値下げは信頼性設計ではありません。\n・公差拡大：公差拡大は精度・品質に影響します。\n・検査省略：検査省略はリスクを増やします。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000235",
+    "title": "工学 基礎力 信頼性",
+    "question_text": "「信頼性」と「品質」の関係について最も適切な説明はどれか。",
+    "choices": [
+      "品質は出荷時点の適合性、信頼性は時間経過下での故障しにくさも含む",
+      "両者は完全に同一の概念である",
+      "信頼性は出荷時、品質は使用後にそれぞれ評価する",
+      "信頼性が高ければ品質は無関係になる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "品質は適合性、信頼性は時間軸での耐久・故障率の側面です。",
+    "detailed_explanation": "高品質でも初期不良がなければ、長期使用で故障する場合があります。",
+    "domain": "工学",
+    "subdomain": "信頼性",
+    "ability_axis": "基礎力",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "信頼性と品質の違いを比較できるようにする。",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "時間軸と評価観点が異なります。",
+      "評価時点の説明が逆で、両者は時間軸を含め相互に関連します。",
+      "両者は相互に関連します。"
+    ],
+    "common_misconception": "信頼性＝品質と同一視しがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "信頼性",
+      "比較・分類"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 信頼性：高品質でも初期不良がなければ、長期使用で故障する場合があります。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000236",
+    "title": "工学 基礎力 信頼性",
+    "question_text": "故障モードと影響解析（FMEA）の主な目的はどれか。",
+    "choices": [
+      "潜在的故障モードを洗い出し影響と対策の優先度を評価する",
+      "製品の販売価格を決定する",
+      "特許侵害を判定する",
+      "従業員の人事評価を行う"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "FMEA は設計・工程のリスクを体系的に評価します。",
+    "detailed_explanation": "深刻度・発生度・検出度等でRPN等を算出します。",
+    "domain": "工学",
+    "subdomain": "信頼性",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "FMEAの目的を他の管理手法と区別する。",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "価格決定はFMEAの目的ではありません。",
+      "特許判定は別法務プロセスです。",
+      "人事評価とは無関係です。"
+    ],
+    "common_misconception": "FMEAは事後報告だけの手法だと誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "信頼性",
+      "誤解・境界"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 信頼性：深刻度・発生度・検出度等でRPN等を算出します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000237",
+    "title": "工学 基礎力 工学倫理基礎",
+    "question_text": "工学倫理で「利益相反（コンフリクト・オブ・インタレスト）」が問題となる典型例はどれか。",
+    "choices": [
+      "評価者が被評価対象の株を保有し判断に影響し得る",
+      "専門外分野の文献を読む",
+      "チームで設計レビューを行う",
+      "安全係数を基準以上に設定する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "私的利益が公的判断を歪める可能性が問題です。",
+    "detailed_explanation": "開示・回避・第三者レビュー等で対処します。",
+    "domain": "工学",
+    "subdomain": "工学倫理基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "利益相反の概念を工学倫理文脈で理解する。",
+    "difficulty_initial": 850,
+    "difficulty_continuous": 850,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "文献調査は適切な行為です。",
+      "設計レビューは望ましい実践です。",
+      "安全側設計は倫理的に問題ありません。"
+    ],
+    "common_misconception": "利益相反は違法行為と同一だと誤解しやすい。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "工学倫理基礎",
+      "誤解・境界"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 工学倫理基礎：開示・回避・第三者レビュー等で対処します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000238",
+    "title": "工学 基礎力 工学倫理基礎",
+    "question_text": "持続可能な開発の観点から、製品ライフサイクルで考慮すべき事項として最も適切なものはどれか。",
+    "choices": [
+      "原材料調達から廃棄・リサイクルまでの環境負荷",
+      "製品ライフサイクルの初期コスト",
+      "マーケティング上の広告効果",
+      "特許出願数の多さ"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "LCA 等でライフサイクル全体の影響を評価します。",
+    "detailed_explanation": "エネルギー消費、排出、資源循環を含めた設計判断が必要です。",
+    "domain": "工学",
+    "subdomain": "工学倫理基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "持続可能性を工学倫理・設計に結びつける。",
+    "difficulty_initial": 850,
+    "difficulty_continuous": 850,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "初期コストに限定すると使用・廃棄段階の環境負荷を見落とします。",
+      "広告は持続可能性評価の中心ではありません。",
+      "特許数は技術管理指標であり、環境・ライフサイクル指標ではありません。"
+    ],
+    "common_misconception": "環境問題は使用段階だけの話だと考えがちです。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "工学倫理基礎",
+      "誤解・境界"
+    ],
+    "status": "draft",
+    "basic_terms": "・マーケティング上の広告効果：広告は持続可能性評価の中心ではありません。\n・特許出願数の多さ：特許数は技術管理指標であり、環境・ライフサイクル指標ではありません。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000239",
+    "title": "工学 基礎力 工学倫理基礎",
+    "question_text": "試験データを意図的に改ざんする行為について、最も適切な説明はどれか。",
+    "choices": [
+      "科学的不正であり、製品安全と公共の信頼を損なう",
+      "競争力向上のため許容される",
+      "社内の研究チーム内であれば改ざんは問題にならない",
+      "数値の丸め誤差と同義である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "データ改ざんは研究・開発倫理の重大な違反です。",
+    "detailed_explanation": "再現性・安全性判断の根拠が失われ、事故リスクが増大します。",
+    "domain": "工学",
+    "subdomain": "工学倫理基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "データ誠実性の重要性を理解する。",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "不正データは許容されません。",
+      "内部であってもデータ改ざんは科学的不正です。",
+      "改ざんと丸め誤差は別問題です。"
+    ],
+    "common_misconception": "小さな改ざんは無害と考える誤解があります。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "工学倫理基礎",
+      "誤解・境界"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 工学倫理基礎：再現性・安全性判断の根拠が失われ、事故リスクが増大します。"
+  },
+  {
+    "id": "00000000-0000-4000-8001-000000000240",
+    "title": "工学 基礎力 工学倫理基礎",
+    "question_text": "安全文化を醸成するために最も重要な要素はどれか。",
+    "choices": [
+      "問題報告を歓迎し、隠蔽せず学習する組織風土",
+      "ミスを報告した担当者に厳しく処罰する",
+      "安全情報を関係者限定で秘匿する",
+      "安全より納期を優先する文化を徹底する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "報告を歓迎し学習する組織風土が重要です。",
+    "detailed_explanation": "チェルノブイリ等の事故調査でも安全文化の欠如が指摘されています。",
+    "domain": "工学",
+    "subdomain": "工学倫理基礎",
+    "ability_axis": "基礎力",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "安全文化の基本要素を理解する。",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "distractor_rationales": [
+      "正答。定義・原理・適用条件を正しく反映している。",
+      "盲目的処罰は報告を抑制し、安全文化を損ないます。",
+      "情報秘匿は学習を妨げます。",
+      "納期最優先は安全文化と矛盾し、事故リスクを高めます。"
+    ],
+    "common_misconception": "処罰中心で報告が抑制されると事故リスクが増えます。",
+    "source_url": "",
+    "source_note": "basic-v1 工学ドメイン（基礎力40問）。教科書レベルの基礎概念に基づく。",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "工学倫理基礎",
+      "誤解・境界"
+    ],
+    "status": "draft",
+    "basic_terms": "・工学 基礎力 工学倫理基礎：チェルノブイリ等の事故調査でも安全文化の欠如が指摘されています。"
+  }
+]
