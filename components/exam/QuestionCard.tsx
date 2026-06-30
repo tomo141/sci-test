@@ -19,7 +19,8 @@ export function QuestionCard({
   activeFeedback,
   onFeedbackChange,
   feedback = null,
-  questionTextRef
+  questionTextRef,
+  showDifficulty = false
 }: {
   question: Question;
   index: number;
@@ -30,12 +31,14 @@ export function QuestionCard({
   onFeedbackChange: (kind: QuestionFeedbackKind | null) => void;
   feedback?: AnswerFeedback | null;
   questionTextRef?: RefObject<HTMLHeadingElement | null>;
+  showDifficulty?: boolean;
 }) {
   return (
     <div className="rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-card md:p-6">
       <div className="mb-5 flex flex-wrap items-center gap-3">
         <StatusBadge>第 {index + 1} 問</StatusBadge>
         <StatusBadge tone="blue">{question.domain}</StatusBadge>
+        {showDifficulty ? <StatusBadge tone="yellow">難易度 {question.difficulty}</StatusBadge> : null}
       </div>
       <h1 ref={questionTextRef} className="mb-6 scroll-mt-0 text-2xl font-black leading-10 md:text-3xl">{question.question}</h1>
       <div className="grid gap-4 md:grid-cols-2">

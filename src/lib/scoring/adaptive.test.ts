@@ -79,6 +79,17 @@ describe("adaptive selection", () => {
     expect(selection!.question.abilityAxis).toBe("基礎力");
   });
 
+  it("varies first question across sessions when multiple candidates are close", () => {
+    const selections = new Set<string>();
+    for (let trial = 0; trial < 16; trial += 1) {
+      const plan = createExamPlan(`pool-variety-${trial}`);
+      const selection = selectFirstQuestion({ questions, answers: [], plan });
+      expect(selection).not.toBeNull();
+      selections.add(selection!.question.id);
+    }
+    expect(selections.size).toBeGreaterThan(1);
+  });
+
   it("does not repeat answered questions across 50 selections", () => {
     const plan = createExamPlan("adaptive-50");
     const answers: AnswerRecord[] = [];

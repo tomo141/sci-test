@@ -2,7 +2,7 @@ import type { Question } from "@/src/lib/data/questions";
 import type { AbilityAxis } from "@/src/lib/data/taxonomy";
 import { scoringConfig } from "./config";
 import { type CoverageSlot, type ExamPlan, createRng, getCoverageSlot } from "./coverage";
-import { blendedAbilityForQuestion, dedupeAnswers, estimateFromAnswers } from "./estimate";
+import { blendedAbilityForQuestion, dedupeAnswers, estimateFromAnswers, selectionAbilityInflation } from "./estimate";
 import {
   distanceToBand,
   difficultyForTargetProbability,
@@ -48,7 +48,9 @@ function exposureCount(question: Question) {
 
 function estimateProbability(question: Question, answers: AnswerRecord[]) {
   const estimate = estimateFromAnswers(answers);
-  const ability = blendedAbilityForQuestion(estimate.internal, question.domain, question.abilityAxis);
+  const ability =
+    blendedAbilityForQuestion(estimate.internal, question.domain, question.abilityAxis) +
+    selectionAbilityInflation(estimate.cumulativeCorrectRate);
   return predictCorrectProbability(ability, question.difficulty, question.discrimination);
 }
 
@@ -114,6 +116,21 @@ function filterCandidates(
   });
 }
 
+function pickFromTopWeighted<T extends { weight: number }>(
+  items: T[],
+  rng: () => number,
+  poolSize = scoringConfig.candidatePoolSize
+): T {
+  if (!items.length) throw new Error("pickFromTopWeighted requires at least one item");
+  const ranked = [...items].sort((left, right) => right.weight - left.weight);
+  const pool = ranked.slice(0, Math.min(poolSize, ranked.length));
+  return weightedPick(
+    pool,
+    pool.map((item) => item.weight),
+    rng
+  );
+}
+
 function selectFromCandidates(
   candidates: Question[],
   answers: AnswerRecord[],
@@ -127,11 +144,7 @@ function selectFromCandidates(
   if (!candidates.length) return null;
 
   const scored = candidates.map((question) => buildCandidate(question, answers, slot, band, lastQuestion));
-  const weighted = weightedPick(
-    scored,
-    scored.map((candidate) => candidate.weight),
-    rng
-  );
+  const weighted = pickFromTopWeighted(scored, rng);
 
   return {
     question: weighted.question,
@@ -146,7 +159,8 @@ function selectClosestToTarget(
   candidates: Question[],
   answers: AnswerRecord[],
   slot: CoverageSlot,
-  target: number
+  target: number,
+  rng: () => number
 ): AdaptiveSelection | null {
   if (!candidates.length) return null;
 
@@ -154,11 +168,17 @@ function selectClosestToTarget(
     .map((question) => ({
       question,
       probability: estimateProbability(question, answers),
-      targetDistance: Math.abs(estimateProbability(question, answers) - target)
+      targetDistance: Math.abs(estimateProbability(question, answers) - target),
+      weight: 0
     }))
     .sort((left, right) => left.targetDistance - right.targetDistance);
 
-  const best = ranked[0];
+  const pool = ranked.slice(0, Math.min(scoringConfig.candidatePoolSize, ranked.length));
+  for (const item of pool) {
+    item.weight = 1 / (0.01 + item.targetDistance);
+  }
+  const best = pickFromTopWeighted(pool, rng);
+
   return {
     question: best.question,
     slot,
@@ -175,27 +195,64 @@ export function selectFirstQuestion(context: AdaptiveSelectionContext): Adaptive
     scoringConfig.initialAbility,
     scoringConfig.firstQuestionTargetProbability
   );
+  const rng = createRng(`${plan.sessionSeed}:select:0`);
 
-  const candidates = filterCandidates(questions, [], slot, now, true, true)
-    .filter((question) => question.domain === slot.domain && question.abilityAxis === slot.abilityAxis)
-    .sort(
-      (left, right) =>
-        Math.abs(left.difficulty - targetDifficulty) - Math.abs(right.difficulty - targetDifficulty)
-    );
+  const domainCandidates = filterCandidates(questions, [], slot, now, true, true).filter(
+    (question) => question.domain === slot.domain && question.abilityAxis === slot.abilityAxis
+  );
 
-  const question = candidates[0] || filterCandidates(questions, [], slot, now, true, true)[0];
-  if (!question) return null;
+  const ranked = domainCandidates
+    .map((question) => ({
+      question,
+      distance: Math.abs(question.difficulty - targetDifficulty),
+      weight: 1 / (1 + Math.abs(question.difficulty - targetDifficulty) / 50)
+    }))
+    .sort((left, right) => left.distance - right.distance);
+
+  const pool = ranked.slice(0, Math.min(scoringConfig.candidatePoolSize, ranked.length));
+  const picked = pool.length
+    ? pickFromTopWeighted(pool, rng).question
+    : filterCandidates(questions, [], slot, now, true, true)[0];
+  if (!picked) return null;
 
   return {
-    question,
+    question: picked,
     slot,
     selectionReason: "first_question_target_70pct",
     predictedProbability: predictCorrectProbability(
       scoringConfig.initialAbility,
-      question.difficulty,
-      question.discrimination
+      picked.difficulty,
+      picked.discrimination
     ),
     targetBand: scoringConfig.lowRateTargetBand
+  };
+}
+
+function selectHardestAvailable(
+  candidates: Question[],
+  answers: AnswerRecord[],
+  slot: CoverageSlot,
+  cumulativeRate: number,
+  rng: () => number
+): AdaptiveSelection | null {
+  if (!candidates.length || cumulativeRate < 1) return null;
+
+  const maxDifficulty = Math.max(...candidates.map((question) => question.difficulty));
+  const hardestPool = candidates.filter((question) => question.difficulty === maxDifficulty);
+  const weighted = pickFromTopWeighted(
+    hardestPool.map((question) => ({
+      question,
+      weight: 1 + question.qualityScore
+    })),
+    rng
+  );
+
+  return {
+    question: weighted.question,
+    slot,
+    selectionReason: "adaptive_perfect:hardest_available",
+    predictedProbability: estimateProbability(weighted.question, answers),
+    targetBand: scoringConfig.perfectRateTargetBand
   };
 }
 
@@ -230,6 +287,12 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
     const inBandCandidates = candidates.filter(
       (question) => distanceToBand(estimateProbability(question, uniqueAnswers), band) === 0
     );
+
+    if (!inBandCandidates.length && cumulativeRate >= 1) {
+      const hardest = selectHardestAvailable(candidates, uniqueAnswers, slot, cumulativeRate, rng);
+      if (hardest) return hardest;
+    }
+
     const pool = inBandCandidates.length ? inBandCandidates : candidates;
 
     const selection = selectFromCandidates(
@@ -249,7 +312,7 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
     (question) => !uniqueAnswers.some((answer) => answer.questionId === question.id) && isPublishedAndValid(question, now)
   );
   const target = (baseBand.min + baseBand.max) / 2;
-  return selectClosestToTarget(anyUnanswered, uniqueAnswers, slot, target);
+  return selectClosestToTarget(anyUnanswered, uniqueAnswers, slot, target, rng);
 }
 
 export function nextQuestionForAnswers(

@@ -1,12 +1,18 @@
 import { abilityAxes, domains, type AbilityAxis, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { createInitialAbilityState, updateAbilityState } from "./ability";
 import { scoringConfig } from "./config";
+import { internalToDomainScore } from "./domainScore";
 import type { AbilityState, AnswerRecord, Estimate, EstimateCounts, EstimateUncertainties } from "./types";
 
 const clamp = (value: number) =>
   Math.max(scoringConfig.minScore, Math.min(scoringConfig.maxScore, value));
 
 const roundStep = (value: number) => Math.round(value / scoringConfig.displayStep) * scoringConfig.displayStep;
+
+function scaleUncertaintyToDomain(internalUncertainty: number) {
+  const ratio = (scoringConfig.domainMaxScore - scoringConfig.domainMinScore) / (scoringConfig.maxScore - scoringConfig.minScore);
+  return Math.max(1, Math.round(internalUncertainty * ratio));
+}
 
 export function cumulativeCorrectRate(answers: AnswerRecord[]) {
   const unique = dedupeAnswers(answers);
@@ -31,7 +37,7 @@ function toDisplayState(state: AbilityState): Estimate {
   return {
     overall: display,
     domains: Object.fromEntries(
-      domains.map((domain) => [domain, roundStep(clamp(state.domains[domain].value))])
+      domains.map((domain) => [domain, internalToDomainScore(state.domains[domain].value)])
     ) as Record<ScienceDomain, number>,
     axes: Object.fromEntries(
       abilityAxes.map((axis) => [axis, roundStep(clamp(state.axes[axis].value))])
@@ -44,7 +50,9 @@ function toDisplayState(state: AbilityState): Estimate {
     },
     uncertainties: {
       overall: state.overall.uncertainty,
-      domains: Object.fromEntries(domains.map((domain) => [domain, state.domains[domain].uncertainty])) as EstimateUncertainties["domains"],
+      domains: Object.fromEntries(
+        domains.map((domain) => [domain, scaleUncertaintyToDomain(state.domains[domain].uncertainty)])
+      ) as EstimateUncertainties["domains"],
       axes: Object.fromEntries(abilityAxes.map((axis) => [axis, state.axes[axis].uncertainty])) as EstimateUncertainties["axes"]
     },
     standardError,
@@ -58,8 +66,11 @@ export function estimateFromAnswers(answers: AnswerRecord[]): Estimate {
   const unique = dedupeAnswers(answers);
   let state = createInitialAbilityState();
 
-  for (const answer of unique) {
-    state = updateAbilityState(state, answer);
+  for (let index = 0; index < unique.length; index += 1) {
+    const answer = unique[index];
+    const cumulativeCorrectRate =
+      unique.slice(0, index + 1).filter((entry) => entry.correct).length / (index + 1);
+    state = updateAbilityState(state, answer, cumulativeCorrectRate);
   }
 
   const estimate = toDisplayState(state);
@@ -83,4 +94,12 @@ export function blendedAbilityForQuestion(
     scoringConfig.domainAbilityBlend * state.domains[domain].value +
     scoringConfig.axisAbilityBlend * state.axes[abilityAxis].value
   );
+}
+
+export function selectionAbilityInflation(cumulativeCorrectRate: number) {
+  if (cumulativeCorrectRate < scoringConfig.lowCumulativeRateThreshold) return 0;
+  const progress =
+    (cumulativeCorrectRate - scoringConfig.lowCumulativeRateThreshold) /
+    (1 - scoringConfig.lowCumulativeRateThreshold);
+  return scoringConfig.maxSelectionAbilityInflation * progress;
 }

@@ -1,5 +1,6 @@
 import { createServiceRoleClient } from "@/src/lib/supabase/server";
-import { rankTitle } from "@/src/lib/scoring/rank";
+import { displayDomainScore } from "@/src/lib/scoring/domainScore";
+import { domainRankTitle, rankTitle } from "@/src/lib/scoring/rank";
 import type { ScienceDomain } from "@/src/lib/data/taxonomy";
 
 export type PublicLeaderboardRow = {
@@ -52,7 +53,7 @@ async function getDomainLeaderboard(domain: ScienceDomain, limit: number): Promi
     const bestRows = dedupeBestPerUser(
       estimates.map((row) => ({
         user_id: row.user_id as string,
-        ability: Number(row.ability),
+        ability: displayDomainScore(Number(row.ability)),
         answer_count: Number(row.answer_count),
         profiles: row.profiles as ProfileRef
       })),
@@ -62,10 +63,10 @@ async function getDomainLeaderboard(domain: ScienceDomain, limit: number): Promi
     return bestRows.map((row, index) => ({
       rank: index + 1,
       nickname: readNickname(row.profiles, index),
-      score: Math.round(row.ability),
+      score: row.ability,
       answerCount: row.answer_count,
       bestDomain: domain,
-      title: rankTitle(row.ability)
+      title: domainRankTitle(row.ability)
     }));
   }
 
@@ -78,14 +79,17 @@ async function getDomainLeaderboard(domain: ScienceDomain, limit: number): Promi
     .limit(limit);
 
   if (!error && data?.length) {
-    return data.map((row, index) => ({
-      rank: row.rank ?? index + 1,
-      nickname: row.public_nickname,
-      score: Number(row.score),
-      answerCount: Number(row.answer_count),
-      bestDomain: row.best_domain,
-      title: row.title
-    }));
+    return data.map((row, index) => {
+      const score = displayDomainScore(Number(row.score));
+      return {
+        rank: row.rank ?? index + 1,
+        nickname: row.public_nickname,
+        score,
+        answerCount: Number(row.answer_count),
+        bestDomain: row.best_domain,
+        title: domainRankTitle(score)
+      };
+    });
   }
 
   return [];

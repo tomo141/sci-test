@@ -12,7 +12,8 @@ export {
   estimateFromAnswers,
   cumulativeCorrectRate,
   dedupeAnswers,
-  blendedAbilityForQuestion
+  blendedAbilityForQuestion,
+  selectionAbilityInflation
 } from "./estimate";
 export {
   createExamPlan,
@@ -32,7 +33,8 @@ export {
   type AdaptiveSelection,
   type AdaptiveSelectionContext
 } from "./adaptive";
-export { rankTitle } from "./rank";
+export { rankTitle, domainRankTitle } from "./rank";
+export { internalToDomainScore, displayDomainScore, domainScorePercent } from "./domainScore";
 
 // Backward-compatible alias used by API routes.
 export { predictCorrectProbability as predictCorrect } from "./probability";

@@ -32,15 +32,41 @@ export function createInitialAbilityState(): AbilityState {
   };
 }
 
-function computeDelta(ability: number, answer: AnswerRecord, count: number) {
+function lerp(min: number, max: number, t: number) {
+  return min + (max - min) * Math.max(0, Math.min(1, t));
+}
+
+function easyCorrectDampeningForRate(cumulativeCorrectRate: number) {
+  if (cumulativeCorrectRate < scoringConfig.lowCumulativeRateThreshold) {
+    return scoringConfig.easyCorrectDampening;
+  }
+  const progress =
+    (cumulativeCorrectRate - scoringConfig.lowCumulativeRateThreshold) /
+    (1 - scoringConfig.lowCumulativeRateThreshold);
+  return lerp(
+    scoringConfig.easyCorrectDampening,
+    scoringConfig.perfectStreakDampeningFloor,
+    progress
+  );
+}
+
+function computeDelta(
+  ability: number,
+  answer: AnswerRecord,
+  count: number,
+  cumulativeCorrectRate: number
+) {
   const expected = predictCorrectProbability(ability, answer.difficulty, answer.discrimination);
-  const surprise = (answer.correct ? 1 : 0) - expected;
+  let surprise = (answer.correct ? 1 : 0) - expected;
+  if (answer.correct && cumulativeCorrectRate >= 1) {
+    surprise = Math.max(surprise, scoringConfig.surpriseFloorAtPerfect);
+  }
   const quality = answer.qualityScore ?? 1;
   let step =
     (scoringConfig.baseK * quality * Math.max(0.1, answer.discrimination)) / Math.sqrt(Math.max(1, count + 1));
 
   if (answer.correct && answer.difficulty < ability) {
-    step *= scoringConfig.easyCorrectDampening;
+    step *= easyCorrectDampeningForRate(cumulativeCorrectRate);
   }
   if (!answer.correct && answer.difficulty > ability) {
     step *= scoringConfig.hardWrongDampening;
@@ -49,9 +75,13 @@ function computeDelta(ability: number, answer: AnswerRecord, count: number) {
   return step * surprise;
 }
 
-function updateDimension(dimension: AbilityDimensionState, answer: AnswerRecord): AbilityDimensionState {
+function updateDimension(
+  dimension: AbilityDimensionState,
+  answer: AnswerRecord,
+  cumulativeCorrectRate: number
+): AbilityDimensionState {
   const nextCount = dimension.count + 1;
-  const delta = computeDelta(dimension.value, answer, dimension.count);
+  const delta = computeDelta(dimension.value, answer, dimension.count, cumulativeCorrectRate);
   return {
     value: clamp(dimension.value + delta),
     count: nextCount,
@@ -59,16 +89,20 @@ function updateDimension(dimension: AbilityDimensionState, answer: AnswerRecord)
   };
 }
 
-export function updateAbilityState(state: AbilityState, answer: AnswerRecord): AbilityState {
+export function updateAbilityState(
+  state: AbilityState,
+  answer: AnswerRecord,
+  cumulativeCorrectRate = 0
+): AbilityState {
   return {
-    overall: updateDimension(state.overall, answer),
+    overall: updateDimension(state.overall, answer, cumulativeCorrectRate),
     domains: {
       ...state.domains,
-      [answer.domain]: updateDimension(state.domains[answer.domain], answer)
+      [answer.domain]: updateDimension(state.domains[answer.domain], answer, cumulativeCorrectRate)
     },
     axes: {
       ...state.axes,
-      [answer.abilityAxis]: updateDimension(state.axes[answer.abilityAxis], answer)
+      [answer.abilityAxis]: updateDimension(state.axes[answer.abilityAxis], answer, cumulativeCorrectRate)
     }
   };
 }

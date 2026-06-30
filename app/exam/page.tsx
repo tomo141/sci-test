@@ -343,6 +343,7 @@ export default function ExamPage() {
               answered={answered}
               feedback={answerFeedback}
               questionTextRef={questionTextRef}
+              showDifficulty
               onChoiceClick={(choiceIndex) => void answer(choiceIndex)}
               activeFeedback={activeFeedback}
               onFeedbackChange={setActiveFeedback}

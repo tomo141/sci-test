@@ -11,6 +11,7 @@ import { SaveResultButton } from "@/components/exam/SaveResultButton";
 import { useExamAnswers } from "@/components/exam/useExamAnswers";
 import { domains } from "@/src/lib/data/taxonomy";
 import { examConfig } from "@/src/lib/exam/config";
+import { scoringConfig } from "@/src/lib/scoring/config";
 import { estimateFromAnswers } from "@/src/lib/scoring/estimate";
 
 function percent(value: number) {
@@ -115,7 +116,7 @@ export function QuickResultClient() {
         </AppCard>
         <AppCard>
           <h2 className="text-xl font-black">10分野レーダー</h2>
-          <RadarScoreChart data={domainData} label="10分野レーダーチャート" />
+          <RadarScoreChart data={domainData} label="10分野レーダーチャート" maxScore={scoringConfig.domainMaxScore} />
         </AppCard>
       </section>
       <section className="mt-6 grid gap-4 md:grid-cols-3">

@@ -12,6 +12,8 @@ import { SaveResultButton } from "@/components/exam/SaveResultButton";
 import { useExamAnswers } from "@/components/exam/useExamAnswers";
 import { ReviewListSection } from "@/components/karte/ReviewListSection";
 import { domains } from "@/src/lib/data/taxonomy";
+import { scoringConfig } from "@/src/lib/scoring/config";
+import { domainScorePercent } from "@/src/lib/scoring/domainScore";
 import { estimateFromAnswers } from "@/src/lib/scoring/estimate";
 import { rankTitle } from "@/src/lib/scoring/rank";
 
@@ -79,7 +81,7 @@ export function KarteResultClient() {
         ))}
       </AppCard>
       <section className="mt-6">
-        <AppCard><h2 className="text-xl font-black">10の科学分野バランス</h2><RadarScoreChart data={domainData} label="10の科学分野バランス" /></AppCard>
+        <AppCard><h2 className="text-xl font-black">10の科学分野バランス</h2><RadarScoreChart data={domainData} label="10の科学分野バランス" maxScore={scoringConfig.domainMaxScore} /></AppCard>
       </section>
       <section className="mt-6">
         <ReviewListSection />
@@ -88,11 +90,21 @@ export function KarteResultClient() {
         <AppCard>
           <h2 className="mb-4 text-xl font-black">分野別スコア詳細</h2>
           <div className="grid gap-3 md:grid-cols-2">
-            {domainData.map((item) => <div key={item.name}><div className="flex justify-between text-sm font-bold"><span>{item.name}</span><span>{Math.round(item.score / 10)} / 100</span></div><ProgressBar value={item.score / 10} /></div>)}
+            {domainData.map((item) => (
+              <div key={item.name}>
+                <div className="flex justify-between text-sm font-bold">
+                  <span>{item.name}</span>
+                  <span>
+                    {item.score} / {scoringConfig.domainMaxScore}
+                  </span>
+                </div>
+                <ProgressBar value={domainScorePercent(item.score)} />
+              </div>
+            ))}
           </div>
         </AppCard>
         <div className="grid gap-6">
-          <AppCard><h2 className="mb-3 text-xl font-black">得意分野 TOP3</h2>{bestDomains.map((item, i) => <p key={item.name} className="mb-2 rounded-xl bg-[var(--color-primary-50)] p-3 font-bold">{i + 1}. {item.name} {Math.round(item.score / 10)}点</p>)}</AppCard>
+          <AppCard><h2 className="mb-3 text-xl font-black">得意分野 TOP3</h2>{bestDomains.map((item, i) => <p key={item.name} className="mb-2 rounded-xl bg-[var(--color-primary-50)] p-3 font-bold">{i + 1}. {item.name} {item.score}点</p>)}</AppCard>
           <AppCard><h2 className="mb-3 text-xl font-black">獲得バッジ</h2><div className="flex flex-wrap gap-3">{badges.length ? badges.map((x) => <StatusBadge key={x} tone="yellow"><Star size={14} />{x}</StatusBadge>) : <p className="text-sm font-bold text-[var(--color-muted)]">回答を進めるとバッジが表示されます。</p>}</div></AppCard>
         </div>
       </section>

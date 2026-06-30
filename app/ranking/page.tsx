@@ -8,6 +8,7 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 import { RankingDomainFilter } from "@/components/ranking/RankingDomainFilter";
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
+import { scoringConfig } from "@/src/lib/scoring/config";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -24,6 +25,10 @@ export default async function RankingPage({ searchParams }: Props) {
   const params = await searchParams;
   const activeDomain = isDomainFilter(params.domain) ? params.domain : "総合";
   const rows = await getPublicLeaderboard(100, activeDomain);
+  const isDomainRanking = activeDomain !== "総合";
+  const scoreLabel = isDomainRanking ? "分野スコア" : "最新推定スコア";
+  const formatScore = (score: number) =>
+    isDomainRanking ? `${score} / ${scoringConfig.domainMaxScore}` : String(score);
 
   return (
     <>
@@ -42,7 +47,7 @@ export default async function RankingPage({ searchParams }: Props) {
                     <div key={`${row.rank}-${row.nickname}`} className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-primary-50)] p-5 text-center">
                       <Crown className="mx-auto text-[var(--color-accent-yellow-600)]" />
                       <p className="mt-2 text-lg font-black">{row.rank}位 {row.nickname}</p>
-                      <p className="mt-2 text-4xl font-black text-[var(--color-primary-700)]">{row.score}</p>
+                      <p className="mt-2 text-4xl font-black text-[var(--color-primary-700)]">{formatScore(row.score)}</p>
                     </div>
                   ))}
                 </AppCard>
@@ -50,7 +55,7 @@ export default async function RankingPage({ searchParams }: Props) {
                   <table className="w-full min-w-[640px] border-collapse text-sm">
                     <thead>
                       <tr className="text-left text-[var(--color-muted)]">
-                        {["順位", "ニックネーム", "最新推定スコア", "回答数", "称号"].map((h) => (
+                        {["順位", "ニックネーム", scoreLabel, "回答数", "称号"].map((h) => (
                           <th key={h} className="border-b border-[var(--color-border)] p-3">{h}</th>
                         ))}
                       </tr>
@@ -60,7 +65,7 @@ export default async function RankingPage({ searchParams }: Props) {
                         <tr key={`${row.rank}-${row.nickname}`}>
                           <td className="border-b border-[var(--color-border)] p-3 font-black">{row.rank}</td>
                           <td className="border-b border-[var(--color-border)] p-3 font-bold">{row.nickname}</td>
-                          <td className="border-b border-[var(--color-border)] p-3 text-right text-xl font-black text-[var(--color-primary-700)]">{row.score}</td>
+                          <td className="border-b border-[var(--color-border)] p-3 text-right text-xl font-black text-[var(--color-primary-700)]">{formatScore(row.score)}</td>
                           <td className="border-b border-[var(--color-border)] p-3">{row.answerCount}</td>
                           <td className="border-b border-[var(--color-border)] p-3"><StatusBadge tone="yellow">{row.title || "挑戦者"}</StatusBadge></td>
                         </tr>

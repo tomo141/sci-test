@@ -1,5 +1,9 @@
 import { scoringConfig } from "./config";
 
+function lerp(min: number, max: number, t: number) {
+  return min + (max - min) * Math.max(0, Math.min(1, t));
+}
+
 export function predictCorrectProbability(ability: number, difficulty: number, discrimination = 1) {
   const scale = scoringConfig.logisticScale / Math.max(0.1, discrimination);
   return 1 / (1 + Math.exp((difficulty - ability) / scale));
@@ -19,7 +23,19 @@ export function targetProbabilityBand(cumulativeCorrectRate: number) {
   if (cumulativeCorrectRate < scoringConfig.lowCumulativeRateThreshold) {
     return scoringConfig.lowRateTargetBand;
   }
-  return scoringConfig.highRateTargetBand;
+  if (cumulativeCorrectRate >= 1) {
+    return scoringConfig.perfectRateTargetBand;
+  }
+
+  const progress =
+    (cumulativeCorrectRate - scoringConfig.lowCumulativeRateThreshold) /
+    (1 - scoringConfig.lowCumulativeRateThreshold);
+  const high = scoringConfig.highRateTargetBand;
+  const perfect = scoringConfig.perfectRateTargetBand;
+  return {
+    min: lerp(high.min, perfect.min, progress),
+    max: lerp(high.max, perfect.max, progress)
+  };
 }
 
 export function relaxProbabilityBand(band: { min: number; max: number }, steps: number) {

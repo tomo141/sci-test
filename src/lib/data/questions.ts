@@ -1,5 +1,6 @@
 import { knowledgeQuestions } from "./knowledgeQuestions";
 import { knowledgeQuestionsV2 } from "./knowledgeQuestionsV2";
+import { knowledgeQuestionsV3 } from "./knowledgeQuestionsV3";
 import type { AbilityAxis, ScienceDomain } from "./taxonomy";
 
 export type CognitiveType =
@@ -123,4 +124,4 @@ function toQuestion(record: BankQuestion): Question {
 }
 
 /** Local/test fallback: published knowledge questions only (basic-v1 excluded). */
-export const questions: Question[] = [...knowledgeQuestions, ...knowledgeQuestionsV2].map(toQuestion);
+export const questions: Question[] = [...knowledgeQuestions, ...knowledgeQuestionsV2, ...knowledgeQuestionsV3].map(toQuestion);

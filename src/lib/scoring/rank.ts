@@ -8,6 +8,13 @@ export function rankTitle(score: number) {
   return "高校基礎到達";
 }
 
+export function domainRankTitle(domainScore: number) {
+  const overallEquivalent = Math.round(
+    (domainScore / scoringConfig.domainMaxScore) * scoringConfig.maxScore
+  );
+  return rankTitle(overallEquivalent);
+}
+
 export function isDisplayScore(value: number) {
   return value >= scoringConfig.minScore && value <= scoringConfig.maxScore && value % scoringConfig.displayStep === 0;
 }
