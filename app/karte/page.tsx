@@ -14,7 +14,7 @@ export default function KartePage() {
           <div>
             <p className="text-sm font-black text-[var(--color-primary-700)]">腕試しカルテ ＞ 結果</p>
             <h1 className="mt-4 text-3xl font-black md:text-5xl">あなたの科学力カルテ</h1>
-            <p className="mt-3 font-bold text-[var(--color-ink-soft)]">全50問の腕試しが完了しました！あなたの科学力を診断したよ。</p>
+            <p className="mt-3 font-bold text-[var(--color-ink-soft)]">あなたの科学力を診断したよ。</p>
           </div>
           <div className="relative min-h-32 rounded-3xl bg-[var(--color-primary-50)] p-5">
             <p className="max-w-[220px] rounded-2xl border border-[var(--color-border)] bg-white p-4 text-sm font-bold leading-7">すばらしい挑戦だったよ！知ることは、未来をつくる力になるよ！</p>

@@ -10,6 +10,7 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 import { ScoreHistoryChart } from "@/components/charts/ScoreHistoryChart";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import { rankTitle } from "@/src/lib/scoring/rank";
+import { scoringConfig } from "@/src/lib/scoring/config";
 import { MyPageLocalSummary } from "@/components/profile/MyPageLocalSummary";
 import { updateProfileAction, updateMarketingConsentAction, deleteAccountAction } from "@/app/auth/actions";
 
@@ -139,7 +140,7 @@ export default async function MyPage() {
             <h2 className="mb-3 text-xl font-black">最近の検定履歴</h2>
             {histories?.length ? (histories as ScoreHistoryRow[]).slice(0, 3).map((row) => (
               <p key={row.created_at} className="border-b border-[var(--color-border)] py-3 font-bold">
-                {new Date(row.created_at).toLocaleString("ja-JP")} {Math.round(Number(row.score))} / 1000
+                {new Date(row.created_at).toLocaleString("ja-JP")} {Math.round(Number(row.score))} / {scoringConfig.maxScore}
               </p>
             )) : <p className="leading-8 text-[var(--color-ink-soft)]">保存済みの検定履歴はまだありません。</p>}
           </AppCard>

@@ -1,4 +1,6 @@
-export function ScoreDisplay({ score, suffix = "/ 1000" }: { score: number; suffix?: string }) {
+import { scoringConfig } from "@/src/lib/scoring/config";
+
+export function ScoreDisplay({ score, suffix = `/ ${scoringConfig.maxScore}` }: { score: number; suffix?: string }) {
   return (
     <p className="text-5xl font-black leading-none text-[var(--color-primary-800)] md:text-6xl">
       {score}

@@ -26,7 +26,6 @@ export default function AboutPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <AppButton href="/exam">腕試しを始める</AppButton>
-              <AppButton href="/terms" variant="secondary">利用規約を見る</AppButton>
             </div>
           </div>
           <AppCard>

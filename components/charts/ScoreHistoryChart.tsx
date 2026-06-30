@@ -2,6 +2,8 @@
 
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
+import { scoringConfig } from "@/src/lib/scoring/config";
+
 type Props = {
   data: { date: string; score: number }[];
 };
@@ -21,7 +23,7 @@ export function ScoreHistoryChart({ data }: Props) {
         <LineChart data={data} margin={{ left: 0, right: 16, top: 16, bottom: 0 }}>
           <CartesianGrid stroke="#D8E5FA" strokeDasharray="3 3" />
           <XAxis dataKey="date" tick={{ fill: "#334765", fontSize: 12 }} />
-          <YAxis domain={[0, 1000]} tick={{ fill: "#334765", fontSize: 12 }} />
+          <YAxis domain={[0, scoringConfig.maxScore]} tick={{ fill: "#334765", fontSize: 12 }} />
           <Tooltip />
           <Line dataKey="score" stroke="#1558D6" strokeWidth={3} dot={{ r: 5 }} />
         </LineChart>
