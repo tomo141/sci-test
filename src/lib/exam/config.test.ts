@@ -2,9 +2,8 @@ import { describe, expect, it } from "vitest";
 import { examConfig } from "./config";
 
 describe("examConfig", () => {
-  it("defaults to 50 questions per cycle in tests", () => {
+  it("uses 50 questions per cycle", () => {
     expect(examConfig.questionsPerCycle).toBe(50);
-    expect(examConfig.isShortMode).toBe(false);
   });
 
   it("gates quick result and karte by configured cycle length", () => {

@@ -1,4 +1,4 @@
-import { questions, type Question } from "@/src/lib/data/questions";
+import type { Question } from "@/src/lib/data/questions";
 import {
   createExamPlan,
   nextQuestionForAnswers as pickNextQuestion,
@@ -24,8 +24,8 @@ export type AdaptiveSelection = {
 
 export const EXAM_PLAN_STORAGE_KEY = "sci-test-exam-plan";
 
-export function getQuestionById(id: string) {
-  return questions.find((question) => question.id === id) || null;
+export function getQuestionById(id: string, bank: Question[]) {
+  return bank.find((question) => question.id === id) || null;
 }
 
 export function buildClientEstimate(answers: ClientExamAnswer[]) {
@@ -45,8 +45,12 @@ export function loadOrCreateExamPlan(storedPlan: string | null): ExamPlan {
   return createExamPlan();
 }
 
-export function nextQuestionForAnswers(answers: ClientExamAnswer[], plan: ExamPlan): AdaptiveSelection | null {
-  return pickNextQuestion(questions, answers, plan);
+export function nextQuestionForAnswers(
+  answers: ClientExamAnswer[],
+  plan: ExamPlan,
+  bank: Question[]
+): AdaptiveSelection | null {
+  return pickNextQuestion(bank, answers, plan);
 }
 
 export { createExamPlan, type ExamPlan };

@@ -5,9 +5,10 @@ import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { loadReviewList, removeFromReviewList, type ReviewListItem } from "@/src/lib/exam/reviewList";
-import { getQuestionById } from "@/src/lib/exam/session";
+import { useQuestionBank } from "@/components/exam/useQuestionBank";
 
 export function ReviewListSection() {
+  const { getById } = useQuestionBank();
   const [items, setItems] = useState<ReviewListItem[]>([]);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export function ReviewListSection() {
       ) : (
         <div className="grid gap-3">
           {items.map((item) => {
-            const question = getQuestionById(item.questionId);
+            const question = getById(item.questionId);
             if (!question) return null;
             return (
               <div

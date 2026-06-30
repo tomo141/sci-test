@@ -9,6 +9,7 @@ import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { QuestionCard } from "@/components/exam/QuestionCard";
+import { useQuestionBank } from "@/components/exam/useQuestionBank";
 import type { Question } from "@/src/lib/data/questions";
 import { buildAnswerFeedback } from "@/src/lib/exam/explanation";
 import { estimateFromAnswers } from "@/src/lib/scoring/scoring";
@@ -53,6 +54,7 @@ function scrollToElementTop(element: HTMLElement, durationMs: number) {
 }
 
 export default function ExamPage() {
+  const { questions: questionBank, loaded: questionsLoaded, error: questionsError } = useQuestionBank();
   const questionTopRef = useRef<HTMLDivElement>(null);
   const questionTextRef = useRef<HTMLHeadingElement>(null);
   const [selected, setSelected] = useState<number | null>(null);
@@ -107,6 +109,8 @@ export default function ExamPage() {
       : `第 ${questionNumber} 問（${cycleNumber}周目 ${positionInCycle}/${QUESTIONS_PER_CYCLE}）`;
 
   useEffect(() => {
+    if (!questionsLoaded || !questionBank.length) return;
+
     const existingAnonymousId = window.localStorage.getItem("sci-test-anonymous-session-id") || crypto.randomUUID();
     window.localStorage.setItem("sci-test-anonymous-session-id", existingAnonymousId);
     setAnonymousSessionId(existingAnonymousId);
@@ -118,7 +122,7 @@ export default function ExamPage() {
     const existingAnswers = window.localStorage.getItem("sci-test-exam-answers");
     const parsedAnswers = existingAnswers ? (JSON.parse(existingAnswers) as ClientExamAnswer[]) : [];
     setAnswers(parsedAnswers);
-    setCurrentQuestion(nextQuestionForAnswers(parsedAnswers, plan)?.question ?? null);
+    setCurrentQuestion(nextQuestionForAnswers(parsedAnswers, plan, questionBank)?.question ?? null);
 
     const activeSessionId = window.localStorage.getItem("sci-test-session-id");
     void fetch(activeSessionId ? `/api/exam/session?sessionId=${encodeURIComponent(activeSessionId)}` : "/api/exam/session")
@@ -132,7 +136,7 @@ export default function ExamPage() {
           setSessionId(data.sessionId);
           window.localStorage.setItem("sci-test-session-id", data.sessionId);
         }
-        setCurrentQuestion(nextQuestionForAnswers(dbAnswers, plan)?.question ?? null);
+        setCurrentQuestion(nextQuestionForAnswers(dbAnswers, plan, questionBank)?.question ?? null);
       })
       .catch(() => null);
 
@@ -152,7 +156,7 @@ export default function ExamPage() {
         }
       })
       .catch(() => setSessionId(`local-${existingAnonymousId}`));
-  }, []);
+  }, [questionBank, questionsLoaded]);
 
   const answer = async (choiceIndex?: number) => {
     const selectedIndex = choiceIndex ?? selected;
@@ -200,7 +204,7 @@ export default function ExamPage() {
   const next = () => {
     if (!examPlan) return;
     const nextAnswers = answers;
-    setCurrentQuestion(nextQuestionForAnswers(nextAnswers, examPlan)?.question ?? null);
+    setCurrentQuestion(nextQuestionForAnswers(nextAnswers, examPlan, questionBank)?.question ?? null);
     setSelected(null);
     setAnswered(false);
     setServerExplanation(null);
@@ -225,7 +229,7 @@ export default function ExamPage() {
     setServerExplanation(null);
     setActiveFeedback(null);
     setShuffleKey((key) => key + 1);
-    setCurrentQuestion(nextQuestionForAnswers([], newPlan)?.question ?? null);
+    setCurrentQuestion(nextQuestionForAnswers([], newPlan, questionBank)?.question ?? null);
 
     const anonymousId = anonymousSessionId || crypto.randomUUID();
     window.localStorage.setItem("sci-test-anonymous-session-id", anonymousId);
@@ -242,12 +246,34 @@ export default function ExamPage() {
       if (data.examPlan) {
         setExamPlan(data.examPlan);
         window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(data.examPlan));
-        setCurrentQuestion(nextQuestionForAnswers([], data.examPlan)?.question ?? null);
+        setCurrentQuestion(nextQuestionForAnswers([], data.examPlan, questionBank)?.question ?? null);
       }
     } catch {
       setSessionId(`local-${anonymousId}`);
     }
   };
+
+  if (!questionsLoaded) {
+    return (
+      <>
+        <SiteHeader />
+        <main className="mx-auto max-w-3xl px-4 py-16 text-center">
+          <p className="font-bold text-[var(--color-ink-soft)]">問題を読み込んでいます…</p>
+        </main>
+      </>
+    );
+  }
+
+  if (questionsError || !questionBank.length) {
+    return (
+      <>
+        <SiteHeader />
+        <main className="mx-auto max-w-3xl px-4 py-16 text-center">
+          <p className="font-bold text-[var(--color-ink-soft)]">{questionsError || "出題可能な問題がありません。"}</p>
+        </main>
+      </>
+    );
+  }
 
   if (!currentQuestion) {
     return (
@@ -285,11 +311,6 @@ export default function ExamPage() {
         <div className="mb-6">
           <h1 className="text-3xl font-black md:text-4xl">腕試し受験ページ</h1>
           <p className="mt-2 font-bold text-[var(--color-ink-soft)]">いまの実力をチェックしよう！</p>
-          {examConfig.isShortMode ? (
-            <p className="mt-3 rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-bold text-amber-900">
-              検証モード: {QUESTIONS_PER_CYCLE}問で完走（本番は{examConfig.defaultQuestionsPerCycle}問）
-            </p>
-          ) : null}
         </div>
         <AppCard className="mb-6 grid gap-5 md:grid-cols-3">
           <div>

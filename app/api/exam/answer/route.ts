@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { getPublishedQuestions } from "@/src/lib/data/loadQuestions";
 import { examConfig } from "@/src/lib/exam/config";
 import { getQuestionById } from "@/src/lib/exam/session";
-import { questions } from "@/src/lib/data/questions";
 import {
   createExamPlan,
   estimateFromAnswers,
@@ -47,7 +47,8 @@ export async function POST(request: Request) {
   const parsed = answerSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid answer payload" }, { status: 400 });
 
-  const question = getQuestionById(parsed.data.questionId);
+  const questions = await getPublishedQuestions();
+  const question = getQuestionById(parsed.data.questionId, questions);
   if (!question) return NextResponse.json({ error: "question not found" }, { status: 404 });
 
   const previousAnswers = (parsed.data.previousAnswers || []) as AnswerRecord[];

@@ -10,7 +10,10 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "questions:generate": "node scripts/enrich-question-feedback.mjs && node scripts/build-basic-v1-bank.mjs",
+    "questions:build-knowledge": "vitest run src/lib/data/knowledgeBank.build.test.ts",
     "questions:import": "node scripts/import-question-bank.mjs",
+    "questions:import:knowledge": "node scripts/import-question-bank.mjs supabase/seed/generated/questions-knowledge.json --published",
+    "questions:import:basic-v1-archive": "node scripts/import-question-bank.mjs supabase/seed/generated/questions-basic-v1.json --status=archived",
     "preflight": "node scripts/preflight.mjs"
   },
   "dependencies": {

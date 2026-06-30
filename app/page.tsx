@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BookOpen, Crown, FlaskConical, Trophy } from "lucide-react";
+import { Trophy } from "lucide-react";
 import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
@@ -30,7 +30,6 @@ export default async function HomePage() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <AppButton href="/exam" className="text-base">今すぐ腕試しを始める</AppButton>
-                <AppButton href="/exam" variant="secondary" className="text-base">本試験を受ける（工事中）</AppButton>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <StatusBadge>ログインなしで受験開始</StatusBadge>
@@ -86,20 +85,6 @@ export default async function HomePage() {
             <LocalScoreSummary />
             <p className="mt-5 leading-7 text-[var(--color-ink-soft)]">分野別のバランスから、得意分野と次に伸ばす領域を見つけられます。</p>
           </AppCard>
-        </section>
-
-        <section className="page-container mt-8 grid gap-4 md:grid-cols-3">
-          {[
-            [BookOpen, "トレーニングページ", "メルマガ同意後、苦手補強や分野指定で演習できます。"],
-            [Crown, "称号・バッジ", "50問達成や分野横断の挑戦を記録します。"],
-            [FlaskConical, "理系とーく導線", "イベントやラボへのリンクは設定で差し替え可能です。"]
-          ].map(([Icon, title, text]) => (
-            <AppCard key={title as string}>
-              <Icon className="mb-3 text-[var(--color-primary-700)]" />
-              <h3 className="text-lg font-black">{title as string}</h3>
-              <p className="mt-2 text-sm leading-7 text-[var(--color-ink-soft)]">{text as string}</p>
-            </AppCard>
-          ))}
         </section>
       </main>
       <SiteFooter />

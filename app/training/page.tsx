@@ -9,11 +9,20 @@ import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { StatusBadge } from "@/components/ui/StatusBadge";
-import { questions } from "@/src/lib/data/questions";
+import { useQuestionBank } from "@/components/exam/useQuestionBank";
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import { trainingConfig } from "@/src/lib/training/config";
 import { DomainIcon } from "@/components/ui/DomainIcon";
 
 type TrainingMode = "domain" | "random";
+
+type TrainingAccess = {
+  freeLimit: number;
+  answerCount: number;
+  marketingConsented: boolean;
+  canAnswer: boolean;
+  isLoggedIn: boolean;
+};
 
 const modes: [typeof Target | typeof Dice5, TrainingMode, string, string][] = [
   [Target, "domain", "分野指定", "特定の分野を集中的にトレーニングする"],
@@ -50,6 +59,7 @@ function shuffleQuestions<T>(items: T[]) {
 }
 
 export default function TrainingPage() {
+  const { questions, loaded: questionsLoaded } = useQuestionBank();
   const [mode, setMode] = useState<TrainingMode>("domain");
   const [domain, setDomain] = useState<ScienceDomain>("化学");
   const [history, setHistory] = useState<TrainingAnswer[]>([]);
@@ -57,12 +67,25 @@ export default function TrainingPage() {
   const [answered, setAnswered] = useState(false);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [randomOrder, setRandomOrder] = useState<string[]>([]);
+  const [access, setAccess] = useState<TrainingAccess | null>(null);
 
   useEffect(() => {
     setHistory(loadHistory());
+    void fetch("/api/training/access")
+      .then((response) => response.json())
+      .then((payload: TrainingAccess) => setAccess(payload))
+      .catch(() =>
+        setAccess({
+          freeLimit: trainingConfig.freeAnswerLimit,
+          answerCount: 0,
+          marketingConsented: false,
+          canAnswer: true,
+          isLoggedIn: false
+        })
+      );
   }, []);
 
-  const publishedQuestions = useMemo(() => questions.filter((question) => question.published), []);
+  const publishedQuestions = useMemo(() => questions.filter((question) => question.published), [questions]);
 
   const poolQuestions = useMemo(() => {
     if (mode === "domain") {
@@ -82,6 +105,10 @@ export default function TrainingPage() {
   }, [mode, publishedQuestions]);
 
   const question = poolQuestions[questionIndex % Math.max(poolQuestions.length, 1)];
+  const totalAnswerCount = Math.max(history.length, access?.answerCount ?? 0);
+  const marketingConsented = access?.marketingConsented ?? false;
+  const freeLimit = access?.freeLimit ?? trainingConfig.freeAnswerLimit;
+  const canAnswerMore = marketingConsented || totalAnswerCount < freeLimit;
   const sessionAnswers = history.filter((answer) => poolQuestions.some((item) => item.id === answer.questionId));
   const correctCount = sessionAnswers.filter((answer) => answer.correct).length;
   const progress = Math.min(100, sessionAnswers.length * 10);
@@ -103,7 +130,7 @@ export default function TrainingPage() {
   };
 
   const choose = (index: number) => {
-    if (answered || !question) return;
+    if (answered || !question || !canAnswerMore) return;
     const isCorrect = index === question.correctIndex;
     const nextHistory = [...history, { questionId: question.id, correct: isCorrect, answeredAt: new Date().toISOString() }];
     setSelected(index);
@@ -114,7 +141,13 @@ export default function TrainingPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ questionId: question.id, correct: isCorrect, mode })
-    }).catch(() => null);
+    })
+      .then(async (response) => {
+        if (!response.ok) return;
+        const payload = (await fetch("/api/training/access").then((r) => r.json())) as TrainingAccess;
+        setAccess(payload);
+      })
+      .catch(() => null);
   };
 
   const next = () => {
@@ -122,6 +155,17 @@ export default function TrainingPage() {
     setAnswered(false);
     setQuestionIndex((value) => value + 1);
   };
+
+  if (!questionsLoaded) {
+    return (
+      <>
+        <SiteHeader />
+        <main className="page-container py-16 text-center">
+          <p className="font-bold text-[var(--color-ink-soft)]">問題を読み込んでいます…</p>
+        </main>
+      </>
+    );
+  }
 
   return (
     <>
@@ -139,7 +183,12 @@ export default function TrainingPage() {
         </div>
         <AppCard className="mt-6 flex flex-wrap items-center gap-3">
           <StatusBadge>{mode === "domain" ? `分野：${domain}` : "全分野ランダム"}</StatusBadge>
-          <StatusBadge>回答数：{sessionAnswers.length}</StatusBadge>
+          <StatusBadge>回答数：{totalAnswerCount}</StatusBadge>
+          {!marketingConsented ? (
+            <StatusBadge tone="yellow">無料枠 {Math.min(totalAnswerCount, freeLimit)} / {freeLimit} 問</StatusBadge>
+          ) : (
+            <StatusBadge tone="green">メルマガ同意済み・制限なし</StatusBadge>
+          )}
           {mode === "domain" ? (
             <select
               value={domain}
@@ -174,6 +223,24 @@ export default function TrainingPage() {
             ))}
           </div>
         </section>
+        {!canAnswerMore ? (
+          <AppCard className="mt-6 border-2 border-[var(--color-primary-700)] bg-[var(--color-primary-50)]">
+            <h2 className="text-xl font-black">無料枠（{freeLimit}問）を使い切りました</h2>
+            <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
+              トレーニングを続けるには、理系とーくからの案内メール（全分野科学検定のアップデート、科学イベント、理系とーくラボ等）の受信に同意してください。
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {access?.isLoggedIn ? (
+                <AppButton href="/mypage#marketing-consent">マイページでメルマガに同意する</AppButton>
+              ) : (
+                <>
+                  <AppButton href="/signup">アカウント登録して同意する</AppButton>
+                  <AppButton href="/login" variant="secondary">ログイン</AppButton>
+                </>
+              )}
+            </div>
+          </AppCard>
+        ) : null}
         <section className="mt-6 grid gap-6 lg:grid-cols-2">
           <AppCard>
             <div className="mb-4 flex items-center gap-3">
@@ -192,14 +259,16 @@ export default function TrainingPage() {
                   return (
                     <button
                       key={choice}
+                      type="button"
+                      disabled={!canAnswerMore && !answered}
                       onClick={() => choose(index)}
-                      className={`mt-3 w-full rounded-2xl border p-4 text-left font-bold ${isCorrect ? "border-green-500 bg-green-50 text-green-800" : isWrong ? "border-red-300 bg-red-50 text-red-800" : "border-[var(--color-border)] hover:bg-[var(--color-primary-50)]"}`}
+                      className={`mt-3 w-full rounded-2xl border p-4 text-left font-bold disabled:cursor-not-allowed disabled:opacity-50 ${isCorrect ? "border-green-500 bg-green-50 text-green-800" : isWrong ? "border-red-300 bg-red-50 text-red-800" : "border-[var(--color-border)] hover:bg-[var(--color-primary-50)]"}`}
                     >
                       {index + 1}. {choice}
                     </button>
                   );
                 })}
-                {answered ? <AppButton className="mt-5 w-full" onClick={next}>次の問題へ</AppButton> : null}
+                {answered && canAnswerMore ? <AppButton className="mt-5 w-full" onClick={next}>次の問題へ</AppButton> : null}
               </>
             ) : (
               <p className="leading-8 text-[var(--color-ink-soft)]">この条件で出題できる問題がまだありません。</p>
@@ -222,7 +291,7 @@ export default function TrainingPage() {
           </AppCard>
         </section>
         <section className="mt-6 grid gap-4 md:grid-cols-4">
-          <AppCard><h3 className="font-black">今日のトレーニング</h3><p className="mt-4 text-4xl font-black">{sessionAnswers.length}問</p><ProgressBar value={progress} /></AppCard>
+          <AppCard><h3 className="font-black">今日のトレーニング</h3><p className="mt-4 text-4xl font-black">{totalAnswerCount}問</p><ProgressBar value={marketingConsented ? progress : Math.min(100, (totalAnswerCount / freeLimit) * 100)} /></AppCard>
           <AppCard><h3 className="font-black">正答数</h3><p className="mt-4 text-4xl font-black">{correctCount} / {sessionAnswers.length}</p></AppCard>
           <AppCard><h3 className="font-black">苦手候補 TOP3</h3><div className="mt-3 grid gap-2">{weakDomains.map((item) => <p key={item.domain} className="flex items-center gap-2 text-sm font-bold"><DomainIcon domain={item.domain} size="sm" />{item.domain}</p>)}</div></AppCard>
           <AppCard><h3 className="font-black">りけとくおコーチから</h3><p className="mt-3 leading-8">間違えた問題ほど伸びしろだよ。解説を見て、もう一問いこう！</p></AppCard>

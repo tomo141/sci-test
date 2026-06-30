@@ -11,7 +11,7 @@ import { ScoreHistoryChart } from "@/components/charts/ScoreHistoryChart";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import { rankTitle } from "@/src/lib/scoring/rank";
 import { MyPageLocalSummary } from "@/components/profile/MyPageLocalSummary";
-import { updateProfileAction } from "@/app/auth/actions";
+import { updateProfileAction, updateMarketingConsentAction, deleteAccountAction } from "@/app/auth/actions";
 
 type ScoreHistoryRow = {
   score: number;
@@ -161,10 +161,25 @@ export default async function MyPage() {
             <p className="text-4xl font-black text-[var(--color-primary-800)]">{trainingCount}問</p>
             <p className="mt-2 text-sm font-bold text-[var(--color-muted)]">ログイン後に記録されたトレーニング回答数です。</p>
           </AppCard>
-          <AppCard>
-            <h2 className="mb-3 text-xl font-black">メルマガ同意状況</h2>
-            <StatusBadge tone={marketingRow?.consented ? "green" : "yellow"}>{marketingRow?.consented ? "同意済み" : "未同意"}</StatusBadge>
-            <p className="mt-3 text-sm leading-7">同意状況は登録時の設定に基づきます。</p>
+          <AppCard id="marketing-consent">
+            <h2 className="text-xl font-black">メルマガ同意</h2>
+            <p className="mt-3 text-sm leading-7 text-[var(--color-ink-soft)]">
+              全分野科学検定のアップデート、科学イベント、理系とーくラボ等の案内を受け取る設定です。同意すると、トレーニングの無料枠（10問）を超えて演習できます。
+            </p>
+            <div className="mt-5">
+              <StatusBadge tone={marketingRow?.consented ? "green" : "yellow"}>
+                {marketingRow?.consented ? "同意済み" : "未同意"}
+              </StatusBadge>
+            </div>
+            {marketingRow?.consented ? (
+              <p className="mt-4 text-sm leading-7 text-[var(--color-ink-soft)]">
+                配信停止は、届いたメール内の解除リンクからいつでも行えます。
+              </p>
+            ) : (
+              <form action={updateMarketingConsentAction} className="mt-5">
+                <AppButton type="submit" variant="secondary">メルマガに同意する</AppButton>
+              </form>
+            )}
           </AppCard>
           <AppCard>
             <h2 className="mb-3 text-xl font-black">トレーニング解放状況</h2>
@@ -172,6 +187,29 @@ export default async function MyPage() {
           </AppCard>
         </section>
         <AppCard className="mt-6"><h2 className="mb-4 text-xl font-black">おすすめの次のアクション</h2><div className="grid gap-4 md:grid-cols-3"><AppButton href="/exam">腕試しを続ける</AppButton><AppButton href="/training" variant="secondary">トレーニングをする</AppButton><AppButton href="/ranking" variant="secondary"><Trophy />ランキングを見る</AppButton></div></AppCard>
+        {userId ? (
+          <AppCard className="mt-6 border-2 border-red-200">
+            <h2 className="text-xl font-black text-red-800">アカウント削除</h2>
+            <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
+              アカウントを削除すると、プロフィール、受験履歴、スコア、バッジ等の個人データは削除されます。問題品質改善のため、個人を直接識別できない形に加工した統計データは保持される場合があります。
+            </p>
+            <form action={deleteAccountAction} className="mt-5 grid gap-4">
+              <label className="grid gap-2 text-sm font-bold">
+                確認のため「削除する」と入力してください
+                <input
+                  name="confirm"
+                  required
+                  className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-red-500"
+                  placeholder="削除する"
+                  autoComplete="off"
+                />
+              </label>
+              <div>
+                <AppButton type="submit" className="bg-red-700 hover:bg-red-800">アカウントを削除する</AppButton>
+              </div>
+            </form>
+          </AppCard>
+        ) : null}
       </main>
       <SiteFooter />
     </>

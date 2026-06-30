@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { loadSessionAnswersFromDb } from "@/src/lib/exam/loadSessionAnswers";
 import { persistProficiencyEstimates } from "@/src/lib/exam/persistEstimates";
+import { getPublishedQuestions } from "@/src/lib/data/loadQuestions";
 import { estimateFromAnswers } from "@/src/lib/scoring";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 
@@ -49,7 +50,8 @@ export async function POST(request: Request) {
 
   const sessionId = parsed.data.sessionId.startsWith("local-") ? null : parsed.data.sessionId;
   if (sessionId) {
-    const answers = await loadSessionAnswersFromDb(writeClient, sessionId);
+    const bank = await getPublishedQuestions();
+    const answers = await loadSessionAnswersFromDb(writeClient, sessionId, bank);
     if (answers.length) {
       const estimate = estimateFromAnswers(answers);
       await persistProficiencyEstimates(writeClient, sessionId, userId, estimate);

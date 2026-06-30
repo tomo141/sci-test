@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { syncAdminRoleIfAllowed } from "@/src/lib/admin/role";
 import { getAdminEmails, getAppUrl } from "@/src/lib/env";
-import { createServerSupabaseClient } from "@/src/lib/supabase/server";
+import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import { verifyTurnstile } from "@/src/lib/security/turnstile";
 
 const signupSchema = z
@@ -156,4 +156,47 @@ export async function logoutAction() {
   const supabase = await createServerSupabaseClient();
   await supabase?.auth.signOut();
   redirect("/");
+}
+
+export async function updateMarketingConsentAction() {
+  const supabase = await createServerSupabaseClient();
+  const user = await supabase?.auth.getUser();
+  const userId = user?.data.user?.id;
+  if (!supabase || !userId) redirect("/login");
+
+  const { data: existing } = await supabase
+    .from("marketing_consents")
+    .select("consented")
+    .eq("user_id", userId)
+    .maybeSingle();
+
+  if (existing?.consented) redirect("/mypage?marketing=already");
+
+  const { error } = await supabase.from("marketing_consents").upsert({
+    user_id: userId,
+    consented: true,
+    consented_at: new Date().toISOString(),
+    training_unlocked_at: new Date().toISOString()
+  });
+  if (error) redirect(`/mypage?marketing=${encodeURIComponent(error.message)}`);
+
+  redirect("/training?marketing=unlocked");
+}
+
+export async function deleteAccountAction(formData: FormData) {
+  if (formData.get("confirm") !== "削除する") redirect("/mypage?delete=invalid");
+
+  const supabase = await createServerSupabaseClient();
+  const user = await supabase?.auth.getUser();
+  const userId = user?.data.user?.id;
+  if (!supabase || !userId) redirect("/login");
+
+  const serviceClient = createServiceRoleClient();
+  if (!serviceClient) redirect("/mypage?delete=unavailable");
+
+  const { error } = await serviceClient.auth.admin.deleteUser(userId);
+  if (error) redirect(`/mypage?delete=${encodeURIComponent(error.message)}`);
+
+  await supabase.auth.signOut();
+  redirect("/?deleted=1");
 }

@@ -1,4 +1,5 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
+import type { Question } from "@/src/lib/data/questions";
 import { getQuestionById } from "@/src/lib/exam/session";
 import type { ClientExamAnswer } from "@/src/lib/exam/session";
 
@@ -11,11 +12,11 @@ type ExamAnswerRow = {
   served_difficulty: number | null;
 };
 
-export function toClientExamAnswers(rows: ExamAnswerRow[]): ClientExamAnswer[] {
+export function toClientExamAnswers(rows: ExamAnswerRow[], bank: Question[]): ClientExamAnswer[] {
   const answers: ClientExamAnswer[] = [];
 
   for (const row of rows) {
-    const question = getQuestionById(row.question_id);
+    const question = getQuestionById(row.question_id, bank);
     if (!question) continue;
     answers.push({
       questionId: row.question_id,
@@ -36,7 +37,8 @@ export function toClientExamAnswers(rows: ExamAnswerRow[]): ClientExamAnswer[] {
 
 export async function loadSessionAnswersFromDb(
   supabase: SupabaseClient,
-  sessionId: string
+  sessionId: string,
+  bank: Question[]
 ): Promise<ClientExamAnswer[]> {
   const { data, error } = await supabase
     .from("exam_answers")
@@ -45,12 +47,13 @@ export async function loadSessionAnswersFromDb(
     .order("answered_at", { ascending: true });
 
   if (error || !data?.length) return [];
-  return toClientExamAnswers(data as ExamAnswerRow[]);
+  return toClientExamAnswers(data as ExamAnswerRow[], bank);
 }
 
 export async function loadLatestSessionAnswersForUser(
   supabase: SupabaseClient,
-  userId: string
+  userId: string,
+  bank: Question[]
 ): Promise<{ sessionId: string; answers: ClientExamAnswer[] } | null> {
   const { data: session } = await supabase
     .from("exam_sessions")
@@ -61,7 +64,7 @@ export async function loadLatestSessionAnswersForUser(
     .maybeSingle();
 
   if (!session?.id) return null;
-  const answers = await loadSessionAnswersFromDb(supabase, session.id);
+  const answers = await loadSessionAnswersFromDb(supabase, session.id, bank);
   if (!answers.length) return null;
   return { sessionId: session.id, answers };
 }

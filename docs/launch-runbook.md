@@ -25,7 +25,29 @@
 
 ## 問題バンク
 
-初期400問サンプル生成:
+知識確認200問（v1+v2）を本番出題用としてDBに投入します。basic-v1（400問）は `archived` として保持し、出題には使いません。
+
+JSON生成:
+
+```bash
+pnpm questions:build-knowledge
+```
+
+知識確認を公開投入:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... pnpm questions:import:knowledge
+```
+
+basic-v1をアーカイブ（既にDBにある場合の不採用化）:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... pnpm questions:import:basic-v1-archive
+```
+
+アプリは `GET /api/questions` 経由で DB の `status=published` 問題を出題します。DB未接続時は知識確認200問の静的フォールバックを使います。
+
+従来の basic-v1 生成:
 
 ```bash
 node scripts/generate-question-bank.mjs
