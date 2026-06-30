@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { questions } from "@/src/lib/data/questions";
 import { domains } from "@/src/lib/data/taxonomy";
-import { createExamPlan, getCoverageSlot, shuffleWithSeed, uncoveredCells } from "./coverage";
+import { createExamPlan, getCoverageSlot, getDomainOrderForBlock, shuffleWithSeed, uncoveredCells } from "./coverage";
 import { selectAdaptiveQuestion, selectFirstQuestion } from "./adaptive";
 import { predictCorrectProbability } from "./probability";
 import { scoringConfig } from "./config";
@@ -27,18 +27,14 @@ describe("coverage", () => {
     }
   });
 
-  it("covers every domain once in the first 10 questions and keeps 基礎力 for all 50", () => {
+  it("covers every domain once in each 10-question block and keeps 基礎力 for all 50", () => {
     const plan = createExamPlan("coverage-test");
     const answered: AnswerRecord[] = [];
-    const domainsInFirstTen = new Set<string>();
 
     for (let step = 0; step < 50; step += 1) {
       const slot = getCoverageSlot(step, plan, answered);
       expect(slot.abilityAxis).toBe("基礎力");
-      if (step < 10) {
-        expect(domainsInFirstTen.has(slot.domain)).toBe(false);
-        domainsInFirstTen.add(slot.domain);
-      }
+      expect(slot.required).toBe(true);
       answered.push({
         questionId: `answered-${step}`,
         domain: slot.domain,
@@ -49,7 +45,25 @@ describe("coverage", () => {
       });
     }
 
-    expect(domainsInFirstTen.size).toBe(10);
+    for (let block = 0; block < 5; block += 1) {
+      const blockDomains = Array.from({ length: 10 }, (_, index) => getCoverageSlot(block * 10 + index, plan, []).domain);
+      expect(new Set(blockDomains).size).toBe(10);
+      expect(blockDomains.sort()).toEqual([...domains].sort());
+    }
+  });
+
+  it("reshuffles domain order every 10 questions", () => {
+    const plan = createExamPlan("block-shuffle");
+    const firstBlock = getDomainOrderForBlock(plan, 0);
+    const secondBlock = getDomainOrderForBlock(plan, 1);
+    const thirdBlock = getDomainOrderForBlock(plan, 2);
+
+    expect(new Set(firstBlock).size).toBe(10);
+    expect(new Set(secondBlock).size).toBe(10);
+    expect(firstBlock).not.toEqual(secondBlock);
+    expect(secondBlock).not.toEqual(thirdBlock);
+    expect(getCoverageSlot(10, plan, []).domain).toBe(secondBlock[0]);
+    expect(getCoverageSlot(20, plan, []).domain).toBe(thirdBlock[0]);
   });
 });
 

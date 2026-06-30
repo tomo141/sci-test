@@ -120,6 +120,22 @@ export default function ExamPage() {
     setAnswers(parsedAnswers);
     setCurrentQuestion(nextQuestionForAnswers(parsedAnswers, plan)?.question ?? null);
 
+    const activeSessionId = window.localStorage.getItem("sci-test-session-id");
+    void fetch(activeSessionId ? `/api/exam/session?sessionId=${encodeURIComponent(activeSessionId)}` : "/api/exam/session")
+      .then((response) => response.json())
+      .then((data) => {
+        if (!data?.answers?.length) return;
+        const dbAnswers = data.answers as ClientExamAnswer[];
+        setAnswers(dbAnswers);
+        window.localStorage.setItem("sci-test-exam-answers", JSON.stringify(dbAnswers));
+        if (data.sessionId) {
+          setSessionId(data.sessionId);
+          window.localStorage.setItem("sci-test-session-id", data.sessionId);
+        }
+        setCurrentQuestion(nextQuestionForAnswers(dbAnswers, plan)?.question ?? null);
+      })
+      .catch(() => null);
+
     fetch("/api/exam/start", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -320,13 +336,9 @@ export default function ExamPage() {
                 </AppButton>
               ) : examConfig.canViewQuickResult(answers.length) ? (
                 <AppButton href="/result" variant="secondary">
-                  腕試しカルテを見る
+                  腕試し速報を見る
                 </AppButton>
-              ) : (
-                <AppButton href="/karte" variant="secondary">
-                  腕試しカルテを見る
-                </AppButton>
-              )}
+              ) : null}
             </div>
           ) : null}
           <p className="mt-3 text-xs leading-6 text-[var(--color-muted)]">

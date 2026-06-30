@@ -1,4 +1,3 @@
-import { examConfig } from "@/src/lib/exam/config";
 import { domains, type AbilityAxis, type ScienceDomain } from "@/src/lib/data/taxonomy";
 
 export type ExamPlan = {
@@ -14,7 +13,7 @@ export type CoverageSlot = {
 };
 
 const BASIC_AXIS: AbilityAxis = "基礎力";
-const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
+const DOMAINS_PER_BLOCK = domains.length;
 
 function hashSeed(seed: string) {
   let hash = 2166136261;
@@ -48,10 +47,17 @@ export function pickWithSeed<T>(items: readonly T[], seed: string): T {
   return items[Math.floor(rng() * items.length)];
 }
 
+export function getDomainOrderForBlock(plan: ExamPlan, blockIndex: number): ScienceDomain[] {
+  if (blockIndex === 0 && plan.domainOrder.length === DOMAINS_PER_BLOCK) {
+    return plan.domainOrder;
+  }
+  return shuffleWithSeed(domains, `${plan.sessionSeed}:block:${blockIndex}`);
+}
+
 export function createExamPlan(sessionSeed = crypto.randomUUID()): ExamPlan {
   return {
     sessionSeed,
-    domainOrder: shuffleWithSeed(domains, `${sessionSeed}:domains:first10`)
+    domainOrder: shuffleWithSeed(domains, `${sessionSeed}:block:0`)
   };
 }
 
@@ -73,32 +79,15 @@ export function getCoverageSlot(
   plan: ExamPlan,
   _answered: Array<{ domain: ScienceDomain; abilityAxis: AbilityAxis }>
 ): CoverageSlot {
-  const cycle = Math.floor(questionIndex / QUESTIONS_PER_CYCLE);
-  const posInCycle = questionIndex % QUESTIONS_PER_CYCLE;
-
-  if (posInCycle < domains.length) {
-    const domainOrder =
-      cycle === 0
-        ? plan.domainOrder
-        : shuffleWithSeed(domains, `${plan.sessionSeed}:cycle:${cycle}:first-round`);
-    return {
-      domain: domainOrder[posInCycle],
-      abilityAxis: BASIC_AXIS,
-      required: true,
-      phase: cycle === 0 ? "first_domains" : "coverage"
-    };
-  }
-
-  const posAfterFirst = posInCycle - domains.length;
-  const round = Math.floor(posAfterFirst / domains.length);
-  const posInRound = posAfterFirst % domains.length;
-  const domainOrder = shuffleWithSeed(domains, `${plan.sessionSeed}:cycle:${cycle}:round:${round}`);
+  const blockIndex = Math.floor(questionIndex / DOMAINS_PER_BLOCK);
+  const posInBlock = questionIndex % DOMAINS_PER_BLOCK;
+  const domainOrder = getDomainOrderForBlock(plan, blockIndex);
 
   return {
-    domain: domainOrder[posInRound],
+    domain: domainOrder[posInBlock],
     abilityAxis: BASIC_AXIS,
-    required: false,
-    phase: "extended"
+    required: true,
+    phase: blockIndex === 0 ? "first_domains" : "coverage"
   };
 }
 

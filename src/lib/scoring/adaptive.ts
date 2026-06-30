@@ -121,7 +121,8 @@ function selectFromCandidates(
   band: { min: number; max: number },
   lastQuestion: Question | null,
   rng: () => number,
-  reasonPrefix: string
+  reasonPrefix: string,
+  stageIndex: number
 ): AdaptiveSelection | null {
   if (!candidates.length) return null;
 
@@ -135,7 +136,7 @@ function selectFromCandidates(
   return {
     question: weighted.question,
     slot,
-    selectionReason: `${reasonPrefix}:${weighted.inBand ? "in_band" : "near_band"}`,
+    selectionReason: `${reasonPrefix}:stage${stageIndex}:${weighted.inBand ? "in_band" : "near_band"}`,
     predictedProbability: weighted.probability,
     targetBand: band
   };
@@ -161,7 +162,7 @@ function selectClosestToTarget(
   return {
     question: best.question,
     slot,
-    selectionReason: "adaptive_fallback_closest_target",
+    selectionReason: "adaptive_fallback:stage5:closest_target",
     predictedProbability: best.probability,
     targetBand: { min: target - 0.05, max: target + 0.05 }
   };
@@ -222,7 +223,8 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
     { requireSlot: false, requirePublished: false, bandSteps: scoringConfig.maxBandRelaxationSteps }
   ];
 
-  for (const stage of relaxationStages) {
+  for (let stageIndex = 0; stageIndex < relaxationStages.length; stageIndex += 1) {
+    const stage = relaxationStages[stageIndex];
     const band = relaxProbabilityBand(baseBand, stage.bandSteps);
     const candidates = filterCandidates(questions, uniqueAnswers, slot, now, stage.requireSlot, stage.requirePublished);
     const inBandCandidates = candidates.filter(
@@ -237,7 +239,8 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
       band,
       lastQuestion,
       rng,
-      stage.requireSlot ? "adaptive_slot" : "adaptive_relaxed"
+      stage.requireSlot ? "adaptive_slot" : "adaptive_relaxed",
+      stageIndex
     );
     if (selection) return selection;
   }

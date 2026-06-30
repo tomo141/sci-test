@@ -40,7 +40,7 @@ export default async function AdminPage() {
   const dashboard = await getAdminDashboardData();
   const kpis = [
     ["受験開始数", `${dashboard.examStarts.toLocaleString()}人`, "実データ"],
-    ["10問到達率", `${dashboard.completed10Rate}%`, "実データ"],
+    ["速報到達率", `${dashboard.completed10Rate}%`, "実データ"],
     ["50問到達率", `${dashboard.completed50Rate}%`, "実データ"],
     ["登録率", `${dashboard.signupRate}%`, "実データ"],
     ["メルマガ同意率", `${dashboard.marketingConsentRate}%`, "実データ"],

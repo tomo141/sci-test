@@ -12,6 +12,7 @@ import {
   type ExamPlan
 } from "@/src/lib/scoring";
 import { getCoverageSlot } from "@/src/lib/scoring/coverage";
+import { persistProficiencyEstimates } from "@/src/lib/exam/persistEstimates";
 import { createServiceRoleClient } from "@/src/lib/supabase/server";
 import type { AnswerRecord } from "@/src/lib/scoring/types";
 
@@ -74,8 +75,15 @@ export async function POST(request: Request) {
 
   const supabase = createServiceRoleClient();
   if (supabase && !parsed.data.sessionId.startsWith("local-")) {
+    const { data: sessionRow } = await supabase
+      .from("exam_sessions")
+      .select("user_id")
+      .eq("id", parsed.data.sessionId)
+      .maybeSingle();
+
     await supabase.from("exam_answers").insert({
       session_id: parsed.data.sessionId,
+      user_id: sessionRow?.user_id ?? null,
       question_id: question.id,
       selected_choice_index: parsed.data.selectedChoiceIndex,
       is_correct: correct,
@@ -98,6 +106,8 @@ export async function POST(request: Request) {
         completed_50_at: examConfig.isCycleComplete(after.counts.overall) ? new Date().toISOString() : null
       })
       .eq("id", parsed.data.sessionId);
+
+    await persistProficiencyEstimates(supabase, parsed.data.sessionId, sessionRow?.user_id ?? null, after);
   }
 
   return NextResponse.json({

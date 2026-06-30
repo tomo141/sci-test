@@ -1,27 +1,40 @@
+import { Suspense } from "react";
 import { Crown, Trophy } from "lucide-react";
 import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { StatusBadge } from "@/components/ui/StatusBadge";
-import { domains } from "@/src/lib/data/taxonomy";
+import { RankingDomainFilter } from "@/components/ranking/RankingDomainFilter";
+import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
-import { DomainIcon } from "@/components/ui/DomainIcon";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export default async function RankingPage() {
-  const rows = await getPublicLeaderboard(100);
+type Props = {
+  searchParams: Promise<{ domain?: string }>;
+};
+
+function isDomainFilter(value: string | undefined): value is ScienceDomain {
+  return !!value && (domains as readonly string[]).includes(value);
+}
+
+export default async function RankingPage({ searchParams }: Props) {
+  const params = await searchParams;
+  const activeDomain = isDomainFilter(params.domain) ? params.domain : "総合";
+  const rows = await getPublicLeaderboard(100, activeDomain);
 
   return (
     <>
       <SiteHeaderWithAuth />
       <main className="page-container py-8">
         <h1 className="flex items-center gap-3 text-4xl font-black"><Trophy className="text-[var(--color-accent-yellow-600)]" />ランキング</h1>
+        <p className="mt-2 font-bold text-[var(--color-ink-soft)]">
+          {activeDomain === "総合" ? "総合スコアのランキングです。" : `${activeDomain}分野のランキングです。`}
+        </p>
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px]">
           <section>
-            <div className="mb-5 flex flex-wrap gap-3">{["24時間", "7日間", "速報", "カルテ", "総合", "分野別"].map((x, i) => <StatusBadge key={x} tone={i === 0 || i === 4 ? "blue" : "yellow"}>{x}</StatusBadge>)}</div>
             {rows.length ? (
               <>
                 <AppCard className="mb-6 grid gap-4 md:grid-cols-3 md:items-end">
@@ -34,34 +47,49 @@ export default async function RankingPage() {
                   ))}
                 </AppCard>
                 <AppCard className="overflow-x-auto">
-                  <table className="w-full min-w-[720px] border-collapse text-sm">
-                    <thead><tr className="text-left text-[var(--color-muted)]">{["順位", "ニックネーム", "最新推定スコア", "回答数", "診断精度", "称号"].map((h) => <th key={h} className="border-b border-[var(--color-border)] p-3">{h}</th>)}</tr></thead>
-                    <tbody>{rows.map((row) => <tr key={`${row.rank}-${row.nickname}`}><td className="border-b border-[var(--color-border)] p-3 font-black">{row.rank}</td><td className="border-b border-[var(--color-border)] p-3 font-bold">{row.nickname}</td><td className="border-b border-[var(--color-border)] p-3 text-right text-xl font-black text-[var(--color-primary-700)]">{row.score}</td><td className="border-b border-[var(--color-border)] p-3">{row.answerCount}</td><td className="border-b border-[var(--color-border)] p-3">{row.diagnosticAccuracy == null ? "-" : `${row.diagnosticAccuracy.toFixed(1)}%`}</td><td className="border-b border-[var(--color-border)] p-3"><StatusBadge tone="yellow">{row.title || "挑戦者"}</StatusBadge></td></tr>)}</tbody>
+                  <table className="w-full min-w-[640px] border-collapse text-sm">
+                    <thead>
+                      <tr className="text-left text-[var(--color-muted)]">
+                        {["順位", "ニックネーム", "最新推定スコア", "回答数", "称号"].map((h) => (
+                          <th key={h} className="border-b border-[var(--color-border)] p-3">{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {rows.map((row) => (
+                        <tr key={`${row.rank}-${row.nickname}`}>
+                          <td className="border-b border-[var(--color-border)] p-3 font-black">{row.rank}</td>
+                          <td className="border-b border-[var(--color-border)] p-3 font-bold">{row.nickname}</td>
+                          <td className="border-b border-[var(--color-border)] p-3 text-right text-xl font-black text-[var(--color-primary-700)]">{row.score}</td>
+                          <td className="border-b border-[var(--color-border)] p-3">{row.answerCount}</td>
+                          <td className="border-b border-[var(--color-border)] p-3"><StatusBadge tone="yellow">{row.title || "挑戦者"}</StatusBadge></td>
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                 </AppCard>
               </>
             ) : (
               <AppCard>
-                <h2 className="text-xl font-black">ランキングはまだ集計前です</h2>
-                <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">保存済みの受験結果がランキング集計に反映されると、公開用ニックネーム・スコア・回答数・称号だけが表示されます。メールアドレスや本名は表示されません。</p>
+                <h2 className="text-xl font-black">
+                  {activeDomain === "総合" ? "ランキングはまだ集計前です" : `${activeDomain}のランキングはまだ集計前です`}
+                </h2>
+                <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
+                  保存済みの受験結果がランキング集計に反映されると、公開用ニックネーム・スコア・回答数・称号だけが表示されます。メールアドレスや本名は表示されません。
+                </p>
                 <AppButton href="/exam" className="mt-5">腕試しを始める</AppButton>
               </AppCard>
             )}
           </section>
           <aside className="grid gap-5">
+            <Suspense fallback={<AppCard><p className="font-bold text-[var(--color-muted)]">分野を読み込み中...</p></AppCard>}>
+              <RankingDomainFilter active={activeDomain} />
+            </Suspense>
             <AppCard>
-              <h2 className="mb-4 text-xl font-black">分野選択</h2>
-              <div className="grid grid-cols-2 gap-2">
-                <button className="rounded-xl border border-[var(--color-primary-700)] bg-[var(--color-primary-50)] p-3 text-sm font-bold text-[var(--color-primary-800)]">総合</button>
-                {domains.map((domain) => (
-                  <button key={domain} className="flex items-center gap-2 rounded-xl border border-[var(--color-border)] p-2 text-left text-xs font-bold">
-                    <DomainIcon domain={domain} size="sm" />
-                    <span>{domain}</span>
-                  </button>
-                ))}
-              </div>
+              <h2 className="text-xl font-black">あなたの順位</h2>
+              <p className="mt-4 text-lg font-bold leading-8 text-[var(--color-ink-soft)]">ログインして結果を保存すると、自分の順位を確認できます。</p>
+              <AppButton href="/karte" className="mt-5 w-full">カルテで詳細を見る</AppButton>
             </AppCard>
-            <AppCard><h2 className="text-xl font-black">あなたの順位</h2><p className="mt-4 text-lg font-bold leading-8 text-[var(--color-ink-soft)]">ログインして結果を保存すると、自分の順位を確認できます。</p><AppButton href="/karte" className="mt-5 w-full">カルテで詳細を見る</AppButton></AppCard>
           </aside>
         </div>
       </main>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { BookOpen, Star, Trophy } from "lucide-react";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
@@ -9,10 +9,10 @@ import { ScoreDisplay } from "@/components/ui/ScoreDisplay";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { RadarScoreChart } from "@/components/charts/RadarScoreChart";
 import { SaveResultButton } from "@/components/exam/SaveResultButton";
+import { useExamAnswers } from "@/components/exam/useExamAnswers";
 import { ReviewListSection } from "@/components/karte/ReviewListSection";
 import { domains } from "@/src/lib/data/taxonomy";
-import type { ClientExamAnswer } from "@/src/lib/exam/session";
-import { estimateFromAnswers } from "@/src/lib/scoring";
+import { estimateFromAnswers } from "@/src/lib/scoring/estimate";
 import { rankTitle } from "@/src/lib/scoring/rank";
 
 function percent(value: number) {
@@ -24,23 +24,7 @@ function topDomains(domainScores: { name: string; score: number }[]) {
 }
 
 export function KarteResultClient() {
-  const [answers, setAnswers] = useState<ClientExamAnswer[]>([]);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem("sci-test-exam-answers");
-    if (!stored) {
-      setLoaded(true);
-      return;
-    }
-
-    try {
-      setAnswers(JSON.parse(stored) as ClientExamAnswer[]);
-    } catch {
-      window.localStorage.removeItem("sci-test-exam-answers");
-    }
-    setLoaded(true);
-  }, []);
+  const { answers, loaded, source } = useExamAnswers();
 
   const estimate = useMemo(() => estimateFromAnswers(answers), [answers]);
   const correctCount = answers.filter((answer) => answer.correct).length;
@@ -60,7 +44,9 @@ export function KarteResultClient() {
     return (
       <AppCard className="mt-6">
         <h2 className="text-2xl font-black">カルテを読み込んでいます</h2>
-        <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">この端末に保存された回答履歴を確認しています。</p>
+        <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
+          {source === "database" ? "保存済みの受験データを表示しています。" : "この端末に保存された回答履歴を確認しています。"}
+        </p>
       </AppCard>
     );
   }

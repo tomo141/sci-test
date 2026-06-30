@@ -3,6 +3,8 @@ import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { KarteResultClient } from "@/components/karte/KarteResultClient";
 
+export const dynamic = "force-dynamic";
+
 export default function KartePage() {
   return (
     <>

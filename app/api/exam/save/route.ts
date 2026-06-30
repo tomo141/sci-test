@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { loadSessionAnswersFromDb } from "@/src/lib/exam/loadSessionAnswers";
+import { persistProficiencyEstimates } from "@/src/lib/exam/persistEstimates";
+import { estimateFromAnswers } from "@/src/lib/scoring";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 
 const saveSchema = z.object({
@@ -43,5 +46,15 @@ export async function POST(request: Request) {
   });
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+
+  const sessionId = parsed.data.sessionId.startsWith("local-") ? null : parsed.data.sessionId;
+  if (sessionId) {
+    const answers = await loadSessionAnswersFromDb(writeClient, sessionId);
+    if (answers.length) {
+      const estimate = estimateFromAnswers(answers);
+      await persistProficiencyEstimates(writeClient, sessionId, userId, estimate);
+    }
+  }
+
   return NextResponse.json({ ok: true });
 }
