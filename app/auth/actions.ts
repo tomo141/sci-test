@@ -102,7 +102,9 @@ export async function updateProfileAction(formData: FormData) {
   const email = user.data.user?.email;
   if (!email) redirect("/login");
 
-  const { error: profileError } = await supabase.from("profiles").upsert({
+  const writeClient = createServiceRoleClient() || supabase;
+
+  const { error: profileError } = await writeClient.from("profiles").upsert({
     id: userId,
     email,
     nickname,
@@ -111,7 +113,7 @@ export async function updateProfileAction(formData: FormData) {
   });
   if (profileError) redirect(`/mypage?profile=${encodeURIComponent(profileError.message)}`);
 
-  const { error: educationError } = await supabase.from("education_profiles").upsert({
+  const { error: educationError } = await writeClient.from("education_profiles").upsert({
     user_id: userId,
     highest_education: education.length ? education.join(",") : null,
     specialty: specialty || null
@@ -180,8 +182,11 @@ export async function updateMarketingConsentAction(formData: FormData) {
 
   if (existing?.consented) redirect("/mypage?marketing=already");
 
+  const writeClient = createServiceRoleClient();
+  if (!writeClient) redirect("/mypage?marketing=unavailable");
+
   const now = new Date().toISOString();
-  const { error } = await supabase.from("marketing_consents").upsert(
+  const { error } = await writeClient.from("marketing_consents").upsert(
     {
       user_id: userId,
       consented: true,
