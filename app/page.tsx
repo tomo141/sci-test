@@ -36,9 +36,15 @@ export default async function HomePage() {
                 <StatusBadge>10の科学分野</StatusBadge>
               </div>
             </div>
-            <div className="relative min-h-[360px]">
-              <div className="absolute inset-0 rounded-[32px] bg-[var(--color-primary-100)] opacity-70" />
-              <Image src="/characters/riketokuo/sheet.png" alt="メインキャラクター りけとくお" fill priority className="object-cover object-[66%_12%]" />
+            <div className="relative aspect-[16/9] min-h-[280px] w-full">
+              <Image
+                src="/images/hero-main.jpg"
+                alt="りけとくおが10の科学分野を冒険するイラスト"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="rounded-[32px] object-contain object-center"
+              />
             </div>
           </div>
         </section>
