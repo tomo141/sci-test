@@ -23,7 +23,7 @@ import {
 } from "@/src/lib/exam/session";
 
 const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
-const ANSWER_SCROLL_DELAY_MS = 80;
+const ANSWER_SCROLL_DELAY_MS = 140;
 const ANSWER_SCROLL_DURATION_MS = 500;
 
 function easeInOutCubic(value: number) {
@@ -35,12 +35,18 @@ function scrollToElementTop(element: HTMLElement, durationMs: number) {
   const targetY = startY + element.getBoundingClientRect().top;
   const distance = targetY - startY;
   const startTime = performance.now();
+  const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+  document.documentElement.style.scrollBehavior = "auto";
 
   function step(now: number) {
     const elapsed = now - startTime;
     const progress = Math.min(1, elapsed / durationMs);
     window.scrollTo(0, startY + distance * easeInOutCubic(progress));
-    if (progress < 1) requestAnimationFrame(step);
+    if (progress < 1) {
+      requestAnimationFrame(step);
+      return;
+    }
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
   }
 
   requestAnimationFrame(step);
