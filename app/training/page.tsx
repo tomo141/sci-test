@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CheckCircle2, Dice5, Target } from "lucide-react";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -9,10 +9,14 @@ import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { QuestionCard } from "@/components/exam/QuestionCard";
 import { useQuestionBank } from "@/components/exam/useQuestionBank";
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { trainingConfig } from "@/src/lib/training/config";
 import { DomainIcon } from "@/components/ui/DomainIcon";
+import { shuffleChoices } from "@/src/lib/exam/shuffleChoices";
+import { buildAnswerFeedback } from "@/src/lib/exam/explanation";
+import type { QuestionFeedbackKind } from "@/src/lib/exam/feedback";
 
 type TrainingMode = "domain" | "random";
 
@@ -58,8 +62,39 @@ function shuffleQuestions<T>(items: T[]) {
   return next;
 }
 
+const ANSWER_SCROLL_DELAY_MS = 140;
+const ANSWER_SCROLL_DURATION_MS = 500;
+
+function easeInOutCubic(value: number) {
+  return value < 0.5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
+}
+
+function scrollToElementTop(element: HTMLElement, durationMs: number) {
+  const startY = window.scrollY;
+  const targetY = startY + element.getBoundingClientRect().top;
+  const distance = targetY - startY;
+  const startTime = performance.now();
+  const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+  document.documentElement.style.scrollBehavior = "auto";
+
+  function step(now: number) {
+    const elapsed = now - startTime;
+    const progress = Math.min(1, elapsed / durationMs);
+    window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+    if (progress < 1) {
+      requestAnimationFrame(step);
+      return;
+    }
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
+  }
+
+  requestAnimationFrame(step);
+}
+
 export default function TrainingPage() {
   const { questions, loaded: questionsLoaded } = useQuestionBank();
+  const questionTopRef = useRef<HTMLDivElement>(null);
+  const questionTextRef = useRef<HTMLHeadingElement>(null);
   const [mode, setMode] = useState<TrainingMode>("domain");
   const [domain, setDomain] = useState<ScienceDomain>("化学");
   const [history, setHistory] = useState<TrainingAnswer[]>([]);
@@ -68,6 +103,8 @@ export default function TrainingPage() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [randomOrder, setRandomOrder] = useState<string[]>([]);
   const [access, setAccess] = useState<TrainingAccess | null>(null);
+  const [shuffleKey, setShuffleKey] = useState(0);
+  const [activeFeedback, setActiveFeedback] = useState<QuestionFeedbackKind | null>(null);
 
   useEffect(() => {
     setHistory(loadHistory());
@@ -102,9 +139,31 @@ export default function TrainingPage() {
     setQuestionIndex(0);
     setSelected(null);
     setAnswered(false);
+    setActiveFeedback(null);
+    setShuffleKey((key) => key + 1);
   }, [mode, publishedQuestions]);
 
   const question = poolQuestions[questionIndex % Math.max(poolQuestions.length, 1)];
+  const shuffledQuestion = useMemo(() => {
+    if (!question) return null;
+    void shuffleKey;
+    const shuffled = shuffleChoices(question);
+    return {
+      question: {
+        ...question,
+        choices: shuffled.choices,
+        correctIndex: shuffled.correctIndex
+      },
+      displayToOriginal: shuffled.displayToOriginal
+    };
+  }, [question, shuffleKey]);
+  const displayQuestion = shuffledQuestion?.question ?? null;
+  const answerFeedback = useMemo(() => {
+    if (!answered || selected === null || !question || !shuffledQuestion) return null;
+    const isCorrect = selected === shuffledQuestion.question.correctIndex;
+    const originalIndex = shuffledQuestion.displayToOriginal[selected];
+    return buildAnswerFeedback(question, originalIndex, isCorrect);
+  }, [answered, selected, question, shuffledQuestion]);
   const totalAnswerCount = Math.max(history.length, access?.answerCount ?? 0);
   const marketingConsented = access?.marketingConsented ?? false;
   const freeLimit = access?.freeLimit ?? trainingConfig.freeAnswerLimit;
@@ -127,14 +186,19 @@ export default function TrainingPage() {
     setQuestionIndex(0);
     setSelected(null);
     setAnswered(false);
+    setActiveFeedback(null);
+    setShuffleKey((key) => key + 1);
   };
 
   const choose = (index: number) => {
-    if (answered || !question || !canAnswerMore) return;
-    const isCorrect = index === question.correctIndex;
+    if (answered || !question || !shuffledQuestion || !canAnswerMore) return;
+    const isCorrect = index === shuffledQuestion.question.correctIndex;
     const nextHistory = [...history, { questionId: question.id, correct: isCorrect, answeredAt: new Date().toISOString() }];
     setSelected(index);
     setAnswered(true);
+    window.setTimeout(() => {
+      if (questionTextRef.current) scrollToElementTop(questionTextRef.current, ANSWER_SCROLL_DURATION_MS);
+    }, ANSWER_SCROLL_DELAY_MS);
     setHistory(nextHistory);
     window.localStorage.setItem(TRAINING_STORAGE_KEY, JSON.stringify(nextHistory));
     void fetch("/api/training/log", {
@@ -153,7 +217,12 @@ export default function TrainingPage() {
   const next = () => {
     setSelected(null);
     setAnswered(false);
+    setActiveFeedback(null);
+    setShuffleKey((key) => key + 1);
     setQuestionIndex((value) => value + 1);
+    requestAnimationFrame(() => {
+      questionTopRef.current?.scrollIntoView({ block: "start" });
+    });
   };
 
   if (!questionsLoaded) {
@@ -181,31 +250,6 @@ export default function TrainingPage() {
             <Image src="/characters/riketokuo/sheet.png" alt="りけとくお" width={120} height={120} className="absolute bottom-0 right-2 h-28 w-28 rounded-full object-cover object-[68%_14%]" />
           </div>
         </div>
-        <AppCard className="mt-6 flex flex-wrap items-center gap-3">
-          <StatusBadge>{mode === "domain" ? `分野：${domain}` : "全分野ランダム"}</StatusBadge>
-          <StatusBadge>回答数：{totalAnswerCount}</StatusBadge>
-          {!marketingConsented ? (
-            <StatusBadge tone="yellow">無料枠 {Math.min(totalAnswerCount, freeLimit)} / {freeLimit} 問</StatusBadge>
-          ) : (
-            <StatusBadge tone="green">メルマガ同意済み・制限なし</StatusBadge>
-          )}
-          {mode === "domain" ? (
-            <select
-              value={domain}
-              onChange={(event) => {
-                setDomain(event.target.value as ScienceDomain);
-                setQuestionIndex(0);
-                setSelected(null);
-                setAnswered(false);
-              }}
-              className="min-h-12 rounded-2xl border border-[var(--color-border)] bg-white px-4 text-sm font-bold"
-            >
-              {domains.map((item) => (
-                <option key={item}>{item}</option>
-              ))}
-            </select>
-          ) : null}
-        </AppCard>
         <section className="mt-6">
           <h2 className="mb-4 text-xl font-black">トレーニングモードを選ぶ</h2>
           <div className="grid gap-4 md:grid-cols-2">
@@ -223,6 +267,30 @@ export default function TrainingPage() {
             ))}
           </div>
         </section>
+        <AppCard className="mt-6 flex flex-wrap items-center gap-3">
+          <StatusBadge>分野</StatusBadge>
+          <StatusBadge>回答数：{totalAnswerCount}</StatusBadge>
+          {mode === "domain" ? (
+            <select
+              value={domain}
+              onChange={(event) => {
+                setDomain(event.target.value as ScienceDomain);
+                setQuestionIndex(0);
+                setSelected(null);
+                setAnswered(false);
+                setActiveFeedback(null);
+                setShuffleKey((key) => key + 1);
+              }}
+              className="min-h-12 rounded-2xl border border-[var(--color-border)] bg-white px-4 text-sm font-bold"
+            >
+              {domains.map((item) => (
+                <option key={item}>{item}</option>
+              ))}
+            </select>
+          ) : (
+            <StatusBadge tone="blue">全分野ランダム</StatusBadge>
+          )}
+        </AppCard>
         {!canAnswerMore ? (
           <AppCard className="mt-6 border-2 border-[var(--color-primary-700)] bg-[var(--color-primary-50)]">
             <h2 className="text-xl font-black">無料枠（{freeLimit}問）を使い切りました</h2>
@@ -241,54 +309,30 @@ export default function TrainingPage() {
             </div>
           </AppCard>
         ) : null}
-        <section className="mt-6 grid gap-6 lg:grid-cols-2">
-          <AppCard>
-            <div className="mb-4 flex items-center gap-3">
-              {mode === "domain" ? <DomainIcon domain={domain} size="sm" /> : null}
-              <StatusBadge>{mode === "domain" ? domain : "全分野"}</StatusBadge>
-              <span className="font-black">
-                問題 {(questionIndex % Math.max(poolQuestions.length, 1)) + 1} / {poolQuestions.length}
-              </span>
-            </div>
-            {question ? (
-              <>
-                <h2 className="text-xl font-black leading-9">{question.question}</h2>
-                {question.choices.map((choice, index) => {
-                  const isCorrect = answered && index === question.correctIndex;
-                  const isWrong = answered && selected === index && !isCorrect;
-                  return (
-                    <button
-                      key={choice}
-                      type="button"
-                      disabled={!canAnswerMore && !answered}
-                      onClick={() => choose(index)}
-                      className={`mt-3 w-full rounded-2xl border p-4 text-left font-bold disabled:cursor-not-allowed disabled:opacity-50 ${isCorrect ? "border-green-500 bg-green-50 text-green-800" : isWrong ? "border-red-300 bg-red-50 text-red-800" : "border-[var(--color-border)] hover:bg-[var(--color-primary-50)]"}`}
-                    >
-                      {index + 1}. {choice}
-                    </button>
-                  );
-                })}
-                {answered && canAnswerMore ? <AppButton className="mt-5 w-full" onClick={next}>次の問題へ</AppButton> : null}
-              </>
-            ) : (
+        <div ref={questionTopRef} className="scroll-mt-4" />
+        <section className="mt-6">
+          {displayQuestion ? (
+            <QuestionCard
+              question={displayQuestion}
+              index={questionIndex}
+              selected={selected}
+              answered={answered}
+              feedback={answerFeedback}
+              questionTextRef={questionTextRef}
+              onChoiceClick={(choiceIndex) => choose(choiceIndex)}
+              activeFeedback={activeFeedback}
+              onFeedbackChange={setActiveFeedback}
+            />
+          ) : (
+            <AppCard>
               <p className="leading-8 text-[var(--color-ink-soft)]">この条件で出題できる問題がまだありません。</p>
-            )}
-          </AppCard>
-          <AppCard>
-            <h2 className="text-xl font-black">解説</h2>
-            {answered && question ? (
-              <>
-                <StatusBadge tone={selected === question.correctIndex ? "green" : "yellow"}>{selected === question.correctIndex ? "正解！" : "復習しよう"}</StatusBadge>
-                <p className="mt-4 leading-8">{question.shortExplanation}</p>
-                <div className="mt-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-primary-50)] p-4">
-                  <p className="font-black">ポイント</p>
-                  <p className="mt-2 leading-8">{question.detailedExplanation}</p>
-                </div>
-              </>
-            ) : (
-              <p className="mt-4 leading-8 text-[var(--color-ink-soft)]">選択肢を選ぶと、ここに解説が表示されます。</p>
-            )}
-          </AppCard>
+            </AppCard>
+          )}
+          {answered && canAnswerMore ? (
+            <div className="mt-6 grid gap-3">
+              <AppButton onClick={next}>次の問題へ</AppButton>
+            </div>
+          ) : null}
         </section>
         <section className="mt-6 grid gap-4 md:grid-cols-4">
           <AppCard><h3 className="font-black">今日のトレーニング</h3><p className="mt-4 text-4xl font-black">{totalAnswerCount}問</p><ProgressBar value={marketingConsented ? progress : Math.min(100, (totalAnswerCount / freeLimit) * 100)} /></AppCard>
