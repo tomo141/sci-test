@@ -37,6 +37,8 @@ type UserBadgeRow = {
 
 const educationOptions = ["博士号取得済み", "修士号取得済み", "大学卒", "短大卒", "高卒", "中卒", "専門学校卒", "その他"];
 
+export const dynamic = "force-dynamic";
+
 export default async function MyPage() {
   const supabase = await createServerSupabaseClient();
   const user = await supabase?.auth.getUser();
@@ -100,7 +102,7 @@ export default async function MyPage() {
           <AppCard className="flex flex-col gap-5 md:flex-row md:items-center">
             <Image src="/characters/tomoyoshi/sheet.png" alt="プロフィール画像" width={150} height={150} className="h-36 w-36 rounded-full object-cover object-[50%_12%]" />
             <div className="flex-1">
-              <h2 className="text-2xl font-black">{nickname} <Pencil className="inline text-[var(--color-primary-700)]" size={18} /></h2>
+              <h2 className="text-2xl font-black">{nickname}</h2>
               <p className="mt-2 font-bold text-[var(--color-muted)]">{latestScore ? rankTitle(latestScore) : "結果未保存"}</p>
               {latestScore ? <div className="mt-5"><ScoreDisplay score={latestScore} /></div> : <MyPageLocalSummary />}
               <div className="mt-5 flex flex-wrap gap-3"><AppButton href="#profile-edit" variant="secondary"><Pencil />プロフィール編集</AppButton><AppButton href="/karte"><Download />結果を保存</AppButton></div>
@@ -177,8 +179,14 @@ export default async function MyPage() {
                 配信停止は、届いたメール内の解除リンクからいつでも行えます。
               </p>
             ) : (
-              <form action={updateMarketingConsentAction} className="mt-5">
-                <AppButton type="submit" variant="secondary">メルマガに同意する</AppButton>
+              <form action={updateMarketingConsentAction} className="mt-5 grid gap-4">
+                <label className="flex gap-3 text-sm leading-7">
+                  <input name="marketingConsent" type="checkbox" required className="mt-1 h-5 w-5 shrink-0" />
+                  運営「理系とーく」からの、科学系コンテンツ・イベント情報等をメールで受け取る
+                </label>
+                <div>
+                  <AppButton type="submit" variant="secondary">メルマガに同意する</AppButton>
+                </div>
               </form>
             )}
           </AppCard>

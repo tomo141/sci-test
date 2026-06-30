@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { syncAdminRoleIfAllowed } from "@/src/lib/admin/role";
@@ -62,12 +63,15 @@ export async function signupAction(formData: FormData) {
   if (userId) {
     const role = getAdminEmails().includes(email.toLowerCase()) ? "admin" : "user";
     await supabase.from("profiles").upsert({ id: userId, email, nickname: nickname || null, role });
-    await supabase.from("marketing_consents").upsert({
-      user_id: userId,
-      consented: marketingConsent === "on",
-      consented_at: marketingConsent === "on" ? new Date().toISOString() : null,
-      training_unlocked_at: marketingConsent === "on" ? new Date().toISOString() : null
-    });
+    await supabase.from("marketing_consents").upsert(
+      {
+        user_id: userId,
+        consented: marketingConsent === "on",
+        consented_at: marketingConsent === "on" ? new Date().toISOString() : null,
+        training_unlocked_at: marketingConsent === "on" ? new Date().toISOString() : null
+      },
+      { onConflict: "user_id" }
+    );
     if (anonymousSessionId) {
       const linkedSessions = await supabase.from("exam_sessions").select("id").eq("anonymous_session_id", anonymousSessionId);
       const linkedSessionIds = linkedSessions.data?.map((row) => row.id) || [];
@@ -114,6 +118,8 @@ export async function updateProfileAction(formData: FormData) {
   });
   if (educationError) redirect(`/mypage?profile=${encodeURIComponent(educationError.message)}`);
 
+  await supabase.auth.updateUser({ data: { nickname } });
+  revalidatePath("/mypage");
   redirect("/mypage?profile=saved");
 }
 
@@ -158,7 +164,9 @@ export async function logoutAction() {
   redirect("/");
 }
 
-export async function updateMarketingConsentAction() {
+export async function updateMarketingConsentAction(formData: FormData) {
+  if (formData.get("marketingConsent") !== "on") redirect("/mypage?marketing=unchecked");
+
   const supabase = await createServerSupabaseClient();
   const user = await supabase?.auth.getUser();
   const userId = user?.data.user?.id;
@@ -172,15 +180,20 @@ export async function updateMarketingConsentAction() {
 
   if (existing?.consented) redirect("/mypage?marketing=already");
 
-  const { error } = await supabase.from("marketing_consents").upsert({
-    user_id: userId,
-    consented: true,
-    consented_at: new Date().toISOString(),
-    training_unlocked_at: new Date().toISOString()
-  });
+  const now = new Date().toISOString();
+  const { error } = await supabase.from("marketing_consents").upsert(
+    {
+      user_id: userId,
+      consented: true,
+      consented_at: now,
+      training_unlocked_at: now
+    },
+    { onConflict: "user_id" }
+  );
   if (error) redirect(`/mypage?marketing=${encodeURIComponent(error.message)}`);
 
-  redirect("/training?marketing=unlocked");
+  revalidatePath("/mypage");
+  redirect("/mypage?marketing=consented");
 }
 
 export async function deleteAccountAction(formData: FormData) {
