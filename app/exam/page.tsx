@@ -23,6 +23,28 @@ import {
 } from "@/src/lib/exam/session";
 
 const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
+const ANSWER_SCROLL_DELAY_MS = 80;
+const ANSWER_SCROLL_DURATION_MS = 500;
+
+function easeInOutCubic(value: number) {
+  return value < 0.5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
+}
+
+function scrollToElementTop(element: HTMLElement, durationMs: number) {
+  const startY = window.scrollY;
+  const targetY = startY + element.getBoundingClientRect().top;
+  const distance = targetY - startY;
+  const startTime = performance.now();
+
+  function step(now: number) {
+    const elapsed = now - startTime;
+    const progress = Math.min(1, elapsed / durationMs);
+    window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+    if (progress < 1) requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+}
 
 export default function ExamPage() {
   const questionTopRef = useRef<HTMLDivElement>(null);
@@ -115,14 +137,9 @@ export default function ExamPage() {
     if (selectedIndex === null || !currentQuestion || !shuffledQuestion || !examPlan) return;
     setSelected(selectedIndex);
     setAnswered(true);
-    requestAnimationFrame(() => {
-      const targetTop = questionTextRef.current?.getBoundingClientRect().top;
-      if (targetTop == null) return;
-      const previousScrollBehavior = document.documentElement.style.scrollBehavior;
-      document.documentElement.style.scrollBehavior = "auto";
-      window.scrollTo({ top: window.scrollY + targetTop, behavior: "auto" });
-      document.documentElement.style.scrollBehavior = previousScrollBehavior;
-    });
+    window.setTimeout(() => {
+      if (questionTextRef.current) scrollToElementTop(questionTextRef.current, ANSWER_SCROLL_DURATION_MS);
+    }, ANSWER_SCROLL_DELAY_MS);
     const originalChoiceIndex = shuffledQuestion.displayToOriginal[selectedIndex];
     const currentAnswer: ClientExamAnswer = {
       questionId: currentQuestion.id,

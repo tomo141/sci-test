@@ -1,5 +1,6 @@
 import bank from "../../../supabase/seed/generated/questions-basic-v1.json";
 import { knowledgeQuestions } from "./knowledgeQuestions";
+import { knowledgeQuestionsV2 } from "./knowledgeQuestionsV2";
 import type { AbilityAxis, ScienceDomain } from "./taxonomy";
 
 export type CognitiveType =
@@ -122,4 +123,4 @@ function toQuestion(record: BankQuestion): Question {
   };
 }
 
-export const questions: Question[] = [...(bank as BankQuestion[]), ...knowledgeQuestions].map(toQuestion);
+export const questions: Question[] = [...(bank as BankQuestion[]), ...knowledgeQuestions, ...knowledgeQuestionsV2].map(toQuestion);
