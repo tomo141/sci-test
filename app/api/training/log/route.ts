@@ -1,0 +1,28 @@
+import { NextResponse } from "next/server";
+import { z } from "zod";
+import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
+
+const schema = z.object({
+  questionId: z.string(),
+  correct: z.boolean(),
+  mode: z.enum(["domain", "random"])
+});
+
+export async function POST(request: Request) {
+  const parsed = schema.safeParse(await request.json().catch(() => null));
+  if (!parsed.success) return NextResponse.json({ error: "invalid payload" }, { status: 400 });
+
+  const supabase = createServiceRoleClient();
+  if (!supabase) return NextResponse.json({ ok: true, stored: "local-only" });
+
+  const authClient = await createServerSupabaseClient();
+  const userId = (await authClient?.auth.getUser())?.data.user?.id ?? null;
+
+  await supabase.from("event_logs").insert({
+    user_id: userId,
+    event_name: "training_answer",
+    metadata: parsed.data
+  });
+
+  return NextResponse.json({ ok: true });
+}

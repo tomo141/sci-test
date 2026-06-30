@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import { BarChart3, CheckCircle2, Dice5, Target, TrendingUp } from "lucide-react";
+import { CheckCircle2, Dice5, Target } from "lucide-react";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
@@ -13,11 +13,11 @@ import { questions } from "@/src/lib/data/questions";
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { DomainIcon } from "@/components/ui/DomainIcon";
 
-const modes = [
-  [Target, "分野指定", "特定の分野を集中的にトレーニングする"],
-  [BarChart3, "苦手補強", "苦手な分野を集中的に克服する"],
-  [TrendingUp, "次の100点帯を目指す", "次のスコア帯に向けて効率的に学習する"],
-  [Dice5, "全分野ランダム", "ランダムに出題される問題で総合力を鍛える"]
+type TrainingMode = "domain" | "random";
+
+const modes: [typeof Target | typeof Dice5, TrainingMode, string, string][] = [
+  [Target, "domain", "分野指定", "特定の分野を集中的にトレーニングする"],
+  [Dice5, "random", "全分野ランダム", "ランダムに出題される問題で総合力を鍛える"]
 ];
 
 const TRAINING_STORAGE_KEY = "sci-test-training-history";
@@ -40,31 +40,67 @@ function loadHistory(): TrainingAnswer[] {
   }
 }
 
+function shuffleQuestions<T>(items: T[]) {
+  const next = [...items];
+  for (let index = next.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [next[index], next[swapIndex]] = [next[swapIndex], next[index]];
+  }
+  return next;
+}
+
 export default function TrainingPage() {
+  const [mode, setMode] = useState<TrainingMode>("domain");
   const [domain, setDomain] = useState<ScienceDomain>("化学");
   const [history, setHistory] = useState<TrainingAnswer[]>([]);
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
   const [questionIndex, setQuestionIndex] = useState(0);
+  const [randomOrder, setRandomOrder] = useState<string[]>([]);
 
   useEffect(() => {
     setHistory(loadHistory());
   }, []);
 
-  const domainQuestions = useMemo(() => questions.filter((question) => question.domain === domain && question.published), [domain]);
-  const question = domainQuestions[questionIndex % Math.max(domainQuestions.length, 1)];
-  const sessionAnswers = history.filter((answer) => domainQuestions.some((item) => item.id === answer.questionId));
+  const publishedQuestions = useMemo(() => questions.filter((question) => question.published), []);
+
+  const poolQuestions = useMemo(() => {
+    if (mode === "domain") {
+      return publishedQuestions.filter((question) => question.domain === domain);
+    }
+    if (!randomOrder.length) return publishedQuestions;
+    const byId = new Map(publishedQuestions.map((question) => [question.id, question]));
+    return randomOrder.map((id) => byId.get(id)).filter((question) => question !== undefined);
+  }, [domain, mode, publishedQuestions, randomOrder]);
+
+  useEffect(() => {
+    if (mode !== "random") return;
+    setRandomOrder(shuffleQuestions(publishedQuestions).map((question) => question.id));
+    setQuestionIndex(0);
+    setSelected(null);
+    setAnswered(false);
+  }, [mode, publishedQuestions]);
+
+  const question = poolQuestions[questionIndex % Math.max(poolQuestions.length, 1)];
+  const sessionAnswers = history.filter((answer) => poolQuestions.some((item) => item.id === answer.questionId));
   const correctCount = sessionAnswers.filter((answer) => answer.correct).length;
   const progress = Math.min(100, sessionAnswers.length * 10);
   const weakDomains = domains
     .map((item) => {
-      const domainIds = new Set(questions.filter((questionItem) => questionItem.domain === item).map((questionItem) => questionItem.id));
+      const domainIds = new Set(publishedQuestions.filter((questionItem) => questionItem.domain === item).map((questionItem) => questionItem.id));
       const answers = history.filter((answer) => domainIds.has(answer.questionId));
       const rate = answers.length ? answers.filter((answer) => answer.correct).length / answers.length : 1;
       return { domain: item, rate, count: answers.length };
     })
     .sort((a, b) => a.rate - b.rate || b.count - a.count)
     .slice(0, 3);
+
+  const selectMode = (nextMode: TrainingMode) => {
+    setMode(nextMode);
+    setQuestionIndex(0);
+    setSelected(null);
+    setAnswered(false);
+  };
 
   const choose = (index: number) => {
     if (answered || !question) return;
@@ -74,6 +110,11 @@ export default function TrainingPage() {
     setAnswered(true);
     setHistory(nextHistory);
     window.localStorage.setItem(TRAINING_STORAGE_KEY, JSON.stringify(nextHistory));
+    void fetch("/api/training/log", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ questionId: question.id, correct: isCorrect, mode })
+    }).catch(() => null);
   };
 
   const next = () => {
@@ -97,27 +138,51 @@ export default function TrainingPage() {
           </div>
         </div>
         <AppCard className="mt-6 flex flex-wrap items-center gap-3">
-          <StatusBadge>分野：{domain}</StatusBadge>
+          <StatusBadge>{mode === "domain" ? `分野：${domain}` : "全分野ランダム"}</StatusBadge>
           <StatusBadge>回答数：{sessionAnswers.length}</StatusBadge>
-          <select value={domain} onChange={(event) => { setDomain(event.target.value as ScienceDomain); setQuestionIndex(0); setSelected(null); setAnswered(false); }} className="min-h-12 rounded-2xl border border-[var(--color-border)] bg-white px-4 text-sm font-bold">
-            {domains.map((item) => <option key={item}>{item}</option>)}
-          </select>
+          {mode === "domain" ? (
+            <select
+              value={domain}
+              onChange={(event) => {
+                setDomain(event.target.value as ScienceDomain);
+                setQuestionIndex(0);
+                setSelected(null);
+                setAnswered(false);
+              }}
+              className="min-h-12 rounded-2xl border border-[var(--color-border)] bg-white px-4 text-sm font-bold"
+            >
+              {domains.map((item) => (
+                <option key={item}>{item}</option>
+              ))}
+            </select>
+          ) : null}
         </AppCard>
         <section className="mt-6">
           <h2 className="mb-4 text-xl font-black">トレーニングモードを選ぶ</h2>
-          <div className="grid gap-4 md:grid-cols-4">
-            {modes.map(([Icon, title, text], i) => (
-              <AppCard key={title as string} className={i === 0 ? "border-2 border-[var(--color-primary-700)] bg-[var(--color-primary-50)]" : ""}>
-                <div className="flex justify-between"><Icon className="text-[var(--color-primary-700)]" />{i === 0 ? <CheckCircle2 className="text-[var(--color-primary-700)]" /> : null}</div>
-                <h3 className="mt-4 font-black">{title as string}</h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--color-ink-soft)]">{text as string}</p>
-              </AppCard>
+          <div className="grid gap-4 md:grid-cols-2">
+            {modes.map(([Icon, value, title, text]) => (
+              <button key={value} type="button" onClick={() => selectMode(value)} className="text-left">
+                <AppCard className={mode === value ? "border-2 border-[var(--color-primary-700)] bg-[var(--color-primary-50)]" : ""}>
+                  <div className="flex justify-between">
+                    <Icon className="text-[var(--color-primary-700)]" />
+                    {mode === value ? <CheckCircle2 className="text-[var(--color-primary-700)]" /> : null}
+                  </div>
+                  <h3 className="mt-4 font-black">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[var(--color-ink-soft)]">{text}</p>
+                </AppCard>
+              </button>
             ))}
           </div>
         </section>
         <section className="mt-6 grid gap-6 lg:grid-cols-2">
           <AppCard>
-            <div className="mb-4 flex items-center gap-3"><DomainIcon domain={domain} size="sm" /><StatusBadge>{domain}</StatusBadge><span className="font-black">問題 {(questionIndex % Math.max(domainQuestions.length, 1)) + 1} / {domainQuestions.length}</span></div>
+            <div className="mb-4 flex items-center gap-3">
+              {mode === "domain" ? <DomainIcon domain={domain} size="sm" /> : null}
+              <StatusBadge>{mode === "domain" ? domain : "全分野"}</StatusBadge>
+              <span className="font-black">
+                問題 {(questionIndex % Math.max(poolQuestions.length, 1)) + 1} / {poolQuestions.length}
+              </span>
+            </div>
             {question ? (
               <>
                 <h2 className="text-xl font-black leading-9">{question.question}</h2>
@@ -125,7 +190,11 @@ export default function TrainingPage() {
                   const isCorrect = answered && index === question.correctIndex;
                   const isWrong = answered && selected === index && !isCorrect;
                   return (
-                    <button key={choice} onClick={() => choose(index)} className={`mt-3 w-full rounded-2xl border p-4 text-left font-bold ${isCorrect ? "border-green-500 bg-green-50 text-green-800" : isWrong ? "border-red-300 bg-red-50 text-red-800" : "border-[var(--color-border)] hover:bg-[var(--color-primary-50)]"}`}>
+                    <button
+                      key={choice}
+                      onClick={() => choose(index)}
+                      className={`mt-3 w-full rounded-2xl border p-4 text-left font-bold ${isCorrect ? "border-green-500 bg-green-50 text-green-800" : isWrong ? "border-red-300 bg-red-50 text-red-800" : "border-[var(--color-border)] hover:bg-[var(--color-primary-50)]"}`}
+                    >
                       {index + 1}. {choice}
                     </button>
                   );
@@ -133,7 +202,7 @@ export default function TrainingPage() {
                 {answered ? <AppButton className="mt-5 w-full" onClick={next}>次の問題へ</AppButton> : null}
               </>
             ) : (
-              <p className="leading-8 text-[var(--color-ink-soft)]">この分野の問題がまだありません。</p>
+              <p className="leading-8 text-[var(--color-ink-soft)]">この条件で出題できる問題がまだありません。</p>
             )}
           </AppCard>
           <AppCard>

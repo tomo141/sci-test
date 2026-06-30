@@ -8,7 +8,7 @@ import { ProgressBar } from "@/components/ui/ProgressBar";
 import { ScoreDisplay } from "@/components/ui/ScoreDisplay";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { ScoreHistoryChart } from "@/components/charts/ScoreHistoryChart";
-import { createServerSupabaseClient } from "@/src/lib/supabase/server";
+import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import { rankTitle } from "@/src/lib/scoring/rank";
 import { MyPageLocalSummary } from "@/components/profile/MyPageLocalSummary";
 import { updateProfileAction } from "@/app/auth/actions";
@@ -24,6 +24,16 @@ type EducationProfileRow = {
   specialty: string | null;
 };
 
+type MarketingConsentRow = {
+  consented: boolean;
+  training_unlocked_at: string | null;
+};
+
+type UserBadgeRow = {
+  awarded_at: string;
+  badges: { name: string } | { name: string }[] | null;
+};
+
 const educationOptions = ["博士号取得済み", "修士号取得済み", "大学卒", "短大卒", "高卒", "中卒", "専門学校卒", "その他"];
 
 export default async function MyPage() {
@@ -31,13 +41,36 @@ export default async function MyPage() {
   const user = await supabase?.auth.getUser();
   const userId = user?.data.user?.id;
 
-  const [{ data: profile }, { data: education }, { data: histories }] = userId && supabase
-    ? await Promise.all([
-        supabase.from("profiles").select("nickname, training_unlocked_at, marketing_consent").eq("id", userId).maybeSingle(),
-        supabase.from("education_profiles").select("highest_education, specialty").eq("user_id", userId).maybeSingle(),
-        supabase.from("score_history").select("score, answer_count, created_at").eq("user_id", userId).order("created_at", { ascending: false }).limit(10)
-      ])
-    : [{ data: null }, { data: null }, { data: null }];
+  let profile: { nickname: string | null } | null = null;
+  let education: EducationProfileRow | null = null;
+  let histories: ScoreHistoryRow[] | null = null;
+  let marketing: MarketingConsentRow | null = null;
+  let userBadges: UserBadgeRow[] | null = null;
+  let totalBadges = 0;
+  let trainingCount = 0;
+
+  if (userId && supabase) {
+    const serviceClient = createServiceRoleClient();
+    const [profileResult, educationResult, historiesResult, marketingResult, userBadgesResult, totalBadgesResult, trainingCountResult] = await Promise.all([
+      supabase.from("profiles").select("nickname").eq("id", userId).maybeSingle(),
+      supabase.from("education_profiles").select("highest_education, specialty").eq("user_id", userId).maybeSingle(),
+      supabase.from("score_history").select("score, answer_count, created_at").eq("user_id", userId).order("created_at", { ascending: false }).limit(10),
+      supabase.from("marketing_consents").select("consented, training_unlocked_at").eq("user_id", userId).maybeSingle(),
+      supabase.from("user_badges").select("awarded_at, badges(name)").eq("user_id", userId).order("awarded_at", { ascending: false }),
+      supabase.from("badges").select("id", { count: "exact", head: true }),
+      serviceClient
+        ? serviceClient.from("event_logs").select("id", { count: "exact", head: true }).eq("user_id", userId).eq("event_name", "training_answer")
+        : Promise.resolve({ count: 0 })
+    ]);
+
+    profile = profileResult.data;
+    education = educationResult.data as EducationProfileRow | null;
+    histories = historiesResult.data as ScoreHistoryRow[] | null;
+    marketing = marketingResult.data as MarketingConsentRow | null;
+    userBadges = userBadgesResult.data as UserBadgeRow[] | null;
+    totalBadges = totalBadgesResult.count || 0;
+    trainingCount = trainingCountResult.count || 0;
+  }
 
   const scoreHistory = ((histories || []) as ScoreHistoryRow[]).map((row) => ({
     date: new Date(row.created_at).toLocaleDateString("ja-JP", { month: "numeric", day: "numeric" }),
@@ -45,10 +78,16 @@ export default async function MyPage() {
   })).reverse();
   const latest = ((histories || []) as ScoreHistoryRow[])[0];
   const latestScore = latest ? Math.round(Number(latest.score)) : null;
-  const answerCount = latest ? Number(latest.answer_count) : 0;
   const educationRow = education as EducationProfileRow | null;
+  const marketingRow = marketing as MarketingConsentRow | null;
   const selectedEducation = new Set((educationRow?.highest_education || "").split(",").filter(Boolean));
   const nickname = profile?.nickname || (user?.data.user?.user_metadata?.nickname as string | undefined) || "ゲスト";
+  const badgeRows = (userBadges || []) as UserBadgeRow[];
+  const earnedBadgeNames = badgeRows
+    .map((row) => (Array.isArray(row.badges) ? row.badges[0]?.name : row.badges?.name))
+    .filter((name): name is string => !!name);
+  const badgeTotal = totalBadges;
+  const badgeEarned = earnedBadgeNames.length;
 
   return (
     <>
@@ -104,13 +143,35 @@ export default async function MyPage() {
               </p>
             )) : <p className="leading-8 text-[var(--color-ink-soft)]">保存済みの検定履歴はまだありません。</p>}
           </AppCard>
-          <AppCard><h2 className="mb-3 text-xl font-black">獲得バッジ</h2><div className="flex flex-wrap gap-3">{answerCount > 0 ? ["はじめの一歩", answerCount >= 50 ? "50問達成" : "挑戦中"].map((x) => <StatusBadge key={x} tone="yellow">{x}</StatusBadge>) : <p className="text-sm font-bold text-[var(--color-muted)]">結果保存後に表示されます。</p>}</div><ProgressBar value={Math.min(100, answerCount * 2)} label={`${Math.min(32, Math.floor(answerCount / 3))} / 32`} /></AppCard>
-          <AppCard><h2 className="mb-3 text-xl font-black">解放した称号</h2>{latestScore ? [rankTitle(latestScore)].map((x) => <p key={x} className="mb-2 rounded-xl bg-[var(--color-primary-50)] p-3 font-bold">{x}</p>) : <p className="leading-8 text-[var(--color-ink-soft)]">スコア保存後に称号が解放されます。</p>}</AppCard>
-          <AppCard><h2 className="mb-3 text-xl font-black">トレーニング進捗</h2><p className="text-4xl font-black text-[var(--color-primary-800)]">{Math.min(100, answerCount * 2)}%</p><ProgressBar value={Math.min(100, answerCount * 2)} /></AppCard>
-          <AppCard><h2 className="mb-3 text-xl font-black">メルマガ同意状況</h2><StatusBadge tone={profile?.marketing_consent ? "green" : "yellow"}>{profile?.marketing_consent ? "同意済み" : "未同意"}</StatusBadge><p className="mt-3 text-sm leading-7">同意状況は登録時の設定に基づきます。</p></AppCard>
-          <AppCard><h2 className="mb-3 text-xl font-black">トレーニング解放状況</h2><p className="text-4xl font-black text-[var(--color-primary-800)]">{profile?.training_unlocked_at ? "解放済み" : "未解放"}</p></AppCard>
+          <AppCard>
+            <h2 className="mb-3 text-xl font-black">獲得バッジ</h2>
+            <div className="flex flex-wrap gap-3">
+              {earnedBadgeNames.length ? earnedBadgeNames.map((name) => (
+                <StatusBadge key={name} tone="yellow">{name}</StatusBadge>
+              )) : <p className="text-sm font-bold text-[var(--color-muted)]">獲得済みバッジはまだありません。</p>}
+            </div>
+            {badgeTotal > 0 ? <ProgressBar value={badgeTotal ? (badgeEarned / badgeTotal) * 100 : 0} label={`${badgeEarned} / ${badgeTotal}`} /> : null}
+          </AppCard>
+          <AppCard>
+            <h2 className="mb-3 text-xl font-black">解放した称号</h2>
+            {latestScore ? [rankTitle(latestScore)].map((x) => <p key={x} className="mb-2 rounded-xl bg-[var(--color-primary-50)] p-3 font-bold">{x}</p>) : <p className="leading-8 text-[var(--color-ink-soft)]">スコア保存後に称号が解放されます。</p>}
+          </AppCard>
+          <AppCard>
+            <h2 className="mb-3 text-xl font-black">トレーニング進捗</h2>
+            <p className="text-4xl font-black text-[var(--color-primary-800)]">{trainingCount}問</p>
+            <p className="mt-2 text-sm font-bold text-[var(--color-muted)]">ログイン後に記録されたトレーニング回答数です。</p>
+          </AppCard>
+          <AppCard>
+            <h2 className="mb-3 text-xl font-black">メルマガ同意状況</h2>
+            <StatusBadge tone={marketingRow?.consented ? "green" : "yellow"}>{marketingRow?.consented ? "同意済み" : "未同意"}</StatusBadge>
+            <p className="mt-3 text-sm leading-7">同意状況は登録時の設定に基づきます。</p>
+          </AppCard>
+          <AppCard>
+            <h2 className="mb-3 text-xl font-black">トレーニング解放状況</h2>
+            <p className="text-4xl font-black text-[var(--color-primary-800)]">{marketingRow?.training_unlocked_at ? "解放済み" : "未解放"}</p>
+          </AppCard>
         </section>
-        <AppCard className="mt-6"><h2 className="mb-4 text-xl font-black">おすすめの次のアクション</h2><div className="grid gap-4 md:grid-cols-3"><AppButton href="/exam">腕試しを続ける</AppButton><AppButton href="/training" variant="secondary">苦手補強をする</AppButton><AppButton href="/ranking" variant="secondary"><Trophy />ランキングを見る</AppButton></div></AppCard>
+        <AppCard className="mt-6"><h2 className="mb-4 text-xl font-black">おすすめの次のアクション</h2><div className="grid gap-4 md:grid-cols-3"><AppButton href="/exam">腕試しを続ける</AppButton><AppButton href="/training" variant="secondary">トレーニングをする</AppButton><AppButton href="/ranking" variant="secondary"><Trophy />ランキングを見る</AppButton></div></AppCard>
       </main>
       <SiteFooter />
     </>
