@@ -6,6 +6,7 @@ import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/s
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const sessionId = searchParams.get("sessionId");
+  const anonymousSessionId = searchParams.get("anonymousSessionId");
   const bank = await getPublishedQuestions();
 
   const authClient = await createServerSupabaseClient();
@@ -16,9 +17,23 @@ export async function GET(request: Request) {
   }
 
   if (sessionId && !sessionId.startsWith("local-")) {
-    const answers = await loadSessionAnswersFromDb(readClient, sessionId, bank);
+    const { data: session } = await readClient
+      .from("exam_sessions")
+      .select("id, user_id, anonymous_session_id")
+      .eq("id", sessionId)
+      .maybeSingle();
+    const ownsSession =
+      !!session &&
+      ((userId && session.user_id === userId) ||
+        (!!anonymousSessionId && session.anonymous_session_id === anonymousSessionId));
+
+    if (!ownsSession) {
+      return NextResponse.json({ answers: [], source: "none" });
+    }
+
+    const answers = await loadSessionAnswersFromDb(readClient, session.id, bank);
     if (answers.length) {
-      return NextResponse.json({ answers, source: "database", sessionId });
+      return NextResponse.json({ answers, source: "database", sessionId: session.id });
     }
   }
 

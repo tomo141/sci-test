@@ -38,8 +38,8 @@ export default async function RankingPage({ searchParams }: Props) {
         <p className="mt-2 font-bold text-[var(--color-ink-soft)]">
           {activeDomain === "総合" ? "総合スコアのランキングです。" : `${activeDomain}分野のランキングです。`}
         </p>
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px]">
-          <section>
+        <div className="mt-6 grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
+          <section className="min-w-0">
             {rows.length ? (
               <>
                 <AppCard className="mb-6 grid gap-4 md:grid-cols-3 md:items-end">
@@ -51,8 +51,8 @@ export default async function RankingPage({ searchParams }: Props) {
                     </div>
                   ))}
                 </AppCard>
-                <AppCard className="overflow-x-auto">
-                  <table className="w-full min-w-[640px] border-collapse text-sm">
+                <AppCard className="min-w-0 overflow-x-auto">
+                  <table className="w-full min-w-[620px] border-collapse text-sm">
                     <thead>
                       <tr className="text-left text-[var(--color-muted)]">
                         {["順位", "ニックネーム", scoreLabel, "回答数", "称号"].map((h) => (

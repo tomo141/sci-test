@@ -1,0 +1,184 @@
+{
+  "scanned": 640,
+  "flagged": 5,
+  "findings": [
+    {
+      "id": "10000000-0000-4000-8004-000000000044",
+      "title": "物理 知識確認 レーザー",
+      "question_text": "レーザー発振に必要な条件の一つはどれ？",
+      "choices": [
+        "粒子数逆分布",
+        "熱平衡分布",
+        "ボルツマン分布",
+        "フェルミ分布"
+      ],
+      "correct_choice_index": 0,
+      "issues": [
+        {
+          "type": "cross_domain_salad",
+          "severity": "medium",
+          "detail": [
+            {
+              "index": 0,
+              "domains": [
+                "数学"
+              ],
+              "text": "粒子数逆分布"
+            },
+            {
+              "index": 1,
+              "domains": [
+                "化学"
+              ],
+              "text": "熱平衡分布"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10000000-0000-4000-8004-000000000151",
+      "title": "農学 知識確認 作物生理",
+      "question_text": "C3植物とC4植物の光合成経路の違いでC4植物の特徴はどれ？",
+      "choices": [
+        "メソフィルと束鞘細胞でCO2を濃縮",
+        "光反応を行わない",
+        "葉緑素をもたない",
+        "暗反応を行わない"
+      ],
+      "correct_choice_index": 0,
+      "issues": [
+        {
+          "type": "cross_domain_salad",
+          "severity": "medium",
+          "detail": [
+            {
+              "index": 0,
+              "domains": [
+                "生物"
+              ],
+              "text": "メソフィルと束鞘細胞でCO2を濃縮"
+            },
+            {
+              "index": 1,
+              "domains": [
+                "物理"
+              ],
+              "text": "光反応を行わない"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10000000-0000-4000-8005-000000000066",
+      "title": "地学 知識確認 気候科学",
+      "question_text": "気候感度（climate sensitivity）の定義として正しいのはどれ？",
+      "choices": [
+        "CO2濃度が2倍になったときの平衡気温上昇量",
+        "年間の平均降水量",
+        "大気中のオゾン濃度",
+        "海流の速度"
+      ],
+      "correct_choice_index": 0,
+      "issues": [
+        {
+          "type": "cross_domain_salad",
+          "severity": "medium",
+          "detail": [
+            {
+              "index": 0,
+              "domains": [
+                "化学"
+              ],
+              "text": "CO2濃度が2倍になったときの平衡気温上昇量"
+            },
+            {
+              "index": 2,
+              "domains": [
+                "地学"
+              ],
+              "text": "大気中のオゾン濃度"
+            },
+            {
+              "index": 3,
+              "domains": [
+                "物理"
+              ],
+              "text": "海流の速度"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10000000-0000-4000-8005-000000000093",
+      "title": "情報・計算機科学 知識確認 データベース",
+      "question_text": "B+ツリーの特徴として正しいのはどれ？",
+      "choices": [
+        "データは葉ノードにのみ格納され、葉は連結リストになる",
+        "内部ノードにもデータが格納される",
+        "平衡二分木でない",
+        "ハッシュ関数で構築される"
+      ],
+      "correct_choice_index": 0,
+      "issues": [
+        {
+          "type": "cross_domain_salad",
+          "severity": "medium",
+          "detail": [
+            {
+              "index": 2,
+              "domains": [
+                "化学"
+              ],
+              "text": "平衡二分木でない"
+            },
+            {
+              "index": 3,
+              "domains": [
+                "数学"
+              ],
+              "text": "ハッシュ関数で構築される"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10000000-0000-4000-8005-000000000172",
+      "title": "農学 知識確認 土壌学",
+      "question_text": "土壌の陽イオン交換容量（CEC）が高いと、土壌のどの性質が向上しやすい？",
+      "choices": [
+        "肥料保持力",
+        "透水性",
+        "酸性",
+        "塩類蓄積"
+      ],
+      "correct_choice_index": 0,
+      "issues": [
+        {
+          "type": "cross_domain_salad",
+          "severity": "medium",
+          "detail": [
+            {
+              "index": 0,
+              "domains": [
+                "物理",
+                "農学"
+              ],
+              "text": "肥料保持力"
+            },
+            {
+              "index": 2,
+              "domains": [
+                "化学"
+              ],
+              "text": "酸性"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

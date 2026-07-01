@@ -24,8 +24,8 @@ export function RankingDomainFilter({ active }: { active: FilterValue }) {
 
   const buttonClass = (value: FilterValue) =>
     value === active
-      ? "rounded-xl border border-[var(--color-primary-700)] bg-[var(--color-primary-50)] p-3 text-sm font-bold text-[var(--color-primary-800)]"
-      : "flex items-center gap-2 rounded-xl border border-[var(--color-border)] p-2 text-left text-xs font-bold hover:bg-[var(--color-primary-50)]";
+      ? "min-w-0 rounded-xl border border-[var(--color-primary-700)] bg-[var(--color-primary-50)] p-3 text-sm font-bold text-[var(--color-primary-800)]"
+      : "flex min-w-0 items-center gap-2 rounded-xl border border-[var(--color-border)] p-2 text-left text-xs font-bold hover:bg-[var(--color-primary-50)]";
 
   return (
     <AppCard>
@@ -37,7 +37,7 @@ export function RankingDomainFilter({ active }: { active: FilterValue }) {
         {domains.map((domain) => (
           <button key={domain} type="button" onClick={() => select(domain)} className={buttonClass(domain)}>
             <DomainIcon domain={domain} size="sm" />
-            <span>{domain}</span>
+            <span className="min-w-0 break-words">{domain}</span>
           </button>
         ))}
       </div>

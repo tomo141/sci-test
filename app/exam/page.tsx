@@ -11,7 +11,7 @@ import { ProgressBar } from "@/components/ui/ProgressBar";
 import { QuestionCard } from "@/components/exam/QuestionCard";
 import { useQuestionBank } from "@/components/exam/useQuestionBank";
 import type { Question } from "@/src/lib/data/questions";
-import { buildAnswerFeedback } from "@/src/lib/exam/explanation";
+import { buildAnswerFeedback, choiceLabel } from "@/src/lib/exam/explanation";
 import { estimateFromAnswers } from "@/src/lib/scoring/scoring";
 import { examConfig } from "@/src/lib/exam/config";
 import {
@@ -26,6 +26,36 @@ import {
 const QUESTIONS_PER_CYCLE = examConfig.questionsPerCycle;
 const ANSWER_SCROLL_DELAY_MS = 140;
 const ANSWER_SCROLL_DURATION_MS = 500;
+const ANSWERS_STORAGE_KEY = "sci-test-exam-answers";
+const SESSION_STORAGE_KEY = "sci-test-session-id";
+const ANONYMOUS_SESSION_STORAGE_KEY = "sci-test-anonymous-session-id";
+const ACTIVE_SESSION_STORAGE_KEY = "sci-test-active-exam-session";
+const ANSWER_SYNC_QUEUE_STORAGE_KEY = "sci-test-answer-sync-queue";
+
+type ActiveExamSession = {
+  sessionId: string | null;
+  anonymousSessionId: string;
+  sessionSeed: string;
+  answerCount: number;
+  updatedAt: string;
+};
+
+type AnswerSyncPayload = {
+  sessionId: string;
+  anonymousSessionId: string | null;
+  questionId: string;
+  selectedChoiceIndex: number;
+  responseTimeMs: number;
+  previousAnswers: ClientExamAnswer[];
+  examPlan: ExamPlan;
+};
+
+type QueuedAnswerSync = {
+  id: string;
+  payload: AnswerSyncPayload;
+  queuedAt: string;
+  attempts: number;
+};
 
 function easeInOutCubic(value: number) {
   return value < 0.5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
@@ -51,6 +81,69 @@ function scrollToElementTop(element: HTMLElement, durationMs: number) {
   }
 
   requestAnimationFrame(step);
+}
+
+function loadJson<T>(key: string, fallback: T): T {
+  try {
+    const stored = window.localStorage.getItem(key);
+    return stored ? (JSON.parse(stored) as T) : fallback;
+  } catch {
+    window.localStorage.removeItem(key);
+    return fallback;
+  }
+}
+
+function saveActiveSession(meta: ActiveExamSession) {
+  window.localStorage.setItem(ACTIVE_SESSION_STORAGE_KEY, JSON.stringify(meta));
+}
+
+function isSameActiveSession(meta: ActiveExamSession | null, sessionId: string | null, plan: ExamPlan) {
+  if (!meta) return true;
+  return meta.sessionSeed === plan.sessionSeed && (!sessionId || !meta.sessionId || meta.sessionId === sessionId);
+}
+
+async function postAnswerSync(payload: AnswerSyncPayload) {
+  const response = await fetch("/api/exam/answer", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  }).catch(() => null);
+  return response?.ok ? response : null;
+}
+
+function enqueueAnswerSync(payload: AnswerSyncPayload) {
+  const queue = loadJson<QueuedAnswerSync[]>(ANSWER_SYNC_QUEUE_STORAGE_KEY, []);
+  queue.push({
+    id: crypto.randomUUID(),
+    payload,
+    queuedAt: new Date().toISOString(),
+    attempts: 0
+  });
+  window.localStorage.setItem(ANSWER_SYNC_QUEUE_STORAGE_KEY, JSON.stringify(queue));
+}
+
+async function flushAnswerSyncQueue(sessionId: string | null, plan: ExamPlan) {
+  const queue = loadJson<QueuedAnswerSync[]>(ANSWER_SYNC_QUEUE_STORAGE_KEY, []);
+  if (!queue.length) return;
+
+  const remaining: QueuedAnswerSync[] = [];
+  for (const item of queue) {
+    if (item.payload.sessionId !== sessionId || item.payload.examPlan.sessionSeed !== plan.sessionSeed) {
+      remaining.push(item);
+      continue;
+    }
+
+    const response = await postAnswerSync(item.payload);
+    if (!response) {
+      remaining.push({ ...item, attempts: item.attempts + 1 });
+    }
+  }
+
+  if (remaining.length) {
+    window.localStorage.setItem(ANSWER_SYNC_QUEUE_STORAGE_KEY, JSON.stringify(remaining));
+  } else {
+    window.localStorage.removeItem(ANSWER_SYNC_QUEUE_STORAGE_KEY);
+  }
 }
 
 export default function ExamPage() {
@@ -92,6 +185,9 @@ export default function ExamPage() {
     const isCorrect = selected === shuffledQuestion.question.correctIndex;
     const originalIndex = shuffledQuestion.displayToOriginal[selected];
     const feedback = buildAnswerFeedback(currentQuestion, originalIndex, isCorrect);
+    if (feedback.selectedChoice) {
+      feedback.selectedChoice.label = choiceLabel(selected);
+    }
     if (serverExplanation) {
       return { ...feedback, conclusion: serverExplanation };
     }
@@ -111,34 +207,61 @@ export default function ExamPage() {
   useEffect(() => {
     if (!questionsLoaded || !questionBank.length) return;
 
-    const existingAnonymousId = window.localStorage.getItem("sci-test-anonymous-session-id") || crypto.randomUUID();
-    window.localStorage.setItem("sci-test-anonymous-session-id", existingAnonymousId);
+    const existingAnonymousId = window.localStorage.getItem(ANONYMOUS_SESSION_STORAGE_KEY) || crypto.randomUUID();
+    window.localStorage.setItem(ANONYMOUS_SESSION_STORAGE_KEY, existingAnonymousId);
     setAnonymousSessionId(existingAnonymousId);
 
     const plan = loadOrCreateExamPlan(window.localStorage.getItem(EXAM_PLAN_STORAGE_KEY));
     window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(plan));
     setExamPlan(plan);
 
-    const existingAnswers = window.localStorage.getItem("sci-test-exam-answers");
+    const activeSession = loadJson<ActiveExamSession | null>(ACTIVE_SESSION_STORAGE_KEY, null);
+    const activeSessionId = window.localStorage.getItem(SESSION_STORAGE_KEY);
+    const existingAnswers = window.localStorage.getItem(ANSWERS_STORAGE_KEY);
     const parsedAnswers = existingAnswers ? (JSON.parse(existingAnswers) as ClientExamAnswer[]) : [];
-    setAnswers(parsedAnswers);
-    setCurrentQuestion(nextQuestionForAnswers(parsedAnswers, plan, questionBank)?.question ?? null);
+    const localAnswers = isSameActiveSession(activeSession, activeSessionId, plan) ? parsedAnswers : [];
+    setAnswers(localAnswers);
+    setCurrentQuestion(nextQuestionForAnswers(localAnswers, plan, questionBank)?.question ?? null);
 
-    const activeSessionId = window.localStorage.getItem("sci-test-session-id");
-    void fetch(activeSessionId ? `/api/exam/session?sessionId=${encodeURIComponent(activeSessionId)}` : "/api/exam/session")
+    const params = new URLSearchParams();
+    if (activeSessionId) params.set("sessionId", activeSessionId);
+    if (existingAnonymousId) params.set("anonymousSessionId", existingAnonymousId);
+    void fetch(`/api/exam/session${params.toString() ? `?${params}` : ""}`)
       .then((response) => response.json())
       .then((data) => {
         if (!data?.answers?.length) return;
         const dbAnswers = data.answers as ClientExamAnswer[];
+        if (!isSameActiveSession(activeSession, data.sessionId || activeSessionId, plan)) return;
+        if (dbAnswers.length <= localAnswers.length) return;
         setAnswers(dbAnswers);
-        window.localStorage.setItem("sci-test-exam-answers", JSON.stringify(dbAnswers));
+        window.localStorage.setItem(ANSWERS_STORAGE_KEY, JSON.stringify(dbAnswers));
         if (data.sessionId) {
           setSessionId(data.sessionId);
-          window.localStorage.setItem("sci-test-session-id", data.sessionId);
+          window.localStorage.setItem(SESSION_STORAGE_KEY, data.sessionId);
         }
+        saveActiveSession({
+          sessionId: data.sessionId || activeSessionId,
+          anonymousSessionId: existingAnonymousId,
+          sessionSeed: plan.sessionSeed,
+          answerCount: dbAnswers.length,
+          updatedAt: new Date().toISOString()
+        });
         setCurrentQuestion(nextQuestionForAnswers(dbAnswers, plan, questionBank)?.question ?? null);
       })
       .catch(() => null);
+
+    if (activeSessionId && isSameActiveSession(activeSession, activeSessionId, plan)) {
+      setSessionId(activeSessionId);
+      saveActiveSession({
+        sessionId: activeSessionId,
+        anonymousSessionId: existingAnonymousId,
+        sessionSeed: plan.sessionSeed,
+        answerCount: localAnswers.length,
+        updatedAt: new Date().toISOString()
+      });
+      void flushAnswerSyncQueue(activeSessionId, plan);
+      return;
+    }
 
     fetch("/api/exam/start", {
       method: "POST",
@@ -148,14 +271,32 @@ export default function ExamPage() {
       .then((response) => response.json())
       .then((data) => {
         setSessionId(data.sessionId);
-        window.localStorage.setItem("sci-test-session-id", data.sessionId);
+        window.localStorage.setItem(SESSION_STORAGE_KEY, data.sessionId);
         setAnonymousSessionId(data.anonymousSessionId);
+        saveActiveSession({
+          sessionId: data.sessionId,
+          anonymousSessionId: data.anonymousSessionId,
+          sessionSeed: (data.examPlan || plan).sessionSeed,
+          answerCount: localAnswers.length,
+          updatedAt: new Date().toISOString()
+        });
         if (data.examPlan) {
           setExamPlan(data.examPlan);
           window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(data.examPlan));
         }
+        void flushAnswerSyncQueue(data.sessionId, data.examPlan || plan);
       })
-      .catch(() => setSessionId(`local-${existingAnonymousId}`));
+      .catch(() => {
+        const localSessionId = `local-${existingAnonymousId}`;
+        setSessionId(localSessionId);
+        saveActiveSession({
+          sessionId: localSessionId,
+          anonymousSessionId: existingAnonymousId,
+          sessionSeed: plan.sessionSeed,
+          answerCount: localAnswers.length,
+          updatedAt: new Date().toISOString()
+        });
+      });
   }, [questionBank, questionsLoaded]);
 
   const answer = async (choiceIndex?: number) => {
@@ -181,22 +322,31 @@ export default function ExamPage() {
     };
     const nextAnswers = [...answers, currentAnswer];
     setAnswers(nextAnswers);
-    window.localStorage.setItem("sci-test-exam-answers", JSON.stringify(nextAnswers));
+    window.localStorage.setItem(ANSWERS_STORAGE_KEY, JSON.stringify(nextAnswers));
 
     const activeSessionId = sessionId || `local-${anonymousSessionId || "preview"}`;
-    const response = await fetch("/api/exam/answer", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        sessionId: activeSessionId,
-        anonymousSessionId,
-        questionId: currentQuestion.id,
-        selectedChoiceIndex: originalChoiceIndex,
-        responseTimeMs: 0,
-        previousAnswers: answers,
-        examPlan
-      })
-    }).catch(() => null);
+    saveActiveSession({
+      sessionId: activeSessionId,
+      anonymousSessionId: anonymousSessionId || "",
+      sessionSeed: examPlan.sessionSeed,
+      answerCount: nextAnswers.length,
+      updatedAt: new Date().toISOString()
+    });
+    const syncPayload: AnswerSyncPayload = {
+      sessionId: activeSessionId,
+      anonymousSessionId,
+      questionId: currentQuestion.id,
+      selectedChoiceIndex: originalChoiceIndex,
+      responseTimeMs: 0,
+      previousAnswers: answers,
+      examPlan
+    };
+    const response = await postAnswerSync(syncPayload);
+    if (!response) {
+      enqueueAnswerSync(syncPayload);
+    } else {
+      void flushAnswerSyncQueue(activeSessionId, examPlan);
+    }
     const payload = response ? await response.json().catch(() => null) : null;
     setServerExplanation(payload?.shortExplanation || currentQuestion.shortExplanation);
   };
@@ -219,7 +369,8 @@ export default function ExamPage() {
     if (!window.confirm("回答履歴を消去して、最初からやり直しますか？")) return;
 
     const newPlan = createExamPlan();
-    window.localStorage.removeItem("sci-test-exam-answers");
+    window.localStorage.removeItem(ANSWERS_STORAGE_KEY);
+    window.localStorage.removeItem(ANSWER_SYNC_QUEUE_STORAGE_KEY);
     window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(newPlan));
 
     setAnswers([]);
@@ -232,7 +383,7 @@ export default function ExamPage() {
     setCurrentQuestion(nextQuestionForAnswers([], newPlan, questionBank)?.question ?? null);
 
     const anonymousId = anonymousSessionId || crypto.randomUUID();
-    window.localStorage.setItem("sci-test-anonymous-session-id", anonymousId);
+    window.localStorage.setItem(ANONYMOUS_SESSION_STORAGE_KEY, anonymousId);
 
     try {
       const response = await fetch("/api/exam/start", {
@@ -242,14 +393,29 @@ export default function ExamPage() {
       });
       const data = await response.json();
       setSessionId(data.sessionId);
-      window.localStorage.setItem("sci-test-session-id", data.sessionId);
+      window.localStorage.setItem(SESSION_STORAGE_KEY, data.sessionId);
+      saveActiveSession({
+        sessionId: data.sessionId,
+        anonymousSessionId: data.anonymousSessionId || anonymousId,
+        sessionSeed: (data.examPlan || newPlan).sessionSeed,
+        answerCount: 0,
+        updatedAt: new Date().toISOString()
+      });
       if (data.examPlan) {
         setExamPlan(data.examPlan);
         window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(data.examPlan));
         setCurrentQuestion(nextQuestionForAnswers([], data.examPlan, questionBank)?.question ?? null);
       }
     } catch {
-      setSessionId(`local-${anonymousId}`);
+      const localSessionId = `local-${anonymousId}`;
+      setSessionId(localSessionId);
+      saveActiveSession({
+        sessionId: localSessionId,
+        anonymousSessionId: anonymousId,
+        sessionSeed: newPlan.sessionSeed,
+        answerCount: 0,
+        updatedAt: new Date().toISOString()
+      });
     }
   };
 

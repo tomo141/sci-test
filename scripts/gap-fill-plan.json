@@ -1,0 +1,402 @@
+[
+  {
+    "domain": "人文社会科学",
+    "level": 100,
+    "need": 2
+  },
+  {
+    "domain": "人文社会科学",
+    "level": 200,
+    "need": 1
+  },
+  {
+    "domain": "人文社会科学",
+    "level": 250,
+    "need": 3
+  },
+  {
+    "domain": "人文社会科学",
+    "level": 350,
+    "need": 2
+  },
+  {
+    "domain": "人文社会科学",
+    "level": 450,
+    "need": 3
+  },
+  {
+    "domain": "人文社会科学",
+    "level": 750,
+    "need": 2
+  },
+  {
+    "domain": "人文社会科学",
+    "level": 800,
+    "need": 3
+  },
+  {
+    "domain": "人文社会科学",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "化学",
+    "level": 100,
+    "need": 3
+  },
+  {
+    "domain": "化学",
+    "level": 200,
+    "need": 3
+  },
+  {
+    "domain": "化学",
+    "level": 450,
+    "need": 2
+  },
+  {
+    "domain": "化学",
+    "level": 550,
+    "need": 3
+  },
+  {
+    "domain": "化学",
+    "level": 700,
+    "need": 2
+  },
+  {
+    "domain": "化学",
+    "level": 750,
+    "need": 3
+  },
+  {
+    "domain": "化学",
+    "level": 800,
+    "need": 2
+  },
+  {
+    "domain": "化学",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "医歯薬学",
+    "level": 100,
+    "need": 2
+  },
+  {
+    "domain": "医歯薬学",
+    "level": 200,
+    "need": 1
+  },
+  {
+    "domain": "医歯薬学",
+    "level": 450,
+    "need": 3
+  },
+  {
+    "domain": "医歯薬学",
+    "level": 500,
+    "need": 1
+  },
+  {
+    "domain": "医歯薬学",
+    "level": 550,
+    "need": 2
+  },
+  {
+    "domain": "医歯薬学",
+    "level": 800,
+    "need": 3
+  },
+  {
+    "domain": "医歯薬学",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "地学",
+    "level": 100,
+    "need": 3
+  },
+  {
+    "domain": "地学",
+    "level": 350,
+    "need": 1
+  },
+  {
+    "domain": "地学",
+    "level": 500,
+    "need": 2
+  },
+  {
+    "domain": "地学",
+    "level": 750,
+    "need": 1
+  },
+  {
+    "domain": "地学",
+    "level": 800,
+    "need": 2
+  },
+  {
+    "domain": "地学",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "工学",
+    "level": 100,
+    "need": 3
+  },
+  {
+    "domain": "工学",
+    "level": 250,
+    "need": 1
+  },
+  {
+    "domain": "工学",
+    "level": 350,
+    "need": 1
+  },
+  {
+    "domain": "工学",
+    "level": 450,
+    "need": 3
+  },
+  {
+    "domain": "工学",
+    "level": 500,
+    "need": 1
+  },
+  {
+    "domain": "工学",
+    "level": 550,
+    "need": 1
+  },
+  {
+    "domain": "工学",
+    "level": 750,
+    "need": 1
+  },
+  {
+    "domain": "工学",
+    "level": 800,
+    "need": 1
+  },
+  {
+    "domain": "工学",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 100,
+    "need": 2
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 250,
+    "need": 1
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 400,
+    "need": 2
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 450,
+    "need": 2
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 500,
+    "need": 1
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 750,
+    "need": 1
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 800,
+    "need": 3
+  },
+  {
+    "domain": "情報・計算機科学",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "数学",
+    "level": 100,
+    "need": 3
+  },
+  {
+    "domain": "数学",
+    "level": 200,
+    "need": 2
+  },
+  {
+    "domain": "数学",
+    "level": 450,
+    "need": 1
+  },
+  {
+    "domain": "数学",
+    "level": 500,
+    "need": 1
+  },
+  {
+    "domain": "数学",
+    "level": 550,
+    "need": 3
+  },
+  {
+    "domain": "数学",
+    "level": 650,
+    "need": 2
+  },
+  {
+    "domain": "数学",
+    "level": 750,
+    "need": 3
+  },
+  {
+    "domain": "数学",
+    "level": 900,
+    "need": 1
+  },
+  {
+    "domain": "物理",
+    "level": 100,
+    "need": 3
+  },
+  {
+    "domain": "物理",
+    "level": 200,
+    "need": 3
+  },
+  {
+    "domain": "物理",
+    "level": 250,
+    "need": 3
+  },
+  {
+    "domain": "物理",
+    "level": 550,
+    "need": 3
+  },
+  {
+    "domain": "物理",
+    "level": 650,
+    "need": 3
+  },
+  {
+    "domain": "物理",
+    "level": 750,
+    "need": 3
+  },
+  {
+    "domain": "物理",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "生物",
+    "level": 100,
+    "need": 3
+  },
+  {
+    "domain": "生物",
+    "level": 200,
+    "need": 1
+  },
+  {
+    "domain": "生物",
+    "level": 250,
+    "need": 3
+  },
+  {
+    "domain": "生物",
+    "level": 450,
+    "need": 2
+  },
+  {
+    "domain": "生物",
+    "level": 500,
+    "need": 1
+  },
+  {
+    "domain": "生物",
+    "level": 550,
+    "need": 3
+  },
+  {
+    "domain": "生物",
+    "level": 650,
+    "need": 2
+  },
+  {
+    "domain": "生物",
+    "level": 750,
+    "need": 3
+  },
+  {
+    "domain": "生物",
+    "level": 800,
+    "need": 3
+  },
+  {
+    "domain": "生物",
+    "level": 900,
+    "need": 3
+  },
+  {
+    "domain": "農学",
+    "level": 100,
+    "need": 3
+  },
+  {
+    "domain": "農学",
+    "level": 250,
+    "need": 3
+  },
+  {
+    "domain": "農学",
+    "level": 400,
+    "need": 1
+  },
+  {
+    "domain": "農学",
+    "level": 450,
+    "need": 1
+  },
+  {
+    "domain": "農学",
+    "level": 500,
+    "need": 1
+  },
+  {
+    "domain": "農学",
+    "level": 700,
+    "need": 1
+  },
+  {
+    "domain": "農学",
+    "level": 750,
+    "need": 1
+  },
+  {
+    "domain": "農学",
+    "level": 800,
+    "need": 3
+  },
+  {
+    "domain": "農学",
+    "level": 900,
+    "need": 3
+  }
+]

@@ -13,7 +13,7 @@ import {
 } from "@/src/lib/scoring";
 import { getCoverageSlot } from "@/src/lib/scoring/coverage";
 import { persistProficiencyEstimates } from "@/src/lib/exam/persistEstimates";
-import { createServiceRoleClient } from "@/src/lib/supabase/server";
+import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import type { AnswerRecord } from "@/src/lib/scoring/types";
 
 const examPlanSchema = z.object({
@@ -76,11 +76,21 @@ export async function POST(request: Request) {
 
   const supabase = createServiceRoleClient();
   if (supabase && !parsed.data.sessionId.startsWith("local-")) {
+    const authClient = await createServerSupabaseClient();
+    const userId = (await authClient?.auth.getUser())?.data.user?.id ?? null;
     const { data: sessionRow } = await supabase
       .from("exam_sessions")
-      .select("user_id")
+      .select("user_id, anonymous_session_id")
       .eq("id", parsed.data.sessionId)
       .maybeSingle();
+    const ownsSession =
+      !!sessionRow &&
+      ((userId && sessionRow.user_id === userId) ||
+        (!!parsed.data.anonymousSessionId && sessionRow.anonymous_session_id === parsed.data.anonymousSessionId));
+
+    if (!ownsSession) {
+      return NextResponse.json({ error: "session not found" }, { status: 403 });
+    }
 
     await supabase.from("exam_answers").insert({
       session_id: parsed.data.sessionId,

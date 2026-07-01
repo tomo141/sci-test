@@ -1,0 +1,1763 @@
+[
+  {
+    "domain": "人文社会科学",
+    "target_level": 100,
+    "subdomain": "政治学",
+    "question_text": "国のルールを決めるために人々が集まって話し合う場所を何という？",
+    "choices": [
+      "国会",
+      "裁判所",
+      "銀行",
+      "病院"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「国会」です。国会は法律を作る国の機関です。",
+    "detailed_explanation": "国会は国民の代表者が集まり、法律を制定する立法機関です。この問題は用語・定義を正確に取り出せるかを確認します。国会：法律を作る。裁判所：争いを裁く。",
+    "learning_objective": "政治学の基礎用語を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "国会と裁判所の役割を混同する",
+    "distractor_rationales": [
+      "正解。国会は法律を制定する立法機関です。",
+      "不正解。裁判所は司法（裁判）を担う機関です。",
+      "不正解。銀行は金融機関です。",
+      "不正解。病院は医療の場です。"
+    ],
+    "basic_terms": "国会：立法。裁判所：司法。",
+    "tags": [
+      "人文社会科学",
+      "政治学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 100
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 100,
+    "subdomain": "地理",
+    "question_text": "日本の首都はどこ？",
+    "choices": [
+      "東京",
+      "大阪",
+      "京都",
+      "名古屋"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「東京」です。東京は日本の首都です。",
+    "detailed_explanation": "東京は日本の政治・経済の中心地であり、首都として機能しています。京都はかつての首都（平安京）ですが、現在の首都は東京です。",
+    "learning_objective": "地理の基礎知識を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "京都を現在の首都と思い込む",
+    "distractor_rationales": [
+      "正解。東京は日本の首都です。",
+      "不正解。大阪は西日本の大都市ですが首都ではありません。",
+      "不正解。京都は旧都です。",
+      "不正解。名古屋は中部地方の都市です。"
+    ],
+    "basic_terms": "首都：国の政治の中心都市。",
+    "tags": [
+      "人文社会科学",
+      "地理",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 100
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 200,
+    "subdomain": "社会学",
+    "question_text": "人々が互いに影響し合いながら暮らす集団全体を何という？",
+    "choices": [
+      "社会",
+      "個人",
+      "自然",
+      "宇宙"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「社会」です。社会は人々の相互関係の集まりです。",
+    "detailed_explanation": "社会学では、個人が孤立して存在するのではなく、規範・制度・文化を通じて結ばれた「社会」の中で生活すると考えます。",
+    "learning_objective": "社会学の基本概念を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "社会を単なる人の集まりとだけ理解する",
+    "distractor_rationales": [
+      "正解。社会は相互関係を持つ人々の集団です。",
+      "不正解。個人は社会を構成する要素の一つです。",
+      "不正解。自然は社会の対象外の領域です。",
+      "不正解。宇宙は社会学的対象ではありません。"
+    ],
+    "basic_terms": "社会：相互関係を持つ人々の集団。",
+    "tags": [
+      "人文社会科学",
+      "社会学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 200
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 250,
+    "subdomain": "経済学",
+    "question_text": "GDPの「G」が表す英語はどれ？",
+    "choices": [
+      "Gross",
+      "Great",
+      "Global",
+      "General"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「Gross」です。GDPはGross Domestic Product（国内総生産）の略です。",
+    "detailed_explanation": "Grossは「総」の意。Domesticは「国内の」、Productは「生産」。国内で生産された付加価値の総額を指します。",
+    "learning_objective": "経済学の基本用語を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "GDPの略語の意味をGlobalなどと混同する",
+    "distractor_rationales": [
+      "正解。Grossは「総」を意味します。",
+      "不正解。Greatは「偉大な」の意で略語のGではありません。",
+      "不正解。Globalは「全球的」の意です。",
+      "不正解。Generalは「一般的な」の意です。"
+    ],
+    "basic_terms": "GDP：Gross Domestic Product（国内総生産）。",
+    "tags": [
+      "人文社会科学",
+      "経済学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 250
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 250,
+    "subdomain": "政治学",
+    "question_text": "三権分立で、法律の解釈と裁判を行う権力を何という？",
+    "choices": [
+      "司法",
+      "立法",
+      "行政",
+      "監査"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「司法」です。司法は裁判所が担う権力です。",
+    "detailed_explanation": "三権分立は立法（国会）、行政（内閣）、司法（裁判所）に分かれます。司法は法律に基づき争いを裁く権力です。",
+    "learning_objective": "政治学の三権分立を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "立法・行政・司法の役割を混同する",
+    "distractor_rationales": [
+      "正解。司法は裁判所が担う権力です。",
+      "不正解。立法は法律を作る権力（国会）です。",
+      "不正解。行政は法律を執行する権力（政府）です。",
+      "不正解。監査は三権分立の権力ではありません。"
+    ],
+    "basic_terms": "立法：法律制定。行政：執行。司法：裁判。",
+    "tags": [
+      "人文社会科学",
+      "政治学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 250
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 250,
+    "subdomain": "歴史",
+    "question_text": "1868年に始まった日本の近代化改革を何という？",
+    "choices": [
+      "明治維新",
+      "大化の改新",
+      "鎖国",
+      "関ヶ原の戦い"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「明治維新」です。1868年に始まった政治・社会改革です。",
+    "detailed_explanation": "明治維新は江戸幕府の終焉後、新政府が近代国家建設を進めた改革です。大化の改新は7世紀、鎖国は江戸時代の対外政策です。",
+    "learning_objective": "日本史の重要用語を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "明治維新と大化の改新を混同する",
+    "distractor_rationales": [
+      "正解。明治維新は1868年に始まった改革です。",
+      "不正解。大化の改新は645年頃の改革です。",
+      "不正解。鎖国は対外政策であり改革名ではありません。",
+      "不正解。関ヶ原の戦いは1600年の合戦です。"
+    ],
+    "basic_terms": "明治維新：1868年の近代化改革。",
+    "tags": [
+      "人文社会科学",
+      "歴史",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 250
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 350,
+    "subdomain": "経済学",
+    "question_text": "他の財の消費量が一定のとき、ある財を1単位増やすことで得られる効用の増分を何という？",
+    "choices": [
+      "限界効用",
+      "平均効用",
+      "総効用",
+      "代替効用"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「限界効用」です。追加1単位の消費による効用の増分です。",
+    "detailed_explanation": "限界効用逓減の法則は、消費量が増えるほど限界効用が減少することを示します。ミクロ経済学の基礎概念です。",
+    "learning_objective": "ミクロ経済学の基礎用語を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "限界効用と総効用を混同する",
+    "distractor_rationales": [
+      "正解。限界効用は追加1単位の効用増分です。",
+      "不正解。平均効用は総効用を消費量で割った値です。",
+      "不正解。総効用は消費全体から得られる効用の合計です。",
+      "不正解。代替効用はこの文脈の標準用語ではありません。"
+    ],
+    "basic_terms": "限界効用：追加1単位の効用増分。限界効用逓減：増分が減る法則。",
+    "tags": [
+      "人文社会科学",
+      "経済学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 350
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 350,
+    "subdomain": "心理学",
+    "question_text": "ピアジェの認知発達理論で、7〜11歳頃に現れる段階を何という？",
+    "choices": [
+      "具体的操作期",
+      "感覚運動期",
+      "前操作期",
+      "形式的操作期"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「具体的操作期」です。論理的思考が具体的対象に向けられる段階です。",
+    "detailed_explanation": "感覚運動期（0-2歳）、前操作期（2-7歳）、具体的操作期（7-11歳）、形式的操作期（11歳以降）の4段階があります。",
+    "learning_objective": "発達心理学の段階名を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "ピアジェの各段階の年齢と名称を混同する",
+    "distractor_rationales": [
+      "正解。具体的操作期は7〜11歳頃の段階です。",
+      "不正解。感覚運動期は0〜2歳の段階です。",
+      "不正解。前操作期は2〜7歳の段階です。",
+      "不正解。形式的操作期は11歳以降の段階です。"
+    ],
+    "basic_terms": "具体的操作期：論理が具体物に向く段階（ピアジェ）。",
+    "tags": [
+      "人文社会科学",
+      "心理学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 350
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 450,
+    "subdomain": "経済学",
+    "question_text": "各国が比較優位を持つ財の生産・交換に特化すれば全体の利益が増すという理論を提唱した経済学者は誰？",
+    "choices": [
+      "リカード",
+      "ケインズ",
+      "マルクス",
+      "シュンペーター"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「リカード」です。比較優位論の提唱者です。",
+    "detailed_explanation": "リカードは絶対優位ではなく比較優位に基づく貿易の利益を示しました。ケインズは有効需要、マルクスは資本論、シュンペーターはイノベーション論で知られます。",
+    "learning_objective": "経済学史の重要人物と理論を結びつけられる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "比較優位論をアダム・スミスの絶対優位と混同する",
+    "distractor_rationales": [
+      "正解。リカードが比較優位論を提唱しました。",
+      "不正解。ケインズはマクロ経済学の総需要理論で知られます。",
+      "不正解。マルクスは資本主義批判の思想家です。",
+      "不正解。シュンペーターは創造的破壊を論じました。"
+    ],
+    "basic_terms": "比較優位：相対的に得意な分野への特化（リカード）。",
+    "tags": [
+      "人文社会科学",
+      "経済学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 450
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 450,
+    "subdomain": "哲学",
+    "question_text": "カントの倫理学で、結果ではなく動機の普遍性に基づく命令を何という？",
+    "choices": [
+      "定言命法",
+      "仮言命法",
+      "功利原理",
+      "黄金律"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「定言命法」です。無条件に従うべき道徳法則です。",
+    "detailed_explanation": "定言命法は「〜しなければならない」という無条件の命令。仮言命法は目的達成のための手段的命令です。",
+    "learning_objective": "倫理学の基本概念を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "定言命法と仮言命法を混同する",
+    "distractor_rationales": [
+      "正解。定言命法は無条件の道徳命令です。",
+      "不正解。仮言命法は目的のための条件付き命令です。",
+      "不正解。功利原理はベンサムの思想です。",
+      "不正解。黄金律は「自分にしてほしいことを人にも」という原則です。"
+    ],
+    "basic_terms": "定言命法：無条件の道徳命令（カント）。",
+    "tags": [
+      "人文社会科学",
+      "哲学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 450
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 450,
+    "subdomain": "心理学",
+    "question_text": "フロイトの精神分析で、本能的衝動や欲望を司る部分を何という？",
+    "choices": [
+      "エス（イド）",
+      "自我（エゴ）",
+      "超自我（スーパーエゴ）",
+      "自我理想"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「エス（イド）」です。快楽原理に従う本能的部分です。",
+    "detailed_explanation": "エスは無意識の衝動、自我は現実原理、超自我は道徳・良心を司ります。精神構造の三層モデルです。",
+    "learning_objective": "精神分析の構造概念を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "エス・自我・超自我の役割を混同する",
+    "distractor_rationales": [
+      "正解。エスは本能的衝動を司る部分です。",
+      "不正解。自我は現実と衝動の調停を担います。",
+      "不正解。超自我は道徳・良心の部分です。",
+      "不正解。自我理想は超自我の構成要素です。"
+    ],
+    "basic_terms": "エス：本能・快楽原理。自我：現実原理。超自我：道徳。",
+    "tags": [
+      "人文社会科学",
+      "心理学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 450
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 750,
+    "subdomain": "社会学",
+    "question_text": "ブルデューが、教養・趣味・言語能力などを社会的不平等の源泉と捉えた概念はどれ？",
+    "choices": [
+      "文化資本",
+      "社会資本",
+      "シンボリック資本",
+      "人的資本"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「文化資本」です。文化的資源が階層再生産に寄与すると論じました。",
+    "detailed_explanation": "ブルデューは経済資本に加え、文化資本・社会資本・シンボリック資本を区別します。文化資本は言語・教養・趣味などの文化的蓄積です。",
+    "learning_objective": "ブルデューの資本論を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "ブルデューの各種資本の定義を混同する",
+    "distractor_rationales": [
+      "正解。文化資本は教養・趣味などの文化的蓄積です。",
+      "不正解。社会資本は人的ネットワーク・関係性の資源です。",
+      "不正解。シンボリック資本は正当性・威信の資源です。",
+      "不正解。人的資本は経済学の概念（技能・教育投資）です。"
+    ],
+    "basic_terms": "文化資本：教養・趣味などの文化的蓄積（ブルデュー）。",
+    "tags": [
+      "人文社会科学",
+      "社会学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 750
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 750,
+    "subdomain": "哲学",
+    "question_text": "ロウズが正義の原理を導くために用いた、無知の状態を何という？",
+    "choices": [
+      "無知のヴェール",
+      "自然状態",
+      "透明性の条件",
+      "理想言語"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「無知のヴェール」です。自分の立場を知らない状態で正義を考える思考実験です。",
+    "detailed_explanation": "ロウズの『正義論』では、無知のヴェールの背後で選択される正義の原理が公平であると論じられます。",
+    "learning_objective": "政治哲学の重要概念を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "ロウズとホッブズの自然状態を混同する",
+    "distractor_rationales": [
+      "正解。無知のヴェールはロウズの思考実験です。",
+      "不正解。自然状態はホッブズ・ロックなどの概念です。",
+      "不正解。透明性の条件はロウズの用語ではありません。",
+      "不正解。理想言語は分析哲学の概念です。"
+    ],
+    "basic_terms": "無知のヴェール：自己の立場を知らない仮定（ロウズ）。",
+    "tags": [
+      "人文社会科学",
+      "哲学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 750
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 800,
+    "subdomain": "哲学",
+    "question_text": "ハンナ・アーレントが公共性を論じる際に重視した、人々が顔を見合って語り合う領域を何という？",
+    "choices": [
+      "公の領域",
+      "私の領域",
+      "労働の領域",
+      "制作の領域"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「公の領域」です。政治的行為が展開される公共空間です。",
+    "detailed_explanation": "アーレントは『人間の条件』で労働・制作・行為を区別し、行為（政治的行為）が公の領域で展開されると論じました。",
+    "learning_objective": "アーレントの政治理論用語を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "公の領域と私の領域の区別を単純化する",
+    "distractor_rationales": [
+      "正解。公の領域は政治的行為の場です。",
+      "不正解。私の領域は家庭内の生活領域です。",
+      "不正解。労働の領域は生物学的必要の充足です。",
+      "不正解。制作の領域はものづくりの活動です。"
+    ],
+    "basic_terms": "公の領域：政治的行為が展開する公共空間（アーレント）。",
+    "tags": [
+      "人文社会科学",
+      "哲学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 800,
+    "subdomain": "社会学",
+    "question_text": "ギルマンソンが正義の概念を「分配の正義」と「手続きの正義」に分けたうち、公正な手続きそのものを指すのはどれ？",
+    "choices": [
+      "手続き的公正",
+      "分配的公正",
+      "報応的公正",
+      "関係的公正"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「手続き的公正」です。決定過程の公正さを指します。",
+    "detailed_explanation": "分配的公正は結果の配分の公正さ、手続き的公正は意思決定過程の公正さを問います。組織心理学・正義研究の基礎区分です。",
+    "learning_objective": "正義の類型を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "分配的公正と手続き的公正を混同する",
+    "distractor_rationales": [
+      "正解。手続き的公正は過程の公正さです。",
+      "不正解。分配的公正は結果の配分の公正さです。",
+      "不正解。報応的公正は行為と結果の対応の公正さです。",
+      "不正解。関係的公正は対人関係における公正さです。"
+    ],
+    "basic_terms": "手続き的公正：決定過程の公正さ。分配的公正：結果配分の公正さ。",
+    "tags": [
+      "人文社会科学",
+      "社会学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 800,
+    "subdomain": "哲学",
+    "question_text": "ハーバーマスが近代社会の病理を克服する手段として重視した、対話による理性の形式を何という？",
+    "choices": [
+      "コミュニケーション的行為",
+      "道具的行為",
+      "戦略的行為",
+      "規範的行為"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「コミュニケーション的行為」です。相互理解を目指す対話的行為です。",
+    "detailed_explanation": "ハーバーマスはシステム（道具・戦略的行為）とライフワールド（コミュニケーション的行為）を区別し、後者の公共性を重視しました。",
+    "learning_objective": "ハーバーマスの行為理論を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "コミュニケーション的行為と道具的行為を混同する",
+    "distractor_rationales": [
+      "正解。コミュニケーション的行為は相互理解を目指す対話です。",
+      "不正解。道具的行為は目的達成のための手段的行為です。",
+      "不正解。戦略的行為は他者を操作する行為です。",
+      "不正解。規範的行為はハーバーマスの標準用語ではありません。"
+    ],
+    "basic_terms": "コミュニケーション的行為：相互理解を目指す対話（ハーバーマス）。",
+    "tags": [
+      "人文社会科学",
+      "哲学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 900,
+    "subdomain": "哲学",
+    "question_text": "デリダが意味が他の記号への参照の連鎖によって無限に遅延・差異化することを何という？",
+    "choices": [
+      "差延",
+      "脱構築",
+      "テクスト",
+      "補綴的論理"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「差延」です。意味の遅延と差異化の過程です。",
+    "detailed_explanation": "差延（différance）はデリダが造語した概念で、意味が固定されず他の記号へと延びていくことを示します。脱構築はその方法論です。",
+    "learning_objective": "デリダの記号論用語を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "差延と脱構築を同義とみなす",
+    "distractor_rationales": [
+      "正解。差延は意味の遅延と差異化の過程です。",
+      "不正解。脱構築は意味の固定性を問う方法論です。",
+      "不正解。テクストは記号の織物という比喩です。",
+      "不正解。補綴的論理はラカンの精神分析の概念です。"
+    ],
+    "basic_terms": "差延：意味の遅延と差異化（デリダ）。",
+    "tags": [
+      "人文社会科学",
+      "哲学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 900,
+    "subdomain": "社会学",
+    "question_text": "フォーコーが監視のメタファーとして用いた、中心から全体を見渡せる円形建築を何という？",
+    "choices": [
+      "パノプティコン",
+      "ヘテロトピア",
+      "ディシプリン",
+      "バイオパワー"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「パノプティコン」です。ベンサムが設計した円形監獄のモデルです。",
+    "detailed_explanation": "フォーコーは『監獄の誕生』でパノプティコンを近代規律社会のメタファーとしました。ディシプリンは規律、バイオパワーは生命政治の概念です。",
+    "learning_objective": "フォーコーの権力論用語を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "パノプティコンとディシプリンを同義とする",
+    "distractor_rationales": [
+      "正解。パノプティコンは監視の円形建築モデルです。",
+      "不正解。ヘテロトピアは異質空間の概念です。",
+      "不正解。ディシプリンは身体を規律する権力技術です。",
+      "不正解。バイオパワーは人口・生命を管理する権力です。"
+    ],
+    "basic_terms": "パノプティコン：監視の円形建築メタファー（フォーコー）。",
+    "tags": [
+      "人文社会科学",
+      "社会学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "人文社会科学",
+    "target_level": 900,
+    "subdomain": "心理学",
+    "question_text": "ラカンの精神分析で、鏡像を通じて自己像を形成する幼児期の段階を何という？",
+    "choices": [
+      "ミラー段階",
+      "オイディプス期",
+      "前ミラー段階",
+      "象徴界"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「ミラー段階」です。6〜18か月頃の自己認識の形成段階です。",
+    "detailed_explanation": "ラカンはミラー段階で幼児が鏡像を通じて統一的自己像を獲得すると論じました。オイディプス期はその後の発達段階です。",
+    "learning_objective": "ラカンの発達概念を選択肢から正確に選べる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "ラカンのミラー段階とフロイトの発達段階を混同する",
+    "distractor_rationales": [
+      "正解。ミラー段階は鏡像による自己像形成の段階です。",
+      "不正解。オイディプス期はミラー段階の後の発達段階です。",
+      "不正解。前ミラー段階はミラー段階以前の段階です。",
+      "不正解。象徴界は言語・法の秩序を指す概念です。"
+    ],
+    "basic_terms": "ミラー段階：鏡像による自己像形成（ラカン）。",
+    "tags": [
+      "人文社会科学",
+      "心理学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "化学",
+    "target_level": 100,
+    "subdomain": "物質名",
+    "question_text": "水の化学式はどれ？",
+    "choices": [
+      "H2O",
+      "CO2",
+      "O2",
+      "NaCl"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「H2O」です。水は水素2個と酸素1個からなります。",
+    "detailed_explanation": "水はH2Oという化学式で表されます。CO2は二酸化炭素、O2は酸素、NaClは食塩です。",
+    "learning_objective": "身近な物質の化学式を選択肢から正確に選べる",
+    "common_misconception": "水と酸素の化学式を混同する",
+    "distractor_rationales": [
+      "正解。H2Oは水の化学式です。",
+      "不正解。CO2は二酸化炭素です。",
+      "不正解。O2は酸素分子です。",
+      "不正解。NaClは塩化ナトリウム（食塩）です。"
+    ],
+    "basic_terms": "H2O：水。",
+    "tags": [
+      "化学",
+      "物質名",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 100
+  },
+  {
+    "domain": "化学",
+    "target_level": 100,
+    "subdomain": "物質名",
+    "question_text": "私たちが呼吸するのに必要な気体の化学式はどれ？",
+    "choices": [
+      "O2",
+      "N2",
+      "CO2",
+      "H2"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「O2」です。酸素は呼吸に必要な気体です。",
+    "detailed_explanation": "酸素（O2）は呼吸によって体内に取り入れられます。N2は空気の約78%を占める窒素、CO2は呼気に含まれます。",
+    "learning_objective": "呼吸に関わる気体の化学式を選べる",
+    "common_misconception": "空気中の窒素と酸素の役割を混同する",
+    "distractor_rationales": [
+      "正解。O2は呼吸に必要な酸素です。",
+      "不正解。N2は主に不活性な窒素です。",
+      "不正解。CO2は呼吸の産物として排出されます。",
+      "不正解。H2は水素で通常の呼吸には不要です。"
+    ],
+    "basic_terms": "O2：酸素分子。",
+    "tags": [
+      "化学",
+      "物質名",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 100
+  },
+  {
+    "domain": "化学",
+    "target_level": 100,
+    "subdomain": "物質名",
+    "question_text": "食卓の塩の主成分を何という？",
+    "choices": [
+      "塩化ナトリウム",
+      "炭酸水素ナトリウム",
+      "塩化カルシウム",
+      "硫酸ナトリウム"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「塩化ナトリウム」です。食塩の化学名です。",
+    "detailed_explanation": "食塩はNaCl（塩化ナトリウム）です。炭酸水素ナトリウムは重曹、硫酸ナトリウムは芒硝の成分です。",
+    "learning_objective": "身近な物質の化学名を選択肢から正確に選べる",
+    "common_misconception": "食塩と重曹の化学名を混同する",
+    "distractor_rationales": [
+      "正解。塩化ナトリウムは食塩の成分です。",
+      "不正解。炭酸水素ナトリウムは重曹です。",
+      "不正解。塩化カルシウムは別の塩類です。",
+      "不正解。硫酸ナトリウムは芒硝の成分です。"
+    ],
+    "basic_terms": "塩化ナトリウム（NaCl）：食塩。",
+    "tags": [
+      "化学",
+      "物質名",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 100
+  },
+  {
+    "domain": "化学",
+    "target_level": 200,
+    "subdomain": "原子",
+    "question_text": "原子の中心にある、陽子と中性子からなる部分を何という？",
+    "choices": [
+      "原子核",
+      "電子殻",
+      "イオン",
+      "分子"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「原子核」です。原子の中心部にあります。",
+    "detailed_explanation": "原子は原子核（陽子・中性子）とそれを取り巻く電子からなります。イオンは電荷を帯びた原子・分子です。",
+    "learning_objective": "原子構造の基本用語を選択肢から正確に選べる",
+    "common_misconception": "原子核と電子殻の位置を混同する",
+    "distractor_rationales": [
+      "正解。原子核は原子の中心部です。",
+      "不正解。電子殻は原子核の外側にあります。",
+      "不正解。イオンは電荷を帯びた粒子です。",
+      "不正解。分子は原子の結合体です。"
+    ],
+    "basic_terms": "原子核：陽子と中性子の集まり。",
+    "tags": [
+      "化学",
+      "原子",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 200
+  },
+  {
+    "domain": "化学",
+    "target_level": 200,
+    "subdomain": "酸塩基",
+    "question_text": "水溶液中で水素イオン（H⁺）を放出する物質を何という？",
+    "choices": [
+      "酸",
+      "塩基",
+      "塩",
+      "中性物質"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「酸」です。アレニウスの酸の定義です。",
+    "detailed_explanation": "アレニウス定義では酸はH⁺を、塩基はOH⁻を水溶液中で放出する物質です。酸と塩基が中和すると塩と水ができます。",
+    "learning_objective": "酸塩基の基本定義を選択肢から正確に選べる",
+    "common_misconception": "酸と塩基のイオンを混同する",
+    "distractor_rationales": [
+      "正解。酸はH⁺を放出する物質です。",
+      "不正解。塩基はOH⁻を放出する物質です。",
+      "不正解。塩は酸と塩基の中和生成物です。",
+      "不正解。中性物質は酸・塩基性を示しません。"
+    ],
+    "basic_terms": "酸：H⁺放出。塩基：OH⁻放出（アレニウス定義）。",
+    "tags": [
+      "化学",
+      "酸塩基",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 200
+  },
+  {
+    "domain": "化学",
+    "target_level": 200,
+    "subdomain": "物質量",
+    "question_text": "物質の量のSI単位はどれ？",
+    "choices": [
+      "mol",
+      "g",
+      "L",
+      "Pa"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「mol」です。モルは物質量の単位です。",
+    "detailed_explanation": "mol（モル）は物質量の単位。gは質量、Lは体積、Paは圧力の単位です。6.02×10²³個の粒子を1 molとします。",
+    "learning_objective": "化学量の基本単位を選択肢から正確に選べる",
+    "common_misconception": "molとg（質量）を混同する",
+    "distractor_rationales": [
+      "正解。molは物質量のSI単位です。",
+      "不正解。gは質量の単位です。",
+      "不正解。Lは体積の単位です。",
+      "不正解。Paは圧力の単位です。"
+    ],
+    "basic_terms": "mol：物質量の単位。",
+    "tags": [
+      "化学",
+      "物質量",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 200
+  },
+  {
+    "domain": "化学",
+    "target_level": 450,
+    "subdomain": "酸塩基",
+    "question_text": "電子対を受け取る物質をルイスの定義では何という？",
+    "choices": [
+      "ルイス酸",
+      "ルイス塩基",
+      "ブレンステッド酸",
+      "配位子"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「ルイス酸」です。電子対受容体です。",
+    "detailed_explanation": "ルイス酸は電子対を受け取り、ルイス塩基は電子対を供与します。ブレンステッド酸はH⁺供与体です。",
+    "learning_objective": "ルイス酸塩基の定義を選択肢から正確に選べる",
+    "common_misconception": "ルイス酸とブレンステッド酸を混同する",
+    "distractor_rationales": [
+      "正解。ルイス酸は電子対受容体です。",
+      "不正解。ルイス塩基は電子対供与体です。",
+      "不正解。ブレンステッド酸はH⁺供与体です。",
+      "不正解。配位子は金属に配位する分子です。"
+    ],
+    "basic_terms": "ルイス酸：電子対受容体。ルイス塩基：電子対供与体。",
+    "tags": [
+      "化学",
+      "酸塩基",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "difficulty_initial": 400,
+    "calibration_note": "ルイス酸塩基は高校化学範囲で共通テスト受験者基準",
+    "cognitive_type": "用語・定義"
+  },
+  {
+    "domain": "化学",
+    "target_level": 450,
+    "subdomain": "結合",
+    "question_text": "分子軌道が完全に占拠された状態で、反結合性軌道が空のときの結合を何という？",
+    "choices": [
+      "単結合",
+      "二重結合",
+      "三重結合",
+      "配位結合"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「単結合」です。σ結合1本の状態です。",
+    "detailed_explanation": "単結合はσ結合1本、二重結合はσ+π1本、三重結合はσ+π2本で構成されます。分子軌道論の基礎です。",
+    "learning_objective": "結合の種類と分子軌道の関係を選べる",
+    "common_misconception": "σ結合とπ結合の数を混同する",
+    "distractor_rationales": [
+      "正解。単結合はσ結合1本です。",
+      "不正解。二重結合はσ+π結合です。",
+      "不正解。三重結合はσ+π2本です。",
+      "不正解。配位結合は一方からの電子対供与です。"
+    ],
+    "basic_terms": "単結合：σ1。二重結合：σ+π1。三重結合：σ+π2。",
+    "tags": [
+      "化学",
+      "結合",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 450
+  },
+  {
+    "domain": "化学",
+    "target_level": 550,
+    "subdomain": "有機化学",
+    "question_text": "スピン禁制（スピン選択則）が関係するのは主にどの遷移？",
+    "choices": [
+      "三重項状態間の遷移",
+      "一重項→三重項の遷移",
+      "一重項→一重項の遷移",
+      "振動遷移"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「三重項状態間の遷移」です。スピン禁制により遷移が極めて遅くなります。",
+    "detailed_explanation": "スピン選択則によりΔS≠0の遷移（一重項↔三重項）は禁制されます。蛍光は一重項間、リン光は三重項→一重項の遷移です。",
+    "learning_objective": "スピン選択則と電子遷移の関係を選べる",
+    "common_misconception": "蛍光とリン光のスピン状態を混同する",
+    "distractor_rationales": [
+      "正解。三重項間遷移はスピン禁制により遅いです。",
+      "不正解。一重項→三重項はスピン禁制遷移です。",
+      "不正解。一重項→一重項はスピン許容遷移（蛍光）です。",
+      "不正解。振動遷移はスピンとは別の選択則です。"
+    ],
+    "basic_terms": "スピン禁制：ΔS≠0の遷移は極めて遅い。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 550
+  },
+  {
+    "domain": "化学",
+    "target_level": 550,
+    "subdomain": "物理化学",
+    "question_text": "反応速度定数と温度の関係を示す経験式を何という？",
+    "choices": [
+      "アレニウス式",
+      "ラウールの法則",
+      "ヘンの法則",
+      "ファラデーの法則"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「アレニウス式」です。k = A exp(-Ea/RT)で表されます。",
+    "detailed_explanation": "アレニウス式は活性化エネルギーEaと温度Tの関係を示します。ラウールの法則は蒸気圧、ヘンの法則は溶解度に関する法則です。",
+    "learning_objective": "物理化学の基本法則名を選択肢から正確に選べる",
+    "common_misconception": "アレニウス式とファラデーの法則を混同する",
+    "distractor_rationales": [
+      "正解。アレニウス式は反応速度と温度の関係です。",
+      "不正解。ラウールの法則は蒸気圧降下です。",
+      "不正解。ヘンの法則は気体の溶解度です。",
+      "不正解。ファラデーの法則は電気分解量です。"
+    ],
+    "basic_terms": "アレニウス式：k=Aexp(-Ea/RT)。",
+    "tags": [
+      "化学",
+      "物理化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 550
+  },
+  {
+    "domain": "化学",
+    "target_level": 550,
+    "subdomain": "有機化学",
+    "question_text": "芳香族化合物の置換反応性に対し、置換基の電子供与・吸引効果を定量化した定数を何という？",
+    "choices": [
+      "ハンメットσ定数",
+      "テーラー定数",
+      "ウッドワード-Hoffmann定則",
+      "ハモンドの仮説"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「ハンメットσ定数」です。置換基の電子効果を表します。",
+    "detailed_explanation": "ハンメット方程式 log(k/k₀) = ρσ で反応性と置換基効果を相関させます。テーラー定数は立体電子効果、ハモンドの仮説は遷移状態の構造に関するものです。",
+    "learning_objective": "有機反応性の定量化用語を選択肢から正確に選べる",
+    "common_misconception": "ハンメットσと反応定数ρを混同する",
+    "distractor_rationales": [
+      "正解。ハンメットσ定数は置換基の電子効果です。",
+      "不正解。テーラー定数は立体電子効果の定数です。",
+      "不正解。ウッドワード-Hoffmann定則は周辺性に関する法則です。",
+      "不正解。ハモンドの仮説は遷移状態の構造に関するものです。"
+    ],
+    "basic_terms": "ハンメットσ：置換基の電子効果。ρ：反応の電荷変化感受性。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 550
+  },
+  {
+    "domain": "化学",
+    "target_level": 700,
+    "subdomain": "有機化学",
+    "question_text": "共役円環系の周辺性反応を予測する理論を提唱したのは誰？",
+    "choices": [
+      "WoodwardとHoffmann",
+      "FischerとTropsch",
+      "GrignardとBarbier",
+      "DielsとAlder"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「WoodwardとHoffmann」です。分子軌道対称性に基づく法則です。",
+    "detailed_explanation": "Woodward-Hoffmann法則は周辺性反応の許容性を軌道対称性で予測します。Diels-Alderは具体的反応名、Grignardは試薬です。",
+    "learning_objective": "有機化学の重要理論と提唱者を結びつけられる",
+    "common_misconception": "Diels-Alder反応とWoodward-Hoffmann法則を混同する",
+    "distractor_rationales": [
+      "正解。WoodwardとHoffmannが周辺性法則を提唱しました。",
+      "不正解。Fischer-Tropschは合成反応です。",
+      "不正解。Grignard-Barbierは有機金属化学です。",
+      "不正解。Diels-Alderは[4+2]環化付加反応です。"
+    ],
+    "basic_terms": "Woodward-Hoffmann法則：軌道対称性による周辺性予測。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 700
+  },
+  {
+    "domain": "化学",
+    "target_level": 700,
+    "subdomain": "有機化学",
+    "question_text": "反応性と選択性を決める際、反応物と生成物の分子軌道のうち、主に相互作用する軌道を何という？",
+    "choices": [
+      "フロンティア軌道",
+      "コア軌道",
+      "反結合軌道のみ",
+      "非結合軌道のみ"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「フロンティア軌道」です。HOMOとLUMOの総称です。",
+    "detailed_explanation": "フロンティア分子軌道理論（FMO理論）では、最高被占軌道（HOMO）と最低空軌道（LUMO）の相互作用が反応性を支配するとされます。",
+    "learning_objective": "FMO理論の基本概念を選択肢から正確に選べる",
+    "common_misconception": "HOMOとLUMOの役割を混同する",
+    "distractor_rationales": [
+      "正解。フロンティア軌道はHOMOとLUMOです。",
+      "不正解。コア軌道は内殻電子の軌道で反応性に直接関与しにくいです。",
+      "不正解。反結合軌道のみではなく被占・空軌道双方が重要です。",
+      "不正解。非結合軌道は補助的役割にとどまります。"
+    ],
+    "basic_terms": "フロンティア軌道：HOMO（最高被占）とLUMO（最低空）。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 700
+  },
+  {
+    "domain": "化学",
+    "target_level": 750,
+    "subdomain": "物理化学",
+    "question_text": "電子移動反応の速度論を記述し、マーカス領域と逆マーカス領域を区別する理論はどれ？",
+    "choices": [
+      "マーカス理論",
+      "アレニウス理論",
+      "遷移状態理論",
+      "ランベルト・ベールの法則"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「マーカス理論」です。外球電子移動の速度論を記述します。",
+    "detailed_explanation": "マーカス理論は反応自由エネルギー変化ΔG°と活性化自由エネルギーの関係を示し、逆マーカス領域では逆転領域が現れます。",
+    "learning_objective": "電子移動反応の速度論理論を選択肢から正確に選べる",
+    "common_misconception": "マーカス理論とアレニウス式を混同する",
+    "distractor_rationales": [
+      "正解。マーカス理論は電子移動反応の速度論です。",
+      "不正解。アレニウス理論は温度依存性の経験式です。",
+      "不正解。遷移状態理論は一般的速度論の枠組みです。",
+      "不正解。ランベルト・ベールの法則は吸光度に関する法則です。"
+    ],
+    "basic_terms": "マーカス理論：電子移動反応の自由エネルギー関係。",
+    "tags": [
+      "化学",
+      "物理化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 750
+  },
+  {
+    "domain": "化学",
+    "target_level": 750,
+    "subdomain": "有機化学",
+    "question_text": "反応中間体の構造が反応物か生成物のどちらに近いかを示す仮説を何という？",
+    "choices": [
+      "ハモンドの仮説",
+      "カーチューフの法則",
+      "ル・シャトリエの原理",
+      "ハンメット方程式"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「ハモンドの仮説」です。エキソ・エンドオ熱的反応で遷移状態の構造を予測します。",
+    "detailed_explanation": "ハモンドの仮説は不安定な中間体の遷移状態は反応物に、安定な中間体の遷移状態は生成物に似ると述べます。",
+    "learning_objective": "有機反応機構の予測原理を選択肢から正確に選べる",
+    "common_misconception": "ハモンドの仮説とハンメット方程式を混同する",
+    "distractor_rationales": [
+      "正解。ハモンドの仮説は遷移状態の構造を予測します。",
+      "不正解。カーチューフの法則は炭素の四結合です。",
+      "不正解。ル・シャトリエの原理は平衡移動です。",
+      "不正解。ハンメット方程式は反応性の定量化です。"
+    ],
+    "basic_terms": "ハモンドの仮説：遷移状態は不安定中間体なら反応物に似る。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 750
+  },
+  {
+    "domain": "化学",
+    "target_level": 750,
+    "subdomain": "有機化学",
+    "question_text": "互変異性体間の平衡が速く、生成物比率が平衡支配のとき、反応速度は何で決まる？",
+    "choices": [
+      "Curtin-Hammett原理",
+      "ハモンドの仮説",
+      "ウッドワード-Hoffmann法則",
+      "マーカス理論"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「Curtin-Hammett原理」です。平衡にない異性体の反応性差が速度を決めます。",
+    "detailed_explanation": "Curtin-Hammett原理は、速い平衡の下でより反応性の高い（通常は平衡に乏しい）異性体が生成物を支配すると述べます。",
+    "learning_objective": "立体選択性の原理を選択肢から正確に選べる",
+    "common_misconception": "Curtin-Hammettとハモンドの仮説を混同する",
+    "distractor_rationales": [
+      "正解。Curtin-Hammett原理は平衡支配の立体選択です。",
+      "不正解。ハモンドの仮説は遷移状態の構造に関します。",
+      "不正解。ウッドワード-Hoffmann法則は周辺性です。",
+      "不正解。マーカス理論は電子移動反応です。"
+    ],
+    "basic_terms": "Curtin-Hammett原理：速平衡下の反応性支配選択。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 750
+  },
+  {
+    "domain": "化学",
+    "target_level": 800,
+    "subdomain": "有機化学",
+    "question_text": "アルデヒドと活性メチレン化合物の付加反応で知られる、三級アミン触媒による反応を何という？",
+    "choices": [
+      "Morita-Baylis-Hillman反応",
+      "Aldol反応",
+      "Wittig反応",
+      "Suzuki coupling"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「Morita-Baylis-Hillman反応」です。MBH反応とも呼ばれます。",
+    "detailed_explanation": "MBH反応はアルデヒド（またはケトン）と活性オレフィンの三級アミン触媒付加です。Aldolはエンテート付加、Wittigはオレフィン化です。",
+    "learning_objective": "有機合成の命名反応を選択肢から正確に選べる",
+    "common_misconception": "MBH反応とAldol反応を混同する",
+    "distractor_rationales": [
+      "正解。MBH反応は三級アミン触媒の付加反応です。",
+      "不正解。Aldol反応はカルボニル化合物の付加です。",
+      "不正解。Wittig反応はホスホリウム塩によるオレフィン化です。",
+      "不正解。Suzuki couplingはパラジウム触媒の結合反応です。"
+    ],
+    "basic_terms": "MBH反応：三級アミン触媒のアルデヒド-オレフィン付加。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "化学",
+    "target_level": 800,
+    "subdomain": "有機化学",
+    "question_text": "オレフィンメタセシス反応の触媒として広く使われるルテニウム錯体を開発した化学者は誰？",
+    "choices": [
+      "Grubbs",
+      "Sharpless",
+      "Noyori",
+      "Knowles"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「Grubbs」です。Grubbs触媒で知られ、ノーベル化学賞を受賞しました。",
+    "detailed_explanation": "Grubbsはオレフィンメタセシス触媒を開発。Sharplessは不对称酸化、Noyori/Knowlesは不对称水素化で知られます。",
+    "learning_objective": "有機合成化学の重要研究者と業績を結びつけられる",
+    "common_misconception": "メタセシス触媒と水素化触媒の開発者を混同する",
+    "distractor_rationales": [
+      "正解。Grubbsはオレフィンメタセシス触媒を開発しました。",
+      "不正解。Sharplessは不对称エポキシ化等で知られます。",
+      "不正解。Noyoriは不对称水素化触媒です。",
+      "不正解。Knowlesは不对称水素化の先駆者です。"
+    ],
+    "basic_terms": "Grubbs触媒：ルテニウム系オレフィンメタセシス触媒。",
+    "tags": [
+      "化学",
+      "有機化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "化学",
+    "target_level": 900,
+    "subdomain": "理論化学",
+    "question_text": "密度汎関数理論（DFT）で、多電子系の基底状態エネルギーを電子密度の汎関数として記述する方程式を何という？",
+    "choices": [
+      "Kohn-Sham方程式",
+      "シュレーディンガー方程式",
+      "ハートリー・フォック方程式",
+      "トーマス・フェルミ方程式"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「Kohn-Sham方程式」です。DFTの計算基盤です。",
+    "detailed_explanation": "Kohn-Sham方程式は実在しない参照系の1電子軌道を用いて電子密度を再現します。HFは波動関数、TFは古典的近似です。",
+    "learning_objective": "計算化学の基礎方程式を選択肢から正確に選べる",
+    "common_misconception": "Kohn-Sham方程式とシュレーディンガー方程式を同一視する",
+    "distractor_rationales": [
+      "正解。Kohn-Sham方程式はDFTの基礎です。",
+      "不正解。シュレーディンガー方程式は多電子波動関数の基礎方程式です。",
+      "不正解。HF方程式は平均場近似です。",
+      "不正解。トーマス・フェルミ方程式は古典的電子密度近似です。"
+    ],
+    "basic_terms": "Kohn-Sham方程式：DFTの1電子軌道方程式。",
+    "tags": [
+      "化学",
+      "理論化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "化学",
+    "target_level": 900,
+    "subdomain": "物理化学",
+    "question_text": "自己交換反応の速度定数と交差反応の速度定数の関係を記述する式を何という？",
+    "choices": [
+      "マーカス交差式",
+      "アレニウス式",
+      "アイリング方程式",
+      "エアリング式"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「マーカス交差式」です。電子移動反応の交差反応速度を予測します。",
+    "detailed_explanation": "マーカス交差式は2つの還元種・酸化種の標準電位差から交差反応の速度定数を推定します。自己交換反応はマーカス理論の基準です。",
+    "learning_objective": "電子移動反応の交差関係式を選択肢から正確に選べる",
+    "common_misconception": "マーカス交差式とアレニウス式を混同する",
+    "distractor_rationales": [
+      "正解。マーカス交差式は交差反応速度の予測式です。",
+      "不正解。アレニウス式は温度依存性です。",
+      "不正解。アイリング方程式は速度定数の温度依存です。",
+      "不正解。エアリング式は活性化パラメータの温度依存です。"
+    ],
+    "basic_terms": "マーカス交差式：電子移動交差反応の速度予測。",
+    "tags": [
+      "化学",
+      "物理化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "化学",
+    "target_level": 900,
+    "subdomain": "物理化学",
+    "question_text": "溶媒中の分子の安定化エネルギーを溶媒の誘電率と溶質の双極子モーメントから記述する理論を何という？",
+    "choices": [
+      "反応場理論",
+      "マーカス理論",
+      "フロンティア軌道理論",
+      "リンドマン機構"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「反応場理論」です。溶媒効果を連続媒質近似で記述します。",
+    "detailed_explanation": "反応場（Reaction Field）理論は、溶質周囲の溶媒分極が溶質のエネルギーを安定化する効果を記述します。Onsager式などが知られます。",
+    "learning_objective": "溶媒効果理論の名称を選択肢から正確に選べる",
+    "common_misconception": "反応場理論とマーカス理論（電子移動）を混同する",
+    "distractor_rationales": [
+      "正解。反応場理論は溶媒分極による安定化を記述します。",
+      "不正解。マーカス理論は電子移動反応の速度論です。",
+      "不正解。フロンティア軌道理論は反応性の分子軌道理論です。",
+      "不正解。リンドマン機構はイオン対の再結合機構です。"
+    ],
+    "basic_terms": "反応場理論：溶媒分極による溶質安定化。",
+    "tags": [
+      "化学",
+      "物理化学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 100,
+    "subdomain": "人体",
+    "question_text": "体中に血液を送り出すポンプの役割をする臓器はどれ？",
+    "choices": [
+      "心臓",
+      "肺",
+      "胃",
+      "肝臓"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「心臓」です。血液を全身に送り出す臓器です。",
+    "detailed_explanation": "心臓は筋肉の収縮により血液を送り出します。肺は呼吸、胃は消化、肝臓は代謝の中心臓器です。",
+    "learning_objective": "人体の主要臓器の役割を選択肢から正確に選べる",
+    "common_misconception": "心臓と肺の役割を混同する",
+    "distractor_rationales": [
+      "正解。心臓は血液を送り出すポンプです。",
+      "不正解。肺はガス交換を行います。",
+      "不正解。胃は食物を消化します。",
+      "不正解。肝臓は代謝の中心です。"
+    ],
+    "basic_terms": "心臓：血液を送り出す。肺：呼吸。",
+    "tags": [
+      "医歯薬学",
+      "人体",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 100
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 100,
+    "subdomain": "歯学",
+    "question_text": "歯みがきで防ぐことができる歯の病気を何という？",
+    "choices": [
+      "虫歯",
+      "骨折",
+      "貧血",
+      "感冒"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「虫歯」です。歯のう蝕（むし歯）です。",
+    "detailed_explanation": "虫歯は口腔内の細菌が糖を分解して酸を作り、歯を溶かす病気です。毎日の歯みがきで予防できます。",
+    "learning_objective": "歯科保健の基礎用語を選択肢から正確に選べる",
+    "common_misconception": "虫歯と歯周病を同一視する",
+    "distractor_rationales": [
+      "正解。虫歯は歯みがきで防げる歯の病気です。",
+      "不正解。骨折は骨の損傷です。",
+      "不正解。貧血は血液の病気です。",
+      "不正解。感冒は風邪のことです。"
+    ],
+    "basic_terms": "虫歯（う蝕）：歯の脱灰・破壊。",
+    "tags": [
+      "医歯薬学",
+      "歯学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 100
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 200,
+    "subdomain": "人体",
+    "question_text": "血液中の酸素を運ぶ赤いタンパク質を何という？",
+    "choices": [
+      "ヘモグロビン",
+      "インスリン",
+      "アミラーゼ",
+      "コラーゲン"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「ヘモグロビン」です。赤血球内の酸素運搬タンパク質です。",
+    "detailed_explanation": "ヘモグロビンは鉄（ヘム）を含み、肺で酸素を結合し組織へ運びます。インスリンは血糖調節ホルモンです。",
+    "learning_objective": "血液成分の基礎用語を選択肢から正確に選べる",
+    "common_misconception": "ヘモグロビンとヘモグロビン以外の血漿タンパク質を混同する",
+    "distractor_rationales": [
+      "正解。ヘモグロビンは酸素運搬タンパク質です。",
+      "不正解。インスリンは血糖調節ホルモンです。",
+      "不正解。アミラーゼは消化酵素です。",
+      "不正解。コラーゲンは結合組織タンパク質です。"
+    ],
+    "basic_terms": "ヘモグロビン：赤血球内の酸素運搬タンパク質。",
+    "tags": [
+      "医歯薬学",
+      "人体",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 200
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 450,
+    "subdomain": "免疫",
+    "question_text": "抗原に特異的に結合し、体液性免疫の主要な効果分子を何という？",
+    "choices": [
+      "抗体",
+      "抗原提示細胞",
+      "T細胞",
+      "マクロファージ"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「抗体」です。B細胞由来の免疫グロブリンです。",
+    "detailed_explanation": "抗体（免疫グロブリン）はB細胞が産生し、抗原に特異的に結合します。T細胞は細胞性免疫、マクロファージは貪食細胞です。",
+    "learning_objective": "免疫系の主要構成要素を選択肢から正確に選べる",
+    "common_misconception": "抗体と抗原を混同する",
+    "distractor_rationales": [
+      "正解。抗体は抗原に特異的に結合するタンパク質です。",
+      "不正解。抗原提示細胞は抗原を提示する細胞です。",
+      "不正解。T細胞は細胞性免疫を担います。",
+      "不正解。マクロファージは貪食を行う細胞です。"
+    ],
+    "basic_terms": "抗体：抗原特異的免疫グロブリン。",
+    "tags": [
+      "医歯薬学",
+      "免疫",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 450
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 450,
+    "subdomain": "人体",
+    "question_text": "心拍数や血圧の調節を行う脳幹の部位はどれ？",
+    "choices": [
+      "延髄",
+      "大脳皮質",
+      "小脳",
+      "視床"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「延髄」です。自律神経の中枢として心拍・呼吸を調節します。",
+    "detailed_explanation": "延髄は脳幹の最下部にあり、心拍中枢・呼吸中枢を含みます。大脳皮質は高次機能、小脳は運動調整を担います。",
+    "learning_objective": "神経系の解剖と機能を選択肢から正確に選べる",
+    "common_misconception": "延髄と視床の機能を混同する",
+    "distractor_rationales": [
+      "正解。延髄は心拍・呼吸の調節中枢です。",
+      "不正解。大脳皮質は思考・知覚の中枢です。",
+      "不正解。小脳は運動の調整を行います。",
+      "不正解。視床は感覚情報の中継です。"
+    ],
+    "basic_terms": "延髄：心拍・呼吸中枢を含む脳幹下部。",
+    "tags": [
+      "医歯薬学",
+      "人体",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 450
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 450,
+    "subdomain": "薬学",
+    "question_text": "アスピリン（アセチルサリチル酸）の主な作用機序はどれ？",
+    "choices": [
+      "シクロオキシゲナーゼ（COX）阻害",
+      "ACE阻害",
+      "HMG-CoA還元酵素阻害",
+      "プロトンポンプ阻害"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「COX阻害」です。プロスタグランジン合成を抑制し解熱・鎮痛・抗炎症作用を示します。",
+    "detailed_explanation": "アスピリンはCOX-1/COX-2を不可逆的にアセチル化し、プロスタグランジン生成を阻害します。ACE阻害は血圧降下、HMG-CoA阻害はコレステロール合成抑制です。",
+    "learning_objective": "主要薬剤の作用機序を選択肢から正確に選べる",
+    "common_misconception": "解熱鎮痛薬と降圧薬の作用機序を混同する",
+    "distractor_rationales": [
+      "正解。アスピリンはCOXを阻害します。",
+      "不正解。ACE阻害はアンジオテンシン変換酵素阻害です。",
+      "不正解。HMG-CoA還元酵素阻害はスタチンの作用です。",
+      "不正解。PPI阻害は胃酸分泌抑制です。"
+    ],
+    "basic_terms": "COX：プロスタグランジン合成酵素。",
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 450
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 500,
+    "subdomain": "人体",
+    "question_text": "腎臓で血液を濾過し、原尿を作る構造はどれ？",
+    "choices": [
+      "糸球体",
+      "近位尿細管",
+      "ヘンレのループ",
+      "集合管"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「糸球体」です。毛細血管の塊で血液を濾過します。",
+    "detailed_explanation": "糸球体で濾過→近位尿細管で再吸収→ヘンレのループで濃縮→集合管で最終調節、という腎単位の流れがあります。",
+    "learning_objective": "腎臓の構造と機能を選択肢から正確に選べる",
+    "common_misconception": "糸球体濾過と尿細管再吸収の部位を混同する",
+    "distractor_rationales": [
+      "正解。糸球体は血液濾過の場です。",
+      "不正解。近位尿細管は再吸収を行います。",
+      "不正解。ヘンレのループは尿濃縮に関与します。",
+      "不正解。集合管は最終的な水・電解質調節です。"
+    ],
+    "basic_terms": "糸球体：腎臓の濾過構造。",
+    "tags": [
+      "医歯薬学",
+      "人体",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 500
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 550,
+    "subdomain": "薬学",
+    "question_text": "ヘパリンの主な抗凝固作用機序はどれ？",
+    "choices": [
+      "アンチトロンビンIIIの活性化促進",
+      "ビタミンK拮抗",
+      "トロンビン直接阻害",
+      "血小板凝集阻害"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「アンチトロンビンIIIの活性化促進」です。トロンビンやXa因子を阻害します。",
+    "detailed_explanation": "ヘパリンはATIIIと結合し、その阻害活性を数千倍に増強します。ワルファリンはビタミンK拮抗、ダビガトランはトロンビン直接阻害です。",
+    "learning_objective": "抗凝固薬の作用機序を選択肢から正確に選べる",
+    "common_misconception": "ヘパリンとワルファリンの作用機序を混同する",
+    "distractor_rationales": [
+      "正解。ヘパリンはATIII活性化を促進します。",
+      "不正解。ビタミンK拮抗はワルファリンの作用です。",
+      "不正解。トロンビン直接阻害はダビガトラン等です。",
+      "不正解。血小板凝集阻害はアスピリン等です。"
+    ],
+    "basic_terms": "ヘパリン：ATIII活性化促進による抗凝固。",
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 550
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 550,
+    "subdomain": "人体",
+    "question_text": "交感神経の終末で放出され、心拍数増加や気管支拡張を引き起こす神経伝達物質はどれ？",
+    "choices": [
+      "ノルアドレナリン",
+      "アセチルコリン",
+      "セロトニン",
+      "GABA"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「ノルアドレナリン」です。交感神経の主要な伝達物質です。",
+    "detailed_explanation": "交感神経はノルアドレナリン（一部アドレナリン）を放出し、闘争・逃走反応を促します。副交感神経はアセチルコリンを放出します。",
+    "learning_objective": "自律神経の伝達物質を選択肢から正確に選べる",
+    "common_misconception": "交感神経と副交感神経の伝達物質を混同する",
+    "distractor_rationales": [
+      "正解。交感神経終末ではノルアドレナリンが放出されます。",
+      "不正解。アセチルコリンは副交感神経の伝達物質です。",
+      "不正解。セロトニンは中枢神経の伝達物質です。",
+      "不正解。GABAは抑制性伝達物質です。"
+    ],
+    "basic_terms": "交感神経：ノルアドレナリン。副交感神経：アセチルコリン。",
+    "tags": [
+      "医歯薬学",
+      "人体",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 550
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 800,
+    "subdomain": "薬学",
+    "question_text": "ワルファリンの抗凝固作用の主な機序はどれ？",
+    "choices": [
+      "ビタミンK環化還元酵素阻害",
+      "直接トロンビン阻害",
+      "Xa因子直接阻害",
+      "血小板GP IIb/IIIa阻害"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「ビタミンK環化還元酵素阻害」です。ビタミンK依存性凝固因子のγ-カルボキシ化を阻害します。",
+    "detailed_explanation": "ワルファリンはビタミンKの再利用を阻害し、II・VII・IX・X因子の活性化を低下させます。直接トロンビン阻害はダビガトラン、Xa直接阻害はリバーロキサバン等です。",
+    "learning_objective": "経口抗凝固薬の詳細な作用機序を選択肢から正確に選べる",
+    "common_misconception": "ワルファリンと直接トロンビン阻害薬を混同する",
+    "distractor_rationales": [
+      "正解。ワルファリンはビタミンK代謝を阻害します。",
+      "不正解。直接トロンビン阻害はDOACの一種です。",
+      "不正解。Xa直接阻害はリバーロキサバン等です。",
+      "不正解。GP IIb/IIIa阻害は抗血小板薬です。"
+    ],
+    "basic_terms": "ワルファリン：ビタミンK依存性凝固因子合成阻害。",
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 800,
+    "subdomain": "分子生物学",
+    "question_text": "ガイドRNA（gRNA）とCas9核酸酵素を用いてゲノムを編集する技術を何という？",
+    "choices": [
+      "CRISPR-Cas9",
+      "RNAi",
+      "TALEN",
+      "ZFN"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「CRISPR-Cas9」です。gRNAが標的配列を誘導しCas9が切断します。",
+    "detailed_explanation": "CRISPR-Cas9は細菌の免疫系を応用したゲノム編集技術です。TALEN・ZFNもゲノム編集ツールですが、CRISPRが最も広く使われます。",
+    "learning_objective": "ゲノム編集技術の名称と原理を選択肢から正確に選べる",
+    "common_misconception": "CRISPRとRNAiの作用機序を混同する",
+    "distractor_rationales": [
+      "正解。CRISPR-Cas9はgRNA誘導型ゲノム編集です。",
+      "不正解。RNAiはmRNA分解による遺伝子サイレンシングです。",
+      "不正解。TALENは転写因子様ドメインを用います。",
+      "不正解。ZFNは亜鉛フィンガー核酸酵素です。"
+    ],
+    "basic_terms": "CRISPR-Cas9：gRNA誘導型ゲノム編集。",
+    "tags": [
+      "医歯薬学",
+      "分子生物学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 800,
+    "subdomain": "薬理学",
+    "question_text": "細胞成長・代謝・老化の中心的なシグナル伝達経路で、ラパマイシンの標的分子を含むのはどれ？",
+    "choices": [
+      "mTOR経路",
+      "MAPK経路",
+      "JAK-STAT経路",
+      "Wnt経路"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「mTOR経路」です。mTORC1/2が栄養・成長因子シグナルを統合します。",
+    "detailed_explanation": "mTOR（mechanistic target of rapamycin）はラパマイシンで阻害されます。MAPKは増殖、JAK-STATはサイトカイン、Wntは発生・幹細胞に関与します。",
+    "learning_objective": "主要シグナル伝達経路と標的薬を結びつけられる",
+    "common_misconception": "mTORとMAPK経路の機能を混同する",
+    "distractor_rationales": [
+      "正解。mTOR経路はラパマイシンの標的です。",
+      "不正解。MAPK経路はRas-Raf-MEK-ERKカスケードです。",
+      "不正解。JAK-STAT経路はサイトカインシグナルです。",
+      "不正解。Wnt経路はβ-cateninを介する発生シグナルです。"
+    ],
+    "basic_terms": "mTOR：ラパマイシン標的、細胞成長・代謝の統合ハブ。",
+    "tags": [
+      "医歯薬学",
+      "薬理学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 800
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 900,
+    "subdomain": "薬理学",
+    "question_text": "薬物の血中濃度と効果の関係を時間軸で統合的に記述するモデルを何という？",
+    "choices": [
+      "PK-PDモデル",
+      "PBPKモデル",
+      "QSARモデル",
+      "Markovモデル"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「PK-PDモデル」です。薬物動態（PK）と薬力学（PD）を連結します。",
+    "detailed_explanation": "PK-PDモデルは吸収・分布・代謝・排泄（PK）と効果（PD）を数学的に連結し、用量設計に用いられます。PBPKは生理学的モデル、QSARは構造活性相関です。",
+    "learning_objective": "薬物動態学・薬力学のモデル名を選択肢から正確に選べる",
+    "common_misconception": "PK-PDモデルとPBPKモデルを混同する",
+    "distractor_rationales": [
+      "正解。PK-PDモデルは動態と効果を連結します。",
+      "不正解。PBPKは生理学的薬物動態モデルです。",
+      "不正解。QSARは定量構造活性相関です。",
+      "不正解。Markovモデルは状態遷移の確率モデルです。"
+    ],
+    "basic_terms": "PK-PDモデル：薬物動態と薬力学の連結モデル。",
+    "tags": [
+      "医歯薬学",
+      "薬理学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 900,
+    "subdomain": "薬理学",
+    "question_text": "受容体の活性部位とは別の部位に結合し、内在性リガンドの作用を変調する結合様式を何という？",
+    "choices": [
+      "アロステリック調節",
+      "競合的拮抗",
+      "不可逆的拮抗",
+      "機能的拮抗"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「アロステリック調節」です。構造変化を介してリガンド結合部位とは別の部位から作用します。",
+    "detailed_explanation": "アロステリック（変構）調節は正の変構（増強）と負の変構（抑制）があります。ベンゾジアゼピンはGABA受容体のアロステリック増強剤です。",
+    "learning_objective": "受容体薬理学の結合様式を選択肢から正確に選べる",
+    "common_misconception": "アロステリック調節と競合的拮抗を混同する",
+    "distractor_rationales": [
+      "正解。アロステリック調節は別部位結合による変調です。",
+      "不正解。競合的拮抗は同一部位での拮抗です。",
+      "不正解。不可逆的拮抗は共価結合による永続的阻害です。",
+      "不正解。機能的拮抗は下流経路での相殺です。"
+    ],
+    "basic_terms": "アロステリック調節：正規部位以外からの受容体変調。",
+    "tags": [
+      "医歯薬学",
+      "薬理学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 900
+  },
+  {
+    "domain": "医歯薬学",
+    "target_level": 900,
+    "subdomain": "薬学",
+    "question_text": "ユビキチン-プロテアソーム系を阻害し、多発性骨髄腫の治療に用いられる薬剤クラスはどれ？",
+    "choices": [
+      "プロテアソーム阻害薬",
+      "ヒストン脱アセチル化酵素阻害薬",
+      "mTOR阻害薬",
+      "PARP阻害薬"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「プロテアソーム阻害薬」です。ボルテゾミブが代表例です。",
+    "detailed_explanation": "ボルテゾミブは26Sプロテアソームのキモトリプシン様活性を阻害し、異常タンパク質蓄積により腫瘍細胞を死滅させます。PARP阻害はDNA修復阻害です。",
+    "learning_objective": "分子標的抗がん薬の作用機序を選択肢から正確に選べる",
+    "common_misconception": "プロテアソーム阻害とmTOR阻害を混同する",
+    "distractor_rationales": [
+      "正解。プロテアソーム阻害薬はボルテゾミブ等です。",
+      "不正解。HDAC阻害薬はエピジェネティクス標的です。",
+      "不正解。mTOR阻害薬はシグナル伝達阻害です。",
+      "不正解。PARP阻害薬はDNA修復経路を標的にします。"
+    ],
+    "basic_terms": "プロテアソーム阻害：ユビキチン-プロテアソーム系阻害（ボルテゾミブ）。",
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "用語・定義",
+      "gap-fill"
+    ],
+    "cognitive_type": "用語・定義",
+    "difficulty_initial": 900
+  }
+]
