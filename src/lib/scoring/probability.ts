@@ -51,3 +51,27 @@ export function distanceToBand(probability: number, band: { min: number; max: nu
   if (probability < band.min) return band.min - probability;
   return probability - band.max;
 }
+
+function rampProgress(questionIndex: number) {
+  const span = Math.max(1, scoringConfig.difficultyRampQuestions - 1);
+  return Math.min(1, questionIndex / span);
+}
+
+export function maxDifficultyCeiling(questionIndex: number) {
+  return lerp(
+    scoringConfig.difficultyRampStart,
+    scoringConfig.difficultyRampEnd,
+    rampProgress(questionIndex)
+  );
+}
+
+export function effectiveCumulativeRateForSelection(cumulativeCorrectRate: number, questionIndex: number) {
+  if (cumulativeCorrectRate <= scoringConfig.lowCumulativeRateThreshold) {
+    return cumulativeCorrectRate;
+  }
+  return lerp(
+    scoringConfig.lowCumulativeRateThreshold,
+    cumulativeCorrectRate,
+    rampProgress(questionIndex)
+  );
+}

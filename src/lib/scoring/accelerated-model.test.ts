@@ -43,9 +43,6 @@ describe("accelerated perfect-streak model", () => {
     const results = seeds.map((seed) => simulateExam(seed, () => true));
     const avg = results.reduce((sum, r) => sum + r.scoreAt20, 0) / results.length;
 
-    // eslint-disable-next-line no-console
-    console.log(JSON.stringify({ avg, results }, null, 2));
-
     for (const result of results) {
       expect(result.scoreAt20).toBeGreaterThanOrEqual(900);
       expect(result.scoreAt20).toBeLessThanOrEqual(990);
@@ -58,5 +55,16 @@ describe("accelerated perfect-streak model", () => {
     const result = simulateExam("adaptive-50", (step) => step % 5 < 3);
     expect(result.scoreAt20).toBeGreaterThanOrEqual(480);
     expect(result.scoreAt20).toBeLessThanOrEqual(650);
+  });
+
+  it("ramps difficulty linearly and avoids 900 before question 20 on a perfect streak", () => {
+    const result = simulateExam("adaptive-50", () => true);
+
+    expect(result.difficulties[1]).toBeLessThan(650);
+    expect(result.difficulties[2]).toBeLessThan(650);
+    for (let index = 0; index < 14; index += 1) {
+      expect(result.difficulties[index]).toBeLessThan(800);
+    }
+    expect(result.q20Diff).toBeGreaterThanOrEqual(850);
   });
 });

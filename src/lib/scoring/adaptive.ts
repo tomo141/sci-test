@@ -6,6 +6,8 @@ import { blendedAbilityForQuestion, dedupeAnswers, estimateFromAnswers, selectio
 import {
   distanceToBand,
   difficultyForTargetProbability,
+  effectiveCumulativeRateForSelection,
+  maxDifficultyCeiling,
   predictCorrectProbability,
   relaxProbabilityBand,
   targetProbabilityBand
@@ -46,11 +48,12 @@ function exposureCount(question: Question) {
   return question.statistics.answerCount;
 }
 
-function estimateProbability(question: Question, answers: AnswerRecord[]) {
+function estimateProbability(question: Question, answers: AnswerRecord[], questionIndex: number) {
   const estimate = estimateFromAnswers(answers);
+  const selectionRate = effectiveCumulativeRateForSelection(estimate.cumulativeCorrectRate, questionIndex);
   const ability =
     blendedAbilityForQuestion(estimate.internal, question.domain, question.abilityAxis) +
-    selectionAbilityInflation(estimate.cumulativeCorrectRate);
+    selectionAbilityInflation(selectionRate);
   return predictCorrectProbability(ability, question.difficulty, question.discrimination);
 }
 
@@ -79,9 +82,10 @@ function buildCandidate(
   answers: AnswerRecord[],
   slot: CoverageSlot,
   band: { min: number; max: number },
-  lastQuestion: Question | null
+  lastQuestion: Question | null,
+  questionIndex: number
 ): CandidateContext {
-  const probability = estimateProbability(question, answers);
+  const probability = estimateProbability(question, answers, questionIndex);
   const bandDistance = distanceToBand(probability, band);
   const inBand = bandDistance === 0;
   const matchesSlot = question.domain === slot.domain && question.abilityAxis === slot.abilityAxis;
@@ -102,12 +106,15 @@ function filterCandidates(
   slot: CoverageSlot,
   now: Date,
   requireSlot: boolean,
-  requirePublished: boolean
+  requirePublished: boolean,
+  questionIndex: number
 ) {
+  const difficultyCeiling = maxDifficultyCeiling(questionIndex);
   const answeredIds = new Set(answers.map((answer) => answer.questionId));
   return questions.filter((question) => {
     if (question.abilityAxis !== BASIC_AXIS) return false;
     if (answeredIds.has(question.id)) return false;
+    if (question.difficulty > difficultyCeiling) return false;
     if (requirePublished && !isPublishedAndValid(question, now)) return false;
     if (requireSlot && slot.required) {
       return question.domain === slot.domain && question.abilityAxis === slot.abilityAxis;
@@ -139,11 +146,14 @@ function selectFromCandidates(
   lastQuestion: Question | null,
   rng: () => number,
   reasonPrefix: string,
-  stageIndex: number
+  stageIndex: number,
+  questionIndex: number
 ): AdaptiveSelection | null {
   if (!candidates.length) return null;
 
-  const scored = candidates.map((question) => buildCandidate(question, answers, slot, band, lastQuestion));
+  const scored = candidates.map((question) =>
+    buildCandidate(question, answers, slot, band, lastQuestion, questionIndex)
+  );
   const weighted = pickFromTopWeighted(scored, rng);
 
   return {
@@ -160,15 +170,16 @@ function selectClosestToTarget(
   answers: AnswerRecord[],
   slot: CoverageSlot,
   target: number,
-  rng: () => number
+  rng: () => number,
+  questionIndex: number
 ): AdaptiveSelection | null {
   if (!candidates.length) return null;
 
   const ranked = candidates
     .map((question) => ({
       question,
-      probability: estimateProbability(question, answers),
-      targetDistance: Math.abs(estimateProbability(question, answers) - target),
+      probability: estimateProbability(question, answers, questionIndex),
+      targetDistance: Math.abs(estimateProbability(question, answers, questionIndex) - target),
       weight: 0
     }))
     .sort((left, right) => left.targetDistance - right.targetDistance);
@@ -197,7 +208,7 @@ export function selectFirstQuestion(context: AdaptiveSelectionContext): Adaptive
   );
   const rng = createRng(`${plan.sessionSeed}:select:0`);
 
-  const domainCandidates = filterCandidates(questions, [], slot, now, true, true).filter(
+  const domainCandidates = filterCandidates(questions, [], slot, now, true, true, 0).filter(
     (question) => question.domain === slot.domain && question.abilityAxis === slot.abilityAxis
   );
 
@@ -212,7 +223,7 @@ export function selectFirstQuestion(context: AdaptiveSelectionContext): Adaptive
   const pool = ranked.slice(0, Math.min(scoringConfig.candidatePoolSize, ranked.length));
   const picked = pool.length
     ? pickFromTopWeighted(pool, rng).question
-    : filterCandidates(questions, [], slot, now, true, true)[0];
+    : filterCandidates(questions, [], slot, now, true, true, 0)[0];
   if (!picked) return null;
 
   return {
@@ -232,10 +243,11 @@ function selectHardestAvailable(
   candidates: Question[],
   answers: AnswerRecord[],
   slot: CoverageSlot,
-  cumulativeRate: number,
-  rng: () => number
+  selectionRate: number,
+  rng: () => number,
+  questionIndex: number
 ): AdaptiveSelection | null {
-  if (!candidates.length || cumulativeRate < 1) return null;
+  if (!candidates.length || selectionRate < 1) return null;
 
   const maxDifficulty = Math.max(...candidates.map((question) => question.difficulty));
   const hardestPool = candidates.filter((question) => question.difficulty === maxDifficulty);
@@ -251,7 +263,7 @@ function selectHardestAvailable(
     question: weighted.question,
     slot,
     selectionReason: "adaptive_perfect:hardest_available",
-    predictedProbability: estimateProbability(weighted.question, answers),
+    predictedProbability: estimateProbability(weighted.question, answers, questionIndex),
     targetBand: scoringConfig.perfectRateTargetBand
   };
 }
@@ -267,7 +279,8 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
 
   const slot = getCoverageSlot(questionIndex, plan, uniqueAnswers);
   const cumulativeRate = estimateFromAnswers(uniqueAnswers).cumulativeCorrectRate;
-  const baseBand = targetProbabilityBand(cumulativeRate);
+  const selectionRate = effectiveCumulativeRateForSelection(cumulativeRate, questionIndex);
+  const baseBand = targetProbabilityBand(selectionRate);
   const lastQuestion =
     questions.find((question) => question.id === uniqueAnswers[uniqueAnswers.length - 1]?.questionId) || null;
   const rng = createRng(`${plan.sessionSeed}:select:${questionIndex}`);
@@ -283,13 +296,21 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
   for (let stageIndex = 0; stageIndex < relaxationStages.length; stageIndex += 1) {
     const stage = relaxationStages[stageIndex];
     const band = relaxProbabilityBand(baseBand, stage.bandSteps);
-    const candidates = filterCandidates(questions, uniqueAnswers, slot, now, stage.requireSlot, stage.requirePublished);
+    const candidates = filterCandidates(
+      questions,
+      uniqueAnswers,
+      slot,
+      now,
+      stage.requireSlot,
+      stage.requirePublished,
+      questionIndex
+    );
     const inBandCandidates = candidates.filter(
-      (question) => distanceToBand(estimateProbability(question, uniqueAnswers), band) === 0
+      (question) => distanceToBand(estimateProbability(question, uniqueAnswers, questionIndex), band) === 0
     );
 
-    if (!inBandCandidates.length && cumulativeRate >= 1) {
-      const hardest = selectHardestAvailable(candidates, uniqueAnswers, slot, cumulativeRate, rng);
+    if (!inBandCandidates.length && selectionRate >= 1) {
+      const hardest = selectHardestAvailable(candidates, uniqueAnswers, slot, selectionRate, rng, questionIndex);
       if (hardest) return hardest;
     }
 
@@ -303,16 +324,20 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
       lastQuestion,
       rng,
       stage.requireSlot ? "adaptive_slot" : "adaptive_relaxed",
-      stageIndex
+      stageIndex,
+      questionIndex
     );
     if (selection) return selection;
   }
 
   const anyUnanswered = questions.filter(
-    (question) => !uniqueAnswers.some((answer) => answer.questionId === question.id) && isPublishedAndValid(question, now)
+    (question) =>
+      !uniqueAnswers.some((answer) => answer.questionId === question.id) &&
+      isPublishedAndValid(question, now) &&
+      question.difficulty <= maxDifficultyCeiling(questionIndex)
   );
   const target = (baseBand.min + baseBand.max) / 2;
-  return selectClosestToTarget(anyUnanswered, uniqueAnswers, slot, target, rng);
+  return selectClosestToTarget(anyUnanswered, uniqueAnswers, slot, target, rng, questionIndex);
 }
 
 export function nextQuestionForAnswers(
