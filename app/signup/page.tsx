@@ -1,15 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpen, Cloud, Eye, Lock, UserPlus } from "lucide-react";
+import { BookOpen, Cloud, Lock, UserPlus } from "lucide-react";
 import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
+import { AuthFormMessage } from "@/components/auth/AuthFormMessage";
 import { signupAction } from "@/app/auth/actions";
 import { TurnstileBox } from "@/components/ui/TurnstileBox";
 import { AnonymousSessionInput } from "@/components/auth/AnonymousSessionInput";
+import { PasswordInput } from "@/components/ui/PasswordInput";
+import type { Metadata } from "next";
 
-export default function SignupPage() {
+export const metadata: Metadata = {
+  title: "新規登録",
+  description: "全分野科学検定 β版のアカウントを作成して、受験結果やトレーニング履歴を保存できます。",
+  alternates: {
+    canonical: "/signup"
+  },
+  openGraph: {
+    title: "新規登録 | 全分野科学検定 β版",
+    description: "受験結果やトレーニング履歴を保存できるアカウントを作成します.",
+    url: "/signup"
+  }
+};
+
+type Props = {
+  searchParams: Promise<{ error?: string; demo?: string }>;
+};
+
+export default async function SignupPage({ searchParams }: Props) {
+  const params = await searchParams;
+
   return (
     <>
       <SiteHeaderWithAuth />
@@ -37,23 +59,22 @@ export default function SignupPage() {
               <p className="text-sm text-[var(--color-muted)]">すでにお持ちの方は <Link className="font-bold text-[var(--color-primary-700)]" href="/login">ログイン</Link></p>
             </div>
           </div>
-          <form action={signupAction} className="grid gap-5">
+          <AuthFormMessage variant="signup" error={params.error} demo={params.demo} />
+          <form action={signupAction} className="mt-6 grid gap-5">
             <AnonymousSessionInput />
-            {[
-              ["メールアドレス", "email", "email"],
-              ["パスワード", "password", "password"],
-              ["パスワード確認", "passwordConfirm", "password"],
-              ["ニックネーム", "nickname", "text"]
-            ].map(([label, name, type], i) => (
-              <label key={label} className="grid gap-2 font-bold">
-                {label}
-                <div className="relative">
-                  <input name={name} required className="h-14 w-full rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder={i === 0 ? "例）riketokuo@example.com" : i === 3 ? "ランキング等に表示される名前" : ""} type={type} />
-                  {i === 1 || i === 2 ? <Eye className="absolute right-4 top-4 text-[var(--color-muted)]" size={20} /> : null}
-                </div>
-              </label>
-            ))}
-            <label className="flex gap-3 text-sm leading-7"><input name="terms" type="checkbox" required className="mt-1 h-5 w-5" />13歳未満の場合は保護者同意を得たうえで、利用規約およびプライバシーポリシーに同意します。</label>
+            <label className="grid gap-2 font-bold">
+              メールアドレス
+              <input name="email" required className="h-14 rounded-2xl border border-[var(--color-border)] px-4 invalid:[&:not(:placeholder-shown)]:border-red-400" type="email" placeholder="例）riketokuo@example.com" />
+              <span className="text-xs font-bold text-[var(--color-muted)]">メールを受け取れるアドレスを入力してください。</span>
+            </label>
+            <PasswordInput name="password" label="パスワード" hint="パスワードは8文字以上で入力してください。" minLength={8} />
+            <PasswordInput name="passwordConfirm" label="パスワード確認" hint="パスワードは8文字以上で入力してください。" minLength={8} />
+            <label className="grid gap-2 font-bold">
+              ニックネーム
+              <input name="nickname" required className="h-14 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="ランキング等に表示される名前" type="text" />
+              <span className="text-xs font-bold text-[var(--color-muted)]">ランキングに表示される公開名です。</span>
+            </label>
+            <label className="flex gap-3 text-sm leading-7"><input name="terms" type="checkbox" required className="mt-1 h-5 w-5" />利用規約およびプライバシーポリシーに同意します。13歳未満の場合は保護者の同意を得ています。</label>
             <label className="flex gap-3 text-sm leading-7"><input name="marketingConsent" type="checkbox" className="mt-1 h-5 w-5" />理系とーくから、全分野科学検定のアップデート、科学イベント、理系とーくラボに関する情報を受け取る。</label>
             <TurnstileBox />
             <AppButton type="submit">新規登録</AppButton>

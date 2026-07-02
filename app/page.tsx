@@ -9,6 +9,20 @@ import { domains } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
 import { LocalScoreSummary } from "@/components/profile/LocalScoreSummary";
 import { DomainIcon } from "@/components/ui/DomainIcon";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "全分野科学検定 β版",
+  description: "数学・物理・化学から人文社会科学まで、10の科学分野であなたの科学力を可視化します。",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: "全分野科学検定 β版",
+    description: "10の科学分野であなたの科学力を可視化する腕試し検定。",
+    url: "/"
+  }
+};
 
 export default async function HomePage() {
   const top3 = await getPublicLeaderboard(3);
@@ -18,8 +32,8 @@ export default async function HomePage() {
       <SiteHeaderWithAuth />
       <main>
         <section className="overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(68,132,255,0.14),transparent_32%),linear-gradient(180deg,#fff_0%,#f7faff_100%)] py-10 md:py-16">
-          <div className="page-container grid items-center gap-8 md:grid-cols-[1.05fr_0.95fr]">
-            <div>
+          <div className="page-container grid max-w-full items-center gap-8 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
+            <div className="min-w-0 max-w-full">
               <p className="mb-4 text-lg font-black text-[var(--color-primary-900)]">科学が好きなすべての人へ</p>
               <h1 className="text-4xl font-black leading-tight md:text-6xl">
                 あなたの<span className="text-[var(--color-primary-700)]">科学力</span>を、<br />
@@ -36,7 +50,7 @@ export default async function HomePage() {
                 <StatusBadge>10の科学分野</StatusBadge>
               </div>
             </div>
-            <div className="relative aspect-[16/9] min-h-[280px] w-full">
+            <div className="relative aspect-[16/9] min-h-[280px] w-full max-w-full overflow-hidden">
               <Image
                 src="/images/hero-main.jpg"
                 alt="りけとくおが10の科学分野を冒険するイラスト"

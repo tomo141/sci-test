@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
+import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
 import { trainingConfig } from "@/src/lib/training/config";
 
 const schema = z.object({
@@ -10,6 +11,9 @@ const schema = z.object({
 });
 
 export async function POST(request: Request) {
+  const limited = await enforceRateLimit("training-log", "training-answer", rateLimitPolicies.trainingAnswer, request);
+  if (limited) return limited;
+
   const parsed = schema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid payload" }, { status: 400 });
 

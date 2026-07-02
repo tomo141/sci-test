@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "地学",
+      "地質学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "地学",
+    "subdomain": "地質学",
+    "difficulty_initial": 500,
+    "question_text": "プレートテクトニクスにおいて、大洋プレートが大陸プレートの下に沈み込む境界はどれか。",
+    "choices": [
+      "ホットスポット",
+      "発散境界",
+      "収束境界",
+      "トランスフォーム境界"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "プレートが向かい合って衝突し一方が沈み込むのは収束境界。",
+    "detailed_explanation": "収束境界では大洋プレートが大陸プレート下に沈み込み（スラブ）、海溝・火山弧を形成。発散境界は拡大、トランスフォームは横ずれ。",
+    "learning_objective": "プレート境界の3類型と地質現象を対応づけられる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "すべてのプレート境界で沈み込みが起こると誤解する",
+    "distractor_rationales": [
+      "不正解。プレート内部のマントルプルーム。",
+      "不正解。プレートが離れる境界。",
+      "正解。プレートが衝突し沈み込む境界。",
+      "不正解。横断断層による横ずれ境界。"
+    ],
+    "basic_terms": "プレートテクトニクス：岩石圏プレートの運動理論、収束境界：プレートが衝突する境界"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "地学",
+      "気象学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "地学",
+    "subdomain": "気象学",
+    "difficulty_initial": 600,
+    "question_text": "北半球で気圧の低い領域に向かって吹く風が右に偏れる主な原因はどれか。",
+    "choices": [
+      "重力",
+      "表面摩擦のみ",
+      "大気の圧縮",
+      "コリオリ力"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "地球の自転によるコリオリ力が北半球で右偏（フェルミール）を生む。",
+    "detailed_explanation": "コリオリ力は自転座標系での見かけの力。北半球では低気圧周辺で反時計回りの風（右偏）。",
+    "learning_objective": "コリオリ力と風の偏りの関係を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "風は単純に気圧勾配方向に吹くと考える",
+    "distractor_rationales": [
+      "不正解。重力は鉛直方向が主。",
+      "不正解。摩擦は速度減衰が主で偏りの主因ではない。",
+      "不正解。圧縮は直接の偏り原因ではない。",
+      "正解。自転による見かけの力。"
+    ],
+    "basic_terms": "コリオリ力：自転系で見かけの偏向力、気圧勾配力：高低気圧間の圧力差による力"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "地学",
+      "地球化学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "地学",
+    "subdomain": "地球化学",
+    "difficulty_initial": 700,
+    "question_text": "放射性同位体年代測定で、親核種の半減期が未知の試料年代に対して長すぎる場合に起こりやすい問題はどれか。",
+    "choices": [
+      "半減期が短くなって測定が不可能になる",
+      "子核種が親核種より先に消える",
+      "親核種の減衰がほとんど進んでおらず年代を区別しにくい",
+      "試料が直ちに全核種に崩壊する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "半減期が試料年代に比べ長いと、残存親核種の差が小さく年代解像度が低下する。",
+    "detailed_explanation": "例：数万年の試料に半減期45億年の U-Pb は不適。¹⁴C（5730年）は数万年以内に適する。",
+    "learning_objective": "放射性年代測定で半減期と測定対象年代の適合を判断できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "半減期が長いほど常に高精度だと誤解する",
+    "distractor_rationales": [
+      "不正解。半減期は核種の固有性質。",
+      "不正解。子核種は親の崩壊で増加する。",
+      "正解。減衰が少なく統計的区別が困難。",
+      "不正解。崩壊は確率的で即時全崩壊はしない。"
+    ],
+    "basic_terms": "半減期：親核種が半分に減る時間、放射性年代測定：崩壊系列を用いた年代決定"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "地学",
+      "地震学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "地学",
+    "subdomain": "地震学",
+    "difficulty_initial": 800,
+    "question_text": "地震波のうち、固体・液体・気体のいずれでも伝わる縦波はどれか。",
+    "choices": [
+      "愛波",
+      "P波（初期微動）",
+      "S波（横波）",
+      "レイリー波"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "P波は体積変化を伴う縦波で媒質を問わず伝播する。S波は横波で液体中を伝わらない。",
+    "detailed_explanation": "P波は最初に到達（Primary）。S波は剪断変形の横波で液体では伝播しない。レイリー波・愛波は表面波。",
+    "learning_objective": "P波・S波・表面波の性質と伝播条件を区別できる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "すべての地震波が液体中を伝わると誤解する",
+    "distractor_rationales": [
+      "不正解。表面を伝わる表面波。",
+      "正解。縦波（P波）。",
+      "不正解。横波で液体中は伝播しない。",
+      "不正解。表面を伝わる表面波。"
+    ],
+    "basic_terms": "P波：縦方向に伝わる地震波、S波：横方向に伝わる剪断波"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "地学",
+      "地球物理学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "地学",
+    "subdomain": "地球物理学",
+    "difficulty_initial": 900,
+    "question_text": "地球内部構造の划分において、外核が液体であることの主要な観測的根拠はどれか。",
+    "choices": [
+      "S波が外核を通過しないこと",
+      "P波が外核で完全に消滅すること",
+      "外核で重力がゼロになること",
+      "外核の温度が絶対零度であること"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "液体は剪断応力を伝えないため S波（横波）が外核を通過しない。",
+    "detailed_explanation": "S波のシャドウゾーンは外核の液体性の強い証拠。P波は減速・屈折するが通過する。",
+    "learning_objective": "地震波観測から地球内部の物質状態を推論できる",
+    "cognitive_type": "誤解・境界",
+    "common_misconception": "P波が消えることから液体と判断すると誤る",
+    "distractor_rationales": [
+      "正解。S波不通過は液体の剪断剛性ゼロと整合。",
+      "不正解。P波は外核を通過する。",
+      "不正解。重力はゼロにならない。",
+      "不正解。外核は高温流体。"
+    ],
+    "basic_terms": "外核：主に鉄・ニッケルの液体層、シャドウゾーン：S波が到達しない領域"
+  }
+]

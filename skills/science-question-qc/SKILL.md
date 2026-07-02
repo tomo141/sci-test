@@ -1,12 +1,15 @@
 ---
 name: science-question-qc
 description: >-
-  Performs quality checks on 4-choice science quiz questions before publish.
-  Use after science-question-choice-plausibility and before bank import.
+  4択問題の公開前QC。**問題作成の依頼が来たら先に
+  `.cursor/skills/science-question-creation/SKILL.md` を使うこと。**
+  本スキルは統合パイプライン Step 5 の下位参照。
 disable-model-invocation: true
 ---
 
 # science-question-qc
+
+> **入口**: `.cursor/skills/science-question-creation/SKILL.md` — 本スキルは Step 5（choice-plausibility の後）。
 
 4択問題の品質確認を行う。正解が1つだけか、選択肢数が4つか、問題文が曖昧でないか、前提不足がないか、選択肢に正解のヒントがないか、解説が正誤理由を説明しているか、難度と内容が整合しているか、不適切・攻撃的・危険な表現がないか、出典があるか、時事問題に有効期限があるか、既存問題と重複しすぎていないかを確認する。
 

@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "工学",
+      "制御工学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "工学",
+    "subdomain": "制御工学",
+    "difficulty_initial": 500,
+    "question_text": "PID制御において、比例（P）項が主に改善する特性はどれか。",
+    "choices": [
+      "位相遅れの完全除去",
+      "ノイズの完全除去",
+      "系の不安定化",
+      "定常偏差の低減"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "比例制御は偏差に比例した操作量で定常偏差を小さくする。",
+    "detailed_explanation": "P項は応答速度と定常偏差に効く。I項が定常偏差を零に、D項が過渡応答を改善。P単独では定常偏差は残りうる。",
+    "learning_objective": "PID制御各項の役割を説明できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "P項だけで定常偏差が完全に零になると誤解する",
+    "distractor_rationales": [
+      "不正解。位相はD項等で調整。",
+      "不正解。D項はノイズを増幅しやすい。",
+      "不正解。適切なゲインでは安定化を狙う。",
+      "正解。比例制御の主効果。"
+    ],
+    "basic_terms": "PID制御：比例・積分・微分の組合せ制御、定常偏差：目標値と定常状態の差"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "工学",
+      "電気工学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "工学",
+    "subdomain": "電気工学",
+    "difficulty_initial": 600,
+    "question_text": "NPN型バイポーラトランジスタにおいて、ベース電流 I_B により増幅される主な電流はどれか。",
+    "choices": [
+      "ベース電流 I_B 自体",
+      "外部電源電流",
+      "コレクタ電流 I_C",
+      "エミッタ電流 I_E"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "微小な I_B により大きな I_C が制御される（I_E ≈ I_C + I_B）。",
+    "detailed_explanation": "NPNトランジスタはベースに流入した微小電流でコレクタ-エミッタ間の大電流を制御。増幅対象は主に I_C。",
+    "learning_objective": "バイポーラトランジスタの3端子電流関係を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "ベース電流そのものが出力だと誤解する",
+    "distractor_rationales": [
+      "不正解。I_B は入力制御信号。",
+      "不正解。電源電流は補助的。",
+      "正解。ベースで制御される増幅電流。",
+      "不正解。I_E は I_C と I_B の和だが増幅出力は I_C。"
+    ],
+    "basic_terms": "バイポーラトランジスタ：電流増幅素子、コレクタ電流：出力側の主電流"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "工学",
+      "材料工学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "difficulty_initial": 700,
+    "question_text": "二元系状態図において、共晶反応（eutectic reaction）の特徴として正しいものはどれか。",
+    "choices": [
+      "気体が直接固体になる",
+      "液体が冷却中に二種の固体相に同時に変態する",
+      "固体が液体に溶けて単一固相になる",
+      "液体が単一固相のみに変態する"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "共晶反応：L → α + β のように液体が二固相に同時変態。",
+    "detailed_explanation": "共晶点で液体が冷却すると2つの固相が同時析出。共析は固相からの変態。",
+    "learning_objective": "共晶・共析・包晶反応を区別して説明できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "共晶を単一固相の凝固と混同する",
+    "distractor_rationales": [
+      "不正解。気相関与の反応ではない。",
+      "正解。共晶反応の定義。",
+      "不正解。包晶反応等の別反応。",
+      "不正解。単相凝固の記述。"
+    ],
+    "basic_terms": "共晶反応：液体から二固相が同時析出する変態、状態図：温度と組成の相平衡図"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "工学",
+      "流体力学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "工学",
+    "subdomain": "流体力学",
+    "difficulty_initial": 800,
+    "question_text": "管内流れが層流から乱流へ遷移する際の指標として広く用いられる無次元数はどれか。",
+    "choices": [
+      "レイノルズ数",
+      "マッハ数",
+      "フルード数",
+      "ヌセルト数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "レイノルズ数 Re = ρvL/μ が慣性力と粘性力の比を表し、臨界値で流れ態様が変わる。",
+    "detailed_explanation": "円管流れで Re≈2300 付近が層流-乱流遷移の目安。マッハ数は圧縮性、フルード数は自由表面、ヌセルト数は熱伝達。",
+    "learning_objective": "流体力学の主要無次元数と物理的意味を説明できる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "マッハ数が管内流れの遷移指標だと誤解する",
+    "distractor_rationales": [
+      "正解。慣性/粘性の比。",
+      "不正解。音速に対する流速比。",
+      "不正解。慣性/浮力の比。",
+      "不正解。対流熱伝達の指標。"
+    ],
+    "basic_terms": "レイノルズ数：慣性力と粘性力の比、層流：整然とした流れ、乱流：不規則な流れ"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "工学",
+      "構造工学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "工学",
+    "subdomain": "構造工学",
+    "difficulty_initial": 900,
+    "question_text": "塑性解析における上限定理（仮想仕事原理に基づく）が与える崩壊荷重の性質はどれか。",
+    "choices": [
+      "実際の崩壊荷重の下限",
+      "実際の崩壊荷重と一致する",
+      "弾性荷重を与える",
+      "実際の崩壊荷重の上限（安全側の過大評価）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "上限定理は仮想運動場から求めた荷重が真の崩壊荷重を上回る（過大評価）。",
+    "detailed_explanation": "上限定理：任意の運動可能仮想速度場から算出した荷重 ≥ 真の崩壊荷重。下限定理は下界を与える。",
+    "learning_objective": "塑性解析の上限・下限定理の意味を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "上限定理が安全側の過小評価だと誤解する",
+    "distractor_rationales": [
+      "不正解。下限定理の性質。",
+      "不正解。任意の仮想場では一致しない。",
+      "不正解。塑性崩壊の解析。",
+      "正解。上限定理の結論。"
+    ],
+    "basic_terms": "上限定理：仮想運動場による崩壊荷重の上界評価、塑性崩壊：降伏を超えた破壊"
+  }
+]

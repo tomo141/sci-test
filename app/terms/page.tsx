@@ -2,6 +2,20 @@ import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppCard } from "@/components/ui/AppCard";
 import { siteConfig } from "@/src/lib/site-config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "利用規約",
+  description: "全分野科学検定 β版の利用条件、スコアの位置づけ、ランキング、禁止事項等を定めた利用規約です。",
+  alternates: {
+    canonical: "/terms"
+  },
+  openGraph: {
+    title: "利用規約 | 全分野科学検定 β版",
+    description: "全分野科学検定 β版の利用条件を確認できます。",
+    url: "/terms"
+  }
+};
 
 const sections = [
   {

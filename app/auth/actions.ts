@@ -7,6 +7,8 @@ import { syncAdminRoleIfAllowed } from "@/src/lib/admin/role";
 import { getAdminEmails, getAppUrl } from "@/src/lib/env";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import { verifyTurnstile } from "@/src/lib/security/turnstile";
+import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
+import { headers } from "next/headers";
 
 const signupSchema = z
   .object({
@@ -36,7 +38,19 @@ const profileSchema = z.object({
   specialty: z.string().trim().max(80).optional()
 });
 
+async function enforceAuthRateLimit(scope: string) {
+  const headerStore = await headers();
+  const request = new Request("https://local/auth", {
+    headers: {
+      "x-forwarded-for": headerStore.get("x-forwarded-for") || headerStore.get("x-real-ip") || "unknown"
+    }
+  });
+  const limited = await enforceRateLimit(scope, "auth", rateLimitPolicies.auth, request);
+  if (limited) redirect(`/${scope === "signup" ? "signup" : scope === "reset-password" ? "reset-password" : "login"}?error=too-many-requests`);
+}
+
 export async function signupAction(formData: FormData) {
+  await enforceAuthRateLimit("signup");
   if (!(await verifyTurnstile(formData.get("cf-turnstile-response")))) redirect("/signup?error=turnstile");
   const parsed = signupSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) redirect("/signup?error=invalid");
@@ -126,6 +140,7 @@ export async function updateProfileAction(formData: FormData) {
 }
 
 export async function loginAction(formData: FormData) {
+  await enforceAuthRateLimit("login");
   if (!(await verifyTurnstile(formData.get("cf-turnstile-response")))) redirect("/login?error=turnstile");
   const parsed = loginSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) redirect("/login?error=invalid");
@@ -146,6 +161,7 @@ export async function loginAction(formData: FormData) {
 }
 
 export async function resetPasswordAction(formData: FormData) {
+  await enforceAuthRateLimit("reset-password");
   if (!(await verifyTurnstile(formData.get("cf-turnstile-response")))) redirect("/reset-password?error=turnstile");
   const parsed = resetSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) redirect("/reset-password?error=invalid");

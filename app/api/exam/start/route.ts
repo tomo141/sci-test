@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
 import { createExamPlan } from "@/src/lib/scoring";
+import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
 import { createServiceRoleClient } from "@/src/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const limited = await enforceRateLimit("exam-start", "exam-start", rateLimitPolicies.examStart, request);
+  if (limited) return limited;
   const body = await request.json().catch(() => ({}));
   const anonymousSessionId = body.anonymousSessionId || crypto.randomUUID();
   const examPlan = body.examPlan || createExamPlan(body.sessionSeed);

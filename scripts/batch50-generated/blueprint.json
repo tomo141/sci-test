@@ -1,0 +1,3039 @@
+{
+  "generatedAt": "2026-07-02T05:09:30.652Z",
+  "summary": "全10分野×50問=500問。レベル100–900を均等配分（各レベル50問、100–500は6問/分野、600–900は5問/分野）。",
+  "questionsPerDomain": 50,
+  "totalQuestions": 500,
+  "levelDistribution": {
+    "100": 60,
+    "200": 60,
+    "300": 60,
+    "400": 60,
+    "500": 60,
+    "600": 50,
+    "700": 50,
+    "800": 50,
+    "900": 50
+  },
+  "blueprint": {
+    "数学": [
+      {
+        "level": 100,
+        "subdomain": "代数",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "幾何",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "関数",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "確率",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "統計",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "線形代数",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "微分積分",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "論理",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "数論",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "位相",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "代数",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "幾何",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "関数",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "確率",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "統計",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "線形代数",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "微分積分",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "論理",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "数論",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "位相",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "代数",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "幾何",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "関数",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "確率",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "統計",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "線形代数",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "微分積分",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "論理",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "数論",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "位相",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "代数",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "幾何",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "関数",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "確率",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "統計",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "線形代数",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "微分積分",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "論理",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "数論",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "位相",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "代数",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "幾何",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "関数",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "確率",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "統計",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "線形代数",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "微分積分",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "論理",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "数論",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "位相",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "物理": [
+      {
+        "level": 100,
+        "subdomain": "力学",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "熱",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "波",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "電磁気",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "量子",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "熱力学",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "統計力学",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "固体物理",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "素粒子",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "相対性理論",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "力学",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "熱",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "波",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "電磁気",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "量子",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "熱力学",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "統計力学",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "固体物理",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "素粒子",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "相対性理論",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "力学",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "熱",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "波",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "電磁気",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "量子",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "熱力学",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "統計力学",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "固体物理",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "素粒子",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "相対性理論",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "力学",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "熱",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "波",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "電磁気",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "量子",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "熱力学",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "統計力学",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "固体物理",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "素粒子",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "相対性理論",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "力学",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "熱",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "波",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "電磁気",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "量子",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "熱力学",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "統計力学",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "固体物理",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "素粒子",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "相対性理論",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "化学": [
+      {
+        "level": 100,
+        "subdomain": "元素",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "結合",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "酸塩基",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "有機化学",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "無機化学",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "物理化学",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "分析化学",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "触媒化学",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "酸化還元",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "状態変化",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "元素",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "結合",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "酸塩基",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "有機化学",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "無機化学",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "物理化学",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "分析化学",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "触媒化学",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "酸化還元",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "状態変化",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "元素",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "結合",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "酸塩基",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "有機化学",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "無機化学",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "物理化学",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "分析化学",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "触媒化学",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "酸化還元",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "状態変化",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "元素",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "結合",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "酸塩基",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "有機化学",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "無機化学",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "物理化学",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "分析化学",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "触媒化学",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "酸化還元",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "状態変化",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "元素",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "結合",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "酸塩基",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "有機化学",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "無機化学",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "物理化学",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "分析化学",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "触媒化学",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "酸化還元",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "状態変化",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "生物": [
+      {
+        "level": 100,
+        "subdomain": "細胞",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "遺伝",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "生態",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "進化",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "分子生物学",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "免疫学",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "神経科学",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "細胞生物学",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "遺伝学",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "細胞",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "遺伝",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "生態",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "進化",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "分子生物学",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "免疫学",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "神経科学",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "細胞生物学",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "遺伝学",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "細胞",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "遺伝",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "生態",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "進化",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "分子生物学",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "免疫学",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "神経科学",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "細胞生物学",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "遺伝学",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "細胞",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "遺伝",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "生態",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "進化",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "分子生物学",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "免疫学",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "神経科学",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "細胞生物学",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "遺伝学",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "細胞",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "遺伝",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "生態",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "進化",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "分子生物学",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "免疫学",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "神経科学",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "細胞生物学",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "遺伝学",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "地学": [
+      {
+        "level": 100,
+        "subdomain": "地質",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "気象",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "海洋",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "天文",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "地震",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "地球化学",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "地球物理学",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "古気候",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "鉱物",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "プレート",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "地質",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "気象",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "海洋",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "天文",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "地震",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "地球化学",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "地球物理学",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "古気候",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "鉱物",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "プレート",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "地質",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "気象",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "海洋",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "天文",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "地震",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "地球化学",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "地球物理学",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "古気候",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "鉱物",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "プレート",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "地質",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "気象",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "海洋",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "天文",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "地震",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "地球化学",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "地球物理学",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "古気候",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "鉱物",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "プレート",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "地質",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "気象",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "海洋",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "天文",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "地震",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "地球化学",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "地球物理学",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "古気候",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "鉱物",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "プレート",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "工学": [
+      {
+        "level": 100,
+        "subdomain": "機械",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "電気",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "材料",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "制御",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "土木",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "熱工学",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "流体力学",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "構造工学",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "材料力学",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "情報通信",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "機械",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "電気",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "材料",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "制御",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "土木",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "熱工学",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "流体力学",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "構造工学",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "材料力学",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "情報通信",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "機械",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "電気",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "材料",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "制御",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "土木",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "熱工学",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "流体力学",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "構造工学",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "材料力学",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "情報通信",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "機械",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "電気",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "材料",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "制御",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "土木",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "熱工学",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "流体力学",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "構造工学",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "材料力学",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "情報通信",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "機械",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "電気",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "材料",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "制御",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "土木",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "熱工学",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "流体力学",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "構造工学",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "材料力学",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "情報通信",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "農学": [
+      {
+        "level": 100,
+        "subdomain": "作物",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "土壌",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "育種",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "病害虫",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "畜産",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "栽培",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "食品",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "林学",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "水産",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "植物栄養",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "作物",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "土壌",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "育種",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "病害虫",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "畜産",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "栽培",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "食品",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "林学",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "水産",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "植物栄養",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "作物",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "土壌",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "育種",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "病害虫",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "畜産",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "栽培",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "食品",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "林学",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "水産",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "植物栄養",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "作物",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "土壌",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "育種",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "病害虫",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "畜産",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "栽培",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "食品",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "林学",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "水産",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "植物栄養",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "作物",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "土壌",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "育種",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "病害虫",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "畜産",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "栽培",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "食品",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "林学",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "水産",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "植物栄養",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "情報・計算機科学": [
+      {
+        "level": 100,
+        "subdomain": "アルゴリズム",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "データ構造",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "プログラミング",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "ネットワーク",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "セキュリティ",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "OS",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "データベース",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "AI",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "計算理論",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "暗号",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "アルゴリズム",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "データ構造",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "プログラミング",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "ネットワーク",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "セキュリティ",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "OS",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "データベース",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "AI",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "計算理論",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "暗号",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "アルゴリズム",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "データ構造",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "プログラミング",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "ネットワーク",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "セキュリティ",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "OS",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "データベース",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "AI",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "計算理論",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "暗号",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "アルゴリズム",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "データ構造",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "プログラミング",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "ネットワーク",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "セキュリティ",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "OS",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "データベース",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "AI",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "計算理論",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "暗号",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "アルゴリズム",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "データ構造",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "プログラミング",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "ネットワーク",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "セキュリティ",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "OS",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "データベース",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "AI",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "計算理論",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "暗号",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "医歯薬学": [
+      {
+        "level": 100,
+        "subdomain": "解剖",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "生理",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "薬理",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "病理",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "免疫",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "微生物",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "歯学",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "薬学",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "分子腫瘍学",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "解剖",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "生理",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "薬理",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "病理",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "免疫",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "微生物",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "歯学",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "薬学",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "分子腫瘍学",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "解剖",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "生理",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "薬理",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "病理",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "免疫",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "微生物",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "歯学",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "薬学",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "分子腫瘍学",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "解剖",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "生理",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "薬理",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "病理",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "免疫",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "微生物",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "歯学",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "薬学",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "分子腫瘍学",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "解剖",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "生理",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "薬理",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "病理",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "免疫",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "生化学",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "微生物",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "歯学",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "薬学",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "分子腫瘍学",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ],
+    "人文社会科学": [
+      {
+        "level": 100,
+        "subdomain": "経済学",
+        "cognitive_type": "用語・定義",
+        "slot": 1
+      },
+      {
+        "level": 100,
+        "subdomain": "心理学",
+        "cognitive_type": "原理・因果",
+        "slot": 2
+      },
+      {
+        "level": 100,
+        "subdomain": "社会学",
+        "cognitive_type": "基本的な適用",
+        "slot": 3
+      },
+      {
+        "level": 100,
+        "subdomain": "哲学",
+        "cognitive_type": "比較・分類",
+        "slot": 4
+      },
+      {
+        "level": 100,
+        "subdomain": "法学",
+        "cognitive_type": "誤解・境界",
+        "slot": 5
+      },
+      {
+        "level": 100,
+        "subdomain": "政治学",
+        "cognitive_type": "用語・定義",
+        "slot": 6
+      },
+      {
+        "level": 200,
+        "subdomain": "歴史",
+        "cognitive_type": "原理・因果",
+        "slot": 7
+      },
+      {
+        "level": 200,
+        "subdomain": "地理",
+        "cognitive_type": "基本的な適用",
+        "slot": 8
+      },
+      {
+        "level": 200,
+        "subdomain": "統計学",
+        "cognitive_type": "比較・分類",
+        "slot": 9
+      },
+      {
+        "level": 200,
+        "subdomain": "科学哲学",
+        "cognitive_type": "誤解・境界",
+        "slot": 10
+      },
+      {
+        "level": 200,
+        "subdomain": "経済学",
+        "cognitive_type": "用語・定義",
+        "slot": 11
+      },
+      {
+        "level": 200,
+        "subdomain": "心理学",
+        "cognitive_type": "原理・因果",
+        "slot": 12
+      },
+      {
+        "level": 300,
+        "subdomain": "社会学",
+        "cognitive_type": "基本的な適用",
+        "slot": 13
+      },
+      {
+        "level": 300,
+        "subdomain": "哲学",
+        "cognitive_type": "比較・分類",
+        "slot": 14
+      },
+      {
+        "level": 300,
+        "subdomain": "法学",
+        "cognitive_type": "誤解・境界",
+        "slot": 15
+      },
+      {
+        "level": 300,
+        "subdomain": "政治学",
+        "cognitive_type": "用語・定義",
+        "slot": 16
+      },
+      {
+        "level": 300,
+        "subdomain": "歴史",
+        "cognitive_type": "原理・因果",
+        "slot": 17
+      },
+      {
+        "level": 300,
+        "subdomain": "地理",
+        "cognitive_type": "基本的な適用",
+        "slot": 18
+      },
+      {
+        "level": 400,
+        "subdomain": "統計学",
+        "cognitive_type": "比較・分類",
+        "slot": 19
+      },
+      {
+        "level": 400,
+        "subdomain": "科学哲学",
+        "cognitive_type": "誤解・境界",
+        "slot": 20
+      },
+      {
+        "level": 400,
+        "subdomain": "経済学",
+        "cognitive_type": "用語・定義",
+        "slot": 21
+      },
+      {
+        "level": 400,
+        "subdomain": "心理学",
+        "cognitive_type": "原理・因果",
+        "slot": 22
+      },
+      {
+        "level": 400,
+        "subdomain": "社会学",
+        "cognitive_type": "基本的な適用",
+        "slot": 23
+      },
+      {
+        "level": 400,
+        "subdomain": "哲学",
+        "cognitive_type": "比較・分類",
+        "slot": 24
+      },
+      {
+        "level": 500,
+        "subdomain": "法学",
+        "cognitive_type": "誤解・境界",
+        "slot": 25
+      },
+      {
+        "level": 500,
+        "subdomain": "政治学",
+        "cognitive_type": "用語・定義",
+        "slot": 26
+      },
+      {
+        "level": 500,
+        "subdomain": "歴史",
+        "cognitive_type": "原理・因果",
+        "slot": 27
+      },
+      {
+        "level": 500,
+        "subdomain": "地理",
+        "cognitive_type": "基本的な適用",
+        "slot": 28
+      },
+      {
+        "level": 500,
+        "subdomain": "統計学",
+        "cognitive_type": "比較・分類",
+        "slot": 29
+      },
+      {
+        "level": 500,
+        "subdomain": "科学哲学",
+        "cognitive_type": "誤解・境界",
+        "slot": 30
+      },
+      {
+        "level": 600,
+        "subdomain": "経済学",
+        "cognitive_type": "用語・定義",
+        "slot": 31
+      },
+      {
+        "level": 600,
+        "subdomain": "心理学",
+        "cognitive_type": "原理・因果",
+        "slot": 32
+      },
+      {
+        "level": 600,
+        "subdomain": "社会学",
+        "cognitive_type": "基本的な適用",
+        "slot": 33
+      },
+      {
+        "level": 600,
+        "subdomain": "哲学",
+        "cognitive_type": "比較・分類",
+        "slot": 34
+      },
+      {
+        "level": 600,
+        "subdomain": "法学",
+        "cognitive_type": "誤解・境界",
+        "slot": 35
+      },
+      {
+        "level": 700,
+        "subdomain": "政治学",
+        "cognitive_type": "用語・定義",
+        "slot": 36
+      },
+      {
+        "level": 700,
+        "subdomain": "歴史",
+        "cognitive_type": "原理・因果",
+        "slot": 37
+      },
+      {
+        "level": 700,
+        "subdomain": "地理",
+        "cognitive_type": "基本的な適用",
+        "slot": 38
+      },
+      {
+        "level": 700,
+        "subdomain": "統計学",
+        "cognitive_type": "比較・分類",
+        "slot": 39
+      },
+      {
+        "level": 700,
+        "subdomain": "科学哲学",
+        "cognitive_type": "誤解・境界",
+        "slot": 40
+      },
+      {
+        "level": 800,
+        "subdomain": "経済学",
+        "cognitive_type": "用語・定義",
+        "slot": 41
+      },
+      {
+        "level": 800,
+        "subdomain": "心理学",
+        "cognitive_type": "原理・因果",
+        "slot": 42
+      },
+      {
+        "level": 800,
+        "subdomain": "社会学",
+        "cognitive_type": "基本的な適用",
+        "slot": 43
+      },
+      {
+        "level": 800,
+        "subdomain": "哲学",
+        "cognitive_type": "比較・分類",
+        "slot": 44
+      },
+      {
+        "level": 800,
+        "subdomain": "法学",
+        "cognitive_type": "誤解・境界",
+        "slot": 45
+      },
+      {
+        "level": 900,
+        "subdomain": "政治学",
+        "cognitive_type": "用語・定義",
+        "slot": 46
+      },
+      {
+        "level": 900,
+        "subdomain": "歴史",
+        "cognitive_type": "原理・因果",
+        "slot": 47
+      },
+      {
+        "level": 900,
+        "subdomain": "地理",
+        "cognitive_type": "基本的な適用",
+        "slot": 48
+      },
+      {
+        "level": 900,
+        "subdomain": "統計学",
+        "cognitive_type": "比較・分類",
+        "slot": 49
+      },
+      {
+        "level": 900,
+        "subdomain": "科学哲学",
+        "cognitive_type": "誤解・境界",
+        "slot": 50
+      }
+    ]
+  }
+}

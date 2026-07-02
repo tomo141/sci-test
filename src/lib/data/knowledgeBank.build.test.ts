@@ -5,6 +5,8 @@ import { knowledgeQuestions } from "./knowledgeQuestions";
 import { knowledgeQuestionsV2 } from "./knowledgeQuestionsV2";
 import { knowledgeQuestionsV3 } from "./knowledgeQuestionsV3";
 import { knowledgeQuestionsGapFill } from "./knowledgeQuestionsGapFill";
+import { knowledgeQuestionsV5 } from "./knowledgeQuestionsV5";
+import { knowledgeQuestionsBatch50 } from "./knowledgeQuestionsBatch50";
 import type { BankQuestion } from "./questions";
 
 function loadCalibratedLevels(): Record<string, number> {
@@ -32,14 +34,16 @@ describe("knowledge bank build", () => {
         ...knowledgeQuestions,
         ...knowledgeQuestionsV2,
         ...knowledgeQuestionsV3,
-        ...knowledgeQuestionsGapFill
+        ...knowledgeQuestionsGapFill,
+        ...knowledgeQuestionsV5,
+        ...knowledgeQuestionsBatch50
       ],
       levels
     );
     const outDir = join(process.cwd(), "supabase/seed/generated");
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, "questions-knowledge.json"), `${JSON.stringify(combined, null, 2)}\n`);
-    expect(combined).toHaveLength(640);
+    expect(combined).toHaveLength(890);
     for (const question of combined) {
       expect(question.difficulty_initial % 50).toBe(0);
       expect(levels[question.id]).toBe(question.difficulty_initial);

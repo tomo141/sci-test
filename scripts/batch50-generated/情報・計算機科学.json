@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "情報・計算機科学",
+      "アルゴリズム",
+      "batch50",
+      "L500"
+    ],
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム",
+    "difficulty_initial": 500,
+    "question_text": "配列の線形探索の最悪計算量（要素数 n に対する比較回数のオーダー）はどれか。",
+    "choices": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "最悪では末尾要素を探すため n 回比較する。",
+    "detailed_explanation": "線形探索は先頭から順に比較。最悪・平均 O(n)、最良 O(1)。二分探索はソート済み配列で O(log n)。",
+    "learning_objective": "基本探索アルゴリズムの計算量を説明できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "探索は常に O(log n) だと誤解する",
+    "distractor_rationales": [
+      "不正解。最良ケースのみ。",
+      "正解。線形探索の最悪計算量。",
+      "不正解。二分探索の計算量。",
+      "不正解。ソート等の計算量。"
+    ],
+    "basic_terms": "計算量：入力サイズに対する処理時間の増え方、O記法：漸近的な上界"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "情報・計算機科学",
+      "データ構造",
+      "batch50",
+      "L600"
+    ],
+    "domain": "情報・計算機科学",
+    "subdomain": "データ構造",
+    "difficulty_initial": 600,
+    "question_text": "平衡二分探索木（AVL木等）を用いた探索の計算量はどれか。",
+    "choices": [
+      "O(log n)",
+      "O(n)",
+      "O(n²)",
+      "O(2^n)"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "高さが O(log n) に保たれるため探索も O(log n)。",
+    "detailed_explanation": "AVL木は回転により平衡を保ち高さ ≤ 1.44 log₂(n+2)。各ステップで左右に1つ進む。",
+    "learning_objective": "平衡木の高さと探索効率の関係を説明できる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "二分木は常に O(log n) だと誤解する（非平衡では O(n)）",
+    "distractor_rationales": [
+      "正解。平衡二分木の探索計算量。",
+      "不正解。偏った二分木の最悪。",
+      "不正解。全探索等の計算量。",
+      "不正解。指数時間の問題。"
+    ],
+    "basic_terms": "AVL木：平衡条件を満たす二分探索木、二分探索木：各ノードが最大2子を持つ木"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "情報・計算機科学",
+      "オペレーティングシステム",
+      "batch50",
+      "L700"
+    ],
+    "domain": "情報・計算機科学",
+    "subdomain": "オペレーティングシステム",
+    "difficulty_initial": 700,
+    "question_text": "ページ置換アルゴリズム LRU（Least Recently Used）の置換対象はどれか。",
+    "choices": [
+      "最も最近参照されたページ",
+      "ランダムに選ばれたページ",
+      "最も大きいページ",
+      "最も長い間参照されていないページ"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "LRU は最も古い（最近使われていない）ページを追い出す。",
+    "detailed_explanation": "LRU は時間局所性を利用。最近参照ページは保持し、最長未参照ページを置換。FIFO は最古投入ページ。",
+    "learning_objective": "主要ページ置換アルゴリズムの方針を比較できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "LRU を FIFO と混同する",
+    "distractor_rationales": [
+      "不正解。最近参照ページは保持する。",
+      "不正解。ランダム置換の方針。",
+      "不正解。ページサイズは基準ではない。",
+      "正解。LRU の定義。"
+    ],
+    "basic_terms": "LRU：最長未使用ページ置換、ページフォルト：参照ページが物理メモリにない状態"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "情報・計算機科学",
+      "機械学習",
+      "batch50",
+      "L800"
+    ],
+    "domain": "情報・計算機科学",
+    "subdomain": "機械学習",
+    "difficulty_initial": 800,
+    "question_text": "多層パーセプトロンの誤差逆伝播法において、出力層の誤差を隠れ層へ伝える際に用いるのはどれか。",
+    "choices": [
+      "重みのランダム初期化",
+      "学習率を零に設定",
+      "連鎖律（チェインルール）による勾配の逐次計算",
+      "前向き計算"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "逆伝播は連鎖律で損失関数の各重みに対する勾配を後ろ向きに計算する。",
+    "detailed_explanation": "出力誤差から ∂L/∂w を連鎖律で層を遡り計算し勾配降下で重み更新。",
+    "learning_objective": "誤差逆伝播法の勾配計算の仕組みを説明できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "逆伝播は出力層のみで重みを更新すると誤解する",
+    "distractor_rationales": [
+      "不正解。初期化は学習の前提で勾配計算ではない。",
+      "不正解。学習率ゼロでは更新しない。",
+      "正解。連鎖律による勾配伝播。",
+      "不正解。前向き計算だけでは重み更新できない。"
+    ],
+    "basic_terms": "誤差逆伝播：勾配を層ごとに逆方向へ伝播する学習法、連鎖律：合成関数の微分法則"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "情報・計算機科学",
+      "暗号理論",
+      "batch50",
+      "L900"
+    ],
+    "domain": "情報・計算機科学",
+    "subdomain": "暗号理論",
+    "difficulty_initial": 900,
+    "question_text": "RSA暗号の安全性が依存する困難な問題として最も適切なものはどれか。",
+    "choices": [
+      "ソーティング問題",
+      "大きな合成数の素因数分解",
+      "離散対数問題のみ",
+      "巡回セールスマン問題"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "RSA は秘密鍵復元が大合成数 n = pq の因数分解に帰着する。",
+    "detailed_explanation": "RSA は mod n での累乗演算。秘密鍵 d は φ(n) から求まり、n の因数分解ができれば破られる。",
+    "learning_objective": "RSA の数学的基盤と安全性の前提を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "RSA を離散対数暗号（DH）と混同する",
+    "distractor_rationales": [
+      "不正解。多項式時間で解ける。",
+      "正解。RSA の標準的困難性仮定。",
+      "不正解。DH・ElGamal 等の基盤。",
+      "不正解。NP困難だが RSA の直接基盤ではない。"
+    ],
+    "basic_terms": "RSA：公開鍵暗号方式、素因数分解：合成数を素数の積に分解する問題"
+  }
+]

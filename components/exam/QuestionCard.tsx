@@ -8,7 +8,9 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 import { cn } from "@/src/lib/utils";
 import type { AnswerFeedback } from "@/src/lib/exam/explanation";
 import type { QuestionFeedbackKind } from "@/src/lib/exam/feedback";
-import type { Question } from "@/src/lib/data/questions";
+import type { PublicQuestion } from "@/src/lib/exam/publicQuestion";
+
+type DisplayQuestion = Pick<PublicQuestion, "id" | "question" | "choices" | "domain" | "difficulty">;
 
 export function QuestionCard({
   question,
@@ -20,9 +22,10 @@ export function QuestionCard({
   onFeedbackChange,
   feedback = null,
   questionTextRef,
-  showDifficulty = false
+  showDifficulty = false,
+  answerHighlight = null
 }: {
-  question: Question;
+  question: DisplayQuestion;
   index: number;
   selected: number | null;
   answered: boolean;
@@ -32,6 +35,7 @@ export function QuestionCard({
   feedback?: AnswerFeedback | null;
   questionTextRef?: RefObject<HTMLHeadingElement | null>;
   showDifficulty?: boolean;
+  answerHighlight?: { correctDisplayIndex: number; selectedDisplayIndex: number } | null;
 }) {
   return (
     <div className="rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-card md:p-6">
@@ -45,8 +49,8 @@ export function QuestionCard({
         {question.choices.map((choice, choiceIndex) => {
           const label = String.fromCharCode(65 + choiceIndex);
           const isSelected = selected === choiceIndex;
-          const isCorrect = answered && question.correctIndex === choiceIndex;
-          const isWrongSelection = answered && isSelected && !isCorrect;
+          const isCorrect = answered && answerHighlight?.correctDisplayIndex === choiceIndex;
+          const isWrongSelection = answered && answerHighlight?.selectedDisplayIndex === choiceIndex && !isCorrect;
           return (
             <button
               key={`${choiceIndex}-${choice}`}

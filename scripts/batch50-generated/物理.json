@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "物理",
+      "熱力学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "物理",
+    "subdomain": "熱力学",
+    "difficulty_initial": 500,
+    "question_text": "孤立系における熱力学第二法則の内容として最も適切なものはどれか。",
+    "choices": [
+      "エントロピーは時間とともに減少する",
+      "エントロピーは時間とともに増大しない",
+      "エネルギーは生成も消滅もしない",
+      "温度は常に一定に保たれる"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "孤立系ではエントロピーは増大するか、可逆過程では変化しない。",
+    "detailed_explanation": "熱力学第二法則（孤立系）：ΔS ≥ 0。エネルギー保存は第一法則。",
+    "learning_objective": "熱力学第二法則をエントロピー増大の言葉で説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "第二法則をエネルギー保存と混同する",
+    "distractor_rationales": [
+      "不正解。エントロピーは減少しない。",
+      "正解。孤立系のエントロピーは増大しない（増大または不変）。",
+      "不正解。第一法則の内容。",
+      "不正解。孤立系の温度は一般に変化する。"
+    ],
+    "basic_terms": "エントロピー：系の無秩序度の指標、孤立系：外界と物質・エネルギー交換のない系"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "物理",
+      "電磁気学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "difficulty_initial": 600,
+    "question_text": "真空中のマクスウェル方程式のうち、ガウスの法則を表す式はどれか。",
+    "choices": [
+      "∇ · B = 0",
+      "∇ × B = μ₀J + μ₀ε₀ ∂E/∂t",
+      "∇ · E = ρ/ε₀",
+      "∇ × E = −∂B/∂t"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "ガウスの法則は電場の発散が電荷密度に比例することを表す。",
+    "detailed_explanation": "∇·E = ρ/ε₀ が電場のガウス法則。他はファラデー法則・磁場ガウス法則・アンペール・マクスウェル法則。",
+    "learning_objective": "マクスウェル方程式4式を区別して説明できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "ファラデー法則とガウス法則を混同する",
+    "distractor_rationales": [
+      "不正解。磁場のガウス法則。",
+      "不正解。アンペール・マクスウェル法則。",
+      "正解。電場のガウス法則。",
+      "不正解。ファラデーの電磁誘導法則。"
+    ],
+    "basic_terms": "マクスウェル方程式：電磁場の基本方程式、ガウス法則：電束と電荷の関係"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "物理",
+      "統計力学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "物理",
+    "subdomain": "統計力学",
+    "difficulty_initial": 700,
+    "question_text": "温度 T のキャノニカル分布において、エネルギー E の状態の確率は主にどの因子に比例するか。",
+    "choices": [
+      "√(2πk_BT)",
+      "e^(−E/k_BT)",
+      "E/k_BT",
+      "k_BT/E"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ボルツマン因子 e^(−E/k_BT) に比例する。",
+    "detailed_explanation": "キャノニカル分布 P(E) ∝ e^(−E/k_BT)。高温では高エネルギー状態も占有される。",
+    "learning_objective": "ボルツマン分布の確率重みを説明できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "エネルギーに比例すると誤解する",
+    "distractor_rationales": [
+      "不正解。ガウス分布の正規化因子と混同。",
+      "正解。ボルツマン因子。",
+      "不正解。エネルギー比は確率の指数ではない。",
+      "不正解。逆数関係は成り立たない。"
+    ],
+    "basic_terms": "キャノニカル分布：定温熱浴と接触する系の統計、ボルツマン定数 k_B"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "物理",
+      "量子力学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "difficulty_initial": 800,
+    "question_text": "1次元無限ポテンシャル井戸（幅 L）の基底状態エネルギー E₁ を表す式として正しいものはどれか（ℏ：ディラック定数、m：粒子質量）。",
+    "choices": [
+      "π²ℏ²/(2mL²)",
+      "ℏ²/(2mL)",
+      "πℏ²/(mL²)",
+      "2π²ℏ²/(mL²)"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "E_n = n²π²ℏ²/(2mL²) より n = 1 で π²ℏ²/(2mL²)。",
+    "detailed_explanation": "境界条件より E_n = n²π²ℏ²/(2mL²)。基底状態は n = 1。",
+    "learning_objective": "無限井戸のエネルギー準位を境界条件から導出できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "分母の 2mL² を mL と混同する",
+    "distractor_rationales": [
+      "正解。n=1 のエネルギー準位。",
+      "不正解。次元が合わず π も欠ける。",
+      "不正解。分母の 2 が欠ける。",
+      "不正解。係数が2倍になっている。"
+    ],
+    "basic_terms": "無限ポテンシャル井戸：井戸内で自由粒子とみなす模型、基底状態：最も低いエネルギー準位"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "物理",
+      "素粒子物理学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "物理",
+    "subdomain": "素粒子物理学",
+    "difficulty_initial": 900,
+    "question_text": "標準模型において、クォークの色荷を媒介するゲージボソンはどれか。",
+    "choices": [
+      "光子",
+      "グルーオン",
+      "Wボソン",
+      "ヒッグス粒子"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "強い相互作用を媒介するのは8種のグルーオン。",
+    "detailed_explanation": "SU(3) カラーゲージ対称性のゲージボソンがグルーオン。光子は電磁、W/Z は弱い相互作用。",
+    "learning_objective": "標準模型の4つの基本相互作用と媒介粒子を対応づけられる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "光子が強い相互作用を媒介すると混同する",
+    "distractor_rationales": [
+      "不正解。電磁相互作用の媒介粒子。",
+      "正解。強い相互作用（QCD）の媒介粒子。",
+      "不正解。弱い相互作用の媒介粒子。",
+      "不正解。スカラー場の粒子。"
+    ],
+    "basic_terms": "グルーオン：強い相互作用の媒介粒子、クォーク：色荷を持つ素粒子"
+  }
+]

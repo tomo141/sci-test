@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "人文社会科学",
+      "経済学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "difficulty_initial": 500,
+    "question_text": "需要曲線が右下がりであることの一般的説明として最も適切なものはどれか。",
+    "choices": [
+      "価格が上がると需要量も増加する",
+      "価格と需要量は無関係である",
+      "供給量が価格と無関係である",
+      "価格が下がると需要量は増加する（他の条件が同じとき）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "需要の法則：価格低下 → 需要量增加（ceteris paribus）。",
+    "detailed_explanation": "代替効果・所得効果により価格下落で需要増。供給曲線は通常右上がり。",
+    "learning_objective": "需要の法則を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "需要と供給の法則を混同する",
+    "distractor_rationales": [
+      "不正解。需要の法則に反する。",
+      "不正解。価格は需要に影響する。",
+      "不正解。供給の話題であり需要の説明ではない。",
+      "正解。需要の法則。"
+    ],
+    "basic_terms": "需要曲線：価格と需要量の関係、需要の法則：価格と需要量の逆相関"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "人文社会科学",
+      "認知科学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "人文社会科学",
+    "subdomain": "認知科学",
+    "difficulty_initial": 600,
+    "question_text": "バッドデイのワーキングメモリモデルにおいて、音韻ループが担う処理はどれか。",
+    "choices": [
+      "長期記憶の永久保存",
+      "小脳による運動学習",
+      "音声・言語情報の一時保持",
+      "視覚空間スケッチパッドの制御"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "音韻ループは音声コードによる短期保持と発音リハーサルを担う。",
+    "detailed_explanation": "ワーキングメモリは中央実行系・音韻ループ・視覚空間スケッチパッド・エピソードバッファから構成。",
+    "learning_objective": "ワーキングメモリのサブシステムを区別できる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "ワーキングメモリを長期記憶と同一視する",
+    "distractor_rationales": [
+      "不正解。長期記憶の機能。",
+      "不正解。運動制御の領域。",
+      "正解。音韻ループの機能。",
+      "不正解。視覚空間スケッチパッドの領域。"
+    ],
+    "basic_terms": "ワーキングメモリ：作業中の情報を保持する短期記憶系、音韻ループ：音声情報の一時保持"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "人文社会科学",
+      "科学社会学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "人文社会科学",
+    "subdomain": "科学社会学",
+    "difficulty_initial": 700,
+    "question_text": "トーマス・クーンが『科学革命の構造』で述べた「パラダイム」の概念として最も適切なものはどれか。",
+    "choices": [
+      "特許法上の発明の定義",
+      "科学者共同体が共有する問題設定・方法論・価値の枠組み",
+      "個人の主観的な意見の集合",
+      "実験データの生の数値そのもの"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "パラダイムは通常科学の共有枠組みであり、異常の蓄積で科学革命が起こる。",
+    "detailed_explanation": "クーンはパラダイム・通常科学・科学革命・パラダイム転換を論じた。データ自体はパラダイムではない。",
+    "learning_objective": "クーンのパラダイム概念を説明できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "パラダイムを単なる理論や仮説と同一視する",
+    "distractor_rationales": [
+      "不正解。法律概念との混同。",
+      "正解。クーンのパラダイム概念。",
+      "不正解。個人意見の集合ではない。",
+      "不正解。データはパラダイム下で解釈される。"
+    ],
+    "basic_terms": "パラダイム：科学共同体の共有枠組み、科学革命：パラダイムの全面的置換"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "人文社会科学",
+      "統計学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "人文社会科学",
+    "subdomain": "統計学",
+    "difficulty_initial": 800,
+    "question_text": "ベイズ定理 P(A|B) = P(B|A)P(A)/P(B) の分子に含まれる項として正しい組合せはどれか。",
+    "choices": [
+      "尤度 P(B|A) と事前確率 P(A)",
+      "事後確率 P(A|B)",
+      "周辺確率 P(B)",
+      "標本分散"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "分子は尤度と事前確率の積。分母 P(B) で正規化して事後確率を得る。",
+    "detailed_explanation": "ベイズ推論：事前 × 尤度 ∝ 事後。P(B) は周辺尤度として正規化定数。",
+    "learning_objective": "ベイズ定理の各項の意味を説明できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "事後確率が分子にあると誤解する",
+    "distractor_rationales": [
+      "正解。分子 = 尤度 × 事前確率。",
+      "不正解。事後確率は等式全体の左辺。",
+      "不正解。P(B) は分母。",
+      "不正解。分散は別概念。"
+    ],
+    "basic_terms": "ベイズ定理：条件付き確率の更新公式、事前確率：観測前の確率、尤度：データが与えられたときの確率"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "人文社会科学",
+      "科学哲学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "人文社会科学",
+    "subdomain": "科学哲学",
+    "difficulty_initial": 900,
+    "question_text": "カール・ポパーの反証主義が科学理論の評価基準として重視するものはどれか。",
+    "choices": [
+      "確認事例の数だけが重要であること",
+      "権威や伝統による正当化",
+      "理論が反証されても保持すべきであること",
+      "反証可能性（潜在的に反証されうること）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ポパーは科学と非科学の境界を反証可能性で規定した。",
+    "detailed_explanation": "ポパーは帰納的確認ではなく反証可能性を重視。ラクタトスは研究プログラム、クーンはパラダイム。",
+    "learning_objective": "ポパーの反証主義の要点を説明できる",
+    "cognitive_type": "誤解・境界",
+    "common_misconception": "科学は確認事例が多いほど確実だとポパーが言ったと誤解する",
+    "distractor_rationales": [
+      "不正解。確認主義的立場でポパーは批判。",
+      "不正解。権威主義的正当化。",
+      "不正解。反証からの保護は非科学的。",
+      "正解。ポパーの核心概念。"
+    ],
+    "basic_terms": "反証主義：反証可能性を科学の基準とする立場、反証可能性：観察により論理的に反証されうる性質"
+  }
+]

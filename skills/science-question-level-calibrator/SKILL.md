@@ -1,17 +1,17 @@
 ---
 name: science-question-level-calibrator
 description: >-
-  Calibrates question difficulty_initial to 50-step levels (100-900) using the
-  education-stage 50% benchmark rubric. Use when assigning or reviewing problem
-  levels, recalibrating the question bank, auditing difficulty drift, or when
-  the user asks for 問題レベル較正, difficulty calibration, or level review.
-  Separate from science-question-author — do not write question content here.
+  difficulty_initial の正本定義（100-900, 50%正答×学歴×専門一致）。
+  **問題作成の依頼が来たら先に `.cursor/skills/science-question-creation/SKILL.md`
+  を使うこと。** 本スキルは統合パイプライン Step 2 および事後較正の下位参照。
 disable-model-invocation: true
 ---
 
 # Science Question Level Calibrator
 
-問題**作成**は `science-question-author` が担当する。本スキルは**既存問題のレベル付け・再較正のみ**。
+> **入口**: `.cursor/skills/science-question-creation/SKILL.md` — レベル定義の**正本**は本ファイル。
+
+問題**作成**は統合スキル `science-question-creation` が担当する。本スキルは**レベル定義・付け・再較正**。
 
 ## レベル別定義（正答率50%の基準）
 

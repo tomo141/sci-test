@@ -1,16 +1,17 @@
 ---
 name: science-question-choice-plausibility
 description: >-
-  Audits and improves 4-choice distractors so wrong options are plausible
-  misconceptions, not giveaway answers. Detects absolute language (のみ/すべて/必ず/常に)
-  and cross-domain term salad in distractors. Use after question authoring, before QC
-  and publish, when the user asks for 選択肢改善, distractor review, or plausibility check.
+  4択不正解肢の plausibility 監査（絶対語・用語サラダ等）。
+  **問題作成の依頼が来たら先に `.cursor/skills/science-question-creation/SKILL.md`
+  を使うこと。** 本スキルは統合パイプライン Step 4 の下位参照。
 disable-model-invocation: true
 ---
 
 # Science Question Choice Plausibility
 
-問題**作成**は `science-question-author`、**レベル較正**は `science-question-level-calibrator` が担当する。本スキルは**選択肢（特に不正解）の妥当性改善のみ**。
+> **入口**: `.cursor/skills/science-question-creation/SKILL.md` — 本スキルは Step 4。
+
+本スキルは**選択肢（特に不正解）の妥当性改善のみ**。
 
 ## 目的
 

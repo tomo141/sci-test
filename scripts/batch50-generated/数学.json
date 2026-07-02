@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "数学",
+      "線形代数",
+      "batch50",
+      "L500"
+    ],
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "difficulty_initial": 500,
+    "question_text": "2次正方行列 A = [[2, 1], [1, 2]] の固有値の和（跡）として正しいものはどれか。",
+    "choices": [
+      "6",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "固有値の和は行列の跡に等しく、2 + 2 = 4。",
+    "detailed_explanation": "正方行列の固有値の和は対角成分の和（跡）に等しい。A の跡は 2 + 2 = 4。固有値は 1 と 3 であり、その和も 4。",
+    "learning_objective": "固有値と跡の関係を用いて2次行列の性質を求められる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "固有値を個別に求めず対角成分の片方だけを答える",
+    "distractor_rationales": [
+      "不正解。固有値 3 に非対角成分を加えた誤り。",
+      "不正解。対角成分の一方 2 と非対角成分 1 を足した誤り。",
+      "正解。固有値の和 = 跡 = 2 + 2 = 4。",
+      "不正解。固有値の積と和を混同した誤り。"
+    ],
+    "basic_terms": "固有値：Av = λv を満たすスカラー λ、跡：正方行列の対角成分の和"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "数学",
+      "抽象代数",
+      "batch50",
+      "L600"
+    ],
+    "domain": "数学",
+    "subdomain": "抽象代数",
+    "difficulty_initial": 600,
+    "question_text": "群 (G, ·) において単位元 e が満たす性質として正しいものはどれか。",
+    "choices": [
+      "任意の a ∈ G に対し a · e = a · a となる",
+      "e は G の中で唯一の逆元を持つ元である",
+      "e · e = 0 が成り立つ",
+      "任意の a ∈ G に対し a · e = e · a = a となる"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "単位元 e は左・右の積において任意の元 a を変えない。",
+    "detailed_explanation": "群の公理より単位元 e は任意の a ∈ G に対し a · e = e · a = a を満たす。e · e = e だが 0 ではない。",
+    "learning_objective": "群の単位元の定義を正確に述べられる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "単位元と逆元の役割を混同する",
+    "distractor_rationales": [
+      "不正解。a · e = a · a は一般には成り立たない。",
+      "不正解。逆元を持つのは各元 a であり、単位元の性質ではない。",
+      "不正解。群では積の結果が 0 になるとは限らない。",
+      "正解。単位元の定義そのもの。"
+    ],
+    "basic_terms": "群：結合・単位元・逆元を満たす代数構造、単位元：積において他の元を変えない元"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "数学",
+      "解析",
+      "batch50",
+      "L700"
+    ],
+    "domain": "数学",
+    "subdomain": "解析",
+    "difficulty_initial": 700,
+    "question_text": "関数 f(x) = e^x を x = 0 のまわりでテイラー展開したとき、3次までの近似式として正しいものはどれか。",
+    "choices": [
+      "1 + x + x²/2",
+      "x + x²/2 + x³/6",
+      "1 + x + x²/2 + x³/6",
+      "1 + x + x² + x³"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "e^x の各階導関数は x = 0 で 1 なので係数は 1/n!。",
+    "detailed_explanation": "e^x の n 階導関数は e^x 自身で x = 0 において 1。テイラー級数 Σ x^n/n! より 3次まで 1 + x + x²/2 + x³/6。",
+    "learning_objective": "初等関数のテイラー展開係数を導関数から求められる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "階乗で割ることを忘れて x^n とする",
+    "distractor_rationales": [
+      "不正解。3次項が欠けている。",
+      "不正解。定数項 1 が欠けている。",
+      "正解。e^x = Σ x^n/n! の3次部分和。",
+      "不正解。階乗で割っていない誤り。"
+    ],
+    "basic_terms": "テイラー展開：関数を多項式で近似する級数、階乗：n! = 1×2×…×n"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "数学",
+      "位相",
+      "batch50",
+      "L800"
+    ],
+    "domain": "数学",
+    "subdomain": "位相",
+    "difficulty_initial": 800,
+    "question_text": "位相空間において、閉集合の任意の交わりが閉集合になる理由として最も適切なものはどれか。",
+    "choices": [
+      "閉集合はコンパクトだから",
+      "閉集合は開集合の補集合であり、開集合の任意の和集合は開集合だから",
+      "閉集合は常に有界だから",
+      "閉集合は距離関数で定義されるから"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "閉集合の交わりの補集合は開集合の和集合となり、開集合の公理より開である。",
+    "detailed_explanation": "閉集合 F の補集合は開集合。任意の閉集合族の交わりの補集合は開集合の和であり、開集合の公理より開。よって交わりは閉。",
+    "learning_objective": "開集合・閉集合の定義から閉集合の交わりが閉であることを説明できる",
+    "cognitive_type": "誤解・境界",
+    "common_misconception": "閉集合をユークリッド空間の有界閉集合と同一視する",
+    "distractor_rationales": [
+      "不正解。閉集合がコンパクトとは限らない。",
+      "正解。補集合を用いた標準的な証明。",
+      "不正解。一般の位相空間で閉集合は有界とは限らない。",
+      "不正解。距離は位相の定義に必須ではない。"
+    ],
+    "basic_terms": "位相空間：開集合族を公理化した空間、閉集合：開集合の補集合"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "数学",
+      "数論",
+      "batch50",
+      "L900"
+    ],
+    "domain": "数学",
+    "subdomain": "数論",
+    "difficulty_initial": 900,
+    "question_text": "素数 p に対し、フェルマーの小定理が保証する合同式として正しいものはどれか。ただし gcd(a, p) = 1 とする。",
+    "choices": [
+      "a^(p+1) ≡ 1 (mod p)",
+      "a^p ≡ a (mod p)",
+      "a^(p−1) ≡ 1 (mod p)",
+      "a^p ≡ 1 (mod p)"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "フェルマーの小定理の標準形は a^(p−1) ≡ 1 (mod p)。",
+    "detailed_explanation": "フェルマーの小定理：p 素数かつ gcd(a,p)=1 なら a^(p−1) ≡ 1 (mod p)。同値形 a^p ≡ a もあるが、gcd(a,p)=1 のときの中核形は B。",
+    "learning_objective": "フェルマーの小定理を正確に記述し RSA 等への応用基礎を理解できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "指数を p と p−1 で混同する",
+    "distractor_rationales": [
+      "不正解。指数が誤り。",
+      "不正解。同値形だが gcd(a,p)=1 のときの標準形は B。",
+      "正解。フェルマーの小定理の中核。",
+      "不正解。a=2, p=3 で 8 ≢ 1。"
+    ],
+    "basic_terms": "フェルマーの小定理：素数を法とする累乗の合同式、合同式：同じ余りを持つ整数の関係"
+  }
+]

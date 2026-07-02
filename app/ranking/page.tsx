@@ -9,9 +9,23 @@ import { RankingDomainFilter } from "@/components/ranking/RankingDomainFilter";
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
 import { scoringConfig } from "@/src/lib/scoring/config";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "ランキング",
+  description: "全分野科学検定 β版の公開ランキングで、総合スコアや分野別の順位を確認できます。",
+  alternates: {
+    canonical: "/ranking"
+  },
+  openGraph: {
+    title: "ランキング | 全分野科学検定 β版",
+    description: "公開ニックネームと科学スコアのランキングを確認できます。",
+    url: "/ranking"
+  }
+};
 
 type Props = {
   searchParams: Promise<{ domain?: string }>;

@@ -3,6 +3,20 @@ import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "検定について",
+  description: "全分野科学検定 β版の診断内容、スコアの位置づけ、ランキングやトレーニング機能について紹介します。",
+  alternates: {
+    canonical: "/about"
+  },
+  openGraph: {
+    title: "検定について | 全分野科学検定 β版",
+    description: "科学力を学びの地図として可視化する検定サービスです。",
+    url: "/about"
+  }
+};
 
 const points = [
   [BookOpenCheck, "10分野を横断して診断", "数学・物理・化学から人文社会科学まで、幅広い科学リテラシーを腕試しできます。"],

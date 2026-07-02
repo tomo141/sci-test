@@ -2,6 +2,20 @@ import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppCard } from "@/components/ui/AppCard";
 import { siteConfig } from "@/src/lib/site-config";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー",
+  description: "全分野科学検定 β版で取得する情報、利用目的、外部サービス、Cookie等の扱いを説明します。",
+  alternates: {
+    canonical: "/privacy"
+  },
+  openGraph: {
+    title: "プライバシーポリシー | 全分野科学検定 β版",
+    description: "取得情報や利用目的、外部サービス、Cookie等の扱いを確認できます。",
+    url: "/privacy"
+  }
+};
 
 const sections = [
   {

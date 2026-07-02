@@ -3,9 +3,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://127.0.0.1:3000"),
-  title: "全分野科学検定 β版",
+  title: {
+    default: "全分野科学検定 β版",
+    template: "%s | 全分野科学検定 β版"
+  },
   description: "科学好きのための、全分野科学力の成長可視化・トレーニングができる検定。",
   applicationName: "全分野科学検定 β版",
+  alternates: {
+    canonical: "/"
+  },
   openGraph: {
     type: "website",
     siteName: "全分野科学検定 β版",

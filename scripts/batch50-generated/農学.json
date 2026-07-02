@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "農学",
+      "作物学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "農学",
+    "subdomain": "作物学",
+    "difficulty_initial": 500,
+    "question_text": "C4植物が高温・強光条件下で光合成効率が高い主な理由はどれか。",
+    "choices": [
+      "光合成に水を必要としないため",
+      "夜間のみ CO₂ を固定するため",
+      "光呼吸を抑制し CO₂ 固定効率を高めるため",
+      "葉緑体を持たないため"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "C4植物はメソフィルとバッスルシースで CO₂ を濃縮し光呼吸を抑制する。",
+    "detailed_explanation": "C4経路は PEP カルボキシラーゼで CO₂ を固定しバッスルシースへ送り、Rubisco 周辺の CO₂ 濃度を高める。CAM植物は夜間固定。",
+    "learning_objective": "C3・C4・CAM 植物の光合成経路の違いを説明できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "C4 植物が光合成に葉緑体を使わないと誤解する",
+    "distractor_rationales": [
+      "不正解。水は光合成に必要。",
+      "不正解。CAM 植物の特徴。",
+      "正解。CO₂ 濃縮による光呼吸抑制。",
+      "不正解。葉緑体を持つ。"
+    ],
+    "basic_terms": "C4植物：4炭素酸経路を持つ植物、光呼吸：Rubisco の酸素化反応によるエネルギー損失"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "農学",
+      "土壌学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "農学",
+    "subdomain": "土壌学",
+    "difficulty_initial": 600,
+    "question_text": "土壌の陽イオン交換容量（CEC）が大きいときの効果として最も適切なものはどれか。",
+    "choices": [
+      "有機物が分解されなくなる",
+      "肥料成分（K⁺, Ca²⁺, Mg²⁺ 等）の保持力が高まる",
+      "土壌の透水係数が増大する",
+      "土壌 pH が酸性になる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "CEC は粘土・有機物の負電荷が陽イオンを吸着保持する能力。",
+    "detailed_explanation": "CEC が高い土壌は陽イオン態肥料を吸着保持し、リーキングを抑制。pH・透水係数は別要因。",
+    "learning_objective": "CEC の定義と土壌肥力への意義を説明できる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "CEC と透水係数を同一視する",
+    "distractor_rationales": [
+      "不正解。有機物分解は微生物活動に依存。",
+      "正解。陽イオン保持力の指標。",
+      "不正解。透水係数とは直接関係しない。",
+      "不正解。pH は別の緩衝機構で決まる。"
+    ],
+    "basic_terms": "CEC：陽イオン交換容量、リーキング：養分が水とともに流失すること"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "農学",
+      "植物病理学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "農学",
+    "subdomain": "植物病理学",
+    "difficulty_initial": 700,
+    "question_text": "植物の系統獲得抵抗性（SAR）の誘導に関与する信号分子として最も代表的なものはどれか。",
+    "choices": [
+      "サリチル酸",
+      "エチレン",
+      "乳酸",
+      "グルコース"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "SAR はサリチル酸経路を介して広範な抗病性を誘導する。",
+    "detailed_explanation": "SAR は局所感染後に系統的に抗病性を獲得。サリチル酸・NPR1 等が中心的。エチレン・ジャスモン酸は別の防御経路。",
+    "learning_objective": "植物免疫の SAR と局所防御の違いを説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "すべての植物ホルモンが SAR を誘導すると誤解する",
+    "distractor_rationales": [
+      "正解。SAR の中心的信号分子。",
+      "不正解。エチレンは傷害応答等に関与。",
+      "不正解。乳酸は関与しない。",
+      "不正解。グルコースは一般的代謝物。"
+    ],
+    "basic_terms": "系統獲得抵抗性：感染部位以外でも誘導される広範な抗病性、サリチル酸：植物防御ホルモン"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "農学",
+      "園芸学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "農学",
+    "subdomain": "園芸学",
+    "difficulty_initial": 800,
+    "question_text": "光補償点（光合成速度と呼吸速度が等しくなる光強度）が低い作物の特徴として適切なものはどれか。",
+    "choices": [
+      "常に高温でないと生育しない",
+      "光合成に CO₂ を使用しない",
+      "呼吸が行われない",
+      "弱光条件下でも光合成収支がプラスになりやすい"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "光補償点が低いほど弱光下で光合成が呼吸を上回りやすい。",
+    "detailed_explanation": "光補償点以下では呼吸 > 光合成で炭素収支がマイナス。耐陰性作物は光補償点が低い傾向。",
+    "learning_objective": "光補償点・光飽和点と生育環境の関係を説明できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "光補償点と光飽和点を混同する",
+    "distractor_rationales": [
+      "不正解。温度要件とは別の概念。",
+      "不正解。光合成は CO₂ 固定を伴う。",
+      "不正解。呼吸は常に行われる。",
+      "正解。低い光補償点の意味。"
+    ],
+    "basic_terms": "光補償点：光合成と呼吸が釣り合う光強度、耐陰性：弱光下での生育能力"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "農学",
+      "育種学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "農学",
+    "subdomain": "育種学",
+    "difficulty_initial": 900,
+    "question_text": "雑種一代（F₁）の超親現象（ヘテロシス）の主な遺伝学的基盤として最も支持される説明はどれか。",
+    "choices": [
+      "染色体数の半減",
+      "突然変変異の一括発生",
+      "有利な対立遺伝子の集積と劣性遺伝子のマスク",
+      "近交による純合化の促進"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "異系統間交配で劣性遺伝子がヘテロ接合化されマスクされ、有利な組合せが現れる。",
+    "detailed_explanation": "ヘテロシスは優性仮説・超優性仮説等で説明。近交はヘテロシスを減弱。染色体半減は減数分裂。",
+    "learning_objective": "ヘテロシスの遺伝学的説明を述べられる",
+    "cognitive_type": "誤解・境界",
+    "common_misconception": "ヘテロシスは近交で増強すると誤解する",
+    "distractor_rationales": [
+      "不正解。減数分裂の説明。",
+      "不正解。ヘテロシスの主因ではない。",
+      "正解。優性仮説等による説明。",
+      "不正解。近交はヘテロシスを減らす。"
+    ],
+    "basic_terms": "ヘテロシス：F₁ の超親現象、優性仮説：劣性遺伝子のマスクによる説明"
+  }
+]

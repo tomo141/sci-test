@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "生物",
+      "細胞生物学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "difficulty_initial": 500,
+    "question_text": "真核細胞のミトコンドリアの主な機能として最も適切なものはどれか。",
+    "choices": [
+      "タンパク質の翻訳",
+      "遺伝情報の複製",
+      "光合成によるエネルギー固定",
+      "ATP 合成による細胞呼吸"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ミトコンドリアは酸化的リン酸化により ATP を産生する。",
+    "detailed_explanation": "ミトコンドリアはTCA回路と電子伝達系により ATP を合成。光合成は葉緑体の機能。",
+    "learning_objective": "主要細胞小器官の機能を区別できる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "ミトコンドリアを光合成の場と混同する",
+    "distractor_rationales": [
+      "不正解。リボソームの機能。",
+      "不正解。細胞核の機能。",
+      "不正解。葉緑体の機能。",
+      "正解。ミトコンドリアの主機能。"
+    ],
+    "basic_terms": "ミトコンドリア：二重膜を持つ細胞小器官、ATP：細胞のエネルギー通貨"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "生物",
+      "生化学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "生物",
+    "subdomain": "生化学",
+    "difficulty_initial": 600,
+    "question_text": "クエン酸回路（TCA回路）でアセチルCoAが酸化される際、主要な還元産物として直接生成されるものはどれか。",
+    "choices": [
+      "アミノ酸",
+      "ATP のみ",
+      "NADH と FADH₂",
+      "グルコース"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "TCA回路は NADH・FADH₂ を産生し、電子伝達系へ還元力を供給する。",
+    "detailed_explanation": "TCA回路1回転で NADH×3、FADH₂×1、GTP×1。主要還元産物は NADH/FADH₂。",
+    "learning_objective": "TCA回路の産物とエネルギー代謝の流れを説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "TCA回路で大量の ATP が直接作られると思う",
+    "distractor_rationales": [
+      "不正解。TCA回路の直接産物ではない。",
+      "不正解。ATP も少量だが主産物は還元補酵素。",
+      "正解。TCA回路の主要還元産物。",
+      "不正解。基質ではなく産物の誤り。"
+    ],
+    "basic_terms": "TCA回路：ミトコンドリア基質での代謝経路、NADH：電子伝達系への還元力"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "生物",
+      "遺伝学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "生物",
+    "subdomain": "遺伝学",
+    "difficulty_initial": 700,
+    "question_text": "二対の対立遺伝子 A/a と B/b が独立に分離するとき、AaBb × AaBb の交配で aabb の遺伝子型が現れる確率はどれか。",
+    "choices": [
+      "1/8",
+      "1/4",
+      "1/2",
+      "1/16"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "P(aabb) = P(aa) × P(bb) = (1/4) × (1/4) = 1/16。",
+    "detailed_explanation": "各対立遺伝子は独立。P(aa)=1/4, P(bb)=1/4 より P(aabb)=1/16。",
+    "learning_objective": "メンデル遺伝の独立の法則を用いて遺伝子型確率を計算できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "1/4 と計算して両対立を考慮しない",
+    "distractor_rationales": [
+      "不正解。片方だけ考慮した誤り。",
+      "不正解。aa または bb の確率と混同。",
+      "不正解。ヘテロ接合の確率と混同。",
+      "正解。(1/4)×(1/4)=1/16。"
+    ],
+    "basic_terms": "独立の法則：異なる遺伝子座の分離は互いに影響しない、遺伝子型：個体が持つ対立遺伝子の組合せ"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "生物",
+      "分子生物学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "difficulty_initial": 800,
+    "question_text": "CRISPR-Cas9 によるゲノム編集で、Cas9 のガイドRNA（gRNA）の主な役割はどれか。",
+    "choices": [
+      "切断されたDNAの修復テンプレート供給",
+      "オフターゲット切断の完全な防止",
+      "標的DNA配列への誘導（アドレス指定）",
+      "DNA の二重鎖切断そのものの触媒"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "gRNA は標的配列と相補的に結合し Cas9 を誘導する。切断は Cas9 蛋白質が触媒。",
+    "detailed_explanation": "gRNA のスペーサー配列が標的DNAと相補的に結合し PAM 近傍へ Cas9 を誘導。切断は Cas9 の HNH/RuvC ドメインが行う。",
+    "learning_objective": "CRISPR-Cas9 の各成分の役割を説明できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "gRNA 自体が切断を触媒すると誤解する",
+    "distractor_rationales": [
+      "不正解。修復テンプレートは別途供給する donor DNA。",
+      "不正解。オフターゲットは設計・条件で低減するが完全防止ではない。",
+      "正解。gRNA は標的特異性を与える。",
+      "不正解。切断触媒は Cas9 蛋白質。"
+    ],
+    "basic_terms": "CRISPR-Cas9：RNA誘導型ゲノム編集系、gRNA：標的配列を指定するガイドRNA"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "生物",
+      "発生生物学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "生物",
+    "subdomain": "発生生物学",
+    "difficulty_initial": 900,
+    "question_text": "脊椎動物の HOX 遺伝子クラスターの特徴として正しいものはどれか。",
+    "choices": [
+      "クラスター内の遺伝子順序と発現領域は無関係である",
+      "染色体上の配置順序と発現領域の前後軸位置が対応する（コリニアリティ）",
+      "HOX 遺伝子が胚全体で均一に発現する",
+      "HOX 遺伝子は神経系に発現する"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "HOX 遺伝子はコリニアリティを示し、5' 側ほど後方（尾部）で発現する。",
+    "detailed_explanation": "HOX クラスターの遺伝子配置順と胚の前後軸での発現領域が対応（コリニアリティ）。体節形成・器官配置に関与。",
+    "learning_objective": "HOX 遺伝子のコリニアリティと体軸形成の関係を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "HOX 遺伝子は全身均一発現だと誤解する",
+    "distractor_rationales": [
+      "不正解。順序と発現領域は強く対応する。",
+      "正解。HOX 遺伝子のコリニアリティ。",
+      "不正解。発現は前後軸で領域特異的。",
+      "不正解。中胚葉・体節等広く関与。"
+    ],
+    "basic_terms": "HOX 遺伝子：体軸形成に関与する転写因子、コリニアリティ：遺伝子配置と発現領域の対応"
+  }
+]

@@ -8,10 +8,10 @@ export const BAD_QUESTION_REASONS = [
   { id: "other", label: "その他" }
 ] as const;
 
-export type QuestionFeedbackKind = "good" | "bad" | "review";
+export type QuestionFeedbackKind = "good" | "bad";
 
 export type QuestionFeedbackState = {
-  kind: Exclude<QuestionFeedbackKind, "review">;
+  kind: QuestionFeedbackKind;
   reasons?: string[];
   comment?: string;
   submittedAt: string;

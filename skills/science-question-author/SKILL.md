@@ -1,14 +1,15 @@
 ---
 name: science-question-author
 description: >-
-  Creates 4-choice science quiz questions in JSON for the question bank.
-  Use when authoring new questions, expanding the question bank, or when the
-  user asks for 問題作成, question generation, or difficulty_initial assignment
-  at creation time. Separate from science-question-level-calibrator.
+  本リポジトリの4択問題JSON執筆慣行（必須フィールド・domain 等）。
+  **問題作成の依頼が来たら先に `.cursor/skills/science-question-creation/SKILL.md`
+  を使うこと。** 本スキルは統合パイプライン Step 3 の下位参照。
 disable-model-invocation: true
 ---
 
 # Science Question Author
+
+> **入口**: `.cursor/skills/science-question-creation/SKILL.md` — 本ファイルは Step 3 執筆時に読む。
 
 指定された分野、能力軸、難度、出題形式、対象者に応じて、4択問題をJSON形式で作る。
 

@@ -4,6 +4,7 @@ import { loadSessionAnswersFromDb } from "@/src/lib/exam/loadSessionAnswers";
 import { persistProficiencyEstimates } from "@/src/lib/exam/persistEstimates";
 import { getPublishedQuestions } from "@/src/lib/data/loadQuestions";
 import { estimateFromAnswers } from "@/src/lib/scoring";
+import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 
 const saveSchema = z.object({
@@ -15,6 +16,9 @@ const saveSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const limited = await enforceRateLimit("exam-save", "exam-answer", rateLimitPolicies.examAnswer, request);
+  if (limited) return limited;
+
   const parsed = saveSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid save payload" }, { status: 400 });
 

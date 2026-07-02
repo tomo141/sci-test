@@ -12,7 +12,10 @@ import {
   type ExamPlan
 } from "@/src/lib/scoring";
 import { getCoverageSlot } from "@/src/lib/scoring/coverage";
+import { buildAnswerFeedback } from "@/src/lib/exam/explanation";
 import { persistProficiencyEstimates } from "@/src/lib/exam/persistEstimates";
+import { seededShuffleChoices } from "@/src/lib/exam/publicQuestion";
+import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import type { AnswerRecord } from "@/src/lib/scoring/types";
 
@@ -25,7 +28,7 @@ const answerSchema = z.object({
   sessionId: z.string(),
   anonymousSessionId: z.string().optional(),
   questionId: z.string(),
-  selectedChoiceIndex: z.number().int().min(0).max(3),
+  selectedDisplayIndex: z.number().int().min(0).max(3),
   responseTimeMs: z.number().int().nonnegative().optional(),
   examPlan: examPlanSchema.optional(),
   previousAnswers: z
@@ -44,6 +47,9 @@ const answerSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const limited = await enforceRateLimit("exam-answer", "exam-answer", rateLimitPolicies.examAnswer, request);
+  if (limited) return limited;
+
   const parsed = answerSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid answer payload" }, { status: 400 });
 
@@ -54,7 +60,12 @@ export async function POST(request: Request) {
   const previousAnswers = (parsed.data.previousAnswers || []) as AnswerRecord[];
   const examPlan = (parsed.data.examPlan || createExamPlan()) as ExamPlan;
   const before = estimateFromAnswers(previousAnswers);
-  const correct = parsed.data.selectedChoiceIndex === question.correctIndex;
+  const shuffled = seededShuffleChoices(question.id, examPlan.sessionSeed, question);
+  const selectedOriginalIndex = shuffled.displayToOriginal[parsed.data.selectedDisplayIndex];
+  if (selectedOriginalIndex === undefined) {
+    return NextResponse.json({ error: "invalid display index" }, { status: 400 });
+  }
+  const correct = selectedOriginalIndex === question.correctIndex;
   const currentAnswer: AnswerRecord = {
     questionId: question.id,
     domain: question.domain,
@@ -96,7 +107,7 @@ export async function POST(request: Request) {
       session_id: parsed.data.sessionId,
       user_id: sessionRow?.user_id ?? null,
       question_id: question.id,
-      selected_choice_index: parsed.data.selectedChoiceIndex,
+      selected_choice_index: selectedOriginalIndex,
       is_correct: correct,
       response_time_ms: parsed.data.responseTimeMs ?? null,
       served_difficulty: question.difficulty,
@@ -121,11 +132,15 @@ export async function POST(request: Request) {
     await persistProficiencyEstimates(supabase, parsed.data.sessionId, sessionRow?.user_id ?? null, after);
   }
 
+  const feedback = buildAnswerFeedback(question, selectedOriginalIndex, correct);
+  const { detailedExplanation: _detailedExplanation, ...clientFeedback } = feedback;
+
   return NextResponse.json({
     correct,
-    correctChoiceIndex: question.correctIndex,
     shortExplanation: question.shortExplanation,
-    detailedExplanation: question.detailedExplanation,
+    correctDisplayIndex: shuffled.correctIndex,
+    selectedDisplayIndex: parsed.data.selectedDisplayIndex,
+    feedback: clientFeedback,
     estimate: after,
     slot: getCoverageSlot(previousAnswers.length, examPlan, previousAnswers),
     nextQuestionId: nextSelection?.question.id ?? null,

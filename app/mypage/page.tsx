@@ -13,6 +13,20 @@ import { rankTitle } from "@/src/lib/scoring/rank";
 import { scoringConfig } from "@/src/lib/scoring/config";
 import { MyPageLocalSummary } from "@/components/profile/MyPageLocalSummary";
 import { updateProfileAction, updateMarketingConsentAction, deleteAccountAction } from "@/app/auth/actions";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "マイページ",
+  description: "全分野科学検定 β版の受験履歴、プロフィール、バッジ、トレーニング進捗を確認できます。",
+  alternates: {
+    canonical: "/mypage"
+  },
+  openGraph: {
+    title: "マイページ | 全分野科学検定 β版",
+    description: "受験履歴やプロフィール、トレーニング進捗を確認できます。",
+    url: "/mypage"
+  }
+};
 
 type ScoreHistoryRow = {
   score: number;
@@ -43,6 +57,7 @@ export default async function MyPage() {
   const supabase = await createServerSupabaseClient();
   const user = await supabase?.auth.getUser();
   const userId = user?.data.user?.id;
+  const isLoggedIn = !!userId;
 
   let profile: { nickname: string | null } | null = null;
   let education: EducationProfileRow | null = null;
@@ -105,24 +120,39 @@ export default async function MyPage() {
               <h2 className="text-2xl font-black">{nickname}</h2>
               <p className="mt-2 font-bold text-[var(--color-muted)]">{latestScore ? rankTitle(latestScore) : "結果未保存"}</p>
               {latestScore ? <div className="mt-5"><ScoreDisplay score={latestScore} /></div> : <MyPageLocalSummary />}
-              <div className="mt-5 flex flex-wrap gap-3"><AppButton href="#profile-edit" variant="secondary"><Pencil />プロフィール編集</AppButton><AppButton href="/karte"><Download />結果を保存</AppButton></div>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <AppButton href="#profile-edit" variant="secondary"><Pencil />プロフィール編集</AppButton>
+                {isLoggedIn ? (
+                  <AppButton href="/karte"><Download />結果を保存</AppButton>
+                ) : (
+                  <AppButton disabled><Download />結果を保存</AppButton>
+                )}
+              </div>
+              {!isLoggedIn ? (
+                <p className="mt-3 text-sm font-bold text-[var(--color-muted)]">結果保存とプロフィール編集はログイン後に利用できます。</p>
+              ) : null}
             </div>
           </AppCard>
           <AppCard><h2 className="text-xl font-black">スコア履歴</h2><ScoreHistoryChart data={scoreHistory} /></AppCard>
         </section>
         <AppCard id="profile-edit" className="mt-6">
           <h2 className="text-xl font-black">プロフィール編集</h2>
+          {!isLoggedIn ? (
+            <p className="mt-3 rounded-2xl bg-[var(--color-primary-50)] p-4 text-sm font-bold leading-7 text-[var(--color-ink-soft)]">
+              ログインするとプロフィールを保存できます。未ログイン中は入力できません。
+            </p>
+          ) : null}
           <form action={updateProfileAction} className="mt-5 grid gap-4 md:grid-cols-2">
             <label className="grid gap-2 text-sm font-bold">
               ニックネーム
-              <input name="nickname" required defaultValue={nickname === "ゲスト" ? "" : nickname} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="ランキング等に表示される名前" />
+              <input name="nickname" required disabled={!isLoggedIn} defaultValue={nickname === "ゲスト" ? "" : nickname} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)] disabled:bg-[var(--color-disabled)] disabled:text-[var(--color-muted)]" placeholder="ランキング等に表示される名前" />
             </label>
             <fieldset className="grid gap-3 text-sm font-bold md:col-span-2">
               <legend>学歴（複数選択可）</legend>
               <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                 {educationOptions.map((option) => (
                   <label key={option} className="flex items-center gap-2 rounded-2xl border border-[var(--color-border)] px-4 py-3">
-                    <input name="education" type="checkbox" value={option} defaultChecked={selectedEducation.has(option)} className="h-5 w-5" />
+                    <input name="education" type="checkbox" value={option} disabled={!isLoggedIn} defaultChecked={selectedEducation.has(option)} className="h-5 w-5 disabled:opacity-50" />
                     <span>{option}</span>
                   </label>
                 ))}
@@ -130,10 +160,10 @@ export default async function MyPage() {
             </fieldset>
             <label className="grid gap-2 text-sm font-bold md:col-span-2">
               専門分野（任意）
-              <input name="specialty" defaultValue={educationRow?.specialty || ""} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)]" placeholder="例）化学、情報科学など" />
+              <input name="specialty" disabled={!isLoggedIn} defaultValue={educationRow?.specialty || ""} className="h-12 rounded-2xl border border-[var(--color-border)] px-4 focus:border-[var(--color-primary-700)] disabled:bg-[var(--color-disabled)] disabled:text-[var(--color-muted)]" placeholder="例）化学、情報科学など" />
             </label>
             <div className="md:col-span-2">
-              <AppButton type="submit">プロフィールを保存</AppButton>
+              <AppButton type="submit" disabled={!isLoggedIn}>プロフィールを保存</AppButton>
             </div>
           </form>
         </AppCard>
@@ -179,15 +209,22 @@ export default async function MyPage() {
                 配信停止は、届いたメール内の解除リンクからいつでも行えます。
               </p>
             ) : (
-              <form action={updateMarketingConsentAction} className="mt-5 grid gap-4">
-                <label className="flex gap-3 text-sm leading-7">
-                  <input name="marketingConsent" type="checkbox" required className="mt-1 h-5 w-5 shrink-0" />
-                  運営「理系とーく」からの、科学系コンテンツ・イベント情報等をメールで受け取る
-                </label>
-                <div>
-                  <AppButton type="submit" variant="secondary">メルマガに同意する</AppButton>
-                </div>
-              </form>
+              <>
+                {!isLoggedIn ? (
+                  <p className="mt-5 rounded-2xl bg-[var(--color-primary-50)] p-4 text-sm font-bold leading-7 text-[var(--color-ink-soft)]">
+                    ログインするとメルマガ同意を保存できます。未ログイン中は操作できません。
+                  </p>
+                ) : null}
+                <form action={updateMarketingConsentAction} className="mt-5 grid gap-4">
+                  <label className="flex gap-3 text-sm leading-7">
+                    <input name="marketingConsent" type="checkbox" required disabled={!isLoggedIn} className="mt-1 h-5 w-5 shrink-0 disabled:opacity-50" />
+                    運営「理系とーく」からの、科学系コンテンツ・イベント情報等をメールで受け取る
+                  </label>
+                  <div>
+                    <AppButton type="submit" variant="secondary" disabled={!isLoggedIn}>メルマガに同意する</AppButton>
+                  </div>
+                </form>
+              </>
             )}
           </AppCard>
           <AppCard>

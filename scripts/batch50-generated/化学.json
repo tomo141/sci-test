@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "化学",
+      "有機化学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "difficulty_initial": 500,
+    "question_text": "（CH₃）₃C−Br がアセトン中の NaI に反応するとき、主要な反応機構はどれか。",
+    "choices": [
+      "E1",
+      "E2",
+      "SN1",
+      "SN2"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "第三級ハロゲン化アルキルは安定なカルボカチオン経由で SN1 が優勢。",
+    "detailed_explanation": "第三級・極性溶媒中でカルボカチオンが生成し SN1 が進行。SN2 は立体障害で不利。",
+    "learning_objective": "ハロゲン化アルキルの級と反応機構の対応を説明できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "すべてのハロゲン化アルキルが SN2 だと考える",
+    "distractor_rationales": [
+      "不正解。ヌクレオフィル存在下では置換が主。",
+      "不正解。強塩基条件でない。",
+      "正解。第三級・極性溶媒で SN1。",
+      "不正解。第三級では SN2 は不利。"
+    ],
+    "basic_terms": "SN1：カルボカチオン中間体を経る親核置換、第三級：炭素に3つの炭素取代基"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "化学",
+      "物理化学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "difficulty_initial": 600,
+    "question_text": "定温定圧で自発的に進行する変化について、ギブス自由エネルギー変化 ΔG の符号はどれか。",
+    "choices": [
+      "ΔG = 0",
+      "ΔG < 0",
+      "ΔG は常に 0",
+      "ΔG > 0"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "自発変化では ΔG < 0。平衡では ΔG = 0。",
+    "detailed_explanation": "等温等圧で自発的な変化はギブス自由エネルギーが減少（ΔG < 0）。",
+    "learning_objective": "ギブス自由エネルギーと自発性の関係を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "自発変化で ΔG > 0 と誤る",
+    "distractor_rationales": [
+      "不正解。平衡状態の条件。",
+      "正解。自発変化では ΔG < 0。",
+      "不正解。変化が起こる限り ΔG は一般に 0 ではない。",
+      "不正解。非自発変化の条件。"
+    ],
+    "basic_terms": "ギブス自由エネルギー：G = H − TS、自発変化：外部仕事なしに進行する変化"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "化学",
+      "無機化学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "difficulty_initial": 700,
+    "question_text": "八面体配位の d⁶ 高スピン錯体における CFSE（結晶場安定化エネルギー）の典型的な値はどれか。",
+    "choices": [
+      "0 Δ₀",
+      "−0.4 Δ₀",
+      "−0.6 Δ₀",
+      "−2.0 Δ₀"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "高スピン d⁶ は t₂g⁴e_g² で上下が相殺し CFSE = 0。",
+    "detailed_explanation": "高スピン d⁶：CFSE = (−0.4×4 + 0.6×2)Δ₀ = 0。低スピン d⁶ は −2.0Δ₀。",
+    "learning_objective": "配位子場理論で d電子配置と CFSE を計算できる",
+    "cognitive_type": "用語・定義",
+    "common_misconception": "d⁶ は常に CFSE が負だと思い込む",
+    "distractor_rationales": [
+      "正解。高スピン d⁶ の CFSE。",
+      "不正解。d⁴ 高スピンの値。",
+      "不正解。d⁵ 高スピンの値。",
+      "不正解。低スピン d⁶ の値。"
+    ],
+    "basic_terms": "CFSE：結晶場による d軌道エネルギー分裂による安定化、Δ₀：八面体分裂エネルギー"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "化学",
+      "分析化学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "化学",
+    "subdomain": "分析化学",
+    "difficulty_initial": 800,
+    "question_text": "¹H NMR で化学シフト δ が大きい信号が対応しやすい化学環境はどれか。",
+    "choices": [
+      "強い電子供与基に隣接したプロトン",
+      "強い電子求引基に隣接したプロトン",
+      "シールドされた飽和炭化水素のプロトン",
+      "重水素に置換された炭素に結合したプロトン"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "電子求引基は近傍プロトンを脱シールドして δ を大きくする。",
+    "detailed_explanation": "化学シフトは電子密度の低さと相関。求引基は δ を高周波数側へ。D 置換プロトンは NMR に現れない。",
+    "learning_objective": "NMR化学シフトと分子構造の関係を説明できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "電子供与基が δ を大きくすると誤解する",
+    "distractor_rationales": [
+      "不正解。供与基はシールドして δ を小さくする。",
+      "正解。求引基は脱シールドして δ を大きくする。",
+      "不正解。シールドされたプロトンは δ は小さい。",
+      "不正解。重水素は NMR 活性でない。"
+    ],
+    "basic_terms": "化学シフト：参照物質に対する共鳴周波数の相対値、脱シールド：外部磁場を感じやすい電子環境"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "化学",
+      "触媒化学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "化学",
+    "subdomain": "触媒化学",
+    "difficulty_initial": 900,
+    "question_text": "不均一触媒における構造敏感反応の特徴として正しいものはどれか。",
+    "choices": [
+      "反応速度は表面の特定の原子配列（ステップ、キンク等）に強く依存する",
+      "触媒活性は単原子分散サイトで最大化する",
+      "反応は均一触媒と同じ機構で進行する",
+      "反応速度は金属の比表面積に依存し、表面原子の配位環境は無関係"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "構造敏感反応は表面欠陥・配位の違いが活性に大きく影響する。",
+    "detailed_explanation": "構造敏感反応（例：NH₃ 合成）は特定の表面構造が必要。構造不敏感反応は比表面積にほぼ比例。",
+    "learning_objective": "不均一触媒の構造敏感・不敏感反応を区別して説明できる",
+    "cognitive_type": "誤解・境界",
+    "common_misconception": "触媒活性は比表面積だけで決まると考える",
+    "distractor_rationales": [
+      "正解。構造敏感反応の定義。",
+      "不正解。単原子サイトが常に最良とは限らない。",
+      "不正解。表面反応は均一触媒と機構が異なる。",
+      "不正解。構造不敏感反応の特徴に近い。"
+    ],
+    "basic_terms": "構造敏感反応：表面原子配位に活性が依存する反応、不均一触媒：固体表面で進行する触媒"
+  }
+]

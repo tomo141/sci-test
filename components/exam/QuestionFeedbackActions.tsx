@@ -61,8 +61,17 @@ export function QuestionFeedbackActions({ questionId, answered, activeFeedback, 
     );
   };
 
+  const anonymousSessionId = () => window.localStorage.getItem("sci-test-anonymous-session-id");
+
   const submitBadFeedback = async (reasons: string[]) => {
     const comment = feedbackComment.trim() || undefined;
+    if (activeFeedback === "good") {
+      await cancelExamFeedback({
+        questionId,
+        feedback: "good",
+        anonymousSessionId: anonymousSessionId()
+      });
+    }
     onFeedbackChange("bad");
     setBadModalOpen(false);
     setSelectedReasons([]);
@@ -72,7 +81,7 @@ export function QuestionFeedbackActions({ questionId, answered, activeFeedback, 
       feedback: "bad",
       reasons,
       comment,
-      anonymousSessionId: window.localStorage.getItem("sci-test-anonymous-session-id")
+      anonymousSessionId: anonymousSessionId()
     });
   };
 
@@ -82,15 +91,22 @@ export function QuestionFeedbackActions({ questionId, answered, activeFeedback, 
       await cancelExamFeedback({
         questionId,
         feedback: "good",
-        anonymousSessionId: window.localStorage.getItem("sci-test-anonymous-session-id")
+        anonymousSessionId: anonymousSessionId()
       });
       return;
+    }
+    if (activeFeedback === "bad") {
+      await cancelExamFeedback({
+        questionId,
+        feedback: "bad",
+        anonymousSessionId: anonymousSessionId()
+      });
     }
     onFeedbackChange("good");
     await submitExamFeedback({
       questionId,
       feedback: "good",
-      anonymousSessionId: window.localStorage.getItem("sci-test-anonymous-session-id")
+      anonymousSessionId: anonymousSessionId()
     });
   };
 
@@ -98,12 +114,10 @@ export function QuestionFeedbackActions({ questionId, answered, activeFeedback, 
     if (reviewed) {
       removeFromReviewList(questionId);
       setReviewed(false);
-      if (activeFeedback === "review") onFeedbackChange(null);
       return;
     }
     addToReviewList(questionId);
     setReviewed(true);
-    onFeedbackChange("review");
   };
 
   const handleBadClick = () => {
@@ -112,7 +126,7 @@ export function QuestionFeedbackActions({ questionId, answered, activeFeedback, 
       void cancelExamFeedback({
         questionId,
         feedback: "bad",
-        anonymousSessionId: window.localStorage.getItem("sci-test-anonymous-session-id")
+        anonymousSessionId: anonymousSessionId()
       });
       return;
     }
@@ -130,7 +144,7 @@ export function QuestionFeedbackActions({ questionId, answered, activeFeedback, 
         <FeedbackButton active={activeFeedback === "bad"} onClick={handleBadClick}>
           👎️ 悪問
         </FeedbackButton>
-        <FeedbackButton active={reviewed || activeFeedback === "review"} onClick={handleReview}>
+        <FeedbackButton active={reviewed} onClick={handleReview}>
           🔖 あとで復習
         </FeedbackButton>
       </div>

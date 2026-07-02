@@ -5,15 +5,16 @@ import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { loadReviewList, removeFromReviewList, type ReviewListItem } from "@/src/lib/exam/reviewList";
-import { useQuestionBank } from "@/components/exam/useQuestionBank";
+import { useReviewQuestions } from "@/components/exam/useReviewQuestions";
 
 export function ReviewListSection() {
-  const { getById } = useQuestionBank();
   const [items, setItems] = useState<ReviewListItem[]>([]);
 
   useEffect(() => {
     setItems(loadReviewList());
   }, []);
+
+  const { getById, loaded } = useReviewQuestions(items.map((item) => item.questionId));
 
   const handleRemove = (questionId: string) => {
     setItems(removeFromReviewList(questionId));
@@ -28,6 +29,10 @@ export function ReviewListSection() {
       {items.length === 0 ? (
         <p className="rounded-2xl bg-[var(--color-primary-50)] p-4 text-sm font-bold leading-7 text-[var(--color-ink-soft)]">
           腕試し受験中に「🔖 あとで復習」を押した問題がここに表示されます。
+        </p>
+      ) : !loaded ? (
+        <p className="rounded-2xl bg-[var(--color-primary-50)] p-4 text-sm font-bold leading-7 text-[var(--color-ink-soft)]">
+          復習リストを読み込んでいます…
         </p>
       ) : (
         <div className="grid gap-3">

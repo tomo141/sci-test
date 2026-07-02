@@ -1,0 +1,177 @@
+[
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "医歯薬学",
+      "生理学",
+      "batch50",
+      "L500"
+    ],
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "difficulty_initial": 500,
+    "question_text": "骨格筋細胞のアクションポテンシャル伝播に必須な構造はどれか。",
+    "choices": [
+      "T管（横小管）系",
+      "シナプス小胞",
+      "ミトコンドリア",
+      "核小体"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "T管が興奮を筋原線維内部へ伝え、興奮-収縮連関を成立させる。",
+    "detailed_explanation": "T管は細胞膜の陥入で SR 近傍へ脱分極を伝え Ca²⁺ 放出を誘発。",
+    "learning_objective": "骨格筋の興奮-収縮連関の構造基盤を説明できる",
+    "cognitive_type": "原理・因果",
+    "common_misconception": "アクションポテンシャルが細胞膜上だけで完結すると誤解する",
+    "distractor_rationales": [
+      "正解。興奮を筋内部へ伝える構造。",
+      "不正解。神経終末の構造。",
+      "不正解。エネルギー代謝 organelle。",
+      "不正解。核内の構造。"
+    ],
+    "basic_terms": "T管：骨格筋の横小管系、興奮-収縮連関：電気興奮が収縮に結びつく機序"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "医歯薬学",
+      "解剖学",
+      "batch50",
+      "L600"
+    ],
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "difficulty_initial": 600,
+    "question_text": "自律神経系において、交感神経の節前線維が脊髄からどこへ出るかとして正しいのはどれか。",
+    "choices": [
+      "脳幹",
+      "仙髄",
+      "頸髄 C1〜C2",
+      "胸腰髄（T1〜L2/L3）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "交感神経の節前線維は胸腰髄側角から出る。",
+    "detailed_explanation": "交感神経節前線維は T1〜L2/L3 側角から。副交感は脳神経核・仙髄 S2〜4。",
+    "learning_objective": "交感・副交感神経の中枢起源を区別できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "交感神経が脳幹から直接出ると誤解する",
+    "distractor_rationales": [
+      "不正解。副交感の一部は脳幹。",
+      "不正解。副交感の仙髄部。",
+      "不正解。範囲が狭すぎる。",
+      "正解。交感神経の節前線維の出所。"
+    ],
+    "basic_terms": "交感神経：闘争・逃避反応に関与、節前線維：中枢から神経節へ至る線維"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "医歯薬学",
+      "薬理学",
+      "batch50",
+      "L700"
+    ],
+    "domain": "医歯薬学",
+    "subdomain": "薬理学",
+    "difficulty_initial": 700,
+    "question_text": "β遮断薬の主な作用機序として最も適切なものはどれか。",
+    "choices": [
+      "アンジオテンシン変換酵素を阻害する",
+      "ヒスタミン H1 受容体を遮断する",
+      "βアドレナリン受容体を遮断してカテコールアミン作用を抑制する",
+      "アセチルコリンエステラーゼを阻害する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "β遮断薬はβ受容体を競合的に遮断し、心拍数・収縮力を低下させる。",
+    "detailed_explanation": "プロプラノロール等はβ1/β2 受容体を遮断。AChE 阻害は抗コリンエステラーゼ、ACE 阻害は降圧、H1 遮断は抗ヒスタミン。",
+    "learning_objective": "主要薬理クラスの作用点を区別できる",
+    "cognitive_type": "基本的な適用",
+    "common_misconception": "β遮断薬を ACE 阻害薬と混同する",
+    "distractor_rationales": [
+      "不正解。ACE 阻害薬の機序。",
+      "不正解。抗アレルギー薬の機序。",
+      "正解。β受容体遮断。",
+      "不正解。コリン作動性薬の機序。"
+    ],
+    "basic_terms": "β遮断薬：βアドレナリン受容体拮抗薬、カテコールアミン：アドレナリン・ノルアドレナリン"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "医歯薬学",
+      "免疫学",
+      "batch50",
+      "L800"
+    ],
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "difficulty_initial": 800,
+    "question_text": "補体システムの古典経路（classical pathway）の活性化に直接関与するのはどれか。",
+    "choices": [
+      "Toll様受容体による IL-2 産生",
+      "抗原-抗体複合体による C1 活性化",
+      "マンノース結合レクチンによる C4 活性化",
+      "細菌リポ多糖による C3 直接活性化"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "古典経路は IgM/IgG と抗原が結合した複合体が C1 を活性化する。",
+    "detailed_explanation": "古典経路：Ag-Ab → C1 → C4,C2 → C3 変換酵素。レクチン経路はマンノース結合、代替経路は C3 自発水解。",
+    "learning_objective": "補体3経路の開始因子を区別できる",
+    "cognitive_type": "比較・分類",
+    "common_misconception": "すべての補体経路が抗体から始まると誤解する",
+    "distractor_rationales": [
+      "不正解。獲得免疫のシグナル。",
+      "正解。古典経路の開始。",
+      "不正解。レクチン経路の開始。",
+      "不正解。代替経路の特徴。"
+    ],
+    "basic_terms": "補体：血清タンパク質カスケード、古典経路：抗体依存性補体活性化"
+  },
+  {
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "source_url": "",
+    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "tags": [
+      "医歯薬学",
+      "分子腫瘍学",
+      "batch50",
+      "L900"
+    ],
+    "domain": "医歯薬学",
+    "subdomain": "分子腫瘍学",
+    "difficulty_initial": 900,
+    "question_text": "腫瘍抑制遺伝子 p53 の主な機能として最も適切なものはどれか。",
+    "choices": [
+      "DNA損傷時の細胞周期停止またはアポトーシス誘導",
+      "細胞周期を無条件に促進する",
+      "常に活性型チロシンキナーゼとして機能する",
+      "テロメラーゼを構成活性化する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "p53 はゲノム監視因子として損傷時に G1/S 停止やアポトーシスを誘導する。",
+    "detailed_explanation": "p53 変異は多くのがんで見られる。オンコジーン（例：Ras）は増殖促進、テロメラーゼ活性化は不死化に関与。",
+    "learning_objective": "腫瘍抑制遺伝子とオンコジーンの機能を区別できる",
+    "cognitive_type": "誤解・境界",
+    "common_misconception": "p53 をオンコジーンと混同する",
+    "distractor_rationales": [
+      "正解。p53 のゲノム監視機能。",
+      "不正解。オンコジーン的機能。",
+      "不正解。キナーゼではない。",
+      "不正解。テロメラーゼ活性化は別機構。"
+    ],
+    "basic_terms": "p53：腫瘍抑制遺伝子、オンコジーン：がん化を促進する遺伝子"
+  }
+]
