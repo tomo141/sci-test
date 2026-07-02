@@ -2,8 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { QuestionFeedbackKind } from "@/src/lib/exam/feedback";
-import Link from "next/link";
-import { SiteHeader } from "@/components/layout/SiteHeader";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
@@ -456,7 +454,6 @@ export default function ExamPage() {
   if (!sessionReady || questionLoading) {
     return (
       <>
-        <SiteHeader />
         <main className="mx-auto max-w-3xl px-4 py-16 text-center">
           <AppCard>
             <p className="text-sm font-black text-[var(--color-primary-700)]">問題データを準備中です</p>
@@ -486,7 +483,6 @@ export default function ExamPage() {
   if (questionError || !currentQuestion) {
     return (
       <>
-        <SiteHeader />
         <main className="mx-auto max-w-3xl px-4 py-16 text-center">
           <AppCard>
             <h1 className="text-2xl font-black">問題を読み込めませんでした</h1>
@@ -503,12 +499,8 @@ export default function ExamPage() {
 
   return (
     <>
-      <SiteHeader compact />
       <main className="page-container py-8">
-        <div className="mb-5 flex items-center justify-between gap-4">
-          <Link href="/" className="text-sm font-bold text-[var(--color-primary-700)]">
-            ← 戻る
-          </Link>
+        <div className="mb-5 flex justify-end">
           <AppButton variant="ghost" onClick={() => void restartFromBeginning()}>
             最初からやり直す
           </AppButton>

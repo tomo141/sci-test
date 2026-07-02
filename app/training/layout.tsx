@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 
 export const metadata: Metadata = {
   title: "トレーニング",
@@ -14,5 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function TrainingLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <SiteHeaderWithAuth />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 
 export const metadata: Metadata = {
   title: "腕試し受験",
@@ -14,5 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function ExamLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <SiteHeaderWithAuth />
+      {children}
+    </>
+  );
 }
