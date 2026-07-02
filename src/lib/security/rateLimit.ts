@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
+import { isUpstashConfigured } from "@/src/lib/security/config";
 
 type LimitConfig = {
   requests: number;
@@ -8,10 +9,6 @@ type LimitConfig = {
 };
 
 const memoryBuckets = new Map<string, { count: number; resetAt: number }>();
-
-function isUpstashConfigured() {
-  return Boolean(process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN);
-}
 
 function getRedisLimiter(scope: string, config: LimitConfig) {
   const redis = Redis.fromEnv();

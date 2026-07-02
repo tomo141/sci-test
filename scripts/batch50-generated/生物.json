@@ -1,177 +1,1802 @@
 [
   {
+    "domain": "生物",
+    "subdomain": "細胞",
+    "question_text": "原核細胞と真核細胞の最も重要な違いはどれか。",
+    "choices": [
+      "原核細胞は核膜で囲まれた核を持たず、真核細胞は核膜で囲まれた核を持つ",
+      "原核細胞はリボソームを持たず、真核細胞だけがリボソームを持つ",
+      "原核細胞はDNAを持たず、真核細胞だけがDNAを持つ",
+      "原核細胞は細胞壁を持ち、真核細胞は細胞壁を持たない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "原核細胞は核膜が存在せず遺伝物質が細胞質に裸で存在しますが、真核細胞は核膜で囲まれた核を持ちます。",
+    "detailed_explanation": "原核細胞（bacteria・古細菌など）と真核細胞の最大の違いは核膜の有無です。原核細胞では染色体DNAが核膜に包まれず細胞質（ヌクレオイド領域）に存在します。両者ともにDNAとリボソームを持ちます（原核細胞のリボソームは70S、真核細胞は80S）。また細胞壁は植物・菌類・多くの原核生物が持ちますが動物細胞では欠如するため、細胞壁の有無だけでは原核・真核の区別はできません。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "原核細胞と真核細胞の構造的違いを核膜の有無を基準に説明できる",
+    "common_misconception": "原核細胞にはDNAやリボソームが存在しないと誤解する",
+    "distractor_rationales": [
+      "正解。核膜の有無が原核生物と真核生物を区別する最も基本的な特徴です。",
+      "不正解。原核細胞も70Sリボソームを持ち、タンパク質合成を行います。",
+      "不正解。原核細胞も遺伝情報としてDNAを持ちます。核膜がないだけでDNA自体は存在します。",
+      "不正解。細胞壁は植物・菌類・原核生物が持ちますが、動物（真核生物）にも細胞壁を持たないものが多く、この違いで原核・真核を定義するのは不適切です。"
+    ],
+    "basic_terms": "原核細胞（prokaryote）：核膜を持たない細胞。真核細胞（eukaryote）：核膜で囲まれた核を持つ細胞。ヌクレオイド：原核細胞においてDNAが局在する領域。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝",
+    "question_text": "生物を5つの界に分類する「五界説」に含まれない界はどれか。",
+    "choices": [
+      "菌界（Fungi）",
+      "ウイルス界（Viralia）",
+      "動物界（Animalia）",
+      "植物界（Plantae）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "五界説はモネラ・原生生物・菌・植物・動物の5界からなり、ウイルスは細胞を持たないため含まれません。",
+    "detailed_explanation": "ホイッタカー（1969年）の五界説では生物をモネラ界（原核生物）・原生生物界（単細胞真核生物など）・菌界（キノコ・カビなど）・植物界・動物界の5つに分類します。ウイルスは細胞構造を持たず自己複製に宿主細胞を必要とする非細胞性の存在であり、生物の分類体系（五界説・三ドメイン説いずれにも）には含まれません。現在は三ドメイン説（細菌・古細菌・真核生物）が広く用いられていますが、五界説は生物多様性の基礎として教育上重要です。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "五界説の内容とウイルスが生物分類に含まれない理由を説明できる",
+    "common_misconception": "ウイルスを一つの生物界として分類する",
+    "distractor_rationales": [
+      "不正解。菌界（Fungi）は五界説に含まれる正式な界の一つです。動物界・植物界と独立した界として扱われます。",
+      "正解。ウイルスは細胞構造を持たないため生物の界には分類されず、五界説にウイルス界は存在しません。",
+      "不正解。動物界（Animalia）は五界説に含まれる正式な界の一つです。",
+      "不正解。植物界（Plantae）は五界説に含まれる正式な界の一つです。"
+    ],
+    "basic_terms": "五界説（five-kingdom system）：生物をモネラ・原生生物・菌・植物・動物の5界に分類する体系。ウイルス：細胞構造を持たず宿主細胞内でのみ増殖できる非細胞性の感染性因子。三ドメイン説：現代的な分類体系（細菌・古細菌・真核生物）。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生態",
+    "question_text": "動物細胞にあって植物細胞には通常ない構造はどれか。",
+    "choices": [
+      "葉緑体",
+      "液胞",
+      "中心体",
+      "細胞壁"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "中心体は動物細胞の分裂時に紡錘糸を形成するが、高等植物細胞には通常ない。",
+    "detailed_explanation": "植物細胞は細胞壁・葉緑体・大きな液胞を持つ。中心体は動物細胞や低等植物の分裂に関与するが、開花植物の体細胞には一般に中心体がない。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "動物細胞と植物細胞の主要構造の違いを説明できる",
+    "common_misconception": "植物細胞にも動物細胞と同じ小器官がすべて揃っていると思い込む",
+    "distractor_rationales": [
+      "不正解。植物細胞に特有の構造。",
+      "不正解。植物細胞に大きく発達しやすい。",
+      "正解。動物細胞に典型的な構造。",
+      "不正解。植物細胞に特有の構造。"
+    ],
+    "basic_terms": "中心体：中心粒を含み紡錘糸形成に関与、細胞壁：植物細胞外側の支持構造",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生態",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "進化",
+    "question_text": "子が親に似る主な理由として最も適切なものはどれか。",
+    "choices": [
+      "同じ食事をするから",
+      "同じ気候で育つから",
+      "親の行動を真似するから",
+      "親から受け継いだ遺伝情報に基づく"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "遺伝子にコードされた情報が形質の基礎となる。",
+    "detailed_explanation": "親から子へ DNA が伝わり、その情報に基づいてタンパク質合成や発生が進むため子は親に似る。環境や学習も影響するが、遺伝が基本である。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "遺伝と形質の関係を説明できる",
+    "common_misconception": "似るのは環境や真似が主因だと考える",
+    "distractor_rationales": [
+      "不正解。食事は影響しうるが主因ではない。",
+      "不正解。環境は表現型に影響するが遺伝が基礎。",
+      "不正解。行動の模倣は一部の動物に限られる。",
+      "正解。遺伝情報の継承が基本。"
+    ],
+    "basic_terms": "遺伝子：形質を決める DNA 上の情報単位、DNA：遺伝情報を担う核酸",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "進化",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "question_text": "草原の食物連鎖で、草を食べるウサギはどの栄養段階に当たるか。",
+    "choices": [
+      "一次消費者",
+      "二次消費者",
+      "分解者",
+      "生産者"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "植物を食べる動物は一次消費者（草食動物）である。",
+    "detailed_explanation": "生産者（草）のエネルギーを直接摂取するのが一次消費者。ウサギは草食動物として一次消費者に分類される。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "食物連鎖の栄養段階を正しく分類できる",
+    "common_misconception": "動物はすべて消費者だが段階を区別しない",
+    "distractor_rationales": [
+      "正解。植物を直接食べる草食動物。",
+      "不正解。一次消費者を食べる肉食動物の段階。",
+      "不正解。有機物を分解する生物。",
+      "不正解。光合成する植物の段階。"
+    ],
+    "basic_terms": "生産者：有機物を作る生物、一次消費者：生産者を食べる消費者",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "分子生物学",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生化学",
+    "question_text": "次のうち、進化の証拠として化石が示すことはどれか。",
+    "choices": [
+      "現在生きる個体の遺伝子型",
+      "過去に存在した生物の形態と環境の変化",
+      "個体が一生のうちに獲得した形質の遺伝",
+      "同一個体内での突然変異の頻度"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "化石は過去の生物の記録であり、種の変遷や絶滅を示す。",
+    "detailed_explanation": "地層中の化石は古い生物の形態を保存し、時間とともに生物群が変化したことを示す進化の証拠となる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "化石が進化の証拠となる理由を説明できる",
+    "common_misconception": "化石は現在の生物と無関係だと考える",
+    "distractor_rationales": [
+      "不正解。現在の遺伝子型は化石から直接は分からない。",
+      "正解。化石が示す過去の生物記録。",
+      "不正解。ラマルク的な獲得形質の誤概念。",
+      "不正解。個体内変異は進化の直接証拠ではない。"
+    ],
+    "basic_terms": "化石：過去の生物の遺留物、進化：生物集団の遺伝的構成が世代を超えて変化すること",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生化学",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "question_text": "植物細胞において光合成が行われる細胞小器官はどれか。",
+    "choices": [
+      "リソソーム",
+      "ミトコンドリア",
+      "葉緑体",
+      "ゴルジ体"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "光合成は葉緑体のチラコイド膜とストロマで行われます。",
+    "detailed_explanation": "葉緑体はチラコイド（グラナを形成する偏平な膜構造）とストロマ（基質）から構成されます。光反応はチラコイク膜上で行われ（光エネルギーによるATP・NADPHの生成）、暗反応（カルビン回路）はストロマで進行してCO₂が固定され有機物（糖）が合成されます。ミトコンドリアは細胞呼吸（ATP産生）の場であり、ゴルジ体は分泌タンパク質の修飾・輸送を担い、リソソームは加水分解酵素による細胞内消化を行います。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "光合成が行われる細胞小器官と反応の場所（チラコイド・ストロマ）を説明できる",
+    "common_misconception": "光合成と細胞呼吸を混同し、ミトコンドリアで光合成が行われると誤解する",
+    "distractor_rationales": [
+      "不正解。リソソームは酸性加水分解酵素を含み、不要な細胞内物質を分解します。",
+      "不正解。ミトコンドリアは細胞呼吸（酸化的リン酸化によるATP産生）を担います。光合成の場ではありません。",
+      "正解。葉緑体のチラコイク膜で光反応、ストロマでカルビン回路が進行します。",
+      "不正解。ゴルジ体はタンパク質の糖鎖修飾と細胞外への分泌に関与します。"
+    ],
+    "basic_terms": "葉緑体（chloroplast）：光合成を行う二重膜の細胞小器官。チラコイク（thylakoid）：光反応が行われる膜系。ストロマ（stroma）：暗反応（カルビン回路）が行われる基質。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "免疫学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "神経科学",
+    "question_text": "真核細胞においてATPを大量に産生する細胞小器官はどれか。",
+    "choices": [
+      "ゴルジ体（Golgi apparatus）",
+      "粗面小胞体（rough endoplasmic reticulum）",
+      "核（nucleus）",
+      "ミトコンドリア（mitochondria）"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ミトコンドリアは酸化的リン酸化によってATPを大量に産生し、細胞のエネルギー工場と呼ばれます。",
+    "detailed_explanation": "ミトコンドリアは内膜のクリステ上に電子伝達系とATP合成酵素（F₀F₁-ATPase）を持ち、酸化的リン酸化によって1分子のグルコースから最大約30〜32分子のATPを産生します。核はDNA・RNAの合成と遺伝情報の管理を担います。ゴルジ体はタンパク質の糖鎖修飾・ソーティング・分泌を担い、粗面小胞体は分泌タンパク質や膜タンパク質の合成・折り畳みに関与します。これらの細胞小器官は大量のATPを生産しません。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ミトコンドリアのATP産生機能と他の細胞小器官の機能を区別して説明できる",
+    "common_misconception": "核がエネルギー産生の中心と誤解する",
+    "distractor_rationales": [
+      "不正解。ゴルジ体はタンパク質の翻訳後修飾（糖鎖付加など）と小胞輸送を担います。",
+      "不正解。粗面小胞体はリボソームを持ち分泌タンパク質などの合成を担いますが、大量のATPを産生しません。",
+      "不正解。核は遺伝情報（DNA）の保管・複製・転写の場ですが、ATPの大量産生は行いません。",
+      "正解。ミトコンドリアは酸化的リン酸化により真核細胞の主要なATP産生を担うエネルギー工場です。"
+    ],
+    "basic_terms": "ミトコンドリア：二重膜を持つ真核細胞の細胞小器官で酸化的リン酸化によりATPを産生。クリステ（cristae）：ミトコンドリア内膜の折り畳み構造で電子伝達系が局在。ATP合成酵素（F₀F₁-ATPase）：プロトン勾配を利用してATPを合成する酵素複合体。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "神経科学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "question_text": "病原体に再感染したとき、より速く強い免疫応答が起きる主な理由はどれか。",
+    "choices": [
+      "記憶細胞が存在するため",
+      "白血球の数が常に最大になるため",
+      "皮膚のバリアが厚くなるため",
+      "体温が上がり病原体が死ぬため"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "初回感染で形成された記憶 B 細胞・記憶 T 細胞が再感染時に迅速に応答する。",
+    "detailed_explanation": "獲得免疫では初回抗原刺激で記憶細胞が形成され、再曝露時に速やかな二次応答が起こる。これがワクチンの原理でもある。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "二次免疫応答の仕組みを説明できる",
+    "common_misconception": "再感染時も初回と同じ速さで応答すると考える",
+    "distractor_rationales": [
+      "正解。記憶細胞による二次応答。",
+      "不正解。白血球数の恒常的増加ではない。",
+      "不正解。物理的バリアの変化が主因ではない。",
+      "不正解。発熱は副次的現象。"
+    ],
+    "basic_terms": "記憶細胞：再感染時に迅速応答するリンパ球、獲得免疫：抗原特異的な免疫",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞生物学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝学",
+    "question_text": "反射弧において、感覚刺激を運動反応につなぐ情報の流れとして正しいものはどれか。",
+    "choices": [
+      "中枢→感覚ニューロン→運動ニューロン→効果器",
+      "感覚ニューロン→中枢→運動ニューロン→効果器",
+      "運動ニューロン→感覚ニューロン→中枢→効果器",
+      "効果器→運動ニューロン→中枢→感覚ニューロン"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "刺激は感覚ニューロンで受け、中枢を経て運動ニューロンが効果器を動かす。",
+    "detailed_explanation": "反射弧は受容器→感覚ニューロン→（連合ニューロン）→運動ニューロン→効果器の順で情報が伝わる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "反射弧の情報の流れを説明できる",
+    "common_misconception": "運動ニューロンから感覚へ情報が戻ると誤る",
+    "distractor_rationales": [
+      "不正解。感覚入力が先。",
+      "正解。反射弧の標準的な経路。",
+      "不正解。方向が逆。",
+      "不正解。効果器は出力側。"
+    ],
+    "basic_terms": "反射弧：刺激から反応までの神経経路、効果器：筋肉や腺体など反応を起こす器官",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞",
+    "question_text": "次の細胞小器官と主な機能の組み合わせとして正しいものはどれか。",
+    "choices": [
+      "細胞核—ATP 合成",
+      "ゴルジ体—遺伝情報の複製",
+      "リボソーム—タンパク質合成",
+      "ミトコンドリア—光合成"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "リボソームは翻訳によりタンパク質を合成する。",
+    "detailed_explanation": "リボソームは mRNA を読み取りアミノ酸を結合する。ミトコンドリアは呼吸、細胞核は DNA 保持、ゴルジ体は分泌蛋白の修飾・輸送。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "主要細胞小器官の機能を正しく対応づけられる",
+    "common_misconception": "ミトコンドリアを光合成の場と混同する",
+    "distractor_rationales": [
+      "不正解。ATP 合成はミトコンドリア。",
+      "不正解。DNA 複製は核内。",
+      "正解。リボソームの機能。",
+      "不正解。光合成は葉緑体。"
+    ],
+    "basic_terms": "リボソーム：タンパク質合成の場、ゴルジ体：タンパク質の修飾と輸送",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝",
+    "question_text": "優性遺伝子と劣性遺伝子について、誤っている説明はどれか。",
+    "choices": [
+      "対立遺伝子は同じ遺伝子座の変異型である",
+      "優性・劣性は表現型の現れ方の関係である",
+      "ヘテロ接合でも優性形質が現れることがある",
+      "劣性遺伝子は常に有害である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "劣性遺伝子が常に有害とは限らず、キャリア状態で保たれることもある。",
+    "detailed_explanation": "劣性は対立遺伝子間の発現の優劣を示す用語であり、適応度の優劣ではない。劣性遺伝子も中性や有利な場合がある。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "優性・劣性の遺伝学的意味を正しく理解できる",
+    "common_misconception": "劣性＝悪い遺伝子と同一視する",
+    "distractor_rationales": [
+      "不正解。正しい説明。",
+      "不正解。正しい説明。",
+      "不正解。正しい説明。",
+      "正解。劣性が有害とは限らない。"
+    ],
+    "basic_terms": "優性：ヘテロ接合で表現型に現れる対立遺伝子、劣性：ホモ接合でないと表現型に現れない対立遺伝子",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生態",
+    "question_text": "生態系の食物連鎖において「生産者（producer）」に当たる生物群はどれか。",
+    "choices": [
+      "植物・藻類・シアノバクテリアなどの光合成生物",
+      "ミミズや菌類などの分解者（detritivores・decomposers）",
+      "バッタやチョウなどの植食性昆虫（一次消費者）",
+      "タカやヘビなどの高次消費者（三次以上の消費者）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "生産者とは光合成によって無機物から有機物を生成する独立栄養生物（植物・藻類など）です。",
+    "detailed_explanation": "生態系における栄養段階は生産者→一次消費者→二次消費者→…の順に成り立ちます。生産者（独立栄養生物）は太陽光エネルギーを利用して光合成でCO₂と水から有機物（糖など）を合成し、生態系全体のエネルギー基盤を作ります。植物・藻類・シアノバクテリアが代表例です。一次消費者（バッタなど植食動物）は生産者を食べる従属栄養生物です。分解者（菌類・細菌など）は有機物を無機物に分解し物質を循環させます。高次消費者は食物連鎖の上位にある従属栄養生物です。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "生態系の栄養段階（生産者・消費者・分解者）の定義と代表生物を説明できる",
+    "common_misconception": "分解者を生産者と混同する（分解者は有機物を分解するが光合成で有機物を生産しない）",
+    "distractor_rationales": [
+      "正解。植物・藻類・シアノバクテリアなどの光合成生物が生産者（独立栄養生物）であり、生態系のエネルギー基盤を担います。",
+      "不正解。分解者（菌類・細菌）は有機物を無機物に分解する役割を持ちますが、無機物から有機物を生産する生産者ではありません。",
+      "不正解。植食性昆虫（バッタなど）は生産者ではなく、植物を食べる一次消費者（従属栄養生物）です。",
+      "不正解。タカやヘビなどは食物連鎖の上位に位置する二次・三次消費者であり、生産者ではありません。"
+    ],
+    "basic_terms": "生産者（producer）：光合成により無機物から有機物を合成する独立栄養生物。消費者（consumer）：有機物を他の生物から摂取する従属栄養生物。分解者（decomposer）：死んだ有機物を無機物に分解する生物（菌類・細菌）。",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生態",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "進化",
+    "question_text": "森林で枯れ葉が土壌の有機物に変換される過程で中心的な役割を果たす生物群はどれか。",
+    "choices": [
+      "頂点捕食者",
+      "分解者",
+      "生産者",
+      "一次消費者"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "真菌や細菌などの分解者が有機物を無機物に戻す。",
+    "detailed_explanation": "分解者は枯死植物などの有機物を分解し、栄養塩を土壌に還元して物質循環を担う。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "生態系における分解者の役割を説明できる",
+    "common_misconception": "枯れ葉は自然に消えると考え分解者を見落とす",
+    "distractor_rationales": [
+      "不正解。食物連鎖の最上位。",
+      "正解。有機物の分解を担う。",
+      "不正解。光合成で有機物を作る。",
+      "不正解。植物を食べる。"
+    ],
+    "basic_terms": "分解者：死んだ有機物を分解する生物、物質循環：栄養素が生態系内を巡ること",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "進化",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "question_text": "自然選択と遺伝的浮動を区別する説明として正しいものはどれか。",
+    "choices": [
+      "浮動は大集団でを主成分とする起こる",
+      "自然選択は突然変異を生む",
+      "自然選択は適応度の差に基づく、浮動は偶然による",
+      "両者とも多くの場合適応を進める"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "自然選択は適応度差を、遺伝的浮動は偶然のサンプリングを反映する。",
+    "detailed_explanation": "自然選択は遺伝子頻度を適応度に応じて変える。遺伝的浮動は小集団などで偶然により頻度が変わる非適応的過程。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "自然選択と遺伝的浮動の違いを説明できる",
+    "common_misconception": "すべての進化は自然選択によると考える",
+    "distractor_rationales": [
+      "不正解。浮動は小集団で顕著。",
+      "不正解。突然変異は選択の前提。",
+      "正解。適応的 vs 非適応的な頻度変化。",
+      "不正解。浮動は適応を必ずしも進めない。"
+    ],
+    "basic_terms": "自然選択：適応度の高い形質が残る過程、遺伝的浮動：偶然による遺伝子頻度の変化",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "分子生物学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生化学",
+    "question_text": "転写と翻訳の関係について、誤っている説明はどれか。",
+    "choices": [
+      "mRNA は翻訳のテンプレートになる",
+      "転写は DNA から RNA を合成する",
+      "翻訳はリボソームで行われる",
+      "転写と翻訳は真核細胞で同一区画で同時に行われる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "真核細胞では転写は核、翻訳は細胞質で行われ時空間的に分離する。",
+    "detailed_explanation": "原核生物では転写・翻訳が同時進行するが、真核生物では核膜により転写と翻訳は分離される。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "真核と原核での転写・翻訳の違いを説明できる",
+    "common_misconception": "真核でも転写と翻訳が同時に核内で起こると誤解する",
+    "distractor_rationales": [
+      "不正解。正しい説明。",
+      "不正解。正しい説明。",
+      "不正解。正しい説明。",
+      "正解。真核では分離される。"
+    ],
+    "basic_terms": "転写：DNA から RNA を合成、翻訳：mRNA からタンパク質を合成",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生化学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "question_text": "酵素の「基質」とは何を指すか。",
+    "choices": [
+      "酵素が触媒する反応の反応物",
+      "酵素の補因子",
+      "反応の生成物",
+      "酵素自身の活性部位"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "基質は酵素が作用する特定の反応物分子である。",
+    "detailed_explanation": "酵素は基質を活性部位で認識し、結合定数と触媒効率（kcat）で反応を促進する。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "酵素反応における基質の定義を述べられる",
+    "common_misconception": "基質と生成物を混同する",
+    "distractor_rationales": [
+      "正解。酵素が作用する反応物。",
+      "不正解。補因子は補助分子。",
+      "不正解。生成物は反応の産物。",
+      "不正解。活性部位は酵素上の部位。"
+    ],
+    "basic_terms": "基質：酵素反応の反応物、活性部位：基質が結合する酵素上の部位",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "免疫学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "神経科学",
+    "question_text": "ワクチン接種が感染症を予防できる主な免疫学的機序はどれか。",
+    "choices": [
+      "病原体を体内から即座に排除する",
+      "抗原を認識した記憶細胞の形成",
+      "血液中の全抗体を永久に増加させる",
+      "自然免疫の物理的バリアを強化する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ワクチンは弱毒化抗原などで獲得免疫と記憶を誘導する。",
+    "detailed_explanation": "ワクチンは病原関連抗原を安全に提示し、特異的抗体産生と記憶 B/T 細胞を形成。実際の感染時に二次応答を可能にする。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ワクチンの免疫学的原理を説明できる",
+    "common_misconception": "ワクチンが即座に病原体を殺すと考える",
+    "distractor_rationales": [
+      "不正解。予防であり即時排除ではない。",
+      "正解。記憶免疫の誘導。",
+      "不正解。全抗体の永久増加ではない。",
+      "不正解。物理バリア強化が主ではない。"
+    ],
+    "basic_terms": "ワクチン：免疫記憶を誘導する抗原製剤、記憶細胞：再曝露時に迅速応答するリンパ球",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "神経科学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "question_text": "X染色体連鎖劣性遺伝について正しい記述はどれか。",
+    "choices": [
+      "女性はX染色体を1本持つため、男性より表現型の発現頻度が高い",
+      "保因者（キャリア）の女性は外見上この形質を発現する",
+      "この形質を持つ男性（XᵃY）の息子は、母親が非保因者（XX）の場合この形質を発現しない",
+      "この形質を持つ男性は息子全員にX染色体を通じて変異型遺伝子を伝える"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "X連鎖劣性形質を持つ男性（XᵃY）はX染色体を娘に伝えるため、非保因者の母を持つ息子には変異型Xを渡しません。",
+    "detailed_explanation": "X連鎖劣性遺伝では、男性（XY）はX染色体を1本しか持たないため劣性遺伝子が1つでも表現型に現れます（半接合体）。男性はXを娘に、Yを息子に伝えます。したがって表現型を持つ男性（XᵃY）の息子は父からYのみを受け取るため、母が非保因者であれば全員正常です。保因者の女性（XᵃX）は正常なX染色体が劣性遺伝子を補うため表現型を示しません。女性はX染色体を2本持つため、X連鎖劣性形質を発現するには両方のXに変異が必要で、男性より発現頻度は低くなります。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "X連鎖劣性遺伝の伝達様式（性別ごとの表現型頻度・親から子への伝達）を説明できる",
+    "common_misconception": "表現型を持つ父親から息子に形質が伝わると誤解する（X連鎖では父→息子への伝達はない）",
+    "distractor_rationales": [
+      "不正解。女性はX染色体を2本持つため、X連鎖劣性形質を発現するにはホモ接合（XᵃXᵃ）が必要で、男性より発現頻度は低くなります。",
+      "不正解。保因者（ヘテロ接合体：XᵃX）の女性は正常なX染色体により劣性遺伝子が補われ、外見上は形質を示しません。",
+      "正解。X連鎖遺伝では父親のXは娘にのみ伝わります。表現型を持つ男性（XᵃY）の息子は父からYのみ受け取るため、非保因者の母の下では形質を発現しません。",
+      "不正解。表現型を持つ男性（XᵃY）は息子にYを、娘にXᵃを伝えます。息子にはX染色体を伝えません。"
+    ],
+    "basic_terms": "X連鎖遺伝（X-linked inheritance）：遺伝子がX染色体上に存在する遺伝様式。半接合体（hemizygote）：X染色体を1本しか持たない男性など。保因者（キャリア）：劣性遺伝子をヘテロ接合で持ち表現型を示さない女性。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞生物学",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝学",
+    "question_text": "有糸分裂と減数分裂の比較として正しいものはどれか。",
+    "choices": [
+      "減数分裂は体細胞の増殖に用いられる",
+      "有糸分裂では染色体数が半減する",
+      "減数分裂では交差が起こらない",
+      "有糸分裂は2個の相同染色体セットを持つ子細胞を作る"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "有糸分裂は2n→2n、減数分裂は2n→n で配偶子形成に使われる。",
+    "detailed_explanation": "有糸分裂は成長・再生用で子細胞は親と同じ染色体数。減数分裂は相同染色体の交差と2回分裂で染色体数半減。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "有糸分裂と減数分裂の目的と結果を比較できる",
+    "common_misconception": "減数分裂も体細胞分裂だと混同する",
+    "distractor_rationales": [
+      "不正解。減数分裂は配偶子形成用。",
+      "不正解。有糸分裂は半減しない。",
+      "不正解。減数分裂で交差が起こる。",
+      "正解。有糸分裂は染色体数維持。"
+    ],
+    "basic_terms": "有糸分裂：染色体数を維持する体細胞分裂、減数分裂：染色体数を半減する分裂",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝学",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞",
+    "question_text": "性連鎖遺伝について、誤っている説明はどれか。",
+    "choices": [
+      "性染色体上の遺伝子は常に雌雄で同じ発現パターンを示す",
+      "色覚異常は X 連鎖劣性の例である",
+      "母から X 連鎖遺伝子を受け継ぐ",
+      "X 連鎖遺伝では男性が罹患しやすいことがある"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "X 連鎖遺伝子は雌雄でコピー数や不活化の影響を受け発現が異なる。",
+    "detailed_explanation": "男性は X を1本のみ持つため X 連鎖劣性に罹患しやすい。女性は X 不活化によりモザイク発現となる場合がある。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "性連鎖遺伝の特徴と雌雄差を説明できる",
+    "common_misconception": "性染色体上の遺伝子は常に同様に発現すると考える",
+    "distractor_rationales": [
+      "正解。雌雄で発現パターンは異なりうる。",
+      "不正解。正しい例。",
+      "不正解。母から X を受け継ぐ。",
+      "不正解。正しい説明。"
+    ],
+    "basic_terms": "X 連鎖：X 染色体上の遺伝子の遺伝、X 不活化：雌で一方の X を転写抑制",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝",
+    "question_text": "能動輸送の定義として正しいものはどれか。",
+    "choices": [
+      "大きな粒子が細胞膜で融合する",
+      "ATP などのエネルギーを使い濃度勾配に逆らって物質を移動させる",
+      "濃度勾配に従って物質が拡散する",
+      "水分子が半透膜を通過する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "能動輸送はエネルギー消費により低濃度側へ物質を集める。",
+    "detailed_explanation": "ナトリウム・カリウムポンプなどは ATP 水解によりイオンを濃度勾配に逆らって輸送する。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "能動輸送と受動輸送を区別できる",
+    "common_misconception": "すべての膜輸送が受動的だと考える",
+    "distractor_rationales": [
+      "不正解。胞飲・胞吐の説明。",
+      "正解。エネルギー依存の逆勾配輸送。",
+      "不正解。受動輸送（単純拡散）。",
+      "不正解。浸透の説明。"
+    ],
+    "basic_terms": "能動輸送：エネルギーを使った物質輸送、濃度勾配：濃度の高低差",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生態",
+    "question_text": "DNA 複製が半保存的である理由はどれか。",
+    "choices": [
+      "2本の子 DNA がともに全新合成である",
+      "複製は RNA のみで行われる",
+      "各子 DNA は親鎖1本と新合成鎖1本からなる",
+      "親 DNA が完全に分解されてから再合成される"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "メセルソン・スタールの実験が半保存的複製を示した。",
+    "detailed_explanation": "複製フォークで各親鎖がテンプレートとなり、子 DNA 分子は旧鎖と新鎖のハイブリッドとなる。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "半保存的複製の意味を説明できる",
+    "common_misconception": "親 DNA が全分解されてから作られると考える",
+    "distractor_rationales": [
+      "不正解。全保存的複製。",
+      "不正解。DNA 複製は DNA ポリメラーゼが担う。",
+      "正解。半保存的複製の定義。",
+      "不正解。分散複製の誤概念。"
+    ],
+    "basic_terms": "半保存的複製：各子 DNA に親鎖1本が残る複製、複製フォーク：複製が進行する Y 字型部位",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生態",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "進化",
+    "question_text": "人口が環境収容力 K に近づくと増加率が低下する成長を最もよく表すモデルはどれか。",
+    "choices": [
+      "指数成長",
+      "線形成長",
+      "ランダムウォーク",
+      "ロジスティック成長"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ロジスティック成長は資源制限により増加率が K に近づくと小さくなる。",
+    "detailed_explanation": "dN/dt = rN(1−N/K) で N が K に近づくと (1−N/K)→0 となり増加が鈍化する。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "ロジスティック成長モデルを適用できる",
+    "common_misconception": "人口は常に指数成長すると考える",
+    "distractor_rationales": [
+      "不正解。資源制限を無視。",
+      "不正解。一定速度の増加。",
+      "不正解。人口動態モデルではない。",
+      "正解。環境収容力を考慮した成長。"
+    ],
+    "basic_terms": "環境収容力 K：環境が支えうる最大個体数、ロジスティック成長：K による制限付き成長",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "進化",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "question_text": "酵素と基質の結合を説明する「誘導適合モデル（induced-fit model）」として最も適切な記述はどれか。",
+    "choices": [
+      "基質が活性部位に近づくと酵素の立体構造が変化して基質を包み込む形に適合する",
+      "酵素は基質と同じ化学構造を持つためファン・デル・ワールス力で結合する",
+      "基質の構造はどのような酵素の活性部位にも適合できる柔軟性を持つ",
+      "酵素の活性部位はつねに固定した剛体構造を持ち基質を受け入れる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "誘導適合モデルでは、基質の結合に伴って酵素の活性部位が形状を変えて基質を包み込みます。",
+    "detailed_explanation": "フィッシャーの「鍵と鍵穴モデル（lock-and-key model）」が活性部位を固定構造とするのに対し、コシュランドが提唱した誘導適合モデル（induced-fit model）では、活性部位は柔軟な構造を持ち、基質が結合する際に酵素の立体構造（コンフォメーション）が変化して基質を包み込みます。この構造変化によって触媒反応に適した配向が形成されます。現代的な酵素学では誘導適合モデルの方がより実際の挙動をよく説明するとされています。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "誘導適合モデルの概念を説明し鍵と鍵穴モデルと区別できる",
+    "common_misconception": "鍵と鍵穴モデルと誘導適合モデルを混同する",
+    "distractor_rationales": [
+      "正解。誘導適合モデルでは基質の結合に伴い酵素の活性部位の構造が変化して基質を包み込みます。",
+      "不正解。酵素は基質と同一構造ではなく、触媒作用によって基質の活性化エネルギーを下げる異なる分子です。",
+      "不正解。基質特異性の高い酵素はすべての基質と結合するわけではなく、特定の基質のみと結合します。",
+      "不正解。これは誘導適合モデルではなく、フィッシャーの「鍵と鍵穴モデル」の説明です。"
+    ],
+    "basic_terms": "活性部位（active site）：基質が結合し反応が起こる酵素の特定領域。誘導適合（induced fit）：基質結合時に酵素の構造が変化して最適な形状に適合するモデル。基質特異性：酵素が特定の基質のみに作用する性質。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "分子生物学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生化学",
+    "question_text": "遺伝子発現調節について、誤っている説明はどれか。",
+    "choices": [
+      "転写レベルでの調節が最も一般的である",
+      "すべての遺伝子は常に最大速度で転写される",
+      "翻訳後修飾も発現調節に関与する",
+      "エピジェネティック修飾が発現に影響する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "遺伝子発現は細胞種・状態に応じて厳密に調節され、常に最大ではない。",
+    "detailed_explanation": "転写因子、クロマチン修飾、miRNA など多層的調節があり、必要な遺伝子のみが適切なタイミングで発現する。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "遺伝子発現の多層的調節を理解できる",
+    "common_misconception": "全遺伝子が常に発現していると考える",
+    "distractor_rationales": [
+      "不正解。正しい説明。",
+      "正解。常に最大転写ではない。",
+      "不正解。正しい説明。",
+      "不正解。正しい説明。"
+    ],
+    "basic_terms": "転写調節：転写開始の制御、エピジェネティクス：DNA 配列を変えず発現を制御",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生化学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "question_text": "解糖系（グリコリシス）の最終産物（ピルビン酸まで）として正しいものはどれか。",
+    "choices": [
+      "2分子のグルコースから1分子のピルビン酸",
+      "グルコースから直接 CO₂ のみ",
+      "1分子のグルコースから2分子のピルビン酸",
+      "1分子のグルコースから1分子のピルビン酸"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "解糖系はグルコースを2分子のピルビン酸に分解し、ATP と NADH も産生する。",
+    "detailed_explanation": "解糖系10段階反応でグルコース（6炭素）が2つの3炭素糖に分割され、最終的に2ピルビン酸となる。正味 ATP 2分子（または基質レベルリン酸化で4）を産生。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "解糖系の基質と産物を正確に述べられる",
+    "common_misconception": "グルコース1分子からピルビン酸1分子と考える",
+    "distractor_rationales": [
+      "不正解。基質の数が誤り。",
+      "不正解。解糖では CO₂ は出ない。",
+      "正解。解糖系の産物は2ピルビン酸。",
+      "不正解。炭素の分割を考慮していない。"
+    ],
+    "basic_terms": "解糖系：細胞質でのグルコース分解、ピルビン酸：解糖系の終産物",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "免疫学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "神経科学",
+    "question_text": "MHC クラス I 分子が提示する抗原ペプチドの主な細胞内由来はどれか。",
+    "choices": [
+      "細胞外から取り込んだ病原体",
+      "リンパ節で濃縮された抗体",
+      "血清中の補体タンパク質",
+      "細胞質で分解されたタンパク質"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "MHC I は細胞質タンパク質由来ペプチドを CD8+ T 細胞に提示する。",
+    "detailed_explanation": "プロテアソームで分解されたペプチドが TAP により内質網へ運ばれ MHC I に結合し、ウイルス感染細胞などを CTL に提示する。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "MHC I と MHC II の抗原提示経路の違いを説明できる",
+    "common_misconception": "MHC I と II が同じ抗原を提示すると混同する",
+    "distractor_rationales": [
+      "不正解。MHC II の経路。",
+      "不正解。抗体は提示抗原ではない。",
+      "不正解。補体は提示系とは別。",
+      "正解。MHC I は細胞内由来。"
+    ],
+    "basic_terms": "MHC I：細胞内抗原を CD8+ T 細胞に提示、プロテアソーム：細胞質タンパク質分解装置",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "神経科学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "question_text": "化学シナプスで興奮性伝達が起こるとき、シナプス後膜の電位変化として最も典型的なものはどれか。",
+    "choices": [
+      "脱分極性の興奮性シナプス後電位",
+      "過分極性の抑制性シナプス後電位",
+      "活動電位の恒常的発火",
+      "ミエリンの再形成"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "興奮性伝達物質はシナプス後膜を脱分極させ EPSP を生じる。",
+    "detailed_explanation": "グルタミン酸など興奮性伝達物質は Na+ チャネルを開き脱分極。閾値に達すれば活動電位が発火する。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "興奮性・抑制性シナプス後電位の違いを説明できる",
+    "common_misconception": "すべてのシナプス伝達が活動電位を直接生むと考える",
+    "distractor_rationales": [
+      "正解。興奮性伝達の典型。",
+      "不正解。抑制性伝達の結果。",
+      "不正解。恒常的発火ではない。",
+      "不正解。シナプス伝達とは無関係。"
+    ],
+    "basic_terms": "EPSP：興奮性シナプス後電位、化学シナプス：神経伝達物質による接合",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "生物",
       "細胞生物学",
       "batch50",
       "L500"
-    ],
-    "domain": "生物",
-    "subdomain": "細胞生物学",
-    "difficulty_initial": 500,
-    "question_text": "真核細胞のミトコンドリアの主な機能として最も適切なものはどれか。",
-    "choices": [
-      "タンパク質の翻訳",
-      "遺伝情報の複製",
-      "光合成によるエネルギー固定",
-      "ATP 合成による細胞呼吸"
-    ],
-    "correct_choice_index": 3,
-    "short_explanation": "ミトコンドリアは酸化的リン酸化により ATP を産生する。",
-    "detailed_explanation": "ミトコンドリアはTCA回路と電子伝達系により ATP を合成。光合成は葉緑体の機能。",
-    "learning_objective": "主要細胞小器官の機能を区別できる",
-    "cognitive_type": "用語・定義",
-    "common_misconception": "ミトコンドリアを光合成の場と混同する",
-    "distractor_rationales": [
-      "不正解。リボソームの機能。",
-      "不正解。細胞核の機能。",
-      "不正解。葉緑体の機能。",
-      "正解。ミトコンドリアの主機能。"
-    ],
-    "basic_terms": "ミトコンドリア：二重膜を持つ細胞小器官、ATP：細胞のエネルギー通貨"
+    ]
   },
   {
+    "domain": "生物",
+    "subdomain": "遺伝学",
+    "question_text": "細胞内小器官の膜構造について正しい組み合わせはどれか。",
+    "choices": [
+      "過酸化酵素体—四重膜",
+      "ミトコンドリア—二重膜",
+      "リボソーム—単一膜",
+      "小胞体—膜なし"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ミトコンドリアは外膜と内膜の二重膜構造を持つ。",
+    "detailed_explanation": "リボソームは膜を持たない非膜性小器官。小胞体は膜性小器官。過酸化酵素体は単一膜。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "主要小器官の膜構造を分類できる",
+    "common_misconception": "すべての小器官が膜で囲まれていると考える",
+    "distractor_rationales": [
+      "不正解。過酸化酵素体は単一膜。",
+      "正解。ミトコンドリアの二重膜。",
+      "不正解。リボソームは膜なし。",
+      "不正解。小胞体は膜性。"
+    ],
+    "basic_terms": "二重膜：外膜と内膜の2層構造、リボソーム：タンパク質と rRNA からなる非膜性小器官",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞",
+    "question_text": "ニューロンの静止電位（約−70 mV）を維持する主な要因はどれか。",
+    "choices": [
+      "Ca²⁺が細胞内から細胞外へ能動輸送されるため",
+      "Cl⁻が細胞膜を通過できず細胞外に大量に蓄積するため",
+      "細胞膜のK⁺透過性が高く、K⁺が濃度勾配に従って細胞外へ流出し内側を負に帯電させるため",
+      "Na⁺が大量に細胞内へ流入し正電荷を蓄積するため"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "静止状態では膜のK⁺透過性が高く、K⁺が細胞内（約150 mM）から細胞外（約5 mM）へ流出して内側を負に帯電させます。",
+    "detailed_explanation": "静止電位（約−70 mV）は主にK⁺の均衡電位によって決まります。静止状態では内向き整流K⁺チャネル（漏れK⁺チャネル）が開いており、K⁺は濃度勾配（細胞内>>細胞外）に従って細胞外へ流出します。K⁺の流出によって細胞内が負になると電気的勾配がK⁺を引き戻し、濃度勾配と電気的勾配が釣り合った均衡電位（約−90 mV）付近で安定します。Na⁺-K⁺ポンプはNa⁺を外に・K⁺を内に能動輸送し濃度勾配を維持します。活動電位発生時にはNa⁺チャネルが開いてNa⁺が流入します。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "静止電位の形成にK⁺の透過性と濃度勾配が果たす役割を説明できる",
+    "common_misconception": "静止電位をNa⁺の流入で説明する（Na⁺流入は活動電位発生時）",
+    "distractor_rationales": [
+      "不正解。Ca²⁺の細胞外輸送はシナプス伝達など特定の状況で重要ですが、静止電位の形成の主要因ではありません。",
+      "不正解。Cl⁻は一部のチャネルを通じて膜を透過でき、静止電位の補助的な維持に関与しますが主要因はK⁺の流出です。",
+      "正解。静止状態では漏れK⁺チャネルを通じたK⁺の流出が細胞内を負に帯電させ、静止電位を形成します。",
+      "不正解。Na⁺の大量流入は活動電位の脱分極（上昇相）に対応する現象です。静止時のNa⁺透過性は低く抑えられています。"
+    ],
+    "basic_terms": "静止電位（resting membrane potential）：興奮していない状態でのニューロン膜の内外電位差（約−70 mV）。K⁺均衡電位（Nernst電位）：K⁺の濃度勾配と電気的勾配が釣り合う電位（約−90 mV）。Na⁺-K⁺ポンプ：3Na⁺を細胞外へ、2K⁺を細胞内へ能動輸送するATPase。",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝",
+    "question_text": "細胞周期の G1 期に主に行われるプロセスとして最も適切なものはどれか。",
+    "choices": [
+      "染色体の凝縮",
+      "紡錘糸の形成",
+      "細胞質の分裂",
+      "細胞成長と代謝活性の亢進"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "G1 期は前間期の成長期で、細胞はサイズを増し S 期への準備をする。",
+    "detailed_explanation": "G1→S→G2→M の順で、G1 ではタンパク質・RNA 合成が活発。制限点（R 点）で S 期進入が決定される。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "細胞周期各期の特徴を説明できる",
+    "common_misconception": "G1 期を分裂期と混同する",
+    "distractor_rationales": [
+      "不正解。前期（prophase）の特徴。",
+      "不正解。M 期の特徴。",
+      "不正解。胞質分裂（cytokinesis）。",
+      "正解。G1 の主な特徴。"
+    ],
+    "basic_terms": "G1 期：DNA 合成前の成長期、制限点：S 期進入を決定するチェックポイント",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生態",
+    "question_text": "相同組換え（ホモロガス組換え）修復が起こる主な条件はどれか。",
+    "choices": [
+      "二本鎖切断と相同テンプレートの存在",
+      "塩基の自発的脱アミノ",
+      "翻訳の誤読",
+      "リボソームの結合"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "二本鎖切断に対し、相同染色体上の相同配列をテンプレートに修復する。",
+    "detailed_explanation": "Rad51 などが介在し、切断末端が相同鎖を侵食して正確な修復を行う。非同源的末端結合（NHEJ）とは異なる経路。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "相同組換え修復の条件と意義を説明できる",
+    "common_misconception": "すべての DNA 損傷が NHEJ で修復されると考える",
+    "distractor_rationales": [
+      "正解。相同組換え修復の条件。",
+      "不正解。別の損傷タイプ。",
+      "不正解。翻訳の問題。",
+      "不正解。無関係。"
+    ],
+    "basic_terms": "相同組換え修復：相同配列を用いた正確な DNA 修復、二本鎖切断：DNA の両鎖が切断された損傷",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生態",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "進化",
+    "question_text": "競争排除の原理が予測する現象として最も適切なものはどれか。",
+    "choices": [
+      "環境収容力は種間競争と無関係である",
+      "ニッチが完全に重なる2種は同じ生息地で永続的に共存できない",
+      "捕食者が増えると被食者も多くの場合増える",
+      "多様性は多くの場合安定性を低下させる"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "Gause の競争排除原理：同一資源を完全競争する2種は共存できない。",
+    "detailed_explanation": "ニッチの完全重複では競争により一方が排除される。共存にはニッチ分化が必要とされる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "競争排除原理を生態系の文脈で適用できる",
+    "common_misconception": "似た種は常に共存できると考える",
+    "distractor_rationales": [
+      "不正解。K は競争に影響される。",
+      "正解。競争排除の予測。",
+      "不正解。捕食者-被食者の関係。",
+      "不正解。多様性-安定性の関係は複雑。"
+    ],
+    "basic_terms": "競争排除：ニッチ重複種の一方が消滅、ニッチ：種の生態的地位",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "進化",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "question_text": "分子系統樹において、外群（アウトグループ）を設定する主な目的はどれか。",
+    "choices": [
+      "遺伝子発現量を測定する",
+      "自然選択の強度を直接計算する",
+      "系統樹の根（ルート）を決定する",
+      "最も進化的に新しい種を特定する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "外群は解析対象群（内群）の姉妹群として根の位置を極性化する。",
+    "detailed_explanation": "外群を含む系統樹解析により、進化の方向（祖先→子孫）を推定できる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "分子系統解析における外群の役割を説明できる",
+    "common_misconception": "外群は最も原始的な種だと誤解する",
+    "distractor_rationales": [
+      "不正解。発現量測定とは無関係。",
+      "不正解。選択強度の直接計算ではない。",
+      "正解。根の決定が主目的。",
+      "不正解。新しい種の特定ではない。"
+    ],
+    "basic_terms": "外群：解析対象群の外にある関連分類群、系統樹：進化的関係を示す分岐図",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "分子生物学",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生化学",
+    "question_text": "Gタンパク質共役受容体（GPCR）が活性化した際にアデニリルシクラーゼを介して産生される代表的なセカンドメッセンジャーはどれか。",
+    "choices": [
+      "ATP（アデノシン三リン酸）",
+      "ADP（アデノシン二リン酸）",
+      "GDP（グアノシン二リン酸）",
+      "cAMP（環状アデノシン一リン酸）"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "GPCRが活性化するとGsタンパク質がアデニリルシクラーゼを活性化し、ATPからcAMPが合成されます。",
+    "detailed_explanation": "GPCRへのリガンド結合はGタンパク質（Gsサブタイプ）を活性化し、GTPが結合したGαサブユニットがアデニリルシクラーゼ（AC）を活性化します。ACはATPを基質としてcAMP（環状アデノシン一リン酸）を合成します。cAMPはプロテインキナーゼA（PKA）を活性化し、下流のタンパク質リン酸化を介して様々な細胞応答を引き起こします。ATPはエネルギー通貨・シグナル合成の基質、ADPはATPの加水分解産物、GDPはGαサブユニットが不活性化した際に結合する分子です。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "GPCRシグナル伝達経路におけるcAMPの役割と産生経路を説明できる",
+    "common_misconception": "GDPをセカンドメッセンジャーと混同する（GDPはGタンパク質の不活性型に結合するが細胞内シグナルではない）",
+    "distractor_rationales": [
+      "不正解。ATPはエネルギー通貨であり、cAMP合成の基質ですが、それ自体がセカンドメッセンジャーではありません。",
+      "不正解。ADPはATP加水分解の産物でエネルギー代謝に関与しますが、GPCR経路のセカンドメッセンジャーではありません。",
+      "不正解。GDPはGαサブユニットが不活性状態のときに結合している分子ですが、セカンドメッセンジャーではありません。",
+      "正解。cAMP（環状AMP）はGPCR・アデニリルシクラーゼ経路における代表的なセカンドメッセンジャーでPKAを活性化します。"
+    ],
+    "basic_terms": "セカンドメッセンジャー（second messenger）：細胞外シグナルを細胞内に中継する小分子。cAMP（cyclic AMP）：アデニリルシクラーゼが触媒するATPからの環状ヌクレオチド。PKA（プロテインキナーゼA）：cAMPで活性化されるタンパク質リン酸化酵素。",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "生物",
       "生化学",
       "batch50",
-      "L600"
-    ],
-    "domain": "生物",
-    "subdomain": "生化学",
-    "difficulty_initial": 600,
-    "question_text": "クエン酸回路（TCA回路）でアセチルCoAが酸化される際、主要な還元産物として直接生成されるものはどれか。",
-    "choices": [
-      "アミノ酸",
-      "ATP のみ",
-      "NADH と FADH₂",
-      "グルコース"
-    ],
-    "correct_choice_index": 0,
-    "short_explanation": "TCA回路は NADH・FADH₂ を産生し、電子伝達系へ還元力を供給する。",
-    "detailed_explanation": "TCA回路1回転で NADH×3、FADH₂×1、GTP×1。主要還元産物は NADH/FADH₂。",
-    "learning_objective": "TCA回路の産物とエネルギー代謝の流れを説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "TCA回路で大量の ATP が直接作られると思う",
-    "distractor_rationales": [
-      "不正解。TCA回路の直接産物ではない。",
-      "不正解。ATP も少量だが主産物は還元補酵素。",
-      "正解。TCA回路の主要還元産物。",
-      "不正解。基質ではなく産物の誤り。"
-    ],
-    "basic_terms": "TCA回路：ミトコンドリア基質での代謝経路、NADH：電子伝達系への還元力"
+      "L700"
+    ]
   },
   {
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "question_text": "ミカエリス・メンテン酵素反応における Km の定義として正しいものはどれか。",
+    "choices": [
+      "反応速度が Vmax の半分になる基質濃度",
+      "酵素の最大反応速度",
+      "基質と酵素の結合定数の逆数のみ",
+      "阻害剤の解離定数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "Km は V=vmax/2 となる基質濃度で、酵素と基質の親和性の指標となる。",
+    "detailed_explanation": "Km = (k−1 + kcat)/k1 で、小さいほど基質親和性が高い（低濃度で半最大速度）。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "Km と Vmax の意味を正確に述べられる",
+    "common_misconception": "Km を Vmax と混同する",
+    "distractor_rationales": [
+      "正解。Km の定義。",
+      "不正解。Vmax の定義。",
+      "不正解。Km は複合的パラメータ。",
+      "不正解。阻害剤の定数ではない。"
+    ],
+    "basic_terms": "Km：半最大速度時の基質濃度、Vmax：酵素飽和時の最大反応速度",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "生物",
+      "免疫学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "神経科学",
+    "question_text": "抗体のクラススイッチ（isotype switching）が起こる主な免疫学的意義はどれか。",
+    "choices": [
+      "補体を恒久的に不活性化する",
+      "同一抗原特異性を保ちつつ効果機能を変える",
+      "抗原特異性そのものを変える",
+      "T 細胞を B 細胞に変換する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "クラススイッチは可変区を保ち定常区（Fc）を変え、IgM から IgG などへ切り替える。",
+    "detailed_explanation": "相同組換えにより C 遺伝子領域が変わり、補体活性化・Fc 受容体結合・胎盤通過など効果機能が変化する。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "クラススイッチの機序と意義を説明できる",
+    "common_misconception": "クラススイッチで抗原特異性が変わると誤解する",
+    "distractor_rationales": [
+      "不正解。補体との関係は効果の一側面。",
+      "正解。特異性維持・効果機能変更。",
+      "不正解。可変区は不変。",
+      "不正解。細胞型転換ではない。"
+    ],
+    "basic_terms": "クラススイッチ：抗体の定常区を変える相同組換え、可変区：抗原結合部位",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "神経科学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "question_text": "長期増強（LTP）がシナプス可塑性のモデルとされる主な理由はどれか。",
+    "choices": [
+      "神経細胞の数が増殖する",
+      "ミエリンが完全に消失する",
+      "特定パターンの刺激後にシナプス伝達効率が長期間増大する",
+      "すべてのシナプスが常に同じ強度を維持する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "LTP は海馬などで高頻度刺激後のシナプス伝達効率の持続的増大。",
+    "detailed_explanation": "NMDA 受容体依存性 LTP は学習・記憶の細胞基盤の候補とされ、Ca2+ 流入と AMPA 受容体増加が関与する。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "LTP の定義と学習記憶との関連を説明できる",
+    "common_misconception": "記憶は神経細胞の新生だけで説明できると考える",
+    "distractor_rationales": [
+      "不正解。成人海馬に限定的な神経新生。",
+      "不正解。無関係。",
+      "正解。LTP の定義的特徴。",
+      "不正解。可塑性は強度変化を含む。"
+    ],
+    "basic_terms": "LTP：長期増強、シナプス可塑性：シナプス伝達効率の変化可能性",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞生物学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝学",
+    "question_text": "オートファジー（自食作用）の種類と特徴の組み合わせとして正しいものはどれか。",
+    "choices": [
+      "CMA—リボソームが直接 DNA を分解する",
+      "ミクロオートファジー—核膜が多くの場合溶解する",
+      "オートファジー—多くの場合細胞死を引き起こす",
+      "マクロオートファジー—二重膜のオートファジソームが細胞質成分を包み込む"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "マクロオートファジーはオートファジソームによる細胞質成分のlysosome への輸送。",
+    "detailed_explanation": "CMA は Hsc70 による可溶性タンパク質の直接リソソーム輸送。ミクロオートファジーはリソソーム膜の内方陷入。オートファジーは生存にも関与。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "オートファジーの主要経路を比較できる",
+    "common_misconception": "オートファジーは常に細胞死と同一視する",
+    "distractor_rationales": [
+      "不正解。CMA はリボソームではなく Hsc70。",
+      "不正解。核膜溶解は非典型的。",
+      "不正解。生存にも寄与。",
+      "正解。マクロオートファジーの特徴。"
+    ],
+    "basic_terms": "マクロオートファジー：オートファジソームを介した分解、CMA：シャペロン介在型オートファジー",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "生物",
       "遺伝学",
       "batch50",
       "L700"
-    ],
-    "domain": "生物",
-    "subdomain": "遺伝学",
-    "difficulty_initial": 700,
-    "question_text": "二対の対立遺伝子 A/a と B/b が独立に分離するとき、AaBb × AaBb の交配で aabb の遺伝子型が現れる確率はどれか。",
-    "choices": [
-      "1/8",
-      "1/4",
-      "1/2",
-      "1/16"
-    ],
-    "correct_choice_index": 1,
-    "short_explanation": "P(aabb) = P(aa) × P(bb) = (1/4) × (1/4) = 1/16。",
-    "detailed_explanation": "各対立遺伝子は独立。P(aa)=1/4, P(bb)=1/4 より P(aabb)=1/16。",
-    "learning_objective": "メンデル遺伝の独立の法則を用いて遺伝子型確率を計算できる",
-    "cognitive_type": "基本的な適用",
-    "common_misconception": "1/4 と計算して両対立を考慮しない",
-    "distractor_rationales": [
-      "不正解。片方だけ考慮した誤り。",
-      "不正解。aa または bb の確率と混同。",
-      "不正解。ヘテロ接合の確率と混同。",
-      "正解。(1/4)×(1/4)=1/16。"
-    ],
-    "basic_terms": "独立の法則：異なる遺伝子座の分離は互いに影響しない、遺伝子型：個体が持つ対立遺伝子の組合せ"
+    ]
   },
   {
+    "domain": "生物",
+    "subdomain": "細胞",
+    "question_text": "PCR（ポリメラーゼ連鎖反応）の変性（denaturation）ステップの主な目的はどれか。",
+    "choices": [
+      "二本鎖DNAを高温処理により一本鎖DNAに解離させる",
+      "増幅産物をアガロースゲル電気泳動で分析する",
+      "プライマーを鋳型DNAの相補的配列にアニーリングさせる",
+      "耐熱性DNAポリメラーゼが新しいDNA鎖を合成する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "変性ステップ（約95℃）では水素結合が切れ、二本鎖DNAが一本鎖に解離します。",
+    "detailed_explanation": "PCRは3つの温度サイクルから構成されます。①変性（denaturation）：約94〜98℃でDNA二本鎖間の水素結合を切断し一本鎖にする。②アニーリング（annealing）：約50〜65℃で設計したプライマーが一本鎖鋳型DNAの相補領域に結合する。③伸長（extension）：約72℃でTaqポリメラーゼなど耐熱性DNAポリメラーゼがプライマーから新鎖を合成する。このサイクルを20〜40回繰り返すことで目的DNA領域が指数関数的に増幅されます。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "PCRの三段階（変性・アニーリング・伸長）の目的と温度条件を説明できる",
+    "common_misconception": "変性ステップでプライマーが結合すると誤解する（結合はアニーリングステップ）",
+    "distractor_rationales": [
+      "正解。変性ステップ（94〜98℃）ではDNA二本鎖の水素結合が切れ、一本鎖DNAに分離して鋳型として利用できるようになります。",
+      "不正解。電気泳動による分析はPCRサイクル完了後の確認操作であり、PCRの温度サイクルのステップではありません。",
+      "不正解。プライマーの鋳型DNAへの結合（アニーリング）は約50〜65℃の低温ステップで行われます。",
+      "不正解。新鎖の合成（伸長）は約72℃でTaqポリメラーゼが行うステップです。"
+    ],
+    "basic_terms": "変性（denaturation）：高温によりDNA二本鎖の水素結合が切断され一本鎖になること。アニーリング（annealing）：プライマーが鋳型DNAへ結合するステップ。TaqポリメラーゼDNA：高温耐性を持つ耐熱性DNAポリメラーゼ。",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝",
+    "question_text": "細胞接着におけるカドヘリンの特徴として正しいものはどれか。",
+    "choices": [
+      "G タンパク質共役型受容体である",
+      "Ca2+ 依存性の相同細胞間接着を媒介する",
+      "細胞外マトリックスを主成分とするに結合する",
+      "多くのの細胞種で発現が同一である"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "カドヘリンは Ca2+ 存在下で相同細胞間の接着結合を形成する。",
+    "detailed_explanation": "E-カドヘリンは上皮細胞の接着結合に、N-カドヘリンは神経・間葉系に関与。β-カテニンと連結しシグナル伝達にも関与。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "カドヘリンの機能と Ca2+ 依存性を説明できる",
+    "common_misconception": "細胞接着はすべてインテグリンのみが担うと考える",
+    "distractor_rationales": [
+      "不正解。接着分子であり GPCR ではない。",
+      "正解。カドヘリンの定義的特徴。",
+      "不正解。ECM 結合は主にインテグリン。",
+      "不正解。細胞種特異的発現。"
+    ],
+    "basic_terms": "カドヘリン：Ca2+ 依存性接着分子、接着結合：上皮細胞間の密着構造",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "生態",
+    "question_text": "DNA メチル化が遺伝子発現を抑制する主な機序はどれか。",
+    "choices": [
+      "リボソームの機能停止",
+      "mRNA の加水分解のみ",
+      "メチル化 DNA 結合タンパク質の募集とクロマチン構造変化",
+      "DNA 配列そのものの永久変異"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "CpG メチル化は MBD タンパク質を介し転写抑制複合体を招集する。",
+    "detailed_explanation": "DNMT による 5-メチルシトシン形成、MeCP2 などが HDAC を招集しヒストン脱アセチル化・クロマチン凝縮で転写を抑制。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "DNA メチル化による転写抑制機序を説明できる",
+    "common_misconception": "メチル化が DNA 配列を変異させると誤解する",
+    "distractor_rationales": [
+      "不正解。翻訳段階ではない。",
+      "不正解。転写レベルの抑制が主。",
+      "正解。エピジェネティック抑制機序。",
+      "不正解。配列変異ではない。"
+    ],
+    "basic_terms": "DNA メチル化：シトシンへのメチル基付加、MeCP2：メチル化 DNA 結合タンパク質",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "生態",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "進化",
+    "question_text": "メタコミュニティ理論において、種の移動（dispersal）が局所的多様性に与える典型的な効果はどれか。",
+    "choices": [
+      "移動は多くの場合局所競争を完全に排除する",
+      "移動は環境収容力を恒久的に増加させる",
+      "移動は多くの場合局所多様性を低下させる",
+      "移動が種の局所絶滅を補償し多様性を維持しうる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "パッチ間の移動（救援効果）が局所絶滅を緩和し多様性維持に寄与する。",
+    "detailed_explanation": "メタコミュニティでは局所絶滅と再コロナイゼーションのバランスが多様性を規定。移動は rescue effect や mass effect を通じて多様性パターンを変える。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "メタコミュニティにおける移動の役割を適用できる",
+    "common_misconception": "移動は常に多様性を下げると単純化する",
+    "distractor_rationales": [
+      "不正解。競争排除は依然起こりうる。",
+      "不正解。K 自体は変わらない。",
+      "不正解。効果は文脈依存的。",
+      "正解。救援効果などによる多様性維持。"
+    ],
+    "basic_terms": "メタコミュニティ：複数パッチの集合体、救援効果：移入による局所絶滅の緩和",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "進化",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "question_text": "正のダーウィン選択と純化選択の違いとして正しいものはどれか。",
+    "choices": [
+      "正の選択は有利な変異の頻度を増加させ、純化選択は有害変異を除去する",
+      "純化選択は常に新規遺伝子を創出する",
+      "正の選択は遺伝子頻度を変化させない",
+      "両者は分子レベルでは区別できない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "dN/dS > 1 は正の選択、dN/dS < 1 は純化選択の指標となる。",
+    "detailed_explanation": "正の選択（適応的進化）は非同義置換が同義置換より多い。純化選択は機能制約の高い遺伝子で有害変異を除去。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "分子進化における選択の種類を比較できる",
+    "common_misconception": "すべての進化が正の選択だと考える",
+    "distractor_rationales": [
+      "正解。両選択の定義的違い。",
+      "不正解。純化は変異除去。",
+      "不正解。正の選択は頻度を変える。",
+      "不正解。dN/dS 等で区別可能。"
+    ],
+    "basic_terms": "正の選択：有利変異の固定、純化選択：有害変異の除去、dN/dS：非同義/同義置換比",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "生物",
       "分子生物学",
       "batch50",
       "L800"
-    ],
-    "domain": "生物",
-    "subdomain": "分子生物学",
-    "difficulty_initial": 800,
-    "question_text": "CRISPR-Cas9 によるゲノム編集で、Cas9 のガイドRNA（gRNA）の主な役割はどれか。",
-    "choices": [
-      "切断されたDNAの修復テンプレート供給",
-      "オフターゲット切断の完全な防止",
-      "標的DNA配列への誘導（アドレス指定）",
-      "DNA の二重鎖切断そのものの触媒"
-    ],
-    "correct_choice_index": 2,
-    "short_explanation": "gRNA は標的配列と相補的に結合し Cas9 を誘導する。切断は Cas9 蛋白質が触媒。",
-    "detailed_explanation": "gRNA のスペーサー配列が標的DNAと相補的に結合し PAM 近傍へ Cas9 を誘導。切断は Cas9 の HNH/RuvC ドメインが行う。",
-    "learning_objective": "CRISPR-Cas9 の各成分の役割を説明できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "gRNA 自体が切断を触媒すると誤解する",
-    "distractor_rationales": [
-      "不正解。修復テンプレートは別途供給する donor DNA。",
-      "不正解。オフターゲットは設計・条件で低減するが完全防止ではない。",
-      "正解。gRNA は標的特異性を与える。",
-      "不正解。切断触媒は Cas9 蛋白質。"
-    ],
-    "basic_terms": "CRISPR-Cas9：RNA誘導型ゲノム編集系、gRNA：標的配列を指定するガイドRNA"
+    ]
   },
   {
+    "domain": "生物",
+    "subdomain": "生化学",
+    "question_text": "大腸菌のラクトースオペロンにおいて、ラクトースが存在しグルコースが存在しない条件での遺伝子発現状態はどれか。",
+    "choices": [
+      "ラクトースがリプレッサーの立体構造を安定化しオペレーターへの結合親和性が高まるため遺伝子発現が抑制される",
+      "ラクトース代謝産物（アロラクトース）がリプレッサーを不活性化し、同時にcAMP-CRP複合体が転写を正に活性化するため遺伝子発現が最大化する",
+      "リプレッサーが活性型としてオペレーターに結合しているため遺伝子は発現しない",
+      "グルコースの欠如によりcAMPが減少しCRPの活性が低下するため遺伝子発現が抑制される"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ラクトースあり・グルコースなしでは負の調節（リプレッサー解除）と正の調節（cAMP-CRP活性化）が同時に機能し、ラクトースオペロンの発現が最大化します。",
+    "detailed_explanation": "ラクトースオペロンは二重の調節を受けます。①負の調節：ラクトースが細胞内でアロラクトースに変換され、lacIリプレッサーに結合してオペレーターから離れさせます（転写抑制の解除）。②正の調節（カタボライト抑制）：グルコースがないと細胞内cAMPが上昇し、CRPタンパク質（catabolite activator protein）と複合体を形成してプロモーター上流に結合し転写を促進します。両方の条件が満たされた場合（ラクトースあり＋グルコースなし）に遺伝子発現が最大化します。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ラクトースオペロンの正の調節（cAMP-CRP）と負の調節（リプレッサー）の仕組みを統合して説明できる",
+    "common_misconception": "ラクトースがあればリプレッサーの有無に関わらず最大発現すると単純化して理解する（実際はcAMP-CRPも必要）",
+    "distractor_rationales": [
+      "不正解。アロラクトースはリプレッサーのコンフォメーションを変えてオペレーターへの結合親和性を低下させます（結合強化ではなく解離を促します）。",
+      "正解。アロラクトースによるリプレッサーの不活性化とcAMP-CRPによる正の転写活性化が同時に起こるため最大発現します。",
+      "不正解。ラクトースが存在する場合、そのアロラクトースへの変換産物がリプレッサーをオペレーターから解離させます。",
+      "不正解。グルコースが欠如する（グルコースなし）と細胞内cAMPが上昇します。cAMPが減少するのはグルコースが存在する場合です。"
+    ],
+    "basic_terms": "アロラクトース（allolactose）：ラクトースから変換されるlacリプレッサーのインデューサー。CRP（catabolite activator protein）：cAMPと結合してoperonの転写を活性化する調節タンパク質。カタボライト抑制：グルコース優先使用のために他の糖代謝遺伝子の発現を制御する機構。",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "生物",
-      "発生生物学",
+      "生化学",
       "batch50",
       "L900"
-    ],
+    ]
+  },
+  {
     "domain": "生物",
-    "subdomain": "発生生物学",
-    "difficulty_initial": 900,
-    "question_text": "脊椎動物の HOX 遺伝子クラスターの特徴として正しいものはどれか。",
+    "subdomain": "免疫学",
+    "question_text": "酵素のアロステリック調節における「協同性（cooperativity）」の定義として最も適切なものはどれか。",
     "choices": [
-      "クラスター内の遺伝子順序と発現領域は無関係である",
-      "染色体上の配置順序と発現領域の前後軸位置が対応する（コリニアリティ）",
-      "HOX 遺伝子が胚全体で均一に発現する",
-      "HOX 遺伝子は神経系に発現する"
+      "阻害剤が活性部位に不可逆結合する現象",
+      "補因子がなくても最大活性を示す現象",
+      "基質結合が同一酵素の他の結合部位の親和性を変化させる現象",
+      "酵素が常に基質と1:1 で結合する現象"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "協同性は多量体酵素で基質結合の協調的変化（シグモイド曲線）を生じる。",
+    "detailed_explanation": "ヘモグロビンの T-R 状態転移やアロステリック酵素の MWC/KNF モデルが協同性の代表例。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "アロステリック協同性の定義を正確に述べられる",
+    "common_misconception": "すべての酵素がミカエリス・メンテン式に従うと考える",
+    "distractor_rationales": [
+      "不正解。不可逆阻害の説明。",
+      "不正解。補因子不要は別の話。",
+      "正解。協同性の定義。",
+      "不正解。1:1 結合は協同性の説明ではない。"
+    ],
+    "basic_terms": "協同性：基質結合の協調的変化、アロステリック：活性部位以外の部位での調節",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "免疫学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "神経科学",
+    "question_text": "胚中心における体細胞高頻度変異（SHM）と親和性成熟の関係として正しいものはどれか。",
+    "choices": [
+      "SHM は T 細胞受容体にを主成分とする起こる",
+      "親和性成熟は抗体の定常区を主成分とするを変化させる",
+      "SHM はミトコンドリア DNA で起こる",
+      "SHM により抗体可変区に変異が導入され、高親和性 B 細胞が選択される"
     ],
     "correct_choice_index": 3,
-    "short_explanation": "HOX 遺伝子はコリニアリティを示し、5' 側ほど後方（尾部）で発現する。",
-    "detailed_explanation": "HOX クラスターの遺伝子配置順と胚の前後軸での発現領域が対応（コリニアリティ）。体節形成・器官配置に関与。",
-    "learning_objective": "HOX 遺伝子のコリニアリティと体軸形成の関係を説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "HOX 遺伝子は全身均一発現だと誤解する",
+    "short_explanation": "AICDA による SHM で可変区に変異、胚中心のダークゾーンで親和性選択。",
+    "detailed_explanation": "活性化誘導性シチジンデアミナーゼ（AID）が Ig 遺伝子に変異を導入。ライトゾーンで抗原提示細胞との相互作用により高親和性クローンが優位に増殖。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "SHM と親和性成熟の機序を統合して説明できる",
+    "common_misconception": "抗体親和性は初回応答で最終決定されると考える",
     "distractor_rationales": [
-      "不正解。順序と発現領域は強く対応する。",
-      "正解。HOX 遺伝子のコリニアリティ。",
-      "不正解。発現は前後軸で領域特異的。",
-      "不正解。中胚葉・体節等広く関与。"
+      "不正解。B 細胞の Ig 遺伝子が主な標的。",
+      "不正解。可変区が変化。",
+      "不正解。核ゲノムの Ig 遺伝子。",
+      "正解。SHM と親和性成熟の核心。"
     ],
-    "basic_terms": "HOX 遺伝子：体軸形成に関与する転写因子、コリニアリティ：遺伝子配置と発現領域の対応"
+    "basic_terms": "SHM：抗体遺伝子の体細胞高頻度変異、親和性成熟：抗体親和性の段階的向上",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "神経科学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "question_text": "スパイクタイミング依存性可塑性（STDP）の典型的な規則として正しいものはどれか。",
+    "choices": [
+      "シナプス前がシナプス後より先に発火すると LTP、逆順で LTD",
+      "発火順序は可塑性に無関係である",
+      "多くののシナプスで LTD を主成分とするが起こる",
+      "STDP はグリア細胞にを主成分とする適用される"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "STDP は発火タイミングの因果関係に基づきシナプス強度を調整する。",
+    "detailed_explanation": "シナプス前→後の順序（pre 先行）で LTP、後→前（post 先行）で LTD が典型的。Hebb 学習の時間的精密版。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "STDP の規則を神経回路の学習モデルに適用できる",
+    "common_misconception": "シナプス可塑性は発火頻度のみに依存すると考える",
+    "distractor_rationales": [
+      "正解。STDP の標準的規則。",
+      "不正解。タイミングが本質。",
+      "不正解。LTP も起こる。",
+      "不正解。ニューロン間シナプスで観察。"
+    ],
+    "basic_terms": "STDP：スパイクタイミング依存性可塑性、LTP/LTD：長期増強/長期抑制",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "細胞生物学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "生物",
+    "subdomain": "遺伝学",
+    "question_text": "オートファジー、プロテアソーム、およびリソソーム経路の比較として正しいものはどれか。",
+    "choices": [
+      "3経路は基質特異性が完全に同一である",
+      "プロテアソームは主にユビキチン標識された可溶性タンパク質を分解する",
+      "オートファジーは可溶性タンパク質のみを対象とする",
+      "リソソームは細胞質に存在し膜を持たない"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ユビキチン-プロテアソーム系は可溶性・短寿命タンパク質、オートファジーは大型構造物・オルガネラ。",
+    "detailed_explanation": "26S プロテアソームは polyubiquitin 標識タンパク質を分解。オートファジーはオルガネラ・凝集体をリソソームへ。経路は補完的。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "タンパク質分解経路の基質特異性を比較できる",
+    "common_misconception": "タンパク質分解はプロテアソームのみだと考える",
+    "distractor_rationales": [
+      "不正解。基質特異性は異なる。",
+      "正解。プロテアソームの特徴。",
+      "不正解。オートファジーは大型構造も対象。",
+      "不正解。リソソームは膜性小器官。"
+    ],
+    "basic_terms": "プロテアソーム：ATP 依存性プロテアーゼ複合体、ユビキチン：タンパク質分解の標識",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "生物",
+      "遺伝学",
+      "batch50",
+      "L900"
+    ]
   }
 ]

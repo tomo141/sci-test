@@ -1,53 +1,1210 @@
 [
   {
+    "domain": "工学",
+    "subdomain": "機械",
+    "question_text": "力のSI単位として正しいものはどれか。",
+    "choices": [
+      "ニュートン (N)",
+      "ジュール (J)",
+      "パスカル (Pa)",
+      "ワット (W)"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "力のSI単位はニュートン（N = kg·m/s²）。",
+    "detailed_explanation": "国際単位系（SI）では力の単位はニュートン（N）で、1 N = 1 kg·m/s² と定義される。ジュール（J）はエネルギー・仕事の単位（N·m）、パスカル（Pa）は圧力の単位（N/m²）、ワット（W）は仕事率・電力の単位（J/s）。力に関連するように見えるが、それぞれが異なる物理量を表す。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "SIの基本単位・組立単位を理解し、力・エネルギー・圧力・仕事率を区別できる。",
+    "common_misconception": "ジュールやワットも「力に関連する」と思いがちだが、ジュールはエネルギー（N·m）、ワットは仕事率（J/s）であり、力そのものの単位ではない。",
+    "distractor_rationales": [
+      "ニュートン（N = kg·m/s²）はニュートンの第二法則 F=ma から導かれる力の単位であり正解。",
+      "ジュール（J = N·m）はエネルギー・仕事の単位で、力×距離の次元をもつため「力に関係する」と誤解しやすい。",
+      "パスカル（Pa = N/m²）は圧力（単位面積あたりの力）の単位で、分子にNを含むが力の単位ではない。",
+      "ワット（W = J/s = N·m/s）は仕事率の単位であり、力に距離と時間の次元が加わった組立単位。"
+    ],
+    "basic_terms": [
+      "力",
+      "SI単位",
+      "ニュートン",
+      "ジュール",
+      "パスカル",
+      "ワット"
+    ],
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "工学",
-      "制御工学",
+      "機械",
       "batch50",
-      "L500"
-    ],
-    "domain": "工学",
-    "subdomain": "制御工学",
-    "difficulty_initial": 500,
-    "question_text": "PID制御において、比例（P）項が主に改善する特性はどれか。",
-    "choices": [
-      "位相遅れの完全除去",
-      "ノイズの完全除去",
-      "系の不安定化",
-      "定常偏差の低減"
-    ],
-    "correct_choice_index": 1,
-    "short_explanation": "比例制御は偏差に比例した操作量で定常偏差を小さくする。",
-    "detailed_explanation": "P項は応答速度と定常偏差に効く。I項が定常偏差を零に、D項が過渡応答を改善。P単独では定常偏差は残りうる。",
-    "learning_objective": "PID制御各項の役割を説明できる",
-    "cognitive_type": "基本的な適用",
-    "common_misconception": "P項だけで定常偏差が完全に零になると誤解する",
-    "distractor_rationales": [
-      "不正解。位相はD項等で調整。",
-      "不正解。D項はノイズを増幅しやすい。",
-      "不正解。適切なゲインでは安定化を狙う。",
-      "正解。比例制御の主効果。"
-    ],
-    "basic_terms": "PID制御：比例・積分・微分の組合せ制御、定常偏差：目標値と定常状態の差"
+      "L100"
+    ]
   },
   {
+    "domain": "工学",
+    "subdomain": "電気",
+    "question_text": "歯車（ギア）を使って回転速度を 1/4 に減速したとき、伝達されるトルクはどのように変化するか（摩擦・損失を無視した理想的な場合）。",
+    "choices": [
+      "1/4 に減少する",
+      "4 倍に増加する",
+      "変化しない",
+      "2 倍に増加する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "損失なしでは仕事率 P = Tω が保存されるため、速度が 1/4 になるとトルクは 4 倍に増加する。",
+    "detailed_explanation": "仕事率（パワー）P = T × ω（T: トルク、ω: 角速度）はエネルギー保存により入出力で等しい（理想ギア）。角速度が 1/4 になれば T₂ = P/ω₂ = P/(ω₁/4) = 4T₁ となり、トルクは 4 倍になる。減速ギア（増力装置）はこの原理を利用している。1/4 に減少は速度とトルクを同じ変化と誤解した場合の答え。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "仕事率保存（P = Tω）から減速ギアでのトルク増幅関係を理解し、速度比とトルク比の逆比例関係を説明できる。",
+    "common_misconception": "速度が下がればトルクも下がると直感的に思いがちだが、仕事率保存の法則から速度とトルクは逆比例の関係にある。減速ギアは「力（トルク）を増やすため速度を犠牲にする」装置でもある。",
+    "distractor_rationales": [
+      "正解。減速比10のギアではトルクが10倍に増幅されます。",
+      "4 倍に増加するのは P = Tω の保存則から正しい。ω が 1/4 になればTは 4 倍になる。",
+      "変化しないという答えは仕事率保存を「トルクも変わらない」と誤解した場合。ギアの変速には必ずトルク変換が伴う。",
+      "2 倍に増加するのは速度が 1/4 → トルクが 1/2 という√の関係があると誤解した場合で根拠がない。"
+    ],
+    "basic_terms": [
+      "仕事率",
+      "トルク",
+      "角速度",
+      "ギア比",
+      "減速機",
+      "エネルギー保存"
+    ],
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "工学",
-      "電気工学",
+      "電気",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料",
+    "question_text": "乾電池・豆電球・スイッチを直列につないだ回路で、スイッチを閉じると豆電球が光る主な理由はどれか。",
+    "choices": [
+      "豆電池の化学エネルギーが電気エネルギーに変わり回路を流れる",
+      "スイッチが豆電球内部で光を生成する",
+      "豆電球が周囲の熱を電気に変換する",
+      "スイッチが磁石の力で電球を押し付ける"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "閉回路で電流が流れ、豆電球のフィラメントが熱・光を発する。",
+    "detailed_explanation": "スイッチを閉じると電池から電流が流れ、抵抗（フィラメント）でジュール熱と光が生じる。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "簡単な直流回路で電流が光る仕組みを説明できる",
+    "common_misconception": "スイッチ自体が光の源だと考える",
+    "distractor_rationales": [
+      "正解。電池→電流→発光の因果。",
+      "不正解。発光はフィラメントの抵抗発熱。",
+      "不正解。光るのは電池がエネルギー源。",
+      "不正解。機械的押し付けではない。"
+    ],
+    "basic_terms": "直列回路：一つの経路に素子がつながる回路、電流：電荷の流れ",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "制御",
+    "question_text": "熱いスープを入れるスプーンの柄に、金属とプラスチックのどちらを使うと手が熱くなりにくいか。",
+    "choices": [
+      "ガラス",
+      "金属",
+      "どちらも同じ",
+      "プラスチック"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "プラスチックは金属より熱伝導率が低く、柄まで熱が伝わりにくい。",
+    "detailed_explanation": "金属は熱伝導がよいため柄まで高温になる。プラスチックは断熱性が高い。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "材料の熱伝導性を日常品の選択に当てはめられる",
+    "common_misconception": "金属の方が安全だと思い込む",
+    "distractor_rationales": [
+      "不正解。ガラスも金属よりは断熱だが一般にスプーン柄には使わない。",
+      "不正解。金属は熱をよく伝える。",
+      "不正解。材料で伝わり方は大きく異なる。",
+      "正解。プラスチックは断熱性が高い。"
+    ],
+    "basic_terms": "熱伝導：熱が物質内を伝わる現象、断熱：熱の移動を抑える性質",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "土木",
+    "question_text": "エアコンの設定温度を維持する仕組みとして、フィードバック制御に当たるものはどれか。",
+    "choices": [
+      "外気温だけを見て季節固定の出力にする",
+      "リモコンのボタンを押した回数だけ冷房する",
+      "室温を測り、目標より高ければ冷房を強める",
+      "毎日同じ時刻に同じ出力で冷房を運転する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "出力（室温）を測って目標値との差で操作量を変えるのがフィードバック。",
+    "detailed_explanation": "閉ループ制御は測定→偏差→操作の循環。時刻固定はフィードフォワード的な開ループ。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "フィードバック制御と開ループ運転を日常例で区別できる",
+    "common_misconception": "自動で動けばすべてフィードバックだと思う",
+    "distractor_rationales": [
+      "不正解。外気のみで室温を閉じていない。",
+      "不正解。操作回数に比例する単純制御。",
+      "正解。測定値に基づき操作を変える閉ループ。",
+      "不正解。時刻のみで出力固定の開ループ。"
+    ],
+    "basic_terms": "フィードバック制御：出力を測って偏差を小さくする制御、開ループ：出力を見ない制御",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "土木",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "熱工学",
+    "question_text": "吊り橋の主ケーブルが橋桁を支える仕組みとして最も適切な説明はどれか。",
+    "choices": [
+      "ケーブルが橋桁を横から挟み込む",
+      "ケーブルの張力を吊り材が橋桁に伝える",
+      "ケーブルが橋桁の重さを消し去る",
+      "ケーブルが橋桁を下から押し上げる"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "主ケーブルの張力を吊り材（ハンガー）が橋桁に引っ張り力として伝える。",
+    "detailed_explanation": "吊り橋はケーブル張力→吊り材→橋桁への引張で支持。重さは消えずケーブルに伝わる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "吊り橋の力の伝達経路を正しく説明できる",
+    "common_misconception": "ケーブルが下から橋を「支え上げる」圧縮だと誤解する",
+    "distractor_rationales": [
+      "不正解。横挟みではない。",
+      "正解。張力を吊り材経由で橋桁へ。",
+      "不正解。重さは消えずケーブルへ伝達される。",
+      "不正解。ケーブルは引張材で押し上げはしない。"
+    ],
+    "basic_terms": "吊り橋：主ケーブルと吊り材で橋桁を支持する橋、張力：引っ張る方向の力",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "熱工学",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "流体力学",
+    "question_text": "フィードバック制御系の基本的な目的として最も適切な記述はどれか。",
+    "choices": [
+      "センサの測定精度を向上させる",
+      "アクチュエータの最大出力を制限する",
+      "出力を目標値に近づけ外乱の影響を抑制する",
+      "システムの消費電力を最小化する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "フィードバック制御は出力を測定して偏差を求め、目標値追従と外乱抑制を実現する。",
+    "detailed_explanation": "フィードバック制御（closed-loop control）では出力量を測定し、目標値（設定値）との差（偏差）を求め、偏差を小さくするよう制御入力を生成する。これにより外乱や内部パラメータ変動が生じても出力を目標値に維持できる。消費電力最小化は最適制御の一側面にすぎず、センサ精度の向上は計測技術の問題、アクチュエータ出力制限は安全設計の問題であり、いずれもフィードバック制御の主目的ではない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "フィードバック制御の基本概念（偏差の計算・閉ループ構成）と目的を説明できる。",
+    "common_misconception": "フィードバック制御と省エネ・安全装置を混同する場合がある。フィードバック制御の本質は「出力を測定して目標値との差を減らすこと（目標値追従と外乱抑制）」である。",
+    "distractor_rationales": [
+      "センサ精度向上は計測・センシング技術の課題であり、フィードバック制御系の目的とは別の問題。",
+      "アクチュエータ出力制限は安全機能（リミッタ）に関係し、フィードバック制御の主目的ではない。",
+      "出力を目標値に近づけ外乱抑制を行うことがフィードバック制御の本質的目的で正解。",
+      "消費電力最小化は最適制御や省エネ制御の目標となることはあるが、フィードバック制御そのものの定義とは異なる。"
+    ],
+    "basic_terms": [
+      "フィードバック制御",
+      "偏差",
+      "閉ループ制御",
+      "目標値",
+      "外乱",
+      "アクチュエータ"
+    ],
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "流体力学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "構造工学",
+    "question_text": "ベルヌーイの定理が示す、理想流体の定常流れにおける圧力と流速の関係として正しいものはどれか。",
+    "choices": [
+      "流速が大きいほど圧力も大きくなる",
+      "流速と圧力は無関係である",
+      "圧力が大きいほど流速も必ず大きい",
+      "流速が大きいほど圧力は小さくなりやすい"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "同一流線上で流速↑→静圧↓（エネルギー保存）。",
+    "detailed_explanation": "ベルヌーイ：p + ½ρv² + ρgh = 定数。v↑ならp↓（高さ一定）。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ベルヌーイの定理の圧力-流速関係を説明できる",
+    "common_misconception": "速い流れほど圧力も高いと逆に考える",
+    "distractor_rationales": [
+      "不正解。圧力と流速はトレードオフ。",
+      "不正解。ベルヌーイで相関あり。",
+      "不正解。必ず大きいとは限らない。",
+      "正解。エネルギー保存より静圧は流速と逆相関。"
+    ],
+    "basic_terms": "ベルヌーイの定理：理想流体のエネルギー保存式、静圧：流体の圧力",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "構造工学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料力学",
+    "question_text": "スパン4 mの単純支持梁の中央に800 Nの集中荷重が作用するとき、支点反力（各支点）はどれか。",
+    "choices": [
+      "400 N",
+      "800 N",
+      "1600 N",
+      "200 N"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "対称配置なので各反力は P/2 = 400 N。",
+    "detailed_explanation": "ΣF=0より R₁+R₂=800 N。対称より R₁=R₂=400 N。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "単純梁の静定反力を求められる",
+    "common_misconception": "反力が荷重と同じ800 Nだと思う",
+    "distractor_rationales": [
+      "正解。各支点 P/2。",
+      "不正解。全荷重を1支点が負担するわけではない。",
+      "不正解。2倍の誤り。",
+      "不正解。P/4 の誤計算。"
+    ],
+    "basic_terms": "単純支持梁：両端がピン支持の梁、反力：支点が受ける力",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料力学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "情報通信",
+    "question_text": "引張試験で得られる応力-ひずみ曲線から、弾性域と塑性域を区別する指標として適切なものはどれか。",
+    "choices": [
+      "比熱",
+      "熱伝導率",
+      "密度",
+      "降伏応力（比例限界・弾性限界近傍）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "降伏応力付近で弾性から塑性へ移行する。",
+    "detailed_explanation": "弾性域は比例関係、降伏後は永久変形。密度・比熱・熱伝導は力学的区分とは無関係。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "引張試験曲線から弾性域と塑性域を区別できる",
+    "common_misconception": "破断応力で弾性域が終わると誤解する",
+    "distractor_rationales": [
+      "不正解。熱容量の指標。",
+      "不正解。熱の伝わりやすさ。",
+      "不正解。質量 per 体積の物性。",
+      "正解。弾性限界・降伏点が境界。"
+    ],
+    "basic_terms": "降伏応力：塑性変形が始まる応力、弾性域：除荷で元に戻る変形域",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "情報通信",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "機械",
+    "question_text": "Wi-Fiの電波が壁越しに弱くなる主な理由として最も適切なものはどれか。",
+    "choices": [
+      "電波が壁の材料に吸収・反射され減衰する",
+      "電波は壁を通過できないため完全に遮断される",
+      "Wi-Fiは有線と同じ電気信号だから",
+      "電波は距離に関係なく一定強度のまま"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "電波は障害物で減衰・反射・回折する。完全遮断ではない。",
+    "detailed_explanation": "2.4/5 GHz帯はコンクリート等で大幅減衰。完全遮断ではなく弱くなる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "無線通信の減衰要因を説明できる",
+    "common_misconception": "壁を通らないと完全遮断だと思う",
+    "distractor_rationales": [
+      "正解。吸収・反射による減衰。",
+      "不正解。透過もするが弱くなる。",
+      "不正解。Wi-Fiは電磁波。",
+      "不正解。自由空間でも距離減衰あり。"
+    ],
+    "basic_terms": "減衰：電波強度の低下、反射：境界面での電波の跳ね返り",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "機械",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "電気",
+    "question_text": "仕事率（パワー）のSI単位として正しいものはどれか。",
+    "choices": [
+      "パスカル (Pa)",
+      "ジュール (J)",
+      "ニュートン (N)",
+      "ワット (W)"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "仕事率はワット（W = J/s）。",
+    "detailed_explanation": "P = W/t。Jは仕事の量、Wは単位時間あたりの仕事。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "仕事と仕事率の単位を区別できる",
+    "common_misconception": "ジュールを仕事率の単位と混同する",
+    "distractor_rationales": [
+      "不正解。圧力の単位。",
+      "不正解。エネルギー・仕事の単位。",
+      "不正解。力の単位。",
+      "正解。仕事率のSI単位。"
+    ],
+    "basic_terms": "ワット：仕事率の単位（1 W = 1 J/s）、仕事率：単位時間あたりの仕事",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料",
+    "question_text": "熱力学第一法則を最も正確に表した記述はどれか。",
+    "choices": [
+      "エントロピーは孤立系で減少しうる",
+      "仕事と熱はエネルギー変換の形態として等価である",
+      "永久機関の第一種は理論上可能である",
+      "エネルギーは形態を変えながら保存される"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "第一法則はエネルギー保存則：Q = ΔU + W（Q: 系への熱、ΔU: 内部エネルギー変化、W: 系のした仕事）。",
+    "detailed_explanation": "熱力学第一法則はエネルギー保存の法則であり、Q = ΔU + W と表される（Q: 系に加えられた熱量、ΔU: 内部エネルギー変化、W: 系が外部にした仕事）。選択肢1は第二法則（クラウジウスの表現）、選択肢3は第二法則のエントロピー表現、選択肢4は第三法則（ネルンスト-プランクの定理）。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "熱力学の四つの法則（第0〜第三法則）を区別し、特に第一法則（エネルギー保存）の内容を正確に説明できる。",
+    "common_misconception": "「エントロピー増大」も熱力学の基本法則だが、これは第二法則。第一法則はエネルギー保存に関するものであり、「熱エネルギーは消えない」という直感に対応する。",
+    "distractor_rationales": [
+      "不正解。エントロピー減少は第二法則の話であり、第一法則の内容ではありません。",
+      "不正解。仕事と熱の等価性は第一法則の一部ですが、問いの核心はエネルギー保存そのものです。",
+      "不正解。永久機関第一種はエネルギー保存に反するため不可能です。",
+      "正解。熱力学第一法則はエネルギー保存を述べ、熱と仕事はエネルギーの変換形態です。"
+    ],
+    "basic_terms": [
+      "熱力学第一法則",
+      "内部エネルギー",
+      "仕事",
+      "熱量",
+      "エントロピー",
+      "第二法則",
+      "第三法則"
+    ],
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "制御",
+    "question_text": "引張応力100 MPa、断面積200 mm²の棒に働く引張力はどれか。",
+    "choices": [
+      "2 kN",
+      "20 kN",
+      "200 kN",
+      "0.02 kN"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "F = σA = 100×10⁶×200×10⁻⁶ = 20×10³ N = 20 kN。",
+    "detailed_explanation": "σ=F/A。A=200 mm²=2×10⁻⁴ m²。F=100×10⁶×2×10⁻⁴=20 kN。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "応力と力の関係式で力を計算できる",
+    "common_misconception": "単位換算（MPaとmm²）を誤る",
+    "distractor_rationales": [
+      "不正解。10倍小さい。",
+      "正解。F=σA=20 kN。",
+      "不正解。10倍大きい。",
+      "不正解。桁が2桁小さい。"
+    ],
+    "basic_terms": "応力：単位面積あたりの力（Pa= N/m²）、引張力：引っ張る方向の力",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "土木",
+    "question_text": "PID制御の各項の主な役割の組合せとして正しいものはどれか。",
+    "choices": [
+      "P：定常偏差低減、I：定常偏差零化、D：過渡応答改善",
+      "P：定常偏差零化、I：ノイズ除去、D：系の不安定化",
+      "P：位相余裕設定、I：ゲイン余裕設定、D：サンプリング周期決定",
+      "P：外乱推定、I：モデル同定、D：通信遅延補償"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "Pは比例、Iは積分で定常偏差零、Dは微分で過渡改善。",
+    "detailed_explanation": "古典的PIDの役割分担。I単独では位相遅れ増、Dはノイズ増幅しやすい。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "PID各項の機能を区別して説明できる",
+    "common_misconception": "P項だけで定常偏差が零になると思う",
+    "distractor_rationales": [
+      "正解。古典的PIDの標準的役割。",
+      "不正解。Pは定常偏差零化はIの役割。",
+      "不正解。周波数応答設計用語の混同。",
+      "不正解。現代制御の別概念。"
+    ],
+    "basic_terms": "PID制御：比例・積分・微分の組合せ、定常偏差：目標と定常出力の差",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "土木",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "熱工学",
+    "question_text": "軟弱地盤に建つ建物の不同沈下を抑える工法として適切なものはどれか。",
+    "choices": [
+      "地盤をそのままにして荷重だけ増やす",
+      "杭基礎や地盤改良で支持力・沈下を制御する",
+      "建物を軽くするだけで不同沈下は必ず解消する",
+      "不同沈下は構造計算では扱わない"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "軟弱地盤では杭・地盤改良等で沈下を管理する。",
+    "detailed_explanation": "不同沈下は構造に大きな影響。支持層までの杭、置換・固化等の工法がある。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "軟弱地盤問題と基礎工法の関係を説明できる",
+    "common_misconception": "軽量化だけで不同沈下が消えると思う",
+    "distractor_rationales": [
+      "不正解。荷重増は悪化。",
+      "正解。杭・地盤改良が典型工法。",
+      "不正解。軽量化だけでは不十分な場合がある。",
+      "不正解。不同沈下は重要な設計項目。"
+    ],
+    "basic_terms": "不同沈下：建物各部分の沈下量の差、杭基礎：杭で支持層まで荷重を伝える基礎",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "熱工学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "流体力学",
+    "question_text": "静止流体中の一点に働く圧力の向きとして正しいものはどれか。",
+    "choices": [
+      "任意方向に等しい大きさ（静圧の等方性）",
+      "表面に平行な方向を主成分とする",
+      "重力方向を主成分とする",
+      "流れ方向を主成分とする"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "静止流体の静圧は任意方向に同じ。",
+    "detailed_explanation": "微小体積の力の釣り合いより圧力は等方性。パスカルの原理の基礎。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "静圧の等方性を説明できる",
+    "common_misconception": "圧力は常に下向き（重力方向）だけと思う",
+    "distractor_rationales": [
+      "正解。静圧の等方性。",
+      "不正解。表面平行成分はせん断応力の話。",
+      "不正解。重力方向だけではない。",
+      "不正解。静止なので流れ方向はない。"
+    ],
+    "basic_terms": "静圧：静止流体の圧力、等方性：方向によらず同じ性質",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "流体力学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "構造工学",
+    "question_text": "一端固定・他端自由の片持ち梁（長さL）の自由端に集中荷重Pが作用するとき、固定端の曲げモーメントはどれか。",
+    "choices": [
+      "PL/8",
+      "PL/2",
+      "PL/4",
+      "PL"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "片持ち梁・自由端荷重の固定端モーメント M = PL。",
+    "detailed_explanation": "自由端 M=0、固定端 M=PL。PL/4は単純梁中央荷重。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "片持ち梁と単純梁の曲げモーメントを区別できる",
+    "common_misconception": "単純梁のPL/4と混同する",
+    "distractor_rationales": [
+      "不正解。等分布荷重単純梁。",
+      "不正解。単純梁の別ケース。",
+      "不正解。単純梁中央荷重。",
+      "正解。片持ち梁固定端。"
+    ],
+    "basic_terms": "片持ち梁：一端固定の梁、曲げモーメント：断面を曲げようとする力のモーメント",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "構造工学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料力学",
+    "question_text": "ボード線図（Bode plot）において、ゲイン（利得）線図の縦軸の単位として正しいものはどれか。",
+    "choices": [
+      "ヘルツ (Hz)",
+      "ニュートン (N)",
+      "デシベル (dB)",
+      "ラジアン毎秒 (rad/s)"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "ボード線図のゲイン線図の縦軸は振幅比を対数で表したデシベル（dB = 20 log₁₀|G(jω)|）。",
+    "detailed_explanation": "ボード線図は周波数伝達関数 G(jω) のゲイン特性と位相特性を対数周波数スケールで表したもの。ゲイン線図（上段）の縦軸は 20 log₁₀|G(jω)| [dB]、横軸は角周波数 ω [rad/s] の対数スケール。位相線図（下段）の縦軸は ∠G(jω) [deg または rad]。rad/s と Hz は横軸（周波数）の単位であり縦軸ではない。N は力の単位で制御の周波数解析とは無関係。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "ボード線図の構成（ゲイン線図・位相線図）と各軸の単位・スケールを正確に説明できる。",
+    "common_misconception": "横軸（周波数）の単位である rad/s や Hz をゲイン線図の縦軸と混同しやすい。「ゲイン＝電力・電圧比の対数変換＝dB」という対応を記憶することが重要。",
+    "distractor_rationales": [
+      "ヘルツ（Hz）は周波数（f = ω/2π）の単位であり、横軸に使用されることはあるが縦軸（ゲイン）の単位ではない。",
+      "ニュートン（N）は力の単位であり、ボード線図の周波数解析とは無関係な物理量。",
+      "デシベル（dB = 20 log₁₀|G(jω)|）はゲイン（振幅比）を対数スケールで表す単位で正解。−3 dB が半値出力に対応する。",
+      "ラジアン毎秒（rad/s）はボード線図の横軸（角周波数 ω）の単位であり、縦軸のゲインの単位ではない。"
+    ],
+    "basic_terms": [
+      "ボード線図",
+      "デシベル",
+      "ゲイン",
+      "位相",
+      "周波数伝達関数",
+      "角周波数"
+    ],
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料力学",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "情報通信",
+    "question_text": "脆性材料と延性材料の破壊特性の違いとして正しいものはどれか。",
+    "choices": [
+      "脆性は大変形後に破断、延性は突然破断",
+      "脆性は低応力で突然破断、延性は塑性変形後に破断",
+      "両者とも破断前に同程度の颈縮が生じる",
+      "脆性のみ引張試験が可能"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "脆性は低ひずみ破断、延性は塑性変形・颈縮後破断。",
+    "detailed_explanation": "ガラス・鋳鉄は脆性、軟鋼・銅は延性。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "脆性破壊と延性破壊を区別できる",
+    "common_misconception": "すべての金属は延性だと思い込む",
+    "distractor_rationales": [
+      "不正解。脆性と延性が逆。",
+      "正解。典型的な違い。",
+      "不正解。颈縮は主に延性。",
+      "不正解。脆性も引張試験可能。"
+    ],
+    "basic_terms": "脆性破壊：低ひずみでの突然破断、延性：大きな塑性変形を伴う性質",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "情報通信",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "機械",
+    "question_text": "デジタル信号をアナログ信号に変換する装置として正しいものはどれか。",
+    "choices": [
+      "DAC（D/Aコンバータ）",
+      "CPU",
+      "RAM",
+      "ADC（A/Dコンバータ）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "DACがデジタル→アナログ。ADCは逆。",
+    "detailed_explanation": "スピーカ出力等はDAC。マイク入力はADC。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ADCとDACの役割を区別できる",
+    "common_misconception": "ADCとDACを逆に覚える",
+    "distractor_rationales": [
+      "正解。デジタル→アナログ。",
+      "不正解。演算処理装置。",
+      "不正解。記憶装置。",
+      "不正解。アナログ→デジタル。"
+    ],
+    "basic_terms": "DAC：デジタル信号をアナログ電圧に変換、ADC：アナログをデジタルに変換",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "機械",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "電気",
+    "question_text": "歯車比（減速比）が2:1の減速機で、入力軸100 rpmのとき出力軸の回転数はどれか。",
+    "choices": [
+      "100 rpm",
+      "50 rpm",
+      "25 rpm",
+      "200 rpm"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "減速比2:1なら出力は入力の1/2で50 rpm。",
+    "detailed_explanation": "減速機は回転数↓トルク↑。n_out = n_in / 減速比。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "歯車比と回転数の関係を説明できる",
+    "common_misconception": "減速で回転数が増えると逆に考える",
+    "distractor_rationales": [
+      "不正解。1:1ではない。",
+      "正解。100/2=50 rpm。",
+      "不正解。4:1と混同。",
+      "不正解。增速の誤り。"
+    ],
+    "basic_terms": "減速比：入力回転数と出力回転数の比、トルク：回転させようとする力のモーメント",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料",
+    "question_text": "ファラデーの電磁誘導法則が示す、コイルに誘導される起電力の原因として正しいものはどれか。",
+    "choices": [
+      "コイルを貫く磁束の時間変化",
+      "コイルの温度上昇",
+      "コイルの抵抗値の変化",
+      "コイル周辺の湿度"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "e = −dΦ/dt。磁束変化が起電力を生む。",
+    "detailed_explanation": "発電機・変圧器の基本原理。静止磁場だけでは誘導起電力は生じない。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "電磁誘導の原因を説明できる",
+    "common_misconception": "磁場があれば常に起電力が生じると思う",
+    "distractor_rationales": [
+      "正解。磁束の時間変化。",
+      "不正解。温度は直接原因ではない。",
+      "不正解。抵抗変化は別現象。",
+      "不正解。湿度は無関係。"
+    ],
+    "basic_terms": "電磁誘導：磁束変化により起電力が生じる現象、磁束：磁場が面を貫く量",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "制御",
+    "question_text": "長さ1 m、直径10 mmの鋼棒（ヤング率200 GPa）に100 MPaの引張応力がかかるときの伸び（弾性域）に最も近いものはどれか。",
+    "choices": [
+      "0.05 mm",
+      "0.5 mm",
+      "5 mm",
+      "50 mm"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ε=σ/E=100×10⁶/(200×10⁹)=5×10⁻⁴、δ=εL=0.5 mm。",
+    "detailed_explanation": "フックの法則 σ=Eε。δ=PL/(AE)=σL/E。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "弾性伸びを応力・ヤング率から計算できる",
+    "common_misconception": "応力100 MPaで大変形すると過大評価する",
+    "distractor_rationales": [
+      "不正解。10倍小さい。",
+      "正解。δ=σL/E≈0.5 mm。",
+      "不正解。10倍大きい。",
+      "不正解。塑性域レベルの変形。"
+    ],
+    "basic_terms": "ヤング率：弾性域の応力-ひずみ比、ひずみ：長さの変化率",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "土木",
+    "question_text": "抵抗 R [Ω] と静電容量 C [F] からなる直列 RC 回路の時定数 τ の定義として正しいものはどれか。",
+    "choices": [
+      "τ = RC",
+      "τ = R / C",
+      "τ = C / R",
+      "τ = 1 / (RC)"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "RC 直列回路の時定数は τ = RC（単位：秒）。",
+    "detailed_explanation": "RC 直列回路でコンデンサに充電する場合、電圧は v(t) = V₀(1 - e^(-t/τ)) と表され、時定数 τ = RC は充電開始から電圧が最終値の約 63.2%（= 1 - 1/e）に達する時間。次元チェック：[Ω]×[F] = [V/A]×[C/V] = [C/A] = [s]。R/C の次元は Ω/F = (V·s/C)/(C/V) = V²·s/C² となり秒にならない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "RC 回路の時定数 τ = RC を導出・記憶し、その物理的意味（充電・放電の速さの指標）と次元チェックを行える。",
+    "common_misconception": "τ = R/C と誤って覚えるケースが多い。単位（Ω × F = s）で確認するか、微分方程式 RC dv/dt + v = V₀ を解いて指数関数の引数から τ = RC を導出することで確実に覚えられる。",
+    "distractor_rationales": [
+      "RC の次元は Ω×F = s（秒）であり、時定数 τ = RC は正しい定義。",
+      "正解。RC回路の時定数は τ=RC=1000×0.001=1 s です。",
+      "C/R の次元も [s] にならず誤り。F/Ω = (C/V)/(V/A) = A·C/V² ≠ s。",
+      "1/(RC) の次元は 1/s = Hz（角周波数の次元）であり、RC 回路の遮断角周波数 ω_c に相当するが時定数ではない。"
+    ],
+    "basic_terms": [
+      "時定数",
+      "RC回路",
+      "コンデンサ",
+      "充放電",
+      "指数関数",
+      "過渡応答"
+    ],
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "土木",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "熱工学",
+    "question_text": "盛土の締固め度管理で、現場密度と最大乾燥密度の比として用いる指標はどれか。",
+    "choices": [
+      "間隙比",
+      "締固め度",
+      "液性指数",
+      "含水比"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "締固め度 = 現場乾燥密度/最大乾燥密度×100(%)。",
+    "detailed_explanation": "含水比は水の割合、間隙比は空隙体積比、液性指数は Atterberg限界由来。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "盛土管理指標を区別できる",
+    "common_misconception": "含水比が締固めの良さを直接表すと誤解する",
+    "distractor_rationales": [
+      "不正解。土の空隙の指標。",
+      "正解。締固めの程度。",
+      "不正解。粘土のコンシステンシ指標。",
+      "不正解。水含有量の指標。"
+    ],
+    "basic_terms": "締固め度：最大乾燥密度に対する現場密度の比、最大乾燥密度：Proctor試験で得る基準密度",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "熱工学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "流体力学",
+    "question_text": "カルノーサイクルの熱効率 η = 1 − T_L/T_H で、T_H と T_L が表すものはどれか。",
+    "choices": [
+      "高温熱源と低温熱源の絶対温度",
+      "吸気温度と排気温度の摂氏",
+      "燃料の発熱量と出力仕事",
+      "圧縮比と膨張比"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "T_H, T_L は高温・低温熱源の絶対温度（K）。",
+    "detailed_explanation": "カルノー効率は温度比のみで決まる理想上限。摂氏ではなくK。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "カルノーサイクルと熱効率式を説明できる",
+    "common_misconception": "摂氏温度をそのまま式に入れる",
+    "distractor_rationales": [
+      "正解。絶対温度の比。",
+      "不正解。摂氏では公式が成り立たない。",
+      "不正解。エネルギー量の比ではない。",
+      "不正解。内燃機関のパラメータ。"
+    ],
+    "basic_terms": "カルノーサイクル：可逆サイクルの理想モデル、絶対温度：ケルビン温度",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "流体力学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "構造工学",
+    "question_text": "円管の層流（ポアズイユ流れ）における平均流速と圧力勾配の関係として正しいものはどれか。",
+    "choices": [
+      "流速は管半径のみで決まる",
+      "圧力勾配が大きいほど平均流速は小さい",
+      "圧力勾配と平均流速は無関係",
+      "圧力勾配が大きいほど平均流速は大きい"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ポアズイユ：平均流速は圧力勾配（駆動力）に比例。",
+    "detailed_explanation": "v̄ ∝ (−dp/dx)。粘性と半径も影響するが勾配↑→流速↑。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ポアズイユ流れの圧力-流速関係を説明できる",
+    "common_misconception": "圧力が高いほど流れにくいと逆に考える",
+    "distractor_rationales": [
+      "不正解。半径・粘性も関与。",
+      "不正解。駆動力と流速は同方向。",
+      "不正解。Hagen-Poiseuilleで相関。",
+      "正解。勾配が駆動力。"
+    ],
+    "basic_terms": "ポアズイユ流れ：円管層流の定常流、圧力勾配：圧力の方向変化率",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "構造工学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料力学",
+    "question_text": "幅200 mm、高さ300 mmの長方形断面の断面二次モーメント I として正しいものはどれか。",
+    "choices": [
+      "1.2×10⁶ mm⁴",
+      "9.0×10⁵ mm⁴",
+      "4.5×10⁶ mm⁴",
+      "1.8×10⁶ mm⁴"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "I = bh³/12 = 200×300³/12 = 4.5×10⁶ mm⁴。",
+    "detailed_explanation": "中立軸が高さ方向中央。hが大きい方向を三次で効く。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "長方形断面の断面二次モーメントを計算できる",
+    "common_misconception": "bとhを逆に代入する",
+    "distractor_rationales": [
+      "不正解。計算誤り。",
+      "不正解。半分の値。",
+      "正解。I=bh³/12。",
+      "不正解。hとbを入替（hb³/12）。"
+    ],
+    "basic_terms": "断面二次モーメント：断面の曲げ剛性指標、中立軸：曲げでひずみ零の軸",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料力学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "情報通信",
+    "question_text": "応力状態が平面応力（σ_z=τ_zx=τ_zy=0）のとき、主応力を求める式として正しいものはどれか。",
+    "choices": [
+      "σ₁,₂ = √(σ_x² + σ_y² + σ_z²)",
+      "σ₁,₂ = (σ_x+σ_y)/2 ± √{((σ_x−σ_y)/2)² + τ_xy²}",
+      "σ₁,₂ = σ_x ± σ_y",
+      "σ₁,₂ = τ_xy ± σ_x"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "平面応力の主応力はMohr円/2次元固有値で与えられる。",
+    "detailed_explanation": "3次元von Mises等とは別。平面応力特有の公式。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "平面応力状態の主応力公式を用いられる",
+    "common_misconception": "3次元の主応力公式と混同する",
+    "distractor_rationales": [
+      "不正解。3次元等価応力。",
+      "正解。平面応力の主応力公式。",
+      "不正解。せん断項が欠ける。",
+      "不正解。物理的に不適切。"
+    ],
+    "basic_terms": "主応力：せん断応力零の方向の正応力、平面応力：一方向の応力が零の状態",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "情報通信",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "機械",
+    "question_text": "コンクリート構造物における鉄筋腐食の主な原因として最も適切なものはどれか。",
+    "choices": [
+      "コンクリートの高いアルカリ性（pH 12〜13）による腐食促進",
+      "鉄筋の引張応力が許容引張強度を超えることによる電気化学的劣化",
+      "塩化物イオンの浸透による鉄筋表面の不動態皮膜の局所的破壊",
+      "骨材中のシリカ質鉱物とアルカリ成分が反応して生じる膨張"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "塩化物イオンが閾値を超えて浸透すると不動態皮膜が破壊され、鉄筋が局部腐食を開始する。",
+    "detailed_explanation": "コンクリート中は高アルカリ（pH 12〜13）環境で鉄筋表面に安定な不動態皮膜（γ-Fe₂O₃）が形成され腐食から保護される。しかし海水・海砂・凍結防止剤などからの塩化物イオン（Cl⁻）が鉄筋表面で閾値（約 1.2 kg/m³ 以上）を超えると、不動態皮膜が局部的に破壊されて孔食（ピッティング）が始まり、酸素・水分の存在下で腐食が進行する。選択肢4はアルカリシリカ反応（ASR）によるゲル膨張割れで別の劣化機構。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "コンクリート中の鉄筋腐食機構（塩害・中性化）とアルカリシリカ反応（ASR）を区別し、劣化原因を説明できる。",
+    "common_misconception": "コンクリートのアルカリ性が腐食を促進すると誤解しやすいが、アルカリ性は逆に不動態皮膜を維持して腐食を抑制する保護機能をもつ。塩化物や中性化がその保護を破壊することが腐食の直接原因。",
+    "distractor_rationales": [
+      "コンクリートのアルカリ性（高pH）は鉄筋を保護する不動態皮膜の維持に必要であり、腐食を促進するのではなく抑制する。",
+      "引張応力超過は機械的破壊（ひび割れ）の原因となるが、腐食は電気化学的プロセスであり力学的応力が直接の電気化学劣化を引き起こすわけではない。",
+      "塩化物イオン浸透による不動態皮膜破壊が鉄筋腐食の主要原因で正解。塩分量の閾値管理が腐食対策の要点。",
+      "アルカリシリカ反応（ASR）は骨材中の反応性シリカとセメント中のアルカリ水酸化物が反応して吸水膨張ゲルを生成しひび割れを起こす現象で、鉄筋腐食とは別の劣化機構。"
+    ],
+    "basic_terms": [
+      "塩害",
+      "不動態皮膜",
+      "塩化物イオン",
+      "孔食",
+      "中性化",
+      "アルカリシリカ反応",
+      "耐久性"
+    ],
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "機械",
       "batch50",
       "L600"
-    ],
+    ]
+  },
+  {
     "domain": "工学",
-    "subdomain": "電気工学",
+    "subdomain": "電気",
+    "question_text": "機械要素の疲労限度（疲労強度）の定義として最も適切なものはどれか。",
+    "choices": [
+      "1回の静的最大荷重で破断する応力",
+      "繰返し応力を受けても有限寿命内で破断しない上限応力振幅",
+      "クリープ破壊に至る応力",
+      "衝撃荷重1回で破断する応力"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "疲労限度は繰返し載荷下の許容応力振幅の指標。",
+    "detailed_explanation": "S-N線図で定義。静強度・クリープ・衝撃は別現象。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "疲労限度と他の強度指標を区別できる",
+    "common_misconception": "静的最大応力が疲労限度だと混同する",
+    "distractor_rationales": [
+      "不正解。静的最大強度。",
+      "正解。繰返し載荷の許容応力。",
+      "不正解。高温クリープ。",
+      "不正解。衝撃強度。"
+    ],
+    "basic_terms": "疲労限度：繰返し応力の許容限界、S-N線図：応力振幅と破断寿命の関係",
     "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料",
     "question_text": "NPN型バイポーラトランジスタにおいて、ベース電流 I_B により増幅される主な電流はどれか。",
     "choices": [
       "ベース電流 I_B 自体",
@@ -55,123 +1212,665 @@
       "コレクタ電流 I_C",
       "エミッタ電流 I_E"
     ],
-    "correct_choice_index": 2,
-    "short_explanation": "微小な I_B により大きな I_C が制御される（I_E ≈ I_C + I_B）。",
-    "detailed_explanation": "NPNトランジスタはベースに流入した微小電流でコレクタ-エミッタ間の大電流を制御。増幅対象は主に I_C。",
-    "learning_objective": "バイポーラトランジスタの3端子電流関係を説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "ベース電流そのものが出力だと誤解する",
+    "correct_choice_index": 0,
+    "short_explanation": "微小 I_B で大きな I_C が制御される（I_E ≈ I_C + I_B）。",
+    "detailed_explanation": "増幅動作の主出力は I_C。I_E は和だが増幅対象は I_C。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "BJTの3端子電流関係を説明できる",
+    "common_misconception": "ベース電流が出力だと誤解する",
     "distractor_rationales": [
-      "不正解。I_B は入力制御信号。",
-      "不正解。電源電流は補助的。",
-      "正解。ベースで制御される増幅電流。",
-      "不正解。I_E は I_C と I_B の和だが増幅出力は I_C。"
+      "不正解。I_B は入力。",
+      "不正解。補助的。",
+      "正解。増幅される主電流。",
+      "不正解。I_E=I_C+I_B だが増幅は I_C。"
     ],
-    "basic_terms": "バイポーラトランジスタ：電流増幅素子、コレクタ電流：出力側の主電流"
-  },
-  {
+    "basic_terms": "バイポーラトランジスタ：電流制御型半導体素子、コレクタ電流：出力側電流",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "工学",
-      "材料工学",
+      "材料",
       "batch50",
-      "L700"
-    ],
-    "domain": "工学",
-    "subdomain": "材料工学",
-    "difficulty_initial": 700,
-    "question_text": "二元系状態図において、共晶反応（eutectic reaction）の特徴として正しいものはどれか。",
-    "choices": [
-      "気体が直接固体になる",
-      "液体が冷却中に二種の固体相に同時に変態する",
-      "固体が液体に溶けて単一固相になる",
-      "液体が単一固相のみに変態する"
-    ],
-    "correct_choice_index": 3,
-    "short_explanation": "共晶反応：L → α + β のように液体が二固相に同時変態。",
-    "detailed_explanation": "共晶点で液体が冷却すると2つの固相が同時析出。共析は固相からの変態。",
-    "learning_objective": "共晶・共析・包晶反応を区別して説明できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "共晶を単一固相の凝固と混同する",
-    "distractor_rationales": [
-      "不正解。気相関与の反応ではない。",
-      "正解。共晶反応の定義。",
-      "不正解。包晶反応等の別反応。",
-      "不正解。単相凝固の記述。"
-    ],
-    "basic_terms": "共晶反応：液体から二固相が同時析出する変態、状態図：温度と組成の相平衡図"
+      "L600"
+    ]
   },
   {
+    "domain": "工学",
+    "subdomain": "制御",
+    "question_text": "鉄-炭素合金の共析反応（727°C付近）で生成する組織の名称はどれか。",
+    "choices": [
+      "マルテンサイト",
+      "フェライト単相",
+      "オーステナイト",
+      "ペarlite（パーライト）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "共析反応 γ → α + Fe₃C でパーライト生成。",
+    "detailed_explanation": "727°C共析点。オーステナイトは高温相、マルテンサイトは急冷。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "鉄鋼の共析反応と生成組織を説明できる",
+    "common_misconception": "共析を単一相凝固と混同する",
+    "distractor_rationales": [
+      "不正解。急冷相。",
+      "不正解。低炭素単相域。",
+      "不正解。高温単相。",
+      "正解。共析生成組織。"
+    ],
+    "basic_terms": "共析反応：固相から二固相が同時析出、パーライト：フェライトとセメンタイトの層状組織",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "工学",
+      "制御",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "土木",
+    "question_text": "MIMO制御とSISO制御の違いとして正しいものはどれか。",
+    "choices": [
+      "SISOのみ状態空間表現が使える",
+      "MIMOは入出力が各1つ、SISOは複数",
+      "MIMOは複数入出力の結合を扱い、SISOは1入力1出力",
+      "MIMOはサンプル周期が長い"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "MIMO: Multiple Input Multiple Output。SISO: Single IO。",
+    "detailed_explanation": "MIMOは結合・相互作用を考慮。SISOは古典制御の基本。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "SISOとMIMOの違いを説明できる",
+    "common_misconception": "MIMOとSISOを逆に覚える",
+    "distractor_rationales": [
+      "不正解。SISOも状態空間可。",
+      "不正解。定義が逆。",
+      "正解。入出力数の違い。",
+      "不正解。サンプリングは別問題。"
+    ],
+    "basic_terms": "MIMO：多入力多出力系、SISO：単入力単出力系",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "土木",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "熱工学",
+    "question_text": "鋼の焼入れ（quenching）処理によって主に生成する組織はどれか。",
+    "choices": [
+      "パーライト",
+      "オーステナイト",
+      "フェライト",
+      "マルテンサイト"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "オーステナイト域からの急冷（焼入れ）により、無拡散変態でマルテンサイトが生成し高硬度となる。",
+    "detailed_explanation": "焼入れは鋼をオーステナイト域（A₃変態点以上）に加熱後、水・油・空気などで急冷する操作。急冷により拡散を伴わない無拡散変態（マルテンサイト変態）が起こり、体心正方晶（BCT）のマルテンサイト組織が得られる。マルテンサイトは炭素が過飽和に固溶した高硬度・高強度（かつ脆い）組織。パーライトは徐冷時に生成するフェライト＋セメンタイトの層状組織、オーステナイトは加熱中の安定相、フェライトは低炭素鋼の常温安定相。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "鋼の熱処理（焼入れ・焼戻し・焼なまし）により得られる組織と特性の関係を説明できる。",
+    "common_misconception": "「焼入れ後もオーステナイトが残る（残留オーステナイト）」という知識から誤ってオーステナイトを選ぶ場合があるが、主生成組織はマルテンサイトであり残留オーステナイトは副次的。",
+    "distractor_rationales": [
+      "パーライトはオーステナイトが徐冷（平衡冷却）されるときに生成するフェライト＋セメンタイトの共析組織。急冷では得られない。",
+      "オーステナイトは焼入れ前の加熱段階での安定相（FCC構造）。急冷でほぼすべてマルテンサイトに変態する（一部残留オーステナイトは残るが主組織ではない）。",
+      "フェライトは炭素をほとんど含まない BCC 構造のα-鉄で、低炭素領域や徐冷時に生成する。焼入れの主生成物ではない。",
+      "マルテンサイトは急冷による無拡散変態（マルテンサイト変態）で生成する高硬度組織で正解。BCT構造で炭素が過飽和固溶。"
+    ],
+    "basic_terms": [
+      "焼入れ",
+      "マルテンサイト",
+      "パーライト",
+      "オーステナイト",
+      "フェライト",
+      "マルテンサイト変態",
+      "無拡散変態"
+    ],
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "熱工学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "流体力学",
+    "question_text": "可逆カルノーエンジンの効率が同温度の不可逆熱機関を上回る理由を述べた定理はどれか。",
+    "choices": [
+      "カルノーの定理",
+      "ストークスの定理",
+      "ベルヌーイの定理（流体力学）",
+      "ベルヌーイの定理"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "カルノーの定理：可逆機関の効率が最大。",
+    "detailed_explanation": "第二法則の表現。不可逆機関は余剰エントロピー生成で効率低下。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "カルノーの定理と熱機関効率の上限を説明できる",
+    "common_misconception": "効率は設計次第でカルノーを超えられると誤解する",
+    "distractor_rationales": [
+      "正解。熱機関の効率上限。",
+      "不正解。数学の定理。",
+      "不正解。流体のベルヌーイ。",
+      "不正解。流体力学の定理。"
+    ],
+    "basic_terms": "カルノーの定理：可逆カルノー機関が最高効率、不可逆：エントロピー生成を伴う過程",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "工学",
       "流体力学",
       "batch50",
-      "L800"
-    ],
-    "domain": "工学",
-    "subdomain": "流体力学",
-    "difficulty_initial": 800,
-    "question_text": "管内流れが層流から乱流へ遷移する際の指標として広く用いられる無次元数はどれか。",
-    "choices": [
-      "レイノルズ数",
-      "マッハ数",
-      "フルード数",
-      "ヌセルト数"
-    ],
-    "correct_choice_index": 0,
-    "short_explanation": "レイノルズ数 Re = ρvL/μ が慣性力と粘性力の比を表し、臨界値で流れ態様が変わる。",
-    "detailed_explanation": "円管流れで Re≈2300 付近が層流-乱流遷移の目安。マッハ数は圧縮性、フルード数は自由表面、ヌセルト数は熱伝達。",
-    "learning_objective": "流体力学の主要無次元数と物理的意味を説明できる",
-    "cognitive_type": "用語・定義",
-    "common_misconception": "マッハ数が管内流れの遷移指標だと誤解する",
-    "distractor_rationales": [
-      "正解。慣性/粘性の比。",
-      "不正解。音速に対する流速比。",
-      "不正解。慣性/浮力の比。",
-      "不正解。対流熱伝達の指標。"
-    ],
-    "basic_terms": "レイノルズ数：慣性力と粘性力の比、層流：整然とした流れ、乱流：不規則な流れ"
+      "L700"
+    ]
   },
   {
+    "domain": "工学",
+    "subdomain": "構造工学",
+    "question_text": "境界層分離が抗力増大の主因となる流れとして最も典型なものはどれか。",
+    "choices": [
+      "完全発達した層流ポアズイユ流",
+      "静止流体",
+      "低レイノルズ数の層流管流",
+      "鈍角後縁まわりの乱流で逆圧勾配域が生じる流れ"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "逆圧勾配で境界層分離→wake拡大→圧力抵抗増。",
+    "detailed_explanation": "球・円柱等の鈍形体で顕著。層流管流は分離問題と別。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "境界層分離と抗力増大の因果を説明できる",
+    "common_misconception": "すべての流れで境界層分離が主抗力だと思う",
+    "distractor_rationales": [
+      "不正解。摩擦支配。",
+      "不正解。流れなし。",
+      "不正解。管流摩擦抗力が主。",
+      "正解。逆圧勾配による分離。"
+    ],
+    "basic_terms": "境界層分離：壁面近傍流れが物体表面から離れる現象、逆圧勾配：圧力が流れ方向に増加する領域",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "工学",
+      "構造工学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料力学",
+    "question_text": "両端ピン支持の細長い柱（オイラー柱）の座屈荷重 P_cr に比例する因子はどれか（他条件一定）。",
+    "choices": [
+      "ヤング率 E と断面二次モーメント I",
+      "材料密度 ρ を主成分とする",
+      "柱長 L の2乗",
+      "降伏応力 σ_y を主成分とする"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "P_cr = π²EI/L_eff²。E と I に比例。",
+    "detailed_explanation": "L²に反比例。σ_y は座屈支配域では直接効かない（短柱は別）。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "オイラー座屈荷重式の依存パラメータを説明できる",
+    "common_misconception": "座屈荷重は降伏応力だけで決まると思う",
+    "distractor_rationales": [
+      "正解。P_cr ∝ EI。",
+      "不正解。密度は直接入らない。",
+      "不正解。L²に反比例。",
+      "不正解。細長柱は弾性座屈。"
+    ],
+    "basic_terms": "オイラー座屈：細長柱の弾性座屈、座屈荷重：平衡が失われる臨界荷重",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料力学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "情報通信",
+    "question_text": "von Mises応力 σ_vm と Tresca応力 σ_tr の関係として一般に正しいものはどれか。",
+    "choices": [
+      "任意の応力状態で σ_vm = σ_tr",
+      "σ_vm ≤ σ_tr",
+      "σ_vm ≥ σ_tr",
+      "両者は無関係"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "同一応力状態で von Mises ≤ Tresca（内接円柱と六面体）。",
+    "detailed_explanation": "降伏判定でMisesの方がやや保守的（小さい）。純剪断等で差が出る。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "2つの降伏基準の大小関係を説明できる",
+    "common_misconception": "2つの基準は常に等しいと思う",
+    "distractor_rationales": [
+      "不正解。純剪断等で不一致。",
+      "正解。σ_vm ≤ σ_tr。",
+      "不正解。大小が逆。",
+      "不正解。両方とも等価応力。"
+    ],
+    "basic_terms": "von Mises応力：歪エネルギー基準の等価応力、Tresca応力：最大剪断応力基準",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "情報通信",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "機械",
+    "question_text": "金属の塑性変形における転位（dislocation）の役割として最も適切な記述はどれか。",
+    "choices": [
+      "転位の移動により原子面が少ない移動量で順次ずれを伝播し、全面同時すべりより低い応力で変形が生じる",
+      "転位密度が高いほど材料は軟化し、加工によって強度は低下する",
+      "転位は主に結晶粒界で発生し、結晶粒内では塑性変形に関与しない",
+      "FCC金属では転位が存在しないため高い延性が得られる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "転位の移動により原子面を順次ずらすことで、理論強度より大幅に低い応力で塑性変形が生じる。",
+    "detailed_explanation": "転位論（Orowan-Taylor 1934）によれば、転位は結晶格子内の線欠陥であり、その移動（すべり）は全原子面を同時にずらすより非常に低いエネルギーで起こる。カーペットのしわをずらすアナロジーが有名。加工硬化は転位密度増加により転位同士の絡み合いが増え、移動が阻害されて強化する現象（選択肢2は逆）。転位は結晶粒内でも活動し（スリップバンド形成）、粒界だけではない（選択肢3は誤り）。FCC金属は転位の移動が容易なため延性が高い（転位が存在しないわけではない）。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "転位の基本概念と塑性変形・加工硬化における役割を理解し、転位密度と強度の関係を説明できる。",
+    "common_misconception": "「転位が多い＝変形しやすい（軟化）」と誤解しがちだが、転位密度が増加すると転位同士が絡み合って動きにくくなり、加工硬化（強化）が起こる。",
+    "distractor_rationales": [
+      "正解。転位の移動により塑性変形が起こり、加工硬化の原因となります。",
+      "転位密度増加→転位絡み合い増加→転位移動困難→強化（加工硬化）が正しい。軟化は逆。",
+      "転位は結晶粒内（スリップ系上）で活動する。粒界は転位移動の障害となりHall-Petch効果で強化する。",
+      "FCC金属（Al, Cu, Ni等）は{111}面上の⟨110⟩方向に転位が容易に移動できるため延性が高い。転位が存在しないからではない。"
+    ],
+    "basic_terms": [
+      "転位",
+      "塑性変形",
+      "加工硬化",
+      "すべり面",
+      "FCC構造",
+      "転位密度",
+      "バーガースベクトル"
+    ],
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "機械",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "電気",
+    "question_text": "転動体軸受の基本定格寿命 L10 の定義として正しいものはどれか。",
+    "choices": [
+      "潤滑脂の交換周期",
+      "軸受の静定格荷重",
+      "全試料が破断するまでの平均時間",
+      "同一条件の多数軸受群で10%が疲労寿命に達する回転数（時間）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "L10はWeibull分布に基づく10%破損寿命。",
+    "detailed_explanation": "ISO 281等。平均寿命L50より短い。静定格は永久変形限界。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "軸受寿命 L10 の統計的意味を説明できる",
+    "common_misconception": "L10を平均寿命と混同する",
+    "distractor_rationales": [
+      "不正解。メンテ周期。",
+      "不正解。C₀静定格。",
+      "不正解。全破損ではない。",
+      "正解。10%疲労破損寿命。"
+    ],
+    "basic_terms": "L10寿命：10%が疲労破損に達する寿命、Weibull分布：寿命分布のモデル",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "電気",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "材料",
+    "question_text": "MOSFETの短チャネル効果で、しきい値電圧 V_th がチャネル長 L 短縮とともに一般にどう変化するか。",
+    "choices": [
+      "一般に低下（|V_th|減少）する",
+      "ソース電圧に比例して増大",
+      "常に増大する",
+      "変化しない"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "短チャネルでDIBL等によりV_thが低下（Roll-off）。",
+    "detailed_explanation": "長チャネルモデルからの逸脱。サブスレッショルドリーク増。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "短チャネル効果とV_th変化を説明できる",
+    "common_misconception": "スケーリングでV_thは増えると誤解する",
+    "distractor_rationales": [
+      "正解。DIBLによるRoll-off。",
+      "不正解。ソース電圧比例ではない。",
+      "不正解。一般に低下。",
+      "不正解。短チャネルで変化。"
+    ],
+    "basic_terms": "短チャネル効果：L短縮で理想MOSFETからの逸脱、DIBL：ドレイン誘起バリア低減",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "制御",
+    "question_text": "H∞制御とLQ制御の設計思想の違いとして最も適切なものはどれか。",
+    "choices": [
+      "両者は数学的に同一",
+      "H∞は最悪ケースの外乱・不確かさに対する性能を最小化、LQは二次コストの期待値を最小化",
+      "H∞はSISOのみ、LQはMIMO不可",
+      "LQは非線形系専用、H∞は線形不可"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "H∞はロバスト（最悪）最適化、LQは二次性能指標最小化。",
+    "detailed_explanation": "H∞は||T||∞最小化。LQはRiccati方程式。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "H∞とLQの最適化基準の違いを説明できる",
+    "common_misconception": "H∞とLQは同じロバスト制御だと思う",
+    "distractor_rationales": [
+      "不正解。異なる基準。",
+      "正解。最悪ケース vs 二次コスト。",
+      "不正解。両方MIMO可。",
+      "不正解。線形系が基本。"
+    ],
+    "basic_terms": "H∞制御：H∞ノルム最小化によるロバスト制御、LQ制御：二次コスト最小化",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "制御",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "土木",
+    "question_text": "コンクリートの中性化（炭酸化）が鉄筋腐食リスクを高める主なメカニズムはどれか。",
+    "choices": [
+      "アルカリ度低下によりパッシブ被膜が不安定化する",
+      "鉄筋の直径が増大する",
+      "コンクリートの圧縮強度が必ず増大する",
+      "中性化により鉄筋は不活性化する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "pH低下でパッシブ被膜破壊→腐食促進。",
+    "detailed_explanation": "CO₂侵入でCa(OH)₂減。強度とは別問題。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "中性化と鉄筋腐食の因果を説明できる",
+    "common_misconception": "中性化で鉄筋が安全になると逆に考える",
+    "distractor_rationales": [
+      "正解。アルカリ度低下→被膜不安定。",
+      "不正解。直径増大は腐食生成物。",
+      "不正解。強度は一般に低下方向。",
+      "不正解。腐食リスク増。"
+    ],
+    "basic_terms": "中性化：コンクリートのpH低下現象、パッシブ被膜：鉄筋表面の保護被膜",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "土木",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "熱工学",
+    "question_text": "スパン L の単純支持梁の中央に集中荷重 P が作用するとき、梁中央における最大曲げモーメントを表す式として正しいものはどれか。",
+    "choices": [
+      "PL/8",
+      "PL/4",
+      "PL",
+      "PL/2"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "単純梁・中央集中荷重の最大曲げモーメントは M_max = PL/4。",
+    "detailed_explanation": "両端ピン支持（単純支持梁）にスパン中央で集中荷重 P が作用する場合、対称性から両支点反力は P/2。梁中央（x = L/2）での曲げモーメントは M = (P/2)×(L/2) = PL/4。PL/8 は等分布荷重 w（全荷重 P = wL）の場合の最大曲げモーメント M = wL²/8 = PL/8 と混同しやすい。PL/2 や PL は次元的に正しくても式の係数が誤り。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "単純支持梁の集中荷重と等分布荷重それぞれの最大曲げモーメント公式を区別して導出・記憶できる。",
+    "common_misconception": "PL/8 は等分布荷重のケースの公式であり、集中荷重と混同しやすい。両端ピン支持の場合は反力を求めてから任意断面の曲げモーメントを計算する手順を踏むと確実。",
+    "distractor_rationales": [
+      "PL/8 は等分布荷重（単位長さあたり w、全荷重 P = wL）のとき M_max = wL²/8 = PL/8。集中荷重の場合とは異なる。",
+      "PL/4 は M = (P/2)×(L/2) = PL/4 の正しい計算結果。",
+      "PL は曲げモーメントの次元（N·m）をもつが係数が 1 となる根拠がなく誤り。片持ち梁の端部集中荷重でも M = PL（先端荷重×アーム長さ）であり、単純梁とは異なる。",
+      "正解。単純支持梁の中央での最大曲げモーメントは M=PL/4 です。"
+    ],
+    "basic_terms": [
+      "曲げモーメント",
+      "単純支持梁",
+      "集中荷重",
+      "等分布荷重",
+      "反力",
+      "たわみ"
+    ],
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "熱工学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "流体力学",
+    "question_text": "非平衡熱力学における線形不可逆過程のOnsager相反定理が述べる関係として正しいものはどれか。",
+    "choices": [
+      "流束 J_i と力 X_j の線形係数 L_ij と L_ji の関係（時間反転対称性下）",
+      "理想気体の圧力と体積の関係",
+      "Navier-Stokes方程式",
+      "フーリエの熱伝導式のみ"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "Onsager：L_ij = L_ji（適切条件下）。",
+    "detailed_explanation": "熱流-力、拡散流-化学ポテンシャル等の結合。平衡統計の延長。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "Onsager相反定理の意味を説明できる",
+    "common_misconception": "フーリエ法則だけが不可逆過程の全てだと思う",
+    "distractor_rationales": [
+      "正解。線形応答係数の相反性。",
+      "不正解。平衡状態方程式。",
+      "不正解。流体力学。",
+      "不正解。特殊例の一つ。"
+    ],
+    "basic_terms": "Onsager相反定理：線形不可逆過程の係数対称性、流束：熱流等の流れ",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "流体力学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "構造工学",
+    "question_text": "乱流クロージャ問題の本質として最も適切な記述はどれか。",
+    "choices": [
+      "乱流は層流方程式で完全に記述できる",
+      "乱流はRe→0で多くの場合発生する",
+      "乱流エネルギーは多くの場合保存する",
+      "Navier-Stokes方程式に乱流雷诺応力項を含めても、雷诺応力を既知の平均量だけで閉じる一般式が存在しない"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "RANSで Reynolds stress −ρ⟨u'ᵢu'ⱼ⟩ の閉じ方が未解決。",
+    "detailed_explanation": "k-ε等は経験的モデル。第一原理閉じは未確立。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "乱流クロージャ問題の本質を説明できる",
+    "common_misconception": "k-εモデルが第一原理解だと誤解する",
+    "distractor_rationales": [
+      "不正解。乱流は非定常3次元。",
+      "不正解。Re→0は層流。",
+      "不正解。粘性散逸で減衰。",
+      "正解。雷诺応力の閉じ方が問題。"
+    ],
+    "basic_terms": "乱流クロージャ：雷诺応力を平均流で表す問題、RANS：雷诺平均ナビエ・ストークス",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "工学",
       "構造工学",
       "batch50",
       "L900"
-    ],
+    ]
+  },
+  {
     "domain": "工学",
-    "subdomain": "構造工学",
-    "difficulty_initial": 900,
+    "subdomain": "材料力学",
     "question_text": "塑性解析における上限定理（仮想仕事原理に基づく）が与える崩壊荷重の性質はどれか。",
     "choices": [
+      "実際の崩壊荷重の上限（安全側の過大評価）",
       "実際の崩壊荷重の下限",
-      "実際の崩壊荷重と一致する",
-      "弾性荷重を与える",
-      "実際の崩壊荷重の上限（安全側の過大評価）"
+      "実際の崩壊荷重と必ず一致する",
+      "弾性荷重を与える"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "上限定理：仮想運動場から求めた荷重 ≥ 真の崩壊荷重。",
+    "detailed_explanation": "下限定理は下界。安全側設計では上限・下限を組合せ。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "塑性解析の上限・下限定理を区別できる",
+    "common_misconception": "上限定理が過小評価だと逆に考える",
+    "distractor_rationales": [
+      "正解。上限定理の結論。",
+      "不正解。下限定理。",
+      "不正解。任意の仮想場では一致しない。",
+      "不正解。塑性崩壊の話。"
+    ],
+    "basic_terms": "上限定理：仮想運動場による崩壊荷重の上界、下限定理：仮想応力場による下界",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "材料力学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "工学",
+    "subdomain": "情報通信",
+    "question_text": "Griffithの脆性破壊理論とIrwinの応力強度因子 K_I による破壊基準の関係として正しいものはどれか。",
+    "choices": [
+      "Irwin理論は圧縮荷重を主成分とする",
+      "K_I = K_IC で亀裂進展開始（臨界条件）",
+      "Griffith理論は塑性材料を主成分とするに適用",
+      "K_I はエネルギー解放率 G と無関係"
     ],
     "correct_choice_index": 1,
-    "short_explanation": "上限定理は仮想運動場から求めた荷重が真の崩壊荷重を上回る（過大評価）。",
-    "detailed_explanation": "上限定理：任意の運動可能仮想速度場から算出した荷重 ≥ 真の崩壊荷重。下限定理は下界を与える。",
-    "learning_objective": "塑性解析の上限・下限定理の意味を説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "上限定理が安全側の過小評価だと誤解する",
+    "short_explanation": "K_I ≥ K_IC で亀裂進展。G = K_I²/E'（平面応力/ひずみ）。",
+    "detailed_explanation": "Griffithはエネルギー平衡、Irwinは応力場特異性。等価的。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "線形破壊力学の破壊基準を説明できる",
+    "common_misconception": "GriffithとIrwinは別現象だと思う",
     "distractor_rationales": [
-      "不正解。下限定理の性質。",
-      "不正解。任意の仮想場では一致しない。",
-      "不正解。塑性崩壊の解析。",
-      "正解。上限定理の結論。"
+      "不正解。引張・モードI等。",
+      "正解。K_IC 臨界条件。",
+      "不正解。もともと脆性ガラス向け。",
+      "不正解。GとK_Iは関連。"
     ],
-    "basic_terms": "上限定理：仮想運動場による崩壊荷重の上界評価、塑性崩壊：降伏を超えた破壊"
+    "basic_terms": "応力強度因子 K_I：亀裂先端の応力特異性指標、K_IC：破壊靭性",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "工学",
+      "情報通信",
+      "batch50",
+      "L900"
+    ]
   }
 ]

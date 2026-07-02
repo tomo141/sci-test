@@ -23,9 +23,12 @@
     "questions:generate-batch50": "node scripts/generate-batch50.mjs",
     "questions:validate-batch50": "node scripts/validate-batch50.mjs",
     "questions:merge-batch50": "node scripts/merge-batch50-questions.mjs",
-    "questions:batch50-pipeline": "node scripts/generate-batch50.mjs && node scripts/validate-batch50.mjs && node scripts/merge-batch50-questions.mjs && pnpm questions:build-knowledge",
+    "questions:batch50-blueprint": "node scripts/compute-batch50-blueprint.mjs",
+    "questions:assemble-batch50": "node scripts/assemble-batch50-full.mjs && node scripts/patch-batch50-plausibility.mjs",
+    "questions:batch50-pipeline": "node scripts/compute-batch50-blueprint.mjs && node scripts/assemble-batch50-full.mjs && node scripts/patch-batch50-plausibility.mjs && node scripts/validate-batch50.mjs && node scripts/merge-batch50-questions.mjs && pnpm questions:build-knowledge",
     "questions:import:basic-v1-archive": "node scripts/import-question-bank.mjs supabase/seed/generated/questions-basic-v1.json --status=archived",
-    "preflight": "node scripts/preflight.mjs"
+    "preflight": "node scripts/preflight.mjs",
+    "security:check": "node scripts/check-security-env.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",

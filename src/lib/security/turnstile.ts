@@ -1,5 +1,10 @@
 import { isTurnstileConfigured } from "@/src/lib/env";
 
+type TurnstileVerifyResponse = {
+  success?: boolean;
+  "error-codes"?: string[];
+};
+
 export async function verifyTurnstile(token: FormDataEntryValue | null) {
   if (!isTurnstileConfigured()) return true;
   if (!token || typeof token !== "string") return false;
@@ -10,10 +15,11 @@ export async function verifyTurnstile(token: FormDataEntryValue | null) {
     body: new URLSearchParams({
       secret: process.env.TURNSTILE_SECRET_KEY || "",
       response: token
-    })
+    }),
+    signal: AbortSignal.timeout(10_000)
   }).catch(() => null);
 
   if (!response?.ok) return false;
-  const payload = (await response.json().catch(() => null)) as { success?: boolean } | null;
+  const payload = (await response.json().catch(() => null)) as TurnstileVerifyResponse | null;
   return payload?.success === true;
 }

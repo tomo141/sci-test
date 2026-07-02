@@ -27,6 +27,17 @@ function padId(n) {
   return String(n).padStart(12, "0");
 }
 
+function normalizeBasicTerms(value) {
+  if (!value) return "";
+  if (typeof value === "string") return value;
+  if (typeof value === "object" && !Array.isArray(value)) {
+    return Object.entries(value)
+      .map(([term, def]) => `${term}：${def}`)
+      .join("、");
+  }
+  return String(value);
+}
+
 function toBankQuestion(raw, seq) {
   const id = `10000000-0000-4000-8007-${padId(seq)}`;
   const level = raw.difficulty_initial;
@@ -51,7 +62,7 @@ function toBankQuestion(raw, seq) {
     difficulty_continuous: level,
     distractor_rationales: raw.distractor_rationales,
     common_misconception: raw.common_misconception || "似た用語を混同する",
-    basic_terms: raw.basic_terms || "",
+    basic_terms: normalizeBasicTerms(raw.basic_terms),
     source_url: raw.source_url || "",
     source_note: raw.source_note || "全分野科学検定 バッチ50（レベル均等）",
     currentness_type: raw.currentness_type || "evergreen",

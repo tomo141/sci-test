@@ -49,6 +49,7 @@ function validateQuestion(q, file, index) {
   if (!q.short_explanation) fail(`${loc}: short_explanation required`);
   if (!q.detailed_explanation) fail(`${loc}: detailed_explanation required`);
   if (!String(q.basic_terms ?? "").trim()) fail(`${loc}: basic_terms required`);
+  if (typeof q.basic_terms !== "string") fail(`${loc}: basic_terms must be a string`);
   if (!Array.isArray(q.distractor_rationales) || q.distractor_rationales.length !== 4) {
     fail(`${loc}: distractor_rationales must be length 4`);
   }

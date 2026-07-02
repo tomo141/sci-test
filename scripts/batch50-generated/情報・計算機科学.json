@@ -1,177 +1,1802 @@
 [
   {
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム",
+    "question_text": "コンピュータで問題を解くための手順・手法を体系的に記述したものを何と呼ぶか。",
+    "choices": [
+      "アルゴリズム",
+      "コンパイラ",
+      "プログラム",
+      "オペレーティングシステム"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解はアルゴリズム。問題解決の手順そのものを指す概念であり、プログラムはその実装結果。",
+    "detailed_explanation": "アルゴリズム（algorithm）とは、ある問題を解くための有限の手順・操作の集合を指す。プログラムはアルゴリズムを特定のプログラミング言語で実装したもの。オペレーティングシステム（OS）はハードウェアを管理するソフトウェア、コンパイラはソースコードを機械語に変換するツール。アルゴリズムの概念はコードに依存せず、自然言語や擬似コードでも表現できる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "アルゴリズムの定義を理解し、関連概念（プログラム・OS・コンパイラ）と区別できる",
+    "common_misconception": "「プログラム」と「アルゴリズム」を同義と誤解する",
+    "distractor_rationales": [
+      "正解。アルゴリズムは問題解決の手順を抽象的に記述したもの。",
+      "不正解。コンパイラはソースコードを機械語へ変換するプログラム。",
+      "不正解。プログラムはアルゴリズムをコードで実装したもの。",
+      "不正解。OSはハードウェア資源を管理するシステムソフトウェア。"
+    ],
+    "basic_terms": "アルゴリズム：問題解決の手順、プログラム：アルゴリズムのコード実装、OS：オペレーティングシステム、コンパイラ：言語翻訳ツール",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "情報・計算機科学",
       "アルゴリズム",
       "batch50",
-      "L500"
-    ],
-    "domain": "情報・計算機科学",
-    "subdomain": "アルゴリズム",
-    "difficulty_initial": 500,
-    "question_text": "配列の線形探索の最悪計算量（要素数 n に対する比較回数のオーダー）はどれか。",
-    "choices": [
-      "O(1)",
-      "O(n)",
-      "O(log n)",
-      "O(n log n)"
-    ],
-    "correct_choice_index": 3,
-    "short_explanation": "最悪では末尾要素を探すため n 回比較する。",
-    "detailed_explanation": "線形探索は先頭から順に比較。最悪・平均 O(n)、最良 O(1)。二分探索はソート済み配列で O(log n)。",
-    "learning_objective": "基本探索アルゴリズムの計算量を説明できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "探索は常に O(log n) だと誤解する",
-    "distractor_rationales": [
-      "不正解。最良ケースのみ。",
-      "正解。線形探索の最悪計算量。",
-      "不正解。二分探索の計算量。",
-      "不正解。ソート等の計算量。"
-    ],
-    "basic_terms": "計算量：入力サイズに対する処理時間の増え方、O記法：漸近的な上界"
+      "L100"
+    ]
   },
   {
+    "domain": "情報・計算機科学",
+    "subdomain": "データ構造",
+    "question_text": "配列（array）の特徴として正しいものはどれか。",
+    "choices": [
+      "要素の挿入・削除の操作が一定時間 O(1) で行える",
+      "インデックスを用いた任意の要素へのランダムアクセスが O(1) で行える",
+      "メモリ上で各要素が連続していなくてよい",
+      "格納できる要素数をあらかじめ固定する必要がない"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解はランダムアクセスが O(1)。配列は連続したメモリ領域に格納されるため、インデックスで即座にアクセスできる。",
+    "detailed_explanation": "配列はメモリ上に連続した領域を確保し、先頭アドレス＋インデックス×要素サイズで各要素に O(1) でアクセスできる。一方、先頭・中間への要素挿入・削除は後続要素のシフトが必要で O(n) 時間かかる。連結リスト（linked list）はメモリ非連続で挿入・削除が得意だが、ランダムアクセスは O(n)。静的配列はサイズを事前に決定する必要があるが、動的配列（ArrayList, Vectorなど）は内部で自動リサイズする。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "配列のランダムアクセス O(1) と挿入・削除 O(n) の特性を連結リストと比較して説明できる",
+    "common_misconception": "配列の挿入・削除が O(1) と誤解する（実際は O(n)）",
+    "distractor_rationales": [
+      "不正解。配列の中間への挿入・削除は後続要素のシフトが必要で O(n) 時間かかる。",
+      "正解。配列はインデックスによるランダムアクセスが O(1) で行える。",
+      "不正解。配列の各要素はメモリ上で連続して配置される必要がある。",
+      "不正解。静的配列では要素数を事前に固定する必要がある（動的配列は内部で自動リサイズ）。"
+    ],
+    "basic_terms": "配列：連続メモリ領域のデータ構造、ランダムアクセス：インデックスによる O(1) アクセス、連結リスト：非連続メモリのデータ構造、O(1)：定数時間計算量",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データ構造",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング",
+    "question_text": "コンピュータで問題を解くための手順を順番に並べたものを何というか。",
+    "choices": [
+      "オペレーティングシステム",
+      "プロトコル",
+      "アルゴリズム",
+      "データベース"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "問題解決の手順そのものをアルゴリズムという。",
+    "detailed_explanation": "アルゴリズムは入力から出力を得る有限の手順列。料理のレシピに相当する。データベースはデータ管理、OSは資源管理、プロトコルは通信のルールである。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "アルゴリズムの基本的な意味を説明できる",
+    "common_misconception": "プログラムとアルゴリズムを同一視する",
+    "distractor_rationales": [
+      "不正解。ハードウェア資源を管理するソフトウェア。",
+      "不正解。通信の約束事。",
+      "正解。手順の設計を指す基本用語。",
+      "不正解。データの保存・検索の仕組み。"
+    ],
+    "basic_terms": "アルゴリズム：問題解決の有限手順、プログラム：アルゴリズムの実装",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "プログラミング",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク",
+    "question_text": "後から入れたデータを先に取り出すデータ構造はどれか。",
+    "choices": [
+      "配列",
+      "木",
+      "キュー",
+      "スタック"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "スタックは LIFO（後入れ先出し）の構造である。",
+    "detailed_explanation": "スタックは push/pop で末尾のみ操作し LIFO を実現。キューは FIFO（先入れ先出し）。配列は順序付き要素列、木は階層構造。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "スタックとキューの入出力順序の違いを説明できる",
+    "common_misconception": "スタックとキューの入出力順を混同する",
+    "distractor_rationales": [
+      "不正解。配列自体は LIFO/FIFO の抽象ではない。",
+      "不正解。木は親子関係を表す階層構造。",
+      "不正解。キューは先入れ先出し（FIFO）。",
+      "正解。スタックは後入れ先出し（LIFO）。"
+    ],
+    "basic_terms": "スタック：LIFO 構造、キュー：FIFO 構造、LIFO：Last In First Out",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "ネットワーク",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ",
+    "question_text": "プログラムで「もし条件が成り立てば A、そうでなければ B を実行する」制御構造はどれか。",
+    "choices": [
+      "条件分岐",
+      "変数宣言",
+      "ループ",
+      "関数呼び出し"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "if-else などの条件分岐が二択の実行経路を選ぶ。",
+    "detailed_explanation": "条件分岐は真偽値に応じて処理を切り替える。ループは反復、関数呼び出しは処理の再利用、変数宣言はデータの名前付け。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "基本的な制御構造の役割を区別できる",
+    "common_misconception": "ループと条件分岐の用途を混同する",
+    "distractor_rationales": [
+      "正解。条件に応じて実行経路を選ぶ構造。",
+      "不正解。値を格納するための宣言。",
+      "不正解。同じ処理を繰り返す構造。",
+      "不正解。定義済み処理を呼び出す仕組み。"
+    ],
+    "basic_terms": "条件分岐：if-else 等、ループ：for/while 等、制御構造：実行順序を決める構文",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "セキュリティ",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "OS",
+    "question_text": "家庭でパソコンやスマートフォンをインターネットにつなぐ際、有線よりも手軽に使える方式として一般的なものはどれか。",
+    "choices": [
+      "光ファイバー直結のみ",
+      "無線 LAN（Wi-Fi）",
+      "シリアルケーブル",
+      "フロッピーディスク交換"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "Wi-Fi は無線で端末をルーターに接続する一般的な方式である。",
+    "detailed_explanation": "家庭では Wi-Fi が最も普及。光ファイバーは回線自体の物理媒体、シリアルケーブルは古い低速接続、フロッピー交換はネットワークではない。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "身近なネットワーク接続方式を区別できる",
+    "common_misconception": "インターネット回線と Wi-Fi を同一概念とみなす",
+    "distractor_rationales": [
+      "不正解。家庭内の端末接続方式としては限定的。",
+      "正解。無線 LAN による一般的な接続方式。",
+      "不正解。現代のインターネット接続には使われない。",
+      "不正解。物理媒体によるオフライン交換。"
+    ],
+    "basic_terms": "Wi-Fi：IEEE 802.11 系無線 LAN、ルーター：家庭内ネットワークと ISP を接続する機器",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "OS",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "question_text": "プログラミングにおいて、変数に格納されるデータの種類（整数・浮動小数点数・文字列など）を表すものを何と呼ぶか。",
+    "choices": [
+      "スコープ（scope）",
+      "メモリアドレス（memory address）",
+      "データ型（data type）",
+      "変数名（variable name）"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解はデータ型。データ型はどのような値を格納できるか・どの操作が可能かを規定する。",
+    "detailed_explanation": "データ型（data type）は変数が保持できる値の種類と操作を定義する。整数型（int）・浮動小数点型（float/double）・文字列型（string）・ブール型（bool）などがある。変数名は識別子であり格納内容の種類とは異なる。スコープは変数が有効な範囲（ブロック・関数・グローバル）を指す。メモリアドレスはデータが格納されている物理的・仮想的な場所を示す。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "データ型の概念を定義し、変数名・スコープ・メモリアドレスと区別できる",
+    "common_misconception": "変数名とデータ型を同じ概念と誤解する",
+    "distractor_rationales": [
+      "不正解。スコープは変数が参照可能な有効範囲を指す。",
+      "不正解。メモリアドレスはデータの格納場所（番地）を示す。",
+      "正解。データ型は変数が格納できる値の種類と許可される操作を定義する。",
+      "不正解。変数名はプログラム内で変数を識別するための識別子。"
+    ],
+    "basic_terms": "データ型：変数が持つ値の種類と操作の集合、整数型：int、浮動小数点型：float/double、スコープ：変数の有効範囲",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データベース",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "AI",
+    "question_text": "リレーショナルデータベースの表（テーブル）で、各行を一意に識別する列を何というか。",
+    "choices": [
+      "インデックス",
+      "ビュー",
+      "外部キー",
+      "主キー"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "主キーはテーブル内で各行を一意に特定する。",
+    "detailed_explanation": "主キーは重複・NULL を許さない識別子。外部キーは他表参照、インデックスは検索高速化、ビューは仮想表。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "主キーの役割を説明できる",
+    "common_misconception": "主キーと外部キーを混同する",
+    "distractor_rationales": [
+      "不正解。検索を高速化するデータ構造。",
+      "不正解。クエリ結果を仮想的に表す定義。",
+      "不正解。他表の主キーを参照する列。",
+      "正解。行を一意に識別する列。"
+    ],
+    "basic_terms": "主キー：Primary Key、外部キー：Foreign Key、リレーション：表同士の関連",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "AI",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論",
+    "question_text": "画像認識アプリが「猫」と「犬」の写真を区別できるようになるのは、主にどの仕組みによるか。",
+    "choices": [
+      "大量のラベル付き画像からパターンを学習する",
+      "プログラマが全パターンを手作業で列挙する",
+      "インターネット速度が上がると自動的に賢くなる",
+      "ハードディスク容量が大きいほど必ず正解する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "教師あり学習でラベル付きデータから特徴を学ぶ。",
+    "detailed_explanation": "機械学習はデータから重みを更新し汎化する。全列挙は非現実的、回線速度や容量だけでは識別能力は得られない。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "機械学習がデータから学ぶ基本を理解する",
+    "common_misconception": "AI はルールを人間が全部書くものだと誤解する",
+    "distractor_rationales": [
+      "正解。教師あり学習によるパターン獲得。",
+      "不正解。全パターン列挙はスケールしない。",
+      "不正解。回線速度と学習能力は無関係。",
+      "不正解。容量だけでは識別モデルは作れない。"
+    ],
+    "basic_terms": "機械学習：データからモデルを学習、教師あり学習：正解ラベル付きデータで学習",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "計算理論",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "暗号",
+    "question_text": "プログラムのソースコードを実行形式に変換してから実行する方式と、一行ずつ解釈しながら実行する方式の組み合わせとして正しいものはどれか。",
+    "choices": [
+      "スタック方式とキュー方式",
+      "コンパイラ方式とインタプリタ方式",
+      "TCP 方式と UDP 方式",
+      "対称鍵方式と公開鍵方式"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "コンパイラは事前変換、インタプリタは逐次実行する。",
+    "detailed_explanation": "C 言語は典型的なコンパイル型、Python はインタプリタ型（内部でバイトコード化も）。TCP/UDP は通信、鍵方式は暗号、スタック/キューはデータ構造。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "コンパイラとインタプリタの実行方式の違いを説明できる",
+    "common_misconception": "コンパイラとインタプリタを同一視する",
+    "distractor_rationales": [
+      "不正解。データ構造の対比。",
+      "正解。実行前変換と逐次実行の対比。",
+      "不正解。トランスポート層プロトコルの対比。",
+      "不正解。暗号方式の対比。"
+    ],
+    "basic_terms": "コンパイラ：ソースを機械語等に変換、インタプリタ：逐次解釈実行",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "暗号",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム",
+    "question_text": "シーザー暗号（文字を一定数シフトする方式）について、最も適切な説明はどれか。",
+    "choices": [
+      "現代の銀行取引でもそのまま使われる強固な暗号である",
+      "鍵なしで復号できないため量子コンピュータでも破れない",
+      "教育目的の古典例であり、鍵空間が小さく現代用途には不十分である",
+      "公開鍵と秘密鍵のペアを使う方式である"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "シーザー暗号は鍵が25通り程度で総当たり可能な古典暗号である。",
+    "detailed_explanation": "アルファベット26文字のシフトのみで鍵空間が極小。RSA 等の公開鍵暗号や AES とは安全性が桁違いに低い。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "古典暗号と現代暗号の安全性の違いを理解する",
+    "common_misconception": "暗号という名前が付けば現代でも安全だと思う",
+    "distractor_rationales": [
+      "不正解。現代金融では使われない。",
+      "不正解。鍵空間が小さく容易に破られる。",
+      "正解。教育用の古典例で現代用途には不十分。",
+      "不正解。公開鍵暗号ではない単一シフト方式。"
+    ],
+    "basic_terms": "シーザー暗号：シフト暗号、鍵空間：可能な鍵の集合、AES：現代の対称鍵暗号",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "アルゴリズム",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データ構造",
+    "question_text": "データを決められた順序（昇順・降順など）に並べ替える処理を一般に何というか。",
+    "choices": [
+      "圧縮",
+      "暗号化",
+      "探索",
+      "ソート"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ソートは要素の順序付けを行う基本処理である。",
+    "detailed_explanation": "バブルソート、クイックソート等が代表例。探索は特定要素の検索、圧縮はデータ量削減、暗号化は秘匿化。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ソートの意味を正しく述べられる",
+    "common_misconception": "探索とソートを混同する",
+    "distractor_rationales": [
+      "不正解。データサイズを小さくする処理。",
+      "不正解。第三者に読めなくする処理。",
+      "不正解。特定値を見つける処理。",
+      "正解。順序付け処理の総称。"
+    ],
+    "basic_terms": "ソート：整列、探索：Search、計算量：入力サイズに対する処理時間",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データ構造",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング",
+    "question_text": "OSI 参照モデルにおいて、IP アドレスを用いたパケットのルーティングを担当する層はどれか。",
+    "choices": [
+      "ネットワーク層（第3層）",
+      "データリンク層（第2層）",
+      "トランスポート層（第4層）",
+      "アプリケーション層（第7層）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解はネットワーク層（第3層）。IP アドレスによるアドレッシングとルーティングを担当する。",
+    "detailed_explanation": "OSI 参照モデルは第1層（物理層）から第7層（アプリケーション層）までの7階層で構成される。ネットワーク層（第3層）は IP アドレスに基づいたパケットのルーティング（経路選択）を担う（プロトコル例: IP, ICMP）。データリンク層（第2層）は同一ネットワーク内での MAC アドレスによるフレーム転送を担う。トランスポート層（第4層）はエンドツーエンド通信の信頼性（TCP/UDP）を担う。アプリケーション層（第7層）は HTTP・FTP などのサービスプロトコルを提供する。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "OSI7層モデルの各層の役割を説明し、ネットワーク層でのルーティングを他の層と区別できる",
+    "common_misconception": "MAC アドレスを使うデータリンク層とネットワーク層を混同する",
+    "distractor_rationales": [
+      "正解。ネットワーク層（第3層）は IP アドレスによるルーティングを担当する。",
+      "不正解。データリンク層（第2層）は MAC アドレスによる同一ネットワーク内のフレーム転送を担当する。",
+      "不正解。トランスポート層（第4層）は TCP/UDP によるエンドツーエンド通信の信頼性を担当する。",
+      "不正解。アプリケーション層（第7層）は HTTP・FTP などのアプリケーションプロトコルを提供する。"
+    ],
+    "basic_terms": "OSI参照モデル：7層ネットワーク参照モデル、ネットワーク層（第3層）：IPルーティング、データリンク層（第2層）：MACアドレスフレーム転送、ルーティング：最適経路選択",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "プログラミング",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク",
+    "question_text": "関数が自分自身を呼び出して問題を小さな部分問題に分割する技法を何というか。",
+    "choices": [
+      "継承",
+      "再帰",
+      "ポーリング",
+      "キャッシュ"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "再帰は基底ケースまで自身を呼び出すプログラミング技法。",
+    "detailed_explanation": "階乗やフィボナッチ等で用いる。継承は OOP の性質継承、ポーリングは定期確認、キャッシュは結果の再利用。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "再帰の基本的な仕組みを説明できる",
+    "common_misconception": "再帰とループを同一視する",
+    "distractor_rationales": [
+      "不正解。クラス間の性質継承。",
+      "正解。自身を呼び出す分割解法。",
+      "不正解。定期的な状態確認方式。",
+      "不正解。計算結果の保存・再利用。"
+    ],
+    "basic_terms": "再帰：自己呼び出し、基底ケース：再帰終了条件",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "ネットワーク",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ",
+    "question_text": "インターネット上でコンピュータを識別するための番号として正しいものはどれか。",
+    "choices": [
+      "HTML",
+      "MACアドレスのみ",
+      "IPアドレス",
+      "URL"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "IPアドレスはネットワーク層でホストを識別する。",
+    "detailed_explanation": "IPv4/IPv6 が論理アドレス。MAC はデータリンク層、URL は資源の名前、HTML はマークアップ言語。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "IPアドレスの役割を説明できる",
+    "common_misconception": "URL と IP アドレスを同一視する",
+    "distractor_rationales": [
+      "不正解。文書の記述言語。",
+      "不正解。MAC は同一ネットワーク内の物理アドレス。",
+      "正解。インターネット上のホスト識別番号。",
+      "不正解。資源の位置を表す文字列。"
+    ],
+    "basic_terms": "IPアドレス：Internet Protocol アドレス、MACアドレス：Media Access Control",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "セキュリティ",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "OS",
+    "question_text": "Web サイトの URL が「https://」で始まる場合、通信内容について最も適切な説明はどれか。",
+    "choices": [
+      "ウイルスを自動的に除去する",
+      "サイトの内容が必ず正確である",
+      "パスワード入力が不要になる",
+      "通信内容が暗号化され、傍受しても内容を読みにくい"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "HTTPS は TLS により通信路を暗号化する。",
+    "detailed_explanation": "TLS は盗聴防止に有効だが、フィッシングサイトも HTTPS 化可能。内容の正確性やウイルス除去は別問題。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "HTTPS の暗号化通信の意味を理解する",
+    "common_misconception": "HTTPS なら安全なサイトだと過信する",
+    "distractor_rationales": [
+      "不正解。暗号化とマルウェア除去は別機能。",
+      "不正解。暗号化は内容の真偽を保証しない。",
+      "不正解。認証要件はサイト次第。",
+      "正解。TLS による通信路暗号化。"
+    ],
+    "basic_terms": "HTTPS：HTTP over TLS、TLS：Transport Layer Security",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "OS",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "question_text": "OS が複数のアプリケーションを短い時間間隔で切り替えながら同時に動いているように見せる機能を何というか。",
+    "choices": [
+      "マルチタスク",
+      "デフラグ",
+      "コンパイル",
+      "レンダリング"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "マルチタスクは CPU 時間を分割して複数プロセスを実行する。",
+    "detailed_explanation": "タイムスライスで切り替え。デフラグはディスク整理、コンパイルは変換、レンダリングは画像生成。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "マルチタスクの基本概念を説明できる",
+    "common_misconception": "マルチコアとマルチタスクを混同する",
+    "distractor_rationales": [
+      "正解。複数タスクの並行実行（見かけ上）。",
+      "不正解。ディスクの断片化整理。",
+      "不正解。ソースコードの変換。",
+      "不正解。グラフィックの描画処理。"
+    ],
+    "basic_terms": "マルチタスク：複数プロセスの並行実行、タイムスライス：CPU 時間の分割単位",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データベース",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "AI",
+    "question_text": "リレーショナルデータベースで表からデータを取り出すために用いる言語として最も一般的なものはどれか。",
+    "choices": [
+      "HTML",
+      "SQL",
+      "CSS",
+      "HTTP"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "SQL は Structured Query Language の略で問い合わせに使う。",
+    "detailed_explanation": "SELECT/INSERT/UPDATE/DELETE 等。HTML/CSS は Web 表示、HTTP は通信プロトコル。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "SQL の役割を説明できる",
+    "common_misconception": "データベース操作に HTML を使うと誤解する",
+    "distractor_rationales": [
+      "不正解。Web ページ構造の記述言語。",
+      "正解。リレーショナル DB の問い合わせ言語。",
+      "不正解。スタイル指定言語。",
+      "不正解。Web 通信プロトコル。"
+    ],
+    "basic_terms": "SQL：Structured Query Language、SELECT：データ取得文",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "AI",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論",
+    "question_text": "バブルソート（bubble sort）の最悪計算量として正しいものはどれか。",
+    "choices": [
+      "O(log n)",
+      "O(n log n)",
+      "O(n²)",
+      "O(n)"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解は O(n²)。n 要素に対して最大 n-1 回のパスを行い、各パスで最大 n-1 回の比較・交換を行う。",
+    "detailed_explanation": "バブルソートは隣接要素を比較し大小関係が逆なら交換する操作を繰り返すアルゴリズム。逆順配列などの最悪ケースでは n-1 回のパスと各パスで最大 n-1 回の比較が必要なため O(n²)。比較ベースのソートの理論的下限は O(n log n) であり、マージソートやヒープソートがこれを達成する。O(log n) は二分探索、O(n) は最良ケース（既ソート配列）のバブルソートに相当。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "バブルソートの動作原理と最悪・最良計算量を説明し、O(n log n) ソートと比較できる",
+    "common_misconception": "バブルソートの最良ケースと最悪ケースの計算量を混同する",
+    "distractor_rationales": [
+      "不正解。O(log n) は二分探索など探索アルゴリズムの計算量。",
+      "不正解。O(n log n) はマージソートやヒープソートの計算量。",
+      "正解。バブルソートの最悪計算量は O(n²)。",
+      "不正解。O(n) はバブルソートの最良ケース（既ソート配列で早期終了時）。"
+    ],
+    "basic_terms": "バブルソート：隣接交換ソート、O(n²)：二次計算量、最悪ケース：逆順入力など最も時間のかかる入力、比較ベースソートの下限：O(n log n)",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "計算理論",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "暗号",
+    "question_text": "計算量クラス P と NP の関係について、現時点で数学的に確立されていることとして正しいものはどれか。",
+    "choices": [
+      "NP ⊆ P である",
+      "P = NP が証明されている",
+      "P ≠ NP が証明されている",
+      "P ⊆ NP である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "多項式時間で解ける問題 P は、解の検証が多項式時間でできる NP に含まれる。",
+    "detailed_explanation": "P ⊆ NP は定義から従う。P=NP も P≠NP も未証明。NP⊆P は未証明（P≠NP なら成り立たない）。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "P と NP の包含関係を正確に述べられる",
+    "common_misconception": "P=NP が既に証明されたと誤解する",
+    "distractor_rationales": [
+      "不正解。未証明（一般には成り立たないと信じられている）。",
+      "不正解。未解決問題である。",
+      "不正解。未解決問題である。",
+      "正解。P の解も検証可能なので NP に含まれる。"
+    ],
+    "basic_terms": "P：多項式時間決定可能、NP：多項式時間検証可能、P vs NP：未解決問題",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "暗号",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム",
+    "question_text": "暗号方式の分類として、暗号化と復号に同じ秘密鍵を用いる方式を何というか。",
+    "choices": [
+      "対称鍵暗号",
+      "ハッシュ関数",
+      "デジタル署名のみ",
+      "公開鍵暗号"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "対称鍵暗号は送受信者が同一の秘密鍵を共有する。",
+    "detailed_explanation": "AES 等が代表。公開鍵暗号は鍵ペア、ハッシュは一方向、署名は真正性確保（非対称鍵使用）。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "対称鍵暗号の鍵共有方式を説明できる",
+    "common_misconception": "すべての暗号が公開鍵方式だと思う",
+    "distractor_rationales": [
+      "正解。同一秘密鍵を共有する方式。",
+      "不正解。一方向性関数で復号不能。",
+      "不正解。署名は暗号化方式の分類ではない。",
+      "不正解。公開鍵と秘密鍵のペアを用いる。"
+    ],
+    "basic_terms": "対称鍵暗号：Symmetric-key、AES：Advanced Encryption Standard",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "アルゴリズム",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データ構造",
+    "question_text": "二分探索（バイナリサーチ）が正しく機能するための前提条件はどれか。",
+    "choices": [
+      "全要素が一意でない",
+      "データがソート済みである",
+      "データがランダムアクセス不可である",
+      "要素数が偶数である"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "二分探索は有序列上で中央と比較し範囲を半分に絞る。",
+    "detailed_explanation": "ソート済み配列等で O(log n)。ランダムアクセス不可なら効率が出ない。要素数の奇偶や重複は本質的条件ではない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "二分探索の前提条件を説明できる",
+    "common_misconception": "未ソートでも二分探索できると誤解する",
+    "distractor_rationales": [
+      "不正解。重複があっても動作は可能。",
+      "正解。有序性が探索の前提。",
+      "不正解。インデックスアクセスが必要。",
+      "不正解。奇偶は条件ではない。"
+    ],
+    "basic_terms": "二分探索：Binary Search、O(log n)：対数時間",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データ構造",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング",
+    "question_text": "ハッシュテーブルにおいて、平均的な検索時間が O(1) となる主な理由はどれか。",
+    "choices": [
+      "木の高さが多くの場合 log n である",
+      "要素が多くの場合ソートされている",
+      "ハッシュ関数がキーをバケットに分散し直接参照できる",
+      "全要素を線形に走査する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "良いハッシュ関数と適切な负载率で平均 O(1) 参照が可能。",
+    "detailed_explanation": "衝突時はチェイニング等で O(n) 悪化もあり得るが平均は O(1)。ソート不要、線形走査は配列探索、木は別構造。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ハッシュテーブルの平均計算量の根拠を説明できる",
+    "common_misconception": "ハッシュは常に最悪 O(1) だと思い込む",
+    "distractor_rationales": [
+      "不正解。平衡木の性質。",
+      "不正解。ハッシュテーブルは有序性を要求しない。",
+      "正解。ハッシュ値からバケットへ直接アクセス。",
+      "不正解。線形走査は O(n)。"
+    ],
+    "basic_terms": "ハッシュテーブル：キーからインデックスを計算、衝突：同一バケットへの割当",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "プログラミング",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク",
+    "question_text": "ガベージコレクション（GC）の主な目的はどれか。",
+    "choices": [
+      "ネットワーク帯域を圧縮する",
+      "ソースコードを機械語に変換する",
+      "CPU クロックを高速化する",
+      "使用されなくなったメモリを自動回収する"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "GC は到達不能オブジェクトのメモリを自動解放する。",
+    "detailed_explanation": "Java、Go、Python 等で採用。CPU 速度、帯域圧縮、コンパイルとは無関係。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "GC の役割を説明できる",
+    "common_misconception": "GC がプログラム実行速度を直接上げると思う",
+    "distractor_rationales": [
+      "不正解。通信圧縮の話。",
+      "不正解。コンパイラの役割。",
+      "不正解。ハードウェア/最適化の話。",
+      "正解。不要メモリの自動回収。"
+    ],
+    "basic_terms": "ガベージコレクション：自動メモリ回収、到達可能性：ルートから参照可能か",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "ネットワーク",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ",
+    "question_text": "TCP/IPプロトコルスタックのトランスポート層で動作し、信頼性のある順序保証付き通信を提供するプロトコルはどれか。",
+    "choices": [
+      "TCP（Transmission Control Protocol）",
+      "UDP（User Datagram Protocol）",
+      "HTTP（HyperText Transfer Protocol）",
+      "IP（Internet Protocol）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は TCP。3ウェイハンドシェイク・再送制御・順序保証により信頼性の高い通信を実現する。",
+    "detailed_explanation": "TCP（Transmission Control Protocol）はトランスポート層のプロトコルで、コネクション確立（3ウェイハンドシェイク）、シーケンス番号による順序保証、ACK・再送による信頼性確保を提供する。UDP は同じトランスポート層だが信頼性を保証しない代わりに低遅延。HTTP はアプリケーション層のプロトコルで TCP の上で動作する。IP はネットワーク層のプロトコルでアドレッシングとルーティングを担う。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "TCP の信頼性機能を説明し、UDP・HTTP・IP との層・役割の違いを区別できる",
+    "common_misconception": "HTTP が直接信頼性を提供すると誤解する",
+    "distractor_rationales": [
+      "正解。TCP はトランスポート層で信頼性・順序保証付き通信を提供する。",
+      "不正解。UDP はトランスポート層だが信頼性・順序保証を提供しない。",
+      "不正解。HTTP はアプリケーション層のプロトコル。",
+      "不正解。IP はネットワーク層でルーティングを担当する。"
+    ],
+    "basic_terms": "TCP：信頼性通信プロトコル、UDP：非信頼性通信プロトコル、3ウェイハンドシェイク：TCP接続確立手順、トランスポート層：TCP/IPの第4層",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "セキュリティ",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "OS",
+    "question_text": "リレーショナルデータベースの正規化（normalization）の主な目的として正しいものはどれか。",
+    "choices": [
+      "データの暗号化と不正アクセスからの保護を行うこと",
+      "データの冗長性を排除し、更新時の整合性を保つこと",
+      "テーブル数を最小限に抑えてストレージを節約すること",
+      "データベースのクエリ実行速度を最大化すること"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解はデータの冗長性排除と整合性保持。正規化により更新・挿入・削除の異常（anomaly）を防ぐ。",
+    "detailed_explanation": "正規化（normalization）は、データの冗長性（同一データの重複保持）を減らし、更新時の整合性を確保するためにテーブルを分割・再設計する手順。第1正規形（1NF）・第2正規形（2NF）・第3正規形（3NF）・BCNF などの正規形が定義されている。冗長データが残ると更新異常（同じ事実を複数箇所で変更する必要がある）や削除異常（関連情報が誤って消える）が発生する。正規化は必ずしも検索速度を上げるものではなく、むしろ多数の JOIN が必要になりパフォーマンスに影響する場合もある。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "正規化の目的（冗長性排除・更新異常防止）を説明し、正規形（1NF〜BCNF）の概念と区別できる",
+    "common_misconception": "正規化がクエリ速度を向上させると誤解する（実際は JOIN 増加によるトレードオフが生じる場合がある）",
+    "distractor_rationales": [
+      "不正解。データの暗号化・アクセス制御はセキュリティ機能であり正規化とは無関係。",
+      "正解。正規化はデータ冗長性の排除と更新・削除・挿入異常の防止を目的とする。",
+      "不正解。正規化はテーブルを分割するためテーブル数は増加する傾向にある。",
+      "不正解。正規化はクエリ速度の最大化より冗長性排除を主目的とし、むしろ JOIN 増加でパフォーマンスに影響する場合がある。"
+    ],
+    "basic_terms": "正規化：冗長性排除のためのテーブル設計手順、第1正規形(1NF)：繰り返しグループの排除、更新異常：冗長データによる不整合、関数従属性：属性間の依存関係",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "OS",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "question_text": "Web アプリケーションの SQL インジェクション攻撃を防ぐ基本対策として最も適切なものはどれか。",
+    "choices": [
+      "HTTPS を使わない",
+      "ユーザー入力をそのまま SQL 文字列に連結する",
+      "プリペアドステートメント（パラメータ化クエリ）を用いる",
+      "パスワードを平文で DB に保存する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "パラメータ化により入力が SQL 命令として解釈されない。",
+    "detailed_explanation": "入力連結は悪意ある SQL 断片の混入を招く。平文パスワードは別脆弱性、HTTPS は通信路保護。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "SQL インジェクション対策の基本を説明できる",
+    "common_misconception": "HTTPS だけで SQL インジェクションも防げる",
+    "distractor_rationales": [
+      "不正解。通信暗号化と DB 攻撃は別問題。",
+      "不正解。攻撃の原因となる。",
+      "正解。入力と SQL を分離する基本対策。",
+      "不正解。認証情報の保護不足。"
+    ],
+    "basic_terms": "SQL インジェクション：SQL 文への悪意入力、プリペアドステートメント：パラメータ化クエリ",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データベース",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "AI",
+    "question_text": "物理メモリより大きなプログラムを実行できるように、補助記憶を利用してメモリ空間を拡張する OS の仕組みを何というか。",
+    "choices": [
+      "デッドロック",
+      "スレッドプール",
+      "キャッシュ",
+      "仮想メモリ"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "仮想メモリはページング等で論理アドレス空間を物理メモリより大きく見せる。",
+    "detailed_explanation": "ページフォルトでディスクと入替。キャッシュは高速化、デッドロックは資源待ち、スレッドプールはスレッド管理。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "仮想メモリの目的を説明できる",
+    "common_misconception": "仮想メモリが物理 RAM を増やすと誤解する",
+    "distractor_rationales": [
+      "不正解。複数プロセスの資源待ち状態。",
+      "不正解。スレッド再利用の仕組み。",
+      "不正解。高速メモリ階層の一部。",
+      "正解。補助記憶を用いたアドレス空間拡張。"
+    ],
+    "basic_terms": "仮想メモリ：Virtual Memory、ページング：固定サイズブロックの入替",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "AI",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論",
+    "question_text": "データベース正規化の主な目的として最も適切なものはどれか。",
+    "choices": [
+      "更新異常を減らし冗長性を低減する",
+      "必ずクエリを遅くする",
+      "全テーブルを 1 つに統合する",
+      "インデックスを禁止する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正規化は繰り返しデータを分割し整合性を高める。",
+    "detailed_explanation": "第1〜第3正規形等。過度な正規化は JOIN 増加で性能低下もあり得るが目的は冗長・異常の低減。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "正規化の目的を説明できる",
+    "common_misconception": "正規化は常に性能向上すると思う",
+    "distractor_rationales": [
+      "正解。冗長性低減と更新異常の防止。",
+      "不正解。性能低下は過度な正規化の副作用であり目的ではない。",
+      "不正解。統合は非正規化の方向。",
+      "不正解。インデックスとは独立の概念。"
+    ],
+    "basic_terms": "正規化：Normalization、更新異常：冗長データ更新時の不整合",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "計算理論",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "暗号",
+    "question_text": "機械学習モデルが訓練データに過剰適合し、未知データで性能が低下する現象を何というか。",
+    "choices": [
+      "転移学習",
+      "過学習（オーバーフィッティング）",
+      "勾配消失",
+      "バッチ正規化"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "過学習は訓練誤差は小さいが汎化誤差が大きい状態。",
+    "detailed_explanation": "正則化・早期停止・データ増強等で対策。勾配消失は深層学習の学習困難、転移学習は知識再利用。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "過学習の概念と対策の必要性を説明できる",
+    "common_misconception": "訓練精度が高ければ必ず良いモデルだと思う",
+    "distractor_rationales": [
+      "不正解。既存モデル知識の転用。",
+      "正解。訓練データへの過剰適合。",
+      "不正解。勾配が浅くなる学習問題。",
+      "不正解。層正規化手法。"
+    ],
+    "basic_terms": "過学習：Overfitting、汎化：未知データへの適応能力",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "暗号",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム",
+    "question_text": "DNS（Domain Name System）の主な役割として正しいものはどれか。",
+    "choices": [
+      "電子メールの送受信プロトコルを管理する",
+      "通信データをエンドツーエンドで暗号化する",
+      "ドメイン名を対応する IP アドレスへ変換する",
+      "クライアントとサーバ間でファイルを転送する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解はドメイン名から IP アドレスへの変換。DNS はインターネットの「電話帳」とも呼ばれる。",
+    "detailed_explanation": "DNS（Domain Name System）は人間が読みやすいドメイン名（例: example.com）をコンピュータが使う IP アドレス（例: 93.184.216.34）へ変換する分散型データベースシステム。暗号化は TLS/SSL の役割。ファイル転送は FTP や SFTP が担当。メール送受信は SMTP・POP3・IMAP が担当。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "DNS の名前解決の役割を説明し、TLS・FTP・SMTP などのプロトコルと役割を区別できる",
+    "common_misconception": "DNS が通信を暗号化すると誤解する（DoH/DoT は DNS over 暗号化レイヤーであり DNS 自体の役割ではない）",
+    "distractor_rationales": [
+      "不正解。メール送受信は SMTP（送信）・IMAP/POP3（受信）が担当する。",
+      "不正解。エンドツーエンド暗号化は TLS/SSL や VPN が担当する。",
+      "正解。DNS はドメイン名を IP アドレスへ解決する名前解決システム。",
+      "不正解。ファイル転送は FTP・SFTP・SCP などのプロトコルが担当する。"
+    ],
+    "basic_terms": "DNS：ドメインネームシステム、名前解決：ドメイン名→IPアドレスの変換、TLD：トップレベルドメイン、リゾルバ：DNS問い合わせを行うクライアント",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "アルゴリズム",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データ構造",
+    "question_text": "動的配列（例：std::vector）の末尾 push_back に対する償却（アモータイズド）計算量として一般的に言われるものはどれか。",
+    "choices": [
+      "O(log n) 最悪",
+      "O(n²) 平均",
+      "O(2^n) 最悪",
+      "O(1) 償却"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "倍増再確保により稀な O(n) コピーを n 回に分散し償却 O(1)。",
+    "detailed_explanation": "容量不足しているとき再確保で全要素コピーが O(n) だが、倍増戦略で償却 O(1) となる。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "償却解析の基本概念を説明できる",
+    "common_misconception": "再確保があるので常に O(n) だと思う",
+    "distractor_rationales": [
+      "不正解。末尾追加の最悪は O(n) だが償却は O(1)。",
+      "不正解。二乗時間ではない。",
+      "不正解。指数時間ではない。",
+      "正解。倍増再確保による償却 O(1)。"
+    ],
+    "basic_terms": "償却解析：Amortized Analysis、動的配列：サイズ可変配列",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "情報・計算機科学",
       "データ構造",
       "batch50",
       "L600"
-    ],
+    ]
+  },
+  {
     "domain": "情報・計算機科学",
-    "subdomain": "データ構造",
-    "difficulty_initial": 600,
-    "question_text": "平衡二分探索木（AVL木等）を用いた探索の計算量はどれか。",
+    "subdomain": "プログラミング",
+    "question_text": "データベースやファイルシステムで B 木（B-tree）が広く使われる主な理由はどれか。",
     "choices": [
-      "O(log n)",
-      "O(n)",
-      "O(n²)",
-      "O(2^n)"
+      "ディスクブロック単位の読み出しに合わせ、高さを抑え I/O 回数を減らす",
+      "常にメモリ上で O(1) 探索できる",
+      "要素の挿入順序を保持しない",
+      "ハッシュ衝突を完全に排除する"
     ],
     "correct_choice_index": 0,
-    "short_explanation": "高さが O(log n) に保たれるため探索も O(log n)。",
-    "detailed_explanation": "AVL木は回転により平衡を保ち高さ ≤ 1.44 log₂(n+2)。各ステップで左右に1つ進む。",
-    "learning_objective": "平衡木の高さと探索効率の関係を説明できる",
-    "cognitive_type": "用語・定義",
-    "common_misconception": "二分木は常に O(log n) だと誤解する（非平衡では O(n)）",
+    "short_explanation": "B 木は多分岐により高さを低く保ち、ディスク I/O を最小化する。",
+    "detailed_explanation": "1 ノードが 1 ブロックに収まるよう設計。二分木より高さが低く、外部記憶向き。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "B 木が外部記憶向けである理由を説明できる",
+    "common_misconception": "二分木と B 木を同じ用途だと思う",
     "distractor_rationales": [
-      "正解。平衡二分木の探索計算量。",
-      "不正解。偏った二分木の最悪。",
-      "不正解。全探索等の計算量。",
-      "不正解。指数時間の問題。"
+      "正解。ブロック I/O 効率化が主目的。",
+      "不正解。ディスクアクセスは O(log n) 程度。",
+      "不正解。順序保持は可能。",
+      "不正解。ハッシュ構造の話。"
     ],
-    "basic_terms": "AVL木：平衡条件を満たす二分探索木、二分探索木：各ノードが最大2子を持つ木"
-  },
-  {
+    "basic_terms": "B 木：多分岐平衡木、I/O：Input/Output 回数",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "情報・計算機科学",
-      "オペレーティングシステム",
+      "プログラミング",
       "batch50",
-      "L700"
-    ],
+      "L600"
+    ]
+  },
+  {
     "domain": "情報・計算機科学",
-    "subdomain": "オペレーティングシステム",
-    "difficulty_initial": 700,
-    "question_text": "ページ置換アルゴリズム LRU（Least Recently Used）の置換対象はどれか。",
+    "subdomain": "ネットワーク",
+    "question_text": "静的型付け言語で型安全性（Type Safety）が保証する性質として最も適切なものはどれか。",
     "choices": [
-      "最も最近参照されたページ",
-      "ランダムに選ばれたページ",
-      "最も大きいページ",
-      "最も長い間参照されていないページ"
+      "実行時に型エラーが起きない",
+      "型規則に従わないプログラムはコンパイル（または型検査）段階で拒否される",
+      "多くのの変数が動的に any 型になる",
+      "メモリリークが自動的にゼロになる"
     ],
     "correct_choice_index": 1,
-    "short_explanation": "LRU は最も古い（最近使われていない）ページを追い出す。",
-    "detailed_explanation": "LRU は時間局所性を利用。最近参照ページは保持し、最長未参照ページを置換。FIFO は最古投入ページ。",
-    "learning_objective": "主要ページ置換アルゴリズムの方針を比較できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "LRU を FIFO と混同する",
+    "short_explanation": "Well-typed プログラムは型エラーを起こさない（進行・保存定理）。",
+    "detailed_explanation": "完全な型安全でも実行時エラー（除算零等）は別。any 化は型安全の放棄、メモリリークは GC 等の別問題。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "型安全性の意味を形式的手法の文脈で説明できる",
+    "common_misconception": "型安全＝バグが一切ないプログラムだと思う",
     "distractor_rationales": [
-      "不正解。最近参照ページは保持する。",
-      "不正解。ランダム置換の方針。",
-      "不正解。ページサイズは基準ではない。",
-      "正解。LRU の定義。"
+      "不正解。型以外の実行時エラーはあり得る。",
+      "正解。型規則による静的保証。",
+      "不正解。型システムの放棄。",
+      "不正解。メモリ管理とは独立。"
     ],
-    "basic_terms": "LRU：最長未使用ページ置換、ページフォルト：参照ページが物理メモリにない状態"
-  },
-  {
+    "basic_terms": "型安全性：Type Safety、進行定理：Well-typed なら次ステップへ進める",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "情報・計算機科学",
-      "機械学習",
+      "ネットワーク",
       "batch50",
-      "L800"
-    ],
+      "L600"
+    ]
+  },
+  {
     "domain": "情報・計算機科学",
-    "subdomain": "機械学習",
-    "difficulty_initial": 800,
-    "question_text": "多層パーセプトロンの誤差逆伝播法において、出力層の誤差を隠れ層へ伝える際に用いるのはどれか。",
+    "subdomain": "セキュリティ",
+    "question_text": "インターネットの自律システム（AS）間で経路情報を交換する代表的プロトコルはどれか。",
     "choices": [
-      "重みのランダム初期化",
-      "学習率を零に設定",
-      "連鎖律（チェインルール）による勾配の逐次計算",
-      "前向き計算"
+      "DHCP",
+      "NTP",
+      "BGP",
+      "ARP"
     ],
     "correct_choice_index": 2,
-    "short_explanation": "逆伝播は連鎖律で損失関数の各重みに対する勾配を後ろ向きに計算する。",
-    "detailed_explanation": "出力誤差から ∂L/∂w を連鎖律で層を遡り計算し勾配降下で重み更新。",
-    "learning_objective": "誤差逆伝播法の勾配計算の仕組みを説明できる",
-    "cognitive_type": "基本的な適用",
-    "common_misconception": "逆伝播は出力層のみで重みを更新すると誤解する",
+    "short_explanation": "BGP（Border Gateway Protocol）は AS 間の経路制御に用いる。",
+    "detailed_explanation": "ARP は MAC 解決、DHCP は IP 割当、NTP は時刻同期。BGP はインターネットの経路広告。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "BGP の役割を説明できる",
+    "common_misconception": "OSPF 等の域内プロトコルと BGP を混同する",
     "distractor_rationales": [
-      "不正解。初期化は学習の前提で勾配計算ではない。",
-      "不正解。学習率ゼロでは更新しない。",
-      "正解。連鎖律による勾配伝播。",
-      "不正解。前向き計算だけでは重み更新できない。"
+      "不正解。IP アドレス自動割当。",
+      "不正解。ネットワーク時刻同期。",
+      "正解。AS 間ルーティングの de facto 標準。",
+      "不正解。同一 LAN 内の MAC アドレス解決。"
     ],
-    "basic_terms": "誤差逆伝播：勾配を層ごとに逆方向へ伝播する学習法、連鎖律：合成関数の微分法則"
-  },
-  {
+    "basic_terms": "BGP：Border Gateway Protocol、AS：Autonomous System",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "情報・計算機科学",
-      "暗号理論",
+      "セキュリティ",
       "batch50",
-      "L900"
-    ],
+      "L600"
+    ]
+  },
+  {
     "domain": "情報・計算機科学",
-    "subdomain": "暗号理論",
-    "difficulty_initial": 900,
-    "question_text": "RSA暗号の安全性が依存する困難な問題として最も適切なものはどれか。",
+    "subdomain": "OS",
+    "question_text": "暗号学的ハッシュ関数の重要な性質として正しいものはどれか。",
     "choices": [
-      "ソーティング問題",
-      "大きな合成数の素因数分解",
-      "離散対数問題のみ",
-      "巡回セールスマン問題"
+      "同じ入力を与えると毎回異なるハッシュ値が生成される",
+      "ハッシュ値から元の入力を効率的に復元できる",
+      "入力の長さに応じてハッシュ値の長さが変化する",
+      "異なる入力から同じハッシュ値が生成されること（衝突）が計算上困難である"
     ],
     "correct_choice_index": 3,
-    "short_explanation": "RSA は秘密鍵復元が大合成数 n = pq の因数分解に帰着する。",
-    "detailed_explanation": "RSA は mod n での累乗演算。秘密鍵 d は φ(n) から求まり、n の因数分解ができれば破られる。",
-    "learning_objective": "RSA の数学的基盤と安全性の前提を説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "RSA を離散対数暗号（DH）と混同する",
+    "short_explanation": "正解は衝突耐性。同一入力→同一ハッシュ（決定論的）、異入力→同一ハッシュとなる衝突を見つけることが計算上困難であることが必要条件。",
+    "detailed_explanation": "暗号学的ハッシュ関数（SHA-256 など）の重要な性質は：（1）決定論的：同一入力は必ず同一出力、（2）一方向性：ハッシュ値から入力の逆算が困難、（3）衝突耐性：異なる入力から同じハッシュ値を見つけることが計算上困難、（4）雪崩効果：入力の1ビット変化でハッシュ値が大きく変化、（5）固定出力長：入力長に依存しない固定長出力。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "暗号学的ハッシュ関数の一方向性・衝突耐性・固定出力長などの性質を説明できる",
+    "common_misconception": "ハッシュ値から元のデータを復元できると誤解する（暗号化との混同）",
     "distractor_rationales": [
-      "不正解。多項式時間で解ける。",
-      "正解。RSA の標準的困難性仮定。",
-      "不正解。DH・ElGamal 等の基盤。",
-      "不正解。NP困難だが RSA の直接基盤ではない。"
+      "不正解。ハッシュ関数は決定論的であり同一入力からは常に同一ハッシュ値を生成する。",
+      "不正解。一方向性により、ハッシュ値から入力を効率的に逆算することは計算上困難。",
+      "不正解。暗号学的ハッシュ関数の出力長は入力長に依存せず固定長（例: SHA-256 は256ビット）。",
+      "正解。衝突耐性はハッシュ関数の核心的な性質であり、異なる入力が同一ハッシュ値を持つことを見つけるのが計算上困難。"
     ],
-    "basic_terms": "RSA：公開鍵暗号方式、素因数分解：合成数を素数の積に分解する問題"
+    "basic_terms": "暗号学的ハッシュ関数：SHA-256など一方向性関数、衝突耐性：異入力→同ハッシュの発見困難性、一方向性：逆算困難性、雪崩効果：入力微変化→出力大変化",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "OS",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "question_text": "Unix 系 OS において fork() 後に copy-on-write（COW）を用いる主な理由はどれか。",
+    "choices": [
+      "書き込みが発生するまでページを共有し fork のコストを抑える",
+      "スワップ領域を完全に無効化する",
+      "スレッド数を 1 に固定する",
+      "fork 時に親子の全メモリページを直ちに物理コピーする"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "COW は読み取り専用共有し、書き込み時のみページを複製する。",
+    "detailed_explanation": "exec 前の fork は頻繁で、全コピーは非効率。書き込み時ページフォルトで複製。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "COW の目的と動作を説明できる",
+    "common_misconception": "fork は常に全メモリを複製すると思う",
+    "distractor_rationales": [
+      "正解。遅延コピーで fork を高速化。",
+      "不正解。スワップとは無関係。",
+      "不正解。スレッド数固定ではない。",
+      "不正解。COW 以前の非効率な方式。"
+    ],
+    "basic_terms": "copy-on-write：書き込み時コピー、fork：プロセス複製システムコール",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データベース",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "AI",
+    "question_text": "PostgreSQL 等で用いられる MVCC（Multi-Version Concurrency Control）の基本方針として正しいものはどれか。",
+    "choices": [
+      "読み取りトランザクションが書き込みを多くの場合ブロックする",
+      "各トランザクションに見えるデータのスナップショット版を保持し、読み取りと書き込みの競合を減らす",
+      "多くのの更新を直列化する",
+      "トランザクションを禁止する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "MVCC はバージョン管理により読み取りが書き込みをブロックしにくい。",
+    "detailed_explanation": "古いバージョンを保持し GC（vacuum）で回収。直列化は最強隔離だが性能低下、ブロック読取は 2PL の特徴。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "MVCC の並行制御方針を説明できる",
+    "common_misconception": "MVCC はロックを一切使わないと思い込む",
+    "distractor_rationales": [
+      "不正解。MVCC は読み取りブロックを減らす方向。",
+      "正解。スナップショット分離の基本。",
+      "不正解。直列化は別の隔離レベル。",
+      "不正解。トランザクションを前提とする。"
+    ],
+    "basic_terms": "MVCC：多バージョン並行制御、スナップショット：トランザクション開始時点のデータ像",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "AI",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論",
+    "question_text": "Transformer モデルにおいて、Self-Attention 機構が入力系列の各位置に対して行う操作として最も適切なものはどれか。",
+    "choices": [
+      "k-means でクラスタ中心を更新する",
+      "固定サイズ畳み込みカーネルのみを適用する",
+      "全位置との関連度（重み）を計算し重み付き和で表現を更新する",
+      "決定木で特徴を分岐する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "Self-Attention は Query-Key-Value により系列内の依存関係を学習する。",
+    "detailed_explanation": "Scaled dot-product attention が基本。CNN は局所畳み込み、k-means は教師なしクラスタリング。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "Self-Attention の基本動作を説明できる",
+    "common_misconception": "Transformer は畳み込みのみで構成される",
+    "distractor_rationales": [
+      "不正解。クラスタリング手法。",
+      "不正解。CNN の操作。",
+      "正解。Attention 重みによる表現更新。",
+      "不正解。決定木の操作。"
+    ],
+    "basic_terms": "Self-Attention：自己注意機構、Query-Key-Value：注意計算の三要素",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "計算理論",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "暗号",
+    "question_text": "NP 完全性を示す典型手法として、既知の NP 完全問題 L から対象問題 Q への何を構成するか。",
+    "choices": [
+      "指数時間還元",
+      "線形時間 Turing 還元のみ",
+      "量子もつれを利用した通信",
+      "多項式時間還元（Polynomial-time reduction）"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "L ≤p Q（多項式時間還元）により Q も NP 困難、さらに Q ∈ NP なら NP 完全。",
+    "detailed_explanation": "Cook-Levin の SAT から 3-SAT、CLIQUE 等へ還元が典型。指数還元では NP 完全性証明にならない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "NP 完全性証明の還元手法を説明できる",
+    "common_misconception": "問題が難しそうなら NP 完全と言える",
+    "distractor_rationales": [
+      "不正解。指数時間ではクラス保存にならない。",
+      "不正解。還元の時間制約が不十分。",
+      "不正解。計算複雑性の標準手法ではない。",
+      "正解。多項式時間還元が標準手法。"
+    ],
+    "basic_terms": "NP 完全：NP 完全問題、多項式時間還元：Polynomial-time reduction",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "暗号",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム",
+    "question_text": "リレーショナルデータベースのトランザクション特性 ACID の「A」が表す性質として正しいものはどれか。",
+    "choices": [
+      "原子性（Atomicity）",
+      "集約性（Aggregation）",
+      "可用性（Availability）",
+      "認証性（Authentication）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は原子性（Atomicity）。トランザクションは全て成功するか全て失敗するかのどちらかであることを保証する。",
+    "detailed_explanation": "ACID は Atomicity（原子性）・Consistency（一貫性）・Isolation（独立性）・Durability（耐久性）の頭文字。原子性はトランザクション内の操作群が「全実行」または「全ロールバック」のみとなることを保証する。「可用性（Availability）」は CAP 定理の A であり ACID の A とは異なる。認証性や集約性は ACID とは無関係の概念。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ACID 特性の各要素を定義し、特に原子性の意味をトランザクション管理の文脈で説明できる",
+    "common_misconception": "CAP 定理の「A（Availability）」と ACID の「A」を混同する",
+    "distractor_rationales": [
+      "正解。原子性（Atomicity）はトランザクションの全か無かの性質を指す。",
+      "不正解。集約性（Aggregation）は ACID の構成要素ではない。",
+      "不正解。可用性（Availability）は CAP 定理の A であり ACID の A ではない。",
+      "不正解。認証性（Authentication）は ACID とは無関係のセキュリティ概念。"
+    ],
+    "basic_terms": "ACID：トランザクションの4特性、原子性：全実行か全ロールバック、トランザクション：一連のDB操作単位、CAP定理：分散システムの一貫性・可用性・分断耐性のトレードオフ",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "アルゴリズム",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データ構造",
+    "question_text": "NP 困難な巡回セールスマン問題（TSP）に対する 3/2 近似アルゴリズム（Christofides 等）が保証する性質はどれか。",
+    "choices": [
+      "最適解と多くの場合一致する",
+      "得られる解のコストが最適解の 3/2 倍以内",
+      "多項式時間で最適解を多くの場合求める",
+      "解が存在しない場合がある"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "Christofides アルゴリズムはメトリック TSP で 3/2 近似比を保証する。",
+    "detailed_explanation": "MST + 最小重量マッチング + Euler 巡回。最適一致や多項式最適化（P≠NP 想定下）は保証しない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "近似アルゴリズムの近似比の意味を説明できる",
+    "common_misconception": "近似アルゴリズムが最適解を常に返す",
+    "distractor_rationales": [
+      "不正解。最適一致は保証されない。",
+      "正解。3/2 近似比の保証。",
+      "不正解。TSP 最適化は NP 困難。",
+      "不正解。解は常に存在する。"
+    ],
+    "basic_terms": "近似比：Approximation Ratio、Christofides：3/2 近似 TSP アルゴリズム",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データ構造",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング",
+    "question_text": "スキップリストにおける探索の期待計算量が O(log n) となる主な理由はどれか。",
+    "choices": [
+      "ハッシュ衝突が起きない",
+      "ノード数が常に 2 の累乗である",
+      "各レベルで探索範囲が期待 O(1) で半分以下に縮む",
+      "全要素を毎回線形走査する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "確率的に多段リストを上り、各レベルで前方部分集合を探索する。",
+    "detailed_explanation": "Pugh (1990) の構造。promotion 確率 p で期待高さ O(log n)。線形走査は O(n)。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "スキップリストの確率的構造と期待計算量を説明できる",
+    "common_misconception": "スキップリストは平衡木と同じ決定的保証を持つ",
+    "distractor_rationales": [
+      "不正解。ハッシュ構造ではない。",
+      "不正解。ノード数の制約は不要。",
+      "正解。多段構造による期待的对数探索。",
+      "不正解。線形走査では O(n)。"
+    ],
+    "basic_terms": "スキップリスト：Skip List、期待計算量：確率的解析による平均",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "プログラミング",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク",
+    "question_text": "関数型言語においてモナド（Monad）の bind（>>=）操作が満たすべき左単位元則はどれか。",
+    "choices": [
+      "m >>= return ≡ m",
+      "m >>= f >>= g ≡ m >>= (\\x -> f x >>= g) 以外の任意の式",
+      "bind は常に可換である",
+      "return a >>= f ≡ f a"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "左単位元：return a を bind しても f a と同じ。",
+    "detailed_explanation": "右単位元は m >>= return ≡ m。結合則は第3選択肢。bind は一般に非可換。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "モナド則（左単位元・右単位元・結合則）を説明できる",
+    "common_misconception": "モナドは単なるコンテナだと理解する",
+    "distractor_rationales": [
+      "不正解。これは右単位元則。",
+      "不正解。結合則の否定形。",
+      "不正解。bind は可換性を要求しない。",
+      "正解。左単位元則の定義。"
+    ],
+    "basic_terms": "モナド：Monad、bind：>>= 演算、return：単位元を注入",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "ネットワーク",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ",
+    "question_text": "HTTP/3 が QUIC を採用し UDP 上で動作する主な設計理由として最も適切なものはどれか。",
+    "choices": [
+      "TCP のヘッドオブラインブロッキングを避け、接続確立と暗号化を統合してレイテンシを低減する",
+      "UDP だからパケットロスが起きない",
+      "HTTP/2 と全く同じトランスポートを使う",
+      "DNS 解決を不要にする"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "QUIC はストリーム単位の多重化と 0-RTT 等で HTTP/2 over TCP の課題を改善。",
+    "detailed_explanation": "TCP 上の HOL ブロッキング、TLS 追加ハンドシェイクが課題。UDP でもロスは起き、DNS は依然必要。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "QUIC/HTTP3 の設計動機を説明できる",
+    "common_misconception": "UDP 採用＝信頼性放棄と短絡理解する",
+    "distractor_rationales": [
+      "正解。HOL 回避と統合ハンドシェイク。",
+      "不正解。UDP でもロスは発生する。",
+      "不正解。HTTP/2 は TCP ベース。",
+      "不正解。名前解決は別問題。"
+    ],
+    "basic_terms": "QUIC：Quick UDP Internet Connections、HOL ブロッキング：Head-of-Line Blocking",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "セキュリティ",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "OS",
+    "question_text": "公開鍵暗号方式において、送信者が受信者へ機密データを送る際に使用する鍵として正しいものはどれか。",
+    "choices": [
+      "送信者の秘密鍵",
+      "受信者の公開鍵",
+      "送信者の公開鍵",
+      "受信者の秘密鍵"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解は受信者の公開鍵。受信者の公開鍵で暗号化し、対応する受信者の秘密鍵でのみ復号できる。",
+    "detailed_explanation": "公開鍵暗号方式（非対称暗号）では、各主体が公開鍵と秘密鍵のペアを持つ。機密性を実現するには「受信者の公開鍵で暗号化→受信者の秘密鍵で復号」という手順を踏む。送信者の秘密鍵を使うのはデジタル署名（真正性・否認防止）の場合。受信者の秘密鍵は外部に公開せず復号のみに使用。送信者の公開鍵は署名検証に使用される。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "公開鍵暗号における暗号化・復号・署名・検証の各操作と使用鍵の対応を正確に説明できる",
+    "common_misconception": "送信者の秘密鍵で暗号化すれば機密が保たれると誤解する（実際は全員が復号できてしまう）",
+    "distractor_rationales": [
+      "不正解。送信者の秘密鍵はデジタル署名に使用するもので、機密性確保の暗号化には使用しない。",
+      "正解。受信者の公開鍵で暗号化すれば受信者の秘密鍵でのみ復号できる。",
+      "不正解。送信者の公開鍵で暗号化しても送信者秘密鍵を持つ送信者しか復号できず機密性を実現できない。",
+      "不正解。受信者の秘密鍵は復号に使用するものであり、暗号化には使用しない。"
+    ],
+    "basic_terms": "公開鍵暗号：非対称鍵暗号、公開鍵：広く配布する暗号化用鍵、秘密鍵：所有者のみが持つ復号用鍵、デジタル署名：秘密鍵で署名し公開鍵で検証",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "OS",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "question_text": "seL4 マイクロカーネルの形式検証で示された主要な性質として、文献で強調されるものはどれか。",
+    "choices": [
+      "物理メモリ容量が無限である",
+      "ハードウェア仮想化を禁止する",
+      "カーネル API の実装が関数仕様に対して refinements 関係を満たす",
+      "すべてのアプリケーションが自動的にバグフリーになる"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "seL4 は抽象仕様と実装の間の refinements を機械証明した。",
+    "detailed_explanation": "Klein 等 (2009) の成果。アプリのバグフリー化や無限メモリは保証しない。仮想化禁止でもない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "OS カーネル形式検証の意味と限界を説明できる",
+    "common_misconception": "形式検証＝システム全体が完全安全",
+    "distractor_rationales": [
+      "不正解。物理制約は変わらない。",
+      "不正解。仮想化禁止ではない。",
+      "正解。抽象仕様と実装の refinement 証明。",
+      "不正解。ユーザ空間アプリは対象外。"
+    ],
+    "basic_terms": "形式検証：Formal Verification、refinement：抽象仕様と実装の精緻化関係",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "データベース",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "AI",
+    "question_text": "トランザクション隔離において、Serializable（直列化可能）と Snapshot Isolation（SI）の関係について正しいものはどれか。",
+    "choices": [
+      "Serializable は SI より多くの場合性能が高い",
+      "SI はロックを一切使用しないため Serializable より強い",
+      "SI は多くの場合 Serializable と等価である",
+      "SI は write skew 等の異常を許し、Serializable より弱い隔離である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "SI は snapshot 読取を提供するが直列化可能スケジュールを保証しない場合がある。",
+    "detailed_explanation": "Fekete 等が write skew 等の反例を示した。Serializable は最強クラスだがコスト高。SI は MVCC ベースで実用的。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "SI と Serializable の形式的違いを説明できる",
+    "common_misconception": "MVCC を使えば自動的に Serializable",
+    "distractor_rationales": [
+      "不正解。Serializable は一般にコスト高。",
+      "不正解。SI は Serializable より弱い。",
+      "不正解。SI は Serializable より弱い。",
+      "正解。write skew 等の既知の差異。"
+    ],
+    "basic_terms": "Serializable：直列化可能、Snapshot Isolation：スナップショット隔離、write skew：書込み偏り異常",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "AI",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論",
+    "question_text": "PAC 学習（Probably Approximately Correct）の枠組みで、学習アルゴリズムが ε-近似（誤差 ε 以内）かつ 1-δ の確率で成功するために必要なサンプル数が多項式時間で bounded される条件を何というか。",
+    "choices": [
+      "PAC 学習可能（PAC-learnable）",
+      "過学習可能",
+      "NP 完全",
+      "決定可能"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "概念クラスが有限 VC 次元等の条件下で PAC 学習可能と言える。",
+    "detailed_explanation": "Valiant (1984) の枠組み。過学習は現象、NP 完全・決定可能は計算複雑性の別概念。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "PAC 学習可能の定義と VC 次元の関係を説明できる",
+    "common_misconception": "経験リスク最小化だけで PAC 保証が得られる",
+    "distractor_rationales": [
+      "正解。ε, δ, サンプル複雑度の多項式 bounded が条件。",
+      "不正解。学習の失敗モード。",
+      "不正解。計算複雑性クラス。",
+      "不正解。決定可能性の概念。"
+    ],
+    "basic_terms": "PAC 学習：Probably Approximately Correct、VC 次元：Vapnik-Chervonenkis dimension",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "計算理論",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "情報・計算機科学",
+    "subdomain": "暗号",
+    "question_text": "計算複雑性におけるオラクル分離（Oracle Separation）結果が示すこととして最も適切なものはどれか。",
+    "choices": [
+      "P = NP が証明された",
+      "特定のオラクル付きモデルでは P^A ≠ NP^A 等の関係が成り立つ",
+      "すべての問題が線形時間で解ける",
+      "量子コンピュータが不要である"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "Baker-Gill-Solovay (1975) 等はオラクルにより P と NP の相対関係が両方向あり得ることを示した。",
+    "detailed_explanation": "オラクル分離は標準モデルでの P vs NP 解決には直結しないが、証明技法の限界を示唆。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "オラクル分離結果の意味と限界を説明できる",
+    "common_misconception": "オラクル結果が P=NP または P≠NP を直接証明する",
+    "distractor_rationales": [
+      "不正解。未解決のまま。",
+      "正解。相対計算複雑性の分離結果。",
+      "不正解。線形時間万能ではない。",
+      "不正解。量子計算必要性の話ではない。"
+    ],
+    "basic_terms": "オラクル：Oracle、相対計算複雑性：Oracle 付き Turing マシン",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "情報・計算機科学",
+      "暗号",
+      "batch50",
+      "L900"
+    ]
   }
 ]

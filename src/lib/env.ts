@@ -20,3 +20,5 @@ export function getAdminEmails() {
 export function isTurnstileConfigured() {
   return Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && process.env.TURNSTILE_SECRET_KEY);
 }
+
+export { isUpstashConfigured } from "@/src/lib/security/config";

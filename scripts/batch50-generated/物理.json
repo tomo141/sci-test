@@ -1,54 +1,1232 @@
 [
   {
+    "domain": "物理",
+    "subdomain": "力学",
+    "question_text": "ニュートンの第一法則（慣性の法則）が述べていることとして正しいものはどれか。",
+    "choices": [
+      "外力が働かない物体は、静止または等速直線運動を続ける",
+      "物体に加えられた合力はその質量と加速度の積に等しい",
+      "作用と反作用は大きさが等しく方向が逆である",
+      "物体の運動量の時間変化率は加えられた合力に等しい"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "外力が働かない物体は静止または等速直線運動を続けるというのが慣性の法則です。",
+    "detailed_explanation": "ニュートンの第一法則は「慣性の法則」とも呼ばれ、合力がゼロの物体は現在の運動状態を保ち続けることを述べています。静止している物体は静止し続け、等速直線運動している物体はその運動を続けます。選択肢②はF=maを表す第二法則、③は作用・反作用の法則（第三法則）、④は第二法則の運動量形式（dp/dt = F）に相当します。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ニュートンの三法則をそれぞれ正しく識別し、第一法則の内容を説明できる",
+    "common_misconception": "「力がなければ物体は止まる」という日常的な直感から、静止が自然な状態だと誤解する",
+    "distractor_rationales": [
+      "正解。合力ゼロならば物体は静止または等速直線運動を維持するというのが慣性の法則です。",
+      "不正解。F = ma はニュートンの第二法則（運動の法則）の内容です。",
+      "不正解。作用・反作用の等大逆向きはニュートンの第三法則の内容です。",
+      "不正解。dp/dt = F も第二法則を運動量で表したものです。"
+    ],
+    "basic_terms": "慣性（inertia）：物体が現在の運動状態を保とうとする性質。合力：複数の力の合成。等速直線運動：速さも方向も変わらない運動。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "物理",
+      "力学",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱",
+    "question_text": "国際単位系（SI）において、力の単位として正しいものはどれか。",
+    "choices": [
+      "パスカル（Pa）",
+      "ニュートン（N）",
+      "ワット（W）",
+      "ジュール（J）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "SI 単位系において力の単位はニュートン（N = kg⋅m/s²）です。",
+    "detailed_explanation": "力の SI 単位はニュートン（N）で、1 N = 1 kg⋅m/s²（1 kg の質量に 1 m/s² の加速度を生じさせる力）と定義されます。ジュール（J = N⋅m）はエネルギー・仕事の単位、パスカル（Pa = N/m²）は圧力の単位、ワット（W = J/s）は仕事率（電力）の単位です。これらはすべて力（N）を基に派生した SI 単位であるため、混同しやすいです。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "力のSI単位（ニュートン）をエネルギー・圧力・仕事率の単位と区別して説明できる",
+    "common_misconception": "ジュール（J）を力の単位と混同する（J は力×距離＝仕事）",
+    "distractor_rationales": [
+      "不正解。パスカル（Pa）は圧力の単位（Pa = N/m²）であり、力の単位ではありません。",
+      "正解。ニュートン（N = kg⋅m/s²）が力の SI 単位です。",
+      "不正解。ワット（W）は仕事率（電力）の単位（W = J/s）であり、力の単位ではありません。",
+      "不正解。ジュール（J）はエネルギー・仕事の単位（J = N⋅m）であり、力の単位ではありません。"
+    ],
+    "basic_terms": "ニュートン（N）：力の SI 単位（1 N = 1 kg⋅m/s²）。ジュール（J）：エネルギーの単位。パスカル（Pa）：圧力の単位。ワット（W）：仕事率の単位。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "波",
+    "question_text": "物体を押したり引いたりするときに働く「力」の単位として正しいものはどれか。",
+    "choices": [
+      "ワット（W）",
+      "パスカル（Pa）",
+      "ニュートン（N）",
+      "ジュール（J）"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "力のSI単位はニュートン（N）である。",
+    "detailed_explanation": "1 N = 1 kg·m/s²。ジュールはエネルギー、ワットは仕事率、パスカルは圧力の単位。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "力のSI単位を他の力学関連単位と区別できる",
+    "common_misconception": "ジュールを力の単位と混同する",
+    "distractor_rationales": [
+      "不正解。ワットは仕事率の単位。",
+      "不正解。パスカルは圧力の単位。",
+      "正解。力のSI単位はニュートン。",
+      "不正解。ジュールはエネルギー・仕事の単位。"
+    ],
+    "basic_terms": "力：物体の運動状態を変える作用、ニュートン：力のSI単位",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "波",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "電磁気",
+    "question_text": "湯気の立つお湯が冷める主な理由として最も適切なものはどれか。",
+    "choices": [
+      "水が化学反応で分解するから",
+      "重力で熱が下に落ちるから",
+      "水分子の数が減るから",
+      "周囲より熱エネルギーを失うから"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "高温の物体は周囲へ熱を伝えて温度が下がる。",
+    "detailed_explanation": "熱は高温から低温へ移動する。対流・伝導・放射により周囲へ熱が奪われ温度が下がる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "物体が冷める現象を熱の移動で説明できる",
+    "common_misconception": "冷気が入って冷えると考える",
+    "distractor_rationales": [
+      "不正解。通常の冷却で水は分解しない。",
+      "不正解。熱は物質ではなくエネルギーの移動。",
+      "不正解。蒸発で一部失うが主因は熱移動。",
+      "正解。熱エネルギーの移動により温度が下がる。"
+    ],
+    "basic_terms": "熱：エネルギーの移動、温度：熱のあたりの度合い",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "電磁気",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "量子",
+    "question_text": "音が空気中を伝わるとき、音の速さに最も大きく関係するものはどれか。",
+    "choices": [
+      "媒質の種類と温度",
+      "音の大きさ（音量）",
+      "音の高さ（音程）",
+      "音源の色"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "音の速さは主に媒質と温度で決まる。",
+    "detailed_explanation": "空気中の音速は約340 m/s。固体・液体ではより速い。音量や音程は伝播速度にほぼ影響しない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "音の伝わり方と媒質の関係を説明できる",
+    "common_misconception": "大きな音ほど速く伝わると思う",
+    "distractor_rationales": [
+      "正解。媒質と温度が音速を決める。",
+      "不正解。音量は振幅に関係し速度は変わらない。",
+      "不正解。音程は周波数で速度とは無関係。",
+      "不正解。音源の見た目と伝播速度は無関係。"
+    ],
+    "basic_terms": "音波：空気の疎密が伝わる波、媒質：波が伝わる物質",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "量子",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱力学",
+    "question_text": "磁石とこすったプラスチックの性質の違いとして正しいものはどれか。",
+    "choices": [
+      "どちらも電流を流す",
+      "磁石は鉄を引きつけ、プラスチックは紙くずを軽く引く",
+      "どちらも鉄を強く引きつける",
+      "磁石は光を反射し、プラスチックは音を出す"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "磁石は磁性体を、帯電体は軽い物体を引く。",
+    "detailed_explanation": "磁石は磁場で鉄などを引く。帯電したプラスチックは静電気で軽い紙くずを引く。性質は異なる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "磁気と静電気の違いを日常生活の例で区別できる",
+    "common_misconception": "帯電体も鉄を強く引くと思う",
+    "distractor_rationales": [
+      "不正解。導体でなければ電流は流れない。",
+      "正解。磁気と静電気の典型例。",
+      "不正解。帯電プラスチックは鉄を引かない。",
+      "不正解。光反射や発音とは無関係。"
+    ],
+    "basic_terms": "磁石：磁場を生じ鉄などを引く、静電気：電荷の蓄積",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱力学",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "統計力学",
+    "question_text": "地表付近で静止した状態から自由落下する物体の、t 秒後の速さとして正しいものはどれか。重力加速度を g = 9.8 m/s² とし、空気抵抗は無視する。",
+    "choices": [
+      "9.8/t m/s",
+      "4.9t m/s",
+      "9.8t m/s",
+      "9.8t² m/s"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "自由落下の速さは v = gt = 9.8t m/s です。",
+    "detailed_explanation": "初速度ゼロの自由落下では、重力加速度 g が一定に作用します。等加速度運動の速度公式 v = v₀ + at に v₀ = 0、a = g を代入すると v = gt = 9.8t m/s です。「4.9t m/s」は変位の式 x = ½gt² の係数 ½ を速度式に誤用したものです。「9.8t² m/s」は変位 x = ½gt² と速度を混同した誤りです。「9.8/t m/s」は次元的に m/s³ となり速さとして不適切です。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "自由落下運動における速度・変位の公式を区別して適用できる",
+    "common_misconception": "変位の式 x = ½gt² の係数½を速度の式に持ち込み、v = ½gt = 4.9t と誤計算する",
+    "distractor_rationales": [
+      "不正解。9.8/t m/s は時間が増えるほど遅くなることを示し、加速するはずの自由落下に矛盾します。",
+      "不正解。4.9t m/s は変位の公式 x = ½gt² の係数½を誤って速度式に適用した結果です。",
+      "正解。自由落下の速さは v = gt = 9.8t m/s です。",
+      "不正解。9.8t² m/s は変位の次元（m）に近い式であり、速さ（m/s）の式ではありません。"
+    ],
+    "basic_terms": "自由落下（free fall）：重力のみで落下する運動。重力加速度 g ≈ 9.8 m/s²。等加速度運動の速度式：v = v₀ + gt。変位式：x = v₀t + ½gt²。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "統計力学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "固体物理",
+    "question_text": "絶対零度（0 K）に近づくと気体分子の運動はどうなるか。",
+    "choices": [
+      "ますます速くなる",
+      "運動は変わらない",
+      "分子が消える",
+      "ほとんど止まる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "温度低下に伴い分子の平均運動エネルギーが減る。",
+    "detailed_explanation": "統計力学より温度は分子の平均運動エネルギーに比例。0 Kでは古典的には運動が最小。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "温度と分子運動の関係を説明できる",
+    "common_misconception": "寒いほど分子が激しく動くと誤解する",
+    "distractor_rationales": [
+      "不正解。温度が下がると運動は減る。",
+      "不正解。温度変化で運動エネルギーは変わる。",
+      "不正解。分子は消えない。",
+      "正解。低温で分子運動は鈍る。"
+    ],
+    "basic_terms": "絶対零度：理論上の最低温度、分子運動：気体分子の無秩序運動",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "固体物理",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "素粒子",
+    "question_text": "金属が電気をよく通す主な理由はどれか。",
+    "choices": [
+      "自由電子が多く存在するから",
+      "原子核が自由に動くから",
+      "金属はすべて液体だから",
+      "金属内部に磁石があるから"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "金属の自由電子が電流を運ぶ。",
+    "detailed_explanation": "金属結合では価電子が自由電子となり、電場に応じて移動して電流を形成する。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "金属の導電性を自由電子で説明できる",
+    "common_misconception": "原子核が電流を運ぶと思う",
+    "distractor_rationales": [
+      "正解。自由電子が導電の主体。",
+      "不正解。原子核は格子内に固定。",
+      "不正解。常温の金属は固体。",
+      "不正解。磁性と導電は別の機構。"
+    ],
+    "basic_terms": "自由電子：金属中を移動できる電子、導電：電荷の移動",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "素粒子",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "相対性理論",
+    "question_text": "原子を構成する素粒子の電荷として正しい組み合わせはどれか。",
+    "choices": [
+      "陽子と電子が同じ符号",
+      "陽子は+、中性子は0、電子は−",
+      "陽子は−、中性子は+、電子は0",
+      "すべて中性"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "陽子+、中性子0、電子−が標準。",
+    "detailed_explanation": "陽子は+e、電子は−e、中性子は電荷0。原子全体は通常中性。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "主要素粒子の電荷を区別できる",
+    "common_misconception": "中性子にも電荷があると思う",
+    "distractor_rationales": [
+      "不正解。陽子と電子は逆符号。",
+      "正解。標準的な電荷配置。",
+      "不正解。符号が逆。",
+      "不正解。陽子と電子は帯電。"
+    ],
+    "basic_terms": "陽子：正電荷、電子：負電荷、中性子：電荷なし",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "相対性理論",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "力学",
+    "question_text": "光の速さについて、真空における正しい記述はどれか。",
+    "choices": [
+      "光源の速度がそのまま加わる",
+      "重力で常に遅くなる",
+      "どの観測者から見ても同じ一定値である",
+      "観測者が速く動くほど速くなる"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "真空中の光速は普遍的定数c。",
+    "detailed_explanation": "特殊相対性理論の公理：真空中の光速は慣性系に依らず一定。ガリレオ変換とは異なる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "光速不変の原理を理解する",
+    "common_misconception": "速度を足し合わせて光の速さが変わると思う",
+    "distractor_rationales": [
+      "不正解。古典的速度合成は光速に適用されない。",
+      "不正解。真空では媒質による減速はない。",
+      "正解。光速不変の原理。",
+      "不正解。観測者の速度は光速に加わらない。"
+    ],
+    "basic_terms": "光速：約3×10⁸ m/s、慣性系：等速直線運動する座標系",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "力学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱",
+    "question_text": "ニュートンの第二法則が表す関係として正しいものはどれか。",
+    "choices": [
+      "力＝質量×速度",
+      "力＝加速度÷質量",
+      "力＝質量÷加速度",
+      "力＝質量×加速度"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "F = ma が第二法則。",
+    "detailed_explanation": "物体に働く合力は質量と加速度の積に等しい。速度ではなく加速度に比例。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ニュートン第二法則の式を正しく述べられる",
+    "common_misconception": "力が速度に比例すると思う",
+    "distractor_rationales": [
+      "不正解。速度ではなく加速度。",
+      "不正解。式の形が逆。",
+      "不正解。除算の関係は誤り。",
+      "正解。F = ma。"
+    ],
+    "basic_terms": "加速度：速度の時間変化率、合力：物体に働く力の合成",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "波",
+    "question_text": "なめらかな水平面上で、質量 3 kg の物体 A が速度 4 m/s で静止している質量 1 kg の物体 B に衝突し、完全非弾性衝突した。衝突後の二物体の共通速度として正しいものはどれか。",
+    "choices": [
+      "3 m/s",
+      "1 m/s",
+      "2 m/s",
+      "4 m/s"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "運動量保存則より 3×4 = (3+1)×v、v = 3 m/s。",
+    "detailed_explanation": "完全非弾性衝突では二物体が一体となって動くため、運動量保存則を適用します。衝突前の系全体の運動量は m_A × v_A + m_B × 0 = 3 × 4 = 12 kg⋅m/s。衝突後の全質量は 3 + 1 = 4 kg なので、共通速度 v = 12/4 = 3 m/s です。「4 m/s」は衝突が起きていない（Aの速度のまま）と誤解した値、「1 m/s」はBの質量のみで割った誤り、「2 m/s」は平均値を取った誤りです。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "運動量保存則を完全非弾性衝突に適用して衝突後速度を計算できる",
+    "common_misconception": "速度を算術平均し (4+0)/2 = 2 m/s と誤計算する（質量の重み付けを忘れる）",
+    "distractor_rationales": [
+      "正解。運動量保存則 12 = 4v より v = 3 m/s が正しい共通速度です。",
+      "不正解。1 m/s はBの質量のみ（1 kg）で運動量を割った誤りです。",
+      "不正解。2 m/s は速度を単純平均（(4+0)/2）した誤りで、質量の重み付けを無視しています。",
+      "不正解。4 m/s は衝突前のAの速度であり、Bへの影響を全く考慮していません。"
+    ],
+    "basic_terms": "運動量（momentum）：質量×速度（kg⋅m/s）。運動量保存則：外力がなければ系全体の運動量は一定。完全非弾性衝突：衝突後に一体となる衝突。",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "波",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "電磁気",
+    "question_text": "摂氏温度（℃）で表した温度 T と絶対温度（ケルビン、K）の変換として正しいものはどれか。",
+    "choices": [
+      "K = 273 / T",
+      "K = T + 273",
+      "K = T − 273",
+      "K = T × 273"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解は「K = T + 273」です。摂氏0℃は273 Kです。",
+    "detailed_explanation": "絶対温度（K）は摂氏温度に273を加えた値です。0℃=273 K、100℃=373 Kとなります。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "摂氏温度と絶対温度の換算式（K = ℃ + 273）を正確に適用できる",
+    "common_misconception": "「T − 273」という引き算の方向を逆にしてしまう（絶対零度が −273 ℃ から「引く」とイメージしてしまう）",
+    "distractor_rationales": [
+      "不正解。逆数関係は温度変換の式ではありません。",
+      "正解。K = T + 273 が摂氏からケルビンへの変換式です。",
+      "不正解。273を引くと負の値になり、低温域で意味をなしません。",
+      "不正解。摂氏とケルビンの間に倍率関係はありません。"
+    ],
+    "basic_terms": "絶対温度（absolute temperature）K：絶対零度（−273.15 ℃）を起点とする温度スケール。絶対零度：理論上の最低温度（0 K = −273.15 ℃）。",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "電磁気",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "量子",
+    "question_text": "周波数 500 Hz、波長 0.68 m の音波の速さとして正しいものはどれか。",
+    "choices": [
+      "0.00136 m/s",
+      "68 m/s",
+      "340 m/s",
+      "735 m/s"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "v = fλ = 500 × 0.68 = 340 m/s。",
+    "detailed_explanation": "波の基本式 v = fλ。空気中の音速に相当する値。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "v = fλ を用いて波の速さを計算できる",
+    "common_misconception": "周波数と波長を足す・割ると混同する",
+    "distractor_rationales": [
+      "不正解。λ/f の誤用。",
+      "不正解。λのみを用いた誤り。",
+      "正解。v = fλ の計算結果。",
+      "不正解。f + λ の誤用。"
+    ],
+    "basic_terms": "周波数：1秒あたりの振動数、波長：1周期の長さ",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "量子",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱力学",
+    "question_text": "同じ電圧で抵抗 2 Ω と 4 Ω を直列接続したとき、各抵抗に流れる電流の関係はどれか。",
+    "choices": [
+      "4 Ω の方が2倍流れる",
+      "2 Ω の方が2倍流れる",
+      "電流は流れない",
+      "両方に同じ電流が流れる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "直列回路では電流はどこでも同じ。",
+    "detailed_explanation": "直列では電流が共通。電圧は抵抗に比例分配。並列とは異なる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "直列回路の電流の性質を説明できる",
+    "common_misconception": "大きい抵抗ほど多く流れると思う",
+    "distractor_rationales": [
+      "不正解。直列では電流は等しい。",
+      "不正解。抵抗値と電流は逆ではない（直列）。",
+      "不正解。閉回路なら電流が流れる。",
+      "正解。直列回路の性質。"
+    ],
+    "basic_terms": "直列接続：電流経路が1つ、オームの法則：V = IR",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱力学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "統計力学",
+    "question_text": "光電効果の実験が示したこととして正しいものはどれか。",
+    "choices": [
+      "光のエネルギーは振動数に比例する",
+      "光の強さを増やせば任意の電子が出る",
+      "光は連続的な波だけで説明できる",
+      "電子放出と光の振動数は無関係"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "光電効果は E = hν で説明される。",
+    "detailed_explanation": "アインシュタインの光量子仮説：閾値振動数以上で光子が電子を解放。強度は電子数に影響。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "光電効果と光量子説を結びつけられる",
+    "common_misconception": "光の強さだけで電子が出ると思う",
+    "distractor_rationales": [
+      "正解。光子エネルギー E = hν。",
+      "不正解。閾値振動数が必要。",
+      "不正解。粒子性も必要。",
+      "不正解。振動数が閾値を超える必要がある。"
+    ],
+    "basic_terms": "光電効果：光で金属から電子が放出、光子：光のエネルギー量子",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "統計力学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "固体物理",
+    "question_text": "熱力学における「エントロピー」の意味として最も適切なものはどれか。",
+    "choices": [
+      "系の圧力",
+      "系の無秩序さ・状態数の指標",
+      "系の総エネルギー",
+      "系の体積"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "エントロピーは微視的状態数の尺度。",
+    "detailed_explanation": "S = k ln Ω。孤立系ではエントロピーは増大方向に変化（第二法則）。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "エントロピーの意味を定性的に説明できる",
+    "common_misconception": "エントロピーをエネルギーと混同する",
+    "distractor_rationales": [
+      "不正解。圧力は力学的変数。",
+      "正解。無秩序度の指標。",
+      "不正解。エネルギーは別の状態関数。",
+      "不正解。体積は別変数。"
+    ],
+    "basic_terms": "エントロピー：熱力学第二法則の中心概念、孤立系：外界と物質・エネルギー交換なし",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "固体物理",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "素粒子",
+    "question_text": "真空中で距離 r の位置にある2つの点電荷 q₁、q₂ の間に働くクーロン力の大きさ F として正しいものはどれか（k はクーロン定数）。",
+    "choices": [
+      "F = k|q₁q₂|/r³",
+      "F = k(q₁ + q₂)/r²",
+      "F = k|q₁q₂|/r²",
+      "F = k|q₁q₂|/r"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "クーロン力は F = k|q₁q₂|/r² で、電荷の積に比例し距離の 2 乗に反比例します。",
+    "detailed_explanation": "クーロンの法則は F = k|q₁q₂|/r²（k = 1/4πε₀ ≈ 9.0 × 10⁹ N⋅m²/C²）で表されます。電荷の「積」に比例し、距離の「2 乗」に反比例します。「q₁ + q₂」では電荷の和を取っており誤りです。分母の r だけでは距離の 1 乗（万有引力でも 2 乗）になり誤り。r³ は双極子場などの特殊な場合に現れる次数ですがクーロン力には使いません。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "クーロンの法則の数式表現（F = k|q₁q₂|/r²）と、電荷の積・距離の 2 乗との関係を説明できる",
+    "common_misconception": "電荷の「和」（q₁ + q₂）と「積」（q₁q₂）を混同する",
+    "distractor_rationales": [
+      "不正解。分母の r³ は双極子電位の勾配などに現れる次数であり、クーロン力の式ではありません。",
+      "不正解。クーロン力は電荷の積（q₁q₂）に比例し、和（q₁ + q₂）には比例しません。",
+      "正解。F = k|q₁q₂|/r² がクーロンの法則の正しい表式です。",
+      "不正解。距離依存性は r²（2 乗）であり、r（1 乗）ではありません。"
+    ],
+    "basic_terms": "クーロン定数 k = 1/(4πε₀) ≈ 9.0 × 10⁹ N⋅m²/C²。点電荷（point charge）：大きさを無視して扱える電荷。電場 E = F/q = kq/r²。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "素粒子",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "相対性理論",
+    "question_text": "標準模型におけるクォークとレプトンの違いとして正しいものはどれか。",
+    "choices": [
+      "レプトンだけが電荷を持つ",
+      "クォークはレプトンより軽い",
+      "クォークは単独で観測できる",
+      "クォークは色荷を持ちレプトンは持たない"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "クォークはQCDの色荷、レプトンは色荷なし。",
+    "detailed_explanation": "クォークは強い相互作用で閉じ込め。レプトン（電子など）は色荷を持たない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "クォークとレプトンの性質を比較できる",
+    "common_misconception": "クォークを自由に取り出せると思う",
+    "distractor_rationales": [
+      "不正解。クォークも電荷を持つ。",
+      "不正解。質量順序は粒子による。",
+      "不正解。クォーク閉じ込め。",
+      "正解。色荷の有無が本質的差。"
+    ],
+    "basic_terms": "クォーク：強い相互作用を感じる素粒子、レプトン：電子・ニュートリノなど",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "相対性理論",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "力学",
+    "question_text": "特殊相対性理論における時間の遅れについて正しい記述はどれか。",
+    "choices": [
+      "高速で動く時計は静止系より遅く進む",
+      "動く人から見て静止する時計が遅れる",
+      "時間の遅れは観測者の主観で実在しない",
+      "光速に近いほど時計は速く進む"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "運動する時計は遅れる（時間膨張）。",
+    "detailed_explanation": "ローレンツ変換より相対運動する系の固有时间は短く測られる。相互的で矛盾しない。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "時間膨張を正しく理解する",
+    "common_misconception": "動いている側だけが錯覚だと思う",
+    "distractor_rationales": [
+      "正解。時間膨張の標準記述。",
+      "不正解。どちらの系からも遅れが観測される（相対性）。",
+      "不正解。実測可能な効果（GPS補正等）。",
+      "不正解。遅れの方向が逆。"
+    ],
+    "basic_terms": "時間膨張：高速運動系の固有时间の伸び、ローレンツ変換",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "力学",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱",
+    "question_text": "質点の角運動量 L の定義として正しいものはどれか（r：位置ベクトル、p：運動量）。",
+    "choices": [
+      "L = r + p",
+      "L = r × p",
+      "L = r · p",
+      "L = rp"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "角運動量は外積で定義される。",
+    "detailed_explanation": "L = r × p。トルクがなければ角運動量保存。スカラー積や和は角運動量ではない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "角運動量のベクトル定義を述べられる",
+    "common_misconception": "角運動量をスカラー積と混同する",
+    "distractor_rationales": [
+      "不正解。ベクトル和ではない。",
+      "正解。角運動量の定義。",
+      "不正解。内積はスカラー。",
+      "不正解。単純積は次元が合わない。"
+    ],
+    "basic_terms": "角運動量：回転運動の保存量、外積：ベクトル積",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "波",
+    "question_text": "断熱膨張（熱の出入りなし）で理想気体が膨張したときの温度変化として正しいものはどれか。",
+    "choices": [
+      "温度は変わらない",
+      "温度は必ず0 Kになる",
+      "気体は温度を下げる",
+      "気体は温度を上げる"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "膨張仕事で内部エネルギーが減り温度低下。",
+    "detailed_explanation": "断熱過程 Q=0 なので ΔU = −W。膨張で W>0 なら ΔU<0 で冷却。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "断熱過程の温度変化を第一法則で説明できる",
+    "common_misconception": "膨張しても温度は不変だと思う",
+    "distractor_rationales": [
+      "不正解。等温とは異なる。",
+      "不正解。0 Kにはならない。",
+      "正解。断熱膨張は冷却。",
+      "不正解。断熱圧縮で昇温。"
+    ],
+    "basic_terms": "断熱過程：熱交換なしの変化、内部エネルギー：U",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "波",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "電磁気",
+    "question_text": "音源が観測者に近づくとき、観測される音の振動数はどう変化するか。",
+    "choices": [
+      "低くなる",
+      "変化しない",
+      "振動数は0になる",
+      "高くなる（ドップラー効果）"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "接近で波面間隔が短くなり振動数上昇。",
+    "detailed_explanation": "ドップラー効果：接近で f' > f、遠ざかると f' < f。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "音のドップラー効果の方向を予測できる",
+    "common_misconception": "遠ざかると高くなると逆に覚える",
+    "distractor_rationales": [
+      "不正解。それは遠ざかる場合。",
+      "不正解。相対運動で変化。",
+      "不正解。振動数は0にならない。",
+      "正解。接近で音程上昇。"
+    ],
+    "basic_terms": "ドップラー効果：相対運動による周波数変化",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "電磁気",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "量子",
+    "question_text": "4 Ω と 12 Ω の抵抗を並列接続したときの合成抵抗として正しいものはどれか。",
+    "choices": [
+      "3 Ω",
+      "6 Ω",
+      "8 Ω",
+      "16 Ω"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "並列合成抵抗は 1/R = 1/4 + 1/12 = 1/3 より R = 3 Ω です。",
+    "detailed_explanation": "並列接続の合成抵抗は 1/R = 1/R₁ + 1/R₂ で求めます。1/R = 1/4 + 1/12 = 3/12 + 1/12 = 4/12 = 1/3 なので R = 3 Ω です。並列の合成抵抗は最小の抵抗値（4 Ω）より小さくなります。「6 Ω」は誤った中間値、「8 Ω」は二つの値の算術平均、「16 Ω」は直列接続の合成抵抗（4 + 12 = 16）を誤用した値です。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "並列接続の合成抵抗の計算公式（1/R = ΣR_i⁻¹）を正しく適用できる",
+    "common_misconception": "並列抵抗の合成式に直列の公式（R = R₁ + R₂）を誤って使い 16 Ω と答える",
+    "distractor_rationales": [
+      "正解。1/R = 1/4 + 1/12 = 4/12 より R = 3 Ω が正しい並列合成抵抗です。",
+      "不正解。6 Ω は正確な計算に対応しない誤った値です。",
+      "不正解。8 Ω は (4 + 12)/2 = 8 という算術平均であり、並列合成抵抗の計算法ではありません。",
+      "不正解。16 Ω は直列接続の合成抵抗 R = 4 + 12 = 16 Ω であり、並列では使えません。"
+    ],
+    "basic_terms": "並列接続（parallel connection）：各素子に同じ電圧がかかる接続。並列合成抵抗：1/R = 1/R₁ + 1/R₂。直列合成抵抗：R = R₁ + R₂。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "量子",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱力学",
+    "question_text": "ハイゼンベルクの不確定性原理が示すこととして正しいものはどれか。",
+    "choices": [
+      "不確定性は温度が低いと消える",
+      "位置と運動量を同時に任意精度で測れない",
+      "測定機器の誤差を超えられないだけ",
+      "電子は確定した軌道を描く"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ΔxΔp ≥ ℏ/2 は原理的限界。",
+    "detailed_explanation": "共役変数の同時確定精度には量子論的限界。測定誤差とは別の原理。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "不確定性原理の意味を区別できる",
+    "common_misconception": "単なる実験誤差だと思う",
+    "distractor_rationales": [
+      "不正解。温度では消えない。",
+      "正解。共役変数の原理的限界。",
+      "不正解。装置誤差とは別。",
+      "不正解。軌道概念は古典的。"
+    ],
+    "basic_terms": "不確定性原理：ΔxΔp ≥ ℏ/2、共役変数：位置と運動量",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "物理",
       "熱力学",
       "batch50",
       "L500"
-    ],
-    "domain": "物理",
-    "subdomain": "熱力学",
-    "difficulty_initial": 500,
-    "question_text": "孤立系における熱力学第二法則の内容として最も適切なものはどれか。",
-    "choices": [
-      "エントロピーは時間とともに減少する",
-      "エントロピーは時間とともに増大しない",
-      "エネルギーは生成も消滅もしない",
-      "温度は常に一定に保たれる"
-    ],
-    "correct_choice_index": 1,
-    "short_explanation": "孤立系ではエントロピーは増大するか、可逆過程では変化しない。",
-    "detailed_explanation": "熱力学第二法則（孤立系）：ΔS ≥ 0。エネルギー保存は第一法則。",
-    "learning_objective": "熱力学第二法則をエントロピー増大の言葉で説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "第二法則をエネルギー保存と混同する",
-    "distractor_rationales": [
-      "不正解。エントロピーは減少しない。",
-      "正解。孤立系のエントロピーは増大しない（増大または不変）。",
-      "不正解。第一法則の内容。",
-      "不正解。孤立系の温度は一般に変化する。"
-    ],
-    "basic_terms": "エントロピー：系の無秩序度の指標、孤立系：外界と物質・エネルギー交換のない系"
+    ]
   },
   {
+    "domain": "物理",
+    "subdomain": "統計力学",
+    "question_text": "等温等圧で自発的に進行する変化におけるギブス自由エネルギー変化 ΔG の符号はどれか。",
+    "choices": [
+      "ΔG = 0 のみ",
+      "ΔG は定義できない",
+      "ΔG < 0",
+      "ΔG > 0"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "自発変化では ΔG < 0。",
+    "detailed_explanation": "G = H − TS。等温等圧自発変化は ΔG < 0、平衡で ΔG = 0。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ギブス自由エネルギーと自発性を結びつけられる",
+    "common_misconception": "自発変化で ΔG > 0 と誤る",
+    "distractor_rationales": [
+      "不正解。変化中は一般に0ではない。",
+      "不正解。Gは定義される状態関数。",
+      "正解。自発変化の条件。",
+      "不正解。非自発変化の条件。"
+    ],
+    "basic_terms": "ギブス自由エネルギー：等温等圧の自発性の指標",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "物理",
-      "電磁気学",
+      "統計力学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "固体物理",
+    "question_text": "温度 T のキャノニカル分布でエネルギー E の状態の確率重みに比例する因子はどれか。",
+    "choices": [
+      "E/k_BT",
+      "k_BT/E",
+      "√(2πk_BT)",
+      "e^(−E/k_BT)"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ボルツマン因子 e^(−E/k_BT)。",
+    "detailed_explanation": "P(E) ∝ e^(−E/k_BT)。高温で高エネルギー状態も占有されやすい。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ボルツマン分布の確率重みを述べられる",
+    "common_misconception": "Eに比例すると誤解する",
+    "distractor_rationales": [
+      "不正解。線形比例ではない。",
+      "不正解。逆数関係ではない。",
+      "不正解。別分布の因子。",
+      "正解。ボルツマン因子。"
+    ],
+    "basic_terms": "ボルツマン因子：e^(−E/k_BT)、キャノニカル分布",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "固体物理",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "素粒子",
+    "question_text": "半導体の価電子帯と伝導帯の間のエネルギー差を何と呼ぶか。",
+    "choices": [
+      "バンドギャップ",
+      "フェルミエネルギー",
+      "結合エネルギー",
+      "仕事関数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "バンドギャップ Eg が電気伝導の鍵。",
+    "detailed_explanation": "Egが大きいと絶縁体、小さいと半導体。熱・光で電子が伝導帯へ励起。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "バンドギャップの意味を説明できる",
+    "common_misconception": "フェルミエネルギーと混同する",
+    "distractor_rationales": [
+      "正解。価電子帯と伝導帯の差。",
+      "不正解。フェルミ準位のエネルギー。",
+      "不正解。原子結合のエネルギー。",
+      "不正解。金属表面の脱出仕事。"
+    ],
+    "basic_terms": "バンドギャップ：帯間のエネルギー差、伝導帯：自由電子の許容帯",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "素粒子",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "相対性理論",
+    "question_text": "強い相互作用と弱い相互作用が主に関与する現象の組み合わせとして正しいものはどれか。",
+    "choices": [
+      "熱伝導と音波",
+      "核内束縛とベータ崩壊",
+      "静電気と重力",
+      "光電効果とドップラー効果"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "強い力は核束縛、弱い力はベータ崩壊。",
+    "detailed_explanation": "強い相互作用：クォーク・核子束縛。弱い相互作用：β崩壊など味変化。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "四種の力の典型現象を区別できる",
+    "common_misconception": "ベータ崩壊も強い力だと思う",
+    "distractor_rationales": [
+      "不正解。巨視的現象。",
+      "正解。それぞれの典型例。",
+      "不正解。電磁気と重力。",
+      "不正解。古典・量子光学現象。"
+    ],
+    "basic_terms": "強い相互作用：QCD、弱い相互作用：放射性崩壊",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "相対性理論",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "力学",
+    "question_text": "屈折率 n₁ の媒質から屈折率 n₂ の媒質へ光が入射するとき、入射角 θ₁ と屈折角 θ₂ の関係を表すスネルの法則として正しいものはどれか。",
+    "choices": [
+      "n₁² sin θ₁ = n₂² sin θ₂",
+      "n₁ tan θ₁ = n₂ tan θ₂",
+      "n₁ sin θ₁ = n₂ sin θ₂",
+      "n₁ cos θ₁ = n₂ cos θ₂"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "スネルの法則は n₁ sin θ₁ = n₂ sin θ₂ で表されます。",
+    "detailed_explanation": "スネルの法則（屈折の法則）は n₁ sin θ₁ = n₂ sin θ₂ と表されます。光が密な媒質（n 大）に入ると屈折角は入射角より小さくなります。sin ではなく cos を使った選択肢は誤りです（cos はブリュースター角など偏光の文脈で登場）。tan や n の 2 乗は屈折の法則に用いません。全反射条件は n₁ sin θ_c = n₂（θ₂ = 90°）から導かれます。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "スネルの法則の数式 n₁ sin θ₁ = n₂ sin θ₂ を正確に記述し、屈折角の大小を判断できる",
+    "common_misconception": "sin の代わりに cos を使い n₁ cos θ₁ = n₂ cos θ₂ と誤記する",
+    "distractor_rationales": [
+      "不正解。屈折率を 2 乗した形（n₁², n₂²）はスネルの法則に登場しません。",
+      "不正解。tan θ を用いた式は屈折の法則ではありません。",
+      "正解。n₁ sin θ₁ = n₂ sin θ₂ がスネルの法則の正しい形です。",
+      "不正解。cos θ を用いた式はスネルの法則ではありません。屈折則は sin θ を使います。"
+    ],
+    "basic_terms": "屈折率（refractive index）n = c/v（c：真空中の光速、v：媒質中の光速）。入射角・屈折角：法線に対する角度。全反射：臨界角以上で光が境界面で全反射する現象。",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "力学",
       "batch50",
       "L600"
-    ],
+    ]
+  },
+  {
     "domain": "物理",
-    "subdomain": "電磁気学",
+    "subdomain": "熱",
+    "question_text": "解析力学においてラグランジアン L の定義として正しいものはどれか（T：運動エネルギー、V：ポテンシャル）。",
+    "choices": [
+      "L = T + V",
+      "L = T × V",
+      "L = V − T",
+      "L = T − V"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "L = T − V が標準定義。",
+    "detailed_explanation": "ラグランジ形式の運動方程式は d/dt(∂L/∂q̇) − ∂L/∂q = 0。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ラグランジアンの定義を正確に述べられる",
+    "common_misconception": "ハミルトニアンと同じ T+V と混同",
+    "distractor_rationales": [
+      "不正解。それはハミルトニアン。",
+      "不正解。積ではない。",
+      "不正解。符号が逆。",
+      "正解。L = T − V。"
+    ],
+    "basic_terms": "ラグランジアン：T−V、一般化座標：q",
     "difficulty_initial": 600,
-    "question_text": "真空中のマクスウェル方程式のうち、ガウスの法則を表す式はどれか。",
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "波",
+    "question_text": "カルノーサイクルの理論最高効率 η_max（高温 T_H、低温 T_L）として正しいものはどれか。",
+    "choices": [
+      "η_max = 1 − T_L/T_H",
+      "η_max = T_L/T_H",
+      "η_max = 1 − T_H/T_L",
+      "η_max = T_H − T_L"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "カルノー効率 η = 1 − T_L/T_H。",
+    "detailed_explanation": "可逆カルノーエンジンの効率上限。温度は絶対温度で与える。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "カルノー効率を計算・説明できる",
+    "common_misconception": "分子の差 T_H − T_L を効率とする",
+    "distractor_rationales": [
+      "正解。カルノー効率。",
+      "不正解。逆の比。",
+      "不正解。符号・構造が誤り。",
+      "不正解。差ではなく比。"
+    ],
+    "basic_terms": "カルノーサイクル：可逆熱機関、熱効率：仕事/吸熱",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "波",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "電磁気",
+    "question_text": "1次元の波動方程式 ∂²u/∂t² = c² ∂²u/∂x² の一般解の形として正しいものはどれか。",
+    "choices": [
+      "f(x² + c²t²)",
+      "f(x − ct) + g(x + ct)",
+      "f(x) × g(t)",
+      "f(x) + g(t)"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ダランベール解：右進行と左進行の重ね合わせ。",
+    "detailed_explanation": "波動方程式の一般解は左右進行波の任意関数の和。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "波動方程式の解の形を認識できる",
+    "common_misconception": "変数分離解だけが一般解だと思う",
+    "distractor_rationales": [
+      "不正解。球対称形は1次元一般解ではない。",
+      "正解。ダランベールの一般解。",
+      "不正解。積の形は一般ではない。",
+      "不正解。和の分離形は一般解ではない。"
+    ],
+    "basic_terms": "波動方程式：波の伝播を記述、ダランベール解",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "電磁気",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "量子",
+    "question_text": "真空中のマクスウェル方程式のうち、電場のガウス法則を表す式はどれか。",
     "choices": [
       "∇ · B = 0",
       "∇ × B = μ₀J + μ₀ε₀ ∂E/∂t",
@@ -56,122 +1234,569 @@
       "∇ × E = −∂B/∂t"
     ],
     "correct_choice_index": 2,
-    "short_explanation": "ガウスの法則は電場の発散が電荷密度に比例することを表す。",
-    "detailed_explanation": "∇·E = ρ/ε₀ が電場のガウス法則。他はファラデー法則・磁場ガウス法則・アンペール・マクスウェル法則。",
-    "learning_objective": "マクスウェル方程式4式を区別して説明できる",
-    "cognitive_type": "基本的な適用",
-    "common_misconception": "ファラデー法則とガウス法則を混同する",
+    "short_explanation": "∇·E = ρ/ε₀ が電場のガウス法則。",
+    "detailed_explanation": "他はファラデー法則、磁場ガウス法則、アンペール・マクスウェル法則。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "マクスウェル4式を区別できる",
+    "common_misconception": "ファラデー法則と混同する",
     "distractor_rationales": [
       "不正解。磁場のガウス法則。",
-      "不正解。アンペール・マクスウェル法則。",
+      "不正解。アンペール・マクスウェル。",
       "正解。電場のガウス法則。",
-      "不正解。ファラデーの電磁誘導法則。"
+      "不正解。ファラデー法則。"
     ],
-    "basic_terms": "マクスウェル方程式：電磁場の基本方程式、ガウス法則：電束と電荷の関係"
-  },
-  {
+    "basic_terms": "ガウス法則：電束と電荷の関係、マクスウェル方程式",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "物理",
+      "量子",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱力学",
+    "question_text": "音を鳴らしながら静止した観測者に向かって接近してくる救急車がある。ドップラー効果により観測者が聞く音の周波数について正しいものはどれか。",
+    "choices": [
+      "救急車が発する音の周波数と変わらない",
+      "音源の速さに関わらず観測者の位置では一定の周波数に聞こえる",
+      "救急車が発する音の周波数より低くなる",
+      "救急車が発する音の周波数より高くなる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "音源が近づくと観測される周波数は音源の固有周波数より高くなります（ドップラー効果）。",
+    "detailed_explanation": "ドップラー効果では、音源が観測者に近づく場合、単位時間に受け取る波の数が増えるため、観測周波数 f' = f × (v_sound / (v_sound − v_source)) > f となります（v_source > 0 で近づく場合）。救急車が遠ざかる場合は逆に低くなります。「変わらない」は音源が静止している場合に相当し、「低くなる」は遠ざかる場合の記述です。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ドップラー効果において音源が近づく・遠ざかる場合の観測周波数の変化方向を説明できる",
+    "common_misconception": "救急車のサイレンが遠ざかるときに低く聞こえる経験と混同し、近づくときも低くなると誤解する",
+    "distractor_rationales": [
+      "不正解。音源が動いていれば観測周波数は変化します。周波数が変わらないのは音源と観測者が相対的に静止しているときです。",
+      "不正解。観測周波数は音源の速さに依存して変化し、速いほど効果が大きくなります。",
+      "不正解。周波数が低くなるのは音源が遠ざかる場合です。近づく場合は逆です。",
+      "正解。音源が近づくと観測周波数は高くなります。これがドップラー効果の代表例です。"
+    ],
+    "basic_terms": "ドップラー効果（Doppler effect）：音源や観測者の相対運動による観測周波数の変化。f' = f(v ± v_o)/(v ∓ v_s)（v：音速、v_o：観測者速度、v_s：音源速度）。",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱力学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "統計力学",
+    "question_text": "開いた系において粒子数を変えられるとき、平衡条件に現れる化学ポテンシャル μ の意味として正しいものはどれか。",
+    "choices": [
+      "粒子1個追加時のギブス自由エネルギー変化",
+      "1分子あたりのエントロピー",
+      "圧力と体積の積",
+      "温度の逆数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "μ = (∂G/∂N)_{T,P}。",
+    "detailed_explanation": "化学ポテンシャルは粒子数変化に伴うGの変化率。相平衡で各相のμが等しい。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "化学ポテンシャルの定義を述べられる",
+    "common_misconception": "エントロピーや圧力と混同する",
+    "distractor_rationales": [
+      "正解。Gの粒子数微分。",
+      "不正解。エントロピー密度ではない。",
+      "不正解。PV項とは別。",
+      "不正解。β = 1/kTとは別。"
+    ],
+    "basic_terms": "化学ポテンシャル：μ、巨視的変数：T, P, N",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "物理",
       "統計力学",
       "batch50",
       "L700"
-    ],
-    "domain": "物理",
-    "subdomain": "統計力学",
-    "difficulty_initial": 700,
-    "question_text": "温度 T のキャノニカル分布において、エネルギー E の状態の確率は主にどの因子に比例するか。",
-    "choices": [
-      "√(2πk_BT)",
-      "e^(−E/k_BT)",
-      "E/k_BT",
-      "k_BT/E"
-    ],
-    "correct_choice_index": 3,
-    "short_explanation": "ボルツマン因子 e^(−E/k_BT) に比例する。",
-    "detailed_explanation": "キャノニカル分布 P(E) ∝ e^(−E/k_BT)。高温では高エネルギー状態も占有される。",
-    "learning_objective": "ボルツマン分布の確率重みを説明できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "エネルギーに比例すると誤解する",
-    "distractor_rationales": [
-      "不正解。ガウス分布の正規化因子と混同。",
-      "正解。ボルツマン因子。",
-      "不正解。エネルギー比は確率の指数ではない。",
-      "不正解。逆数関係は成り立たない。"
-    ],
-    "basic_terms": "キャノニカル分布：定温熱浴と接触する系の統計、ボルツマン定数 k_B"
+    ]
   },
   {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "物理",
-      "量子力学",
-      "batch50",
-      "L800"
-    ],
     "domain": "物理",
-    "subdomain": "量子力学",
-    "difficulty_initial": 800,
-    "question_text": "1次元無限ポテンシャル井戸（幅 L）の基底状態エネルギー E₁ を表す式として正しいものはどれか（ℏ：ディラック定数、m：粒子質量）。",
+    "subdomain": "固体物理",
+    "question_text": "正則分布（キャノニカル）の分配関数 Z が与える主な物理量として正しい関係はどれか。",
     "choices": [
-      "π²ℏ²/(2mL²)",
-      "ℏ²/(2mL)",
-      "πℏ²/(mL²)",
-      "2π²ℏ²/(mL²)"
-    ],
-    "correct_choice_index": 0,
-    "short_explanation": "E_n = n²π²ℏ²/(2mL²) より n = 1 で π²ℏ²/(2mL²)。",
-    "detailed_explanation": "境界条件より E_n = n²π²ℏ²/(2mL²)。基底状態は n = 1。",
-    "learning_objective": "無限井戸のエネルギー準位を境界条件から導出できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "分母の 2mL² を mL と混同する",
-    "distractor_rationales": [
-      "正解。n=1 のエネルギー準位。",
-      "不正解。次元が合わず π も欠ける。",
-      "不正解。分母の 2 が欠ける。",
-      "不正解。係数が2倍になっている。"
-    ],
-    "basic_terms": "無限ポテンシャル井戸：井戸内で自由粒子とみなす模型、基底状態：最も低いエネルギー準位"
-  },
-  {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "物理",
-      "素粒子物理学",
-      "batch50",
-      "L900"
-    ],
-    "domain": "物理",
-    "subdomain": "素粒子物理学",
-    "difficulty_initial": 900,
-    "question_text": "標準模型において、クォークの色荷を媒介するゲージボソンはどれか。",
-    "choices": [
-      "光子",
-      "グルーオン",
-      "Wボソン",
-      "ヒッグス粒子"
+      "温度 T = Z/k_B",
+      "自由エネルギー F = −k_BT ln Z",
+      "エントロピー S = Z/k_B",
+      "圧力 P = Z/V"
     ],
     "correct_choice_index": 1,
-    "short_explanation": "強い相互作用を媒介するのは8種のグルーオン。",
-    "detailed_explanation": "SU(3) カラーゲージ対称性のゲージボソンがグルーオン。光子は電磁、W/Z は弱い相互作用。",
-    "learning_objective": "標準模型の4つの基本相互作用と媒介粒子を対応づけられる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "光子が強い相互作用を媒介すると混同する",
+    "short_explanation": "F = −kT ln Z が標準。",
+    "detailed_explanation": "Z = Σ e^(−E/kT)。Fから圧力・エントロピー等を導出可能。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "分配関数と熱力学ポテンシャルの関係を述べられる",
+    "common_misconception": "Zが直接エントロピーだと思う",
     "distractor_rationales": [
-      "不正解。電磁相互作用の媒介粒子。",
-      "正解。強い相互作用（QCD）の媒介粒子。",
-      "不正解。弱い相互作用の媒介粒子。",
-      "不正解。スカラー場の粒子。"
+      "不正解。Tは外部パラメータ。",
+      "正解。F = −kT ln Z。",
+      "不正解。SはFの微分から。",
+      "不正解。PはFの体積微分。"
     ],
-    "basic_terms": "グルーオン：強い相互作用の媒介粒子、クォーク：色荷を持つ素粒子"
+    "basic_terms": "分配関数：Z、自由エネルギー：F",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "固体物理",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "素粒子",
+    "question_text": "金属においてフェルミ面の意味として最も適切なものはどれか。",
+    "choices": [
+      "結晶の物理表面",
+      "バンドギャップの大きさ",
+      "k空間で占有された電子状態の境界面",
+      "原子核の表面"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "フェルミ面は E = E_F の等エネルギー面。",
+    "detailed_explanation": "0 Kで最高占有エネルギー E_F の面。輸送現象・比熱に重要。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "フェルミ面の概念を説明できる",
+    "common_misconception": "物理表面や核表面と混同する",
+    "distractor_rationales": [
+      "不正解。実空間の表面ではない。",
+      "不正解。ギャップとは別概念。",
+      "正解。k空間の等エネルギー面。",
+      "不正解。原子核とは無関係。"
+    ],
+    "basic_terms": "フェルミエネルギー：E_F、フェルミ面：E = E_F の面",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "素粒子",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "相対性理論",
+    "question_text": "標準模型の第1世代と第3世代のレプトンの組み合わせとして正しいものはどれか。",
+    "choices": [
+      "陽子・中性子・デルタ",
+      "上・下・奇クォークのみ",
+      "光子・グルーオン・Wボソン",
+      "電子・ミューオン・タウと各ニュートリノ"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "世代ごとに荷電レプトンとニュートリノの対。",
+    "detailed_explanation": "(e, ν_e), (μ, ν_μ), (τ, ν_τ) が3世代。質量は世代が上がるほど大。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "レプトン世代構造を区別できる",
+    "common_misconception": "陽子中性子が世代だと思う",
+    "distractor_rationales": [
+      "不正解。これはハドロン。",
+      "不正解。クォークもあるが選択肢として不完全。",
+      "不正解。ゲージボソン。",
+      "正解。3世代レプトン。"
+    ],
+    "basic_terms": "世代：同じ量子数で質量が異なる粒子族、ニュートリノ",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "相対性理論",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "力学",
+    "question_text": "ハイゼンベルクの不確定性原理において、粒子の位置の不確定さ Δx と運動量の不確定さ Δp の積が満たすべき条件として正しいものはどれか（ℏ はディラック定数 = h/2π）。",
+    "choices": [
+      "Δx ⋅ Δp ≥ ℏ/2",
+      "Δx ⋅ Δp ≤ ℏ/2",
+      "Δx ⋅ Δp = ℏ",
+      "Δx ⋅ Δp ≥ 2ℏ"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "不確定性原理は Δx ⋅ Δp ≥ ℏ/2 と表されます。",
+    "detailed_explanation": "ハイゼンベルクの不確定性原理は位置と運動量を同時に任意の精度で測定できないことを示す量子力学の基本原理で、Δx ⋅ Δp ≥ ℏ/2（ℏ = h/2π：ディラック定数）と書かれます。等号は最小不確定性状態（コヒーレント状態）で達成されます。「≤ ℏ/2」は不等号が逆で誤りです。「= ℏ」は等号のみで不等号がなく、かつ係数も誤りです。「≥ 2ℏ」は係数が誤りです。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ハイゼンベルクの不確定性原理の数式 Δx ⋅ Δp ≥ ℏ/2 と不等号の向きを正確に記述できる",
+    "common_misconception": "h（プランク定数）と ℏ（ディラック定数）を混同し、係数を誤る",
+    "distractor_rationales": [
+      "正解。ハイゼンベルクの不確定性原理は Δx ⋅ Δp ≥ ℏ/2 と表されます。",
+      "不正解。不等号の向きが逆です。実際には Δx ⋅ Δp の下限が ℏ/2 に制約されており、それ以下にはなれません。",
+      "不正解。等号のみでは「等しい値のみ許される」こととなり、不等式で表される不確定性原理とは異なります。また係数も誤りです。",
+      "不正解。係数が誤りです。正しくは ℏ/2 であり、2ℏ ではありません。"
+    ],
+    "basic_terms": "ディラック定数（reduced Planck constant）ℏ = h/2π ≈ 1.055 × 10⁻³⁴ J⋅s。不確定性原理（uncertainty principle）：共役な物理量を同時精度で決定できない限界。",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "力学",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱",
+    "question_text": "古典力学におけるポアソン括弧 {f, g} の定義として正しいものはどれか。",
+    "choices": [
+      "{f,g} = ∇f · ∇g",
+      "{f,g} = Σ_i (∂f/∂q_i ∂g/∂p_i − ∂f/∂p_i ∂g/∂q_i)",
+      "{f,g} = fg − gf",
+      "{f,g} = ∂f/∂t + ∂g/∂t"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ポアソン括弧は正準変数での偏微分の組み合わせ。",
+    "detailed_explanation": "{q,p} = 1。時間発展 df/dt = {f,H} + ∂f/∂t。量子化で対易子に対応。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ポアソン括弧の定義と意味を述べられる",
+    "common_misconception": "単純積や内積と混同する",
+    "distractor_rationales": [
+      "不正解。勾配内積ではない。",
+      "正解。標準定義。",
+      "不正解。交換子の誤イメージ。",
+      "不正解。時間偏微分の和ではない。"
+    ],
+    "basic_terms": "ポアソン括弧：正準形式の代数、ハミルトニアン：H",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "波",
+    "question_text": "揺らぎ散逸定理が結びつける2つの量の関係として正しいものはどれか。",
+    "choices": [
+      "エントロピーと体積",
+      "光速と質量",
+      "平衡における揺らぎと線形応答の散逸",
+      "温度と圧力の積"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "平衡揺らぎの強さと散逸係数が結びつく。",
+    "detailed_explanation": "例：電気伝導率と電流揺らぎ（ノイジントン）。線形応答理論の基礎。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "揺らぎ散逸定理の内容を説明できる",
+    "common_misconception": "熱力学状態方程式の関係だと思う",
+    "distractor_rationales": [
+      "不正解。無関係な組。",
+      "不正解。相対論的関係。",
+      "正解。揺らぎと散逸の関係。",
+      "不正解。状態方程式。"
+    ],
+    "basic_terms": "揺らぎ散逸定理：平衡揺らぎと応答の関係",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "波",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "電磁気",
+    "question_text": "無限媒質中のスカラー波動方程式 (□ + k²)G(x,x') = δ(x−x') の基本解（グリーン関数）の形として知られるものはどれか。",
+    "choices": [
+      "|x−x'|²",
+      "δ(x−x')/k²",
+      "sin(kx)/x",
+      "e^(ik|x−x'|)/(4π|x−x'|)"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "3次元ヘルムホルツのグリーン関数は球対称。",
+    "detailed_explanation": "Outgoing boundary conditionで G ∝ e^(ikr)/r。回折・散乱の基礎。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "波動グリーン関数の基本形を認識できる",
+    "common_misconception": "sin(kx)/x が一般3次元解だと思う",
+    "distractor_rationales": [
+      "不正解。次元が合わない。",
+      "不正解。デルタ関数そのものではない。",
+      "不正解。1次元の例。",
+      "正解。3Dヘルムホルツグリーン関数。"
+    ],
+    "basic_terms": "グリーン関数：点源応答、ヘルムホルツ方程式",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "電磁気",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "量子",
+    "question_text": "電磁気学におけるゲージ変換 A → A + ∇χ で変化しない物理量はどれか。",
+    "choices": [
+      "磁場 B",
+      "ベクトルポテンシャル A 自体",
+      "スカラーポテンシャル φ 単独",
+      "電場 E の局所値（一般）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "B = ∇×A はゲージ不変。",
+    "detailed_explanation": "A, φはゲージ依存だが E, Bの物理的組み合わせは不変。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "ゲージ不変性と観測量を区別できる",
+    "common_misconception": "A自体が物理的に測定可能だと思う",
+    "distractor_rationales": [
+      "正解。B = ∇×A は不変。",
+      "不正解。Aはゲージ依存。",
+      "不正解。φも変換で変わる。",
+      "不正解。Eもゲージ変換で変わる。"
+    ],
+    "basic_terms": "ゲージ変換：ポテンシャルの自由度、ゲージ不変性",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "量子",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "熱力学",
+    "question_text": "アインシュタインの特殊相対性理論における時間の遅れ（時間膨張）に関して正しい記述はどれか。",
+    "choices": [
+      "時間の遅れは物体に加速度がかかっているときに現れる",
+      "光速に近い速度で運動する系の時計は、静止した観測者から見て遅れて進む",
+      "光速に近い速度で運動する系の時計は、静止した観測者から見て速く進む",
+      "時間の遅れは物体の質量増加によって生じるため、軽い物体では観測されない"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "特殊相対性理論では、光速に近い速度で運動する系の時計は静止系から見て遅れます（時間膨張）。",
+    "detailed_explanation": "特殊相対性理論の時間膨張（time dilation）によれば、速度 v で運動する系での時間間隔 Δt' は静止系での Δt に対して Δt = γΔt'（γ = 1/√(1−v²/c²) ≥ 1）と拡大して観測されます。つまり動いている時計は遅れて見えます。この効果は質量に依存しません。また、加速度は関係しない純粋に速度（相対速度）による効果です（加速度が関わるのは一般相対性理論）。「速く進む」は逆で誤りです。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "特殊相対性理論の時間膨張の方向（動く時計は遅れる）と、その原因が相対速度にあることを説明できる",
+    "common_misconception": "加速度がなければ相対論効果は現れないと誤解し、等速運動の時間膨張を否定する",
+    "distractor_rationales": [
+      "不正解。特殊相対性理論の時間膨張は等速運動でも生じ、加速度は必要条件ではありません。加速度が絡む効果は一般相対性理論（重力による時間の遅れ）です。",
+      "正解。光速に近い速度で運動する系の時計は、静止系から見て遅れて進むのが時間膨張です。",
+      "不正解。時間膨張は動く時計が「遅れる」効果であり、「速くなる」は誤りです。",
+      "不正解。時間膨張は相対速度による効果であり、物体の質量には依存しません。"
+    ],
+    "basic_terms": "時間膨張（time dilation）：相対速度により動く時計が遅れて観測される効果。ローレンツ因子 γ = 1/√(1−v²/c²)。光速 c ≈ 3 × 10⁸ m/s。",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "熱力学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "統計力学",
+    "question_text": "ヤジンスキー等式が非平衡過程で結びつける量として正しいものはどれか。",
+    "choices": [
+      "エントロピーと体積の積",
+      "光速と質量",
+      "仕事の指数平均と自由エネルギー差",
+      "温度と圧力の積"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "⟨e^(−βW)⟩ ≥ e^(−βΔF)（ヤジンスキー）。",
+    "detailed_explanation": "任意の非平衡仕事から平衡自由エネルギー差の境界を与える。クロッカー等と関連。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ヤジンスキー等式の役割を説明できる",
+    "common_misconception": "平衡状態方程式だと思う",
+    "distractor_rationales": [
+      "不正解。無関係。",
+      "不正解。相対論。",
+      "正解。非平衡仕事とΔF。",
+      "不正解。状態方程式。"
+    ],
+    "basic_terms": "ヤジンスキー等式：非平衡統計力学、自由エネルギー差",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "統計力学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "固体物理",
+    "question_text": "臨界点近傍で相関長 ξ が温度にどう依存するかを記述する臨界指数 ν の典型関係はどれか。",
+    "choices": [
+      "ξ ∝ T^(ν)",
+      "ξ ∝ e^(−T/T_c)",
+      "ξ ∝ T_c − T",
+      "ξ ∝ |T − T_c|^(−ν)"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ξ ∝ |t|^(−ν)（t：減少温度）。",
+    "detailed_explanation": "臨界現象の普遍性クラスで指数 ν が決まる。RGにより計算。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "臨界指数と相関長の発散を理解する",
+    "common_misconception": "線形依存だと思う",
+    "distractor_rationales": [
+      "不正解。符号・形式が違う。",
+      "不正解。指数関係ではない。",
+      "不正解。線形では一般に成り立たない。",
+      "正解。臨界点で発散。"
+    ],
+    "basic_terms": "臨界指数：ν、相関長：ξ、RG：繰り込み群",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "固体物理",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "素粒子",
+    "question_text": "2次元トポロジカル絶縁体の境界に現れる特徴的な電子状態はどれか。",
+    "choices": [
+      "手性エッジ状態（一方向に伝わる）",
+      "体積内の金属的伝導を主成分とする",
+      "完全に局在した深い不動点を主成分とする",
+      "古典ニュートン流体"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "体は絶縁、境界に保護された手性エッジモード。",
+    "detailed_explanation": "トポロジカル不変量によりエッジ状態はバック散乱禁止。量子スピンホール等。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "トポロジカル絶縁体の境界状態を説明できる",
+    "common_misconception": "体積全体が金属的だと思う",
+    "distractor_rationales": [
+      "正解。トポロジカルエッジ状態。",
+      "不正解。体は絶縁。",
+      "不正解。エッジは伝播モード。",
+      "不正解。流体力学モデルではない。"
+    ],
+    "basic_terms": "トポロジカル絶縁体：体絶縁・境界伝導、手性エッジ状態",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "素粒子",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "物理",
+    "subdomain": "相対性理論",
+    "question_text": "K中間子系におけるCP対称性の破れが最初に観測された現象として知られるものはどれか。",
+    "choices": [
+      "ニュートリノ振動",
+      "K_L と K_S の寿命・崩壊モードの違い",
+      "電子の異常磁気モーメントのみ",
+      "プロトンの安定性"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "クリストンセン等（1964）のK_L→ππ。",
+    "detailed_explanation": "K⁰–K̄⁰混合とCP破れ。後にB中間子でも確認。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "CP破れの歴史的観測を識別できる",
+    "common_misconception": "CP破れはクォーク模型以降のみだと思う",
+    "distractor_rationales": [
+      "不正解。ニュートリノ振動は別。",
+      "正解。K中間子のCP破れ。",
+      "不正解。異常磁気モーメントは別現象。",
+      "不正解。プロトン安定性は別。"
+    ],
+    "basic_terms": "CP対称性：電荷共役とパリティ、K中間子",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "物理",
+      "相対性理論",
+      "batch50",
+      "L900"
+    ]
   }
 ]

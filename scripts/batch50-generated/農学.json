@@ -1,177 +1,1802 @@
 [
   {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "農学",
-      "作物学",
-      "batch50",
-      "L500"
-    ],
     "domain": "農学",
-    "subdomain": "作物学",
-    "difficulty_initial": 500,
-    "question_text": "C4植物が高温・強光条件下で光合成効率が高い主な理由はどれか。",
+    "subdomain": "作物",
+    "question_text": "土壌を構成する無機粒子を粒径の小さい順に正しく並べたものはどれか。",
     "choices": [
-      "光合成に水を必要としないため",
-      "夜間のみ CO₂ を固定するため",
-      "光呼吸を抑制し CO₂ 固定効率を高めるため",
-      "葉緑体を持たないため"
-    ],
-    "correct_choice_index": 2,
-    "short_explanation": "C4植物はメソフィルとバッスルシースで CO₂ を濃縮し光呼吸を抑制する。",
-    "detailed_explanation": "C4経路は PEP カルボキシラーゼで CO₂ を固定しバッスルシースへ送り、Rubisco 周辺の CO₂ 濃度を高める。CAM植物は夜間固定。",
-    "learning_objective": "C3・C4・CAM 植物の光合成経路の違いを説明できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "C4 植物が光合成に葉緑体を使わないと誤解する",
-    "distractor_rationales": [
-      "不正解。水は光合成に必要。",
-      "不正解。CAM 植物の特徴。",
-      "正解。CO₂ 濃縮による光呼吸抑制。",
-      "不正解。葉緑体を持つ。"
-    ],
-    "basic_terms": "C4植物：4炭素酸経路を持つ植物、光呼吸：Rubisco の酸素化反応によるエネルギー損失"
-  },
-  {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "農学",
-      "土壌学",
-      "batch50",
-      "L600"
-    ],
-    "domain": "農学",
-    "subdomain": "土壌学",
-    "difficulty_initial": 600,
-    "question_text": "土壌の陽イオン交換容量（CEC）が大きいときの効果として最も適切なものはどれか。",
-    "choices": [
-      "有機物が分解されなくなる",
-      "肥料成分（K⁺, Ca²⁺, Mg²⁺ 等）の保持力が高まる",
-      "土壌の透水係数が増大する",
-      "土壌 pH が酸性になる"
-    ],
-    "correct_choice_index": 3,
-    "short_explanation": "CEC は粘土・有機物の負電荷が陽イオンを吸着保持する能力。",
-    "detailed_explanation": "CEC が高い土壌は陽イオン態肥料を吸着保持し、リーキングを抑制。pH・透水係数は別要因。",
-    "learning_objective": "CEC の定義と土壌肥力への意義を説明できる",
-    "cognitive_type": "用語・定義",
-    "common_misconception": "CEC と透水係数を同一視する",
-    "distractor_rationales": [
-      "不正解。有機物分解は微生物活動に依存。",
-      "正解。陽イオン保持力の指標。",
-      "不正解。透水係数とは直接関係しない。",
-      "不正解。pH は別の緩衝機構で決まる。"
-    ],
-    "basic_terms": "CEC：陽イオン交換容量、リーキング：養分が水とともに流失すること"
-  },
-  {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "農学",
-      "植物病理学",
-      "batch50",
-      "L700"
-    ],
-    "domain": "農学",
-    "subdomain": "植物病理学",
-    "difficulty_initial": 700,
-    "question_text": "植物の系統獲得抵抗性（SAR）の誘導に関与する信号分子として最も代表的なものはどれか。",
-    "choices": [
-      "サリチル酸",
-      "エチレン",
-      "乳酸",
-      "グルコース"
+      "粘土 → シルト → 砂 → 礫",
+      "砂 → シルト → 粘土 → 礫",
+      "礫 → 砂 → 粘土 → シルト",
+      "シルト → 粘土 → 砂 → 礫"
     ],
     "correct_choice_index": 0,
-    "short_explanation": "SAR はサリチル酸経路を介して広範な抗病性を誘導する。",
-    "detailed_explanation": "SAR は局所感染後に系統的に抗病性を獲得。サリチル酸・NPR1 等が中心的。エチレン・ジャスモン酸は別の防御経路。",
-    "learning_objective": "植物免疫の SAR と局所防御の違いを説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "すべての植物ホルモンが SAR を誘導すると誤解する",
+    "short_explanation": "粒径は小さい順に「粘土（＜0.002 mm）→ シルト → 砂 → 礫」です。",
+    "detailed_explanation": "土壌の無機粒子は粒径によって分類されます。国際土壌学会（ISSS）基準では、粘土が0.002 mm未満、シルトが0.002〜0.02 mm、砂が0.02〜2 mm、礫が2 mm以上です。粒径の違いは保水性・排水性・通気性など土壌の物理的性質に大きく影響します。粘土は粒子が細かく比表面積が大きいため、水分・養分の保持能力が高い一方、通気性は低下します。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "土壌粒子の粒径分類（粘土・シルト・砂・礫）を順番に列挙できる",
+    "common_misconception": "シルトと砂の順序を逆に覚えてしまう",
     "distractor_rationales": [
-      "正解。SAR の中心的信号分子。",
-      "不正解。エチレンは傷害応答等に関与。",
-      "不正解。乳酸は関与しない。",
-      "不正解。グルコースは一般的代謝物。"
+      "正解。粘土が最も細かく、次いでシルト・砂・礫の順に大きくなります。",
+      "不正解。砂はシルトより粒径が大きいため、この順序は誤りです。",
+      "不正解。礫は最大粒径であるため先頭に来ることはなく、粘土は礫より遙かに小さい粒子です。",
+      "不正解。粘土はシルトよりさらに小さい粒子であり、先頭はシルトではなく粘土です。"
     ],
-    "basic_terms": "系統獲得抵抗性：感染部位以外でも誘導される広範な抗病性、サリチル酸：植物防御ホルモン"
-  },
-  {
+    "basic_terms": "粘土（clay）：粒径0.002 mm未満の微細粒子。シルト（silt）：粒径0.002〜0.02 mmの粒子。砂（sand）：粒径0.02〜2 mmの粒子。礫（gravel）：粒径2 mm以上の粗粒子。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "農学",
-      "園芸学",
+      "作物",
       "batch50",
-      "L800"
-    ],
+      "L100"
+    ]
+  },
+  {
     "domain": "農学",
-    "subdomain": "園芸学",
-    "difficulty_initial": 800,
-    "question_text": "光補償点（光合成速度と呼吸速度が等しくなる光強度）が低い作物の特徴として適切なものはどれか。",
+    "subdomain": "土壌",
+    "question_text": "植物の葉緑素（クロロフィル）が光合成のために主に吸収する光の波長帯として正しいものはどれか。",
     "choices": [
-      "常に高温でないと生育しない",
-      "光合成に CO₂ を使用しない",
-      "呼吸が行われない",
-      "弱光条件下でも光合成収支がプラスになりやすい"
+      "紫外線（400 nm未満）と緑色光（510〜570 nm）",
+      "赤色光（630〜680 nm）と青色光（430〜450 nm）",
+      "緑色光（510〜570 nm）と黄色光（570〜590 nm）",
+      "黄色光（570〜590 nm）と近赤外線（700〜800 nm）"
     ],
     "correct_choice_index": 1,
-    "short_explanation": "光補償点が低いほど弱光下で光合成が呼吸を上回りやすい。",
-    "detailed_explanation": "光補償点以下では呼吸 > 光合成で炭素収支がマイナス。耐陰性作物は光補償点が低い傾向。",
-    "learning_objective": "光補償点・光飽和点と生育環境の関係を説明できる",
-    "cognitive_type": "基本的な適用",
-    "common_misconception": "光補償点と光飽和点を混同する",
+    "short_explanation": "クロロフィルaは赤色光（約660 nm）と青色光（約430 nm）を主に吸収し、緑色光は反射するため葉は緑色に見えます。",
+    "detailed_explanation": "クロロフィルa（Chl a）の吸収スペクトルには赤色域（約660〜680 nm）と青色域（約430〜450 nm）に吸収極大があります。緑色光（510〜570 nm）は吸収されずに反射・透過するため、葉は緑色に見えます。クロロフィルbは青色域がシフトした吸収を持ち、カロテノイド（β-カロテン・キサントフィル）は青色光を主に吸収します。これら光合成色素が異なる波長を分担吸収することで、太陽光を広範囲で活用しています。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "クロロフィルの光吸収スペクトルの特徴（赤色光・青色光の吸収、緑色光の反射）を説明できる",
+    "common_misconception": "葉が緑色なのでクロロフィルが緑色光を吸収すると誤解する",
     "distractor_rationales": [
-      "不正解。温度要件とは別の概念。",
-      "不正解。光合成は CO₂ 固定を伴う。",
-      "不正解。呼吸は常に行われる。",
-      "正解。低い光補償点の意味。"
+      "不正解。紫外線（400 nm未満）は光合成に利用されず、むしろ植物に有害な場合があります。",
+      "正解。クロロフィルは赤色光と青色光を主に吸収し光合成エネルギーとして利用します。",
+      "不正解。緑色光・黄色光はクロロフィルにほとんど吸収されず反射・透過します。",
+      "不正解。黄色光はクロロフィルの主吸収帯ではなく、近赤外線は光合成に利用されにくい波長です。"
     ],
-    "basic_terms": "光補償点：光合成と呼吸が釣り合う光強度、耐陰性：弱光下での生育能力"
-  },
-  {
+    "basic_terms": "クロロフィルa（Chl a）：主要な光合成色素で赤色域と青色域に吸収極大を持つ。吸収スペクトル：物質が各波長の光を吸収する程度を表すグラフ。カロテノイド：補助色素で余分な光エネルギーを消散させる役割も持つ。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "農学",
-      "育種学",
+      "土壌",
       "batch50",
-      "L900"
-    ],
+      "L100"
+    ]
+  },
+  {
     "domain": "農学",
-    "subdomain": "育種学",
-    "difficulty_initial": 900,
-    "question_text": "雑種一代（F₁）の超親現象（ヘテロシス）の主な遺伝学的基盤として最も支持される説明はどれか。",
+    "subdomain": "育種",
+    "question_text": "米の原料となるイネについての説明として正しいものはどれか。",
     "choices": [
-      "染色体数の半減",
-      "突然変変異の一括発生",
-      "有利な対立遺伝子の集積と劣性遺伝子のマスク",
-      "近交による純合化の促進"
+      "イネは果菜類である",
+      "イネは根菜類である",
+      "イネは穀物（穀類）である",
+      "イネは豆類である"
     ],
     "correct_choice_index": 2,
-    "short_explanation": "異系統間交配で劣性遺伝子がヘテロ接合化されマスクされ、有利な組合せが現れる。",
-    "detailed_explanation": "ヘテロシスは優性仮説・超優性仮説等で説明。近交はヘテロシスを減弱。染色体半減は減数分裂。",
-    "learning_objective": "ヘテロシスの遺伝学的説明を述べられる",
-    "cognitive_type": "誤解・境界",
-    "common_misconception": "ヘテロシスは近交で増強すると誤解する",
+    "short_explanation": "イネはイネ科の穀物で、種子（玄米）を食用とする。",
+    "detailed_explanation": "イネ（Oryza sativa）はイネ科の一年生草本で、穀物に分類される。根菜・豆類・果菜とは異なる作物群である。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "主要穀物の分類を説明できる",
+    "common_misconception": "米を野菜や豆類と混同する",
     "distractor_rationales": [
-      "不正解。減数分裂の説明。",
-      "不正解。ヘテロシスの主因ではない。",
-      "正解。優性仮説等による説明。",
-      "不正解。近交はヘテロシスを減らす。"
+      "不正解。果菜は果実を食用とする野菜群。",
+      "不正解。根菜は地下部を食用とする野菜群。",
+      "正解。イネは穀物（穀類）に分類される。",
+      "不正解。豆類はマメ科などの作物群。"
     ],
-    "basic_terms": "ヘテロシス：F₁ の超親現象、優性仮説：劣性遺伝子のマスクによる説明"
+    "basic_terms": "穀物：穀粒を食用とする作物、イネ：米の作物",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "育種",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "病害虫",
+    "question_text": "植物が根から土壌中の水を吸い上げる主な要因として正しいものはどれか。",
+    "choices": [
+      "葉の光合成速度",
+      "茎の径成長",
+      "根の蒸発散",
+      "根毛付近の浸透圧勾配"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "根毛細胞の浸透圧が高く、水は低濃度側から高濃度側へ移動する。",
+    "detailed_explanation": "根毛は表面積を増やし、細胞内の溶質濃度が高いことで浸透圧勾配が生じ、水が根から吸収される。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "根の水分吸収の基本原理を説明できる",
+    "common_misconception": "根が水を押し出す力で吸い上げると考える",
+    "distractor_rationales": [
+      "不正解。光合成は水吸収の直接要因ではない。",
+      "不正解。径成長と水分吸収は別の過程。",
+      "不正解。蒸発散は主に葉で起こる。",
+      "正解。浸透圧勾配により水が根に入る。"
+    ],
+    "basic_terms": "浸透圧：溶質濃度差による水の移動圧、根毛：根の吸収面積を増やす突起",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "病害虫",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "畜産",
+    "question_text": "異なる系統の良い性質を組み合わせて新品種を作る方法として正しいものはどれか。",
+    "choices": [
+      "品種間交配",
+      "石灰施用",
+      "輪作",
+      "深耕"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "品種間交配は遺伝的な組み合わせにより新しい形質を得る育種法である。",
+    "detailed_explanation": "品種間交配は異なる遺伝背景を持つ系統を交配し、後代から望ましい形質を選抜する基本的な育種手法である。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "交配育種の基本的な考え方を説明できる",
+    "common_misconception": "施肥や耕起が品種改良と同一視される",
+    "distractor_rationales": [
+      "正解。遺伝的組み合わせによる育種法。",
+      "不正解。土壌改良の一手法。",
+      "不正解。作付け順序を変える栽培法。",
+      "不正解。土壌耕起の作業。"
+    ],
+    "basic_terms": "品種間交配：異なる品種・系統を交配すること、育種：望ましい形質をもつ品種を作ること",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "畜産",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "栽培",
+    "question_text": "次のうち植物病害の原因として分類されるものはどれか。",
+    "choices": [
+      "窒素肥料",
+      "真菌類",
+      "石灰石",
+      "硅酸塩"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "真菌類はいもち病など多くの植物病害の病原体である。",
+    "detailed_explanation": "植物病害の原因には真菌類、細菌、ウイルス、線虫などがある。肥料や鉱物は病原体ではない。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "植物病害の原因生物を分類できる",
+    "common_misconception": "肥料欠乏を病原体と混同する",
+    "distractor_rationales": [
+      "不正解。栄養素であり病原体ではない。",
+      "正解。真菌類は代表的な植物病原体である。",
+      "不正解。土壌改良材であり病原体ではない。",
+      "不正解。土壌鉱物であり病原体ではない。"
+    ],
+    "basic_terms": "病原体：病気の原因となる生物、真菌類：カビや酵母などの真核微生物",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "栽培",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "食品",
+    "question_text": "土壌の腐植（フミン物質）が作物生産に与える主な効果として最も適切なものはどれか。",
+    "choices": [
+      "作物根の機械的侵入を阻んで土壌侵食を防ぐ",
+      "土壌中の重金属をすべて不溶化して除去する",
+      "土壌の保水性・保肥性・団粒構造の形成を促進する",
+      "土壌pHを強酸性（pH 3〜4）に固定して病原菌を抑制する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "腐植は保水性・保肥性の向上と土壌団粒形成を促し、作物生産の基盤となります。",
+    "detailed_explanation": "腐植（フミン物質）は動植物遺体が微生物により分解・重合した比較的安定な高分子有機物です。土壌に多くの利点をもたらします：①高い陽イオン交換容量（CEC）により保肥性向上、②多孔質構造により保水性と通気性の両立、③粘土粒子と結合して安定した土壌団粒を形成し耕作性向上、④微生物の活動基質として土壌生物多様性を支える。腐植はpHを緩衝的に調整しますが強酸性に固定するわけではなく、重金属を「全て」除去する効果もありません。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "土壌腐植の性質（高CEC・保水性・団粒形成）と作物生産への効果を説明できる",
+    "common_misconception": "腐植が土壌を強酸性にすると誤解する（弱酸性のバッファー機能を混同）",
+    "distractor_rationales": [
+      "不正解。腐植は団粒構造を形成しますが、根の侵入を阻むためではなく通気・保水のためです。",
+      "不正解。腐植は一部の重金属キレート能を持ちますが「すべての重金属を除去」することはできません。",
+      "正解。腐植は保水性・保肥性（高CEC）・土壌団粒形成への貢献が主な効果です。",
+      "不正解。腐植は緩衝能を持ちpHを安定させますが、pH 3〜4の強酸性に固定することはありません。"
+    ],
+    "basic_terms": "腐植（humus）：有機物の安定化した最終産物。フルボ酸・フミン酸・フミン：フミン物質の分画。団粒構造：土粒子が集合した多孔質の構造体で通気性・排水性・保水性を両立。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "食品",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "林学",
+    "question_text": "牛乳を加熱殺菌する主な目的として正しいものはどれか。",
+    "choices": [
+      "乳糖の含量を増やす",
+      "酸度を上げて保存性を下げる",
+      "脂肪球を大きくする",
+      "病原菌や腐敗菌を減少・死滅させる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "加熱殺菌は微生物を減らし飲用の安全性を高める。",
+    "detailed_explanation": "パスチャー法などの加熱処理は病原菌（サルモネラ等）や腐敗菌を死滅・抑制し、乳糖含量や酸度は基本的に変えない。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "乳製品加熱殺菌の目的を説明できる",
+    "common_misconception": "殺菌が成分を増やす処理だと考える",
+    "distractor_rationales": [
+      "不正解。乳糖含量は殺菌で増えない。",
+      "不正解。酸度上昇は腐敗の兆候。",
+      "不正解。均質化で脂肪球サイズは変わるが殺菌の目的ではない。",
+      "正解。微生物抑制が主目的。"
+    ],
+    "basic_terms": "加熱殺菌：熱で微生物を死滅させる処理、パスチャー法：低温長時間加熱殺菌",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "林学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "水産",
+    "question_text": "人工林を健全に維持する林業作業として適切なものはどれか。",
+    "choices": [
+      "計画的な間伐を行う",
+      "下層植栽を行わず裸地を維持する",
+      "樹種を単一化して更新を待たない",
+      "全林を一度に皆伐するのみ行う"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "間伐は残存木の生育を促進し林分を健全化する。",
+    "detailed_explanation": "適切な間伐は日照・養分競争を緩和し、長期的な木材生産と林床保全に寄与する。皆伐のみや裸地化は土壌流出のリスクがある。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "間伐の目的を説明できる",
+    "common_misconception": "森林管理は伐採のみで足りると考える",
+    "distractor_rationales": [
+      "正解。間伐は人工林管理の基本作業。",
+      "不正解。裸地化は土壌流出を招く。",
+      "不正解。更新を考慮しない管理は持続不可能。",
+      "不正解。皆伐のみでは林分維持にならない。"
+    ],
+    "basic_terms": "間伐：林内の一部の木を伐採して残存木の生育を促す作業、皆伐：林分全体を伐採すること",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "水産",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "植物栄養",
+    "question_text": "次のうち主に淡水で生息する魚類はどれか。",
+    "choices": [
+      "マグロ",
+      "イワナ",
+      "サバ",
+      "カツオ"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "イワナは河川・湖沼などの淡水魚である。",
+    "detailed_explanation": "マグロ・サバ・カツオは海水魚。イワナ（サルモノイド類）は清流など淡水環境に生息する。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "淡水魚と海水魚を区別できる",
+    "common_misconception": "すべての食用魚が海水魚だと考える",
+    "distractor_rationales": [
+      "不正解。外洋の海水魚。",
+      "正解。淡水環境に生息する魚類。",
+      "不正解。沿岸の海水魚。",
+      "不正解。外洋の海水魚。"
+    ],
+    "basic_terms": "淡水魚：河川・湖沼などに生息する魚、海水魚：海に生息する魚",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "植物栄養",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "作物",
+    "question_text": "葉が黄化（クロロシス）する典型的な栄養欠乏の原因はどれか。",
+    "choices": [
+      "カルシウム過剰",
+      "酸素の過剰供給",
+      "窒素不足",
+      "窒素過剰"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "窒素は葉緑素合成に不可欠で、欠乏すると黄化が生じる。",
+    "detailed_explanation": "窒素欠乏は老葉から黄化し生育が抑制される。窒素過剰は徒長を招くが典型症状は黄化ではない。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "窒素欠乏の視覚的症状を識別できる",
+    "common_misconception": "黄化は常に病気が原因だと考える",
+    "distractor_rationales": [
+      "不正解。カルシウム過剰は典型症状ではない。",
+      "不正解。酸素過剰は栄養欠乏症状ではない。",
+      "正解。窒素欠乏の典型症状。",
+      "不正解。過剰は徒長など別症状。"
+    ],
+    "basic_terms": "クロロシス：葉の黄化、窒素：葉緑素合成に必要な大量要素",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "作物",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "土壌",
+    "question_text": "イネ科に属する作物はどれか。",
+    "choices": [
+      "ジャガイモ",
+      "キャベツ",
+      "ダイズ",
+      "イネ"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "イネはイネ科（Poaceae）の穀物である。",
+    "detailed_explanation": "ダイズはマメ科、ジャガイモはナス科、キャベツはアブラナ科。イネ・コムギ・トウモロコシなどはイネ科に属する。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "主要作物の科分類を説明できる",
+    "common_misconception": "穀物と豆類の科分類を混同する",
+    "distractor_rationales": [
+      "不正解。ナス科のいも類。",
+      "不正解。アブラナ科の野菜。",
+      "不正解。マメ科の豆類。",
+      "正解。イネ科の穀物。"
+    ],
+    "basic_terms": "イネ科：イネ・コムギなど穀物を含む植物科、科：植物分類の基本単位",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "土壌",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "育種",
+    "question_text": "農業協同組合（農協・JA）の基本的な組織原則として正しいものはどれか。",
+    "choices": [
+      "組合員1人1票の平等な議決権による民主的管理",
+      "政府機関が中央集権的に統制する国営組織",
+      "大規模農業法人のみが加入できる選抜型組合",
+      "出資額に比例した議決権を持つ株式会社方式"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "農協は組合員1人1票の民主的管理を基本原則とし、出資額に関係なく平等な議決権を持ちます。",
+    "detailed_explanation": "農業協同組合（農協・JA）は国際協同組合同盟（ICA）の協同組合原則に基づき、「民主的な組合員管理」として組合員1人1票の平等な議決権を採用しています。これは出資額に比例した議決権を持つ株式会社制度と大きく異なる点です。農協は農業者が自主的に組織する非営利協同組合であり、農産物の集出荷・販売、生産資材の共同購買、金融・共済サービス、営農指導などを提供します。政府統制機関でも大企業向け組織でもなく、農業者の協同自助組織です。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "農業協同組合の組織原則（1人1票・民主的管理）と株式会社との違いを説明できる",
+    "common_misconception": "農協が出資額に比例した議決権を持つ株式会社型組織と誤解する",
+    "distractor_rationales": [
+      "正解。組合員1人1票の民主的管理が農協・協同組合の基本原則です。",
+      "不正解。農協は農業者の自主的協同組合であり、政府の中央集権的統制機関ではありません。",
+      "不正解。農協は原則として農業者（個人・法人）であれば加入できる開放的組織です。",
+      "不正解。出資額比例の議決権は株式会社の原則であり、農協は1人1票制です。"
+    ],
+    "basic_terms": "農業協同組合（JA）：農業者が組合員となる協同組合。ICA原則：国際協同組合同盟が定める7原則（開放的加入・民主的管理・組合員経済参加・自治・教育・協同組合間協同・地域社会への関与）。",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "育種",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "病害虫",
+    "question_text": "優良個体を選抜し自家受精を繰り返して系統を固定する育種法はどれか。",
+    "choices": [
+      "種子凍結保存法",
+      "系統選択法",
+      "大量交配法",
+      "放射線誘変のみ"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "系統選択法は優良個体の選抜と自家受精の反復で系統を固定する。",
+    "detailed_explanation": "系統選択法は自然変異や交配後代から優良株を選び、自家受精を繰り返して遺伝的均一性を高める古典的育種法である。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "系統選択法の手順を説明できる",
+    "common_misconception": "育種は交配だけで完結すると考える",
+    "distractor_rationales": [
+      "不正解。保存技術であり育種法ではない。",
+      "正解。選抜と自家受精反復による固定法。",
+      "不正解。交配法の一種だが固定手順を含まない。",
+      "不正解。誘変は別の育種手段。"
+    ],
+    "basic_terms": "系統選択法：優良個体選抜と自家受精反復による育種、自家受精：同一個体内の花粉で受精",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "病害虫",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "畜産",
+    "question_text": "イネいもち病の病原体として正しいものはどれか。",
+    "choices": [
+      "線虫",
+      "細菌",
+      "真菌類",
+      "ウイルス"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "イネいもち病は真菌類 Magnaporthe oryzae による病害である。",
+    "detailed_explanation": "いもち病菌は子嚢菌類の真菌で、葉・穂などに病斑を形成する。細菌性病害やウイルス病とは病原体が異なる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "主要病害の病原体を分類できる",
+    "common_misconception": "すべての植物病を細菌病と考える",
+    "distractor_rationales": [
+      "不正解。線虫病害ではない。",
+      "不正解。いもち病は真菌病。",
+      "正解。Magnaporthe oryzae が病原体。",
+      "不正解。ウイルス病ではない。"
+    ],
+    "basic_terms": "いもち病：イネの代表的真菌病害、病原体：病気の原因生物",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "畜産",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "栽培",
+    "question_text": "反芻動物のルーメン発酵に関する記述として正しいものはどれか。",
+    "choices": [
+      "ルーメンではタンパク質を分解できない",
+      "ルーメンは宿主の胃液のみで消化する",
+      "反芻動物はルーメンを持たない",
+      "ルーメン内の微生物が繊維素を分解できる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ルーメン微生物は繊維素分解や発酵を担う。",
+    "detailed_explanation": "ルーメンは共生微生物により繊維素・タンパク質を分解し、揮発性脂肪酸や微生物タンパクを宿主が利用する。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ルーメン発酵の役割を説明できる",
+    "common_misconception": "反芻動物の消化は胃液のみで行われると考える",
+    "distractor_rationales": [
+      "不正解。タンパク質も分解される。",
+      "不正解。微生物発酵が中心。",
+      "不正解。反芻動物はルーメンを持つ。",
+      "正解。ルーメン微生物の主要機能。"
+    ],
+    "basic_terms": "ルーメン発酵：反芻動物第一胃での微生物発酵、繊維素：植物細胞壁の主要成分",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "栽培",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "食品",
+    "question_text": "「光補償点」の定義として正しいものはどれか。",
+    "choices": [
+      "光合成速度と呼吸速度が等しくなる光強度",
+      "光合成が飽和する光強度",
+      "種子発芽に必要な最低温度",
+      "追肥の最適時期"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "光補償点では光合成と呼吸が釣り合い正味同化量がゼロになる。",
+    "detailed_explanation": "光補償点以下では呼吸が光合成を上回り炭素収支がマイナスになる。光飽和点や発芽温度とは別の概念である。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "光補償点の定義を説明できる",
+    "common_misconception": "光補償点と光飽和点を混同する",
+    "distractor_rationales": [
+      "正解。光補償点の定義。",
+      "不正解。光飽和点の説明。",
+      "不正解。発芽温度の説明。",
+      "不正解。施肥管理の用語。"
+    ],
+    "basic_terms": "光補償点：正味光合成がゼロになる光強度、光飽和点：光合成が飽和する光強度",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "食品",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "林学",
+    "question_text": "パン生地が発酵して体積が増える主な理由はどれか。",
+    "choices": [
+      "卵白が液体のまま残る",
+      "酵母が二酸化炭素を発生する",
+      "小麦粉の脂肪が蒸発する",
+      "塩分が体積を増す"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "酵母の酒精発酵・呼吸によりCO₂が発生し気泡を形成する。",
+    "detailed_explanation": "酵母は糖を発酵してCO₂とエタノールを生成する。発生したガスがグルテン膜内に留まり生地が膨らむ。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "パン発酵の化学的原理を説明できる",
+    "common_misconception": "膨らみを脂肪蒸発や塩分で説明する",
+    "distractor_rationales": [
+      "不正解。卵白は焼成で凝固する。",
+      "正解。酵母発酵によるガス発生。",
+      "不正解。脂肪蒸発は膨張の主因ではない。",
+      "不正解。塩分は発酵を抑制する方向に働く。"
+    ],
+    "basic_terms": "酵母：パン発酵に用いる微生物、酒精発酵：糖からCO₂とエタノールを生成する反応",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "林学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "水産",
+    "question_text": "反芻動物（牛・羊など）がセルロースを消化・利用できる主な理由はどれか。",
+    "choices": [
+      "肝臓でセルロースを単糖に変換する専用酵素を合成するから",
+      "胃が1室構造で大量のセルロース分解酵素を自ら分泌するから",
+      "第一胃（ルーメン）内の微生物がセルロースを発酵・分解するから",
+      "小腸粘膜がセルロースを直接吸収できる特殊な輸送体を持つから"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "第一胃（ルーメン）内に生息する細菌・原生動物がセルロースを分解します。",
+    "detailed_explanation": "反芻動物は4室の胃（第一胃・第二胃・第三胃・第四胃）を持ちます。第一胃（ルーメン）には多種多様な細菌・メタン菌・原生動物・真菌が生息し、セルロースやヘミセルロースを発酵・分解して揮発性脂肪酸（VFA：酢酸・プロピオン酸・酪酸）を産生します。宿主動物はこのVFAをエネルギー源として吸収します。哺乳動物自身はセルロース分解酵素（セルラーゼ）をほとんど分泌しないため、共生微生物によるルーメン発酵が不可欠です。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "反芻動物のルーメン発酵の仕組みと共生微生物の役割を説明できる",
+    "common_misconception": "反芻動物自身がセルラーゼを分泌すると誤解する",
+    "distractor_rationales": [
+      "不正解。肝臓にセルロース分解専用酵素は存在しません。",
+      "不正解。反芻動物の胃は4室構造であり、セルロース分解酵素を自ら大量分泌することはありません。",
+      "正解。ルーメン内共生微生物のセルロース発酵が反芻動物のセルロース消化の主体です。",
+      "不正解。哺乳動物の小腸粘膜はセルロースを直接吸収する輸送体を持ちません。"
+    ],
+    "basic_terms": "ルーメン（rumen）：反芻動物の第一胃。揮発性脂肪酸（VFA）：ルーメン発酵の主産物で酢酸・プロピオン酸・酪酸など。セルラーゼ：セルロースを加水分解する酵素（主に微生物が産生）。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "水産",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "植物栄養",
+    "question_text": "水田土壌に特徴的な「グライ層」に関する記述として最も適切なものはどれか。",
+    "choices": [
+      "グライ層は塩類が集積した白色の硬盤層（パン）である",
+      "グライ層は酸化的環境にある赤褐色の鉄酸化物富化層である",
+      "グライ層は有機物が過剰蓄積した黒色の腐植層である",
+      "グライ層は還元的環境にあり鉄・マンガンが溶出した青灰色〜緑灰色の土層である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "グライ層は嫌気的な還元環境でFe²⁺・Mn²⁺が蓄積し、青灰色〜緑灰色を呈します。",
+    "detailed_explanation": "水田や湿地土壌では湛水によって酸素が消費され嫌気的な還元状態（グライ化）が進みます。グライ化した土壌では鉄が三価（Fe³⁺：赤褐色）から二価（Fe²⁺：青灰・緑灰色）に還元され、マンガンも溶出します。この青灰〜緑灰色の土層をグライ層（glei horizon, Bg）と呼び、酸化還元電位（Eh）が著しく低下した環境の指標となります。水田作では作土直下に人工的な「すき床層（耕盤）」が形成されることもありますが、グライ層は還元による色調変化が特徴であり、塩類集積や腐植蓄積とは区別されます。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "グライ化の原因（嫌気的還元環境）とグライ層の色調（青灰色〜緑灰色）・化学的特徴を説明できる",
+    "common_misconception": "グライ層を赤褐色の酸化的土層と逆に覚えてしまう",
+    "distractor_rationales": [
+      "不正解。白色の塩類集積層（白色盤・石灰盤）は乾燥地土壌に見られ、グライ層とは別物です。",
+      "不正解。赤褐色の土層は鉄が酸化型（Fe³⁺）の酸化的環境であり、グライ層とは逆の状態です。",
+      "不正解。黒色の腐植層は有機物蓄積による暗色系A層であり、グライ化とは異なる現象です。",
+      "正解。グライ層は嫌気的還元環境でFe²⁺が蓄積した青灰色〜緑灰色の土層です。"
+    ],
+    "basic_terms": "グライ化（gleization）：嫌気的還元条件下で鉄・マンガンが還元される土壌変化。グライ層（Bg horizon）：還元的青灰〜緑灰色を呈する土層。Eh（酸化還元電位）：土壌の酸化還元状態を示す指標。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "植物栄養",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "作物",
+    "question_text": "養殖魚の配合飼料に用いられる主なタンパク源として適切なものはどれか。",
+    "choices": [
+      "魚粉",
+      "石灰石",
+      "石英砂",
+      "石膏"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "魚粉は高タンパクで必須アミノ酸バランスに優れた飼料原料である。",
+    "detailed_explanation": "養殖飼料では魚粉・大豆粕などがタンパク源として用いられる。石灰石・石膏はミネラル源だが主タンパク源ではない。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "養殖飼料の主要原料を分類できる",
+    "common_misconception": "鉱物資材をタンパク源と混同する",
+    "distractor_rationales": [
+      "正解。高タンパク飼料原料。",
+      "不正解。カルシウム源だがタンパク源ではない。",
+      "不正解。鉱物でありタンパク源ではない。",
+      "不正解。硫酸カルシウムでありタンパク源ではない。"
+    ],
+    "basic_terms": "魚粉：魚を乾燥粉砕した高タンパク飼料原料、配合飼料：複数原料を配合した飼料",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "作物",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "土壌",
+    "question_text": "リン欠乏の典型的な症状として正しいものはどれか。",
+    "choices": [
+      "老葉から黄化する",
+      "若葉の生育が抑制され暗緑色を保つ",
+      "根が腐敗する",
+      "花が早期に開花する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "リンは移動性が低く、若葉で欠乏症状が現れやすい。",
+    "detailed_explanation": "リン欠乏は若葉の成長抑制・暗緑化・紫色化などを示す。窒素欠乏は老葉から黄化するのが典型である。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "大量要素欠乏症状の違いを識別できる",
+    "common_misconception": "すべての栄養欠乏が老葉黄化だと考える",
+    "distractor_rationales": [
+      "不正解。窒素欠乏の典型症状。",
+      "正解。リン欠乏の典型症状。",
+      "不正解。根腐敗は別要因。",
+      "不正解。早期開花はリン欠乏症状ではない。"
+    ],
+    "basic_terms": "リン：核酸・ATP合成に必要な大量要素、移動性：植物体内での元素の再分配しやすさ",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "土壌",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "育種",
+    "question_text": "C3植物の光合成経路の特徴として正しいものはどれか。",
+    "choices": [
+      "光合成に光が不要である",
+      "根で光合成を行う",
+      "最初に固定される炭素化合物が3炭素酸である",
+      "最初に4炭素酸を形成する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "C3植物はRubiscoでRuBPにCO₂を固定し3-PGAを生成する。",
+    "detailed_explanation": "C3経路はカルビン回路で最初の安定生成物が3-リン酸グリセル酸（3炭素）である。C4・CAM植物は別経路を持つ。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "C3光合成経路の特徴を説明できる",
+    "common_misconception": "C3とC4の違いを混同する",
+    "distractor_rationales": [
+      "不正解。光合成には光エネルギーが必要。",
+      "不正解。光合成は主に葉で行われる。",
+      "正解。C3経路の定義的特徴。",
+      "不正解。C4植物の特徴。"
+    ],
+    "basic_terms": "C3植物：カルビン回路で3炭素化合物を最初に生成する植物、Rubisco：CO₂固定酵素",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "育種",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "病害虫",
+    "question_text": "土壌の保水力に最も寄与する粒径区分はどれか。",
+    "choices": [
+      "石英単結晶",
+      "礫",
+      "砂",
+      "粘土"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "粘土は粒径が細かく毛管空隙が多く保水力が高い。",
+    "detailed_explanation": "粘土粒子は比表面積が大きく毛管水を保持しやすい。砂・礫は排水性が高く保水力は相対的に低い。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "土壌粒径と物理性の関係を説明できる",
+    "common_misconception": "砂壌が最も保水力が高いと考える",
+    "distractor_rationales": [
+      "不正解。鉱物の結晶形態ではなく粒径区分の問題。",
+      "不正解。礫は空隙が大きく排水性が高い。",
+      "不正解。砂も排水性が高い。",
+      "正解。粘土は保水力に優れる。"
+    ],
+    "basic_terms": "粘土：粒径0.002mm未満の土壌粒子、保水力：土壌が水分を保持する能力",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "病害虫",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "畜産",
+    "question_text": "乾燥地農業において過剰灌漑を長期間続けた場合に生じやすい土壌劣化現象として最も適切なものはどれか。",
+    "choices": [
+      "塩類集積（二次塩類化）",
+      "土壌の急激な酸性化（pH 3以下）",
+      "アレロパシー物質の蓄積による他感作用",
+      "土壌有機物の急増による還元化"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "乾燥地での過剰灌漑は毛管上昇による塩類集積（二次塩類化）を引き起こします。",
+    "detailed_explanation": "乾燥・半乾燥地域では土壌水分の蒸発量が多く、灌漑水とともに供給された塩類が毛管上昇現象により地表面付近に集積します。これを二次塩類化といい、世界の灌漑農地の約20〜30%が影響を受けているとされます。塩類集積した土壌では浸透圧が上昇して作物根の水吸収が妨げられ、収量が著しく低下します。土壌酸性化は硫黄酸化や酸性雨などによって生じる別の現象です。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "乾燥地における過剰灌漑が引き起こす土壌塩類化のメカニズムを説明できる",
+    "common_misconception": "灌漑水が多いほど土壌中の塩分が薄まると誤解する",
+    "distractor_rationales": [
+      "正解。毛管上昇による塩類集積（二次塩類化）が乾燥地過剰灌漑の典型的な土壌劣化です。",
+      "不正解。過剰灌漑単独で土壌pHが急激に3以下になることは通常ありません。",
+      "不正解。アレロパシーは植物が分泌する化学物質による他感作用であり、灌漑とは直接関係しません。",
+      "不正解。乾燥地の過剰灌漑は還元化より塩類集積の問題が支配的です。"
+    ],
+    "basic_terms": "塩類集積（salt accumulation）：塩類が土壌表層に濃縮する現象。毛管上昇：土壌中で水分が細孔を通じて上方に移動する現象。浸透圧障害：高塩濃度による植物根の水吸収阻害。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "畜産",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "栽培",
+    "question_text": "点滴灌漑（ドリップ灌漑）が乾燥地農業や施設栽培で広く採用される主な理由として最も適切なものはどれか。",
+    "choices": [
+      "地下水位を積極的に上昇させて根圏に水分を供給するから",
+      "作物根圏への精密な少量水供給により水利用効率を著しく高めるから",
+      "設備コストが低く初期投資なしに導入できるから",
+      "圃場全体に均一な雨のように散水することで蒸発散を増やして冷却効果があるから"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "点滴灌漑は根圏への局所的な少量給水で蒸発ロスを大幅に削減し、水利用効率を高めます。",
+    "detailed_explanation": "点滴灌漑（drip irrigation / trickle irrigation）は、地表面または地中に設置したエミッター（点滴頭）から根圏に直接少量の水を継続供給するシステムです。主な利点として①蒸発・流出ロスが少なく水利用効率（WUE）が著しく向上（スプリンクラーの2〜3倍）、②根圏以外の土壌を湿らせないため雑草発生が抑制、③水溶性肥料をかん水同時施肥（fertigation）できる、④塩類集積土壌でも適切な土壌水分管理が可能、などがあります。一方で初期設備コストは高く、エミッターの目詰まり防止が課題です。地下水位を上昇させるシステムではなく、むしろ地表水を節約する技術です。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "点滴灌漑の原理・利点（高水利用効率・根圏限定給水）と適用場面を説明できる",
+    "common_misconception": "設備が簡単で安価と誤解する（実際は初期コストが高い）",
+    "distractor_rationales": [
+      "不正解。点滴灌漑は地下水位上昇ではなく根圏への直接供水による節水技術です。地下水位上昇は塩類集積のリスクを高めることがあります。",
+      "正解。根圏への精密な少量水供給による水利用効率の向上が点滴灌漑普及の主因です。",
+      "不正解。点滴灌漑システムはエミッター・配管・フィルター等の初期設備コストが高い技術です。",
+      "不正解。スプリンクラーと異なり点滴灌漑は根圏への局所給水であり、冷却散水効果を目的としていません。"
+    ],
+    "basic_terms": "点滴灌漑（drip irrigation）：エミッターから根圏に直接少量の水を供給する灌漑方式。水利用効率（WUE）：消費水量に対する作物生産量の比率。Fertigation（肥水灌漑）：灌漑水に肥料を溶かして同時施用する技術。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "栽培",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "食品",
+    "question_text": "乳牛の泌乳に関する記述として正しいものはどれか。",
+    "choices": [
+      "飼料を与えなくても泌乳量は増加する",
+      "泌乳量は飼養管理と無関係である",
+      "分娩後に泌乳が開始する",
+      "雄牛でも常に大量の乳汁を分泌する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "分娩によりプロラクチン等のホルモン変化で泌乳が始まる。",
+    "detailed_explanation": "泌乳は分娩を契機に始まり、飼料・給水・搾乳頻度などの管理が泌乳量・乳成分に大きく影響する。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "泌乳の開始と管理要因を説明できる",
+    "common_misconception": "泌乳は飼料と無関係だと考える",
+    "distractor_rationales": [
+      "不正解。栄養不足で泌乳は低下する。",
+      "不正解。飼養管理は泌乳に大きく影響する。",
+      "正解。分娩が泌乳開始の契機。",
+      "不正解。泌乳は雌の分娩後に起こる。"
+    ],
+    "basic_terms": "泌乳：分娩後に乳汁を分泌すること、プロラクチン：泌乳促進ホルモン",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "食品",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "林学",
+    "question_text": "「積算温度（ゼロ成長温度を基準とする）」の定義として正しいものはどれか。",
+    "choices": [
+      "降水量の累積値",
+      "日照時間の累積値",
+      "日最高気温の単純平均",
+      "基準温度以上の日平均気温の累積値"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "積算温度は生育下限温度を超えた日平均気温を日々足し合わせた値である。",
+    "detailed_explanation": "積算温度 = Σ(日平均気温 − 基準温度) で、生育ステージの進行予測に用いられる。降水量や日照とは別指標である。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "積算温度の定義と用途を説明できる",
+    "common_misconception": "積算温度を降水量や日照時間と混同する",
+    "distractor_rationales": [
+      "不正解。降水量の指標。",
+      "不正解。日照時間の指標。",
+      "不正解。最高気温平均は積算温度ではない。",
+      "正解。基準温度超の日平均気温累積。"
+    ],
+    "basic_terms": "積算温度：生育基準温度を超えた気温の累積、ゼロ成長温度：生育が停止する下限温度",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "林学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "水産",
+    "question_text": "C4植物が高温・強光条件下で光合成効率が高い主な理由はどれか。",
+    "choices": [
+      "光呼吸を抑制しCO₂固定効率を高める",
+      "光合成に水を必要としない",
+      "夜間のみCO₂を固定する",
+      "葉緑体を持たない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "C4経路はCO₂を濃縮しRubisco周辺の光呼吸を抑制する。",
+    "detailed_explanation": "C4植物はメソフィルとバッスルシースでCO₂を濃縮する。CAM植物は夜間固定。C4植物も水と葉緑体を必要とする。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "C3・C4・CAM植物の光合成経路の違いを説明できる",
+    "common_misconception": "C4植物が光合成に葉緑体を使わないと誤解する",
+    "distractor_rationales": [
+      "正解。CO₂濃縮による光呼吸抑制。",
+      "不正解。光合成には水が必要。",
+      "不正解。CAM植物の特徴。",
+      "不正解。C4植物も葉緑体を持つ。"
+    ],
+    "basic_terms": "C4植物：4炭素酸経路を持つ植物、光呼吸：Rubiscoの酸素化反応によるエネルギー損失",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "水産",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "植物栄養",
+    "question_text": "持続可能な森林経営における間伐の主な目的はどれか。",
+    "choices": [
+      "樹種多様性をゼロにする",
+      "残存木の生育を促進し健全な林分を維持する",
+      "全木を同時に伐採する",
+      "土壌を完全に裸にする"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "間伐は競争緩和により残存木の直径・材質成長を促す。",
+    "detailed_explanation": "適切な間伐は林分密度を調整し、長期的な木材生産と生態系機能を両立させる。皆伐のみや裸地化は持続可能性を損なう。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "間伐の林分管理効果を説明できる",
+    "common_misconception": "森林管理は一度の皆伐で完結すると考える",
+    "distractor_rationales": [
+      "不正解。多様性維持が望ましい。",
+      "正解。間伐の主要目的。",
+      "不正解。皆伐は更新時の作業。",
+      "不正解。裸地化は土壌保全に不利。"
+    ],
+    "basic_terms": "林分：森林の木々の集団、持続可能な森林経営：資源を枯渇させない森林管理",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "植物栄養",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "作物",
+    "question_text": "C3植物であるイネにおいて「光呼吸」が起こる直接の原因となる酵素反応として最も適切なものはどれか。",
+    "choices": [
+      "グルコース-6-リン酸脱水素酵素によるペントースリン酸回路",
+      "ATPシンターゼによる光合成チラコイドでのATP加水分解",
+      "RuBisCOのオキシゲナーゼ反応によるRuBPへのO₂固定",
+      "PEPカルボキシラーゼによるHCO₃⁻からのオキサロ酢酸合成"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "RuBisCOがCO₂の代わりにO₂をRuBPに結合させるオキシゲナーゼ反応が光呼吸の起点です。",
+    "detailed_explanation": "RuBisCO（リブロース1,5-ビスリン酸カルボキシラーゼ/オキシゲナーゼ）はカルボキシラーゼ反応（CO₂固定）とオキシゲナーゼ反応（O₂固定）の両方を触媒します。高温・高O₂/低CO₂条件下でオキシゲナーゼ反応が増加し、RuBPと2-ホスホグリコール酸が生成されます。2-ホスホグリコール酸は光呼吸回路（C₂回路）を経てCO₂として放出されます（炭素損失）。C4植物はCO₂濃縮機構（バンドル鞘へのCO₂濃縮）によりこの光呼吸を抑制しています。PEPカルボキシラーゼはC4植物が利用する一次固定酵素であり、C3植物のイネでは主役ではありません。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "光呼吸の起点となるRuBisCOオキシゲナーゼ反応と、C3・C4植物における光呼吸効率の違いを説明できる",
+    "common_misconception": "光呼吸をミトコンドリアの暗呼吸（TCA回路）と混同する",
+    "distractor_rationales": [
+      "不正解。グルコース-6-リン酸脱水素酵素はペントースリン酸経路の酵素であり光呼吸とは関係しません。",
+      "不正解。ATPシンターゼはATPを合成する（加水分解ではない）酵素であり、光呼吸の原因でもありません。",
+      "正解。RuBisCOのオキシゲナーゼ反応がC3植物の光呼吸を引き起こす直接原因です。",
+      "不正解。PEPカルボキシラーゼはC4植物の一次CO₂固定酵素であり、C3植物の光呼吸原因ではありません。"
+    ],
+    "basic_terms": "RuBisCO：光合成カルビン回路の主要酵素でカルボキシラーゼ・オキシゲナーゼ両活性を持つ。光呼吸：RuBisCOのO₂固定から始まり炭素を放出するC₂回路。2-ホスホグリコール酸：RuBisCOオキシゲナーゼ反応の産物で光呼吸基質。",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "作物",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "土壌",
+    "question_text": "コムギの春型と冬型の違いに関する説明として正しいものはどれか。",
+    "choices": [
+      "冬型は春型より開花が早い",
+      "両型の違いは葉色のみである",
+      "春型は多年生である",
+      "春型は低温春化を必要としない"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "春型コムギは春化不要で春播き、冬型は低温春化を経て秋播きされる。",
+    "detailed_explanation": "冬型はVRN遺伝子により低温春化を必要とし越冬後に開花する。春型は春化を省略でき短期栽培に適する。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "春型・冬型コムギの生育型分類を説明できる",
+    "common_misconception": "春型と冬型の違いを播種時期だけで説明する",
+    "distractor_rationales": [
+      "不正解。冬型は春化を要し開花時期は遅い。",
+      "不正解。遺伝的な春化要求の違いがある。",
+      "不正解。コムギは一年生草本。",
+      "正解。春型の定義的特徴。"
+    ],
+    "basic_terms": "春化：低温により開花が促進される現象、春型：春化不要のコムギ系統",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "土壌",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "育種",
+    "question_text": "土壌の陽イオン交換容量（CEC）が大きいときの効果として最も適切なものはどれか。",
+    "choices": [
+      "肥料成分（K⁺, Ca²⁺, Mg²⁺ 等）の保持力が高まる",
+      "土壌の透水係数が増大する",
+      "土壌pHが酸性になる",
+      "有機物が分解されなくなる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "CECは粘土・有機物の負電荷が陽イオンを吸着保持する能力である。",
+    "detailed_explanation": "CECが高い土壌は陽イオン態肥料を吸着保持しリーキングを抑制する。pH・透水係数は別要因で決まる。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "CECの定義と土壌肥力への意義を説明できる",
+    "common_misconception": "CECと透水係数を同一視する",
+    "distractor_rationales": [
+      "正解。陽イオン保持力の指標。",
+      "不正解。透水係数とは直接関係しない。",
+      "不正解。pHは別の緩衝機構で決まる。",
+      "不正解。有機物分解は微生物活動に依存。"
+    ],
+    "basic_terms": "CEC：陽イオン交換容量、リーキング：養分が水とともに流失すること",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "育種",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "病害虫",
+    "question_text": "マス選抜（集団選抜）の特徴として正しいものはどれか。",
+    "choices": [
+      "放射線誘変で変異を得る",
+      "個体間の優劣を見ず集団全体の性状平均を向上させる",
+      "1個体ずつ精密に交配する",
+      "DNAマーカーで選抜する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "マス選抜は集団全体から収穫・播種し集団平均を漸進的に改良する。",
+    "detailed_explanation": "マス選抜は自己受粉作物で有効な古典的手法。個体選抜や系統選抜と異なり個体識別を厳密に行わない。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "マス選抜の手順と適用条件を説明できる",
+    "common_misconception": "すべての育種が個体レベル選抜だと考える",
+    "distractor_rationales": [
+      "不正解。誘変は別の変異導入法。",
+      "正解。マス選抜の定義。",
+      "不正解。個体選抜の特徴。",
+      "不正解。マーカー選抜は別手法。"
+    ],
+    "basic_terms": "マス選抜：集団全体の性状平均を向上させる選抜法、自己受粉：同一花内で受粉すること",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "病害虫",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "畜産",
+    "question_text": "病害発生の三要素（病原体・環境・宿主）において環境要因の例として正しいものはどれか。",
+    "choices": [
+      "遺伝子型コード",
+      "収穫期の市場価格",
+      "高湿度",
+      "品種名"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "湿度・温度・降雨などの気象条件が病害発生環境を構成する。",
+    "detailed_explanation": "病害三角では環境（気象・栽培条件）、宿主（感病性・生育期）、病原体（毒力・接種源）が相互作用する。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "病害発生の三要素を分類できる",
+    "common_misconception": "病害は病原体のみで決まると考える",
+    "distractor_rationales": [
+      "不正解。宿主の遺伝情報。",
+      "不正解。経済指標であり環境要因ではない。",
+      "正解。気象環境要因の例。",
+      "不正解。宿主の属性だが環境要因ではない。"
+    ],
+    "basic_terms": "病害三角：病原体・環境・宿主の三要素、環境要因：病害発生に影響する外界条件",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "畜産",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "栽培",
+    "question_text": "雑種強勢（ヘテロシス）が最も顕著に発現する交配様式として適切なものはどれか。",
+    "choices": [
+      "ガンマ線照射による突然変異誘発育種",
+      "同一自殖系統内の自家受粉による繰り返し近親交配",
+      "コルヒチン処理による染色体数倍加（同質倍数体育種）",
+      "遺伝的に多様な固定系統間のF1一代雑種育成"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "遺伝的に多様な近交系統間のF1一代雑種（F1ハイブリッド）でヘテロシスが最も顕著に現れます。",
+    "detailed_explanation": "雑種強勢（ヘテロシス）とは、異なる遺伝的背景を持つ親系統を交配したF1が両親より優れた形質（収量・活力・耐病性など）を示す現象です。近交系統（自殖を繰り返した高度ホモ接合体）間のF1では対立遺伝子がヘテロ接合となり、優性補完・超優性・相互作用などのメカニズムによりヘテロシスが最大化されます。コルヒチン処理は倍数体育種、ガンマ線は突然変異育種であり、ヘテロシスとは異なる手法です。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "雑種強勢（ヘテロシス）の発現条件とF1育種への応用を説明できる",
+    "common_misconception": "倍数体化（コルヒチン処理）をヘテロシスの手法と混同する",
+    "distractor_rationales": [
+      "不正解。突然変異育種は変異の誘発を利用するもので、ヘテロシスとは異なる育種戦略です。",
+      "不正解。自家受粉による近親交配はホモ接合度を高め、むしろ近交弱勢（inbreeding depression）を引き起こします。",
+      "不正解。コルヒチン処理による倍数体化は染色体倍加を利用した育種であり、ヘテロシスとは別の現象です。",
+      "正解。遺伝的に異なる近交系統間のF1でヘテロシスが最も顕著に発現します。"
+    ],
+    "basic_terms": "雑種強勢（ヘテロシス）：F1雑種が両親より優れた形質を示す現象。近交系統：自殖を繰り返した高度にホモ接合した系統。F1ハイブリッド：F1一代雑種品種で商業用に広く利用される。",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "栽培",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "食品",
+    "question_text": "作物蒸発散量（ETc）の推定で Penman-Monteith 式が用いる主要な気象変数はどれか。",
+    "choices": [
+      "気温・湿度・風速・日射量",
+      "収穫指数",
+      "種子サイズ",
+      "土壌色"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "Penman-Monteith式はエネルギー収支と空気動力学抵抗からETを推定する。",
+    "detailed_explanation": "FAO Penman-Monteith法は気温、相対湿度、風速、日射（または日照）を用い、作物係数Kcと組み合わせてETcを求める。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "Penman-Monteith式の入力変数を説明できる",
+    "common_misconception": "蒸発散量は気象データなしで推定できると考える",
+    "distractor_rationales": [
+      "正解。PM式の主要気象入力。",
+      "不正解。収穫指数はET推定に不用。",
+      "不正解。種子サイズは無関係。",
+      "不正解。土壌色は直接入力ではない。"
+    ],
+    "basic_terms": "ETc：作物蒸発散量、Penman-Monteith式：蒸発散推定の標準的物理モデル",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "食品",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "林学",
+    "question_text": "ヨーグルト製造で Streptococcus thermophilus と Lactobacillus delbrueckii が関与する主な反応はどれか。",
+    "choices": [
+      "デンプンの糖化",
+      "乳糖の乳酸発酵",
+      "タンパク質の硝酸還元",
+      "脂質の完全酸化"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "両菌は乳糖を乳酸に変換しpH低下・ゲル化をもたらす。",
+    "detailed_explanation": "ヨーグルト発酵は乳酸菌による乳糖乳酸発酵が中心。硝酸還元・脂質完全酸化・デンプン糖化は主反応ではない。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ヨーグルト発酵の微生物学的機構を説明できる",
+    "common_misconception": "ヨーグルト化はタンパク質凝固のみで起こると考える",
+    "distractor_rationales": [
+      "不正解。デンプン糖化は別酵素反応。",
+      "正解。乳酸菌発酵の主反応。",
+      "不正解。硝酸還元は発酵の主反応ではない。",
+      "不正解。脂質完全酸化は好気的分解。"
+    ],
+    "basic_terms": "乳酸発酵：糖から乳酸を生成する発酵、乳酸菌：乳酸を主要代謝産物とする細菌",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "林学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "水産",
+    "question_text": "森林の炭素貯留を増やす林業対策として適切なものはどれか。",
+    "choices": [
+      "全林を草地化する",
+      "化石燃料を燃焼してCO₂を排出する",
+      "長期間立木を維持し適切に更新する",
+      "若木を皆伐して裸地化する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "立木維持と適切な更新は森林炭素プールの維持・増加に寄与する。",
+    "detailed_explanation": "森林は樹木バイオマスと土壌有機炭素に炭素を貯留する。持続的な育林・更新が炭素固定の鍵である。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "森林炭素貯留と林業管理の関係を説明できる",
+    "common_misconception": "伐採は常に炭素放出だと考える",
+    "distractor_rationales": [
+      "不正解。草地化は森林炭素を失う。",
+      "不正解。化石燃料燃焼はCO₂排出を増やす。",
+      "正解。持続的林業による炭素貯留。",
+      "不正解。裸地化は炭素プールを減少させる。"
+    ],
+    "basic_terms": "炭素貯留：大気CO₂を生物量・土壌に固定すること、立木：活着している樹木",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "水産",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "植物栄養",
+    "question_text": "真珠養殖において「核（ビード）」を挿入する主な目的はどれか。",
+    "choices": [
+      "餌として消化される",
+      "寄生虫を増殖させる",
+      "水温を上昇させる",
+      "真珠層形成の起点を与える"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "核は外套膜片とともに挿入され真珠層分泌の起点となる。",
+    "detailed_explanation": "アコヤガイ等では核と外套膜片を挿入し、分泌されたナクレが層を形成して真珠となる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "真珠養殖の基本原理を説明できる",
+    "common_misconception": "真珠は自然にのみ形成されると考える",
+    "distractor_rationales": [
+      "不正解。核は消化されない。",
+      "不正解。寄生虫増殖は目的ではない。",
+      "不正解。水温調節は別管理。",
+      "正解。核は真珠層形成の起点。"
+    ],
+    "basic_terms": "真珠養殖：アコヤガイ等で真珠を生産する養殖、ナクレ：真珠層を形成する分泌物",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "植物栄養",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "作物",
+    "question_text": "土壌の陽イオン交換容量（CEC）を主に決定する土壌成分として最も適切なものはどれか。",
+    "choices": [
+      "粘土鉱物と腐植（有機コロイド）",
+      "粗砂粒子と礫（2 mm以上の粗粒成分）",
+      "土壌全窒素量と有機態リン量",
+      "土壌の容積重（仮比重）と三相分布"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "CECは比表面積の大きい粘土鉱物と腐植（有機コロイド）の負電荷によって主に決まります。",
+    "detailed_explanation": "陽イオン交換容量（CEC）とは、土壌が保持・交換できる陽イオンの量（cmolc/kg）を示す指標です。土壌コロイド（粘土鉱物と腐植）は表面に負電荷を帯びており、Ca²⁺・Mg²⁺・K⁺・NH₄⁺などの陽イオンを静電引力で吸着します。粘土鉱物の中でもモンモリロナイトはカオリナイトよりCECが高く、腐植は粘土よりも単位重量あたりのCECが非常に高い値を示します。粗砂・礫は比表面積が小さく荷電もほとんどないためCECへの寄与は極めて小さいです。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "土壌CECの概念・単位と、それを決定する主要土壌成分（粘土・腐植）を説明できる",
+    "common_misconception": "窒素含量が多いほどCECが高くなると誤解する",
+    "distractor_rationales": [
+      "正解。粘土鉱物と腐植の負電荷が土壌CECの主体を決定します。",
+      "不正解。粗砂・礫は比表面積と表面電荷が小さく、CECへの寄与はほとんどありません。",
+      "不正解。土壌全窒素量はCECの主要決定因子ではありません。",
+      "不正解。容積重・三相分布は土壌の物理的構造を示す指標であり、CEC（電荷量）とは異なります。"
+    ],
+    "basic_terms": "CEC（陽イオン交換容量）：土壌コロイドが保持できる交換性陽イオンの総量。腐植：土壌有機物の安定化した高分子成分（フルボ酸・フミン酸など）。粘土鉱物：2:1型（モンモリロナイトなど）と1:1型（カオリナイトなど）に大別される。",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "作物",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "土壌",
+    "question_text": "数量性状遺伝子座（QTL）解析で LOD スコアが高い染色体領域が示すものはどれか。",
+    "choices": [
+      "収穫機の走行速度",
+      "形質変異と連鎖する染色体領域",
+      "実験誤差のみの領域",
+      "栽培地の緯度"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "高LOD領域はマーカーと形質の連鎖を示しQTL候補となる。",
+    "detailed_explanation": "QTL解析は分子マーカーと表現型の連鎖解析により、数量形質に寄与する遺伝子座候補を同定する。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "QTL解析の基本的な解釈を説明できる",
+    "common_misconception": "LODスコアを環境要因の指標と混同する",
+    "distractor_rationales": [
+      "不正解。機械条件は無関係。",
+      "正解。QTL候補領域の意味。",
+      "不正解。高LODは連鎖を示唆する。",
+      "不正解。地理的要因ではない。"
+    ],
+    "basic_terms": "QTL：数量性状遺伝子座、LODスコア：連鎖の有意性指標",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "土壌",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "育種",
+    "question_text": "土壌有機炭素の長期安定化においてミネラル表面への有機物吸着が重要とされる主な理由はどれか。",
+    "choices": [
+      "石英が結晶化して炭素を放出する",
+      "硝酸態窒素のみが固定される",
+      "微生物分解から保護され有機炭素が蓄積しやすい",
+      "有機物が単純蒸発で失われる"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "粘土・鉄・アルミニウム氧化物への吸着は有機物を微生物アクセスから保護する。",
+    "detailed_explanation": "ミネラル結合有機物（MAOM）は分解が遅く土壌炭素プールの安定化に寄与する。単純蒸発や石英結晶化は無関係。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "土壌有機炭素安定化機構を説明できる",
+    "common_misconception": "土壌炭素は物理的隔離なしに長期安定すると考える",
+    "distractor_rationales": [
+      "不正解。石英結晶化は炭素安定化と無関係。",
+      "不正解。硝酸固定は別の過程。",
+      "正解。ミネラル保護による安定化。",
+      "不正解。有機物は蒸発で失われない。"
+    ],
+    "basic_terms": "MAOM：ミネラル結合有機物、土壌有機炭素：土壌中の有機形態炭素プール",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "育種",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "病害虫",
+    "question_text": "ゲノムワイド選抜（GS）の予測精度を左右する要因として最も重要なものはどれか。",
+    "choices": [
+      "圃場の標高",
+      "収穫月",
+      "種子袋の色",
+      "訓練集の表現型・遺伝子型データの質と量"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "GSは訓練集で構築した予測モデルを未評価系統に適用する。",
+    "detailed_explanation": "訓練集の表現型精度・遺伝子型マーカー密度・集団構造が予測精度を決定する。標高や収穫月だけでは不十分。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "ゲノムワイド選抜の前提条件を説明できる",
+    "common_misconception": "マーカー数だけでGS精度が決まると考える",
+    "distractor_rationales": [
+      "不正解。標高は二次的要因。",
+      "不正解。収穫月は単独では不十分。",
+      "不正解。無関係な要因。",
+      "正解。訓練データの質が精度を左右する。"
+    ],
+    "basic_terms": "ゲノムワイド選抜：全ゲノムマーカーで育種価を予測する手法、訓練集：予測モデル構築用集団",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "病害虫",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "畜産",
+    "question_text": "植物免疫における PAMP-triggered immunity（PTI）と effector-triggered immunity（ETI）の関係として正しいものはどれか。",
+    "choices": [
+      "ETIは病原エフェクター認識によりより特異的・強い応答を引く",
+      "PTIとETIに機能的差はない",
+      "ETIは感受性を増進する",
+      "PTIは動物免疫に存在する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "PTIは一般的な分子パターン認識、ETIは特異的エフェクター認識による強い免疫応答。",
+    "detailed_explanation": "PTIはPRRによるPAMP認識で基礎防御。ETIはR遺伝子によるエフェクター認識でHR等の強い応答を誘導する。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "植物の二層免疫システムを分類できる",
+    "common_misconception": "植物免疫は単一の仕組みのみだと考える",
+    "distractor_rationales": [
+      "正解。ETIの特異性と応答強度。",
+      "不正解。認識分子と応答に差がある。",
+      "不正解。ETIは抵抗性応答を引く。",
+      "不正解。PTIは植物にも存在する。"
+    ],
+    "basic_terms": "PTI：PAMPによる誘導免疫、ETI：エフェクター認識による効果誘導免疫",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "畜産",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "栽培",
+    "question_text": "植物の過敏感反応（HR: Hypersensitive Response）において、病原体エフェクター認識直後に生じる最初期の細胞内シグナルとして最も適切なものはどれか。",
+    "choices": [
+      "エチレン合成増大による感染葉の早期落葉",
+      "細胞質内Ca²⁺濃度の急上昇と活性酸素種（ROS）バースト",
+      "サリチル酸（SA）蓄積による全身獲得抵抗性（SAR）の即時誘導",
+      "カルロース合成酵素の活性化による維管束閉塞"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "HR最初期にはCa²⁺シグナルと活性酸素種（ROS）バーストが数分以内に起こります。",
+    "detailed_explanation": "植物の過敏感反応（HR）は、病原体のエフェクタータンパク質をNLR型免疫受容体（NBS-LRR）が認識することで誘導されます。認識後数分以内に細胞質内Ca²⁺濃度の急上昇と、RBOHDなどのNADPHオキシダーゼによる活性酸素種（O₂⁻・H₂O₂）の急速な産生（オキシダティブバースト）が起こります。これが直接の細胞死シグナルとなります。カルロース沈着・SAR誘導はより下流の反応であり、「最初期」にはあたりません。エチレン産生増大は老化や傷害応答に関わりますがHRの直接トリガーではありません。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "植物HRの最初期シグナル（Ca²⁺シグナル・ROSバースト）とその下流反応（SAR・カルロース）の時系列を説明できる",
+    "common_misconception": "SAR（全身獲得抵抗性）をHRの最初期反応と混同する",
+    "distractor_rationales": [
+      "不正解。エチレン産生の増大はHRの最初期シグナルではなく、老化・傷害応答に関わります。",
+      "正解。Ca²⁺シグナリングとROSバーストがHR最初期の主要な細胞内シグナルです。",
+      "不正解。SAR誘導はサリチル酸蓄積を経た比較的遅い全身性応答であり、最初期反応ではありません。",
+      "不正解。カルロース合成によるカロース沈着はHR最初期よりやや後に起こる二次的防御反応です。"
+    ],
+    "basic_terms": "過敏感反応（HR）：病原体認識後に感染局所細胞が急速に壊死し病原体の伝播を阻止する防御機構。ROSバースト：活性酸素種の急速大量産生。NLR（NBS-LRR）：植物の細胞内病原体認識受容体タンパク質。SAR（全身獲得抵抗性）：感染後に植物全体で誘導される抵抗性。",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "栽培",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "食品",
+    "question_text": "作物光合成モデル（例：Farquhar-von Caemmerer-Berry モデル）で Rubisco 律速と RuBP 再生律速の切替が起こる主な要因はどれか。",
+    "choices": [
+      "収穫後乾燥速度",
+      "肥料袋の材質",
+      "細胞内CO₂分圧と光強度",
+      "種皮の色"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "低CO₂・高光ではRuBP再生律速、高CO₂・低光ではRubisco律速が支配的になる。",
+    "detailed_explanation": "FvCBモデルは光合成速度をRubisco活性とRuBP再生（電子伝達）の最小値として表現し、環境条件で律速段階が切り替わる。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "光合成モデルの律速段階切替を説明できる",
+    "common_misconception": "光合成速度は常にRubiscoのみで律速されると考える",
+    "distractor_rationales": [
+      "不正解。収穫後乾燥は別過程。",
+      "不正解。無関係な要因。",
+      "正解。CO₂分圧と光強度が律速切替を決定。",
+      "不正解。種皮色は光合成モデルと無関係。"
+    ],
+    "basic_terms": "FvCBモデル：C3光合成の標準的生化モデル、RuBP再生：カルビン回路基質の再生過程",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "食品",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "林学",
+    "question_text": "高圧処理（HPP）による食品の微生物死滅機構として主に寄与するものはどれか。",
+    "choices": [
+      "遺伝子複製の促進",
+      "水分活性の上昇のみ",
+      "光合成の抑制",
+      "細胞膜損傷と酵素失活"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "HPPは非熱的に膜構造とタンパク質（酵素）を変性させる。",
+    "detailed_explanation": "高水圧（数百MPa）は細胞膜の相転移・タンパク質変性を引き起こし微生物を死滅させる。加熱と異なる機構である。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "HPP殺菌の物理化学的機構を説明できる",
+    "common_misconception": "HPPは加熱殺菌と同一機構だと考える",
+    "distractor_rationales": [
+      "不正解。殺菌処理で複製は促進されない。",
+      "不正解。水分活性変化は副次的。",
+      "不正解。光合成は植物の過程。",
+      "正解。膜損傷と酵素失活が主機構。"
+    ],
+    "basic_terms": "HPP：高水圧処理による非熱殺菌、水分活性：微生物増殖可能な水分の指標",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "林学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "水産",
+    "question_text": "森林リモートセンシングで LiDAR 点群から得られる構造指標の一例はどれか。",
+    "choices": [
+      "キャノピー高さと体積密度",
+      "土壌CEC",
+      "ルーメンpH",
+      "乳酸発酵速度"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "LiDARは林冠表面の3次元構造を計測しバイオマス推定に用いられる。",
+    "detailed_explanation": "航空・地上LiDARは点群からデジタル表面モデルを構築し、樹高・林冠体積・葉面積指数推定などに応用される。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "LiDARによる森林構造評価を説明できる",
+    "common_misconception": "リモートセンシングは2次元画像のみだと考える",
+    "distractor_rationales": [
+      "正解。LiDARから推定される構造指標。",
+      "不正解。土壌化学指標。",
+      "不正解。反芻動物の消化指標。",
+      "不正解。食品発酵指標。"
+    ],
+    "basic_terms": "LiDAR：レーザー測距による3次元計測、キャノピー：樹冠層",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "水産",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "農学",
+    "subdomain": "植物栄養",
+    "question_text": "閉鎖循環式養殖（RAS）で硝酸態窒素除去に寄与する単位プロセスはどれか。",
+    "choices": [
+      "深耕のみ",
+      "生物ろ過（硝化・脱窒）",
+      "石英粉砕",
+      "葉面散布"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "RASでは生物ろ過池で硝化・脱窒により毒性窒素化合物を除去する。",
+    "detailed_explanation": "アンモニア→亜硝酸→硝酸（硝化）、硝酸→窒素ガス（脱窒）の微生物反応が水質管理の核心である。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "RAS水質管理の単位プロセスを分類できる",
+    "common_misconception": "RASでは水交換のみで水質管理できると考える",
+    "distractor_rationales": [
+      "不正解。土壌耕起は養殖と無関係。",
+      "正解。RASの核心的水質処理。",
+      "不正解。物理処理であり窒素除去ではない。",
+      "不正解。陸上作物の管理。"
+    ],
+    "basic_terms": "RAS：閉鎖循環式養殖、生物ろ過：微生物による水質浄化",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "農学",
+      "植物栄養",
+      "batch50",
+      "L900"
+    ]
   }
 ]

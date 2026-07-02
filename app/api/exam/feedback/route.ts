@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 
 const feedbackSchema = z.object({
@@ -11,6 +12,9 @@ const feedbackSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const limited = await enforceRateLimit("exam-feedback", "exam-answer", rateLimitPolicies.examAnswer, request);
+  if (limited) return limited;
+
   const parsed = feedbackSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "invalid feedback payload" }, { status: 400 });
 

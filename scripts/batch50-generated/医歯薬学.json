@@ -1,177 +1,1802 @@
 [
   {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "医歯薬学",
-      "生理学",
-      "batch50",
-      "L500"
-    ],
     "domain": "医歯薬学",
-    "subdomain": "生理学",
-    "difficulty_initial": 500,
-    "question_text": "骨格筋細胞のアクションポテンシャル伝播に必須な構造はどれか。",
+    "subdomain": "解剖",
+    "question_text": "心臓を構成する4つの腔（房と室）の正しい組み合わせはどれか。",
     "choices": [
-      "T管（横小管）系",
-      "シナプス小胞",
-      "ミトコンドリア",
-      "核小体"
+      "右心房・右心室・左心房・左心室",
+      "右心房・右心室・左心房・中心室",
+      "上心房・下心房・右心室・左心室",
+      "右心房・左心房・大動脈弓・上大静脈"
     ],
     "correct_choice_index": 0,
-    "short_explanation": "T管が興奮を筋原線維内部へ伝え、興奮-収縮連関を成立させる。",
-    "detailed_explanation": "T管は細胞膜の陥入で SR 近傍へ脱分極を伝え Ca²⁺ 放出を誘発。",
-    "learning_objective": "骨格筋の興奮-収縮連関の構造基盤を説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "アクションポテンシャルが細胞膜上だけで完結すると誤解する",
+    "short_explanation": "心臓は右心房・右心室・左心房・左心室の4腔から構成されます。",
+    "detailed_explanation": "心臓は左右それぞれに「房（atrium）」と「室（ventricle）」を持ち、合計4つの腔を形成します。右心房は全身から静脈血を受け取り、右心室が肺へ送り出します。左心房は肺から酸素化血を受け取り、左心室が全身へ駆出します。「中心室」「上下の房」「大血管」は心腔の名称ではありません。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "心臓の4腔の名称と血流の方向を正確に列挙できる",
+    "common_misconception": "大動脈弓や上大静脈を心腔と混同する",
     "distractor_rationales": [
-      "正解。興奮を筋内部へ伝える構造。",
-      "不正解。神経終末の構造。",
-      "不正解。エネルギー代謝 organelle。",
-      "不正解。核内の構造。"
+      "正解。右心房・右心室・左心房・左心室が正しい4腔の組み合わせです。",
+      "不正解。「中心室」は実在しない心腔名称です。",
+      "不正解。心腔は上下ではなく左右に区分されます。「上下心房」は誤った名称です。",
+      "不正解。大動脈弓と上大静脈は心臓に接続する大血管であり、心腔ではありません。"
     ],
-    "basic_terms": "T管：骨格筋の横小管系、興奮-収縮連関：電気興奮が収縮に結びつく機序"
-  },
-  {
+    "basic_terms": "心房（atrium）：静脈血・肺静脈血を受け取る腔。心室（ventricle）：血液を動脈へ駆出する腔。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "医歯薬学",
-      "解剖学",
+      "解剖",
       "batch50",
-      "L600"
-    ],
+      "L100"
+    ]
+  },
+  {
     "domain": "医歯薬学",
-    "subdomain": "解剖学",
-    "difficulty_initial": 600,
-    "question_text": "自律神経系において、交感神経の節前線維が脊髄からどこへ出るかとして正しいのはどれか。",
+    "subdomain": "生理",
+    "question_text": "成人の人体において最も長い骨はどれか。",
     "choices": [
-      "脳幹",
-      "仙髄",
-      "頸髄 C1〜C2",
-      "胸腰髄（T1〜L2/L3）"
+      "腓骨（fibula）",
+      "大腿骨（femur）",
+      "上腕骨（humerus）",
+      "脛骨（tibia）"
     ],
     "correct_choice_index": 1,
-    "short_explanation": "交感神経の節前線維は胸腰髄側角から出る。",
-    "detailed_explanation": "交感神経節前線維は T1〜L2/L3 側角から。副交感は脳神経核・仙髄 S2〜4。",
-    "learning_objective": "交感・副交感神経の中枢起源を区別できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "交感神経が脳幹から直接出ると誤解する",
+    "short_explanation": "大腿骨（太ももの骨）は人体最長の骨で、成人では平均約45 cmです。",
+    "detailed_explanation": "大腿骨（femur）は骨盤（股関節）と脛骨（膝関節）をつなぐ大腿部の骨で、成人では平均約45〜50 cmあり人体最長です。また人体最も丈夫・最大質量の骨でもあります。脛骨（すね骨）は下腿の内側の骨で2番目に長い骨の候補ですが大腿骨より短いです。腓骨（ひこつ）は下腿外側の細い骨です。上腕骨は上腕の骨であり大腿骨よりも短いです。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "人体最長の骨の名称と位置を答えられる",
+    "common_misconception": "脛骨が最長の骨であると誤解する",
     "distractor_rationales": [
-      "不正解。副交感の一部は脳幹。",
-      "不正解。副交感の仙髄部。",
-      "不正解。範囲が狭すぎる。",
-      "正解。交感神経の節前線維の出所。"
+      "不正解。腓骨は下腿外側の細長い骨ですが、大腿骨より短いです。",
+      "正解。大腿骨は人体最長の骨（成人平均約45〜50 cm）です。",
+      "不正解。上腕骨は上腕の骨で、大腿骨より短いです。",
+      "不正解。脛骨は下腿の主要骨ですが、大腿骨より短いです。"
     ],
-    "basic_terms": "交感神経：闘争・逃避反応に関与、節前線維：中枢から神経節へ至る線維"
-  },
-  {
+    "basic_terms": "大腿骨（femur）：大腿部の骨。股関節（大腿骨頭と寛骨臼）と膝関節（大腿骨遠位端と脛骨近位端）を形成。",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "医歯薬学",
-      "薬理学",
+      "生理",
       "batch50",
-      "L700"
-    ],
+      "L100"
+    ]
+  },
+  {
     "domain": "医歯薬学",
-    "subdomain": "薬理学",
-    "difficulty_initial": 700,
-    "question_text": "β遮断薬の主な作用機序として最も適切なものはどれか。",
+    "subdomain": "薬理",
+    "question_text": "人が呼吸を行う主な目的として最も適切なものはどれか。",
     "choices": [
-      "アンジオテンシン変換酵素を阻害する",
-      "ヒスタミン H1 受容体を遮断する",
-      "βアドレナリン受容体を遮断してカテコールアミン作用を抑制する",
-      "アセチルコリンエステラーゼを阻害する"
+      "体温を下げる",
+      "血液中の二酸化炭素だけを増やす",
+      "血液中の酸素を増やし二酸化炭素を減らす",
+      "消化液を分泌する"
     ],
     "correct_choice_index": 2,
-    "short_explanation": "β遮断薬はβ受容体を競合的に遮断し、心拍数・収縮力を低下させる。",
-    "detailed_explanation": "プロプラノロール等はβ1/β2 受容体を遮断。AChE 阻害は抗コリンエステラーゼ、ACE 阻害は降圧、H1 遮断は抗ヒスタミン。",
-    "learning_objective": "主要薬理クラスの作用点を区別できる",
+    "short_explanation": "呼吸は肺でガス交換を行い、酸素を取り込み二酸化炭素を排出する。",
+    "detailed_explanation": "外呼吸により肺胞で O₂ を取り込み CO₂ を排出し、細胞呼吸に必要な酸素供給と代謝産物除去を行う。",
     "cognitive_type": "基本的な適用",
-    "common_misconception": "β遮断薬を ACE 阻害薬と混同する",
+    "learning_objective": "呼吸の生理学的目的を説明できる",
+    "common_misconception": "呼吸は体温調節が主目的だと誤解する",
     "distractor_rationales": [
-      "不正解。ACE 阻害薬の機序。",
-      "不正解。抗アレルギー薬の機序。",
-      "正解。β受容体遮断。",
-      "不正解。コリン作動性薬の機序。"
+      "不正解。体温調節は副次的効果にとどまる。",
+      "不正解。CO₂ を増やすのは呼吸の目的ではない。",
+      "正解。ガス交換による O₂ 取り込みと CO₂ 排出。",
+      "不正解。消化の機能。"
     ],
-    "basic_terms": "β遮断薬：βアドレナリン受容体拮抗薬、カテコールアミン：アドレナリン・ノルアドレナリン"
-  },
-  {
+    "basic_terms": "外呼吸：肺でのガス交換、細胞呼吸：細胞内でのエネルギー産生",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "医歯薬学",
-      "免疫学",
+      "薬理",
       "batch50",
-      "L800"
-    ],
-    "domain": "医歯薬学",
-    "subdomain": "免疫学",
-    "difficulty_initial": 800,
-    "question_text": "補体システムの古典経路（classical pathway）の活性化に直接関与するのはどれか。",
-    "choices": [
-      "Toll様受容体による IL-2 産生",
-      "抗原-抗体複合体による C1 活性化",
-      "マンノース結合レクチンによる C4 活性化",
-      "細菌リポ多糖による C3 直接活性化"
-    ],
-    "correct_choice_index": 3,
-    "short_explanation": "古典経路は IgM/IgG と抗原が結合した複合体が C1 を活性化する。",
-    "detailed_explanation": "古典経路：Ag-Ab → C1 → C4,C2 → C3 変換酵素。レクチン経路はマンノース結合、代替経路は C3 自発水解。",
-    "learning_objective": "補体3経路の開始因子を区別できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "すべての補体経路が抗体から始まると誤解する",
-    "distractor_rationales": [
-      "不正解。獲得免疫のシグナル。",
-      "正解。古典経路の開始。",
-      "不正解。レクチン経路の開始。",
-      "不正解。代替経路の特徴。"
-    ],
-    "basic_terms": "補体：血清タンパク質カスケード、古典経路：抗体依存性補体活性化"
+      "L100"
+    ]
   },
   {
+    "domain": "医歯薬学",
+    "subdomain": "病理",
+    "question_text": "発熱や頭痛の症状緩和に市販で用いられるアセチルサリチル酸（アスピリン）の主な薬効分類はどれか。",
+    "choices": [
+      "降圧薬",
+      "抗生物質",
+      "抗ヒスタミン薬",
+      "解熱鎮痛薬"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "アスピリンは解熱・鎮痛・抗炎症作用を持つ NSAIDs に分類される。",
+    "detailed_explanation": "アスピリンは COX を阻害してプロスタグランジン合成を抑制し、発熱・疼痛・炎症を軽減する。抗生物質は細菌感染治療用。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "身近な医薬品の薬効分類を識別できる",
+    "common_misconception": "解熱鎮痛薬を抗生物質と混同する",
+    "distractor_rationales": [
+      "不正解。血圧を下げる薬。",
+      "不正解。細菌感染治療用。",
+      "不正解。アレルギー症状に用いる。",
+      "正解。解熱鎮痛薬（NSAIDs）。"
+    ],
+    "basic_terms": "NSAIDs：非ステロイド性抗炎症薬、解熱：体温を下げる作用",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "病理",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "免疫",
+    "question_text": "良性腫瘍と悪性腫瘍の違いとして最も適切なものはどれか。",
+    "choices": [
+      "悪性腫瘍は周囲組織へ浸潤し転移しうる",
+      "良性腫瘍は多くの場合遠隔転移する",
+      "良性腫瘍だけが血管を形成する",
+      "悪性腫瘍は多くの場合小さく保たれる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "悪性腫瘍は浸潤・転移能を持ち、良性腫瘍は一般に限局性である。",
+    "detailed_explanation": "悪性腫瘍は無秩序な増殖と浸潤、リンパ節・遠隔転移を示す。良性腫瘍は成長が遅く、被膜で限局化されることが多い。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "良性腫瘍と悪性腫瘍の基本的特徴を区別できる",
+    "common_misconception": "すべての腫瘍が転移すると思う",
+    "distractor_rationales": [
+      "正解。浸潤・転移が悪性腫瘍の特徴。",
+      "不正解。転移は悪性腫瘍の特徴。",
+      "不正解。血管新生は両者に見られる。",
+      "不正解。悪性腫瘍はしばしば増大する。"
+    ],
+    "basic_terms": "浸潤：周囲組織への侵入、転移：遠隔臓器への腫瘍の移動",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "免疫",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生化学",
+    "question_text": "生ワクチン接種に関する説明として正しいのはどれか。",
+    "choices": [
+      "ワクチンは細菌だけに使えない",
+      "病原性を弱めた病原体で免疫を誘導する",
+      "接種直後に必ず本番の感染症と同じ重症度で発症する",
+      "抗体を直接注射して免疫を作る"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "生ワクチンは減毒・弱化した病原体で自然感染に近い免疫応答を誘導する。",
+    "detailed_explanation": "生ワクチンは病原性を弱めた生きた病原体を用いる。抗体直接投与は受動免疫であり、ワクチンはウイルスにも用いられる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ワクチンの基本的な免疫誘導の仕組みを説明できる",
+    "common_misconception": "ワクチン接種が必ず本番の感染症と同じ症状を引き起こすと誤解する",
+    "distractor_rationales": [
+      "不正解。BCG など細菌ワクチンも存在する。",
+      "正解。弱化病原体による能動免疫誘導。",
+      "不正解。重症発症はまれで、免疫獲得が目的。",
+      "不正解。それは受動免疫（免疫グロブリン）。"
+    ],
+    "basic_terms": "生ワクチン：減毒病原体を用いるワクチン、能動免疫：自身の免疫系が抗体・細胞性免疫を産生",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生化学",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "微生物",
+    "question_text": "日本高血圧学会・WHO基準における成人の正常血圧（収縮期/拡張期）として最も適切なものはどれか。",
+    "choices": [
+      "180/110 mmHg",
+      "90/50 mmHg",
+      "120/80 mmHg 未満",
+      "140/90 mmHg"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "成人の正常血圧は収縮期120 mmHg未満かつ拡張期80 mmHg未満です。",
+    "detailed_explanation": "日本高血圧学会（JSH）ガイドラインでは、正常血圧を収縮期血圧120 mmHg未満かつ拡張期血圧80 mmHg未満と定義します。180/110 mmHg以上はⅢ度高血圧（重症）、140/90 mmHg以上はⅠ度高血圧に相当します。90/50 mmHgは低血圧の目安となる値であり、正常血圧ではありません。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "正常血圧・高血圧・低血圧の数値基準を区別できる",
+    "common_misconception": "140/90 mmHgを「ギリギリ正常」と誤解する（これはすでに高血圧Ⅰ度）",
+    "distractor_rationales": [
+      "不正解。180/110 mmHgはⅢ度高血圧（重症高血圧）に相当する値です。",
+      "不正解。90/50 mmHgは低血圧の目安となる値です。",
+      "正解。収縮期120 mmHg未満かつ拡張期80 mmHg未満が成人の正常血圧です。",
+      "不正解。140/90 mmHg以上はⅠ度高血圧と診断される基準値です。"
+    ],
+    "basic_terms": "収縮期血圧（最高血圧）：心収縮時の動脈圧。拡張期血圧（最低血圧）：心拡張時の動脈圧。高血圧：140/90 mmHg以上。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "微生物",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "question_text": "肺サーファクタント（pulmonary surfactant）の主な機能はどれか。",
+    "choices": [
+      "気道の粘液層に混入して異物・細菌を捕捉し、繊毛運動による排除を助ける",
+      "肺血管床の血管抵抗を調節して右心室の後負荷を軽減する",
+      "肺胞でのガス交換を直接促進し、酸素の血液への溶解速度を高める",
+      "肺胞の表面張力を低下させ、呼気時に肺胞が虚脱するのを防ぐ"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "サーファクタントは主にジパルミトイルホスファチジルコリン（DPPC）からなり、肺胞の表面張力を低下させて肺胞の虚脱を防ぎます。",
+    "detailed_explanation": "肺サーファクタントはII型肺胞上皮細胞（TypeII pneumocyte）が産生・分泌するリン脂質（主にジパルミトイルホスファチジルコリン：DPPC）とタンパク質（SP-A〜D）の複合体です。肺胞の気液界面に単層膜を形成し、ラプラスの法則により小さな肺胞ほど圧力が高くなる問題（小肺胞が大肺胞に吸収される）を防ぎます。サーファクタントが不足すると肺胞が虚脱して呼吸不全（新生児呼吸窮迫症候群 NRDS など）が生じます。ガス交換の促進・気道粘液・肺血管抵抗の調節はサーファクタントの主機能ではありません。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "肺サーファクタントの産生細胞・主要成分・機能（表面張力低下による肺胞虚脱防止）を説明できる",
+    "common_misconception": "サーファクタントがガス交換を直接行うと誤解する（ガス交換は拡散によって行われる）",
+    "distractor_rationales": [
+      "不正解。気道粘液による異物捕捉と繊毛による排除は気道の防御機構であり、サーファクタントの機能ではありません。",
+      "不正解。肺血管抵抗の調節は肺血管平滑筋の収縮・弛緩や血管内皮由来のNO・エンドセリンによって行われます。",
+      "不正解。酸素の溶解はヘモグロビンへの結合と物理的溶解によって行われ、サーファクタントはその促進に直接関与しません。",
+      "正解。サーファクタントは気液界面の表面張力を低下させ、呼気時の肺胞虚脱（無気肺）を防ぎます。"
+    ],
+    "basic_terms": "サーファクタント：界面活性物質。DPPC（ジパルミトイルホスファチジルコリン）：サーファクタントの主要リン脂質成分。II型肺胞上皮細胞：サーファクタントを産生・分泌する細胞。NRDS：新生児呼吸窮迫症候群（早産児でサーファクタント不足による）。",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "歯学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬学",
+    "question_text": "グラム染色でグラム陽性菌が青紫色に染まる主な理由はどれか。",
+    "choices": [
+      "厚いペプチドグリカン層がクリスタルバイオレット複合体を保持する",
+      "莢膜が脱色を防ぐ",
+      "外膜のリポ多糖が染料を保持する",
+      "エタノールで外膜が溶解して染料が入る"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "グラム陽性菌の厚いペプチドグリカン層が脱色後も染料を保持する。",
+    "detailed_explanation": "グラム陽性菌は厚いペプチドグリカン層を持ち、エタノール脱色後も CV-ヨウ素複合体を保持する。LPS はグラム陰性菌外膜の成分。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "グラム染色の原理と細胞壁構造の違いを説明できる",
+    "common_misconception": "LPS がグラム陽性菌の染色原因だと誤解する",
+    "distractor_rationales": [
+      "正解。厚いペプチドグリカン層による染料保持。",
+      "不正解。莢膜は主因ではない。",
+      "不正解。LPS はグラム陰性菌の成分。",
+      "不正解。グラム陰性菌の脱色機序の誤り。"
+    ],
+    "basic_terms": "ペプチドグリカン：細菌細胞壁の主要成分、グラム染色：細菌分類の基本染色法",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "分子腫瘍学",
+    "question_text": "う蝕（虫歯）予防の基本として最も適切なものはどれか。",
+    "choices": [
+      "歯ブラシは使わずうがいのみでよい",
+      "糖分摂取後の口腔清掃とフッ化物の利用",
+      "歯磨きは年1回で十分",
+      "甘い飲料は寝る直前に多く飲む"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "プラーク除去とフッ化物によるエナメル質再石灰化がう蝕予防の基本である。",
+    "detailed_explanation": "ミュータンス菌が糖を代謝して酸を産生しう蝕を起こす。定期的な歯磨きとフッ化物により酸産生を抑制し歯質を強化する。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "う蝕の成因と予防法の基本を説明できる",
+    "common_misconception": "うがいだけで十分だと思う",
+    "distractor_rationales": [
+      "不正解。機械的清掃が重要。",
+      "正解。清掃とフッ化物が基本。",
+      "不正解。毎日の口腔ケアが必要。",
+      "不正解。就寝前の糖摂取はリスクを高める。"
+    ],
+    "basic_terms": "う蝕：歯の脱灰による穴の形成、フッ化物：エナメル質を強化するイオン",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "分子腫瘍学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "解剖",
+    "question_text": "錠剤とカプセル剤の違いとして最も適切なものはどれか。",
+    "choices": [
+      "錠剤には有効成分を含められない",
+      "カプセル剤は経口投与に使えない",
+      "カプセル剤は粉末や顆粒をカプセルで包む経口剤形である",
+      "錠剤は必ず注射のみに用いる"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "カプセル剤はカプセル内に粉末・顆粒・液体などを充填した経口剤形である。",
+    "detailed_explanation": "錠剤は粉末を打錠した固形剤、カプセル剤はゼラチン等のカプセルに内容物を封入する。いずれも経口投与に用いられる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "主要な経口固形剤形の特徴を区別できる",
+    "common_misconception": "カプセルは注射用だと誤解する",
+    "distractor_rationales": [
+      "不正解。錠剤にも有効成分を含む。",
+      "不正解。カプセルは経口剤形。",
+      "正解。カプセル剤の定義。",
+      "不正解。錠剤は経口固形剤。"
+    ],
+    "basic_terms": "錠剤：打錠した固形製剤、カプセル剤：カプセルに内容物を封入した製剤",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "解剖",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生理",
+    "question_text": "がんに関する説明として正しいのはどれか。",
+    "choices": [
+      "がんは必ず感染症である",
+      "がんは治療できないと決まっている",
+      "がんは日常の接触で他人にうつる",
+      "がんは遺伝子異常などを背景にした疾患である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "がんは細胞の遺伝子異常などにより起こる疾患であり、接触感染はしない。",
+    "detailed_explanation": "がんは体細胞の遺伝子変異の蓄積などにより発生する。一部はウイルス感染が関与するが、がんそのものは接触感染しない。多くのがんは治療可能。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "がんの基本的性質と誤解を区別できる",
+    "common_misconception": "がんは他人にうつると誤解する",
+    "distractor_rationales": [
+      "不正解。感染症とは限らない。",
+      "不正解。多くのがんで治療・寛解が可能。",
+      "不正解。がんは接触感染しない。",
+      "正解。遺伝子異常を背景とする疾患。"
+    ],
+    "basic_terms": "体細胞遺伝子変異：がん化に関与する DNA 変化、接触感染：直接接触による病原体伝播",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生理",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬理",
+    "question_text": "腎臓の糸球体濾過に関する記述として正しいのはどれか。",
+    "choices": [
+      "健常成人の糸球体濾過率（GFR）は安静時に約100〜125 mL/分である",
+      "正常な原尿には大量のアルブミンが含まれ、近位尿細管で完全に再吸収される",
+      "糸球体毛細血管への血流量（腎血流量）が増加すると、GFRは低下する傾向がある",
+      "糸球体では毛細血管の膠質浸透圧が静水圧を上回るため、濾過は起こらない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "健常成人のGFRは約100〜125 mL/分で、1日に約180 Lの原尿が生成されます。",
+    "detailed_explanation": "GFR（糸球体濾過率）は正常成人で100〜125 mL/分（1日約180 L）です。糸球体濾過はスターリング力（毛細血管静水圧 > ボウマン嚢圧 + 膠質浸透圧差）によって駆動され、正常では静水圧が膠質浸透圧を上回るため濾過が起こります。糸球体濾過膜はアルブミン（分子量67 kDa）や免疫グロブリンなどの大型タンパク質を通しにくいため、正常原尿のタンパク質濃度は血漿より著しく低く（約150 mg/日以下）、病的な大量漏出はありません。腎血流量が増加するとGFRは一般に増大する傾向があります（腎血流量とGFRは正の相関）。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "GFRの正常値と測定意義、糸球体濾過の駆動力（スターリング力）を正確に説明できる",
+    "common_misconception": "GFRを1日量（180 L）と1分量（約120 mL/分）で混同したり、正常でも原尿に大量のタンパク質が含まれると誤解する",
+    "distractor_rationales": [
+      "正解。健常成人のGFRは安静時に約100〜125 mL/分（1日約180 L）です。",
+      "不正解。正常な糸球体濾過膜はアルブミンをほとんど通過させません。尿タンパクが多い場合は糸球体障害を示します。",
+      "不正解。腎血流量とGFRは一般に正の相関があり、腎血流増加はGFR増大につながります。",
+      "不正解。糸球体では静水圧が膠質浸透圧よりも高く、この差がスターリング力として濾過を駆動します。"
+    ],
+    "basic_terms": "GFR（糸球体濾過率）：単位時間に糸球体で濾過される血漿量。慢性腎臓病（CKD）の重症度評価に使用。スターリング力：毛細血管での液体移動を規定する静水圧と膠質浸透圧の差。",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬理",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "病理",
+    "question_text": "花粉症などのアレルギー性鼻炎に用いる抗ヒスタミン薬の主な作用はどれか。",
+    "choices": [
+      "アセチルコリンエステラーゼを阻害する",
+      "ヒスタミン H1 受容体を遮断する",
+      "COX を不可逆的に阻害する",
+      "β受容体を刺激する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "抗ヒスタミン薬は H1 受容体遮断によりくしゃみ・鼻水・瘙痒を軽減する。",
+    "detailed_explanation": "アレルギー反応で肥満細胞から放出されたヒスタミンが H1 受容体を介して症状を惹起する。抗ヒスタミン薬はこれを競合的に遮断する。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "抗ヒスタミン薬の作用機序を説明できる",
+    "common_misconception": "抗ヒスタミン薬を抗生物質と混同する",
+    "distractor_rationales": [
+      "不正解。コリン作動性薬の機序。",
+      "正解。H1 受容体遮断。",
+      "不正解。NSAIDs の機序。",
+      "不正解。β作動薬の機序。"
+    ],
+    "basic_terms": "ヒスタミン：アレルギー性炎症メディエーター、H1 受容体：ヒスタミンの主な受容体",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "病理",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "免疫",
+    "question_text": "ネクローシス（壊死）の特徴として最も適切なものはどれか。",
+    "choices": [
+      "DNA は多くの場合ヌクレオソーム単位で断片化する",
+      "細胞膜が保たれ炎症なく処理される",
+      "細胞膜破裂と炎症反応を伴いうる",
+      "多くの場合生理的なプログラム細胞死である"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "ネクローシスは細胞膜破裂と内容物放出により炎症を惹起しうる。",
+    "detailed_explanation": "ネクローシスは虚血・毒素などによる非プログラム細胞死。アポトーシスは膜保持・炎症なし・DNA ラダー形成が特徴。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "ネクローシスとアポトーシスの形態的特徴を区別できる",
+    "common_misconception": "すべての細胞死がアポトーシスだと思う",
+    "distractor_rationales": [
+      "不正解。アポトーシスの DNA 断片化。",
+      "不正解。アポトーシスの特徴。",
+      "正解。ネクローシスの特徴。",
+      "不正解。病理的細胞死。"
+    ],
+    "basic_terms": "ネクローシス：非プログラム細胞死、アポトーシス：プログラム細胞死",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "免疫",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生化学",
+    "question_text": "抗体と抗生物質の違いとして正しいのはどれか。",
+    "choices": [
+      "抗体は抗生物質と同じ化学構造を持つ",
+      "抗体は細菌を直接殺菌する低分子薬である",
+      "抗生物質はウイルス感染に常に第一選択である",
+      "抗体は免疫グロブリンであり、抗生物質は微生物増殖を抑制する薬である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "抗体は免疫系が産生するタンパク質、抗生物質は微生物治療用の化学薬である。",
+    "detailed_explanation": "抗体（免疫グロブリン）は B 細胞産生のタンパク質で抗原に特異的に結合する。抗生物質は細菌等の増殖を抑制・殺菌する化学物質。ウイルスには基本的に無効。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "抗体と抗生物質の本質的違いを説明できる",
+    "common_misconception": "抗体と抗生物質を同一視する",
+    "distractor_rationales": [
+      "不正解。構造・由来が全く異なる。",
+      "不正解。抗体はタンパク質であり直接殺菌薬ではない。",
+      "不正解。抗生物質はウイルスに無効。",
+      "正解。抗体と抗生物質の定義の違い。"
+    ],
+    "basic_terms": "抗体：抗原に特異的に結合する免疫グロブリン、抗生物質：微生物治療用化学薬",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生化学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "微生物",
+    "question_text": "酵素の定義として最も適切なものはどれか。",
+    "choices": [
+      "生体触媒として特異的に反応を促進するタンパク質（または RNA）",
+      "反応速度を低下させるタンパク質",
+      "DNA を複製する唯一の分子",
+      "細胞膜を構成する脂質"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "酵素は基質を特異的に認識し、反応の活性化エネルギーを下げて反応を促進する。",
+    "detailed_explanation": "酵素はタンパク質性酵素が大多数だが、リボザイムなど RNA 触媒も存在する。反応速度を上げるが、熱力学的には触媒に過ぎない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "酵素の基本的定義と機能を述べられる",
+    "common_misconception": "酵素が反応を遅くすると誤解する",
+    "distractor_rationales": [
+      "正解。生体触媒の定義。",
+      "不正解。酵素は反応を促進する。",
+      "不正解。DNA 複製はポリメラーゼなど複数酵素が関与。",
+      "不正解。脂質は膜構成成分。"
+    ],
+    "basic_terms": "酵素：生体触媒、活性化エネルギー：反応が起こるために必要なエネルギー障壁",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "微生物",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "question_text": "細菌とウイルスの根本的な違いとして最も適切なものはどれか。",
+    "choices": [
+      "ウイルスはグラム染色で分類される",
+      "細菌は細胞構造を持ち自己複製できるが、ウイルスは宿主細胞内で複製する",
+      "ウイルスは独自の代謝系で増殖する",
+      "細菌は必ず抗生物質に無効である"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "細菌は単細胞生物として独立増殖し、ウイルスは宿主細胞の代謝を利用して複製する。",
+    "detailed_explanation": "細菌はリボソーム・代謝系を持つ。ウイルスは核酸とタンパク質コートからなり、単独では増殖できない。グラム染色は細菌分類用。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "細菌とウイルスの生物学的特徴を区別できる",
+    "common_misconception": "ウイルスも抗生物質で治療できると思う",
+    "distractor_rationales": [
+      "不正解。グラム染色は細菌用。",
+      "正解。細菌とウイルスの複製様式の違い。",
+      "不正解。ウイルスは代謝系を持たない。",
+      "不正解。多くの細菌は抗生物質感受性。"
+    ],
+    "basic_terms": "細菌：原核生物、ウイルス：宿主依存性の非細胞性病原体",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "歯学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬学",
+    "question_text": "副交感神経系（自律神経系）が活性化されたときに引き起こされる生理的反応として正しいのはどれか。",
+    "choices": [
+      "瞳孔散大（散瞳）と発汗の増加",
+      "骨格筋への血流増加と肝臓でのグリコーゲン分解促進",
+      "消化管の蠕動運動促進と唾液・消化液の分泌増加",
+      "心拍数の増加と気管支の拡張"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "副交感神経系は「安静と消化（rest and digest）」状態を促し、消化管蠕動と消化液分泌を増加させます。",
+    "detailed_explanation": "副交感神経系はアセチルコリンを神経伝達物質として用い（ムスカリン受容体に作用）、「安静・消化（rest and digest）」モードをもたらします。主な作用：心拍数低下・気管支収縮・瞳孔収縮（縮瞳）・消化管蠕動亢進・消化液（唾液・胃液・膵液）分泌増加・排尿促進。心拍数増加・気管支拡張・瞳孔散大・発汗増加・骨格筋血流増加・グリコーゲン分解はすべて交感神経系（「戦うか逃げるか：fight or flight」）の作用であり、副交感神経系とは逆です。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "交感神経系と副交感神経系の主要な末梢効果を主要臓器ごとに比較して説明できる",
+    "common_misconception": "発汗を副交感神経の作用と誤解する（汗腺は解剖学的に交感神経支配だが伝達物質はアセチルコリン）",
+    "distractor_rationales": [
+      "不正解。瞳孔散大は交感神経（α1受容体）の作用です。通常の発汗も交感神経支配（ただし伝達物質はAch）です。",
+      "不正解。骨格筋血流増加とグリコーゲン分解は交感神経（α・β受容体）が介在するストレス反応です。",
+      "正解。副交感神経（迷走神経など）はムスカリン受容体を介して消化管蠕動と消化液分泌を亢進させます。",
+      "不正解。心拍数増加と気管支拡張は交感神経系（β1・β2受容体を介した）の作用です。"
+    ],
+    "basic_terms": "ムスカリン受容体：アセチルコリンに応答するGタンパク質共役型受容体。副交感神経：ACh→ムスカリン受容体→臓器効果。交感神経：Epi/NEpi→α・β受容体→臓器効果。",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "分子腫瘍学",
+    "question_text": "ジェネリック医薬品（後発医薬品）に関する説明として正しいのはどれか。",
+    "choices": [
+      "承認を受けずに販売できる",
+      "有効成分が異なる別薬である",
+      "先発品より必ず効果が劣る",
+      "先発品と同一の有効成分・含量で、生物学的同等性が確認された医薬品"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ジェネリック医薬品は先発品と同一有効成分で生物学的同等性が確認された薬である。",
+    "detailed_explanation": "日本では先発品の特許満了後、同一有効成分・含量・剤形で溶出・血中濃度が同等であることを確認して承認される。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "ジェネリック医薬品の定義と先発品との関係を説明できる",
+    "common_misconception": "ジェネリックは別の薬で効果が劣ると誤解する",
+    "distractor_rationales": [
+      "不正解。薬事承認が必要。",
+      "不正解。有効成分は同一。",
+      "不正解。同等性試験で確認される。",
+      "正解。生物学的同等性が確認された後発品。"
+    ],
+    "basic_terms": "ジェネリック医薬品：先発品特許満了後の後発品、生物学的同等性：血中濃度プロファイルの同等性",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "分子腫瘍学",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "解剖",
+    "question_text": "腫瘍の grade（悪性度）と stage（病期）の違いとして正しいのはどれか。",
+    "choices": [
+      "grade は顕微鏡的異型度・分化度、stage は腫瘍の広がり（大きさ・浸潤・転移）",
+      "grade は腫瘍の大きさと転移、stage は顕微鏡的異型度",
+      "両者は同じ意味である",
+      "stage は病理医が決めず検査値のみで決まる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "grade は組織学的悪性度、stage は腫瘍の解剖学的広がりを示す。",
+    "detailed_explanation": "grade（悪性度）は細胞の異型度・分化度を評価。stage（病期）は TNM 分類などで原発巣の大きさ・リンパ節転移・遠隔転移を総合評価する。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "腫瘍の grade と stage の概念を区別できる",
+    "common_misconception": "grade と stage を同じと誤解する",
+    "distractor_rationales": [
+      "正解。grade は悪性度、stage は広がり。",
+      "不正解。定義が逆。",
+      "不正解。別概念。",
+      "不正解。stage も画像・病理・臨床所見で決定。"
+    ],
+    "basic_terms": "grade：組織学的悪性度、stage：腫瘍の病期（広がり）",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "解剖",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生理",
+    "question_text": "腎臓への血液供給に関する記述として正しいのはどれか。",
+    "choices": [
+      "腎動脈と腎静脈の役割は同じである",
+      "腎動脈が腎臓へ血液を送り、腎静脈が血液を運び去る",
+      "腎静脈が腎臓へ動脈血を送る",
+      "腎臓には動脈も静脈も存在しない"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "腎動脈が腹大動脈から腎へ血液を供給し、腎静脈が静脈血を下大静脈へ還流させる。",
+    "detailed_explanation": "腎動脈は腹大動脈から分岐し腎へ動脈血を送る。糸球体で濾過後、腎静脈が血液を下大静脈へ還流する。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "腎臓の血管解剖と血流方向を説明できる",
+    "common_misconception": "腎静脈が血液を腎へ送ると誤解する",
+    "distractor_rationales": [
+      "不正解。流入と還流で役割が異なる。",
+      "正解。動脈が流入、静脈が還流。",
+      "不正解。流入は動脈の役割。",
+      "不正解。腎動脈・腎静脈が存在する。"
+    ],
+    "basic_terms": "腎動脈：腎への動脈血供給、腎静脈：腎からの静脈還流",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生理",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬理",
+    "question_text": "抗利尿ホルモン（バソプレシン）の主な腎臓での作用はどれか。",
+    "choices": [
+      "アルドステロン分泌を完全に抑制する",
+      "近位尿細管でのグルコース再吸収を促進する",
+      "集合管での水再吸収を促進する",
+      "糸球体濾過量を直接増加する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "バソプレシンは集合管の水チャネル（AQP2）を活性化し水再吸収を増加させる。",
+    "detailed_explanation": "血漿浸透圧上昇や脱水時に下垂体後葉から分泌される。V2 受容体経由で AQP2 を膜に挿入し、尿を濃縮して水分を保持する。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "バソプレシンの腎臓における水調節作用を説明できる",
+    "common_misconception": "バソプレシンが糸球体濾過を直接増やすと誤解する",
+    "distractor_rationales": [
+      "不正解。アルドステロンとは別の調節系。",
+      "不正解。グルコース再吸収は別機構。",
+      "正解。集合管での水再吸収促進。",
+      "不正解。濾過量への直接作用ではない。"
+    ],
+    "basic_terms": "バソプレシン：抗利尿ホルモン、AQP2：水チャネルタンパク質",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬理",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "病理",
+    "question_text": "1型糖尿病の治療で欠乏しているホルモンを補充する薬はどれか。",
+    "choices": [
+      "エストロゲン",
+      "グルカゴン",
+      "甲状腺ホルモン",
+      "インスリン"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "1型糖尿病はインスリン分泌不全のため、インスリン製剤の補充が基本治療である。",
+    "detailed_explanation": "1型糖尿病は自己免疫性β細胞破壊によりインスリンが欠乏する。インスリン注射により血糖コントロールを行う。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "1型糖尿病のホルモン補充療法を説明できる",
+    "common_misconception": "1型でも経口血糖降下薬だけで十分だと誤解する",
+    "distractor_rationales": [
+      "不正解。性ホルモン。",
+      "不正解。グルカゴンは血糖上昇ホルモン。",
+      "不正解。甲状腺機能に関与。",
+      "正解。インスリン補充が基本。"
+    ],
+    "basic_terms": "インスリン：血糖降下ホルモン、1型糖尿病：インスリン分泌不全による糖尿病",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "病理",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "免疫",
+    "question_text": "CD8陽性T細胞（細胞傷害性T細胞、CTL）の主な機能はどれか。",
+    "choices": [
+      "ウイルス感染細胞やがん細胞をパーフォリン・グランザイムを介して直接破壊する",
+      "自己反応性リンパ球を抑制して末梢性免疫寛容を維持する",
+      "MHCクラスII分子で提示された抗原ペプチドを認識して活性化される",
+      "B細胞を補助して特異的抗体の産生を促進する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "CD8陽性CTLはMHCクラスI提示抗原を認識し、パーフォリン・グランザイムにより標的細胞を直接溶解します。",
+    "detailed_explanation": "CD8陽性細胞傷害性T細胞（CTL）は、MHCクラスI分子（有核細胞に広く発現）が提示する内因性抗原ペプチドを認識して活性化されます。活性化CTLはパーフォリン（標的細胞膜に孔を形成）とグランザイム（セリンプロテアーゼ；カスパーゼを活性化しアポトーシスを誘導）を放出して標的細胞を破壊します。B細胞補助と抗体産生促進はCD4陽性ヘルパーT細胞（主にTh2）の機能です。制御性T細胞（Treg；CD4+CD25+FoxP3+）が末梢免疫寛容の維持を担います。MHCクラスII分子はCD4陽性T細胞が認識します。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "CD8+CTLとCD4+ヘルパーT細胞・Tregの機能と認識するMHCクラスを区別して説明できる",
+    "common_misconception": "CD8とCD4の機能を逆に覚え、CD8がヘルパーとして働くと誤解する",
+    "distractor_rationales": [
+      "正解。CD8+CTLはパーフォリン・グランザイム経路でウイルス感染細胞やがん細胞を直接破壊します。",
+      "不正解。免疫寛容の維持はCD4+CD25+FoxP3+制御性T細胞（Treg）の役割です。",
+      "不正解。MHCクラスII分子はCD4陽性T細胞が認識します。CD8陽性T細胞はMHCクラスI分子を認識します。",
+      "不正解。B細胞補助と抗体産生促進はCD4陽性ヘルパーT細胞（Th2サブセット中心）の機能です。"
+    ],
+    "basic_terms": "パーフォリン：標的細胞膜に孔を形成するタンパク質。グランザイム：CTL由来のセリンプロテアーゼで標的細胞のアポトーシスを誘導。MHCクラスI：有核細胞に発現し内因性ペプチドを提示。",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "免疫",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生化学",
+    "question_text": "自然免疫と獲得免疫の違いとして最も適切なものはどれか。",
+    "choices": [
+      "獲得免疫は生後数時間以内にを主成分とする働く",
+      "獲得免疫は抗原特異性と免疫記憶を持つ",
+      "自然免疫は特異的で記憶を持つ",
+      "自然免疫は T 細胞を主成分とするで構成される"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "獲得免疫は抗原特異的な応答と免疫記憶を特徴とする。",
+    "detailed_explanation": "自然免疫は即時・非特異的（好中球、マクロファージ、補体など）。獲得免疫は T・B リンパ球が抗原特異的に応答し、記憶細胞を形成する。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "自然免疫と獲得免疫の特徴を対比できる",
+    "common_misconception": "自然免疫にも抗原特異的記憶があると誤解する",
+    "distractor_rationales": [
+      "不正解。獲得免疫は生涯にわたり機能。",
+      "正解。獲得免疫の特徴。",
+      "不正解。自然免疫は非特異的で記憶を持たない。",
+      "不正解。自然免疫は様々な細胞が関与。"
+    ],
+    "basic_terms": "自然免疫：非特異的即時防御、獲得免疫：抗原特異的適応免疫",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生化学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "微生物",
+    "question_text": "酵素反応における競合阻害が起こったときの速度論的変化として正しいのはどれか。",
+    "choices": [
+      "Km が低下し Vmax も低下する",
+      "Vmax が低下し Km は変化しない",
+      "Km が増大するが十分な基質濃度では Vmax は変化しない",
+      "Km も Vmax も変化しない"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "競合阻害では Km が増大するが、基質過剰で Vmax は理論的に変化しない。",
+    "detailed_explanation": "競合阻害剤は活性部位で基質と競合する。Km（見かけ）増大が特徴。非競合阻害では Vmax 低下・Km 不変。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "競合阻害と非競合阻害の Km・Vmax への影響を区別できる",
+    "common_misconception": "競合阻害でも Vmax が低下すると誤解する",
+    "distractor_rationales": [
+      "不正解。混合阻害の一形態。",
+      "不正解。非競合阻害の特徴。",
+      "正解。競合阻害の速度論的特徴。",
+      "不正解。Km は増大する。"
+    ],
+    "basic_terms": "Km：半最大速度となる基質濃度、Vmax：最大反応速度",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "微生物",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "question_text": "グラム陰性菌のエンドトキシンとして知られる成分はどれか。",
+    "choices": [
+      "プラスミド DNA",
+      "エキソトキシン（分泌型毒素）",
+      "ペプチドグリカン単独",
+      "リポ多糖（LPS）"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "グラム陰性菌外膜の LPS がエンドトキシンとして強力な炎症反応を惹起する。",
+    "detailed_explanation": "LPS は外膜に存在し菌体破壊時に放出される（エンドトキシン）。エキソトキシンは菌が分泌する毒素。ペプチドグリカンは細胞壁成分。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "エンドトキシンとエキソトキシンの違いを説明できる",
+    "common_misconception": "すべての細菌毒素が分泌型だと誤解する",
+    "distractor_rationales": [
+      "不正解。遺伝子運搬要素。",
+      "不正解。エキソトキシンは分泌型。",
+      "不正解。主な毒素成分ではない。",
+      "正解。LPS がエンドトキシン。"
+    ],
+    "basic_terms": "LPS：グラム陰性菌外膜のリポ多糖、エンドトキシン：菌体成分としての毒素",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "歯学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬学",
+    "question_text": "歯周病の主な病因として最も適切なものはどれか。",
+    "choices": [
+      "歯冠部のプラーク中の細菌と宿主の炎症反応",
+      "フッ化物の過剰摂取を主成分とする",
+      "遺伝子異常を主成分とするで環境因子は無関係",
+      "咬合圧が唯一の原因"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "歯周病は歯周病原細菌とそれに対する宿主の炎症反応が主因である。",
+    "detailed_explanation": "歯肉縁下プラークの細菌（ポルフィロモナス・ギンギバリス等）が歯肉炎・歯周炎を惹起。プラークコントロールが予防・治療の基本。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "歯周病の病因と予防の基本を説明できる",
+    "common_misconception": "歯周病は加齢のみで起こると誤解する",
+    "distractor_rationales": [
+      "正解。プラーク細菌と炎症反応。",
+      "不正解。フッ化物過剰は別問題。",
+      "不正解。環境因子（プラーク）が重要。",
+      "不正解。咬合は加重因子にとどまる。"
+    ],
+    "basic_terms": "歯周病：歯周組織の炎症性疾患、プラーク：歯面の細菌バイオフィルム",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "分子腫瘍学",
+    "question_text": "受容体作動薬（アゴニスト）と受容体拮抗薬（アンタゴニスト）の違いとして正しいのはどれか。",
+    "choices": [
+      "アンタゴニストは必ず受容体を分解する",
+      "アゴニストは受容体を活性化し、アンタゴニストは受容体を遮断する",
+      "アゴニストは受容体を遮断し、アンタゴニストは受容体を活性化する",
+      "両者は同じ作用を持つ"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "アゴニストは受容体を活性化して下流シグナルを惹起し、アンタゴニストは結合して遮断する。",
+    "detailed_explanation": "例：β作動薬（サルブタモール）はβ2 アゴニスト、β遮断薬（プロプラノロール）はβ アンタゴニスト。アンタゴニストは受容体を分解しない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "アゴニストとアンタゴニストの薬理学的定義を区別できる",
+    "common_misconception": "アゴニストとアンタゴニストの役割を逆に覚える",
+    "distractor_rationales": [
+      "不正解。遮断であり分解ではない。",
+      "正解。活性化と遮断の違い。",
+      "不正解。定義が逆。",
+      "不正解。作用は対照的。"
+    ],
+    "basic_terms": "アゴニスト：受容体作動薬、アンタゴニスト：受容体拮抗薬",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "分子腫瘍学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "解剖",
+    "question_text": "2型糖尿病の主な発症機序として最も適切な記述はどれか。",
+    "choices": [
+      "腎臓でのグルコース再吸収が亢進することで慢性高血糖が維持される",
+      "グルカゴンの過剰分泌が主因となり、肝臓でのグルコース産生が増大する",
+      "インスリン分泌不足（膵β細胞機能低下）とインスリン抵抗性の増大が複合的に関与する",
+      "膵β細胞が自己免疫によって破壊され、インスリンがほぼ完全に欠乏する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "2型糖尿病は膵β細胞の機能低下によるインスリン分泌不足と、末梢組織のインスリン抵抗性増大が相互に作用して発症します。",
+    "detailed_explanation": "2型糖尿病の病態の核心は①インスリン抵抗性（骨格筋・肝臓・脂肪組織でのインスリン感受性低下）と②膵β細胞の進行性機能低下（インスリン分泌不足）の2点です。初期には代償的にインスリン分泌が増加しますが、長期的にβ細胞が疲弊して分泌が低下します。1型糖尿病は自己免疫によるβ細胞の破壊でインスリンが欠乏する病態であり、2型とは明確に異なります。腎臓でのグルコース再吸収亢進はSGLT2阻害薬の作用の逆であり、糖尿病の主因ではありません。グルカゴン過剰は2型糖尿病に伴う二次的現象として認められますが、単独の主因ではありません。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "1型・2型糖尿病の発症機序の違いを説明し、2型の主要病態としてインスリン分泌不足とインスリン抵抗性を挙げられる",
+    "common_misconception": "2型糖尿病でもインスリンが完全に欠乏すると誤解する（初期には過剰分泌、後期でも部分的分泌が残ることが多い）",
+    "distractor_rationales": [
+      "不正解。腎臓でのグルコース再吸収亢進は糖尿病の原因ではなく、SGLT2阻害薬はその逆（再吸収阻害）により血糖を下げます。",
+      "不正解。グルカゴン過剰は2型糖尿病に合併することがありますが、単独の主因ではなく副次的な病態です。",
+      "正解。インスリン分泌不足とインスリン抵抗性の増大の複合が2型糖尿病の主要病態です。",
+      "不正解。自己免疫によるβ細胞破壊とインスリン完全欠乏は1型糖尿病（IDDM）の特徴です。"
+    ],
+    "basic_terms": "インスリン抵抗性：インスリンが存在しても標的細胞が十分に応答しない状態。膵β細胞：膵臓ランゲルハンス島のインスリン産生細胞。HbA1c：過去1〜2か月の平均血糖を反映する指標。",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "解剖",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生理",
+    "question_text": "ヒトの脳神経の本数として正しいのはどれか。",
+    "choices": [
+      "42 本",
+      "10 本",
+      "31 本",
+      "12 本"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ヒトには第 I〜第 XII 脳神経の計 12 対が存在する。",
+    "detailed_explanation": "脳神経は 12 対（嗅神経〜舌下神経）。脊髄神経は 31 対（頸 8・胸 12・腰 5・仙 5・尾 1）。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "脳神経と脊髄神経の本数を正確に述べられる",
+    "common_misconception": "脳神経を 10 本と誤記する",
+    "distractor_rationales": [
+      "不正解。実在しない数。",
+      "不正解。10 本ではない。",
+      "不正解。脊髄神経の本数。",
+      "正解。12 対の脳神経。"
+    ],
+    "basic_terms": "脳神経：脳幹・大脳から直接出る末梢神経、脊髄神経：脊髄から出る神経",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生理",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬理",
+    "question_text": "レニン-アンジオテンシン-アルドステロン系（RAAS）の活性化により起こる主な変化はどれか。",
+    "choices": [
+      "血管収縮とナトリウム・水貯留による血圧上昇",
+      "血圧低下とナトリウム排泄増加",
+      "心拍数の低下のみ",
+      "インスリン分泌の増加"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "RAAS はアンジオテンシン II による血管収縮とアルドステロンによる Na⁺ 貯留で血圧を上昇させる。",
+    "detailed_explanation": "腎血流量低下でレニン分泌→アンジオテンシン I→II（血管収縮）→アルドステロン（遠位尿細管で Na⁺ 再吸収）→血圧上昇・体液量増加。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "RAAS の主要な生理作用を説明できる",
+    "common_misconception": "RAAS は血圧を下げると誤解する",
+    "distractor_rationales": [
+      "正解。血管収縮とナトリウム貯留。",
+      "不正解。RAAS は血圧上昇方向。",
+      "不正解。心拍への影響は副次的。",
+      "不正解。糖代謝とは直接関係しない。"
+    ],
+    "basic_terms": "レニン：腎から分泌される酵素、RAAS：血圧・体液量調節系",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬理",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "病理",
+    "question_text": "ワルファリンの主な抗凝固機序はどれか。",
+    "choices": [
+      "ヘパリンと同一の作用機序を持つ",
+      "ビタミン K 依存性凝固因子の合成を阻害する",
+      "トロンビンを直接阻害する",
+      "血小板 ADP 受容体を遮断する"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "ワルファリンはビタミン K エポキシド還元酵素を阻害し、II・VII・IX・X 因子合成を低下させる。",
+    "detailed_explanation": "ビタミン K 依存性凝固因子（II, VII, IX, X）とプロテイン C/S の γ-カルボキシ化を阻害。効果発現に数日かかる。ヘパリンは抗トロンビン III 活性化。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "ワルファリンとヘパリンの抗凝固機序の違いを説明できる",
+    "common_misconception": "ワルファリンがトロンビンを直接阻害すると誤解する",
+    "distractor_rationales": [
+      "不正解。ヘパリンは抗トロンビン経路。",
+      "正解。ビタミン K 依存性因子合成阻害。",
+      "不正解。直接トロンビン阻害は別薬（ダビガトラン等）。",
+      "不正解。チクロピジン等の機序。"
+    ],
+    "basic_terms": "ワルファリン：経口抗凝固薬、ビタミン K：凝固因子合成に必要な補因子",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "病理",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "免疫",
+    "question_text": "肉芽腫（granuloma）形成に関する記述として正しいのはどれか。",
+    "choices": [
+      "血管内血栓を主成分とするで形成される",
+      "急性化膿性炎症を主成分とするで見られる",
+      "持続性抗原や難消化物に対するマクロファージの集簇反応である",
+      "多くの場合悪性腫瘍である"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "肉芽腫は持続抗原に対するマクロファージ・上皮様細胞の局所集簇である。",
+    "detailed_explanation": "結核、サルコイドーシス、クローン病などで見られる。中心に壊死を伴う乾酪性肉芽腫（結核）もある。悪性腫瘍や血栓とは異なる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "肉芽腫性炎症の病理学的特徴を説明できる",
+    "common_misconception": "肉芽腫を腫瘍と混同する",
+    "distractor_rationales": [
+      "不正解。血栓とは無関係。",
+      "不正解。慢性肉芽腫性炎症の形態。",
+      "正解。マクロファージ集簇反応。",
+      "不正解。炎症性の組織反応。"
+    ],
+    "basic_terms": "肉芽腫：マクロファージ集簇、上皮様細胞：活性化マクロファージの形態",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "免疫",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生化学",
+    "question_text": "アンジオテンシン変換酵素（ACE）阻害薬の降圧機序として最も適切な記述はどれか。",
+    "choices": [
+      "アンジオテンシンII受容体（AT1受容体）を直接遮断して血管収縮シグナルを遮断する",
+      "レニン分泌を直接阻害することでレニン-アンジオテンシン-アルドステロン系（RAAS）全体を上流から抑制する",
+      "カルシウムチャネル（L型）を遮断して血管平滑筋の収縮を抑制し、末梢血管抵抗を低下させる",
+      "ACEを阻害してアンジオテンシンIIの産生を抑制し、血管収縮とアルドステロン分泌を低減させる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ACE阻害薬はACEを阻害してアンジオテンシンIIの産生を減らし、血管拡張とアルドステロン分泌低下をもたらします。",
+    "detailed_explanation": "ACEはアンジオテンシンI（10アミノ酸）からアンジオテンシンII（8アミノ酸）への変換を触媒するジペプチジルカルボキシペプチダーゼです。ACE阻害薬（エナラプリル・ラミプリルなど）はACEを競合的に阻害し：①アンジオテンシンII産生↓→血管収縮抑制・アルドステロン分泌↓→Na再吸収↓→降圧、②ブラジキニン分解↓→ブラジキニン蓄積→NO・プロスタサイクリン産生↑→血管拡張。ブラジキニン蓄積は空咳の副作用原因です。AT1受容体遮断はARB（バルサルタンなど）の機序。レニン直接阻害はアリスキレンの機序。カルシウム拮抗薬（CCB）はカルシウムチャネルを遮断します。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "RAAS系の各ステップに作用する降圧薬（ACE阻害薬・ARB・レニン阻害薬）の機序の違いを説明し、ACE阻害薬の副作用（空咳）の原因を述べられる",
+    "common_misconception": "ACE阻害薬とARBを混同する（ACE阻害薬はアンジオテンシンII産生を阻害、ARBは受容体を遮断）",
+    "distractor_rationales": [
+      "不正解。AT1受容体の直接遮断はARB（アンジオテンシンII受容体拮抗薬；バルサルタン・カンデサルタンなど）の作用機序です。",
+      "不正解。レニン分泌の直接阻害は直接的レニン阻害薬（DRI；アリスキレン）の機序です。",
+      "不正解。L型カルシウムチャネル遮断はカルシウム拮抗薬（CCB；アムロジピン・ニフェジピンなど）の機序です。",
+      "正解。ACE阻害薬はACEを阻害してアンジオテンシンII産生を抑制し、血管収縮・アルドステロン分泌を低減します。"
+    ],
+    "basic_terms": "RAAS：レニン-アンジオテンシン-アルドステロン系。ACE：アンジオテンシン変換酵素。ブラジキニン：血管拡張作用を持つキニン；ACEが分解するため、ACE阻害薬で蓄積し空咳を引き起こす。",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生化学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "微生物",
+    "question_text": "クエン酸回路（TCA 回路）1 回転で直接生成される主要な還元産物はどれか。",
+    "choices": [
+      "NADH と FADH₂",
+      "ATP のみ",
+      "グルコース",
+      "アミノ酸"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "TCA 回路は NADH×3、FADH₂×1 を産生し、電子伝達系へ還元力を供給する。",
+    "detailed_explanation": "TCA 回路 1 回転で GTP（ATP 相当）×1 も生成するが、主要エネルギー産生は NADH/FADH₂ 経由の酸化的リン酸化。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "TCA 回路の産物とエネルギー代謝の流れを説明できる",
+    "common_misconception": "TCA 回路で大量の ATP が直接作られると思う",
+    "distractor_rationales": [
+      "正解。主要還元産物。",
+      "不正解。GTP/ATP は少量、主産物は還元補酵素。",
+      "不正解。基質ではなく産物の誤り。",
+      "不正解。TCA 回路の直接産物ではない。"
+    ],
+    "basic_terms": "TCA 回路：ミトコンドリア基質での代謝経路、NADH：電子伝達系への還元力",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "微生物",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "question_text": "結核菌感染における潜伏感染（latent TB）の特徴として最も適切なものはどれか。",
+    "choices": [
+      "ワクチン接種後は潜伏感染が起こらない",
+      "菌は体内に持続するが無症状で免疫により抑制されうる",
+      "多くの場合即座に活動性結核を発症する",
+      "抗酸菌染色で多くの場合検出できる"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "潜伏結核は菌持続と免疫による抑制のバランス状態で、無症状である。",
+    "detailed_explanation": "原発感染後、菌は肉芽腫内に持続。免疫低下時に活動化しうる。BCG 接種は重症化予防だが潜伏感染の完全防止ではない。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "結核の潜伏感染と活動性結核の違いを説明できる",
+    "common_misconception": "結核菌感染＝即座に発症すると誤解する",
+    "distractor_rationales": [
+      "不正解。BCG は完全予防ではない。",
+      "正解。無症状の持続感染。",
+      "不正解。多くは潜伏状態。",
+      "不正解。菌量が少なく検出困難なことも。"
+    ],
+    "basic_terms": "潜伏結核：無症状の持続感染、活動性結核：症状を伴う進行感染",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "歯学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬学",
+    "question_text": "歯髄壊死に至った歯に対して根管治療が選択される主な理由はどれか。",
+    "choices": [
+      "咬合を高くするため",
+      "歯髄の再生を完全に可能にするため",
+      "感染した歯髄・根管内容物を除去し歯を保存するため",
+      "歯を必ず抜歯するため"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "根管治療は感染根管内容を清掃・消毒し、歯の保存を目的とする。",
+    "detailed_explanation": "歯髄壊死・根尖病巣がある場合、根管内感染源を除去し封鎖することで抜歯回避を図る。歯髄の完全再生は困難。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "根管治療の適応と目的を説明できる",
+    "common_misconception": "歯髄壊死歯は必ず抜歯だと思う",
+    "distractor_rationales": [
+      "不正解。咬合調整が主目的ではない。",
+      "不正解。歯髄完全再生は現状困難。",
+      "正解。感染除去と歯保存。",
+      "不正解。保存療法が目的。"
+    ],
+    "basic_terms": "根管治療：感染根管の清掃・充填、根尖病巣：根尖部の炎症性病変",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "分子腫瘍学",
+    "question_text": "プロドラッグ（前駆薬）の定義として最も適切なものはどれか。",
+    "choices": [
+      "毒性がなく何も代謝されない薬",
+      "多くの場合活性型で投与される薬",
+      "多くの場合注射を主成分とするで用いる薬",
+      "体内で活性代謝物に変換されて薬効を発現する薬"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "プロドラッグは投与後に代謝され活性型となって作用を発揮する。",
+    "detailed_explanation": "例：エナラプリル→エナラプリラート（ACE 阻害）、バルガンシクロビル→アシクロビル。吸収・安定性・組織選択性の改善が目的。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "プロドラッグの概念と代表例を説明できる",
+    "common_misconception": "投与された薬がそのまま活性型だと思う",
+    "distractor_rationales": [
+      "不正解。代謝により活性化する。",
+      "不正解。非活性前駆体が多い。",
+      "不正解。経口投与にも用いられる。",
+      "正解。代謝活性化がプロドラッグの定義。"
+    ],
+    "basic_terms": "プロドラッグ：体内代謝で活性化する前駆薬、活性代謝物：実際に薬効を発揮する分子",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "分子腫瘍学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "解剖",
+    "question_text": "MHCクラスI分子による抗原提示に関する記述として正しいのはどれか。",
+    "choices": [
+      "有核細胞に広く発現し、プロテアソームで処理された内因性ペプチドをCD8陽性T細胞に提示する",
+      "エンドソーム経路（リソソーム内）で分解された外来性抗原ペプチドを主に提示する",
+      "主にCD4陽性ヘルパーT細胞に抗原を提示して免疫応答を誘導する",
+      "マクロファージ・樹状細胞・B細胞などの専門的抗原提示細胞に発現する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "MHCクラスI分子は有核細胞に広く発現し、細胞内（内因性）抗原をCD8陽性CTLに提示します。",
+    "detailed_explanation": "MHCクラスI分子（HLA-A/B/C）はほぼすべての有核細胞に発現し、細胞内プロテアソームで分解された内因性ペプチド（ウイルスタンパク質やがん関連タンパク質など）をCD8陽性細胞傷害性T細胞（CTL）に提示します（内因性経路）。MHCクラスII分子（HLA-DP/DQ/DR）は専門的抗原提示細胞（樹状細胞・マクロファージ・B細胞）に発現し、エンドソーム経路（外因性経路）で処理された外来性抗原をCD4陽性ヘルパーT細胞に提示します。交差提示（クロスプレゼンテーション）では例外的に樹状細胞が外来抗原をクラスIで提示してCTLを活性化しますが、これは特殊なケースです。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "MHCクラスI・クラスIIの発現細胞・提示する抗原の由来・認識するT細胞サブセットを対比して正確に説明できる",
+    "common_misconception": "MHCクラスIが専門的抗原提示細胞にのみ発現すると誤解する（クラスIは有核細胞に広く発現し、クラスIIが専門細胞に限局的に発現）",
+    "distractor_rationales": [
+      "正解。MHCクラスI分子は有核細胞に広く発現し、プロテアソームで処理された内因性ペプチドをCD8陽性CTLに提示します。",
+      "不正解。エンドソーム経路（外因性経路）での処理ペプチドを提示するのはMHCクラスII分子です。",
+      "不正解。CD4陽性ヘルパーT細胞が認識するのはMHCクラスII分子で提示された抗原です。",
+      "不正解。MHCクラスII分子が専門的抗原提示細胞に限局的に発現しますが、クラスI分子はほぼすべての有核細胞に広く発現します。"
+    ],
+    "basic_terms": "MHCクラスI（HLA-A/B/C）：有核細胞発現・内因性ペプチド提示・CD8+T細胞が認識。MHCクラスII（HLA-DP/DQ/DR）：専門的APC発現・外因性ペプチド提示・CD4+T細胞が認識。プロテアソーム：細胞内タンパク質を分解する複合体。",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "解剖",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生理",
+    "question_text": "血液脳関門（BBB）の主要な構造的基盤として最も適切なものはどれか。",
+    "choices": [
+      "クモ膜下腔の脳脊髄液",
+      "脳毛細血管の内皮細胞間の緊密結合と周皮細胞・アストロサイト終足の支持",
+      "脳室系の脈絡叢のみ",
+      "髄鞘化神経線維の集合"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "BBB は脳血管内皮の緊密結合と周皮細胞・アストロサイト終足により形成される。",
+    "detailed_explanation": "内皮細胞の tight junction、基底膜、周皮細胞、星状膠細胞終足が複合的に物質透過を制限する。脈絡叢は CSF 産生に関与。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "血液脳関門の細胞・構造的構成要素を説明できる",
+    "common_misconception": "BBB は単一の膜構造だと誤解する",
+    "distractor_rationales": [
+      "不正解。CSF 腔であり BBB ではない。",
+      "正解。内皮緊密結合と支持細胞の複合体。",
+      "不正解。脈絡叢は CSF 産生。",
+      "不正解。髄鞘は軸索を包む。"
+    ],
+    "basic_terms": "血液脳関門：中枢神経と血液間の選択的透過障壁、緊密結合：内皮細胞間の閉鎖結合",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生理",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬理",
+    "question_text": "心室筋細胞のアクションポテンシャルにおいて位相 4（徐徐期）の主要なイオン電流はどれか。",
+    "choices": [
+      "Cl⁻ 内流のみ",
+      "急速 Na⁺ 内流",
+      "内向き整流 K⁺ 電流（I_K1）による膜電位の維持",
+      "L 型 Ca²⁺ 内流（位相 2 のプラトー）"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "位相 4 では I_K1 により膜電位は約 -90 mV 近傍の resting potential に維持される。",
+    "detailed_explanation": "位相 0 は Na⁺ 内流、位相 2 は Ca²⁺ 内流と K⁺ 外流のバランス（プラトー）。位相 4 は I_K1 が resting potential を設定。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "心筋アクションポテンシャル各相のイオン機構を説明できる",
+    "common_misconception": "位相 4 も Na⁺ 内流で脱分極すると誤解する",
+    "distractor_rationales": [
+      "不正解。Cl⁻ のみでは説明できない。",
+      "不正解。位相 0 の機構。",
+      "正解。位相 4 の resting potential 維持。",
+      "不正解。位相 2 の機構。"
+    ],
+    "basic_terms": "アクションポテンシャル：膜電位の時間変化、I_K1：内向き整流 K⁺ 電流",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬理",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "病理",
+    "question_text": "リツキシマブ（抗 CD20 モノクローナル抗体）の主な作用機序はどれか。",
+    "choices": [
+      "チロシンキナーゼの ATP 結合部位を阻害する",
+      "DNA 複製を直接阻害する",
+      "ヒスタミン H1 受容体を遮断する",
+      "B 細胞表面 CD20 抗原に結合し、ADCC・補体依存性細胞傷害等で B 細胞を除去する"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "リツキシマブは CD20 陽性 B 細胞を標的とする抗体療法である。",
+    "detailed_explanation": "CD20 は成熟 B 細胞に発現。リツキシマブは ADCC、CDC、直接アポトーシス誘導により B 細胞を減少させる。B 細胞性リンパ腫・自己免疫疾患に使用。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "モノクローナル抗体療法の標的と作用機序を説明できる",
+    "common_misconception": "リツキシマブを小分子 TKIs と混同する",
+    "distractor_rationales": [
+      "不正解。TKI の機序（イマチニブ等）。",
+      "不正解。細胞毒性抗腫瘍薬の機序。",
+      "不正解。抗ヒスタミン薬の機序。",
+      "正解。抗 CD20 抗体による B 細胞除去。"
+    ],
+    "basic_terms": "CD20：B 細胞表面抗原、ADCC：抗体依存性細胞傷害",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "病理",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "免疫",
+    "question_text": "異形成（dysplasia）と化生（metaplasia）の違いとして正しいのはどれか。",
+    "choices": [
+      "dysplasia は細胞の異型化を伴いうる前癌病変、metaplasia は一種の成熟細胞が別種の成熟細胞に置換される適応的反応",
+      "dysplasia は多くの場合良性、metaplasia は多くの場合悪性",
+      "両者は同義語である",
+      "metaplasia は多くの場合異型化を伴う"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "異形成は異型化を伴う前癌病変、化生は環境変化への適応的細胞型置換である。",
+    "detailed_explanation": "例：胃粘膜の腸上皮化生（H. pylori 関連）、子宮頸部の異形成（CIN）。化生は可逆的なこともあるが、一部はがん化リスク上昇と関連。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "dysplasia と metaplasia の病理学的定義を区別できる",
+    "common_misconception": "化生を必ず前癌病変と同一視する",
+    "distractor_rationales": [
+      "正解。異型化と細胞型置換の違い。",
+      "不正解。dysplasia は前癌病変、metaplasia は適応反応。",
+      "不正解。別概念。",
+      "不正解。化生は異型化を必ず伴わない。"
+    ],
+    "basic_terms": "dysplasia：異型形成・前癌病変、metaplasia：一種細胞から別種細胞への置換",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "免疫",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "生化学",
+    "question_text": "BCR-ABL融合タンパク質（チロシンキナーゼ）を標的とするイマチニブ（グリベック）が治療の第一選択として推奨される主な疾患はどれか。",
+    "choices": [
+      "EGFRエクソン19欠失変異またはL858R変異を有する肺腺癌",
+      "慢性骨髄性白血病（CML）およびフィラデルフィア染色体陽性急性リンパ性白血病（Ph+ALL）",
+      "HER2タンパク質の過剰発現または遺伝子増幅を示す乳癌",
+      "BRAF V600E変異を有するメラノーマ（悪性黒色腫）"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "イマチニブはt(9;22)転座由来のBCR-ABL融合キナーゼを阻害し、CMLとPh+ALLに対して高い奏効率を示します。",
+    "detailed_explanation": "慢性骨髄性白血病（CML）の約95%はt(9;22)(q34;q11)転座（フィラデルフィア染色体）による BCR-ABL1融合遺伝子を有し、構成的活性型チロシンキナーゼBCR-ABLが産生されます。イマチニブはBCR-ABLのATPポケットに結合してキナーゼ活性を阻害する第一世代チロシンキナーゼ阻害薬（TKI）です。EGFRエクソン変異陽性非小細胞肺癌にはゲフィチニブ・オシメルチニブ等のEGFR-TKI、HER2過剰発現乳癌にはトラスツズマブ（抗HER2抗体）、BRAF V600E陽性メラノーマにはベムラフェニブ・ダブラフェニブ等が使用されます。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "主要な分子標的薬と対応するドライバー変異・対象疾患の組み合わせを正確に対応させられる",
+    "common_misconception": "イマチニブをEGFR変異陽性肺癌に用いると誤解する（いずれも「チロシンキナーゼ阻害薬」であるが標的が全く異なる）",
+    "distractor_rationales": [
+      "不正解。EGFRエクソン19欠失・L858R変異陽性肺腺癌にはゲフィチニブ・エルロチニブ・オシメルチニブなどのEGFR-TKIが適応です。",
+      "正解。BCR-ABL融合キナーゼを標的とするイマチニブはCMLおよびPh+ALLの治療に用いられます。",
+      "不正解。HER2過剰発現乳癌にはトラスツズマブ（抗HER2モノクローナル抗体）やラパチニブが使用されます。",
+      "不正解。BRAF V600E変異メラノーマにはベムラフェニブ（BRAF阻害薬）やダブラフェニブが使用されます。"
+    ],
+    "basic_terms": "BCR-ABL：慢性骨髄性白血病の原因となるフィラデルフィア染色体由来の融合型構成活性チロシンキナーゼ。フィラデルフィア染色体：t(9;22)転座により形成される短縮した22番染色体。",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "生化学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "微生物",
+    "question_text": "ユビキチン-プロテアソーム系の主な機能として最も適切なものはどれか。",
+    "choices": [
+      "グリコーゲンの合成",
+      "DNA の複製開始",
+      "タンパク質の選択的分解と質量管理",
+      "コレステロールの合成"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "ユビキチン標識により不要・異常タンパク質が 26S プロテアソームで分解される。",
+    "detailed_explanation": "ユビキチン化は E1-E2-E3 酵素連鎖で行われる。細胞周期制御（サイクリン分解）、ER ストレス応答、MHC I 抗原提示にも関与。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ユビキチン-プロテアソーム系の役割と関連経路を説明できる",
+    "common_misconception": "プロテアソームはすべてのタンパク質を非選択的に分解すると誤解する",
+    "distractor_rationales": [
+      "不正解。グリコーゲン合成酶経路。",
+      "不正解。複製起点の機能。",
+      "正解。選択的タンパク質分解。",
+      "不正解。HMG-CoA 還元酶経路。"
+    ],
+    "basic_terms": "ユビキチン：タンパク質分解の標識、26S プロテアソーム：ATP 依存性プロテアーゼ複合体",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "微生物",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "question_text": "プリオン病（例：クロイツフェルト・ヤコブ病）の病因として最も適切なものはどれか。",
+    "choices": [
+      "プラスミドによる抗生物質耐性獲得",
+      "細菌毒素による急性壊死",
+      "ウイルス RNA の直接複製",
+      "異常折り畳みプリオンタンパク質（PrP^Sc）の蓄積による神経変性"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "プリオン病は PrP^Sc が正常 PrP^C を異常構造に変換し蓄積するタンパク質病である。",
+    "detailed_explanation": "プリオンは従来の病原体定義に合わない感染性タンパク質。変性蓄積により神経細胞障害・空胞形成（海綿状脳症）。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "プリオン病の分子機構と感染性タンパク質の概念を説明できる",
+    "common_misconception": "プリオン病をウイルス感染と誤解する",
+    "distractor_rationales": [
+      "不正解。抗生物質耐性とは無関係。",
+      "不正解。細菌感染の機序。",
+      "不正解。核酸を持たない。",
+      "正解。異常プリオン蓄積。"
+    ],
+    "basic_terms": "プリオン：感染性タンパク質、PrP^Sc：異常折り畳みプリオン型",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "歯学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "薬学",
+    "question_text": "ビスホスホネート系薬剤長期投与患者で抜歯後に起こりうる重篤な合併症はどれか。",
+    "choices": [
+      "薬剤関連顎骨壊死（MRONJ）",
+      "急性虫歯の自然治癒",
+      "歯髄の完全再生",
+      "永久歯の新規萌出"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ビスホスホネート等の抗リモデリング薬は顎骨壊死リスクを上昇させ、抜歯創部で MRONJ を惹起しうる。",
+    "detailed_explanation": "骨吸収抑制により顎骨の創傷治癒が障害される。抜歯前のリスク評価・薬剤休薬検討・口腔ケアが重要。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "ビスホスホネート関連顎骨壊死のリスクと歯科処置上の注意を説明できる",
+    "common_misconception": "骨粗鬆症治療薬が歯科に影響しないと誤解する",
+    "distractor_rationales": [
+      "正解。MRONJ のリスク。",
+      "不正解。う蝕は自然治癒しない。",
+      "不正解。歯髄完全再生は困難。",
+      "不正解。永久歯の新規萌出はない。"
+    ],
+    "basic_terms": "MRONJ：薬剤関連顎骨壊死、ビスホスホネート：骨吸収抑制薬",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "医歯薬学",
+      "薬学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "医歯薬学",
+    "subdomain": "分子腫瘍学",
+    "question_text": "BCR-ABL 融合タンパク質を標的とするイマチニブ（グリベック）が治療の第一選択として推奨される主な疾患はどれか。",
+    "choices": [
+      "BRAF V600E 陽性メラノーマ",
+      "慢性骨髄性白血病（CML）およびフィラデルフィア染色体陽性急性リンパ性白血病（Ph+ALL）",
+      "EGFR エクソン 19 欠失陽性肺腺癌",
+      "HER2 過剰発現乳癌"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "イマチニブは t(9;22) 由来 BCR-ABL キナーゼを阻害し、CML と Ph+ALL に高い奏効率を示す。",
+    "detailed_explanation": "CML の約 95% は BCR-ABL1 融合遺伝子を保有。イマチニブは第一世代 TKI。EGFR-TKI、トラスツズマブ、BRAF 阻害薬は別標的。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "主要分子標的薬とドライバー変異・適応疾患の対応を説明できる",
+    "common_misconception": "イマチニブを EGFR 変異陽性肺癌に用いると誤解する",
+    "distractor_rationales": [
+      "不正解。BRAF 阻害薬の適応。",
+      "正解。BCR-ABL 陽性白血病の標準治療。",
+      "不正解。EGFR-TKI の適応。",
+      "不正解。抗 HER2 療法の適応。"
+    ],
+    "basic_terms": "BCR-ABL：フィラデルフィア染色体由来融合キナーゼ、TKI：チロシンキナーゼ阻害薬",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "医歯薬学",
       "分子腫瘍学",
       "batch50",
       "L900"
-    ],
-    "domain": "医歯薬学",
-    "subdomain": "分子腫瘍学",
-    "difficulty_initial": 900,
-    "question_text": "腫瘍抑制遺伝子 p53 の主な機能として最も適切なものはどれか。",
-    "choices": [
-      "DNA損傷時の細胞周期停止またはアポトーシス誘導",
-      "細胞周期を無条件に促進する",
-      "常に活性型チロシンキナーゼとして機能する",
-      "テロメラーゼを構成活性化する"
-    ],
-    "correct_choice_index": 0,
-    "short_explanation": "p53 はゲノム監視因子として損傷時に G1/S 停止やアポトーシスを誘導する。",
-    "detailed_explanation": "p53 変異は多くのがんで見られる。オンコジーン（例：Ras）は増殖促進、テロメラーゼ活性化は不死化に関与。",
-    "learning_objective": "腫瘍抑制遺伝子とオンコジーンの機能を区別できる",
-    "cognitive_type": "誤解・境界",
-    "common_misconception": "p53 をオンコジーンと混同する",
-    "distractor_rationales": [
-      "正解。p53 のゲノム監視機能。",
-      "不正解。オンコジーン的機能。",
-      "不正解。キナーゼではない。",
-      "不正解。テロメラーゼ活性化は別機構。"
-    ],
-    "basic_terms": "p53：腫瘍抑制遺伝子、オンコジーン：がん化を促進する遺伝子"
+    ]
   }
 ]

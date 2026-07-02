@@ -1,177 +1,1802 @@
 [
   {
+    "domain": "化学",
+    "subdomain": "元素",
+    "question_text": "水の化学式として正しいものはどれか。",
+    "choices": [
+      "H₂O",
+      "CO₂",
+      "HCl",
+      "O₂"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は H₂O。水分子は水素原子2個と酸素原子1個が共有結合した分子。",
+    "detailed_explanation": "水（H₂O）は水素原子2個と酸素原子1個が共有結合で結びついた極性分子。CO₂ は二酸化炭素、HCl は塩化水素（塩酸）、O₂ は酸素分子の化学式。水は折れ線形の構造をもち、分子間水素結合により沸点が高い。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "水の化学式を正確に表記し、代表的な無機分子と区別できる",
+    "common_misconception": "水を H₂O₂（過酸化水素）と混同する",
+    "distractor_rationales": [
+      "正解。H₂O は水分子の化学式。",
+      "不正解。CO₂ は二酸化炭素の化学式。",
+      "不正解。HCl は塩化水素（塩酸）の化学式。",
+      "不正解。O₂ は酸素分子の化学式。"
+    ],
+    "basic_terms": "H₂O：水、CO₂：二酸化炭素、共有結合、極性分子",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "化学",
+      "元素",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "結合",
+    "question_text": "元素記号 Au で表される元素の名称はどれか。",
+    "choices": [
+      "白金",
+      "金",
+      "銀",
+      "銅"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解は金。Au はラテン語の Aurum（金）に由来する元素記号で、原子番号 79。",
+    "detailed_explanation": "代表的な貴金属の元素記号：Au（金、Aurum）、Ag（銀、Argentum）、Cu（銅、Cuprum）、Pt（白金、Platinum）。元素記号は元素の英語名またはラテン語名の頭文字から作られることが多い。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "代表的な金属元素の元素記号と名称を正確に対応させられる",
+    "common_misconception": "Au をアルミニウムと誤解する（アルミニウムは Al）",
+    "distractor_rationales": [
+      "不正解。白金の元素記号は Pt（Platinum）。",
+      "正解。Au はラテン語 Aurum（金）に由来する金の元素記号。",
+      "不正解。銀の元素記号は Ag（Argentum）。",
+      "不正解。銅の元素記号は Cu（Cuprum）。"
+    ],
+    "basic_terms": "Au：金、Ag：銀、Cu：銅、Pt：白金、元素記号",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "結合",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "question_text": "水を化学式で表したものとして正しいのはどれか。",
+    "choices": [
+      "NaCl",
+      "O₂",
+      "H₂O",
+      "CO₂"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "水は水素2個と酸素1個からなる H₂O。",
+    "detailed_explanation": "水分子は酸素原子1個に水素原子2個が共有結合した H₂O。CO₂ は二酸化炭素、NaCl は食塩、O₂ は酸素分子。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "身近な物質の化学式を正しく識別できる",
+    "common_misconception": "水の式を HO や H₂O₂ と混同する",
+    "distractor_rationales": [
+      "不正解。塩化ナトリウム（食塩）の式。",
+      "不正解。酸素分子 O₂ の式。",
+      "正解。水の化学式は H₂O。",
+      "不正解。二酸化炭素の式。"
+    ],
+    "basic_terms": "化学式：原子の種類と数を記号で表したもの、水：H₂O",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸塩基",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "question_text": "食塩水を口に含むとしょっぱく感じる主なイオンはどれか。",
+    "choices": [
+      "OH⁻",
+      "Na⁺",
+      "Cl⁻",
+      "H⁺"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "しょっぱさは主に Na⁺ イオンが味覚に関与する。",
+    "detailed_explanation": "塩化ナトリウムは Na⁺ と Cl⁻ に解離する。塩味（しょっぱさ）は主に Na⁺ が関与し、Cl⁻ は苦味寄りの味質をもつとされる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "イオンと味覚の基本的な対応を説明できる",
+    "common_misconception": "しょっぱさは Cl⁻ だけが原因だと考える",
+    "distractor_rationales": [
+      "不正解。OH⁻ はアルカリ性の味に関与する。",
+      "正解。しょっぱさは主に Na⁺ イオンが関与する。",
+      "不正解。Cl⁻ は苦味寄りの味質とされる。",
+      "不正解。H⁺ は酸性の味に関与する。"
+    ],
+    "basic_terms": "イオン：電荷をもつ原子または原子団、食塩：NaCl",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "化学",
       "有機化学",
       "batch50",
-      "L500"
-    ],
-    "domain": "化学",
-    "subdomain": "有機化学",
-    "difficulty_initial": 500,
-    "question_text": "（CH₃）₃C−Br がアセトン中の NaI に反応するとき、主要な反応機構はどれか。",
-    "choices": [
-      "E1",
-      "E2",
-      "SN1",
-      "SN2"
-    ],
-    "correct_choice_index": 2,
-    "short_explanation": "第三級ハロゲン化アルキルは安定なカルボカチオン経由で SN1 が優勢。",
-    "detailed_explanation": "第三級・極性溶媒中でカルボカチオンが生成し SN1 が進行。SN2 は立体障害で不利。",
-    "learning_objective": "ハロゲン化アルキルの級と反応機構の対応を説明できる",
-    "cognitive_type": "比較・分類",
-    "common_misconception": "すべてのハロゲン化アルキルが SN2 だと考える",
-    "distractor_rationales": [
-      "不正解。ヌクレオフィル存在下では置換が主。",
-      "不正解。強塩基条件でない。",
-      "正解。第三級・極性溶媒で SN1。",
-      "不正解。第三級では SN2 は不利。"
-    ],
-    "basic_terms": "SN1：カルボカチオン中間体を経る親核置換、第三級：炭素に3つの炭素取代基"
+      "L100"
+    ]
   },
   {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "化学",
-      "物理化学",
-      "batch50",
-      "L600"
-    ],
     "domain": "化学",
-    "subdomain": "物理化学",
-    "difficulty_initial": 600,
-    "question_text": "定温定圧で自発的に進行する変化について、ギブス自由エネルギー変化 ΔG の符号はどれか。",
+    "subdomain": "無機化学",
+    "question_text": "レモン汁に含まれる主な有機酸として正しいものはどれか。",
     "choices": [
-      "ΔG = 0",
-      "ΔG < 0",
-      "ΔG は常に 0",
-      "ΔG > 0"
+      "酒石酸",
+      "酢酸",
+      "クエン酸",
+      "乳酸"
     ],
-    "correct_choice_index": 3,
-    "short_explanation": "自発変化では ΔG < 0。平衡では ΔG = 0。",
-    "detailed_explanation": "等温等圧で自発的な変化はギブス自由エネルギーが減少（ΔG < 0）。",
-    "learning_objective": "ギブス自由エネルギーと自発性の関係を説明できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "自発変化で ΔG > 0 と誤る",
+    "correct_choice_index": 0,
+    "short_explanation": "レモン汁の酸味の主成分はクエン酸。",
+    "detailed_explanation": "レモンやライムなど柑橘類にはクエン酸が多く含まれ、酸味の原因となる。酢酸は酢の主成分、乳酸はヨーグルトなどに含まれる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "身近な食品と代表的な酸の対応を述べられる",
+    "common_misconception": "すべての酸味は酢酸だと思い込む",
     "distractor_rationales": [
-      "不正解。平衡状態の条件。",
-      "正解。自発変化では ΔG < 0。",
-      "不正解。変化が起こる限り ΔG は一般に 0 ではない。",
-      "不正解。非自発変化の条件。"
+      "不正解。酒石酸はブドウなどに多い。",
+      "不正解。酢酸は酢の主成分。",
+      "正解。レモン汁の酸味の主成分はクエン酸。",
+      "不正解。乳酸はヨーグルトなどに多い。"
     ],
-    "basic_terms": "ギブス自由エネルギー：G = H − TS、自発変化：外部仕事なしに進行する変化"
-  },
-  {
+    "basic_terms": "有機酸：炭素を含む酸、クエン酸：柑橘類に多い三羧酸",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
     "tags": [
       "化学",
       "無機化学",
       "batch50",
-      "L700"
-    ],
-    "domain": "化学",
-    "subdomain": "無機化学",
-    "difficulty_initial": 700,
-    "question_text": "八面体配位の d⁶ 高スピン錯体における CFSE（結晶場安定化エネルギー）の典型的な値はどれか。",
-    "choices": [
-      "0 Δ₀",
-      "−0.4 Δ₀",
-      "−0.6 Δ₀",
-      "−2.0 Δ₀"
-    ],
-    "correct_choice_index": 0,
-    "short_explanation": "高スピン d⁶ は t₂g⁴e_g² で上下が相殺し CFSE = 0。",
-    "detailed_explanation": "高スピン d⁶：CFSE = (−0.4×4 + 0.6×2)Δ₀ = 0。低スピン d⁶ は −2.0Δ₀。",
-    "learning_objective": "配位子場理論で d電子配置と CFSE を計算できる",
-    "cognitive_type": "用語・定義",
-    "common_misconception": "d⁶ は常に CFSE が負だと思い込む",
-    "distractor_rationales": [
-      "正解。高スピン d⁶ の CFSE。",
-      "不正解。d⁴ 高スピンの値。",
-      "不正解。d⁵ 高スピンの値。",
-      "不正解。低スピン d⁶ の値。"
-    ],
-    "basic_terms": "CFSE：結晶場による d軌道エネルギー分裂による安定化、Δ₀：八面体分裂エネルギー"
+      "L100"
+    ]
   },
   {
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "question_text": "次のうち、石油を原料として作られるものはどれか。",
+    "choices": [
+      "鉄",
+      "プラスチック",
+      "石灰石",
+      "食塩"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "プラスチックは石油由来の石化製品から作られる。",
+    "detailed_explanation": "石油を蒸留・分解して得られるエチレンなどのモノマーを重合させ、ポリエチレンなどのプラスチックを製造する。鉄・石灰石・食塩は鉱物資源が主原料。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "石油由来製品と無機資源由来製品を区別できる",
+    "common_misconception": "プラスチックは植物だけから作られると思う",
+    "distractor_rationales": [
+      "不正解。鉄は鉄鉱石などから精錬される。",
+      "正解。プラスチックは石油由来の有機原料から作られる。",
+      "不正解。石灰石は炭酸カルシウムの鉱物。",
+      "不正解。食塩は海水や岩塩から得られる。"
+    ],
+    "basic_terms": "石油：地下から採掘する化石資源、プラスチック：高分子化合物",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "化学",
+      "物理化学",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "分析化学",
+    "question_text": "塩化ナトリウム（食塩）の化学式として正しいものはどれか。",
+    "choices": [
+      "Na₂CO₃",
+      "NaOH",
+      "NaCl",
+      "Na₂SO₄"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解は NaCl。ナトリウムイオン Na⁺ と塩化物イオン Cl⁻ が 1:1 でイオン結合する。",
+    "detailed_explanation": "食塩（塩化ナトリウム）はナトリウムと塩素が 1:1 のイオン結合性化合物。NaOH は水酸化ナトリウム（苛性ソーダ）、Na₂SO₄ は硫酸ナトリウム、Na₂CO₃ は炭酸ナトリウム（ソーダ灰）。いずれもナトリウムを含むが組成と用途が異なる。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "代表的なナトリウム化合物の化学式を区別できる",
+    "common_misconception": "Na₂Cl₂ と書いてしまう（食塩の組成比は 1:1）",
+    "distractor_rationales": [
+      "不正解。Na₂CO₃ は炭酸ナトリウム（ソーダ灰）。",
+      "不正解。NaOH は水酸化ナトリウム（苛性ソーダ）。",
+      "正解。NaCl はナトリウムと塩素の 1:1 イオン結合体。",
+      "不正解。Na₂SO₄ は硫酸ナトリウム。"
+    ],
+    "basic_terms": "NaCl：塩化ナトリウム、イオン結合、Na⁺：ナトリウムイオン、Cl⁻：塩化物イオン",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "化学",
       "分析化学",
       "batch50",
-      "L800"
-    ],
-    "domain": "化学",
-    "subdomain": "分析化学",
-    "difficulty_initial": 800,
-    "question_text": "¹H NMR で化学シフト δ が大きい信号が対応しやすい化学環境はどれか。",
-    "choices": [
-      "強い電子供与基に隣接したプロトン",
-      "強い電子求引基に隣接したプロトン",
-      "シールドされた飽和炭化水素のプロトン",
-      "重水素に置換された炭素に結合したプロトン"
-    ],
-    "correct_choice_index": 1,
-    "short_explanation": "電子求引基は近傍プロトンを脱シールドして δ を大きくする。",
-    "detailed_explanation": "化学シフトは電子密度の低さと相関。求引基は δ を高周波数側へ。D 置換プロトンは NMR に現れない。",
-    "learning_objective": "NMR化学シフトと分子構造の関係を説明できる",
-    "cognitive_type": "基本的な適用",
-    "common_misconception": "電子供与基が δ を大きくすると誤解する",
-    "distractor_rationales": [
-      "不正解。供与基はシールドして δ を小さくする。",
-      "正解。求引基は脱シールドして δ を大きくする。",
-      "不正解。シールドされたプロトンは δ は小さい。",
-      "不正解。重水素は NMR 活性でない。"
-    ],
-    "basic_terms": "化学シフト：参照物質に対する共鳴周波数の相対値、脱シールド：外部磁場を感じやすい電子環境"
+      "L200"
+    ]
   },
   {
+    "domain": "化学",
+    "subdomain": "触媒化学",
+    "question_text": "炭素 ¹²C の質量数と原子番号の組合せとして正しいものはどれか。",
+    "choices": [
+      "質量数 6、原子番号 12",
+      "質量数 12、原子番号 12",
+      "質量数 6、原子番号 6",
+      "質量数 12、原子番号 6"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "正解は質量数 12、原子番号 6。炭素の陽子数（原子番号）は 6、陽子＋中性子数（質量数）は 12。",
+    "detailed_explanation": "原子番号 = 陽子数 = 6（炭素の特徴）。質量数 = 陽子数 + 中性子数 = 6 + 6 = 12。¹²C は最も安定な炭素の同位体で原子量の基準（= 12.000 u）に使われる。¹³C や ¹⁴C は同位体で原子番号は同じ 6 だが中性子数が異なる。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "質量数と原子番号の定義を区別し、具体的な原子に適用できる",
+    "common_misconception": "原子番号と質量数を逆に覚える",
+    "distractor_rationales": [
+      "不正解。原子番号と質量数が入れ替わっている（原子番号 12 は Mg）。",
+      "不正解。原子番号 12 は炭素ではなくマグネシウム（Mg）。",
+      "不正解。質量数 6 の炭素同位体は存在せず（最も軽い炭素同位体は ¹¹C）、原子番号は 6 のみ正しい。",
+      "正解。炭素 ¹²C の質量数 = 12、原子番号（陽子数）= 6。"
+    ],
+    "basic_terms": "原子番号、質量数、陽子数、中性子数、同位体",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "化学",
+      "触媒化学",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸化還元",
+    "question_text": "リトマス紙を塩酸に浸すと青色から何色に変わるか。",
+    "choices": [
+      "赤色",
+      "青色のまま",
+      "緑色",
+      "黄色"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "酸性溶液では青色リトマス紙は赤色に変わる。",
+    "detailed_explanation": "リトマスは pH 指示薬。酸性（H⁺ 過多）では青→赤、塩基性では赤→青に変化する。塩酸は強酸なので青色リトマスは赤になる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "指示薬の色変化と溶液の酸性・塩基性の関係を説明できる",
+    "common_misconception": "酸でもリトマスは青のままだと思う",
+    "distractor_rationales": [
+      "正解。酸性溶液では青色リトマスは赤色に変わる。",
+      "不正解。塩酸は酸性なので青のままではない。",
+      "不正解。リトマスは緑変しない。",
+      "不正解。黄色は該当しない。"
+    ],
+    "basic_terms": "リトマス：pH 指示薬、酸性：pH 7 未満の溶液",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸化還元",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "状態変化",
+    "question_text": "触媒の働きとして正しいものはどれか。",
+    "choices": [
+      "反応速度を上げ、反応後も化学組成が変わらない",
+      "反応物を別の物質に置き換える",
+      "反応の平衡定数を大きくする",
+      "反応速度を変えずに生成物の量だけ増やす"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "触媒は活性化エネルギーを下げて反応速度を上げ、反応後も変化しない。",
+    "detailed_explanation": "触媒は反応経路を変えて活性化エネルギーを低下させるが、平衡位置は変えない。反応後も触媒自身は化学組成が保たれる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "触媒の定義と役割を正しく説明できる",
+    "common_misconception": "触媒は平衡を移動させると誤解する",
+    "distractor_rationales": [
+      "不正解。触媒は反応物を置き換えない。",
+      "正解。触媒は速度を上げ、反応後も組成が変わらない。",
+      "不正解。触媒は平衡定数を変えない。",
+      "不正解。触媒は反応速度を変える。"
+    ],
+    "basic_terms": "触媒：反応速度を変えるが自身は消費されない物質、活性化エネルギー：反応が進むのに必要なエネルギー障壁",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "状態変化",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "元素",
+    "question_text": "次の変化のうち、酸化反応に分類されるものはどれか。",
+    "choices": [
+      "塩化ナトリウムが水に溶ける",
+      "氷が溶けて水になる",
+      "鉄がさびる",
+      "水の電気分解で水素が発生する"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "鉄が酸素と結合して酸化鉄になるのは酸化反応。",
+    "detailed_explanation": "酸化反応は酸素との結合や電子を失う変化。鉄のさびは Fe が O₂ と反応して酸化鉄を生成する。水素発生は還元、溶解・融解は物理変化。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "酸化反応と非酸化反応を区別できる",
+    "common_misconception": "すべての化学変化を酸化還元と混同する",
+    "distractor_rationales": [
+      "不正解。イオン化するが酸化数は変わらない。",
+      "不正解。状態変化であり酸化還元ではない。",
+      "正解。鉄が酸素と結合する酸化反応。",
+      "不正解。水素イオンが電子を受け取る還元側の変化。"
+    ],
+    "basic_terms": "酸化反応：酸素との結合や電子を失う反応、還元反応：酸素を失うか電子を得る反応",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "元素",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "結合",
+    "question_text": "蒸発と沸騰の違いについて正しい説明はどれか。",
+    "choices": [
+      "蒸発は液体表面で任意の温度で起こり、沸騰は沸点で液体内部全体で起こる",
+      "沸騰は固体から気体への変化である",
+      "蒸発は液体内部のみで起こり、沸騰は表面のみで起こる",
+      "蒸発と沸騰は同じ現象の別名である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "蒸発は表面で任意の温度、沸騰は沸点で内部も含めて起こる。",
+    "detailed_explanation": "蒸発は液体表面の分子が気相へ移る現象で沸点以下でも起こる。沸騰は沸点に達したとき液体内部でも気泡が形成される現象。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "蒸発と沸騰の違いを正しく説明できる",
+    "common_misconception": "蒸発と沸騰を同じ現象と考える",
+    "distractor_rationales": [
+      "不正解。説明が逆。",
+      "不正解。沸騰は液体から気体への変化。",
+      "不正解。蒸発は表面、沸騰は内部も含む。",
+      "正解。蒸発は表面で任意の温度、沸騰は沸点で全体。"
+    ],
+    "basic_terms": "蒸発：液体表面からの気化、沸騰：沸点での気化",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "結合",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "question_text": "ダイヤモンドの炭素原子間の結合として正しいものはどれか。",
+    "choices": [
+      "sp³ 混成軌道による正四面体型の共有結合",
+      "金属結合（自由電子による結合）",
+      "イオン結合（C⁴⁺ と C⁴⁻）",
+      "分子間力（ファンデルワールス力）"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は sp³ 共有結合。ダイヤモンドの炭素は4本の共有結合で正四面体状に結合した共有結合性結晶。",
+    "detailed_explanation": "ダイヤモンドは炭素原子が sp³ 混成をとり、隣接する4個の炭素と共有結合した巨大な共有結合性結晶。非常に硬く電気を通さない（絶縁体）。グラファイト（黒鉛）は sp² 混成で層状構造をもち電気伝導性をもつ。同素体の違いが物性の違いに直結する。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ダイヤモンドの結晶構造・化学結合・物性を説明できる",
+    "common_misconception": "炭素同士がイオン結合すると誤解する（炭素はC⁴⁺/C⁴⁻として振る舞わない）",
+    "distractor_rationales": [
+      "正解。ダイヤモンドは炭素の sp³ 共有結合による正四面体型の共有結合性結晶。",
+      "不正解。金属結合は金属元素に見られる結合様式であり炭素には該当しない。",
+      "不正解。炭素同士のイオン結合は通常存在しない（炭素の電気陰性度が同じ）。",
+      "不正解。ファンデルワールス力はダイヤモンドの結晶内の主結合ではない（グラファイトの層間に見られる）。"
+    ],
+    "basic_terms": "sp³ 混成軌道、共有結合性結晶、ダイヤモンド、同素体、グラファイト",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸塩基",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "question_text": "濃度 0.01 mol/L の HCl 水溶液の pH として最も近い値はどれか。",
+    "choices": [
+      "7",
+      "12",
+      "1",
+      "2"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "強酸 HCl は完全解離するので pH = −log(0.01) = 2。",
+    "detailed_explanation": "HCl は強酸として [H⁺] ≈ 0.01 mol/L。pH = −log₁₀[H⁺] = −log(10⁻²) = 2。pH 7 は中性、12 は塩基性。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "強酸溶液の pH を濃度から計算できる",
+    "common_misconception": "pH を濃度の値そのままと混同する",
+    "distractor_rationales": [
+      "不正解。pH 7 は中性。",
+      "不正解。pH 12 は強塩基性。",
+      "不正解。pH 1 は [H⁺] = 0.1 M。",
+      "正解。pH = −log(0.01) = 2。"
+    ],
+    "basic_terms": "pH：水素イオン濃度の負の常用対数、強酸：水溶液中でほぼ完全に解離する酸",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "有機化学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "question_text": "一般式 CₙH₂ₙ₊₂ に属する炭化水素の族はどれか。",
+    "choices": [
+      "アルカン",
+      "芳香族",
+      "アルケン",
+      "アルキン"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "CₙH₂ₙ₊₂ は飽和炭化水素アルカンの一般式。",
+    "detailed_explanation": "アルカンは単結合のみの飽和炭化水素で CₙH₂ₙ₊₂。アルケンは CₙH₂ₙ（二重結合1）、アルキンは CₙH₂ₙ₋₂（三重結合1）。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "炭化水素族の一般式を区別できる",
+    "common_misconception": "アルケンとアルカンの一般式を混同する",
+    "distractor_rationales": [
+      "正解。飽和炭化水素アルカンの一般式。",
+      "不正解。芳香族はベンゼン骨格をもつ。",
+      "不正解。アルケンは CₙH₂ₙ。",
+      "不正解。アルキンは CₙH₂ₙ₋₂。"
+    ],
+    "basic_terms": "アルカン：飽和炭化水素、アルケン：炭素間に二重結合をもつ不飽和炭化水素",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "無機化学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "question_text": "錯イオンについて正しい記述はどれか。",
+    "choices": [
+      "金属結合を主成分とするでできたクラスター",
+      "中心金属と配位子が配位結合で結ばれた複合体イオン",
+      "共有結合を主成分とするでできた中性分子",
+      "イオン結合の結晶をそのまま溶かしたもの"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "錯イオンは中心金属に配位子が配位した複合体イオン。",
+    "detailed_explanation": "[Cu(NH₃)₄]²⁺ のように中心金属イオンにアンモニアなどの配位子が配位結合で結合したイオン。配位化合物の一部。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "錯イオンの構造を正しく説明できる",
+    "common_misconception": "錯イオンを単純なイオン結合と混同する",
+    "distractor_rationales": [
+      "不正解。金属結合クラスターとは異なる。",
+      "不正解。錯イオンは配位結合を含む。",
+      "不正解。共有結合のみの中性分子ではない。",
+      "正解。中心金属と配位子の配位結合による複合体イオン。"
+    ],
+    "basic_terms": "錯イオン：配位化合物のイオン、配位子：中心金属に配位する分子やイオン",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "物理化学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "分析化学",
+    "question_text": "物質量 1 mol に含まれる粒子数を表す定数はどれか。",
+    "choices": [
+      "気体定数 R",
+      "ボルツマン定数",
+      "アボガドロ定数",
+      "プランク定数"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "1 mol あたり 6.02×10²³ 個の粒子数はアボガドロ定数。",
+    "detailed_explanation": "アボガドロ定数 N_A ≈ 6.022×10²³ mol⁻¹。ボルツマン定数は分子運動論、プランク定数は量子論、R は気体定数。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "モルとアボガドロ定数の関係を説明できる",
+    "common_misconception": "ボルツマン定数とアボガドロ定数を混同する",
+    "distractor_rationales": [
+      "正解。1 mol の粒子数を定義する定数。",
+      "不正解。ボルツマン定数は k_B。",
+      "不正解。アボガドロ定数が 1 mol の粒子数。",
+      "不正解。プランク定数は h。"
+    ],
+    "basic_terms": "モル：物質量の単位、物質量：粒子数をアボガドロ定数で割った量",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "分析化学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "触媒化学",
+    "question_text": "酸・塩基滴定の終点で用いるフェノールフタレインは、塩基性域で何色を示すか。",
+    "choices": [
+      "無色",
+      "赤色",
+      "緑色",
+      "赤紫色"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "フェノールフタレインは pH 8.2 以上で赤紫色を示す。",
+    "detailed_explanation": "フェノールフタレインは酸性・中性（pH < 8.2）では無色、弱塩基性以上で赤紫色。強塩基滴定の終点検出に用いられる。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "滴定指示薬の変色域を説明できる",
+    "common_misconception": "フェノールフタレインは常に赤色だと思う",
+    "distractor_rationales": [
+      "不正解。酸性では無色。",
+      "不正解。赤色は別の指示薬。",
+      "不正解。緑色は該当しない。",
+      "正解。塩基性域（pH 8.2 以上）で赤紫色。"
+    ],
+    "basic_terms": "滴定：溶液の濃度を化学反応で定量する手法、指示薬：pH に応じて色が変わる物質",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "触媒化学",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸化還元",
+    "question_text": "ハーバー・ボッシュ法（N₂ + 3H₂ ⇌ 2NH₃、正反応は発熱）においてアンモニアの平衡収率を高める操作として正しいものはどれか。",
+    "choices": [
+      "触媒を加えることで平衡が正方向に移動する",
+      "温度を上げ、圧力を下げる",
+      "温度を下げ、圧力を上げる",
+      "温度と圧力をどちらも下げる"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解は低温・高圧。発熱反応は低温で正方向に平衡が移動し、気体モル数が減る反応は高圧で正方向に移動する。",
+    "detailed_explanation": "ルシャトリエの原理：①正反応が発熱（ΔH < 0）→ 温度を下げると平衡が正方向に移動し NH₃ 収率が上昇。②反応物4 mol（N₂+3H₂）→ 生成物2 mol（2NH₃）→ 高圧で mol 数が少ない側（正方向）へ移動。触媒は反応速度を速めるが平衡位置は変えない。実際には低温だと速度が落ちるため 400–500°C の妥協点を使う。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "ルシャトリエの原理を発熱反応・気体モル数変化のある反応に適用できる",
+    "common_misconception": "高温にすると収率も上がると誤解する（高温では速度は上がるが平衡収率は下がる）",
+    "distractor_rationales": [
+      "不正解。触媒は平衡位置を変えず、収率ではなく速度（平衡到達時間）に影響する。",
+      "不正解。高温では平衡が逆方向（吸熱方向）に移動し NH₃ 収率が下がる。圧力を下げると mol 数の多い反応物側に移動し不利。",
+      "正解。低温で発熱正方向・高圧でモル数減少正方向の両方が NH₃ 収率を高める。",
+      "不正解。圧力低下は気体モル数の多い側（逆方向）に平衡を移動させ収率が下がる。"
+    ],
+    "basic_terms": "ルシャトリエの原理、ハーバー・ボッシュ法、発熱反応、平衡移動、触媒",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸化還元",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "状態変化",
+    "question_text": "KMnO₄ 中のマンガンの酸化数として正しいものはどれか。",
+    "choices": [
+      "+2",
+      "+4",
+      "+6",
+      "+7"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "KMnO₄ では Mn は +7 価。",
+    "detailed_explanation": "K⁺(+1)×1 + Mn(x) + O(−2)×4 = 0 より x = +7。MnO₂ は +4、Mn²⁺ は +2。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "複素イオン化合物の酸化数を計算できる",
+    "common_misconception": "マンガンは常に +2 価だと思い込む",
+    "distractor_rationales": [
+      "不正解。Mn²⁺ の酸化数。",
+      "不正解。MnO₂ の酸化数。",
+      "不正解。MnO₄²⁻ の酸化数。",
+      "正解。KMnO₄ 中の Mn は +7。"
+    ],
+    "basic_terms": "酸化数：原子の形式上の電荷、酸化剤：他物質を酸化し自身は還元される物質",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "状態変化",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "元素",
+    "question_text": "ルシャトリエの原理について正しい説明はどれか。",
+    "choices": [
+      "平衡系に変化を加えると、その変化を打ち消す方向に平衡が移動する",
+      "平衡に達すると正反応が完全に止まる",
+      "触媒を加えると平衡定数が増大する",
+      "温度を上げると常に生成物側へ平衡が移動する"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ルシャトリエの原理は平衡系が外部攪乱を打ち消す方向へ移動することを述べる。",
+    "detailed_explanation": "濃度・圧力・温度の変化に対し、平衡はその影響を緩和する方向にシフトする。触媒は平衡定数を変えず、温度効果は反応熱の符号に依存する。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ルシャトリエの原理を平衡移動の説明に用いられる",
+    "common_misconception": "平衡に達すると反応が停止すると考える",
+    "distractor_rationales": [
+      "正解。ルシャトリエの原理の正しい記述。",
+      "不正解。平衡では正反応速度が等しくなる。",
+      "不正解。触媒は平衡定数を変えない。",
+      "不正解。放熱反応では温度上昇で反応物側へ移動する。"
+    ],
+    "basic_terms": "化学平衡：正反応速度が等しい状態、ルシャトリエの原理：平衡移動の方向を予測する原理",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "元素",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "結合",
+    "question_text": "同じ元素で中性子数が異なる原子のことを何というか。",
+    "choices": [
+      "同素体",
+      "同系物",
+      "異性体",
+      "同位体"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "中性子数が異なる同元素の原子は同位体。",
+    "detailed_explanation": "¹²C と ¹⁴C は同位体。同素体は同元素の異なる結晶構造（O₂ と O₃）、同系物は構造が類似する化合物系列。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "同位体・同素体・同系物を区別できる",
+    "common_misconception": "同位体と同素体を混同する",
+    "distractor_rationales": [
+      "不正解。同素体は同元素の異なる構造。",
+      "不正解。同系物は化合物系列。",
+      "不正解。異性体は構造異なる化合物。",
+      "正解。同位体の定義。"
+    ],
+    "basic_terms": "同位体：原子番号同じ・質量数異なる原子、質量数：陽子数と中性子数の和",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "結合",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "question_text": "NH₃ 分子の形状を VSEPR 理論で予測したとき、最も適切なものはどれか。",
+    "choices": [
+      "直線形",
+      "正四面体形",
+      "三角錐形",
+      "平面三角形"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "NH₃ は孤対電子1対を含む四面体配位で三角錐形。",
+    "detailed_explanation": "N は 3 結合と 1 孤対電子。電子対は四面体配位だが、分子形状は H₃N の三角錐形。H₂O は折れ線形、CH₄ は正四面体。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "VSEPR 理論で分子形状を予測できる",
+    "common_misconception": "電子対の配位と分子形状を同一視する",
+    "distractor_rationales": [
+      "不正解。直線形は CO₂ など。",
+      "不正解。正四面体は CH₄。",
+      "正解。孤対電子を含む四面体配位の三角錐形。",
+      "不正解。平面三角形は BF₃。"
+    ],
+    "basic_terms": "VSEPR：電子対反発に基づく分子形状予測、孤対電子：結合に使われない電子対",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸塩基",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "question_text": "弱酸とその共役塩基からなる緩衝溶液の主な性質として正しいものはどれか。",
+    "choices": [
+      "水の自己イオン化を主成分とするで pH が決まる",
+      "少量の酸・塩基を加えても pH が大きく変わらない",
+      "pH は多くの場合 7 に固定される",
+      "強酸と強塩基を混合した溶液である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "緩衝溶液は少量の酸・塩基添加に対し pH 変化を抑制する。",
+    "detailed_explanation": "酢酸-酢酸ナトリウム系では、添加酸は共役塩基と、添加塩基は弱酸と反応し pH を安定化。ヘンダーソン・ハッセルバルヒの式で pH を記述できる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "緩衝溶液の働きを説明できる",
+    "common_misconception": "緩衝液は pH 7 固定だと思う",
+    "distractor_rationales": [
+      "不正解。水の自己イオン化だけでは緩衝作用を説明できない。",
+      "正解。少量の酸・塩基添加で pH が大きく変わらない。",
+      "不正解。pH 7 固定ではない。",
+      "不正解。強酸強塩基混合は緩衝ではない。"
+    ],
+    "basic_terms": "緩衝溶液：pH 変化を抑制する溶液、共役酸塩基対：プロトン授受で互いに変換する対",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "有機化学",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "question_text": "温度一定の条件で、気体の溶解度が圧力（分圧）に比例することを示す法則はどれか。",
+    "choices": [
+      "ヘンリーの法則",
+      "ラウールの法則",
+      "ダルトンの分圧の法則",
+      "アボガドロの法則"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解はヘンリーの法則。気体の溶解度は分圧に比例する（C = kP）。",
+    "detailed_explanation": "ヘンリーの法則：溶解度 C = k × P（k はヘンリー定数、P は気体の分圧）。ラウールの法則は溶液の蒸気圧降下に関する法則、ダルトンの分圧の法則は混合気体の全圧、アボガドロの法則は同温同圧下での体積と物質量の関係。炭酸飲料は高圧 CO₂ を溶解させた応用例。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "溶液に関する代表的な法則を正確に区別できる",
+    "common_misconception": "蒸気圧降下のラウールの法則と混同する",
+    "distractor_rationales": [
+      "正解。ヘンリーの法則は気体の溶解度が分圧に比例することを示す。",
+      "不正解。ラウールの法則は溶液の蒸気圧降下に関する法則。",
+      "不正解。ダルトンの分圧の法則は混合気体の全圧 = 各成分の分圧の和。",
+      "不正解。アボガドロの法則は同温同圧で同体積の気体の分子数が等しいという法則。"
+    ],
+    "basic_terms": "ヘンリーの法則：C = kP、分圧、溶解度、ラウールの法則",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "無機化学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "question_text": "同じ周期（例：第2周期 Li→Ne）において、原子番号が増えるにつれて電気陰性度はどのように変化するか。",
+    "choices": [
+      "減少する",
+      "増加する",
+      "増加した後に急激に減少する",
+      "一定のまま変化しない"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解は増加する。同一周期では右に行くほど核電荷が増し電子を引き寄せる力が強くなる。",
+    "detailed_explanation": "電気陰性度（ポーリングスケール）の傾向：同周期では左→右で増加（例：Li 1.0 < Be 1.5 < C 2.5 < N 3.0 < O 3.4 < F 4.0）。同族では上→下で減少（有効核電荷の増加より原子半径増大の影響が大きい）。希ガスは通常除外。フッ素（F）が全元素中で最大の電気陰性度をもつ。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "周期表における電気陰性度の周期的変化傾向を説明できる",
+    "common_misconception": "同周期で電気陰性度が一定、または減少すると誤解する",
+    "distractor_rationales": [
+      "不正解。同周期では右に行くほど核電荷が増え電気陰性度は上昇する。",
+      "正解。同周期では右に行くほど有効核電荷が増加し電気陰性度が増す。",
+      "不正解。急激な減少は見られず、同周期では単調に増加する（希ガスを除く）。",
+      "不正解。同周期でも電気陰性度は原子番号とともに変化する。"
+    ],
+    "basic_terms": "電気陰性度、ポーリングスケール、有効核電荷、周期的性質、フッ素",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "物理化学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "分析化学",
+    "question_text": "正方形平面 Pt(II) 錯体における trans 効果について正しい記述はどれか。",
+    "choices": [
+      "配位子の反式位置にある配位子の解離を促進する効果",
+      "配位子が順式位置の金属-配位子結合を弱める効果",
+      "すべての配位子で同程度に現れる効果",
+      "錯体の色だけを変える効果で反応性には無関係"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "trans 効果は反式位置の配位子解離を促進する。",
+    "detailed_explanation": "強 trans 効果をもつ配位子（I⁻, SCN⁻, CO 等）は反対側の配位子を反式に置くと、その配位子の解離を促進。順式効果（cis effect）とは区別される。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "錯体反応における trans 効果を説明できる",
+    "common_misconception": "trans 効果と cis 効果を混同する",
+    "distractor_rationales": [
+      "正解。反式位置の配位子解離を促進する効果。",
+      "不正解。順式位置の結合弱化は cis 効果の領域。",
+      "不正解。配位子により効果の強さが大きく異なる。",
+      "不正解。反応性・置換速度に直接関与する。"
+    ],
+    "basic_terms": "trans 効果：反式配位子の解離促進、配位置換：配位子が入れ替わる反応",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "分析化学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "触媒化学",
+    "question_text": "アレニウスの式 k = A exp(−Eₐ/RT) における Eₐ が表すものはどれか。",
+    "choices": [
+      "反応熱 ΔH",
+      "活性化エネルギー",
+      "活性化複合体のエントロピー",
+      "平衡定数 K"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "Eₐ は反応が進むために越えるエネルギー障壁（活性化エネルギー）。",
+    "detailed_explanation": "アレニウス式は温度と速度定数の関係。Eₐ は遷移状態までのエネルギー差。A は頻度因子、ΔH は反応熱、K は平衡定数。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "アレニウス式の各パラメータの意味を説明できる",
+    "common_misconception": "活性化エネルギーと反応熱を同一視する",
+    "distractor_rationales": [
+      "不正解。ΔH は反応熱。",
+      "正解。活性化エネルギーの定義。",
+      "不正解。エントロピーは別パラメータ。",
+      "不正解。K は平衡定数。"
+    ],
+    "basic_terms": "活性化エネルギー：反応速度を支配するエネルギー障壁、アレニウス式：速度定数と温度の関係式",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "触媒化学",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸化還元",
+    "question_text": "Beer-Lambert 法則 A = εcl が成り立つ条件として最も適切なものはどれか。",
+    "choices": [
+      "単色光・低濃度・吸光粒子が独立に吸光する",
+      "入射光が試料で完全に吸収される",
+      "温度が 0 K である",
+      "極めて高濃度域で吸光度が飽和している"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "Beer-Lambert 法則は低濃度・単色光・独立吸光が前提。",
+    "detailed_explanation": "高濃度では分子間相互作用や再吸収で線形性が崩れる。単色光で均一な吸光係数 ε が定義され、濃度 c と光路長 l の積に比例して吸光度 A が増える。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "吸光光度法の定量原理と適用条件を説明できる",
+    "common_misconception": "濃度が高くても常に線形だと思う",
+    "distractor_rationales": [
+      "正解。低濃度・単色光・独立吸光が前提。",
+      "不正解。完全吸収は定量に不適。",
+      "不正解。0 K は不要な条件。",
+      "不正解。高濃度では法則が破れる。"
+    ],
+    "basic_terms": "吸光度：透過光の減少度、モル吸光係数：濃度1 mol/L・光路1 cm での吸光度",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸化還元",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "状態変化",
+    "question_text": "均一触媒反応で触媒濃度を2倍にしたとき、初速度への典型的な影響はどれか。",
+    "choices": [
+      "初速度は約4倍になる",
+      "平衡定数が2倍になる",
+      "初速度は変わらない",
+      "初速度は約2倍になる"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "触媒は反応速度に比例して影響し、濃度2倍で速度も約2倍（機構による）。",
+    "detailed_explanation": "多くの均一触媒反応では触媒が反応速度式に一次で現れ、触媒濃度を2倍にすると初速度も約2倍。触媒は平衡定数を変えない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "触媒濃度と反応速度の関係を説明できる",
+    "common_misconception": "触媒濃度は平衡定数を変えると誤解する",
+    "distractor_rationales": [
+      "不正解。二次依存は機構次第で稀。",
+      "不正解。触媒は平衡定数を変えない。",
+      "不正解。触媒濃度は速度に影響する。",
+      "正解。触媒が速度式に一次で現れる典型例。"
+    ],
+    "basic_terms": "均一触媒：触媒と反応物が同一相、初速度：反応開始直後の速度",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "状態変化",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "元素",
+    "question_text": "弱酸（HA）とその共役塩基（A⁻）を含む緩衝液の pH を表すヘンダーソン・ハッセルバルヒ式として正しいものはどれか。",
+    "choices": [
+      "pH = pKa − log([A⁻]/[HA])",
+      "pH = pKa × [A⁻]/[HA]",
+      "pH = pKa + log([A⁻]/[HA])",
+      "pH = Ka + [A⁻]/[HA]"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解は pH = pKa + log([A⁻]/[HA])。等モル混合では log 項が 0 となり pH = pKa。",
+    "detailed_explanation": "弱酸の解離定数 Ka = [H⁺][A⁻]/[HA] より [H⁺] = Ka × [HA]/[A⁻]。−log を取ると pH = pKa + log([A⁻]/[HA])。等モル（[A⁻] = [HA]）では pH = pKa で最大緩衝能をもつ。生体系（血液 pH 7.4）や実験系の緩衝液設計に広く使われる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ヘンダーソン・ハッセルバルヒ式を正確に書き、緩衝液の pH 計算に適用できる",
+    "common_misconception": "log の分子分母を逆にして引き算する（符号を間違える）",
+    "distractor_rationales": [
+      "不正解。log 前の符号が逆（−）になっている。[A⁻]/[HA] の代わりに [HA]/[A⁻] なら減算形式が成立するが式の形が異なる。",
+      "不正解。log ではなく乗算（×）になっており式の形が間違い。",
+      "正解。pH = pKa + log([A⁻]/[HA]) がヘンダーソン・ハッセルバルヒ式。",
+      "不正解。Ka（解離定数）は pKa（負の対数）ではなく単位も合わない。"
+    ],
+    "basic_terms": "ヘンダーソン・ハッセルバルヒ式、緩衝液、pKa、共役酸塩基対、緩衝能",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "元素",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "結合",
+    "question_text": "遷移金属元素の d ブロックに関する記述として正しいものはどれか。",
+    "choices": [
+      "f 軌道にを主成分とする価電子がある",
+      "典型元素と同様に族で化学的性質が完全に一致する",
+      "最外殻は多くの場合 s 軌道を主成分とするが価電子である",
+      "(n−1)d 軌道と ns 軌道の両方に価電子をもつ"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "遷移金属は (n−1)d と ns に価電子をもつ。",
+    "detailed_explanation": "3d 遷移金属は 3d と 4s に電子を持ち、多様な酸化数と錯体形成能を示す。典型元素は最外殻 ns のみが主に価電子。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "周期表ブロックと電子配置の対応を説明できる",
+    "common_misconception": "遷移金属の価電子は ns のみと考える",
+    "distractor_rationales": [
+      "不正解。f ブロックは別（内殻遷移元素）。",
+      "不正解。遷移金属は族内でも性質が多様。",
+      "不正解。s 軌道のみではない。",
+      "正解。(n−1)d と ns に価電子をもつ。"
+    ],
+    "basic_terms": "遷移金属：d ブロック元素、価電子：化学結合に関与する電子",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "結合",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "question_text": "二原子分子の結合軌道と反結合軌道のエネルギー差が大きいほど、一般に予想されることはどれか。",
+    "choices": [
+      "分子軌道は原子軌道と同一エネルギーになる",
+      "結合が弱く解離エネルギーが小さい",
+      "結合が強く解離エネルギーが大きい",
+      "分子は常に不安定で存在しない"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "軌道エネルギー差が大きいほど結合性が強く解離エネルギーが増大。",
+    "detailed_explanation": "分子軌道理論では結合軌道と反結合軌道の分裂が大きいほど結合次数が増し、結合エネルギーが大きくなる。O₂ は反結合軌道に単独電子をもち常磁性。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "分子軌道理論で結合強度を定性的に説明できる",
+    "common_misconception": "軌道エネルギー差と結合強度の関係を逆に解釈する",
+    "distractor_rationales": [
+      "不正解。原子軌道とはエネルギーが異なる。",
+      "不正解。エネルギー差大→結合強。",
+      "正解。結合軌道の安定化が大きいほど結合が強い。",
+      "不正解。多くの分子は安定に存在する。"
+    ],
+    "basic_terms": "分子軌道：分子全体に広がる軌道、解離エネルギー：分子を原子に分離するのに要するエネルギー",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸塩基",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "question_text": "HSAB 原理に基づき、硬酸と最も強く結合しやすい塩基の組はどれか。",
+    "choices": [
+      "Ag⁺ と I⁻",
+      "Fe³⁺ と F⁻",
+      "Pt²⁺ と S²⁻",
+      "Cu⁺ と CN⁻"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "硬酸（小さく硬い酸）は硬塩基（F⁻ 等）と強く結合。",
+    "detailed_explanation": "HSAB：硬-硬、軟-軟の組み合わせが安定。Fe³⁺ は硬酸で F⁻ と強い結合。Ag⁺, Cu⁺ は軟酸で I⁻, S²⁻, CN⁻ と親和。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "HSAB 原理で酸塩基の組み合わせを予測できる",
+    "common_misconception": "すべての金属イオンが軟酸だと考える",
+    "distractor_rationales": [
+      "不正解。Ag⁺ は軟酸で I⁻ と結合。",
+      "正解。硬酸 Fe³⁺ と硬塩基 F⁻ の組。",
+      "不正解。Pt²⁺ は軟酸寄りで S²⁻ と結合。",
+      "不正解。Cu⁺ は軟酸で CN⁻ と結合。"
+    ],
+    "basic_terms": "HSAB：硬軟酸塩基原理、硬酸：小さく電荷密度の高い酸",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "有機化学",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "question_text": "（CH₃）₃C−Br がアセトン中の NaI に反応するとき、主要な反応機構はどれか。",
+    "choices": [
+      "SN2",
+      "E2",
+      "SN1",
+      "E1"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "第三級ハロゲン化アルキルは極性溶媒で SN1 が優勢。",
+    "detailed_explanation": "第三級・極性溶媒中でカルボカチオン中間体を経る SN1 が進行。SN2 は立体障害で不利、E1/E2 は強塩基条件で優勢。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "ハロゲン化アルキルの級と反応機構の対応を説明できる",
+    "common_misconception": "すべてのハロゲン化アルキルが SN2 だと考える",
+    "distractor_rationales": [
+      "不正解。第三級では SN2 は不利。",
+      "不正解。強塩基条件でない。",
+      "正解。第三級・極性溶媒で SN1。",
+      "不正解。強塩基・加熱条件で優勢。"
+    ],
+    "basic_terms": "SN1：カルボカチオン中間体を経る親核置換、第三級：炭素に3つの炭素取代基",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "無機化学",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "question_text": "正八面体型錯体において、結晶場分裂エネルギー Δo が大きくなるにつれて安定化されるスピン状態はどれか。",
+    "choices": [
+      "Δo とスピン状態は無関係である",
+      "高スピン状態",
+      "スピン状態は変化しない",
+      "低スピン状態"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "正解は低スピン状態。Δo が大きいほど電子は低エネルギーの t₂g 軌道に集まり、低スピン配置が安定。",
+    "detailed_explanation": "結晶場理論では Δo（八面体場分裂エネルギー）と電子対反発エネルギー P の比較でスピン状態が決まる。Δo > P → 低スピン（電子が t₂g に優先充填）。Δo < P → 高スピン（電子は各軌道に分散）。強配位子（CN⁻, CO など）は大きな Δo を与え低スピン錯体を形成しやすい。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "結晶場分裂エネルギーとスピン状態の関係を説明できる",
+    "common_misconception": "Δo が大きいほど高スピン状態になると誤解する",
+    "distractor_rationales": [
+      "不正解。Δo と電子対反発エネルギー P の大小がスピン状態を決める重要な要因。",
+      "不正解。高スピン状態は Δo < P のとき（弱配位子場）に安定化される。",
+      "不正解。Δo の大きさはスピン状態の選択に直接影響する。",
+      "正解。Δo > P のとき低スピン状態が安定であり、強配位子場で実現。"
+    ],
+    "basic_terms": "結晶場分裂エネルギー Δo、高スピン・低スピン、t₂g 軌道、配位子場理論",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "物理化学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "分析化学",
+    "question_text": "多成分系のギブス・デュヘム方程式 Σ xᵢ dμᵢ = 0 が意味することはどれか。",
+    "choices": [
+      "成分の化学ポテンシャル変化がモル分率で加重和するとゼロになる",
+      "全成分の化学ポテンシャルが多くの場合等しい",
+      "エントロピーは多くの場合増大する",
+      "平衡定数は温度を主成分とするで決まる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ギブス・デュヘム式は成分間の化学ポテンシャル変化の拘束を与える。",
+    "detailed_explanation": "恒温恒圧で G の完全微分から導かれ、独立に化学ポテンシャルを変えられない。相平衡・活量係数の議論の基礎。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "多成分系熱力学の拘束条件を説明できる",
+    "common_misconception": "各成分の化学ポテンシャルが独立に任意に変えられると考える",
+    "distractor_rationales": [
+      "正解。モル分率加重和 Σ xᵢ dμᵢ = 0。",
+      "不正解。化学ポテンシャルは一般に成分ごとに異なる。",
+      "不正解。孤立系のエントロピー増大の原理。",
+      "不正解。平衡定数は温度と標準自由エネルギー変化で決まる。"
+    ],
+    "basic_terms": "化学ポテンシャル：成分追加の偏モルギブスエネルギー、ギブス・デュヘム方程式：多成分系の拘束",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "分析化学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "触媒化学",
+    "question_text": "EI-MS で分子イオン峰が弱い化合物で、構造情報を補う手法として最も適切なものはどれか。",
+    "choices": [
+      "GC 保持時間を主成分とするの比較",
+      "MS/MS による断片イオンの段階的分解",
+      "比重測定を主成分とする",
+      "標準試料との Rf 値比較を主成分とする"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "MS/MS は段階的断片化で構造情報を得る。",
+    "detailed_explanation": "分子イオンが不安定な場合、MS/MS で前駆イオンを選択し衝突誘起解離で特徴的断片を得る。軟イオン化（CI, ESI）も併用される。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "質量分析における構造決定戦略を説明できる",
+    "common_misconception": "分子イオン峰がなければ構造決定不能だと考える",
+    "distractor_rationales": [
+      "不正解。保持時間だけでは構造同定は困難。",
+      "正解。MS/MS 断片パターンで構造を絞り込める。",
+      "不正解。比重は構造決定に不十分。",
+      "不正解。TLC の Rf は補助情報にとどまる。"
+    ],
+    "basic_terms": "EI-MS：電子衝撃イオン化質量分析、MS/MS：二段階質量分析",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "触媒化学",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸化還元",
+    "question_text": "金属酸化物触媒による選択酸化（例：SO₂→SO₃）で Mars-van Krevelen 機構が示すことはどれか。",
+    "choices": [
+      "反応物が触媒表面の酸素を奪い、欠乏酸素は気相 O₂ で補充される",
+      "触媒は反応後に永久に酸素を失う",
+      "均一溶液中のラジカル連鎖のみで進行する",
+      "平衡定数のみが速度を決める"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "MvK 機構は lattice oxygen の出入りと再酸化を含む。",
+    "detailed_explanation": "選択酸化では反応物が触媒晶格酸素を消費し、気相 O₂ が晶格を再酸化。酸素濃度と選択性の関係を説明できる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "酸化物触媒の酸化還元サイクル機構を説明できる",
+    "common_misconception": "触媒酸素は反応中に消費され再生されないと考える",
+    "distractor_rationales": [
+      "正解。反応物が晶格酸素を奪い O₂ で補充されるサイクル。",
+      "不正解。晶格酸素は O₂ で再生される。",
+      "不正解。表面触媒反応の機構。",
+      "不正解。平衡定数だけでは速度は決まらない。"
+    ],
+    "basic_terms": "Mars-van Krevelen 機構：晶格酸素を介する酸化触媒機構、選択酸化：目的生成物への酸化",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸化還元",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "状態変化",
+    "question_text": "プルバイックス図で金属が腐食（溶解）しやすい領域の特徴として正しいものはどれか。",
+    "choices": [
+      "金属表面が完全に鈍化被膜で保護されている",
+      "すべての pH で金属は熱力学的に安定",
+      "電位がいかに高くても金属は溶解しない",
+      "金属イオン濃度が高く、電位が腐食域にある"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "腐食域は金属がイオン化しやすい電位-pH 領域。",
+    "detailed_explanation": "プルバイックス図は電位と pH で安定相を示す。腐食域では金属 M が Mⁿ⁺ に溶出しやすい。鈍化域では酸化物被膜が保護。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "プルバイックス図から金属の腐食・鈍化を読み取れる",
+    "common_misconception": "高電位なら常に金属が安定だと考える",
+    "distractor_rationales": [
+      "不正解。鈍化域の特徴。",
+      "不正解。pH と電位により安定相は変わる。",
+      "不正解。電位が低い（負）ほど溶解しやすい領域がある。",
+      "正解。腐食域では金属イオン化が熱力学的に有利。"
+    ],
+    "basic_terms": "プルバイックス図：電位-pH 平面での安定相図、腐食：金属のイオン化による劣化",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "状態変化",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "元素",
+    "question_text": "密度汎関数理論（DFT）のホーエンベルク・コーン定理に関する記述として正しいものはどれか。",
+    "choices": [
+      "基底状態の全エネルギーは電子密度の汎関数として一意に定まる",
+      "励起状態のエネルギーも基底状態の電子密度だけから直接計算できる",
+      "交換相関汎関数の厳密な形が理論的に導かれており解析的に表現できる",
+      "DFT ではコーン・シャム軌道を用いずに電子密度だけで計算を完結させる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は「基底状態の全エネルギーは電子密度の汎関数として一意に定まる」。これがホーエンベルク・コーン第一定理。",
+    "detailed_explanation": "ホーエンベルク・コーン定理（1964）は①外部ポテンシャルは基底状態の電子密度 ρ(r) によって一意に決まり、全エネルギーは ρ の汎関数 E[ρ] として表せる ②E[ρ] は真の基底状態電子密度で最小値をとる、の二つからなる。交換相関汎関数（Exc）の厳密形は未知で LDA・GGA などの近似が使われる。コーン・シャム法では仮想の非相互作用系の軌道を導入して計算する。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "ホーエンベルク・コーン定理の内容とDFT計算の近似を正確に述べられる",
+    "common_misconception": "交換相関汎関数が厳密に与えられると誤解する",
+    "distractor_rationales": [
+      "正解。ホーエンベルク・コーン第一定理：全エネルギーは基底状態の電子密度の汎関数として一意に定まる。",
+      "不正解。基底状態の電子密度から励起状態を直接求めることはホーエンベルク・コーン定理の範囲外。",
+      "不正解。交換相関汎関数の厳密形は不明で、LDA や GGA などの近似が用いられる。",
+      "不正解。コーン・シャム DFT では仮想的な単粒子軌道（コーン・シャム軌道）を使って運動エネルギーを計算する。"
+    ],
+    "basic_terms": "密度汎関数理論（DFT）、電子密度、ホーエンベルク・コーン定理、交換相関汎関数、コーン・シャム法",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "元素",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "結合",
+    "question_text": "金（Au）が独特の黄色を示す主な要因として、相对论効果に関連して正しいものはどれか。",
+    "choices": [
+      "金の原子量が最大であるため",
+      "6s 軌道の収縮により 5d→6s 遷移のエネルギーが可視光域に入る",
+      "4f 軌道が完全に空であるため",
+      "金は常に +1 酸化状態のみをとるため"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "相対論効果で 6s 収縮・5d 拡張し、間接的に色を決める。",
+    "detailed_explanation": "重元素 Au では 6s 電子が収縮し 5d バンドが上昇。5d→6s 間接遷移や d-d 遷移が可視光吸収に関与し黄色を呈する。銀は可視吸収が弱く白色。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "相対論効果が第6周期元素の性質に与える影響を説明できる",
+    "common_misconception": "金属の色は単純な d 電子数のみで決まる",
+    "distractor_rationales": [
+      "不正解。原子量の大小と色は直接対応しない。",
+      "正解。6s 収縮が電子構造と可視吸収に影響。",
+      "不正解。4f は関与しない。",
+      "不正解。金は +1, +3 など複数の酸化数をとる。"
+    ],
+    "basic_terms": "相対論効果：重元素での軌道収縮・分裂、6s 収縮：第6周期元素の特徴",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "結合",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "酸塩基",
+    "question_text": "ガス相における超强酸フッ化スルホン酸系（例：FSO₃H/SbF₅）の酸性の本質として最も適切なものはどれか。",
+    "choices": [
+      "プロトンの溶媒和が極めて弱く H⁺ 活性が極大",
+      "常に pH スケールで 0 未満に測定できる",
+      "酸化還元電位のみで酸性が定義される",
+      "水素結合のみで酸性が決まる"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "超酸系は溶媒和が弱く裸に近いプロトン活性をもつ。",
+    "detailed_explanation": "ハメット酸度関数 H₀ で評価される超酸は、プロトン受容能の低い媒体で H⁺ の化学ポテンシャルが極端に高い。水溶液 pH スケールの外延。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "超酸の定義と酸性スケールの限界を説明できる",
+    "common_misconception": "すべての酸は水溶液 pH で比較できる",
+    "distractor_rationales": [
+      "正解。溶媒和が弱くプロトン活性が極大。",
+      "不正解。pH は水溶液の対数スケールで超酸には不適。",
+      "不正解。酸性はプロトン授与能力で定義。",
+      "不正解。水素結合だけでは説明不足。"
+    ],
+    "basic_terms": "超酸：ハメット H₀ で −10 以下の酸、ハメット酸度関数：非水酸性の尺度",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸塩基",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "question_text": "フロンティア軌道理論において、求電子試薬による芳香族求電子置換の位置選択性を支配する軌道はどれか。",
+    "choices": [
+      "コア 1s 軌道のエネルギー準位",
+      "σ 結合軌道の局在化の程度",
+      "LUMO（最低空軌道）の電子密度分布",
+      "HOMO（最高被占軌道）の電子密度分布"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "求電子剤は基質 HOMO 係数の大きい位置を攻撃する。",
+    "detailed_explanation": "求電子反応は基質 HOMO と求電子剤 LUMO の相互作用で選択性が決まる。アニリンはオルト・パラ位の HOMO 係数が大きい。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "フロンティア軌道理論で求電子置換の位置選択性を説明できる",
+    "common_misconception": "求電子反応で基質 LUMO が支配的だと誤解する",
+    "distractor_rationales": [
+      "不正解。コア軌道は反応性に寄与しない。",
+      "不正解。σ 軌道の局在化は直接の選択性指標ではない。",
+      "不正解。LUMO は求核反応の基質側に重要。",
+      "正解。求電子剤は HOMO 係数の大きい位置を攻撃。"
+    ],
+    "basic_terms": "フロンティア軌道理論、HOMO、LUMO、求電子芳香族置換",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "有機化学",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "question_text": "スピン交差（spin crossover）錯体とヤーン・テラー歪みの関係について正しい記述はどれか。",
+    "choices": [
+      "どちらも d⁰ 錯体でのみ観測される",
+      "スピン交差は常にヤーン・テラー歪みを伴い、両者は同一現象である",
+      "スピン交差は高スピン/低スピン状態間の平衡であり、構造変化と連動し得るがヤーン・テラーとは区別される",
+      "ヤーン・テラー効果はスピン状態に無関係で常に高スピンのみに現れる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "スピン交差とヤーン・テラーは別概念だが d⁶ 等で併存し得る。",
+    "detailed_explanation": "スピン交差は Δ₀ と温度で HS/LS が平衡。ヤーン・テラーは縮退 e_g の不均等占有による歪み。d⁶ Fe(II) 錯体で両者が議論されるが定義は異なる。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "スピン交差とヤーン・テラー効果を区別して説明できる",
+    "common_misconception": "スピン交差とヤーン・テラーを同一視する",
+    "distractor_rationales": [
+      "不正解。d⁰ では d 電子がない。",
+      "不正解。別概念であり常に同一ではない。",
+      "正解。スピン交差は HS/LS 平衡でヤーン・テラーとは区別される。",
+      "不正解。ヤーン・テラーは d 電子の縮退に関わる。"
+    ],
+    "basic_terms": "スピン交差：高スピン/低スピン平衡、ヤーン・テラー効果：縮退軌道の歪み",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "無機化学",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "question_text": "フロンティア軌道理論（福井謙一）において、求電子試薬による芳香族求電子置換の位置選択性を支配する軌道はどれか。",
+    "choices": [
+      "LUMO（最低空軌道）の電子密度分布",
+      "HOMO（最高被占軌道）の電子密度分布",
+      "コア 1s 軌道のエネルギー準位",
+      "σ 結合軌道の局在化の程度"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解は HOMO の電子密度分布。求電子剤は電子密度の高い HOMO 係数の大きい位置を攻撃する。",
+    "detailed_explanation": "フロンティア軌道理論では、求電子反応 → 基質 HOMO と求電子剤 LUMO の相互作用、求核反応 → 基質 LUMO と求核剤 HOMO の相互作用 が選択性を支配する。アニリン（−NH₂ 置換）の HOMO 係数はオルト・パラ位で大きく、電子供与基がオルト・パラ配向性をもつことをこの理論で説明できる。Diels-Alder 反応の位置選択性にも適用される。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "フロンティア軌道理論における HOMO/LUMO の役割と求電子・求核反応への適用を説明できる",
+    "common_misconception": "求電子反応では基質の LUMO が関係すると誤解する（実際は HOMO）",
+    "distractor_rationales": [
+      "不正解。LUMO の電子密度分布は求核反応での基質の選択性に関係する。",
+      "正解。求電子試薬は基質の HOMO 係数の大きい位置（電子密度の高い箇所）を攻撃する。",
+      "不正解。コア 1s 軌道は反応性にほとんど寄与しない。",
+      "不正解。σ 結合軌道の局在化は共鳴・芳香族性の選択性説明には直接使わない。"
+    ],
+    "basic_terms": "フロンティア軌道理論、HOMO、LUMO、求電子置換、オルト・パラ配向性",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "物理化学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "分析化学",
+    "question_text": "電子相関を厳密に扱う coupled cluster 理論と DFT の本質的違いとして正しいものはどれか。",
+    "choices": [
+      "両者とも交換相関の厳密汎関数を用いる",
+      "CC はサイズ拡張性を満たすが DFT は多くの場合満たす",
+      "CC は波動関数の指数 ansatz で相関を系統的に改善し、DFT は密度汎関数近似に依存する",
+      "DFT は多くの場合 CCSD(T) より高精度である"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "CC は波動関数系、DFT は密度汎関数近似が本質。",
+    "detailed_explanation": "CCSD(T) はサイズ拡張的で相関を系統的に改善できるが計算コスト大。DFT は Exc 近似（LDA/GGA/ハイブリッド）に依存し効率的だが汎関数選択が精度を左右。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "電子構造理論の波動関数法と DFT の特徴を比較できる",
+    "common_misconception": "DFT は常に最も高精度だと考える",
+    "distractor_rationales": [
+      "不正解。Exc の厳密形は未知。",
+      "不正解。DFT の汎関数はサイズ非拡張性の問題があり得る。",
+      "正解。CC は波動関数、DFT は密度汎関数近似が本質的違い。",
+      "不正解。系により CC が優れる場合がある。"
+    ],
+    "basic_terms": "coupled cluster、サイズ拡張性、交換相関汎関数、CCSD(T)",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "分析化学",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "触媒化学",
+    "question_text": "フェムト秒時間分解赤外分光で観測される化学反応中間体の同定において、振動コヒーレンスが重要な理由はどれか。",
+    "choices": [
+      "コヒーレンスは常に熱平衡を意味するため",
+      "振動モードの位相関係が構造変化の経路を反映するため",
+      "コヒーレンスは NMR 化学シフトと同一であるため",
+      "振動コヒーレンスは試料の濃度のみを測るため"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "振動コヒーレンスは構造変化の時間経過を追跡する手がかり。",
+    "detailed_explanation": "フェムト秒 IR では励起後の振動位相がコヒーレントに進化し、遷移状態付近の構造や溶媒応答を時間分解で捉える。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "超高速分光における振動コヒーレンスの化学的意味を説明できる",
+    "common_misconception": "コヒーレンスは平衡状態の指標だと考える",
+    "distractor_rationales": [
+      "不正解。コヒーレンスは非平衡過程の情報を持つ。",
+      "正解。位相関係が構造変化経路を反映する。",
+      "不正解。NMR 化学シフトとは別現象。",
+      "不正解。濃度測定ではない。"
+    ],
+    "basic_terms": "フェムト秒分光、振動コヒーレンス、中間体、遷移状態",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "化学",
       "触媒化学",
       "batch50",
       "L900"
-    ],
+    ]
+  },
+  {
     "domain": "化学",
-    "subdomain": "触媒化学",
-    "difficulty_initial": 900,
+    "subdomain": "酸化還元",
     "question_text": "不均一触媒における構造敏感反応の特徴として正しいものはどれか。",
     "choices": [
-      "反応速度は表面の特定の原子配列（ステップ、キンク等）に強く依存する",
-      "触媒活性は単原子分散サイトで最大化する",
       "反応は均一触媒と同じ機構で進行する",
-      "反応速度は金属の比表面積に依存し、表面原子の配位環境は無関係"
+      "反応速度は比表面積を主成分とするに依存し配位環境は無関係",
+      "反応速度は表面の特定の原子配列（ステップ、キンク等）に強く依存する",
+      "触媒活性は単原子分散サイトで多くの場合最大化する"
     ],
-    "correct_choice_index": 2,
-    "short_explanation": "構造敏感反応は表面欠陥・配位の違いが活性に大きく影響する。",
-    "detailed_explanation": "構造敏感反応（例：NH₃ 合成）は特定の表面構造が必要。構造不敏感反応は比表面積にほぼ比例。",
-    "learning_objective": "不均一触媒の構造敏感・不敏感反応を区別して説明できる",
-    "cognitive_type": "誤解・境界",
-    "common_misconception": "触媒活性は比表面積だけで決まると考える",
+    "correct_choice_index": 0,
+    "short_explanation": "構造敏感反応は特定表面構造への依存が大きい。",
+    "detailed_explanation": "NH₃ 合成などは B5 サイト等の配位が活性に重要。構造不敏感反応は比表面積にほぼ比例。単原子触媒は反応により最適化が異なる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "構造敏感・不敏感反応を触媒設計に応用できる",
+    "common_misconception": "触媒活性は比表面積だけで決まる",
     "distractor_rationales": [
-      "正解。構造敏感反応の定義。",
-      "不正解。単原子サイトが常に最良とは限らない。",
-      "不正解。表面反応は均一触媒と機構が異なる。",
-      "不正解。構造不敏感反応の特徴に近い。"
+      "不正解。表面反応は均一機構と異なる。",
+      "不正解。構造不敏感反応の特徴。",
+      "正解。特定原子配列への強い依存。",
+      "不正解。単原子サイトが常に最適とは限らない。"
     ],
-    "basic_terms": "構造敏感反応：表面原子配位に活性が依存する反応、不均一触媒：固体表面で進行する触媒"
+    "basic_terms": "構造敏感反応、活性サイト、不均一触媒、比表面積",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "酸化還元",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "化学",
+    "subdomain": "状態変化",
+    "question_text": "マーカス理論における「逆領域（inverted region）」の特徴として正しいものはどれか。",
+    "choices": [
+      "電子移動は常に古典的越えのみで起こる",
+      "逆領域では活性化エネルギーが常にゼロになる",
+      "反応自由エネルギーがより負になるほど速度定数が単調に増大する",
+      "強い放熱で速度定数が再び減少し得る"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "逆領域では ΔG° が大きく負でも速度が頭打ち・減少し得る。",
+    "detailed_explanation": "通常領域では −ΔG° 増大とともに速度増。十分放熱では核配置のフランク・コンドン因子が再び速度を下げる逆領域が予測される。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "マーカス理論の通常領域と逆領域を区別できる",
+    "common_misconception": "放熱が大きいほど常に速いと考える",
+    "distractor_rationales": [
+      "不正解。量子トンネルも重要な寄与。",
+      "不正解。活性化エネルギーはゼロにならない。",
+      "不正解。通常領域の特徴。",
+      "正解。強い放熱で速度定数が減少し得る。"
+    ],
+    "basic_terms": "マーカス理論、逆領域、電子移動反応、フランク・コンドン因子",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "化学",
+      "状態変化",
+      "batch50",
+      "L900"
+    ]
   }
 ]

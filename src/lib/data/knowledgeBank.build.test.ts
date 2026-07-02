@@ -43,7 +43,7 @@ describe("knowledge bank build", () => {
     const outDir = join(process.cwd(), "supabase/seed/generated");
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, "questions-knowledge.json"), `${JSON.stringify(combined, null, 2)}\n`);
-    expect(combined).toHaveLength(890);
+    expect(combined).toHaveLength(1340);
     for (const question of combined) {
       expect(question.difficulty_initial % 50).toBe(0);
       expect(levels[question.id]).toBe(question.difficulty_initial);

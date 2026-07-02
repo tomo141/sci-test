@@ -1,177 +1,1802 @@
 [
   {
+    "domain": "数学",
+    "subdomain": "代数",
+    "question_text": "2 + 3 × 4 を計算したときの正しい答えはどれか。",
+    "choices": [
+      "14",
+      "24",
+      "20",
+      "10"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は 14。乗算は加算より優先されるため、3 × 4 = 12 を先に計算し、2 + 12 = 14 となる。",
+    "detailed_explanation": "四則演算には演算子の優先順位がある。乗算（×）・除算（÷）は加算（＋）・減算（−）より優先して計算する。したがって 2 + 3 × 4 = 2 + 12 = 14。左から順に計算すると (2+3)×4 = 5×4 = 20 となり誤り。この規則は数学全般で基本となる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "四則演算の優先順位を正確に理解し、混合演算を正しく計算できる",
+    "common_misconception": "左から順に計算して (2+3)×4 = 20 としてしまう",
+    "distractor_rationales": [
+      "正解。3×4=12 を先に計算し、2+12=14。演算子優先順位に従った正しい計算。",
+      "不正解。2×3×4=24 と掛け算だけで処理した場合の誤答。加算記号を乗算と見なしている。",
+      "不正解。左から順に (2+3)×4 = 20 と計算した場合の誤答。乗算を優先しなかった誤り。",
+      "不正解。3×4 の計算を 3+4=7 と誤り、2+7=10 としてしまった場合の誤答。"
+    ],
+    "basic_terms": "四則演算：加算・減算・乗算・除算の4種類の演算、演算子優先順位：乗除は加減より先に計算する規則",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "数学",
+      "代数",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "幾何",
+    "question_text": "5 つのデータ {2, 4, 4, 6, 9} の算術平均はいくらか。",
+    "choices": [
+      "6",
+      "5",
+      "4",
+      "4.5"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解は 5。全データの合計 2+4+4+6+9 = 25 をデータ数 5 で割ると 25/5 = 5。",
+    "detailed_explanation": "算術平均（相加平均）はデータの総和をデータ数で割った値。2+4+4+6+9 = 25、25÷5 = 5。なお中央値（メジアン）は昇順に並べたとき中央の値で {2, 4, 4, 6, 9} → 3 番目の 4。最頻値（モード）は 4（2 回出現）。選択肢 A の 4 は中央値・最頻値と一致するが平均ではない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "算術平均の定義を正確に適用し、中央値・最頻値と区別して計算できる",
+    "common_misconception": "中央値（4）を平均と混同して 4 と答える",
+    "distractor_rationales": [
+      "不正解。6 はデータのひとつの値だが、平均として正しくない。",
+      "正解。(2+4+4+6+9)/5=25/5=5。算術平均の定義通りの計算。",
+      "不正解。4 はこのデータの中央値（メジアン）および最頻値（モード）であるが、算術平均ではない。",
+      "不正解。4.5 は中間的な値として直感的に選ばれやすいが計算上の根拠がない。"
+    ],
+    "basic_terms": "算術平均（平均）：データ総和/データ数、中央値：並び替えたときの中央の値、最頻値：最も多く出現する値",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "幾何",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "関数",
+    "question_text": "次の式 3 + x = 7 を満たす x の値として正しいものはどれか。",
+    "choices": [
+      "21",
+      "3",
+      "4",
+      "10"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "両辺から 3 を引くと x = 4。",
+    "detailed_explanation": "3 + x = 7 より x = 7 − 3 = 4。一次方程式の基本操作。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "簡単な一次方程式を解ける",
+    "common_misconception": "加算と乗算を混同して 3 × 7 とする",
+    "distractor_rationales": [
+      "不正解。3 × 7 を計算した誤り。",
+      "不正解。方程式の右辺の値と混同。",
+      "正解。7 − 3 = 4。",
+      "不正解。3 + 7 を計算した誤り。"
+    ],
+    "basic_terms": "一次方程式：未知数を含む1次の等式、未知数：値が未定の文字",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "関数",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "確率",
+    "question_text": "一辺が 5 cm の正方形の面積として正しいものはどれか。",
+    "choices": [
+      "5 cm²",
+      "10 cm²",
+      "20 cm²",
+      "25 cm²"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "正方形の面積は一辺の2乗なので 5 × 5 = 25 cm²。",
+    "detailed_explanation": "正方形の面積 = 一辺 × 一辺 = 5 × 5 = 25 cm²。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "正方形の面積公式を用いて面積を求められる",
+    "common_misconception": "周の長さと面積を混同する",
+    "distractor_rationales": [
+      "不正解。一辺の長さそのもの。",
+      "不正解。5 + 5 を計算した誤り。",
+      "不正解。5 × 4（周の一部）の誤り。",
+      "正解。5² = 25 cm²。"
+    ],
+    "basic_terms": "正方形：4辺が等しい四角形、面積：平面図形が占める広さ",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "確率",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "統計",
+    "question_text": "関数 y = 2x において x = 3 のときの y の値として正しいものはどれか。",
+    "choices": [
+      "6",
+      "8",
+      "9",
+      "5"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "y = 2 × 3 = 6。",
+    "detailed_explanation": "比例式 y = 2x に x = 3 を代入すると y = 2 × 3 = 6。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "比例関係の式に値を代入して計算できる",
+    "common_misconception": "2 + 3 と足し算で計算する",
+    "distractor_rationales": [
+      "正解。2 × 3 = 6。",
+      "不正解。2 × 4 の誤り。",
+      "不正解。3² の誤り。",
+      "不正解。2 + 3 の誤り。"
+    ],
+    "basic_terms": "比例：y = ax の形の関係、関数：入力に対応する出力を決める対応",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "統計",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "question_text": "1から6までの目があるさいころを1回投げ、偶数の目が出る確率として正しいものはどれか。",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1/6"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "偶数は 2, 4, 6 の3通りなので 3/6 = 1/2。",
+    "detailed_explanation": "全6通りのうち偶数は3通り。確率 = 3/6 = 1/2。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "等確率事象の確率を数えられる",
+    "common_misconception": "偶数の個数を分母にする",
+    "distractor_rationales": [
+      "不正解。2通りだけを数えた誤り。",
+      "正解。3/6 = 1/2。",
+      "不正解。奇数の確率と混同。",
+      "不正解。1通りだけを数えた誤り。"
+    ],
+    "basic_terms": "確率：起こりうる結果のうち目的の結果の割合、偶数：2で割り切れる整数",
+    "difficulty_initial": 100,
+    "difficulty_continuous": 100,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "線形代数",
+      "batch50",
+      "L100"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "微分積分",
+    "question_text": "一次方程式 2x + 5 = 11 を解いたとき、x の値はどれか。",
+    "choices": [
+      "6",
+      "2",
+      "3",
+      "8"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解は 3。両辺から 5 を引いて 2x = 6、両辺を 2 で割ると x = 3。",
+    "detailed_explanation": "2x + 5 = 11 を解くには、等式の両辺に同じ操作をして x を孤立させる。まず両辺から 5 を引くと 2x = 6、次に両辺を 2 で割ると x = 3。検証：2×3+5 = 6+5 = 11。x = 8 は両辺に 5 を加えてしまった誤り（2x = 16 → x = 8）。x = 6 は 2x = 6 までは正しいが割り算を忘れた誤り。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "一次方程式を移項と等式変形を用いて正しく解くことができる",
+    "common_misconception": "移項のとき符号を変えず 2x = 11+5 = 16 として x = 8 とする",
+    "distractor_rationales": [
+      "不正解。2x=6 まで正しく計算したが、2 で割ることを忘れて x=6 とした誤答。",
+      "不正解。2x+5=11 から 5 と 2 を足して引くなど不正確な計算をした場合の誤答。",
+      "正解。2x+5=11 → 2x=6 → x=3。代入すると 2×3+5=11 と等式が成り立つ。",
+      "不正解。移項で符号を逆にせず 2x = 11+5 = 16 とした場合の誤答。x=8。"
+    ],
+    "basic_terms": "一次方程式：未知数の最大次数が 1 の方程式、移項：項を等号の反対側に符号を変えて移す操作",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "微分積分",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "論理",
+    "question_text": "3 枚のコインを同時に投げるとき、表がちょうど 2 枚出る確率はどれか。",
+    "choices": [
+      "1/4",
+      "1/2",
+      "1/8",
+      "3/8"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "正解は 3/8。コインの組み合わせは C(3,2) = 3 通り、全事象は 2³ = 8 通りなので 3/8。",
+    "detailed_explanation": "各コインが表または裏の等確率 1/2 で独立な試行。3 枚投げたときの全結果は 2³ = 8 通り。そのうち表が 2 枚になる組合せは C(3, 2) = 3 通り（(表表裏)(表裏表)(裏表表)）。P = 3/8。1/4 = 2/8 は表が 2 枚になる組合せを 2 通りと数え間違えた場合、1/2 = 4/8 は表が 2 枚以上の確率（C(3,2)+C(3,3)=4）との混同、1/8 は特定の 1 通りだけの確率。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "二項確率の公式 C(n,k)×p^k×(1−p)^(n−k) を用いて確率を正確に計算できる",
+    "common_misconception": "表表裏の 1 通りだけを数えて P = 1/8 とする",
+    "distractor_rationales": [
+      "不正解。C(3,2)=2 と組合せ数を誤って計算した場合の 2/8=1/4 の誤答。",
+      "不正解。表が 2 枚以上（2 枚か 3 枚）の確率 4/8=1/2 との混同。",
+      "不正解。特定の 1 通りの確率 (1/2)³=1/8 を全体の確率と誤解した誤答。",
+      "正解。C(3,2)×(1/2)²×(1/2)¹=3×1/8=3/8。表2枚の並びは3通り。"
+    ],
+    "basic_terms": "二項確率：n 回中 k 回成功する確率 C(n,k)pᵏ(1−p)ⁿ⁻ᵏ、組合せ C(n,k)：n 個から k 個選ぶ選び方の数",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "論理",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "数論",
+    "question_text": "関数 f(x) = x² の x = 2 における導関数 f′(2) として正しいものはどれか。",
+    "choices": [
+      "4",
+      "8",
+      "16",
+      "2"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "f′(x) = 2x より f′(2) = 4。",
+    "detailed_explanation": "x^n の導関数は nx^(n−1)。f′(x) = 2x、x = 2 で 4。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "べき関数の導関数を求めて特定の点で評価できる",
+    "common_misconception": "関数値 f(2) = 4 と導関数値を混同する",
+    "distractor_rationales": [
+      "正解。f′(x)=2x、x=2 で 4。",
+      "不正解。f(2)=4 に 2 を掛けた誤り。",
+      "不正解。f(2)² の誤り。",
+      "不正解。傾きの係数だけを答えた誤り。"
+    ],
+    "basic_terms": "導関数：関数の瞬間的な変化率、べき関数：x の整数乗で表される関数",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "数論",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "位相",
+    "question_text": "命題「x > 3」の否定として正しいものはどれか。",
+    "choices": [
+      "x < 3",
+      "x ≤ 3",
+      "x ≥ 3",
+      "x = 3"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "不等号の否定は ≤ に変わる。",
+    "detailed_explanation": "「x > 3」の否定は「x ≤ 3」。x < 3 は十分条件に過ぎない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "不等式命題の否定を正しく書ける",
+    "common_misconception": "不等号の向きだけを反転する",
+    "distractor_rationales": [
+      "不正解。否定より狭い条件。",
+      "正解。「x > 3」の論理否定。",
+      "不正解。逆不等式の誤り。",
+      "不正解。等号だけの場合に限定。"
+    ],
+    "basic_terms": "命題：真偽が定まる文、否定：真偽を反転させる論理操作",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "位相",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "代数",
+    "question_text": "12 と 18 の最大公約数として正しいものはどれか。",
+    "choices": [
+      "2",
+      "3",
+      "6",
+      "36"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "公約数は 1, 2, 3, 6 で最大は 6。",
+    "detailed_explanation": "12 = 2²×3、18 = 2×3²。共通素因数 2 と 3 より GCD = 6。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "最大公約数を素因数分解で求められる",
+    "common_misconception": "最小公倍数と混同する",
+    "distractor_rationales": [
+      "不正解。公約数の一つだが最大ではない。",
+      "不正解。公約数の一つだが最大ではない。",
+      "正解。12 と 18 の最大公約数。",
+      "不正解。これは最小公倍数。"
+    ],
+    "basic_terms": "最大公約数：両整数を割り切る最大の正整数、素因数分解：素数の積で表すこと",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "代数",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "幾何",
+    "question_text": "実数直線上の開区間 (0, 1) について、端点 0 と 1 が含まれない理由として最も適切なものはどれか。",
+    "choices": [
+      "0 と 1 は無理数だから",
+      "区間の長さが 1 未満だから",
+      "0 と 1 は整数だから",
+      "丸括弧は端点を含まない区間を表すから"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "開区間 (a, b) は a < x < b の点のみを含む。",
+    "detailed_explanation": "数学の記法で (a,b) は開区間、端点を含まない。[a,b] は閉区間。整数か否かは無関係。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "開区間と閉区間の記法の違いを説明できる",
+    "common_misconception": "端点の数の種類で開閉が決まると誤解する",
+    "distractor_rationales": [
+      "不正解。0 と 1 は有理数。",
+      "不正解。長さと端点の包含は無関係。",
+      "不正解。整数でも端点は閉区間に含められる。",
+      "正解。開区間の標準的な定義。"
+    ],
+    "basic_terms": "開区間：端点を含まない区間、閉区間：端点を含む区間",
+    "difficulty_initial": 200,
+    "difficulty_continuous": 200,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "幾何",
+      "batch50",
+      "L200"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "関数",
+    "question_text": "sin 30° の値として正しいものはどれか。",
+    "choices": [
+      "1/2",
+      "√3/2",
+      "√2/2",
+      "1"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は 1/2。30°−60°−90° の直角三角形の辺比（1:√3:2）から sin 30° = 1/2 が得られる。",
+    "detailed_explanation": "正三角形を半分に切った 30°−60°−90° 三角形では辺の比が 1:√3:2（斜辺=2）。sin θ = 対辺/斜辺 より sin 30° = 1/2。cos 30° = √3/2（√3/2 は 30° の余弦）、sin 45° = cos 45° = √2/2（√2/2 は 45° の値）、sin 90° = 1（直角の sin 値）。これらの混同が多い典型的なミス。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "主要角（30°, 45°, 60°, 90°）の三角関数値を正確に記憶し区別できる",
+    "common_misconception": "sin 30° と cos 30° を混同して √3/2 と答える",
+    "distractor_rationales": [
+      "正解。sin 30° = 1/2。30−60−90 の三角形（辺比 1:√3:2）から sin 30°=1/2。",
+      "不正解。√3/2 は cos 30°（または sin 60°）の値。sin 30° と cos 30° を入れ替えた誤答。",
+      "不正解。√2/2 は sin 45°（= cos 45°）の値。45° の三角比との混同。",
+      "不正解。1 は sin 90° の値。直角の sine 値との混同。"
+    ],
+    "basic_terms": "sin（サイン）：直角三角形で θ を含む角の対辺/斜辺、sin 30°=1/2、cos 30°=√3/2、sin 45°=√2/2",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "関数",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "確率",
+    "question_text": "2次関数 y = x² − 4x + 3 の頂点の x 座標として正しいものはどれか。",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "頂点の x = −b/(2a) = 4/2 = 2。",
+    "detailed_explanation": "ax²+bx+c の頂点 x = −b/(2a)。a=1, b=−4 より x = 2。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "2次関数の頂点座標を公式で求められる",
+    "common_misconception": "因数分解の解と混同する",
+    "distractor_rationales": [
+      "不正解。y=0 の小さい解。",
+      "正解。−b/(2a) = 2。",
+      "不正解。y=0 の大きい解。",
+      "不正解。定数項の値。"
+    ],
+    "basic_terms": "2次関数：y = ax²+bx+c の形の関数、頂点：放物線の最高・最低点",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "確率",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "統計",
+    "question_text": "赤玉3個・白玉2個の袋から1個取り出すとき、赤が出る確率として正しいものはどれか。",
+    "choices": [
+      "3/10",
+      "2/5",
+      "3/5",
+      "1/2"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "全5個中赤3個なので 3/5。",
+    "detailed_explanation": "等確率で1個選ぶ。P(赤) = 3/(3+2) = 3/5。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "有限標本空間での確率を計算できる",
+    "common_misconception": "色の種類数で割る",
+    "distractor_rationales": [
+      "不正解。3/(3×2) の誤り。",
+      "不正解。白玉の確率。",
+      "正解。3/5。",
+      "不正解。色の種類数で割った誤り。"
+    ],
+    "basic_terms": "標本空間：起こりうる結果の全体、古典的確率：等確率事象の割合",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "統計",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "question_text": "データ 2, 2, 5, 8, 9 の中央値として正しいものはどれか。",
+    "choices": [
+      "5.2",
+      "8",
+      "2",
+      "5"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "並べると 2, 2, 5, 8, 9 で中央は 5。",
+    "detailed_explanation": "奇数個のデータでは中央値は真ん中の値。平均 5.2 とは異なる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "中央値と平均の違いを説明できる",
+    "common_misconception": "平均を中央値と混同する",
+    "distractor_rationales": [
+      "不正解。算術平均。",
+      "不正解。上から2番目の値。",
+      "不正解。最頻値（モード）。",
+      "正解。並べたときの中央の値。"
+    ],
+    "basic_terms": "中央値：データを並べたとき中央に来る値、平均：全データの算術平均",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "線形代数",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "微分積分",
+    "question_text": "2×2行列 [[1,2],[3,4]] の行列式として正しいものはどれか。",
+    "choices": [
+      "−2",
+      "2",
+      "10",
+      "−10"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "ad − bc = 1×4 − 2×3 = −2。",
+    "detailed_explanation": "2次行列の行列式 det = a₁₁a₂₂ − a₁₂a₂₁ = 4 − 6 = −2。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "2次行列の行列式を計算できる",
+    "common_misconception": "対角成分の積だけを答える",
+    "distractor_rationales": [
+      "正解。1×4 − 2×3 = −2。",
+      "不正解。符号を誤った。",
+      "不正解。全成分の和。",
+      "不正解。対角成分の積のみ。"
+    ],
+    "basic_terms": "行列式：正方行列に対応するスカラー値、2次行列：2行2列の行列",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "微分積分",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "論理",
+    "question_text": "∫₀¹ x dx の値として正しいものはどれか。",
+    "choices": [
+      "1/4",
+      "1/2",
+      "1",
+      "0"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "[x²/2]₀¹ = 1/2。",
+    "detailed_explanation": "∫x dx = x²/2。定積分 [x²/2]₀¹ = 1/2 − 0 = 1/2。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "基本的な定積分を計算できる",
+    "common_misconception": "積分上限をそのまま答える",
+    "distractor_rationales": [
+      "不正解。計算途中の誤り。",
+      "正解。[x²/2]₀¹ = 1/2。",
+      "不正解。積分上限そのもの。",
+      "不正解。被積分関数の下限の値。"
+    ],
+    "basic_terms": "定積分：区間上での積分値、被積分関数：積分記号の下に書く関数",
+    "difficulty_initial": 300,
+    "difficulty_continuous": 300,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "論理",
+      "batch50",
+      "L300"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "数論",
+    "question_text": "関数 f(x) = x² の x = 2 における微分係数（瞬間の変化率）はいくらか。",
+    "choices": [
+      "8",
+      "1",
+      "4",
+      "2"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解は 4。f'(x) = 2x なので f'(2) = 2 × 2 = 4。",
+    "detailed_explanation": "べき乗の微分公式 d/dx(xⁿ) = nxⁿ⁻¹ を用いると、f'(x) = 2x。x = 2 を代入すると f'(2) = 2 × 2 = 4。これは x = 2 における放物線 y = x² の接線の傾きに等しい。選択肢 2 は f'(x) = x と係数を忘れた誤り、選択肢 8 は f(2) = 4 を再度 2 倍した誤り。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "べき乗関数の微分公式を適用し、特定の点における微分係数を求めることができる",
+    "common_misconception": "f'(x) = x（係数 2 を忘れる）として f'(2) = 2 とする",
+    "distractor_rationales": [
+      "不正解。f'(2)=4 を正しく求めた後、さらに 2 倍して 8 とした誤答。",
+      "不正解。微分係数を 1（定数）と誤解した誤答。",
+      "正解。f'(x)=2x より f'(2)=4。放物線 y=x² の x=2 における接線の傾き。",
+      "不正解。f'(x)=x と係数 2 を落とした誤りで f'(2)=2 としてしまった誤答。"
+    ],
+    "basic_terms": "微分係数：ある点における関数の瞬間的な変化率（接線の傾き）、べき乗の微分：d/dx(xⁿ)=nxⁿ⁻¹",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "数論",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "位相",
+    "question_text": "半径 r の球の体積を表す公式として正しいものはどれか。",
+    "choices": [
+      "4πr²",
+      "πr²",
+      "2πr³",
+      "(4/3)πr³"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "正解は (4/3)πr³。球の体積公式は V = (4/3)πr³。",
+    "detailed_explanation": "球の体積公式は V = (4/3)πr³（積分を用いて導出可能）。4πr² は球の表面積の公式（S = 4πr²）であり体積ではない。πr² は底面積が πr² の円柱・円の面積公式。2πr³ は係数 (4/3) を誤記した誤り。球の体積と表面積はどちらも r の多項式だが次数（r³ vs r²）と係数が異なるため混同に注意。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "球の体積公式 V = (4/3)πr³ を正確に記憶し、表面積公式 4πr² と区別して使える",
+    "common_misconception": "球の体積と表面積を混同して 4πr² を体積と答える",
+    "distractor_rationales": [
+      "不正解。4πr² は球の表面積の公式。体積ではなく面積の計算式。",
+      "不正解。πr² は円の面積または円柱の底面積の公式。球の体積ではない。",
+      "不正解。2πr³ は係数が誤り。正しい係数は 4/3（≈1.333）であり 2 ではない。",
+      "正解。球の体積 V=(4/3)πr³。r の 3 乗に比例する三次元的な量。"
+    ],
+    "basic_terms": "球の体積：V=(4/3)πr³、球の表面積：S=4πr²、r：球の半径、π（パイ）：円周率 ≈ 3.14159",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "位相",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "代数",
+    "question_text": "整数 a, b が互いに素であることの定義として正しいものはどれか。",
+    "choices": [
+      "gcd(a, b) = 1 である",
+      "a と b がともに素数である",
+      "a が b で割り切れる",
+      "a と b の積が素数である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "互いに素とは公約数が 1 のみ、すなわち gcd = 1。",
+    "detailed_explanation": "互いに素：正の公約数が 1 のみ。両方素数とは限らない（例 8 と 9）。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "互いに素の定義を正確に述べられる",
+    "common_misconception": "互いに素と両方素数を混同する",
+    "distractor_rationales": [
+      "正解。最大公約数が 1。",
+      "不正解。8 と 9 は互いに素だがともに素数ではない。",
+      "不正解。整除関係とは無関係。",
+      "不正解。積が素数は非常に限られた場合。"
+    ],
+    "basic_terms": "互いに素：公約数が1のみの整数対、最大公約数：共通の約数の最大",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "代数",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "幾何",
+    "question_text": "ユークリッド空間 ℝⁿ において、開集合の定義として正しいものはどれか。",
+    "choices": [
+      "境界点を含まない集合",
+      "各点について、その点を中心とする開球が集合に含まれる集合",
+      "補集合が有限個の点のみである集合",
+      "有界な集合"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "開集合は各点の近傍が集合内に収まる。",
+    "detailed_explanation": "x ∈ U なら ε > 0 が存在して B(x,ε) ⊂ U。これが ℝⁿ の開集合の定義。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "ユークリッド空間における開集合の定義を述べられる",
+    "common_misconception": "開集合を有界でない集合と混同する",
+    "distractor_rationales": [
+      "不正解。境界を含まない閉集合もあるが定義ではない。",
+      "正解。近傍を含む点の集合という標準定義。",
+      "不正解。補集合の性質は開集合の定義ではない。",
+      "不正解。ℝⁿ 全体は有界でないが開。"
+    ],
+    "basic_terms": "開集合：各点が内点である集合、開球：中心と半径で定まる球内部",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "幾何",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "関数",
+    "question_text": "体（field）の公理のうち、乗法について成り立つものとして正しいものはどれか。",
+    "choices": [
+      "乗法単位元が存在しない",
+      "任意の2元に対し積が0になる",
+      "0以外の任意の元に逆元が存在する",
+      "積は交換的でない"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "体では 0 以外の元は乗法逆元を持つ。",
+    "detailed_explanation": "体 F：加法群・乗法群（0を除く）・分配法則。非零元に逆元が存在。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "体の公理を列挙できる",
+    "common_misconception": "環と体の違いを混同する",
+    "distractor_rationales": [
+      "不正解。乗法単位元 1 が存在する。",
+      "不正解。整域では零因子がないが積が常に0ではない。",
+      "正解。体の乗法群の公理。",
+      "不正解。体の乗法は交換的。"
+    ],
+    "basic_terms": "体：四則演算が可能な代数構造、逆元：積が単位元になる元",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "関数",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "確率",
+    "question_text": "ベクトル a = (3, 4) の大きさ（ノルム）として正しいものはどれか。",
+    "choices": [
+      "7",
+      "12",
+      "25",
+      "5"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "√(3²+4²) = 5。",
+    "detailed_explanation": "‖a‖ = √(3²+4²) = √25 = 5。ピタゴラスの定理の応用。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "平面上のベクトルのノルムを計算できる",
+    "common_misconception": "成分を足し算する",
+    "distractor_rationales": [
+      "不正解。3+4 の誤り。",
+      "不正解。3×4 の誤り。",
+      "不正解。ノルムの2乗。",
+      "正解。√(9+16) = 5。"
+    ],
+    "basic_terms": "ベクトル：大きさと向きを持つ量、ノルム：ベクトルの長さ",
+    "difficulty_initial": 400,
+    "difficulty_continuous": 400,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "確率",
+      "batch50",
+      "L400"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "統計",
+    "question_text": "不定積分 ∫x² dx を計算した結果はどれか。ただし C は積分定数とする。",
+    "choices": [
+      "x³/3 + C",
+      "x²/2 + C",
+      "2x + C",
+      "x³ + C"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は x³/3 + C。べき乗の積分公式 ∫xⁿ dx = xⁿ⁺¹/(n+1) + C に n = 2 を適用する。",
+    "detailed_explanation": "べき乗の不定積分公式 ∫xⁿ dx = xⁿ⁺¹/(n+1) + C（n ≠ −1）を用いる。n = 2 の場合、∫x² dx = x³/3 + C。確認：d/dx(x³/3) = 3x²/3 = x² となり微分に戻る。x³ + C は除数 3 を忘れた誤り、x²/2 + C は n=1 のときの ∫x dx の結果と混同した誤り。2x + C は ∫2 dx（x² の微分）の誤り。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "べき乗関数の不定積分公式を正確に適用し、積分定数を含む結果を導ける",
+    "common_misconception": "分母 (n+1) を掛けるのではなく、単に指数を 1 上げて x³ + C とする",
+    "distractor_rationales": [
+      "正解。∫x² dx = x³/3 + C。d/dx(x³/3) = x² と確認できる。",
+      "不正解。∫x¹ dx = x²/2 + C（n=1 の場合）を x² の積分と混同した誤答。",
+      "不正解。2x + C は x² の微分（導関数）であり、積分ではなく微分の結果と混同した誤答。",
+      "不正解。指数を 3 に上げたが分母の (n+1)=3 で割り忘れた誤答。"
+    ],
+    "basic_terms": "不定積分：微分の逆演算、∫xⁿ dx = xⁿ⁺¹/(n+1) + C（n ≠ −1）、積分定数 C：任意定数",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "統計",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "question_text": "標本平均 X̄ の分散が σ²/n となる主な理由として最も適切なものはどれか。",
+    "choices": [
+      "標本は正規分布に従うから",
+      "独立同分布の標本平均は個々の分散を n で割るから",
+      "標本サイズが大きいと平均は常に母平均に等しいから",
+      "外れ値が除かれるから"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "Var(X̄) = Var(ΣX_i/n) = nσ²/n² = σ²/n。",
+    "detailed_explanation": "独立なら Var(ΣX_i) = nσ²。平均で割ると n² で割られる。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "標本平均の分散公式を導出・説明できる",
+    "common_misconception": "大数の法則と分散の縮小を混同する",
+    "distractor_rationales": [
+      "不正解。正規性は不要（有限分散があればよい）。",
+      "正解。独立同分布と線形性より。",
+      "不正解。大数の法則は確率収束で等しいわけではない。",
+      "不正解。外れ値除去は別の処理。"
+    ],
+    "basic_terms": "標本平均：標本の算術平均、分散：データの散らばりの指標",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "数学",
       "線形代数",
       "batch50",
       "L500"
-    ],
-    "domain": "数学",
-    "subdomain": "線形代数",
-    "difficulty_initial": 500,
-    "question_text": "2次正方行列 A = [[2, 1], [1, 2]] の固有値の和（跡）として正しいものはどれか。",
-    "choices": [
-      "6",
-      "3",
-      "4",
-      "5"
-    ],
-    "correct_choice_index": 0,
-    "short_explanation": "固有値の和は行列の跡に等しく、2 + 2 = 4。",
-    "detailed_explanation": "正方行列の固有値の和は対角成分の和（跡）に等しい。A の跡は 2 + 2 = 4。固有値は 1 と 3 であり、その和も 4。",
-    "learning_objective": "固有値と跡の関係を用いて2次行列の性質を求められる",
-    "cognitive_type": "基本的な適用",
-    "common_misconception": "固有値を個別に求めず対角成分の片方だけを答える",
-    "distractor_rationales": [
-      "不正解。固有値 3 に非対角成分を加えた誤り。",
-      "不正解。対角成分の一方 2 と非対角成分 1 を足した誤り。",
-      "正解。固有値の和 = 跡 = 2 + 2 = 4。",
-      "不正解。固有値の積と和を混同した誤り。"
-    ],
-    "basic_terms": "固有値：Av = λv を満たすスカラー λ、跡：正方行列の対角成分の和"
+    ]
   },
   {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "数学",
-      "抽象代数",
-      "batch50",
-      "L600"
-    ],
     "domain": "数学",
-    "subdomain": "抽象代数",
-    "difficulty_initial": 600,
-    "question_text": "群 (G, ·) において単位元 e が満たす性質として正しいものはどれか。",
+    "subdomain": "微分積分",
+    "question_text": "n次正方行列 A が正則（可逆）であることと同値な条件として正しいものはどれか。",
     "choices": [
-      "任意の a ∈ G に対し a · e = a · a となる",
-      "e は G の中で唯一の逆元を持つ元である",
-      "e · e = 0 が成り立つ",
-      "任意の a ∈ G に対し a · e = e · a = a となる"
-    ],
-    "correct_choice_index": 1,
-    "short_explanation": "単位元 e は左・右の積において任意の元 a を変えない。",
-    "detailed_explanation": "群の公理より単位元 e は任意の a ∈ G に対し a · e = e · a = a を満たす。e · e = e だが 0 ではない。",
-    "learning_objective": "群の単位元の定義を正確に述べられる",
-    "cognitive_type": "用語・定義",
-    "common_misconception": "単位元と逆元の役割を混同する",
-    "distractor_rationales": [
-      "不正解。a · e = a · a は一般には成り立たない。",
-      "不正解。逆元を持つのは各元 a であり、単位元の性質ではない。",
-      "不正解。群では積の結果が 0 になるとは限らない。",
-      "正解。単位元の定義そのもの。"
-    ],
-    "basic_terms": "群：結合・単位元・逆元を満たす代数構造、単位元：積において他の元を変えない元"
-  },
-  {
-    "currentness_type": "evergreen",
-    "expires_at": null,
-    "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
-    "tags": [
-      "数学",
-      "解析",
-      "batch50",
-      "L700"
-    ],
-    "domain": "数学",
-    "subdomain": "解析",
-    "difficulty_initial": 700,
-    "question_text": "関数 f(x) = e^x を x = 0 のまわりでテイラー展開したとき、3次までの近似式として正しいものはどれか。",
-    "choices": [
-      "1 + x + x²/2",
-      "x + x²/2 + x³/6",
-      "1 + x + x²/2 + x³/6",
-      "1 + x + x² + x³"
+      "A の跡が 0 である",
+      "det A = 0",
+      "det A ≠ 0",
+      "A は対称行列である"
     ],
     "correct_choice_index": 2,
-    "short_explanation": "e^x の各階導関数は x = 0 で 1 なので係数は 1/n!。",
-    "detailed_explanation": "e^x の n 階導関数は e^x 自身で x = 0 において 1。テイラー級数 Σ x^n/n! より 3次まで 1 + x + x²/2 + x³/6。",
-    "learning_objective": "初等関数のテイラー展開係数を導関数から求められる",
+    "short_explanation": "可逆 ⟺ 行列式が非零。",
+    "detailed_explanation": "正方行列は det A ≠ 0 ⟺ rank A = n ⟺ 可逆。det A = 0 は特異。",
     "cognitive_type": "原理・因果",
-    "common_misconception": "階乗で割ることを忘れて x^n とする",
+    "learning_objective": "正則行列と行列式の関係を述べられる",
+    "common_misconception": "対称性と可逆性を混同する",
     "distractor_rationales": [
-      "不正解。3次項が欠けている。",
-      "不正解。定数項 1 が欠けている。",
-      "正解。e^x = Σ x^n/n! の3次部分和。",
-      "不正解。階乗で割っていない誤り。"
+      "不正解。跡と可逆性は一般に無関係。",
+      "不正解。det A = 0 は特異（不可逆）。",
+      "正解。可逆性の同値条件。",
+      "不正解。対称行列は必ずしも可逆でない。"
     ],
-    "basic_terms": "テイラー展開：関数を多項式で近似する級数、階乗：n! = 1×2×…×n"
-  },
-  {
+    "basic_terms": "正則行列：逆行列が存在する行列、行列式：可逆性を判定する指標",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "数学",
+      "微分積分",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "論理",
+    "question_text": "関数 f が x = a で微分可能ならば x = a で連続である。この主張として正しいものはどれか。",
+    "choices": [
+      "f が多項式のときのみ真",
+      "a = 0 のときのみ真",
+      "常に偽である",
+      "常に真である"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "微分可能 ⟹ 連続は基本定理。",
+    "detailed_explanation": "微分可能なら lim_{x→a} f(x) = f(a)。逆は成り立たない（|x| など）。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "微分可能と連続の含意関係を説明できる",
+    "common_misconception": "連続なら微分可能と逆に誤る",
+    "distractor_rationales": [
+      "不正解。多項式に限定されない。",
+      "不正解。任意の a で成立。",
+      "不正解。定理は正しい。",
+      "正解。微分可能は連続を含意。"
+    ],
+    "basic_terms": "微分可能：導関数が存在する、連続：極限値が関数値と一致",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "論理",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "数論",
+    "question_text": "自然数について数学的帰納法の帰納段階で示すべきこととして正しいものはどれか。",
+    "choices": [
+      "任意の k で P(k) ならば P(k+1)",
+      "任意の n で P(n) が成り立つ",
+      "P(n) が有限個で成り立つ",
+      "n = 1 のとき命題が成り立つ"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "帰納法は基底と帰納段階の2段階。",
+    "detailed_explanation": "完全帰納法：P(1) と ∀k(P(k)→P(k+1)) より ∀n P(n)。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "数学的帰納法の構造を説明できる",
+    "common_misconception": "結論そのものを帰納段階で示す",
+    "distractor_rationales": [
+      "正解。帰納段階の内容。",
+      "不正解。これは証明の結論。",
+      "不正解。有限個では不十分。",
+      "不正解。これは基底段階。"
+    ],
+    "basic_terms": "数学的帰納法：自然数に関する命題を証明する手法、帰納段階：k から k+1 への推移",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "数論",
+      "batch50",
+      "L500"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "位相",
+    "question_text": "素数 p に対し、フェルマーの小定理が述べる合同式として正しいものはどれか。ただし gcd(a, p) = 1 とする。",
+    "choices": [
+      "a^p ≡ a (mod p)",
+      "a^(p−1) ≡ 1 (mod p)",
+      "a^(p+1) ≡ 1 (mod p)",
+      "a^p ≡ 0 (mod p)"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "gcd(a,p)=1 のとき a^(p−1) ≡ 1 (mod p)。",
+    "detailed_explanation": "フェルマーの小定理の標準形。a^p ≡ a は同値形だが指数 p−1 が中核。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "フェルマーの小定理を正確に記述できる",
+    "common_misconception": "指数を p と p−1 で混同する",
+    "distractor_rationales": [
+      "不正解。同値形だが gcd=1 の標準形は C。",
+      "正解。フェルマーの小定理の中核。",
+      "不正解。指数が誤り。",
+      "不正解。a が p の倍数のときのみ。"
+    ],
+    "basic_terms": "フェルマーの小定理：素数を法とする累乗の合同式、合同式：同じ余りを持つ関係",
+    "difficulty_initial": 500,
+    "difficulty_continuous": 500,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "数学",
       "位相",
       "batch50",
-      "L800"
-    ],
-    "domain": "数学",
-    "subdomain": "位相",
-    "difficulty_initial": 800,
-    "question_text": "位相空間において、閉集合の任意の交わりが閉集合になる理由として最も適切なものはどれか。",
-    "choices": [
-      "閉集合はコンパクトだから",
-      "閉集合は開集合の補集合であり、開集合の任意の和集合は開集合だから",
-      "閉集合は常に有界だから",
-      "閉集合は距離関数で定義されるから"
-    ],
-    "correct_choice_index": 3,
-    "short_explanation": "閉集合の交わりの補集合は開集合の和集合となり、開集合の公理より開である。",
-    "detailed_explanation": "閉集合 F の補集合は開集合。任意の閉集合族の交わりの補集合は開集合の和であり、開集合の公理より開。よって交わりは閉。",
-    "learning_objective": "開集合・閉集合の定義から閉集合の交わりが閉であることを説明できる",
-    "cognitive_type": "誤解・境界",
-    "common_misconception": "閉集合をユークリッド空間の有界閉集合と同一視する",
-    "distractor_rationales": [
-      "不正解。閉集合がコンパクトとは限らない。",
-      "正解。補集合を用いた標準的な証明。",
-      "不正解。一般の位相空間で閉集合は有界とは限らない。",
-      "不正解。距離は位相の定義に必須ではない。"
-    ],
-    "basic_terms": "位相空間：開集合族を公理化した空間、閉集合：開集合の補集合"
+      "L500"
+    ]
   },
   {
+    "domain": "数学",
+    "subdomain": "代数",
+    "question_text": "正方行列 A が逆行列をもつための必要十分条件として正しいものはどれか。",
+    "choices": [
+      "トレース tr(A) ≠ 0",
+      "A の全成分が 0 でない",
+      "行列式 det(A) ≠ 0",
+      "A が対称行列である"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "正解は det(A) ≠ 0。行列 A が可逆（逆行列をもつ）であることと det(A) ≠ 0 は同値。",
+    "detailed_explanation": "n×n 行列 A が可逆行列（逆行列 A⁻¹ が存在する）⟺ det(A) ≠ 0。これは線形代数の基本定理の一つ。det(A) = 0 のとき A は「特異行列（singular matrix）」と呼ばれ逆行列をもたない。例：単位行列 I は det(I) = 1 ≠ 0 で I⁻¹ = I。トレースは固有値の和を表すが、逆行列の存在条件ではない。対称行列は A = Aᵀ を満たすが可逆性とは独立。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "正方行列が可逆であることと行列式が 0 でないことが同値であることを理解できる",
+    "common_misconception": "トレース（対角成分の和）が 0 でないことを逆行列存在の条件と誤解する",
+    "distractor_rationales": [
+      "不正解。tr(A) はすべての固有値の和に等しいが、tr(A)≠0 は逆行列存在の必要十分条件ではない。",
+      "不正解。全成分が 0 でなくても det(A)=0 になりうる（例：[[1,1],[1,1]]）。",
+      "正解。det(A)≠0 ⟺ A が可逆行列。線形代数の基本定理。",
+      "不正解。対称行列（A=Aᵀ）であることは逆行列の存在条件ではない。対称でも特異行列になりうる。"
+    ],
+    "basic_terms": "逆行列：AA⁻¹=A⁻¹A=I を満たす行列 A⁻¹、行列式 det(A)：可逆性の判定に用いるスカラー値、特異行列：det=0 で逆行列をもたない行列",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
     "currentness_type": "evergreen",
     "expires_at": null,
+    "tags": [
+      "数学",
+      "代数",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "幾何",
+    "question_text": "群 (G, ·) において単位元 e が満たす性質として正しいものはどれか。",
+    "choices": [
+      "e · e = 0 が成り立つ",
+      "e は G の中で唯一の逆元を持つ元である",
+      "任意の a ∈ G に対し a · e = a · a となる",
+      "任意の a ∈ G に対し a · e = e · a = a となる"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "単位元は左右どちらの積でも元を変えない。",
+    "detailed_explanation": "群の公理より ∃e ∀a: ae = ea = a。e·e = e であり 0 ではない。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "群の単位元の定義を正確に述べられる",
+    "common_misconception": "単位元と逆元の役割を混同する",
+    "distractor_rationales": [
+      "不正解。群では積の結果が 0 とは限らない。",
+      "不正解。逆元を持つのは各元 a。",
+      "不正解。a · e = a · a は一般に成り立たない。",
+      "正解。単位元の定義そのもの。"
+    ],
+    "basic_terms": "群：結合・単位元・逆元を満たす代数構造、単位元：積で他の元を変えない元",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
     "source_url": "",
-    "source_note": "全分野科学検定 バッチ50（難易度高め）",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "幾何",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "関数",
+    "question_text": "ガウス曲率が正の曲面（例：球面）の局所的な幾何的性質として正しいものはどれか。",
+    "choices": [
+      "三角形の内角和が 180° より大きい",
+      "測地線は常に直線である",
+      "平行移動でベクトルの向きは変わらない",
+      "三角形の内角和が 180° より小さい"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正曲率では内角過剰（球面三角形）。",
+    "detailed_explanation": "正のガウス曲率：測地三角形の内角和 > π。負曲率では < π。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ガウス曲率と内角和の関係を説明できる",
+    "common_misconception": "曲面でも平面幾何がそのまま成り立つ",
+    "distractor_rationales": [
+      "正解。正曲率の球面的性質。",
+      "不正解。測地線は一般に曲線。",
+      "不正解。曲率があると平行移動で回転する。",
+      "不正解。負曲率（鞍面）の性質。"
+    ],
+    "basic_terms": "ガウス曲率：曲面の内在的な曲がり具合、測地線：曲面内の最短経路",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "関数",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "確率",
+    "question_text": "複素関数 f(z) = 1/z の z = 1 における導関数 f′(1) として正しいものはどれか。",
+    "choices": [
+      "i",
+      "−1",
+      "0",
+      "1"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "f′(z) = −1/z² より f′(1) = −1。",
+    "detailed_explanation": "z^n の複素微分より d/dz (z^(−1)) = −z^(−2)。z=1 で −1。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "複素関数の基本的な微分公式を適用できる",
+    "common_misconception": "実関数の 1/x の微分と符号を混同する",
+    "distractor_rationales": [
+      "不正解。虚数単位との混同。",
+      "正解。f′(z) = −1/z²、z=1 で −1。",
+      "不正解。定数関数の導関数。",
+      "不正解。符号の誤り。"
+    ],
+    "basic_terms": "複素関数：複素変数の関数、複素微分：コーシー・リーマン方程式による微分",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "確率",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "統計",
+    "question_text": "確率空間 (Ω, F, P) において、確率測度 P が満たす公理として正しいものはどれか。",
+    "choices": [
+      "P(Ω) = 0",
+      "P(A ∪ B) = P(A) + P(B) が任意の A, B で成り立つ",
+      "P(A) ≥ 0 かつ P(Ω) = 1",
+      "P(A) = 1/2 がすべての事象 A で成り立つ"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "コルモゴロフ公理：非負性・規格化・可算加法性。",
+    "detailed_explanation": "P(Ω)=1、P(A)≥0、互いに素な可算族で σ-加法性。B は一般には成り立たない。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "確率測度の公理を列挙できる",
+    "common_misconception": "加法定理を排他性なしで適用する",
+    "distractor_rationales": [
+      "不正解。全事象の確率は 1。",
+      "不正解。互いに素な場合のみ。",
+      "正解。非負性と規格化。",
+      "不正解。一様確率に限定されない。"
+    ],
+    "basic_terms": "確率測度：事象に確率を割り当てる関数、コルモゴロフ公理：確率論の基礎公理",
+    "difficulty_initial": 600,
+    "difficulty_continuous": 600,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "統計",
+      "batch50",
+      "L600"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "question_text": "微分方程式 dy/dx = y の一般解はどれか。ただし C は任意定数とする。",
+    "choices": [
+      "y = Ce^(−x)",
+      "y = C + e^x",
+      "y = Cx",
+      "y = Ce^x"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "正解は y = Ce^x。変数分離して dy/y = dx を積分すると ln|y| = x + 定数、整理して y = Ce^x。",
+    "detailed_explanation": "dy/dx = y を変数分離法で解く。dy/y = dx の両辺を積分すると ln|y| = x + C₀（C₀ は定数）。指数をとると |y| = e^(x+C₀) = e^(C₀)e^x。e^(C₀) を改めて C とおくと y = Ce^x（C ≠ 0）。確認：d/dx(Ce^x) = Ce^x = y。y = Ce^(−x) は dy/dx = −y の解。y = Cx は一次関数で dy/dx = C ≠ y（一般には成り立たない）。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "変数分離法を用いて dy/dx = y 型の常微分方程式を解くことができる",
+    "common_misconception": "dy/dx = y の解を dy/dx = −y の解 Ce^(−x) と混同する",
+    "distractor_rationales": [
+      "不正解。y=Ce^(−x) は dy/dx=−y の一般解。符号が逆の微分方程式と混同した誤答。",
+      "不正解。y=C+e^x は dy/dx=e^x であり dy/dx=y とは一致しない。",
+      "不正解。y=Cx は dy/dx=C であり、C≠y のため dy/dx=y の解にならない。",
+      "正解。dy/dx=y に変数分離を適用すると y=Ce^x が得られ、代入して成立を確認できる。"
+    ],
+    "basic_terms": "変数分離法：dy/dx=f(x)g(y) を dy/g(y)=f(x)dx と分離して積分する解法、常微分方程式：1 変数の微分方程式",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "線形代数",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "微分積分",
+    "question_text": "有限次元ベクトル空間 V 上の線形変換 T の最小多項式 m_T(x) について正しいものはどれか。",
+    "choices": [
+      "m_T は特性多項式の因子であり T を零化する最小次数の単項式係数多項式",
+      "m_T の根は多くの複素数でない",
+      "m_T は V の次元より次数が大きい",
+      "m_T は多くの場合次数 1 の多項式である"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "最小多項式は T を零化する首項係数1の最小次数多項式。",
+    "detailed_explanation": "m_T | 特性多項式（ケーリー・ハミルトン）。次数 ≤ dim V。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "最小多項式と特性多項式の関係を説明できる",
+    "common_misconception": "最小多項式と特性多項式を同一視する",
+    "distractor_rationales": [
+      "正解。最小多項式の定義。",
+      "不正解。代数閉体上では複素根。",
+      "不正解。次数は dim V 以下。",
+      "不正解。スカラー倍は次数 1 だが一般には高次。"
+    ],
+    "basic_terms": "最小多項式：線形変換を零化する最小次数多項式、零化多項式：T に代入して零になる多項式",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "微分積分",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "論理",
+    "question_text": "関数 f(x) = e^x を x = 0 のまわりでテイラー展開したとき、3次までの近似式として正しいものはどれか。",
+    "choices": [
+      "x + x²/2 + x³/6",
+      "1 + x + x²/2 + x³/6",
+      "1 + x + x² + x³",
+      "1 + x + x²/2"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "e^x の各階導関数は x=0 で 1 なので係数は 1/n!。",
+    "detailed_explanation": "e^x = Σ x^n/n! より 3次部分和 1 + x + x²/2 + x³/6。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "初等関数のテイラー展開係数を導関数から求められる",
+    "common_misconception": "階乗で割ることを忘れる",
+    "distractor_rationales": [
+      "不正解。定数項が欠ける。",
+      "正解。e^x のマクローリン展開。",
+      "不正解。階乗で割っていない。",
+      "不正解。3次項が欠ける。"
+    ],
+    "basic_terms": "テイラー展開：関数の多項式近似、マクローリン展開：原点まわりのテイラー展開",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "論理",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "数論",
+    "question_text": "一階述語論理の公式 ∀x ∃y P(x,y) がモデル M で真であることと同値なものはどれか。",
+    "choices": [
+      "P(x,y) は多くの場合偽である",
+      "各 x に対して y が一つに定まる",
+      "各 x に対して P(x,y) を満たす y が M に存在する",
+      "y が一つ選ばれて多くのの x で P(x,y) が成り立つ"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "∀x∃y は各 x ごとに y を選べる（y は x に依存しうる）。",
+    "detailed_explanation": "∀x∃y P(x,y)：任意の x に対し y が存在。∃y∀x とは一般に異なる。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "量化子の順序の意味の違いを説明できる",
+    "common_misconception": "∀x∃y と ∃y∀x を同一視する",
+    "distractor_rationales": [
+      "不正解。偽の定義ではない。",
+      "不正解。y の一意性は要求されない。",
+      "正解。∀x∃y の標準的解釈。",
+      "不正解。これは ∃y∀x の内容。"
+    ],
+    "basic_terms": "一階述語論理：量化子と述語を含む論理、モデル：公式の解釈を与える構造",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "数論",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "位相",
+    "question_text": "二次剰余の相互法則（ガウス）が述べる関係として正しいものはどれか。ただし p, q は奇素数とする。",
+    "choices": [
+      "(p/q) = (q/p) が多くの場合成り立つ",
+      "(p/q) = −1 が多くの場合成り立つ",
+      "(p/q) は p が q の倍数のときを主成分とする定義される",
+      "(p/q)(q/p) = (−1)^((p−1)(q−1)/4)"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "相互法則はレジェンドル記号の積と符号を結ぶ。",
+    "detailed_explanation": "(p/q)(q/p) = (−1)^((p−1)(q−1)/4)。p≡q≡3 (mod 4) のとき符号が反転。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "二次剰余の相互法則を記述できる",
+    "common_misconception": "(p/q) = (q/p) と誤る",
+    "distractor_rationales": [
+      "不正解。p, q ≡ 3 (mod 4) で符号反転。",
+      "不正解。常に −1 ではない。",
+      "不正解。gcd(p,q)=1 で定義される。",
+      "正解。ガウスの二次相互法則。"
+    ],
+    "basic_terms": "レジェンドル記号：二次剰余を判定する記号、二次相互法則：奇素数間の剰余関係",
+    "difficulty_initial": 700,
+    "difficulty_continuous": 700,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "位相",
+      "batch50",
+      "L700"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "代数",
+    "question_text": "オイラーの公式 e^(iθ) = cos θ + i sin θ において、θ = π を代入したときの値はどれか。",
+    "choices": [
+      "−1",
+      "1",
+      "i",
+      "0"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "正解は −1。cos π = −1、sin π = 0 を代入すると e^(iπ) = −1 + 0 = −1。",
+    "detailed_explanation": "オイラーの公式 e^(iθ) = cos θ + i sin θ に θ = π を代入する。cos π = −1、sin π = 0 なので e^(iπ) = −1 + i × 0 = −1。これを変形すると e^(iπ) + 1 = 0 となり、e, i, π, 1, 0 という数学の重要定数を結ぶ「オイラーの等式」として知られる。1 は θ = 0 の場合（e^(0)=1）との混同、i は θ = π/2 の場合（e^(iπ/2) = i）との混同、0 は e^(iπ)+1 の誤読。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "オイラーの公式を用いて複素指数関数の値を計算し、オイラーの等式を導くことができる",
+    "common_misconception": "sin π = 1 と誤って e^(iπ) = −1 + i と答える",
+    "distractor_rationales": [
+      "正解。e^(iπ)=cos π+i sin π=−1+i×0=−1。オイラーの等式 e^(iπ)+1=0 の核心。",
+      "不正解。θ=0 のときの e^(0)=1 と混同した誤答。",
+      "不正解。θ=π/2 のとき e^(iπ/2)=cos(π/2)+i sin(π/2)=0+i=i。π と π/2 を混同した誤答。",
+      "不正解。e^(iπ)+1=0 の式を見て e^(iπ) 自体が 0 と誤解した誤答。"
+    ],
+    "basic_terms": "オイラーの公式：e^(iθ)=cos θ+i sin θ、オイラーの等式：e^(iπ)+1=0、虚数単位 i：i²=−1",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "代数",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "幾何",
+    "question_text": "可換環 R のイデアル I が素イデアルであることの定義として正しいものはどれか。",
+    "choices": [
+      "I がすべての素数を含む",
+      "I が R の真部分イデアルで、ab ∈ I ならば a ∈ I または b ∈ I",
+      "I が R と一致する",
+      "I が有限生成である"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "素イデアルは整域のような「整除」構造を持つ。",
+    "detailed_explanation": "素イデアル：真部分イデアル I で ab∈I ⇒ a∈I or b∈I。R/I は整域。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "素イデアルの定義と商環の性質を説明できる",
+    "common_misconception": "素イデアルと極大イデアルを混同する",
+    "distractor_rationales": [
+      "不正解。素数との混同。",
+      "正解。素イデアルの標準定義。",
+      "不正解。R 自身は素イデアルではない（整域にならない）。",
+      "不正解。有限生成性は定義に含まれない。"
+    ],
+    "basic_terms": "素イデアル：積が含まれるなら因子が含まれるイデアル、商環：イデアルで割った環",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "幾何",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "関数",
+    "question_text": "リーマン多様体 (M, g) において、測地線が最短経路となる条件として一般に必要なものはどれか。",
+    "choices": [
+      "曲率が負である",
+      "M が平坦である",
+      "測地線が十分小さい近傍内で最短である（一般には大域最短ではない）",
+      "測地線は常に大域的最短である"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "測地線は局所最短だが大域最短とは限らない（例：球面の大円の半分より長い弧）。",
+    "detailed_explanation": "測地線はエネルギー汎関数の臨界点。十分小さい区間では最短だが、共役点を越えると最短でなくなる。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "測地線の局所最短性と大域最短性の違いを説明できる",
+    "common_misconception": "測地線＝大域最短と同一視する",
+    "distractor_rationales": [
+      "不正解。曲率の符号は必要条件ではない。",
+      "不正解。曲率があっても測地線は定義される。",
+      "正解。局所最短性の正確な記述。",
+      "不正解。球面上の長い大円弧は反例。"
+    ],
+    "basic_terms": "測地線：接ベクトルが平行移動で不変な曲線、共役点：測地線の最短性が失われる点",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "関数",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "確率",
+    "question_text": "上半平面 {z : Im z > 0} 上の全純関数 f が実軸上で実値をとるとき、f の対称性として正しいものはどれか。",
+    "choices": [
+      "f は定数関数に限られる",
+      "f は実軸上でのみ定義される",
+      "f(z̄) = f(z)",
+      "f(z̄) = f(z) の共役"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "シュワルツの反射原理より f(z̄) = overline{f(z)}。",
+    "detailed_explanation": "実軸で実値の全純関数は共役対称：f(z̄) = conjugate(f(z))。解析接続で下半平面へ拡張。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "全純関数の対称原理を適用できる",
+    "common_misconception": "f(z̄)=f(z) と誤る",
+    "distractor_rationales": [
+      "不正解。非定数の例が存在する。",
+      "不正解。上半平面で全純。",
+      "不正解。共役が f に入る。",
+      "正解。反射原理による共役対称。"
+    ],
+    "basic_terms": "全純関数：複素微分可能な関数、反射原理：実軸対称からの解析接続",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "確率",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "統計",
+    "question_text": "確率空間上の確率測度 P と Q が互いに絶対連続（P ≪ Q）であることの定義として正しいものはどれか。",
+    "choices": [
+      "Q(A) = 0 ならば P(A) = 0 となる任意の可測集合 A",
+      "P と Q の支持が互いに素である",
+      "P(A) = 1 ならば Q(A) = 0",
+      "P と Q が常に等しい"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "P ≪ Q は Q-零集合が P-零集合でもあること。",
+    "detailed_explanation": "絶対連続：Q(A)=0 ⇒ P(A)=0。ラドン・ニコディム定理で dP/dQ が存在（σ-有限下）。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "測度の絶対連続と特異性を区別できる",
+    "common_misconception": "絶対連続と同等を混同する",
+    "distractor_rationales": [
+      "正解。絶対連続の定義。",
+      "不正解。支持の素性は特異性に近い。",
+      "不正解。逆の含意は特異性。",
+      "不正解。同等 P≪Q かつ Q≪P はより強い。"
+    ],
+    "basic_terms": "絶対連続：一方の零集合が他方の零集合、ラドン・ニコディム導関数：測度の密度",
+    "difficulty_initial": 800,
+    "difficulty_continuous": 800,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "統計",
+      "batch50",
+      "L800"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "question_text": "フェルマーの小定理が述べる関係式として正しいものはどれか。ただし p は素数、a は p と互いに素な整数とする。",
+    "choices": [
+      "a^(p+1) ≡ 1 (mod p)",
+      "a^(p−1) ≡ 1 (mod p)",
+      "a^p ≡ p (mod a)",
+      "a^p ≡ 0 (mod p)"
+    ],
+    "correct_choice_index": 1,
+    "short_explanation": "正解は a^(p−1) ≡ 1 (mod p)。フェルマーの小定理の中核をなす合同式。",
+    "detailed_explanation": "フェルマーの小定理：p が素数で gcd(a, p) = 1 ならば a^(p−1) ≡ 1 (mod p)。例：p = 7、a = 3 のとき 3^6 = 729 = 7×104 + 1 より 729 ≡ 1 (mod 7)。同値形式として a^p ≡ a (mod p) もあるが、「a^(p−1) ≡ 1」が定理の標準形。この定理は RSA 暗号のアルゴリズムの正当性証明にも用いられる。a^p ≡ 0 は a が p の倍数の場合（仮定と矛盾）の誤り。",
+    "cognitive_type": "用語・定義",
+    "learning_objective": "フェルマーの小定理を正確に記述し、素数と合同式の関係を理解できる",
+    "common_misconception": "指数を p にするか p−1 にするかを混同して a^p ≡ 1 (mod p) と誤記する",
+    "distractor_rationales": [
+      "不正解。指数が p+1 である a^(p+1) ≡ 1 はフェルマーの小定理の主張ではない。",
+      "正解。フェルマーの小定理の標準形。gcd(a,p)=1 のとき a^(p−1) ≡ 1 (mod p)。",
+      "不正解。a^p ≡ p (mod a) はフェルマーの小定理とは異なる誤った関係式。",
+      "不正解。a^p ≡ 0 (mod p) は a が p の倍数のときに成り立つが、gcd(a,p)=1 の仮定に矛盾する。"
+    ],
+    "basic_terms": "フェルマーの小定理：a^(p−1)≡1(mod p)（p 素数、gcd(a,p)=1）、合同式：a≡b(mod m) は m が a−b を割り切ることを意味する",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "線形代数",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "微分積分",
+    "question_text": "体 F 上の有限次元表現 ρ: G → GL(V) が既約であることの定義として正しいものはどれか。",
+    "choices": [
+      "G が有限群である",
+      "V に真の部分空間 W ≠ {0}, V が G-不変でない",
+      "V に G-不変な部分空間 W が {0} と V のみである",
+      "ρ(g) がすべて可換行列である"
+    ],
+    "correct_choice_index": 2,
+    "short_explanation": "既約表現は非自明な不変部分空間を持たない。",
+    "detailed_explanation": "既約：不変部分空間が {0} と V のみ。シューアの補題と直交分解（特性0・代数閉）。",
+    "cognitive_type": "原理・因果",
+    "learning_objective": "群の表現の既約性を定義し直和分解と関連づけられる",
+    "common_misconception": "既約と既約元（環論）を混同する",
+    "distractor_rationales": [
+      "不正解。無限群の表現も既約性を定義できる。",
+      "不正解。不変部分空間が存在してはいけない（真のもの）。",
+      "正解。既約表現の定義。",
+      "不正解。可換性は要求されない。"
+    ],
+    "basic_terms": "群の表現：群を線形変換の群へ写す homomorphism、不変部分空間：ρ(g)W⊂W となる部分空間",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "微分積分",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "論理",
+    "question_text": "コンパクトリーマン上の調和形式のデ・ラームコホモロジー類とホッジ理論による表現として正しいものはどれか。",
+    "choices": [
+      "調和形式は多くの場合閉形式でない",
+      "ベッチ数は多くの場合 0 である",
+      "多くのの微分形式が正確形式である",
+      "各コホモロジー類に唯一の調和形式代表が存在する（適切な条件下）"
+    ],
+    "correct_choice_index": 3,
+    "short_explanation": "ホッジ分解定理：各類に唯一の調和代表。",
+    "detailed_explanation": "コンパクトリーマン上、ホッジ理論により H^k_{dR}(M) ≅ {調和 k-形式}。各類に唯一の調和代表。",
+    "cognitive_type": "基本的な適用",
+    "learning_objective": "ホッジ理論とデ・ラームコホモロジーの対応を説明できる",
+    "common_misconception": "コホモロジー類の代表が一意でないと誤る",
+    "distractor_rationales": [
+      "不正解。調和形式は閉かつ余閉。",
+      "不正解。ベッチ数は一般に非零。",
+      "不正解。トポロジーにより非自明な類が存在しうる。",
+      "正解。ホッジ分解の核心。"
+    ],
+    "basic_terms": "デ・ラームコホモロジー：閉形式の類、ホッジ分解：調和形式による直和分解",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "論理",
+      "batch50",
+      "L900"
+    ]
+  },
+  {
+    "domain": "数学",
+    "subdomain": "数論",
+    "question_text": "ゲーデルの第二不完全性定理がペアノ算術 PA について主張する内容として正しいものはどれか。",
+    "choices": [
+      "PA がコンシステントならば PA は自身の無矛盾性を証明できない",
+      "PA は有限個の公理からなる",
+      "PA の決定可能性が証明された",
+      "PA はすべての真な命題を証明できる"
+    ],
+    "correct_choice_index": 0,
+    "short_explanation": "コンシステントな PA は Con(PA) を証明できない。",
+    "detailed_explanation": "第二不完全性定理：PA が ω-コンシステント（または十分強い条件下でコンシステント）なら Con(PA) は PA で証明不能。",
+    "cognitive_type": "比較・分類",
+    "learning_objective": "第二不完全性定理の意味と無矛盾性証明の限界を説明できる",
+    "common_misconception": "第一不完全性定理と第二を混同する",
+    "distractor_rationales": [
+      "正解。第二不完全性定理の核心。",
+      "不正解。PA は無限公理系。",
+      "不正解。チューリングにより決定不能。",
+      "不正解。第一不完全性定理の内容と混同。"
+    ],
+    "basic_terms": "第二不完全性定理：十分強い体系は自身の無矛盾性を証明できない、無矛盾性：矛盾が導かれないこと",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
     "tags": [
       "数学",
       "数論",
       "batch50",
       "L900"
-    ],
+    ]
+  },
+  {
     "domain": "数学",
-    "subdomain": "数論",
-    "difficulty_initial": 900,
-    "question_text": "素数 p に対し、フェルマーの小定理が保証する合同式として正しいものはどれか。ただし gcd(a, p) = 1 とする。",
+    "subdomain": "位相",
+    "question_text": "代数体 K の整数環 O_K が一意因子分解整域でない例として知られる二次体はどれか。",
     "choices": [
-      "a^(p+1) ≡ 1 (mod p)",
-      "a^p ≡ a (mod p)",
-      "a^(p−1) ≡ 1 (mod p)",
-      "a^p ≡ 1 (mod p)"
+      "ℚ(√2)",
+      "ℚ(√−5)",
+      "ℚ(i)",
+      "ℚ(√3)"
     ],
-    "correct_choice_index": 0,
-    "short_explanation": "フェルマーの小定理の標準形は a^(p−1) ≡ 1 (mod p)。",
-    "detailed_explanation": "フェルマーの小定理：p 素数かつ gcd(a,p)=1 なら a^(p−1) ≡ 1 (mod p)。同値形 a^p ≡ a もあるが、gcd(a,p)=1 のときの中核形は B。",
-    "learning_objective": "フェルマーの小定理を正確に記述し RSA 等への応用基礎を理解できる",
-    "cognitive_type": "原理・因果",
-    "common_misconception": "指数を p と p−1 で混同する",
+    "correct_choice_index": 1,
+    "short_explanation": "ℤ[√−5] で 6 = 2·3 = (1+√−5)(1−√−5) の非一意分解。",
+    "detailed_explanation": "ℚ(√−5) の整数環は UFD でない。6 の異なる素因子分解が存在。理想論（デデキント環）が必要。",
+    "cognitive_type": "誤解・境界",
+    "learning_objective": "代数整数環の UFD 性の失敗例を挙げ理想論の動機を説明できる",
+    "common_misconception": "すべての二次体の整数環が UFD だと思う",
     "distractor_rationales": [
-      "不正解。指数が誤り。",
-      "不正解。同値形だが gcd(a,p)=1 のときの標準形は B。",
-      "正解。フェルマーの小定理の中核。",
-      "不正解。a=2, p=3 で 8 ≢ 1。"
+      "不正解。ℤ[√2] は UFD（実二次体で類数1の例）。",
+      "正解。古典的反例 ℚ(√−5)。",
+      "不正解。ℤ[i] は UFD（ガウス整数）。",
+      "不正解。ℤ[(1+√3)/2] は UFD。"
     ],
-    "basic_terms": "フェルマーの小定理：素数を法とする累乗の合同式、合同式：同じ余りを持つ整数の関係"
+    "basic_terms": "代数整数環：代数体の整数全体の環、一意因子分解：素因数分解が一意",
+    "difficulty_initial": 900,
+    "difficulty_continuous": 900,
+    "source_note": "全分野科学検定 バッチ50（レベル均等）",
+    "source_url": "",
+    "currentness_type": "evergreen",
+    "expires_at": null,
+    "tags": [
+      "数学",
+      "位相",
+      "batch50",
+      "L900"
+    ]
   }
 ]
