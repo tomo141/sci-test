@@ -4,7 +4,21 @@ import { useState } from "react";
 import { Download } from "lucide-react";
 import { AppButton } from "@/components/ui/AppButton";
 
-export function SaveResultButton({ score, scoreLow, scoreHigh, answerCount }: { score: number; scoreLow: number; scoreHigh: number; answerCount: number }) {
+export function SaveResultButton({
+  score,
+  scoreLow,
+  scoreHigh,
+  answerCount,
+  scoreKind = "overall",
+  domain
+}: {
+  score: number;
+  scoreLow: number;
+  scoreHigh: number;
+  answerCount: number;
+  scoreKind?: "overall" | "domain";
+  domain?: string;
+}) {
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "login" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -15,7 +29,7 @@ export function SaveResultButton({ score, scoreLow, scoreHigh, answerCount }: { 
     const response = await fetch("/api/exam/save", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sessionId, score, scoreLow, scoreHigh, answerCount })
+      body: JSON.stringify({ sessionId, score, scoreLow, scoreHigh, answerCount, scoreKind, domain })
     }).catch(() => null);
     if (response?.ok) {
       setStatus("saved");

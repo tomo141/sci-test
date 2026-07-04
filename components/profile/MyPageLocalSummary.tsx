@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ScoreDisplay } from "@/components/ui/ScoreDisplay";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import type { ClientExamAnswer } from "@/src/lib/exam/session";
+import { domains } from "@/src/lib/data/taxonomy";
 import { estimateFromAnswers } from "@/src/lib/scoring";
 
 export function MyPageLocalSummary() {
@@ -29,12 +30,16 @@ export function MyPageLocalSummary() {
 
   const estimate = estimateFromAnswers(answers);
   const correctCount = answers.filter((answer) => answer.correct).length;
+  const bestDomain = domains
+    .map((domain) => ({ domain, score: estimate.domains[domain] }))
+    .sort((a, b) => b.score - a.score)[0];
 
   return (
     <div className="mt-5">
       <ScoreDisplay score={estimate.overall} />
       <div className="mt-4 flex flex-wrap gap-2">
         <StatusBadge>{correctCount} / {answers.length} 問 正解</StatusBadge>
+        {bestDomain ? <StatusBadge>最高分野 {bestDomain.domain} {bestDomain.score}</StatusBadge> : null}
         <StatusBadge>{estimate.accuracyLabel}</StatusBadge>
       </div>
     </div>

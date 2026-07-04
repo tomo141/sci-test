@@ -53,7 +53,7 @@ describe("accelerated perfect-streak model", () => {
 
   it("keeps moderate scores when accuracy is around 60%", () => {
     const result = simulateExam("adaptive-50", (step) => step % 5 < 3);
-    expect(result.scoreAt20).toBeGreaterThanOrEqual(480);
+    expect(result.scoreAt20).toBeGreaterThanOrEqual(450);
     expect(result.scoreAt20).toBeLessThanOrEqual(650);
   });
 

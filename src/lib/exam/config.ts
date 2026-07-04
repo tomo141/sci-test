@@ -1,4 +1,4 @@
-const QUESTIONS_PER_CYCLE = 50;
+const QUESTIONS_PER_CYCLE = 20;
 const QUICK_RESULT_THRESHOLD = 10;
 
 export const examConfig = {

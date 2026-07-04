@@ -12,8 +12,9 @@ import { SaveResultButton } from "@/components/exam/SaveResultButton";
 import { useExamAnswers } from "@/components/exam/useExamAnswers";
 import { ReviewListSection } from "@/components/karte/ReviewListSection";
 import { domains } from "@/src/lib/data/taxonomy";
+import { EXAM_PLAN_STORAGE_KEY, type ExamPlan } from "@/src/lib/exam/session";
 import { scoringConfig } from "@/src/lib/scoring/config";
-import { domainScorePercent } from "@/src/lib/scoring/domainScore";
+import { domainScorePercent, internalScorePercent } from "@/src/lib/scoring/domainScore";
 import { estimateFromAnswers } from "@/src/lib/scoring/estimate";
 import { rankTitle } from "@/src/lib/scoring/rank";
 
@@ -25,19 +26,46 @@ function topDomains(domainScores: { name: string; score: number }[]) {
   return [...domainScores].sort((a, b) => b.score - a.score).slice(0, 3);
 }
 
+function roundInternalScore(value: number) {
+  const clamped = Math.max(scoringConfig.minScore, Math.min(scoringConfig.maxScore, value));
+  return Math.round(clamped / scoringConfig.displayStep) * scoringConfig.displayStep;
+}
+
 export function KarteResultClient() {
   const { answers, loaded, source } = useExamAnswers();
+  const examPlan = useMemo(() => {
+    if (typeof window === "undefined") return null;
+    const stored = window.localStorage.getItem(EXAM_PLAN_STORAGE_KEY);
+    if (!stored) return null;
+    try {
+      return JSON.parse(stored) as ExamPlan;
+    } catch {
+      return null;
+    }
+  }, []);
 
   const estimate = useMemo(() => estimateFromAnswers(answers), [answers]);
   const correctCount = answers.filter((answer) => answer.correct).length;
   const correctRate = answers.length ? correctCount / answers.length : 0;
-  const domainData = domains.map((name) => ({ name, score: estimate.domains[name] }));
+  const targetDomain = examPlan?.mode === "domain" ? examPlan.targetDomain : undefined;
+  const isDomainExam = !!targetDomain;
+  const domainData = domains.map((name) => {
+    if (!isDomainExam) return { name, score: estimate.domains[name] };
+    const hasDomainScore = estimate.counts.domains[name] > 0;
+    return {
+      name,
+      score: hasDomainScore ? roundInternalScore(estimate.internal.domains[name].value) : scoringConfig.initialAbility
+    };
+  });
+  const domainMaxScore = isDomainExam ? scoringConfig.maxScore : scoringConfig.domainMaxScore;
   const bestDomains = topDomains(domainData);
+  const displayScore = targetDomain ? roundInternalScore(estimate.internal.domains[targetDomain].value) : estimate.overall;
+  const displayLabel = targetDomain ? `分野スコア（${targetDomain}）` : "総合スコア";
   const title = rankTitle(estimate.overall);
   const badges = [
     answers.length > 0 ? "挑戦者" : null,
     answers.length >= 10 ? "10問到達" : null,
-    answers.length >= 50 ? "50問達成" : null,
+    answers.length >= 20 ? "20問達成" : null,
     correctRate >= 0.7 ? "安定正答" : null,
     new Set(answers.map((answer) => answer.domain)).size >= 10 ? "10分野踏破" : null
   ].filter(Boolean) as string[];
@@ -66,10 +94,10 @@ export function KarteResultClient() {
   return (
     <>
       <AppCard className="mt-6 grid gap-5 md:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
-        <div><h2 className="mb-3 font-black">総合スコア</h2><ScoreDisplay score={estimate.overall} /></div>
+        <div><h2 className="mb-3 font-black">{displayLabel}</h2><ScoreDisplay score={displayScore} /></div>
         {[
           ["総合ランク", title, "科学力ランク"],
-          ["回答数", String(answers.length), "/ 50問"],
+          ["回答数", String(answers.length), "/ 20問"],
           ["正答率", percent(correctRate * 100), `(${correctCount} / ${answers.length}問)`],
           ["診断精度", estimate.accuracyLabel, `${estimate.scoreRange[0]}〜${estimate.scoreRange[1]}`]
         ].map(([label, value, note]) => (
@@ -81,7 +109,15 @@ export function KarteResultClient() {
         ))}
       </AppCard>
       <section className="mt-6">
-        <AppCard><h2 className="text-xl font-black">10の科学分野バランス</h2><RadarScoreChart data={domainData} label="10の科学分野バランス" maxScore={scoringConfig.domainMaxScore} /></AppCard>
+        <AppCard>
+          <h2 className="text-xl font-black">10の科学分野バランス</h2>
+          {isDomainExam ? (
+            <p className="mt-2 text-sm font-bold leading-7 text-[var(--color-muted)]">
+              分野スコア受験をしていない分野は、総合スコア受験の値（なければ500）を採用しています。
+            </p>
+          ) : null}
+          <RadarScoreChart data={domainData} label="10の科学分野バランス" maxScore={domainMaxScore} />
+        </AppCard>
       </section>
       <section className="mt-6">
         <ReviewListSection />
@@ -95,10 +131,10 @@ export function KarteResultClient() {
                 <div className="flex justify-between text-sm font-bold">
                   <span>{item.name}</span>
                   <span>
-                    {item.score} / {scoringConfig.domainMaxScore}
+                    {item.score} / {domainMaxScore}
                   </span>
                 </div>
-                <ProgressBar value={domainScorePercent(item.score)} />
+                <ProgressBar value={isDomainExam ? internalScorePercent(item.score) : domainScorePercent(item.score)} />
               </div>
             ))}
           </div>
@@ -110,7 +146,14 @@ export function KarteResultClient() {
       </section>
       <div className="mt-8 grid gap-3 md:grid-cols-3">
         <AppButton href="/training"><BookOpen />トレーニングページへ</AppButton>
-        <SaveResultButton score={estimate.overall} scoreLow={estimate.scoreRange[0]} scoreHigh={estimate.scoreRange[1]} answerCount={answers.length} />
+        <SaveResultButton
+          score={displayScore}
+          scoreLow={estimate.scoreRange[0]}
+          scoreHigh={estimate.scoreRange[1]}
+          answerCount={answers.length}
+          scoreKind={isDomainExam ? "domain" : "overall"}
+          domain={targetDomain}
+        />
         <AppButton href="/ranking" variant="secondary"><Trophy />ランキングを見る</AppButton>
       </div>
     </>

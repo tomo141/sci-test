@@ -6,12 +6,15 @@ import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { QuestionCard } from "@/components/exam/QuestionCard";
+import { QuestionCardSkeleton } from "@/components/exam/QuestionCardSkeleton";
 import type { AnswerFeedback } from "@/src/lib/exam/explanation";
 import { estimateFromAnswers } from "@/src/lib/scoring/scoring";
 import { examConfig } from "@/src/lib/exam/config";
 import type { PublicQuestion } from "@/src/lib/exam/publicQuestion";
+import { domains } from "@/src/lib/data/taxonomy";
 import {
   EXAM_PLAN_STORAGE_KEY,
+  createDomainExamPlan,
   createExamPlan,
   loadOrCreateExamPlan,
   type ClientExamAnswer,
@@ -27,6 +30,7 @@ const SESSION_STORAGE_KEY = "sci-test-session-id";
 const ANONYMOUS_SESSION_STORAGE_KEY = "sci-test-anonymous-session-id";
 const ACTIVE_SESSION_STORAGE_KEY = "sci-test-active-exam-session";
 const ANSWER_SYNC_QUEUE_STORAGE_KEY = "sci-test-answer-sync-queue";
+const DEFAULT_EXAM_VALUE = "overall";
 
 type ActiveExamSession = {
   sessionId: string | null;
@@ -103,6 +107,11 @@ function isSameActiveSession(meta: ActiveExamSession | null, sessionId: string |
   return meta.sessionSeed === plan.sessionSeed && (!sessionId || !meta.sessionId || meta.sessionId === sessionId);
 }
 
+function isEditableTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) return false;
+  return !!target.closest("input, textarea, select, [contenteditable='true']");
+}
+
 async function fetchExamQuestion(examPlan: ExamPlan, previousAnswers: ClientExamAnswer[]) {
   const response = await fetch("/api/exam/next", {
     method: "POST",
@@ -162,6 +171,7 @@ async function flushAnswerSyncQueue(sessionId: string | null, plan: ExamPlan) {
 export default function ExamPage() {
   const questionTopRef = useRef<HTMLDivElement>(null);
   const questionTextRef = useRef<HTMLHeadingElement>(null);
+  const prefetchedNextRef = useRef<PublicQuestion | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -172,10 +182,13 @@ export default function ExamPage() {
   const [questionLoading, setQuestionLoading] = useState(true);
   const [questionError, setQuestionError] = useState<string | null>(null);
   const [answerFeedback, setAnswerFeedback] = useState<AnswerFeedback | null>(null);
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
   const [answerHighlight, setAnswerHighlight] = useState<AnswerHighlight | null>(null);
   const [activeFeedback, setActiveFeedback] = useState<QuestionFeedbackKind | null>(null);
   const [showLoadingHelp, setShowLoadingHelp] = useState(false);
-  const [sessionReady, setSessionReady] = useState(false);
+  const [startReady, setStartReady] = useState(false);
+  const [examStarted, setExamStarted] = useState(false);
+  const [selectedExamValue, setSelectedExamValue] = useState(DEFAULT_EXAM_VALUE);
 
   const estimate = useMemo(() => estimateFromAnswers(answers), [answers]);
   const correctCount = answers.filter((a) => a.correct).length;
@@ -187,6 +200,8 @@ export default function ExamPage() {
     cycleNumber === 1
       ? `第 ${questionNumber} 問 / ${QUESTIONS_PER_CYCLE} 問`
       : `第 ${questionNumber} 問（${cycleNumber}周目 ${positionInCycle}/${QUESTIONS_PER_CYCLE}）`;
+  const examModeLabel =
+    examPlan?.mode === "domain" && examPlan.targetDomain ? `分野スコア（${examPlan.targetDomain}）` : "総合スコア";
 
   const loadQuestion = useCallback(async (plan: ExamPlan, previousAnswers: ClientExamAnswer[]) => {
     setQuestionLoading(true);
@@ -198,6 +213,13 @@ export default function ExamPage() {
     } else {
       setCurrentQuestion(question);
     }
+    setQuestionLoading(false);
+  }, []);
+
+  const applyQuestion = useCallback((question: PublicQuestion | null) => {
+    prefetchedNextRef.current = null;
+    setQuestionError(question ? null : "次の問題を取得できませんでした。");
+    setCurrentQuestion(question);
     setQuestionLoading(false);
   }, []);
 
@@ -216,16 +238,30 @@ export default function ExamPage() {
     window.localStorage.setItem(ANONYMOUS_SESSION_STORAGE_KEY, existingAnonymousId);
     setAnonymousSessionId(existingAnonymousId);
 
-    const plan = loadOrCreateExamPlan(window.localStorage.getItem(EXAM_PLAN_STORAGE_KEY));
-    window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(plan));
-    setExamPlan(plan);
-
-    const activeSession = loadJson<ActiveExamSession | null>(ACTIVE_SESSION_STORAGE_KEY, null);
+    const storedPlan = window.localStorage.getItem(EXAM_PLAN_STORAGE_KEY);
     const activeSessionId = window.localStorage.getItem(SESSION_STORAGE_KEY);
     const existingAnswers = window.localStorage.getItem(ANSWERS_STORAGE_KEY);
+    const hasLocalAnswers = !!existingAnswers && existingAnswers !== "[]";
+
+    if (!storedPlan && !activeSessionId && !hasLocalAnswers) {
+      setQuestionLoading(false);
+      setStartReady(true);
+      return;
+    }
+
+    const plan = loadOrCreateExamPlan(storedPlan);
+    window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(plan));
+    setExamPlan(plan);
+    setExamStarted(true);
+    setStartReady(true);
+    setSelectedExamValue(plan.mode === "domain" && plan.targetDomain ? plan.targetDomain : DEFAULT_EXAM_VALUE);
+
+    const activeSession = loadJson<ActiveExamSession | null>(ACTIVE_SESSION_STORAGE_KEY, null);
     const parsedAnswers = existingAnswers ? (JSON.parse(existingAnswers) as ClientExamAnswer[]) : [];
     const localAnswers = isSameActiveSession(activeSession, activeSessionId, plan) ? parsedAnswers : [];
     setAnswers(localAnswers);
+
+    void loadQuestion(plan, localAnswers);
 
     const params = new URLSearchParams();
     if (activeSessionId) params.set("sessionId", activeSessionId);
@@ -251,8 +287,7 @@ export default function ExamPage() {
           updatedAt: new Date().toISOString()
         });
       })
-      .catch(() => null)
-      .finally(() => setSessionReady(true));
+      .catch(() => null);
 
     if (activeSessionId && isSameActiveSession(activeSession, activeSessionId, plan)) {
       setSessionId(activeSessionId);
@@ -300,18 +335,63 @@ export default function ExamPage() {
           answerCount: localAnswers.length,
           updatedAt: new Date().toISOString()
         });
-      })
-      .finally(() => setSessionReady(true));
+      });
   }, [loadQuestion]);
 
-  useEffect(() => {
-    if (!sessionReady || !examPlan) return;
-    const storedAnswers = loadJson<ClientExamAnswer[]>(ANSWERS_STORAGE_KEY, answers);
-    void loadQuestion(examPlan, storedAnswers);
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- load only when session becomes ready
-  }, [sessionReady, examPlan, loadQuestion]);
+  const startExam = async () => {
+    const targetDomain = domains.find((domain) => domain === selectedExamValue);
+    const newPlan = targetDomain ? createDomainExamPlan(targetDomain) : createExamPlan();
+    window.localStorage.removeItem(ANSWERS_STORAGE_KEY);
+    window.localStorage.removeItem(ANSWER_SYNC_QUEUE_STORAGE_KEY);
+    window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(newPlan));
 
-  const answer = async (choiceIndex?: number) => {
+    setAnswers([]);
+    setExamPlan(newPlan);
+    setExamStarted(true);
+    setQuestionLoading(true);
+    setQuestionError(null);
+    prefetchedNextRef.current = null;
+
+    const anonymousId = anonymousSessionId || crypto.randomUUID();
+    window.localStorage.setItem(ANONYMOUS_SESSION_STORAGE_KEY, anonymousId);
+
+    try {
+      const response = await fetch("/api/exam/start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ anonymousSessionId: anonymousId, examPlan: newPlan })
+      });
+      const data = await response.json();
+      setSessionId(data.sessionId);
+      window.localStorage.setItem(SESSION_STORAGE_KEY, data.sessionId);
+      setAnonymousSessionId(data.anonymousSessionId || anonymousId);
+      saveActiveSession({
+        sessionId: data.sessionId,
+        anonymousSessionId: data.anonymousSessionId || anonymousId,
+        sessionSeed: (data.examPlan || newPlan).sessionSeed,
+        answerCount: 0,
+        updatedAt: new Date().toISOString()
+      });
+      if (data.examPlan) {
+        setExamPlan(data.examPlan);
+        window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(data.examPlan));
+      }
+      void loadQuestion(data.examPlan || newPlan, []);
+    } catch {
+      const localSessionId = `local-${anonymousId}`;
+      setSessionId(localSessionId);
+      saveActiveSession({
+        sessionId: localSessionId,
+        anonymousSessionId: anonymousId,
+        sessionSeed: newPlan.sessionSeed,
+        answerCount: 0,
+        updatedAt: new Date().toISOString()
+      });
+      void loadQuestion(newPlan, []);
+    }
+  };
+
+  const answer = useCallback(async (choiceIndex?: number) => {
     const selectedIndex = choiceIndex ?? selected;
     if (selectedIndex === null || !currentQuestion || !examPlan || answered) return;
 
@@ -326,6 +406,15 @@ export default function ExamPage() {
       examPlan
     };
 
+    setSelected(selectedIndex);
+    setAnswered(true);
+    setFeedbackLoading(true);
+    setAnswerHighlight(null);
+    setAnswerFeedback(null);
+    window.setTimeout(() => {
+      if (questionTextRef.current) scrollToElementTop(questionTextRef.current, ANSWER_SCROLL_DURATION_MS);
+    }, ANSWER_SCROLL_DELAY_MS);
+
     const response = await fetch("/api/exam/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -333,6 +422,9 @@ export default function ExamPage() {
     }).catch(() => null);
 
     if (!response?.ok) {
+      setSelected(null);
+      setAnswered(false);
+      setFeedbackLoading(false);
       enqueueAnswerSync(syncPayload);
       setQuestionError("回答の送信に失敗しました。通信状況を確認してください。");
       return;
@@ -364,11 +456,6 @@ export default function ExamPage() {
       updatedAt: new Date().toISOString()
     });
 
-    setSelected(selectedIndex);
-    setAnswered(true);
-    window.setTimeout(() => {
-      if (questionTextRef.current) scrollToElementTop(questionTextRef.current, ANSWER_SCROLL_DURATION_MS);
-    }, ANSWER_SCROLL_DELAY_MS);
     setAnswerHighlight({
       correctDisplayIndex: payload?.correctDisplayIndex ?? selectedIndex,
       selectedDisplayIndex: payload?.selectedDisplayIndex ?? selectedIndex
@@ -381,106 +468,119 @@ export default function ExamPage() {
           }
         : null
     );
-  };
+    setFeedbackLoading(false);
+    if (payload?.nextQuestion) {
+      prefetchedNextRef.current = payload.nextQuestion as PublicQuestion;
+    }
+  }, [anonymousSessionId, answered, answers, currentQuestion, examPlan, selected, sessionId]);
 
-  const next = () => {
+  const next = useCallback(() => {
     if (!examPlan) return;
     const latestAnswers = loadJson<ClientExamAnswer[]>(ANSWERS_STORAGE_KEY, answers);
     setSelected(null);
     setAnswered(false);
     setAnswerFeedback(null);
+    setFeedbackLoading(false);
     setAnswerHighlight(null);
     setActiveFeedback(null);
-    void loadQuestion(examPlan, latestAnswers);
+
+    const prefetched = prefetchedNextRef.current;
+    if (prefetched) {
+      prefetchedNextRef.current = null;
+      applyQuestion(prefetched);
+    } else {
+      void loadQuestion(examPlan, latestAnswers);
+    }
+
     requestAnimationFrame(() => {
       questionTopRef.current?.scrollIntoView({ block: "start" });
     });
-  };
+  }, [answers, applyQuestion, examPlan, loadQuestion]);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.repeat || isEditableTarget(event.target)) return;
+
+      if (!answered && !questionLoading && currentQuestion && /^[1-4]$/.test(event.key)) {
+        const choiceIndex = Number(event.key) - 1;
+        if (choiceIndex < currentQuestion.choices.length) {
+          event.preventDefault();
+          void answer(choiceIndex);
+        }
+        return;
+      }
+
+      if (event.code === "Space" && answered && answerFeedback && !feedbackLoading) {
+        event.preventDefault();
+        next();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [answer, answerFeedback, answered, currentQuestion, feedbackLoading, next, questionLoading]);
 
   const restartFromBeginning = async () => {
     if (!window.confirm("回答履歴を消去して、最初からやり直しますか？")) return;
 
-    const newPlan = createExamPlan();
     window.localStorage.removeItem(ANSWERS_STORAGE_KEY);
     window.localStorage.removeItem(ANSWER_SYNC_QUEUE_STORAGE_KEY);
-    window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(newPlan));
+    window.localStorage.removeItem(EXAM_PLAN_STORAGE_KEY);
+    window.localStorage.removeItem(SESSION_STORAGE_KEY);
+    window.localStorage.removeItem(ACTIVE_SESSION_STORAGE_KEY);
 
     setAnswers([]);
-    setExamPlan(newPlan);
+    setExamPlan(null);
+    setExamStarted(false);
+    setStartReady(true);
+    setQuestionLoading(false);
+    setCurrentQuestion(null);
     setSelected(null);
     setAnswered(false);
     setAnswerFeedback(null);
+    setFeedbackLoading(false);
     setAnswerHighlight(null);
     setActiveFeedback(null);
-
-    const anonymousId = anonymousSessionId || crypto.randomUUID();
-    window.localStorage.setItem(ANONYMOUS_SESSION_STORAGE_KEY, anonymousId);
-
-    try {
-      const response = await fetch("/api/exam/start", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ anonymousSessionId: anonymousId, examPlan: newPlan })
-      });
-      const data = await response.json();
-      setSessionId(data.sessionId);
-      window.localStorage.setItem(SESSION_STORAGE_KEY, data.sessionId);
-      saveActiveSession({
-        sessionId: data.sessionId,
-        anonymousSessionId: data.anonymousSessionId || anonymousId,
-        sessionSeed: (data.examPlan || newPlan).sessionSeed,
-        answerCount: 0,
-        updatedAt: new Date().toISOString()
-      });
-      if (data.examPlan) {
-        setExamPlan(data.examPlan);
-        window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(data.examPlan));
-      }
-      void loadQuestion(data.examPlan || newPlan, []);
-    } catch {
-      const localSessionId = `local-${anonymousId}`;
-      setSessionId(localSessionId);
-      saveActiveSession({
-        sessionId: localSessionId,
-        anonymousSessionId: anonymousId,
-        sessionSeed: newPlan.sessionSeed,
-        answerCount: 0,
-        updatedAt: new Date().toISOString()
-      });
-      void loadQuestion(newPlan, []);
-    }
+    prefetchedNextRef.current = null;
   };
 
-  if (!sessionReady || questionLoading) {
+  if (startReady && !examStarted) {
     return (
-      <>
-        <main className="mx-auto max-w-3xl px-4 py-16 text-center">
-          <AppCard>
-            <p className="text-sm font-black text-[var(--color-primary-700)]">問題データを準備中です</p>
-            <h1 className="mt-3 text-2xl font-black">問題を読み込んでいます…</h1>
-            <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
-              受験セッションと問題データを確認しています。通常は数秒で開始できます。
-            </p>
-            {showLoadingHelp ? (
-              <div className="mt-6 rounded-2xl border border-yellow-300 bg-[var(--color-warning-100)] p-4">
-                <p className="font-bold text-[var(--color-warning-700)]">
-                  読み込みに時間がかかっています。通信状況を確認して、再読み込みをお試しください。
-                </p>
-                <div className="mt-4 flex flex-col justify-center gap-3 sm:flex-row">
-                  <AppButton onClick={() => window.location.reload()}>再読み込み</AppButton>
-                  <AppButton href="/" variant="secondary">トップへ戻る</AppButton>
-                </div>
-              </div>
-            ) : (
-              <p className="mt-5 text-sm font-bold text-[var(--color-muted)]">セッション復元と問題取得を進めています。</p>
-            )}
-          </AppCard>
-        </main>
-      </>
+      <main className="mx-auto max-w-3xl px-4 py-16">
+        <AppCard>
+          <p className="text-sm font-black text-[var(--color-primary-700)]">腕試し受験</p>
+          <h1 className="mt-3 text-3xl font-black">受験する</h1>
+          <div className="mt-6 grid gap-3">
+            <label className="text-sm font-bold text-[var(--color-muted)]" htmlFor="exam-kind">受験タイプ</label>
+            <select
+              id="exam-kind"
+              className="h-12 rounded-lg border border-[var(--color-border)] bg-white px-4 font-bold text-[var(--color-ink)]"
+              value={selectedExamValue}
+              onChange={(event) => setSelectedExamValue(event.target.value)}
+            >
+              <option value={DEFAULT_EXAM_VALUE}>総合スコア</option>
+              {domains.map((domain) => (
+                <option key={domain} value={domain}>分野スコア（{domain}）</option>
+              ))}
+            </select>
+          </div>
+          <AppButton className="mt-6 w-full" onClick={() => void startExam()}>
+            受験する
+          </AppButton>
+        </AppCard>
+      </main>
     );
   }
 
-  if (questionError || !currentQuestion) {
+  if (!examPlan) {
+    return (
+      <main className="page-container py-8">
+        <QuestionCardSkeleton showDifficulty />
+      </main>
+    );
+  }
+
+  if (questionError && !currentQuestion && !questionLoading) {
     return (
       <>
         <main className="mx-auto max-w-3xl px-4 py-16 text-center">
@@ -507,7 +607,7 @@ export default function ExamPage() {
         </div>
         <div className="mb-6">
           <h1 className="text-3xl font-black md:text-4xl">腕試し受験ページ</h1>
-          <p className="mt-2 font-bold text-[var(--color-ink-soft)]">いまの実力をチェックしよう！</p>
+          <p className="mt-2 font-bold text-[var(--color-ink-soft)]">{examModeLabel}をチェックしよう！</p>
         </div>
         <AppCard className="mb-6 grid gap-5 md:grid-cols-3">
           <div>
@@ -524,7 +624,7 @@ export default function ExamPage() {
             </p>
           </div>
           <div>
-            <p className="text-sm font-bold text-[var(--color-muted)]">推定総合スコア</p>
+            <p className="text-sm font-bold text-[var(--color-muted)]">推定{examModeLabel}</p>
             <p className="text-3xl font-black text-[var(--color-primary-800)]">
               {estimate.scoreRange[0]} 〜 {estimate.scoreRange[1]}
             </p>
@@ -532,22 +632,43 @@ export default function ExamPage() {
         </AppCard>
         <div ref={questionTopRef} className="scroll-mt-4" />
         <section className="mt-6">
-          <QuestionCard
-            question={currentQuestion}
-            index={answers.length}
-            selected={selected}
-            answered={answered}
-            feedback={answerFeedback}
-            questionTextRef={questionTextRef}
-            showDifficulty
-            answerHighlight={answerHighlight}
-            onChoiceClick={(choiceIndex) => void answer(choiceIndex)}
-            activeFeedback={activeFeedback}
-            onFeedbackChange={setActiveFeedback}
-          />
+          {currentQuestion ? (
+            <QuestionCard
+              question={currentQuestion}
+              index={answers.length}
+              selected={selected}
+              answered={answered}
+              feedback={answerFeedback}
+              feedbackLoading={feedbackLoading}
+              questionTextRef={questionTextRef}
+              showDifficulty
+              answerHighlight={answerHighlight}
+              onChoiceClick={(choiceIndex) => void answer(choiceIndex)}
+              activeFeedback={activeFeedback}
+              onFeedbackChange={setActiveFeedback}
+            />
+          ) : (
+            <QuestionCardSkeleton showDifficulty />
+          )}
+          {showLoadingHelp && questionLoading && !currentQuestion ? (
+            <div className="mt-6 rounded-2xl border border-yellow-300 bg-[var(--color-warning-100)] p-4 text-center">
+              <p className="font-bold text-[var(--color-warning-700)]">
+                読み込みに時間がかかっています。通信状況を確認して、再読み込みをお試しください。
+              </p>
+              <div className="mt-4 flex flex-col justify-center gap-3 sm:flex-row">
+                <AppButton onClick={() => window.location.reload()}>再読み込み</AppButton>
+                <AppButton href="/" variant="secondary">トップへ戻る</AppButton>
+              </div>
+            </div>
+          ) : null}
           {answered ? (
             <div className="mt-6 grid gap-3">
               <AppButton onClick={next}>次の問題へ</AppButton>
+              {answerFeedback && !feedbackLoading ? (
+                <p className="text-center text-xs font-bold text-[var(--color-muted)]">
+                  スペースキーでも次の問題へ進めます
+                </p>
+              ) : null}
               {examConfig.canViewKarte(answers.length) ? (
                 <AppButton href="/karte" variant="secondary">
                   腕試しカルテを見る

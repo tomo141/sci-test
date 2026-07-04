@@ -5,7 +5,6 @@ import { type CoverageSlot, type ExamPlan, createRng, getCoverageSlot } from "./
 import { blendedAbilityForQuestion, dedupeAnswers, estimateFromAnswers, selectionAbilityInflation } from "./estimate";
 import {
   distanceToBand,
-  difficultyForTargetProbability,
   effectiveCumulativeRateForSelection,
   maxDifficultyCeiling,
   predictCorrectProbability,
@@ -202,10 +201,7 @@ function selectClosestToTarget(
 export function selectFirstQuestion(context: AdaptiveSelectionContext): AdaptiveSelection | null {
   const { questions, plan, now = new Date() } = context;
   const slot = getCoverageSlot(0, plan, []);
-  const targetDifficulty = difficultyForTargetProbability(
-    scoringConfig.initialAbility,
-    scoringConfig.firstQuestionTargetProbability
-  );
+  const targetDifficulty = scoringConfig.firstQuestionTargetDifficulty;
   const rng = createRng(`${plan.sessionSeed}:select:0`);
 
   const domainCandidates = filterCandidates(questions, [], slot, now, true, true, 0).filter(
@@ -229,7 +225,7 @@ export function selectFirstQuestion(context: AdaptiveSelectionContext): Adaptive
   return {
     question: picked,
     slot,
-    selectionReason: "first_question_target_70pct",
+    selectionReason: "first_question_level_100",
     predictedProbability: predictCorrectProbability(
       scoringConfig.initialAbility,
       picked.difficulty,

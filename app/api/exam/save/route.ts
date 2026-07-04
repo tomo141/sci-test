@@ -12,7 +12,9 @@ const saveSchema = z.object({
   score: z.number(),
   scoreLow: z.number(),
   scoreHigh: z.number(),
-  answerCount: z.number().int().nonnegative()
+  answerCount: z.number().int().nonnegative(),
+  scoreKind: z.enum(["overall", "domain"]).optional(),
+  domain: z.string().optional()
 });
 
 export async function POST(request: Request) {
@@ -41,14 +43,29 @@ export async function POST(request: Request) {
   });
   if (profileError) return NextResponse.json({ error: profileError.message }, { status: 500 });
 
-  const { error } = await writeClient.from("score_history").insert({
+  const scoreHistoryRow = {
     user_id: userId,
     session_id: parsed.data.sessionId.startsWith("local-") ? null : parsed.data.sessionId,
     score: parsed.data.score,
     score_low: parsed.data.scoreLow,
     score_high: parsed.data.scoreHigh,
-    answer_count: parsed.data.answerCount
-  });
+    answer_count: parsed.data.answerCount,
+    score_kind: parsed.data.scoreKind || "overall",
+    domain: parsed.data.scoreKind === "domain" ? parsed.data.domain || null : null
+  };
+  let { error } = await writeClient.from("score_history").insert(scoreHistoryRow);
+
+  if (error?.message?.includes("score_kind") || error?.message?.includes("domain")) {
+    const retry = await writeClient.from("score_history").insert({
+      user_id: scoreHistoryRow.user_id,
+      session_id: scoreHistoryRow.session_id,
+      score: scoreHistoryRow.score,
+      score_low: scoreHistoryRow.score_low,
+      score_high: scoreHistoryRow.score_high,
+      answer_count: scoreHistoryRow.answer_count
+    });
+    error = retry.error;
+  }
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 

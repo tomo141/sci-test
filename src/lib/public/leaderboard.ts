@@ -39,21 +39,22 @@ async function getDomainLeaderboard(domain: ScienceDomain, limit: number): Promi
   const supabase = createServiceRoleClient();
   if (!supabase) return [];
 
-  const { data: estimates, error: estimateError } = await supabase
-    .from("proficiency_estimates")
-    .select("user_id, ability, answer_count, profiles(nickname)")
-    .eq("scope", "domain")
-    .eq("scope_key", domain)
+  const { data: histories, error: historyError } = await supabase
+    .from("score_history")
+    .select("user_id, score, answer_count, profiles(nickname)")
+    .eq("score_kind", "domain")
+    .eq("domain", domain)
     .not("user_id", "is", null)
     .gt("answer_count", 0)
-    .order("ability", { ascending: false })
+    .order("score", { ascending: false })
+    .order("answer_count", { ascending: false })
     .limit(limit * 5);
 
-  if (!estimateError && estimates?.length) {
+  if (!historyError && histories?.length) {
     const bestRows = dedupeBestPerUser(
-      estimates.map((row) => ({
+      histories.map((row) => ({
         user_id: row.user_id as string,
-        ability: displayDomainScore(Number(row.ability)),
+        ability: Number(row.score),
         answer_count: Number(row.answer_count),
         profiles: row.profiles as ProfileRef
       })),
@@ -102,6 +103,7 @@ async function getOverallLeaderboard(limit: number): Promise<PublicLeaderboardRo
   const { data: histories, error: historyError } = await supabase
     .from("score_history")
     .select("user_id, score, answer_count, created_at, profiles(nickname)")
+    .eq("score_kind", "overall")
     .order("score", { ascending: false })
     .order("answer_count", { ascending: false })
     .limit(limit * 3);

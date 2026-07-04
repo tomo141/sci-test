@@ -32,6 +32,8 @@ type ScoreHistoryRow = {
   score: number;
   answer_count: number;
   created_at: string;
+  score_kind: "overall" | "domain";
+  domain: string | null;
 };
 
 type EducationProfileRow = {
@@ -72,7 +74,7 @@ export default async function MyPage() {
     const [profileResult, educationResult, historiesResult, marketingResult, userBadgesResult, totalBadgesResult, trainingCountResult] = await Promise.all([
       supabase.from("profiles").select("nickname").eq("id", userId).maybeSingle(),
       supabase.from("education_profiles").select("highest_education, specialty").eq("user_id", userId).maybeSingle(),
-      supabase.from("score_history").select("score, answer_count, created_at").eq("user_id", userId).order("created_at", { ascending: false }).limit(10),
+      supabase.from("score_history").select("score, answer_count, created_at, score_kind, domain").eq("user_id", userId).order("created_at", { ascending: false }).limit(20),
       supabase.from("marketing_consents").select("consented, training_unlocked_at").eq("user_id", userId).maybeSingle(),
       supabase.from("user_badges").select("awarded_at, badges(name)").eq("user_id", userId).order("awarded_at", { ascending: false }),
       supabase.from("badges").select("id", { count: "exact", head: true }),
@@ -90,11 +92,17 @@ export default async function MyPage() {
     trainingCount = trainingCountResult.count || 0;
   }
 
-  const scoreHistory = ((histories || []) as ScoreHistoryRow[]).map((row) => ({
+  const historyRows = (histories || []) as ScoreHistoryRow[];
+  const overallHistories = historyRows.filter((row) => row.score_kind !== "domain");
+  const domainHistories = historyRows.filter((row) => row.score_kind === "domain");
+  const scoreHistory = overallHistories.map((row) => ({
     date: new Date(row.created_at).toLocaleDateString("ja-JP", { month: "numeric", day: "numeric" }),
     score: Math.round(Number(row.score))
   })).reverse();
-  const latest = ((histories || []) as ScoreHistoryRow[])[0];
+  const latest = overallHistories[0];
+  const bestDomainScore = domainHistories
+    .map((row) => ({ domain: row.domain || "分野", score: Math.round(Number(row.score)) }))
+    .sort((a, b) => b.score - a.score)[0] || null;
   const latestScore = latest ? Math.round(Number(latest.score)) : null;
   const educationRow = education as EducationProfileRow | null;
   const marketingRow = marketing as MarketingConsentRow | null;
@@ -120,6 +128,11 @@ export default async function MyPage() {
               <h2 className="text-2xl font-black">{nickname}</h2>
               <p className="mt-2 font-bold text-[var(--color-muted)]">{latestScore ? rankTitle(latestScore) : "結果未保存"}</p>
               {latestScore ? <div className="mt-5"><ScoreDisplay score={latestScore} /></div> : <MyPageLocalSummary />}
+              {bestDomainScore ? (
+                <p className="mt-3 rounded-xl bg-[var(--color-primary-50)] p-3 text-sm font-black text-[var(--color-primary-900)]">
+                  最高分野スコア：{bestDomainScore.domain} {bestDomainScore.score}
+                </p>
+              ) : null}
               <div className="mt-5 flex flex-wrap gap-3">
                 <AppButton href="#profile-edit" variant="secondary"><Pencil />プロフィール編集</AppButton>
                 {isLoggedIn ? (
@@ -170,9 +183,9 @@ export default async function MyPage() {
         <section className="mt-6 grid gap-5 md:grid-cols-3">
           <AppCard>
             <h2 className="mb-3 text-xl font-black">最近の検定履歴</h2>
-            {histories?.length ? (histories as ScoreHistoryRow[]).slice(0, 3).map((row) => (
+            {historyRows.length ? historyRows.slice(0, 3).map((row) => (
               <p key={row.created_at} className="border-b border-[var(--color-border)] py-3 font-bold">
-                {new Date(row.created_at).toLocaleString("ja-JP")} {Math.round(Number(row.score))} / {scoringConfig.maxScore}
+                {new Date(row.created_at).toLocaleString("ja-JP")} {row.score_kind === "domain" ? `分野（${row.domain || "未設定"}）` : "総合"} {Math.round(Number(row.score))} / {scoringConfig.maxScore}
               </p>
             )) : <p className="leading-8 text-[var(--color-ink-soft)]">保存済みの検定履歴はまだありません。</p>}
           </AppCard>

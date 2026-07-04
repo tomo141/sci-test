@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { scoringConfig } from "./config";
-import { displayDomainScore, domainScorePercent, internalToDomainScore } from "./domainScore";
+import { displayDomainScore, domainScorePercent, internalScorePercent, internalToDomainScore } from "./domainScore";
 import { estimateFromAnswers } from "./estimate";
 
 describe("domain score scale", () => {
@@ -36,5 +36,10 @@ describe("domain score scale", () => {
   it("converts domain score to progress percent against 99", () => {
     expect(domainScorePercent(99)).toBe(100);
     expect(domainScorePercent(50)).toBeCloseTo(50.5, 1);
+  });
+
+  it("converts internal domain exam score to progress percent against 990", () => {
+    expect(internalScorePercent(990)).toBe(100);
+    expect(internalScorePercent(500)).toBeCloseTo(50.5, 1);
   });
 });

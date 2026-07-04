@@ -9,6 +9,7 @@ import { AppCard } from "@/components/ui/AppCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { QuestionCard } from "@/components/exam/QuestionCard";
+import { QuestionCardSkeleton } from "@/components/exam/QuestionCardSkeleton";
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { trainingConfig } from "@/src/lib/training/config";
 import { DomainIcon } from "@/components/ui/DomainIcon";
@@ -101,6 +102,7 @@ async function fetchTrainingQuestion(mode: TrainingMode, domain: ScienceDomain, 
 export default function TrainingPage() {
   const questionTopRef = useRef<HTMLDivElement>(null);
   const questionTextRef = useRef<HTMLHeadingElement>(null);
+  const prefetchedNextRef = useRef<{ index: number; question: PublicQuestion } | null>(null);
   const [mode, setMode] = useState<TrainingMode>("domain");
   const [domain, setDomain] = useState<ScienceDomain>("化学");
   const [history, setHistory] = useState<TrainingAnswer[]>([]);
@@ -112,6 +114,7 @@ export default function TrainingPage() {
   const [access, setAccess] = useState<TrainingAccess | null>(null);
   const [sessionSeed, setSessionSeed] = useState("training");
   const [answerFeedback, setAnswerFeedback] = useState<AnswerFeedback | null>(null);
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
   const [answerHighlight, setAnswerHighlight] = useState<AnswerHighlight | null>(null);
   const [activeFeedback, setActiveFeedback] = useState<QuestionFeedbackKind | null>(null);
 
@@ -134,17 +137,40 @@ export default function TrainingPage() {
       );
   }, []);
 
-  const loadQuestion = useCallback(async () => {
-    setQuestionLoading(true);
-    const question = await fetchTrainingQuestion(mode, domain, questionIndex, sessionSeed);
-    setCurrentQuestion(question);
-    setQuestionLoading(false);
-  }, [domain, mode, questionIndex, sessionSeed]);
+  const prefetchQuestion = useCallback(
+    async (targetIndex: number) => {
+      const question = await fetchTrainingQuestion(mode, domain, targetIndex, sessionSeed);
+      if (question) {
+        prefetchedNextRef.current = { index: targetIndex, question };
+      }
+    },
+    [domain, mode, sessionSeed]
+  );
+
+  const loadQuestion = useCallback(
+    async (targetIndex: number) => {
+      if (prefetchedNextRef.current?.index === targetIndex) {
+        setCurrentQuestion(prefetchedNextRef.current.question);
+        setQuestionLoading(false);
+        prefetchedNextRef.current = null;
+        void prefetchQuestion(targetIndex + 1);
+        return;
+      }
+
+      setQuestionLoading(true);
+      const question = await fetchTrainingQuestion(mode, domain, targetIndex, sessionSeed);
+      setCurrentQuestion(question);
+      setQuestionLoading(false);
+      void prefetchQuestion(targetIndex + 1);
+    },
+    [domain, mode, prefetchQuestion, sessionSeed]
+  );
 
   useEffect(() => {
     if (!sessionSeed) return;
-    void loadQuestion();
-  }, [loadQuestion, sessionSeed]);
+    prefetchedNextRef.current = null;
+    void loadQuestion(questionIndex);
+  }, [loadQuestion, questionIndex, sessionSeed]);
 
   const totalAnswerCount = Math.max(history.length, access?.answerCount ?? 0);
   const marketingConsented = access?.marketingConsented ?? false;
@@ -171,12 +197,23 @@ export default function TrainingPage() {
     setSelected(null);
     setAnswered(false);
     setAnswerFeedback(null);
+    setFeedbackLoading(false);
     setAnswerHighlight(null);
     setActiveFeedback(null);
+    prefetchedNextRef.current = null;
   };
 
   const choose = async (index: number) => {
     if (answered || !currentQuestion || !canAnswerMore) return;
+
+    setSelected(index);
+    setAnswered(true);
+    setFeedbackLoading(true);
+    setAnswerHighlight(null);
+    setAnswerFeedback(null);
+    window.setTimeout(() => {
+      if (questionTextRef.current) scrollToElementTop(questionTextRef.current, ANSWER_SCROLL_DURATION_MS);
+    }, ANSWER_SCROLL_DELAY_MS);
 
     const response = await fetch("/api/training/answer", {
       method: "POST",
@@ -189,7 +226,12 @@ export default function TrainingPage() {
       })
     }).catch(() => null);
 
-    if (!response?.ok) return;
+    if (!response?.ok) {
+      setSelected(null);
+      setAnswered(false);
+      setFeedbackLoading(false);
+      return;
+    }
     const payload = await response.json().catch(() => null);
     const correct = payload?.correct === true;
     const nextHistory = [
@@ -202,11 +244,6 @@ export default function TrainingPage() {
       }
     ];
 
-    setSelected(index);
-    setAnswered(true);
-    window.setTimeout(() => {
-      if (questionTextRef.current) scrollToElementTop(questionTextRef.current, ANSWER_SCROLL_DURATION_MS);
-    }, ANSWER_SCROLL_DELAY_MS);
     setHistory(nextHistory);
     window.localStorage.setItem(TRAINING_STORAGE_KEY, JSON.stringify(nextHistory));
     setAnswerHighlight({
@@ -221,6 +258,8 @@ export default function TrainingPage() {
           }
         : null
     );
+    setFeedbackLoading(false);
+    void prefetchQuestion(questionIndex + 1);
 
     void fetch("/api/training/log", {
       method: "POST",
@@ -239,6 +278,7 @@ export default function TrainingPage() {
     setSelected(null);
     setAnswered(false);
     setAnswerFeedback(null);
+    setFeedbackLoading(false);
     setAnswerHighlight(null);
     setActiveFeedback(null);
     setQuestionIndex((value) => value + 1);
@@ -250,9 +290,10 @@ export default function TrainingPage() {
   if (questionLoading && !currentQuestion) {
     return (
       <>
-        <main className="page-container py-16 text-center">
-          <p className="font-bold text-[var(--color-ink-soft)]">問題を読み込んでいます…</p>
+        <main className="page-container py-8">
+          <QuestionCardSkeleton />
         </main>
+        <SiteFooter />
       </>
     );
   }
@@ -299,8 +340,10 @@ export default function TrainingPage() {
                 setSelected(null);
                 setAnswered(false);
                 setAnswerFeedback(null);
+                setFeedbackLoading(false);
                 setAnswerHighlight(null);
                 setActiveFeedback(null);
+                prefetchedNextRef.current = null;
               }}
               className="min-h-12 rounded-2xl border border-[var(--color-border)] bg-white px-4 text-sm font-bold"
             >
@@ -339,12 +382,15 @@ export default function TrainingPage() {
               selected={selected}
               answered={answered}
               feedback={answerFeedback}
+              feedbackLoading={feedbackLoading}
               questionTextRef={questionTextRef}
               answerHighlight={answerHighlight}
               onChoiceClick={(choiceIndex) => void choose(choiceIndex)}
               activeFeedback={activeFeedback}
               onFeedbackChange={setActiveFeedback}
             />
+          ) : questionLoading ? (
+            <QuestionCardSkeleton />
           ) : (
             <AppCard>
               <p className="leading-8 text-[var(--color-ink-soft)]">この条件で出題できる問題がまだありません。</p>

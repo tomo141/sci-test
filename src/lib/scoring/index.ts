@@ -17,6 +17,7 @@ export {
 } from "./estimate";
 export {
   createExamPlan,
+  createDomainExamPlan,
   getCoverageSlot,
   uncoveredCells,
   coveredCells,

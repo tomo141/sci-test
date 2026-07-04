@@ -19,3 +19,7 @@ export function displayDomainScore(stored: number): number {
 export function domainScorePercent(score: number): number {
   return Math.max(0, Math.min(100, (score / scoringConfig.domainMaxScore) * 100));
 }
+
+export function internalScorePercent(score: number): number {
+  return Math.max(0, Math.min(100, (score / scoringConfig.maxScore) * 100));
+}

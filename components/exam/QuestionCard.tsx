@@ -2,6 +2,7 @@
 
 import type { RefObject } from "react";
 import { CheckCircle2, XCircle } from "lucide-react";
+import { ExplanationSkeleton } from "@/components/exam/ExplanationSkeleton";
 import { QuestionExplanation } from "@/components/exam/QuestionExplanation";
 import { QuestionFeedbackActions } from "@/components/exam/QuestionFeedbackActions";
 import { StatusBadge } from "@/components/ui/StatusBadge";
@@ -11,6 +12,7 @@ import type { QuestionFeedbackKind } from "@/src/lib/exam/feedback";
 import type { PublicQuestion } from "@/src/lib/exam/publicQuestion";
 
 type DisplayQuestion = Pick<PublicQuestion, "id" | "question" | "choices" | "domain" | "difficulty">;
+const choiceLabels = ["①", "②", "③", "④"];
 
 export function QuestionCard({
   question,
@@ -21,6 +23,7 @@ export function QuestionCard({
   activeFeedback,
   onFeedbackChange,
   feedback = null,
+  feedbackLoading = false,
   questionTextRef,
   showDifficulty = false,
   answerHighlight = null
@@ -33,6 +36,7 @@ export function QuestionCard({
   activeFeedback: QuestionFeedbackKind | null;
   onFeedbackChange: (kind: QuestionFeedbackKind | null) => void;
   feedback?: AnswerFeedback | null;
+  feedbackLoading?: boolean;
   questionTextRef?: RefObject<HTMLHeadingElement | null>;
   showDifficulty?: boolean;
   answerHighlight?: { correctDisplayIndex: number; selectedDisplayIndex: number } | null;
@@ -47,8 +51,9 @@ export function QuestionCard({
       <h1 ref={questionTextRef} className="mb-6 scroll-mt-0 text-2xl font-black leading-10 md:text-3xl">{question.question}</h1>
       <div className="grid gap-4 md:grid-cols-2">
         {question.choices.map((choice, choiceIndex) => {
-          const label = String.fromCharCode(65 + choiceIndex);
+          const label = choiceLabels[choiceIndex] ?? String(choiceIndex + 1);
           const isSelected = selected === choiceIndex;
+          const isPendingGrade = answered && !answerHighlight;
           const isCorrect = answered && answerHighlight?.correctDisplayIndex === choiceIndex;
           const isWrongSelection = answered && answerHighlight?.selectedDisplayIndex === choiceIndex && !isCorrect;
           return (
@@ -57,10 +62,12 @@ export function QuestionCard({
               className={cn(
                 "relative flex min-h-24 items-center gap-4 rounded-2xl border px-5 py-4 text-left text-base font-bold transition",
                 isSelected && !answered ? "border-[var(--color-primary-700)] bg-[var(--color-primary-100)]" : "border-[var(--color-border)] bg-white hover:border-[var(--color-border-strong)]",
+                isSelected && isPendingGrade && "border-[var(--color-primary-700)] bg-[var(--color-primary-50)]",
                 isCorrect && "border-[var(--color-success-700)] bg-[var(--color-success-100)] text-[var(--color-success-700)]",
                 isWrongSelection && "border-[var(--color-danger-700)] bg-[var(--color-danger-100)] text-[var(--color-danger-700)]"
               )}
               onClick={() => !answered && onChoiceClick(choiceIndex)}
+              aria-label={`${label} ${choice}。キーボードの${choiceIndex + 1}でも回答できます`}
               type="button"
             >
               {isCorrect ? <CheckCircle2 className="absolute -left-3 top-1/2 -translate-y-1/2 rounded-full bg-white text-[var(--color-success-700)]" size={24} /> : null}
@@ -69,7 +76,10 @@ export function QuestionCard({
                 "grid h-12 w-12 shrink-0 place-items-center rounded-xl border bg-white text-lg font-black",
                 isCorrect && "border-green-200 text-[var(--color-success-700)]",
                 isWrongSelection && "border-red-200 text-[var(--color-danger-700)]"
-              )}>{label}</span>
+              )}>
+                <span aria-hidden>{label}</span>
+                <span className="sr-only">{choiceIndex + 1}</span>
+              </span>
               <span className="flex-1">{choice}</span>
               {isCorrect ? <span className="rounded-xl bg-white/70 px-3 py-1 text-xs font-black text-[var(--color-success-700)]">{isSelected ? "正解" : "正答"}</span> : null}
               {isWrongSelection ? <span className="rounded-xl bg-white/70 px-3 py-1 text-xs font-black text-[var(--color-danger-700)]">あなたの回答</span> : null}
@@ -77,6 +87,7 @@ export function QuestionCard({
           );
         })}
       </div>
+      {answered && feedbackLoading ? <ExplanationSkeleton /> : null}
       {answered && feedback ? (
         <div className="mt-6">
           <QuestionExplanation feedback={feedback} />

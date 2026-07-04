@@ -38,7 +38,9 @@ create table public.exam_sessions (
   latest_score numeric,
   score_low numeric,
   score_high numeric,
-  diagnostic_accuracy text
+  diagnostic_accuracy text,
+  exam_mode text not null default 'overall' check (exam_mode in ('overall','domain')),
+  target_domain text
 );
 
 create table public.questions (
@@ -136,6 +138,8 @@ create table public.score_history (
   score_low numeric,
   score_high numeric,
   answer_count int not null,
+  score_kind text not null default 'overall' check (score_kind in ('overall','domain')),
+  domain text,
   created_at timestamptz not null default now()
 );
 

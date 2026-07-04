@@ -5,6 +5,7 @@ import { Crown } from "lucide-react";
 import { ScoreDisplay } from "@/components/ui/ScoreDisplay";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { estimateFromAnswers } from "@/src/lib/scoring";
+import { domains } from "@/src/lib/data/taxonomy";
 import { rankTitle } from "@/src/lib/scoring/rank";
 import type { ClientExamAnswer } from "@/src/lib/exam/session";
 
@@ -32,6 +33,9 @@ export function LocalScoreSummary() {
 
   const estimate = estimateFromAnswers(answers);
   const correctCount = answers.filter((answer) => answer.correct).length;
+  const bestDomain = domains
+    .map((domain) => ({ domain, score: estimate.domains[domain] }))
+    .sort((a, b) => b.score - a.score)[0];
 
   return (
     <>
@@ -42,6 +46,7 @@ export function LocalScoreSummary() {
           {rankTitle(estimate.overall)}
         </StatusBadge>
         <StatusBadge>{correctCount} / {answers.length} 問 正解</StatusBadge>
+        {bestDomain ? <StatusBadge>最高分野 {bestDomain.domain} {bestDomain.score}</StatusBadge> : null}
         <StatusBadge>{estimate.accuracyLabel}</StatusBadge>
       </div>
     </>

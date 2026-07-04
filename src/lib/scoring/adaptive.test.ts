@@ -3,7 +3,7 @@ import { questions } from "@/src/lib/data/questions";
 import { domains } from "@/src/lib/data/taxonomy";
 import { createExamPlan, getCoverageSlot, getDomainOrderForBlock, shuffleWithSeed, uncoveredCells } from "./coverage";
 import { selectAdaptiveQuestion, selectFirstQuestion } from "./adaptive";
-import { predictCorrectProbability } from "./probability";
+import { maxDifficultyCeiling, predictCorrectProbability } from "./probability";
 import { scoringConfig } from "./config";
 import type { AnswerRecord } from "./types";
 
@@ -68,13 +68,12 @@ describe("coverage", () => {
 });
 
 describe("adaptive selection", () => {
-  it("selects a first question near 70% success for ability 500", () => {
+  it("selects a first question at level 100", () => {
     const plan = createExamPlan("first-question");
     const selection = selectFirstQuestion({ questions, answers: [], plan });
     expect(selection).not.toBeNull();
-    expect(selection!.selectionReason).toBe("first_question_target_70pct");
-    expect(selection!.predictedProbability).toBeGreaterThan(0.65);
-    expect(selection!.predictedProbability).toBeLessThan(0.75);
+    expect(selection!.selectionReason).toBe("first_question_level_100");
+    expect(selection!.question.difficulty).toBe(100);
     expect(selection!.question.domain).toBe(plan.domainOrder[0]);
     expect(selection!.question.abilityAxis).toBe("基礎力");
   });
@@ -126,6 +125,13 @@ describe("adaptive selection", () => {
     const selection = selectAdaptiveQuestion({ questions, answers, plan });
     expect(selection).not.toBeNull();
     expect(selection!.targetBand.min).toBe(scoringConfig.lowRateTargetBand.min);
+  });
+
+  it("limits early difficulty linearly from level 100 to level 900 by question 20", () => {
+    expect(maxDifficultyCeiling(0)).toBe(100);
+    expect(maxDifficultyCeiling(19)).toBe(900);
+    expect(maxDifficultyCeiling(20)).toBe(900);
+    expect(maxDifficultyCeiling(9)).toBeCloseTo(478.9473684211);
   });
 });
 

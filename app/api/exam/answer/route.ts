@@ -1,8 +1,11 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { z } from "zod";
 import { getPublishedQuestions } from "@/src/lib/data/loadQuestions";
 import { examConfig } from "@/src/lib/exam/config";
+import { buildAnswerFeedback } from "@/src/lib/exam/explanation";
+import { persistExamAnswer } from "@/src/lib/exam/persistAnswer";
 import { getQuestionById } from "@/src/lib/exam/session";
+import { seededShuffleChoices, toPublicQuestion } from "@/src/lib/exam/publicQuestion";
 import {
   createExamPlan,
   estimateFromAnswers,
@@ -12,16 +15,15 @@ import {
   type ExamPlan
 } from "@/src/lib/scoring";
 import { getCoverageSlot } from "@/src/lib/scoring/coverage";
-import { buildAnswerFeedback } from "@/src/lib/exam/explanation";
-import { persistProficiencyEstimates } from "@/src/lib/exam/persistEstimates";
-import { seededShuffleChoices } from "@/src/lib/exam/publicQuestion";
 import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import type { AnswerRecord } from "@/src/lib/scoring/types";
 
 const examPlanSchema = z.object({
   sessionSeed: z.string(),
-  domainOrder: z.array(z.string()).length(10)
+  domainOrder: z.array(z.string()).length(10),
+  mode: z.enum(["overall", "domain"]).optional(),
+  targetDomain: z.string().optional()
 });
 
 const answerSchema = z.object({
@@ -76,7 +78,7 @@ export async function POST(request: Request) {
     qualityScore: question.qualityScore,
     responseTimeMs: parsed.data.responseTimeMs
   };
-  const after = estimateFromAnswers([...previousAnswers, currentAnswer]);
+  const afterEstimate = estimateFromAnswers([...previousAnswers, currentAnswer]);
   const predicted = predictCorrect(before.overall, question.difficulty, question.discrimination);
   const currentSelection = selectAdaptiveQuestion({
     questions,
@@ -103,37 +105,40 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "session not found" }, { status: 403 });
     }
 
-    await supabase.from("exam_answers").insert({
-      session_id: parsed.data.sessionId,
-      user_id: sessionRow?.user_id ?? null,
-      question_id: question.id,
-      selected_choice_index: selectedOriginalIndex,
-      is_correct: correct,
-      response_time_ms: parsed.data.responseTimeMs ?? null,
-      served_difficulty: question.difficulty,
-      predicted_correct_probability: predicted,
-      selection_reason: currentSelection?.selectionReason || "adaptive",
-      score_before: before.overall,
-      score_after: after.overall
+    const persistInput = {
+      sessionId: parsed.data.sessionId,
+      userId: sessionRow?.user_id ?? null,
+      questionId: question.id,
+      selectedOriginalIndex,
+      correct,
+      responseTimeMs: parsed.data.responseTimeMs ?? null,
+      servedDifficulty: question.difficulty,
+      predictedProbability: predicted,
+      selectionReason: currentSelection?.selectionReason || "adaptive",
+      scoreBefore: before.overall,
+      scoreAfter: afterEstimate.overall,
+      estimate: afterEstimate,
+      examPlan
+    };
+
+    after(async () => {
+      try {
+        await persistExamAnswer(supabase, persistInput);
+      } catch (error) {
+        console.error("exam answer persist failed", error);
+      }
     });
-
-    await supabase
-      .from("exam_sessions")
-      .update({
-        latest_score: after.overall,
-        score_low: after.scoreRange[0],
-        score_high: after.scoreRange[1],
-        diagnostic_accuracy: after.accuracyLabel,
-        completed_10_at: after.counts.overall >= examConfig.quickResultThreshold ? new Date().toISOString() : null,
-        completed_50_at: examConfig.isCycleComplete(after.counts.overall) ? new Date().toISOString() : null
-      })
-      .eq("id", parsed.data.sessionId);
-
-    await persistProficiencyEstimates(supabase, parsed.data.sessionId, sessionRow?.user_id ?? null, after);
   }
 
   const feedback = buildAnswerFeedback(question, selectedOriginalIndex, correct);
   const { detailedExplanation: _detailedExplanation, ...clientFeedback } = feedback;
+
+  const nextQuestion = nextSelection
+    ? toPublicQuestion(
+        nextSelection.question,
+        seededShuffleChoices(nextSelection.question.id, examPlan.sessionSeed, nextSelection.question).choices
+      )
+    : null;
 
   return NextResponse.json({
     correct,
@@ -141,8 +146,9 @@ export async function POST(request: Request) {
     correctDisplayIndex: shuffled.correctIndex,
     selectedDisplayIndex: parsed.data.selectedDisplayIndex,
     feedback: clientFeedback,
-    estimate: after,
+    estimate: afterEstimate,
     slot: getCoverageSlot(previousAnswers.length, examPlan, previousAnswers),
+    nextQuestion,
     nextQuestionId: nextSelection?.question.id ?? null,
     selectionReason: currentSelection?.selectionReason ?? null,
     predictedProbability: predicted

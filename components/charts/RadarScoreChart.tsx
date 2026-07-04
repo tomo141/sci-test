@@ -5,19 +5,21 @@ import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Responsi
 import { scoringConfig } from "@/src/lib/scoring/config";
 
 const defaultGridTicks = [25, 50, 75, scoringConfig.domainMaxScore];
+const internalGridTicks = [250, 500, 750, scoringConfig.maxScore];
 
 export function RadarScoreChart({
   data,
   label,
   maxScore = scoringConfig.maxScore,
-  gridTicks = defaultGridTicks
+  gridTicks
 }: {
   data: { name: string; score: number }[];
   label: string;
   maxScore?: number;
   gridTicks?: number[];
 }) {
-  const ticks = gridTicks.filter((tick) => tick > 0 && tick <= maxScore);
+  const ticks = (gridTicks || (maxScore > scoringConfig.domainMaxScore ? internalGridTicks : defaultGridTicks))
+    .filter((tick) => tick > 0 && tick <= maxScore);
 
   return (
     <div className="h-72 w-full" aria-label={label}>
