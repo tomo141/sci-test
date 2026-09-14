@@ -1,0 +1,856 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000048",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "地表付近の空気から水蒸気を除いた乾燥空気で、体積割合が最も大きい気体はどれか。",
+      "choices": [
+        "酸素",
+        "窒素",
+        "アルゴン",
+        "二酸化炭素"
+      ],
+      "correctIndex": 1,
+      "explanation": "地表付近の乾燥空気は体積でおよそ78%が窒素、21%が酸素。水蒸気の量は変動するため、この比較では除いている。",
+      "distractorRationales": [
+        "約21%で、窒素より少ない。",
+        "約78%を占める。",
+        "約0.9%で、窒素や酸素より少ない。",
+        "窒素・酸素・アルゴンより少ない。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA JetStream — The Atmosphere",
+          "url": "https://prod-01-alb-www-noaa.woc.noaa.gov/jetstream/atmosphere"
+        }
+      ]
+    },
+    "reason": "乾燥空気・地表付近・体積割合を明示し、質量比や高層大気との混同を避ける。",
+    "parameters": {
+      "b": -1.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NOAA JetStreamのEXCLUDING water vaporの組成表を索引本文で照合。高層大気まで同じ組成とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000049",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "気象庁の雲量0〜10による観測上の区分で、雨・雪・雷・霧などがなく、雲量が1の状態はどれか。",
+      "choices": [
+        "快晴",
+        "晴れ",
+        "曇り",
+        "霧"
+      ],
+      "correctIndex": 0,
+      "explanation": "この観測の区分では雲量0〜1が快晴、2〜8が晴れ。天気予報の晴れには快晴も含まれるので、予報文と観測上の区分を分けて読む。",
+      "distractorRationales": [
+        "雲量1は快晴の範囲。",
+        "この観測区分では雲量2〜8に対応する。",
+        "雲量1は曇りの範囲ではない。",
+        "霧がないという条件に合わない。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 はれるんランド — 雲の量と天気",
+          "url": "https://www.jma.go.jp/jma/kids/kids/faq/a2_06.html"
+        },
+        {
+          "title": "気象庁 — 天気に関する用語",
+          "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/tenki.html"
+        }
+      ]
+    },
+    "reason": "雲量の尺度と優先する現象がない条件を追加。予報で快晴を使うかという問いとは区別。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "はれるんランドの他の現象がない条件・雲量0〜1と、天気用語の観測と予報の区別を照合（2026-09-15）。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000069",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "赤道を除く北半球で、地表に沿う水平運動を考える。コリオリ力の水平成分は、進行方向のどちら側に向くか。",
+      "choices": [
+        "真後ろ",
+        "左側",
+        "右側",
+        "真正面"
+      ],
+      "correctIndex": 2,
+      "explanation": "地球とともに回る座標系では、北半球の水平運動に対するコリオリ力の水平成分は進行方向の右側へ向く。一般の三次元運動で鉛直成分が存在しないという意味ではない。",
+      "distractorRationales": [
+        "運動を単純に減速する抗力の向きと混同している。",
+        "南半球の水平成分の向き。",
+        "指定した北半球での向き。",
+        "進行方向へ加速する力の向きではない。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA National Weather Service Jackson — Weather Education",
+          "url": "https://www.weather.gov/jkl/education"
+        }
+      ]
+    },
+    "reason": "全コリオリ力を水平のみとする旧説明を削除。座標系・半球・成分を明示。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NWS JacksonのCoriolis Forceの右・左の説明を照合。設問を水平成分へ限定して三次元の式とも整合を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000108",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "成層圏のオゾンによって大部分が吸収されるため、オゾン層の減少による地上の生物への影響が問題となる太陽放射はどれか。",
+      "choices": [
+        "紫外線のUV-A",
+        "赤外線",
+        "可視光線の赤色域",
+        "紫外線のUV-B"
+      ],
+      "correctIndex": 3,
+      "explanation": "UV-Bは紫外線の一部で、オゾン層によって多くが吸収される。オゾンは可視光や赤外線も吸収するので、紫外線だけを吸収する分子という説明は正しくない。",
+      "distractorRationales": [
+        "オゾン層ではあまり吸収されず、指定した特徴と合わない。",
+        "オゾンは赤外線も吸収するが、指定した有害紫外線の影響の中心ではない。",
+        "可視光を大部分吸収する層という説明ではない。",
+        "オゾン層の変化で地上に届く量が大きく影響される有害紫外線。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA/WMO — Scientific Assessment of Ozone Depletion 2022: Twenty Questions and Answers",
+          "url": "https://csl.noaa.gov/assessments/ozone/2022/twentyquestions/"
+        }
+      ]
+    },
+    "reason": "吸収される波長が一つだけという旧説明を避け、オゾン層が大部分を吸収するUV-BとUV-Aの違いを問う。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Ozone Assessment 2022のQ2で有害紫外線の吸収と可視・赤外線の吸収への言及を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000177",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "地上で寒気が進み、暖気に覆われていた側へ移動する前線を何というか。",
+      "choices": [
+        "停滞前線",
+        "寒冷前線",
+        "閉塞前線",
+        "温暖前線"
+      ],
+      "correctIndex": 1,
+      "explanation": "寒冷前線は暖気側へ進む前線。冷たい空気が暖気の下へ入り込むが、雨の強さは湿り具合や大気の安定性などでも変わる。",
+      "distractorRationales": [
+        "ほぼ同じ場所にとどまる前線。",
+        "暖気側へ進むという指定に合う。",
+        "寒冷前線が温暖前線に追いついた前線。",
+        "寒気側へ進む前線。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 気団・前線・気圧配置等に関する用語",
+          "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/haichi3.html"
+        }
+      ]
+    },
+    "reason": "冷たい空気と暖かい空気の上下関係だけでなく、境界が進む側を明示。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁の前線に関する用語で、寒冷・温暖・停滞・閉塞の定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000044",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "天気図上で、同じ気圧の地点を結ぶ線を何というか。",
+      "choices": [
+        "等温線",
+        "等高線",
+        "等圧線",
+        "等雨量線"
+      ],
+      "correctIndex": 2,
+      "explanation": "等圧線は同じ気圧の場所を結ぶ線。等温線・等高線・等雨量線は、それぞれ温度・高さ・雨量をそろえた線。",
+      "distractorRationales": [
+        "温度が同じ場所を結ぶ。",
+        "高さが同じ場所を結ぶ。",
+        "気圧が同じ場所を結ぶ。",
+        "雨量が同じ場所を結ぶ。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 気圧・高気圧・低気圧に関する用語",
+          "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/haichi1.html"
+        }
+      ]
+    },
+    "reason": "四肢を同じ形式の等値線へそろえ、汎用の不正解文を具体的な違いに改める。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁の等圧線の定義と天気図での用例を本文で確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000045",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "気温の鉛直分布による大気の層の区分で、対流圏界面のすぐ上にある層はどれか。",
+      "choices": [
+        "成層圏",
+        "中間圏",
+        "熱圏",
+        "対流圏"
+      ],
+      "correctIndex": 0,
+      "explanation": "対流圏の上には成層圏があり、両者の境界が対流圏界面。境界の高さは緯度・季節などで異なり、全地球で一定ではない。",
+      "distractorRationales": [
+        "対流圏界面の上に接する層。",
+        "成層圏よりさらに上の層。",
+        "中間圏よりさらに上の層。",
+        "対流圏界面の下にある層。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 大気の構造と流れ",
+          "url": "https://www.jma.go.jp/jma/kishou/know/whitep/1-1-1.html"
+        }
+      ]
+    },
+    "reason": "単に上にある層では複数あるので、すぐ上の層へ限定。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁「大気の構造と流れ」の対流圏・成層圏・圏界面の記述を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000078",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "十分な水蒸気があり、大気が不安定なとき、寒冷前線が暖気を持ち上げることで発達しやすい雲と現象の組合せはどれか。",
+      "choices": [
+        "巻層雲と日がさ",
+        "層雲と弱い霧雨",
+        "薄い巻雲と降水のない晴天",
+        "積乱雲と雷を伴う強い雨"
+      ],
+      "correctIndex": 3,
+      "explanation": "湿った不安定な空気が持ち上げられると、強い対流と積乱雲が発達し、雷や強い雨を伴うことがある。寒冷前線があれば必ず雷雨になるわけではない。",
+      "distractorRationales": [
+        "高層の薄い氷雲による現象で、指定した強い対流の代表ではない。",
+        "層状の低い雲による現象で、指定した発達した対流の代表ではない。",
+        "指定した湿潤で不安定な空気の持ち上げの代表的な結果ではない。",
+        "湿潤・不安定・持ち上げがそろう対流の代表。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA National Weather Service — Convection: Thunderstorm Ingredients",
+          "url": "https://www.weather.gov/media/lwx/skywarn/Convection.pdf"
+        }
+      ]
+    },
+    "reason": "すべての寒冷前線で一律の雲と雨になる断定を、必要な条件を示す問題へ修正。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NWS Convection資料のThunderstorm Ingredients（湿気・不安定・持ち上げ）と寒冷前線の例を取得できた索引本文で確認。PDF全体や図の閲覧とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000176"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000115",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "暖気が進み、それまで寒気が占めていた側へ前線が移動している。この前線はどれか。",
+      "choices": [
+        "寒冷前線",
+        "温暖前線",
+        "停滞前線",
+        "閉塞前線"
+      ],
+      "correctIndex": 1,
+      "explanation": "温暖前線は寒気側へ移動する前線。暖気が寒気の上へはい上がる構造をとる。閉塞前線は単に移動が停止した前線のことではない。",
+      "distractorRationales": [
+        "暖気側へ移動する前線。",
+        "寒気側へ移動するという指定に合う。",
+        "ほぼ同じ場所にとどまる前線。",
+        "寒冷前線が温暖前線に追いついた前線。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 気団・前線・気圧配置等に関する用語",
+          "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/haichi3.html"
+        }
+      ]
+    },
+    "reason": "暖気が上にあるだけでは決められないため移動する側を明示。閉塞＝停止という旧誤記を訂正。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁の温暖前線と閉塞前線の定義を本文で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000073",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "中緯度付近の偏西風ジェット気流の、代表的な位置と風向の組合せはどれか。",
+      "choices": [
+        "対流圏の地表付近・東から西",
+        "対流圏の地表付近・西から東",
+        "対流圏上部の圏界面付近・西から東",
+        "対流圏上部の圏界面付近・東から西"
+      ],
+      "correctIndex": 2,
+      "explanation": "偏西風ジェットは対流圏上部の圏界面付近に強い風の帯を形成し、基本的に西から東へ吹く。蛇行や季節による位置・強さの変化がある。",
+      "distractorRationales": [
+        "高さも代表的な風向も合わない。",
+        "風向は合うが、代表的な高さが合わない。",
+        "代表的な高さと風向に合う。",
+        "高さは合うが、代表的な風向が逆。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 大気の構造と流れ",
+          "url": "https://www.jma.go.jp/jma/kishou/know/whitep/1-1-1.html"
+        },
+        {
+          "title": "NOAA NESDIS — What Is the Jet Stream?",
+          "url": "https://www.nesdis.noaa.gov/about/k-12-education/atmosphere/what-the-jet-stream"
+        }
+      ]
+    },
+    "reason": "すべてのジェットを偏西風とする一般化や、飛行経路を常に同じに決める説明を除去。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁の大気の大規模運動とNOAA NESDISのジェット気流の本文で、圏界面付近と西から東の向きを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000181"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000173",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "北半球の大規模な高気圧の周囲で、地表摩擦の影響を受ける地表付近の風の典型的な向きはどれか。",
+      "choices": [
+        "時計回りで、中心から外向きの成分を持つ",
+        "時計回りで、中心へ向かう成分を持つ",
+        "反時計回りで、中心から外向きの成分を持つ",
+        "反時計回りで、中心へ向かう成分を持つ"
+      ],
+      "correctIndex": 0,
+      "explanation": "典型的には時計回りで外向きの成分を持つ。地表摩擦があるため等圧線を横切り、高気圧から外へ発散する。局地的な地形などで個々の風は変わり得る。",
+      "distractorRationales": [
+        "指定した北半球の地表付近の高気圧の循環。",
+        "回る向きは合うが、外向きの成分を逆にしている。",
+        "外向きの成分は合うが、回る向きが逆。",
+        "北半球の低気圧に典型的な向き。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA National Weather Service Jackson — Weather Education",
+          "url": "https://www.weather.gov/jkl/education"
+        }
+      ]
+    },
+    "reason": "旧設問の「高気圧に向かって吹く」という誤った前提を訂正。海洋・水文から気象へ再分類。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NWS JacksonのCoriolis Force・Frictionと高気圧の時計回り・外向きの説明を本文・索引で確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000183",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "北半球で、気塊に沿って鉛直成分の絶対渦度f＋ζが保存される理想化を考える。気塊が北緯30°から北緯60°へ移るとき、相対渦度ζはどう変わるか。",
+      "choices": [
+        "fが増す分だけ増加する",
+        "必ず0になる",
+        "変わらない",
+        "fが増す分だけ減少する"
+      ],
+      "correctIndex": 3,
+      "explanation": "地球の惑星渦度はf＝2Ω sinφなので、指定した移動ではfが増える。和f＋ζが一定なら、その増加分だけζが減る。一般の大気では伸縮や摩擦などもあり、絶対渦度が常に保存するわけではない。",
+      "distractorRationales": [
+        "fとζが両方増すと和が保存しない。",
+        "移動前の値に依存するため0とは限らない。",
+        "fが変わるので、ζ一定では和が保存しない。",
+        "和の保存とfの増加を両立する変化。"
+      ],
+      "sources": [
+        {
+          "title": "NASA PDS Atmospheres Node — Vorticity",
+          "url": "https://pds-atmospheres.nmsu.edu/education_and_outreach/encyclopedia/vorticity.htm"
+        },
+        {
+          "title": "NASA PDS Atmospheres Node — Beta Plane Approximation",
+          "url": "https://pds-atmospheres.nmsu.edu/education_and_outreach/encyclopedia/beta_plane.htm"
+        }
+      ]
+    },
+    "reason": "旧正解の増加はこの保存条件と逆。減少へ訂正し、保存を仮定する理想化を明示。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASA PDSのVorticityのζ＋fとBeta Planeのf＝2Ωsinφを本文で照合。sin60°＞sin30°とΔζ＝−Δfを独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000193",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "赤道から離れた場所の大規模な水平運動で、摩擦と加速度を無視する地衡風近似が表す主な力のつり合いはどれか。",
+      "choices": [
+        "水平方向の気圧傾度力と重力",
+        "水平方向の気圧傾度力とコリオリ力",
+        "地表摩擦力と重力",
+        "鉛直方向の気圧傾度力と重力"
+      ],
+      "correctIndex": 1,
+      "explanation": "地衡風では水平の気圧傾度力とコリオリ力がつり合う。同じ高さの面で北半球の流れに沿って見ると、低圧側が左、高圧側が右となる。鉛直の静力学平衡とは別の近似。",
+      "distractorRationales": [
+        "水平の気圧傾度力は鉛直の重力とはこの形でつり合わない。",
+        "地衡風のつり合い。",
+        "無視する摩擦力を主役にしている。",
+        "大気の鉛直の静力学平衡のつり合い。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA National Weather Service Jackson — Weather Education",
+          "url": "https://www.weather.gov/jkl/education"
+        }
+      ]
+    },
+    "reason": "等圧面に沿うだけという不十分な条件と、低気圧の左側を吹くという旧逆転表現を修正。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NWS JacksonのCoriolis Forceで等大・逆向きの気圧傾度力とコリオリ力を確認。等圧線と流れの左右を独立に点検。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000058",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "雲の中で成長した氷の結晶が、単独または互いにくっついた状態で降る降水はどれか。",
+      "choices": [
+        "霧雨",
+        "露",
+        "雪",
+        "凍雨"
+      ],
+      "correctIndex": 2,
+      "explanation": "雪は氷の結晶や、それらが集まった雪片として降る。凍雨は雨滴が凍ってできた氷粒の降水で、雪の結晶がそのまま降る場合と区別する。",
+      "distractorRationales": [
+        "細かな液体の水滴の降水。",
+        "物体表面に水滴がつく現象で、降水ではない。",
+        "指定した氷晶・雪片の降水。",
+        "雨滴が凍った氷粒の降水。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 福岡管区気象台 — 気象月表の解説",
+          "url": "https://www.data.jma.go.jp/fukuoka/chosa/kaisetsu.html"
+        },
+        {
+          "title": "気象庁 — 降水に関する用語",
+          "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/kousui.html"
+        }
+      ]
+    },
+    "reason": "冬だけの現象という説明を避け、白いという見た目だけでなく形成過程を問う。",
+    "parameters": {
+      "b": -1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "福岡管区気象台の雪の観測上の説明と、気象庁の降水用語にある凍雨の定義を本文で照合。結晶の形を一つに限定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-dry-adiabatic-lapse",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "上昇中も未飽和の気塊が、周囲と熱を交換せずに膨張するとき、地球大気での乾燥断熱減率に最も近いものはどれか。",
+      "choices": [
+        "高度1 kmにつき約9.8℃低下",
+        "高度1 kmにつき約9.8℃上昇",
+        "高度1 kmにつき約0.98℃低下",
+        "高度が変わっても温度は一定"
+      ],
+      "correctIndex": 0,
+      "explanation": "未飽和の気塊が断熱的に上がると、温度は約9.8℃/kmの割合で下がる。これは気塊の変化であり、周囲の大気で観測する気温減率が常にこの値という意味ではない。",
+      "distractorRationales": [
+        "乾燥断熱減率の代表値。",
+        "上昇時の変化の符号が逆。",
+        "代表値より一桁小さい。",
+        "断熱は等温を意味しない。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA National Weather Service Glossary — Adiabatic Lapse Rate",
+          "url": "https://forecast.weather.gov/glossary.php?word=Diabatic"
+        }
+      ]
+    },
+    "reason": "新規。断熱と等温、気塊と環境の減率を区別する。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NWS Glossaryの未飽和気塊の9.8℃/kmと断熱の定義を本文で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-relative-humidity-pressure-ratio",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "水面に対する相対湿度を表す式はどれか。eは実際の水蒸気圧、es(T)はその気温Tでの水面に対する飽和水蒸気圧、pは全気圧とする。",
+      "choices": [
+        "100×e/p",
+        "100×es(T)/e",
+        "100×e/(p−e)",
+        "100×e/es(T)"
+      ],
+      "correctIndex": 3,
+      "explanation": "相対湿度は実際の水蒸気圧を、その温度での飽和水蒸気圧で割った百分率。空気全体に占める水蒸気の割合そのものとは異なる。",
+      "distractorRationales": [
+        "水蒸気の分圧を全圧で割っており、相対湿度ではない。",
+        "比の分子と分母が逆。",
+        "水蒸気と乾燥空気の分圧比で、相対湿度ではない。",
+        "相対湿度の定義。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA National Weather Service — C. Humidity (Atmospheric Water Vapor)",
+          "url": "https://www.weather.gov/media/wrh/online_publications/TMs/TM-18.pdf"
+        },
+        {
+          "title": "気象庁 — 気温、湿度に関する用語",
+          "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/kion.html"
+        }
+      ]
+    },
+    "reason": "新規。水蒸気量の絶対的な多さとの混同を、同じ単位の圧力の比で比較する。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NWS TM-18のC. Humidityの索引本文でactual vapor pressure / saturation vapor pressureを確認し、気象庁の相対湿度の定義とも照合。PDF全体の閲覧とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-daytime-sea-breeze",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "大規模な風が弱い晴れた昼間、陸が隣接する海より強く暖まり、海陸風の循環ができた。地表付近の海風はどちらへ吹くか。",
+      "choices": [
+        "陸から海へ",
+        "海から陸へ",
+        "海岸線に沿って必ず北へ",
+        "海岸線に沿って必ず南へ"
+      ],
+      "correctIndex": 1,
+      "explanation": "陸側の加熱に伴う循環では、地表付近で海から陸へ海風が吹く。上空には戻りの流れがあり、大規模な風や地形によって実際の循環は変わる。",
+      "distractorRationales": [
+        "夜間などの陸風の向きと混同している。",
+        "指定した昼間の海風の向き。",
+        "緯度方向を常に北へ固定する関係ではない。",
+        "緯度方向を常に南へ固定する関係ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA National Weather Service Wilmington — Science and Technology: Sea Breeze",
+          "url": "https://www.weather.gov/ilm/scienceandtechnology"
+        }
+      ]
+    },
+    "reason": "新規。昼なら必ず吹くという断定を避け、加熱差と大規模な風の条件を示す。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NWS WilmingtonのSea Breezeで、陸の加熱・海から置き換わる空気・弱い気圧傾度のclassic sea breezeの説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-atmospheric-hydrostatic-balance",
+    "domain": "地学",
+    "subdomain": "気象・大気",
+    "content": {
+      "question": "鉛直加速度を無視できる大気の静力学平衡では、鉛直の気圧傾度力は何とつり合うか。",
+      "choices": [
+        "水平方向のコリオリ力",
+        "地表面の摩擦力",
+        "重力",
+        "水平方向の気圧傾度力"
+      ],
+      "correctIndex": 2,
+      "explanation": "静力学平衡では、上向きの鉛直気圧傾度力と下向きの重力がつり合う。高さzを上向きに取るとdp/dz＝−ρgとなる。強い対流などで鉛直加速度が重要な場合には近似の限界がある。",
+      "distractorRationales": [
+        "水平運動の地衡風のつり合いと混同している。",
+        "この鉛直方向の主なつり合いではない。",
+        "大気の重さを気圧傾度力が支える。",
+        "二つの直交する方向の気圧傾度力がこの形でつり合うわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "John Cassano, University of Colorado — ATOC 5050 Review: Hydrostatic Equation",
+          "url": "https://atoc.colorado.edu/~cassano/atoc5050/Lecture_Slides/20200904_review.pdf"
+        }
+      ]
+    },
+    "reason": "新規。水平の地衡風と鉛直の静力学平衡を区別する。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Cassano ATOC 5050のHydrostatic Equationの索引本文で上下の力とdp/dz＝−ρgを照合。PDF全体の閲覧とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "気象の観測・研究機関と著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  }
+]
