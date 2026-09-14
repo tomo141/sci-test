@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql", "0020_science_license_versions.sql", "0021_science_auth_boundary.sql", "0022_science_consent_export.sql", "0023_science_bank_import.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql", "0020_science_license_versions.sql", "0021_science_auth_boundary.sql", "0022_science_consent_export.sql", "0023_science_bank_import.sql", "0024_science_review_recovery.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -369,5 +369,104 @@ describe("reviewed bank import",()=>{
       const clone=(await db.query<{id:string}>("insert into science_items(family_id,version,domain,subdomain,content) values($1,2,'数学','数と代数',$2) returning id",[family,content])).rows[0].id;
       expect(clone).not.toBe(item);expect((await db.query("select * from science_reserved_weekly_families where family_id=$1",[family])).rows).toHaveLength(1);
     }finally{await db.exec("reset role");}
+  });
+});
+
+describe("review recovery",()=>{
+  const checks={rights:true,source:true,uniqueAnswer:true,explanation:true};
+  async function fixture(status="published"){
+    await db.exec("begin");
+    const admins=(await db.query<{id:string}>("insert into auth.users(id,email_confirmed_at) values(gen_random_uuid(),now()),(gen_random_uuid(),now()),(gen_random_uuid(),now()) returning id")).rows.map(r=>r.id);
+    for(const id of admins)await db.query("insert into science_admins(user_id,reason) values($1,'Review recovery fixture')",[id]);
+    const content={question:"Reviewed fixture: 3 + 4 = ?",choices:["6","7","8","9"],correctIndex:1,explanation:"Three and four sum to seven.",distractorRationales:["too small","correct","too large","too large"],sources:[{title:"Independent fixture"}]};
+    const q=(await db.query<{id:string}>("insert into science_items(family_id,domain,subdomain,author_id,content,status,rights_checked,quality_passed) values(gen_random_uuid()::text,'数学','数と代数',$1,$2,$3,true,$4) returning id",[admins[0],content,status,status==="published"])).rows[0].id;
+    return {admins,content,q};
+  }
+  async function refused(sql:string,args:unknown[],message:string|RegExp){
+    await db.exec("savepoint expected_review_failure");
+    try{await expect(db.query(sql,args)).rejects.toThrow(message);}
+    finally{await db.exec("rollback to expected_review_failure;release expected_review_failure");}
+  }
+  it("keeps immutable rejected drafts, rolls back invalid revisions and preserves independent approval",async()=>{
+    const {admins,content,q}=await fixture();
+    try{
+      const reason="The explanation needs an independently checked correction.";
+      const p=(await db.query<{id:string}>("select science_propose_correction($1,$2,$3,'explanation',$4) id",[q,admins[0],content,reason])).rows[0].id;
+      await refused("select science_propose_correction($1,$2,$3,'explanation',$4)",[q,admins[0],content,reason],"science_one_pending_correction");
+      const original=(await db.query<{replacement_revision:string}>("select replacement_revision from science_correction_proposals where id=$1",[p])).rows[0].replacement_revision;
+      await refused("select science_revise_correction($1,$2,$3,'explanation',$4)",[p,admins[1],{...content,correctIndex:2},reason],"scoring_change_requires_exclusion");
+      expect((await db.query<{state:string}>("select state from science_correction_proposals where id=$1",[p])).rows[0].state).toBe("pending");
+      const replacement={...content,explanation:"Checked again: 3 plus 4 equals 7."};
+      const revised=(await db.query<{id:string}>("select science_revise_correction($1,$2,$3,'explanation',$4) id",[p,admins[1],replacement,reason])).rows[0].id;
+      const history=(await db.query<{state:string;rejected_by:string;rejection_reason:string}>("select state,rejected_by,rejection_reason from science_correction_proposals where id=$1",[p])).rows[0];
+      expect(history).toEqual({state:"rejected",rejected_by:admins[1],rejection_reason:reason});
+      expect((await db.query<{status:string;content:unknown}>("select status,content from science_items where id=$1",[original])).rows[0]).toEqual({status:"retired",content});
+      await refused("select science_approve_correction($1,$2,$3)",[revised,admins[1],checks],"independent_review_required");
+      await refused("select science_approve_correction($1,$2,$3)",[revised,admins[0],checks],"independent_review_required");
+      await db.query("select science_approve_correction($1,$2,$3)",[revised,admins[2],checks]);
+      await refused("select science_reject_correction($1,$2,'Late rejection attempt')",[revised,admins[1]],"not_pending");
+      await refused("select science_reopen_held_item($1,$2,'An old version must remain withdrawn',$3)",[q,admins[2],checks],"corrected_revision_cannot_reopen");
+      expect((await db.query("select * from science_unresolved_holds where id=$1",[q])).rows).toHaveLength(0);
+    }finally{await db.exec("rollback;reset role");}
+  });
+  it("restores only the former scope after review, without silently promoting lab items",async()=>{
+    const {admins,content,q}=await fixture("lab");
+    try{
+      await db.query("update science_items set status='held' where id=$1",[q]);
+      const call="select science_reopen_held_item($1,$2,'Checked the source and all options',$3) status";
+      await refused(call,[q,admins[0],checks],"independent_review_required");
+      await refused(call,[q,admins[1],{...checks,source:false}],"review_required");
+      const p=(await db.query<{id:string}>("select science_propose_correction($1,$2,$3,'explanation','A possible explanation correction') id",[q,admins[0],content])).rows[0].id;
+      await refused(call,[q,admins[1],checks],"pending_correction");
+      await db.query("select science_reject_correction($1,$2,'The original explanation was correct')",[p,admins[1]]);
+      expect((await db.query<{status:string}>("select status from science_items where id=$1",[q])).rows[0].status).toBe("held");
+      await db.exec("set role service_role");
+      expect((await db.query<{status:string}>(call,[q,admins[1],checks])).rows[0].status).toBe("lab");
+      expect((await db.query<{status:string;quality_passed:boolean;content:unknown}>("select status,quality_passed,content from science_items where id=$1",[q])).rows[0]).toEqual({status:"lab",quality_passed:false,content});
+      await db.query("update science_items set status='held',held_from_status=null where id=$1",[q]);
+      await db.query("update science_items set held_from_status=null where id=$1",[q]);
+      await refused(call,[q,admins[1],checks],"previous_publication_state_unknown");
+      const permission=(await db.query<{read:boolean;execute:boolean}>("select has_table_privilege('authenticated','science_unresolved_holds','SELECT') read,has_function_privilege('anon','science_reopen_held_item(uuid,uuid,text,jsonb)','EXECUTE') execute")).rows[0];
+      expect(permission).toEqual({read:false,execute:false});
+    }finally{await db.exec("rollback;reset role");}
+  });
+  it("blocks cached new answers while held, but acknowledges prior commits and resumes the same progress",async()=>{
+    const {admins,q}=await fixture();
+    try{
+      const r=(await db.query<{id:string}>("insert into science_releases(name,model_version) values('Hold recovery fixture','science-3pl-reference-v1') returning id")).rows[0].id;
+      await db.query("insert into science_release_items(release_id,revision_id,b) values($1,$2,0)",[r,q]);
+      const v=(await db.query<{id:string}>("insert into science_visitors(token_hash,route_group) select replace(gen_random_uuid()::text,'-','')||replace(gen_random_uuid()::text,'-',''),'A' from generate_series(1,2) returning id")).rows.map(row=>row.id);
+      const a:string[]=[],t:string[]=[],op:string[]=[];
+      for(const owner of v){
+        const next=(await db.query<{id:string}>("insert into science_attempts(visitor_id,definition,release_id,model_version,kind,total) values($1,'{}',$2,'science-3pl-reference-v1','trial',20) returning id",[owner,r])).rows[0].id;a.push(next);
+        t.push((await db.query<{token:string}>("select (science_issue($1,$2,null,0,$3,'[0,1,2,3]',.68,1,'hold fixture',1)).token",[next,owner,q])).rows[0].token);
+        op.push((await db.query<{id:string}>("select gen_random_uuid() id")).rows[0].id);
+      }
+      const answer="select (science_commit_answer($1,$2,null,0,$3,$4,1,null)).ordinal";
+      await db.query(answer,[a[0],v[0],t[0],op[0]]);
+      await db.query("update science_items set status='held' where id=$1",[q]);
+      await db.exec("set role service_role");
+      expect((await db.query<{ordinal:number}>(answer,[a[0],v[0],t[0],op[0]])).rows[0].ordinal).toBe(1);
+      await refused(answer,[a[1],v[0],t[1],op[1]],"not_found");
+      await refused(answer,[a[1],v[1],t[1],op[1]],"item_unavailable");
+      expect((await db.query("select * from science_answers where attempt_id=$1",[a[1]])).rows).toHaveLength(0);
+      await db.query("select science_reopen_held_item($1,$2,'Confirmed that the original item is correct',$3)",[q,admins[1],checks]);
+      expect((await db.query<{ordinal:number}>(answer,[a[1],v[1],t[1],op[1]])).rows[0].ordinal).toBe(1);
+      const saved=(await db.query<{attempt_id:string;selected_index:number;is_correct:boolean}>("select attempt_id,selected_index,is_correct from science_answers where attempt_id=any($1) order by attempt_id",[a])).rows;
+      expect(saved).toHaveLength(2);saved.forEach(row=>{expect(row.selected_index).toBe(1);expect(row.is_correct).toBe(true);});
+    }finally{await db.exec("rollback;reset role");}
+  });
+  it("allows a signed-in person to receive operator questions while excluding their own submissions",async()=>{
+    const {admins,content,q}=await fixture();
+    try{
+      const unowned=(await db.query<{id:string}>("insert into science_items(family_id,domain,subdomain,content,status,rights_checked,quality_passed) values(gen_random_uuid()::text,'数学','数と代数',$1,'published',true,true) returning id",[content])).rows[0].id;
+      const r=(await db.query<{id:string}>("insert into science_releases(name,model_version) values('Nullable authors fixture','science-3pl-reference-v1') returning id")).rows[0].id;
+      await db.query("insert into science_release_items(release_id,revision_id,b) values($1,$2,0),($1,$3,0)",[r,q,unowned]);
+      const v=(await db.query<{id:string}>("insert into science_visitors(token_hash,user_id,route_group) values(replace(gen_random_uuid()::text,'-','')||replace(gen_random_uuid()::text,'-',''),$1,'A') returning id",[admins[0]])).rows[0].id;
+      const a=(await db.query<{id:string}>("insert into science_attempts(visitor_id,user_id,definition,release_id,model_version,kind,total) values($1,$2,'{}',$3,'science-3pl-reference-v1','trial',20) returning id",[v,admins[0],r])).rows[0].id;
+      const issue="select (science_issue($1,$2,$3,0,$4,'[0,1,2,3]',.68,1,'Nullable authors fixture',1)).eligible";
+      await refused(issue,[a,v,admins[0],q],"already_seen");
+      expect((await db.query<{eligible:boolean}>(issue,[a,v,admins[0],unowned])).rows[0].eligible).toBe(true);
+    }finally{await db.exec("rollback;reset role");}
   });
 });

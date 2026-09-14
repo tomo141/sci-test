@@ -29,6 +29,7 @@ export function ExamClient({ initialAttempt, kind, initialDomain, refShare }: { 
   const [pending, setPending] = useState<Pending | null>(null);
   const [explanation, setExplanation] = useState<ExamState["explanation"]>();
   const title = useRef<HTMLHeadingElement>(null);
+  const paused=error?.code==="item_unavailable";
   const desired = plan?.definition ?? definition(kind, domain);
   const registrationPath = `/signup?next=${encodeURIComponent(`/exam?kind=${kind}${kind === "domain" ? `&domain=${domain}` : ""}`)}`;
 
@@ -84,6 +85,7 @@ export function ExamClient({ initialAttempt, kind, initialDomain, refShare }: { 
   }
 
   const errorBox = error && <div className="mt-5 rounded-2xl border border-amber-300 bg-amber-50 p-4" role="alert"><p>{error.message}</p>
+    {paused&&<div className="mt-3 flex flex-wrap gap-3"><AppButton href="/mypage" variant="secondary">保存した進捗をマイページで見る</AppButton>{!state&&typeof error.details.attemptId==="string"&&<AppButton onClick={()=>void refresh(error.details.attemptId as string)} disabled={busy}>この受験の再開を確認</AppButton>}</div>}
     {error.code === "registration_required" && <AppButton href={registrationPath} className="mt-3">無料登録して続ける</AppButton>}
     {error.code === "active_attempt" && typeof error.details.attemptId === "string" && <div className="mt-3 flex flex-wrap gap-3"><AppButton onClick={() => void refresh(error.details.attemptId as string)}>中断した受験を再開</AppButton><AppButton variant="secondary" onClick={async () => { if (window.confirm("中断した受験を終了しますか？ 保存済みの回答は残ります。")) { try { await scienceApi("abandon", { attemptId: error.details.attemptId }); setError(null); } catch(e) { setError(e as RequestError); } } }}>中断した受験を終了</AppButton></div>}
   </div>;
@@ -101,7 +103,7 @@ export function ExamClient({ initialAttempt, kind, initialDomain, refShare }: { 
     <div className="mb-5"><p className="font-bold">{state.attempt.definition.label}</p><p className="my-2 text-sm">{state.attempt.ordinal} / {state.attempt.definition.count}問 保存済み</p><ProgressBar value={100*state.attempt.ordinal/state.attempt.definition.count} /></div>
     <AppCard>
       {state.attempt.state === "abandoned" && <><h1 className="text-2xl font-black">終了した受験です</h1><p className="mt-4 leading-8">保存済みの回答は残っています。新しい受験はマイページから始められます。</p><AppButton className="mt-5" href="/mypage">マイページへ</AppButton></>}
-      {state.question && !explanation && <><p className="text-sm text-[var(--color-muted)]">第{state.question.ordinal+1}問 · {state.question.domain} / {state.question.subdomain}</p>
+      {state.question && !explanation && !paused && <><p className="text-sm text-[var(--color-muted)]">第{state.question.ordinal+1}問 · {state.question.domain} / {state.question.subdomain}</p>
         <h1 ref={title} tabIndex={-1} className="mt-4 whitespace-pre-wrap text-xl font-bold leading-9 outline-none">{state.question.question}</h1>
         {state.attempt.definition.kind==="lab"&&<p className="mt-3 text-xs text-[var(--color-muted)]">作問：{state.question.creditName||"匿名の投稿者"}{state.question.aiAssisted&&" · AI補助あり（作者申告）"}</p>}
         <fieldset disabled={busy || !!pending} className="mt-6 grid gap-3"><legend className="sr-only">答えを一つ選んでください</legend>{state.question.choices.map((text,i) => <label key={i} className={`flex cursor-pointer items-start gap-3 rounded-xl border-2 p-4 ${selected === i ? "border-[var(--color-primary-700)] bg-[var(--color-primary-50)]" : "border-[var(--color-border)]"}`}><input type="radio" name="answer" value={i} checked={selected===i} onChange={() => setSelected(i)} className="mt-1 h-5 w-5" /><span className="whitespace-pre-wrap leading-7">{text}</span></label>)}</fieldset>
@@ -109,7 +111,7 @@ export function ExamClient({ initialAttempt, kind, initialDomain, refShare }: { 
       </>}
       {explanation && <><h1 className="text-2xl font-black">{explanation.correctIndex === explanation.selectedIndex ? "正解！" : "解説を見てみよう"}</h1><p className="mt-4 whitespace-pre-wrap leading-8">{explanation.content.explanation}</p><FeedbackForm key={state.attempt.ordinal} attemptId={state.attempt.id} ordinal={state.attempt.ordinal-1}/><AppButton className="mt-6" onClick={() => { setExplanation(undefined); void refresh(state.attempt.id); }}>次の問題へ</AppButton></>}
       <p role="status" className="mt-4 text-sm text-[var(--color-muted)]">{saveNote}</p>{errorBox}
-      {!state.question && !explanation && state.attempt.state === "active" && <AppButton disabled={busy} className="mt-4" onClick={() => void refresh(state.attempt.id)}>{busy ? "次の問題を取得中…" : "次の問題を読み込む"}</AppButton>}
+      {(!state.question||paused) && !explanation && state.attempt.state === "active" && <AppButton disabled={busy} className="mt-4" onClick={() => void refresh(state.attempt.id)}>{busy ? "次の問題を取得中…" : paused?"運営の確認後、再開する":"次の問題を読み込む"}</AppButton>}
       {error?.code === "conflict" && <AppButton className="mt-4" onClick={() => void refresh(state.attempt.id)}>最新の進捗を読み込む</AppButton>}
     </AppCard><p className="mt-5 text-sm leading-7 text-[var(--color-muted)]">確定した回答は変更できません。このページを閉じても保存済みの回答は残ります。</p><AppButton href="/mypage" variant="ghost" className="mt-4">中断してマイページへ</AppButton>
   </main>;

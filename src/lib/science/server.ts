@@ -21,6 +21,11 @@ export function checked<T>(response: { data: T | null; error: { code?: string; m
     const message = response.error?.message;
     if(message==="terms_changed")throw new ScienceError("投稿条件が更新されています。一覧を開き直し、全文を確認してから投稿してください。",409,"terms_changed");
     if(message==="item_unavailable")throw new ScienceError("この問題は確認のため出題を止めています。保存済みの進捗から、時間を置いて再試行してください。",409,"item_unavailable");
+    if(message==="pending_correction"||response.error?.message?.includes("science_one_pending_correction"))throw new ScienceError("この問題には確認待ちの修正版があります。修正版の確認欄から修正・取り下げを行ってください。",409,"pending_correction");
+    if(message==="not_pending")throw new ScienceError("この修正版は別の操作で処理されています。一覧を再読み込みしてください。",409,"not_pending");
+    if(message==="not_held"||message==="corrected_revision_cannot_reopen")throw new ScienceError("この版は保留解除できません。訂正済みの場合は修正版を使用してください。",409,"cannot_reopen");
+    if(message==="previous_publication_state_unknown")throw new ScienceError("保留前の公開状態を確認できません。公開履歴を確認してから対応してください。",409,"unknown_publication_state");
+    if(message==="item_not_approved")throw new ScienceError("権利・品質・確認期限の条件を満たしていません。修正版と根拠を用意してください。",409,"item_not_approved");
     if (response.error?.code === "40001" || message === "already_seen") throw new ScienceError("進捗が更新されています。再読み込みして続けてください。", 409, "conflict");
     if (response.error?.code === "P0002") throw new ScienceError("受験が見つかりません。", 404, "not_found");
     if (message === "week_closed") throw new ScienceError("この週の受付は終了しました。今週の10問へお進みください。", 409, "week_closed");

@@ -7,7 +7,7 @@ import { checked, context, endpoint, rateLimit, requireAdmin, ScienceError } fro
 export const dynamic="force-dynamic";
 export async function POST(request:NextRequest,{params}:{params:Promise<{action:string}>}){
   return endpoint(request,async()=>{
-    const action=z.enum(["list","submission","feedback","run_jobs","propose_correction","approve_correction","quality"]).parse((await params).action);
+    const action=z.enum(["list","submission","feedback","run_jobs","propose_correction","approve_correction","reject_correction","revise_correction","reopen_item","quality"]).parse((await params).action);
     const raw=await request.text();if(raw.length>32768)throw new ScienceError("入力が長すぎます。",413);
     const body=JSON.parse(raw),ctx=await context(true),admin=await requireAdmin(ctx);
     await rateLimit(ctx,"admin",60);
@@ -24,6 +24,18 @@ export async function POST(request:NextRequest,{params}:{params:Promise<{action:
     if(action==="approve_correction"){
       const p=z.object({id:z.string().uuid(),checks:z.object({rights:z.boolean(),source:z.boolean(),uniqueAnswer:z.boolean(),explanation:z.boolean()}).strict()}).strict().parse(body);
       return {epoch:checked(await ctx.db.rpc("science_approve_correction",{p_id:p.id,p_admin:admin,p_checks:p.checks}))};
+    }
+    if(action==="reject_correction"){
+      const p=z.object({id:z.string().uuid(),reason:z.string().trim().min(5).max(2000)}).strict().parse(body);
+      checked(await ctx.db.rpc("science_reject_correction",{p_id:p.id,p_admin:admin,p_reason:p.reason}));return {saved:true};
+    }
+    if(action==="revise_correction"){
+      const p=z.object({id:z.string().uuid(),content:questionContent,mode:z.enum(["exclude","explanation"]),reason:z.string().trim().min(5).max(2000)}).strict().parse(body);
+      return {id:checked(await ctx.db.rpc("science_revise_correction",{p_id:p.id,p_admin:admin,p_content:p.content,p_mode:p.mode,p_reason:p.reason}))};
+    }
+    if(action==="reopen_item"){
+      const p=z.object({revisionId:z.string().uuid(),reason:z.string().trim().min(5).max(2000),checks:z.object({rights:z.boolean(),source:z.boolean(),uniqueAnswer:z.boolean(),explanation:z.boolean()}).strict()}).strict().parse(body);
+      return {status:checked(await ctx.db.rpc("science_reopen_held_item",{p_revision:p.revisionId,p_admin:admin,p_reason:p.reason,p_checks:p.checks}))};
     }
     if(action==="submission"){
       const p=z.object({draftId:z.string().uuid(),decision:z.enum(["lab","adopted","changes_requested","rejected"]),reason:z.string().trim().min(5).max(2000),checks:z.object({rights:z.boolean(),source:z.boolean(),uniqueAnswer:z.boolean(),explanation:z.boolean()}).strict()}).strict().parse(body);

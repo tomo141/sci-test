@@ -67,6 +67,8 @@ function publicQuestion(q: Issued): PublicQuestion {
 async function displayQuestion(ctx: Context, q: Issued): Promise<PublicQuestion> {
   const corrections = await correctionState(ctx.db, [q.revision_id]);
   if (corrections.updates.get(q.revision_id)?.excluded) return { ordinal:q.ordinal, token:q.token, domain:q.snapshot.domain, subdomain:q.snapshot.subdomain, question:"この問題は運営が取り下げました。採点には含めません。", choices:[], withdrawn:true };
+  const item=checked<{status:string}>(await ctx.db.from("science_items").select("status").eq("id",q.revision_id).single());
+  if(item.status==="held"&&!corrections.updates.has(q.revision_id))throw new ScienceError("この問題は確認中です。保存済みの回答を残して中断できます。運営の確認後、ここから再開してください。",409,"item_unavailable",{attemptId:q.attempt_id});
   return publicQuestion(q);
 }
 function choiceOrder() {
@@ -95,7 +97,12 @@ export async function examState(ctx: Context, id: string): Promise<ExamState> {
       if (!next) throw new ScienceError("この条件で出せる未見問題が不足しています。回答済みの内容は保存されています。", 409, "bank_exhausted");
       revisionId = next.candidate.revisionId; predicted = next.predicted; probability = next.selectionProbability; reason = next.reason; candidateCount = next.candidateCount;
     }
-    issued = checked(await ctx.db.rpc("science_issue", { p_attempt: a.id, p_visitor: ctx.visitor.id, p_user: ctx.userId, p_ordinal: a.ordinal, p_revision: revisionId, p_order: choiceOrder(), p_predicted: predicted, p_probability: probability, p_reason: reason, p_candidates: candidateCount })) as Issued;
+    try {
+      issued = checked(await ctx.db.rpc("science_issue", { p_attempt: a.id, p_visitor: ctx.visitor.id, p_user: ctx.userId, p_ordinal: a.ordinal, p_revision: revisionId, p_order: choiceOrder(), p_predicted: predicted, p_probability: probability, p_reason: reason, p_candidates: candidateCount })) as Issued;
+    } catch(error) {
+      if(error instanceof ScienceError)error.extra={...error.extra,attemptId:a.id};
+      throw error;
+    }
     a = await ownedAttempt(ctx, id);
   }
   return { attempt: publicAttempt(a), question: await displayQuestion(ctx, issued), group: ctx.visitor.route_group, signedIn: !!ctx.userId };

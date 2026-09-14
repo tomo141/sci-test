@@ -4,7 +4,7 @@
 
 ## 実行済み
 
-- 改装ブランチ `codex/science-overhaul-20260914` の `6c26ecf` までGitHubへpushした。mainは未変更。Vercelの `D1mdiBu5gLjzJMpu13rofK4vJysL` がReadyとなり、改装プレビューのトップ表示を確認した。
+- 改装ブランチ `codex/science-overhaul-20260914` の `470a6bc` までGitHubへpushした。mainは未変更。Vercelの `8DTcnxKEP9uwL9ySfmReTWbSn14v` がReadyとなり、コミットとPreview環境の一致を確認した。前の `6c26ecf` ではプレビューのトップ表示も確認した。
 - 初回pushは自動承認レビューが送信先の所有確認を理由に拒否。本人がログインしたVercelの本番リポジトリ表示とGitHub宛先・既存HEADの一致を追加確認し、承認後に実行。HTTP 400の通信エラーはHTTP/1.1と送信バッファ指定で再試行して解消。
 - 本番DBの読み取りで、会員4・問題1740・受験122・回答631・同意4を再確認。新版のscience_itemsはまだ存在しなかった。
 - `scripts/prepare-science-migration.mjs` で、0004〜0019のうち0007を除く15ファイルを単一トランザクションにした。0007の旧権限切替はアプリ切替時まで延期する。
@@ -37,3 +37,13 @@
 - `implementation/local/deployment/followup-schema-0020-0023.sql`：SHA-256 `c888659cb5b22aac409e81b81b74bcbffbaf183b0a62aed8e7fd11238245c58c`。
 - `implementation/local/deployment/security-cutover-after-0023.sql`：SHA-256 `53680dbc3ff13f1fe662d7b8fe32be6a6f859729a0c53ddeabaea23eeebe04a0`。
 - `scripts/prepare-science-upgrade.mjs` はローカルファイルを作るだけで実行・適用しない。初回の実行依頼に、後から作ったSQLを混ぜていない。
+
+## 審査の回復操作を追加した版
+
+0024は保留解除、修正案の見送り・再提出、保留中の回答確定の停止、投稿者と未ログイン利用者のNULL比較の修正。初回の手動実行ファイルは引き続き固定している。未共有だった0024の検証途中ファイルは `implementation/local/deployment/superseded/` に退避し、リハーサルと同一の追加SQLを作り直した。
+
+- `followup-schema-0020-0024.sql`：SHA-256 `675b1265eb59df47e09598683f868fd7b30b9503844e2ea9d1732442815610ed`。
+- `security-cutover-after-0024.sql`：SHA-256 `5dd8df184012b64807e23e6025f04fa47d98d092da9e33b33ad1414e06ad8c5a`。
+- 21:08 JSTの復元リハーサルで、21件の移行ハッシュを台帳と照合、旧17テーブルの全行の値が一致。認証機能の実送信や本番DBへの適用ではない。
+
+これらの後続SQLは本番で未実行。初回SQLの実行結果が返ってから、前段の台帳を確認して進める。
