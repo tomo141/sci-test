@@ -1,0 +1,563 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000151",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "多くのC4植物で見られる、葉肉細胞と維管束鞘細胞の役割分担は、光合成にどのような効果をもたらすか。",
+      "choices": [
+        "RuBisCO付近のCO₂濃度を高め、光呼吸を抑える",
+        "RuBisCOの周囲からCO₂を除き、酸素との反応を増やす",
+        "カルビン回路を不要にし、炭素固定を行わなくする",
+        "CO₂固定を夜だけに限定し、全てのC4植物で昼の気孔を閉じる"
+      ],
+      "correctIndex": 0,
+      "explanation": "C4経路はRuBisCO周辺へCO₂を集める仕組みで、酸素との競合を小さくして光呼吸を抑える。多くのC4植物では二つの細胞の間で役割を分担する。昼夜に分けるCAM型と同一視しない。",
+      "distractorRationales": [
+        "CO₂濃縮により光呼吸を減らす方向に働く。",
+        "CO₂濃縮と反対の説明。",
+        "C4植物でもカルビン回路による炭素同化を行う。",
+        "昼夜の時間的分離はCAMの特徴であり、全てのC4植物の説明ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Cambridge — Hibberd Group: The evolution of C4 photosynthesis gene expression",
+          "url": "https://www.plantsci.cam.ac.uk/postgraduate/projects/hibberd-group-evolution-c4-photosynthesis-gene-expression"
+        }
+      ]
+    },
+    "reason": "光反応や葉緑素の不在を誤答にした旧問を、CO₂濃縮とCAMとの違いへ改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000479"
+    ],
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Project Summaryの葉肉・維管束鞘の空間分業とRuBisCO周辺のCO₂濃縮を確認。全C4種で必ず同じ解剖構造、常に同じ収量増加率とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000194",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "C3作物の光呼吸につながる最初の反応として、適切なのはどれか。",
+      "choices": [
+        "PEPカルボキシラーゼが重炭酸を取り込む反応",
+        "RuBisCOが酸素を基質として働くオキシゲナーゼ反応",
+        "硝酸還元酵素が硝酸を還元する反応",
+        "ATP合成酵素がATPを合成する反応"
+      ],
+      "correctIndex": 1,
+      "explanation": "RuBisCOにはCO₂を取り込むカルボキシラーゼ活性に加え、酸素と反応するオキシゲナーゼ活性がある。後者から生じる生成物の代謝が光呼吸へつながる。ミトコンドリアの通常の呼吸とは同じ過程ではない。",
+      "distractorRationales": [
+        "C4経路などの初期炭素固定に関わり、光呼吸の入口ではない。",
+        "RuBisCOの酸素との反応が光呼吸につながる。",
+        "窒素同化に関わる反応。",
+        "エネルギー変換に関わるが、光呼吸の入口を示すものではない。"
+      ],
+      "sources": [
+        {
+          "title": "Carvalho et al. (2024) — The bHLH transcription factor OsPRI1 activates the Setaria viridis PEPC1 promoter in rice",
+          "url": "https://ora.ox.ac.uk/objects/uuid:7dd0d136-2795-40c7-95a7-066ca32dcc48"
+        }
+      ]
+    },
+    "reason": "光呼吸を暗所の呼吸と混同せず、RuBisCOの二つの活性を区別する。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000481"
+    ],
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Oxfordの著者機関リポジトリのAbstract冒頭でRuBisCOの二活性とphotorespirationの関係を照合。論文全実験を追試・評価したものではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000187",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "短日条件で開花が促される植物の品種について、日長反応の説明として適切なのはどれか。温度や生育段階などの条件はそろえる。",
+      "choices": [
+        "連続した暗期が短くなるほど必ず花芽形成が進む",
+        "日長とは無関係に低温の積算だけで花芽形成が決まる",
+        "十分に長い、連続した暗期が花芽形成を促す条件になる",
+        "光を一切受けず栄養を作らなくても、無期限に開花し続ける"
+      ],
+      "correctIndex": 2,
+      "explanation": "短日植物は長夜植物とも呼ばれ、連続した暗期の長さが開花反応に関わる。必要な暗期や反応の強さは種・品種によって異なり、日長だけで全ての開花が決まるわけではない。",
+      "distractorRationales": [
+        "短日・長夜型の基本的な反応と逆。",
+        "低温による春化と日長反応は別の要因。",
+        "長い連続暗期が短日型の開花反応に関わる。",
+        "日長反応と、光合成や栄養を不要とすることは同じではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Biology 2e — 30.6 Plant Sensory Systems and Responses",
+          "url": "https://openstax.org/books/biology-2e/pages/30-6-plant-sensory-systems-and-responses"
+        }
+      ]
+    },
+    "reason": "ダイズ全品種で同じ閾値なら必ず開花すると読める旧問を、反応性がある品種の長夜効果へ限定。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Phytochromes and Photoperiodismのshort-day/long-night、臨界暗期、種による違いを確認。原文中の暗期時間の一律な数値は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000175",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "冬型コムギが栄養成長から生殖成長へ移るために必要とする「春化」の説明として、適切なのはどれか。",
+      "choices": [
+        "開花可能になるために、適切な生育段階で一定期間の低温を経験すること",
+        "収穫後の種子を高温で乾燥させて水分を減らすこと",
+        "日中の光の強さを上げて瞬間的に光合成を増やすこと",
+        "花粉が柱頭へ付いて受精へ進むこと"
+      ],
+      "correctIndex": 0,
+      "explanation": "冬型コムギでは低温の履歴が生殖成長への移行に関わる。これは光の量や受粉とは別の過程で、品種により必要な低温の程度や期間が異なる。春型との違いを多年生・一年生の違いとしない。",
+      "distractorRationales": [
+        "低温による開花能力の獲得を説明している。",
+        "種子乾燥は春化の定義ではない。",
+        "光合成の即時の変化と、低温履歴による発育の変化は異なる。",
+        "受粉・受精は花ができた後の過程。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — Did My Winter Wheat Vernalize?",
+          "url": "https://blog-crop-news.extension.umn.edu/2025/05/did-my-winter-wheat-vernalize.html"
+        }
+      ]
+    },
+    "reason": "温度による開花時期の変化を全て春化と呼ぶ旧問を、低温履歴を必要とする冬型コムギへ限定。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000482"
+    ],
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭のwinter/spring wheatとcold unitsの蓄積、発芽・幼植物での低温履歴を照合。記事の具体的な年の気象状況・温度範囲は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000199",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "緑の革命期に広まったイネ品種IR8の半矮性という特徴は、高収量化にどのように役立ったか。",
+      "choices": [
+        "草丈を高くして、倒伏しやすくする",
+        "根だけを大型化して、葉による光合成をなくす",
+        "全ての病害虫への抵抗性を自動的に与える",
+        "草丈を低くして倒伏しにくくし、重い穂を支えやすくする"
+      ],
+      "correctIndex": 3,
+      "explanation": "短く丈夫な草型は倒伏を抑え、穂を支えることに寄与した。半矮性であるだけで、どの環境でも高収量になる、全ての病害虫に強くなるという意味ではない。",
+      "distractorRationales": [
+        "倒伏しにくい草型という改良の方向と逆。",
+        "葉の光合成を不要にする形質ではない。",
+        "草丈と病害虫への抵抗性は別の形質。",
+        "穂の重さを支え、倒伏を抑える役割がある。"
+      ],
+      "sources": [
+        {
+          "title": "IRRI Rice Today — Remembering Dr. Peter Jennings, the visionary behind IR8 and a major player in the Green Revolution",
+          "url": "https://ricetoday.irri.org/remembering-dr-peter-jennings-the-visionary-behind-ir8-and-a-major-player-in-the-green-revolution/"
+        }
+      ]
+    },
+    "reason": "イネとコムギの矮性化の分子機構を同一視せず、IR8の草型と倒伏の関係へ限定。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IR8の短く丈夫な草型が重い穀粒を倒れず支えるという記述を確認。人物の現況や記事の新規研究主張は問わず、育種史の形態と機能を扱う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000070",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "ある作物に特異的な土壌伝染性病原体の密度を下げたい。輪作で後作を選ぶとき、その病原体との関係で重要なのはどれか。",
+      "choices": [
+        "市場価格が同じ作物を選ぶこと",
+        "その病原体が増殖しにくい非寄主作物を選ぶこと",
+        "同じ科の作物なら必ず病原体を除去できること",
+        "栽培期間を変えず、同じ感受性品種を連作すること"
+      ],
+      "correctIndex": 1,
+      "explanation": "非寄主作物を間に入れると、その病原体が増える機会を減らせる。効果は寄主範囲や土壌中の生存期間にも依存し、輪作一回で根絶できるとは限らない。",
+      "distractorRationales": [
+        "販売価格は病原体の寄主範囲を決めない。",
+        "病原体が増殖する機会を減らす観点。",
+        "同じ科の作物が共通の寄主になる場合もあり、根絶を保証できない。",
+        "感受性作物の連作は、その病原体の増殖機会を断つ方法にはならない。"
+      ],
+      "sources": [
+        {
+          "title": "University of California IPM — Tomato: Crop Rotation",
+          "url": "https://ipm.ucanr.edu/agriculture/tomato/crop-rotation/"
+        }
+      ]
+    },
+    "reason": "輪作という名称だけの旧問を、寄主範囲に基づく後作選択へ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭の非寄主への輪作と病原体等の生活環の中断を確認。地域の具体的な輪作年数や農薬処方は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000066",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "日中の作物の葉で気孔が閉じると、他の条件が同じなら一般にどの変化が起こるか。",
+      "choices": [
+        "蒸散は増え、葉内へのCO₂の入りやすさも増す",
+        "蒸散は減るが、葉内へのCO₂の入りやすさは必ず増す",
+        "蒸散は減り、葉内へのCO₂の入りやすさも低下する",
+        "蒸散は増えるが、CO₂交換は気孔と無関係である"
+      ],
+      "correctIndex": 2,
+      "explanation": "気孔は水蒸気が外へ出る経路であり、CO₂が葉へ入る経路でもある。閉じると水分の損失を抑える一方、CO₂の供給を制限し得る。気孔が閉じれば直ちに全ての代謝が止まるわけではない。",
+      "distractorRationales": [
+        "気孔を閉じる場合の方向と逆。",
+        "CO₂の入り口も狭くなるため、必ず増すとはいえない。",
+        "水分損失の抑制とCO₂供給の制約が両立する。",
+        "CO₂交換にも気孔が関わる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Biology 2e — 30.5 Transport of Water and Solutes in Plants",
+          "url": "https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants"
+        }
+      ]
+    },
+    "reason": "蒸散の単語確認から、気孔の水・炭素交換の両面へ改訂。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Control of Transpirationの気孔開閉・水蒸気損失・CO₂拡散の釣合いを確認。夜間は全植物の気孔が閉じるという一般化はしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000467",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "温度やCO₂濃度を一定にして葉の光の強さへの反応を測る。光補償点とはどの光の強さか。",
+      "choices": [
+        "光合成によるCO₂取り込みと、呼吸などによるCO₂放出がつり合い、正味のCO₂吸収が0になる強さ",
+        "これ以上強くしても光合成が増えなくなる強さ",
+        "葉の呼吸が必ず完全に止まる強さ",
+        "光が全くなくなる0の強さだけを指す"
+      ],
+      "correctIndex": 0,
+      "explanation": "光補償点では正味のCO₂交換が0になる。光を強くしても光合成が増えなくなる光飽和点とは違い、呼吸や光合成そのものが0になる点でもない。",
+      "distractorRationales": [
+        "CO₂の正味の出入りが0になる定義。",
+        "これは光飽和点の説明。",
+        "正味0でも呼吸による放出と光合成による吸収はあり得る。",
+        "一般に暗所の呼吸によるCO₂放出があるため、暗黒そのものの定義ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Purdue University — Managing Photosynthetic Light During Liner Production",
+          "url": "https://www.purdue.edu/hla/sites/cea/wp-content/uploads/sites/15/2012/01/Managing-Photosynthetic-Light-During-Liner-Production.pdf"
+        }
+      ]
+    },
+    "reason": "食品科学へ誤分類された旧問を作物学へ移し、総光合成と正味の交換を区別。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PDF2ページのLCPでnet photosynthesis＝0、LSPとの違いを照合。元の図・照明設定値は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-leaf-area-index",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "水平な地表面積2 m²の区画にある、平たい緑葉の片面面積の合計が6 m²だった。葉面積指数LAIを「片面の葉面積の合計／地表面積」とすると、値はいくつか。",
+      "choices": [
+        "0.33",
+        "1",
+        "6",
+        "3"
+      ],
+      "correctIndex": 3,
+      "explanation": "LAI＝6/2＝3。面積同士の比なので無次元で、葉が重なるため1を超えることがある。地面を上から見た被覆率とは別の量。",
+      "distractorRationales": [
+        "分子・分母を逆にしている。",
+        "LAIは地表面の被覆率ではなく、1を超え得る。",
+        "葉面積の値だけを使い、地表面積で割っていない。",
+        "片面葉面積6 m²を地表面積2 m²で割る。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Annexes: Leaf Area Index (LAI)",
+          "url": "https://www.fao.org/4/ac662e/ac662e0d.htm"
+        }
+      ]
+    },
+    "reason": "葉面積の積算と上から見た被覆率を区別する独自設問。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Leaf Area Index節の広葉の片面面積／地表面積を確認。針葉の面積定義へ拡張せず、設問で平たい葉と片面を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-cereal-harvest-index",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "穀物を収穫したときの乾物重が、穀粒4.0 t/ha、穀粒を含む地上部全体10.0 t/ha、根2.0 t/haだった。収穫指数を「穀粒乾物重／地上部全体の乾物重」とすると、いくらか。",
+      "choices": [
+        "約0.33",
+        "0.40",
+        "約0.67",
+        "約0.29"
+      ],
+      "correctIndex": 1,
+      "explanation": "収穫指数は4.0/10.0＝0.40。分母には穀粒も含む地上部全体を使い、根は加えない。地上部乾物のうち穀粒へ配分された割合を表す。",
+      "distractorRationales": [
+        "根まで分母へ加えた4/12に相当する。",
+        "穀粒4を、それを含む地上部10で割る。",
+        "穀粒を分母から除いた4/(10−4)に相当する。",
+        "穀粒を二重に数えて分母を14にした値に相当する。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Optimizing variety x sowing date for the farm",
+          "url": "https://www.fao.org/4/y5146e/y5146e06.htm"
+        }
+      ]
+    },
+    "reason": "収穫物と地上部全体、根、乾物と生重の取り違えを避ける独自設問。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Harvest index節の穀粒／地上部（穀粒・わら・葉）の乾物重を照合。記事の架空圃場試験のデータは使わず、独自条件で計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-rice-aerenchyma-oxygen",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "イネの根に発達する通気組織（aerenchyma）が、酸素の少ない水田土壌への適応に役立つ主な理由はどれか。",
+      "choices": [
+        "根の呼吸を不要にするため",
+        "根へ届く酸素を全て遮断するため",
+        "植物体内の空隙を通じた酸素の移動を助け、根の先端への供給に寄与するため",
+        "土壌の水分を全てなくして根を空気中に露出させるため"
+      ],
+      "correctIndex": 2,
+      "explanation": "通気組織の空隙は植物体内の気体の移動経路となり、根への酸素供給を助ける。根から周囲への酸素漏出を抑える構造も関わる。全ての根の部位・種類に同じ程度の通気組織があるという意味ではない。",
+      "distractorRationales": [
+        "根の細胞も呼吸に酸素を使う。",
+        "酸素を遮断するのではなく、内部を通じた供給を助ける。",
+        "内部の空隙を通した酸素輸送を説明している。",
+        "通気組織が土壌全体の水を排除するわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "Noorrohmah et al. (2020) — Formation of a barrier to radial oxygen loss in L-type lateral roots of rice",
+          "url": "https://www.jstage.jst.go.jp/article/plantroot/14/0/14_33/_article"
+        }
+      ]
+    },
+    "reason": "湛水土壌に適応する構造と、その限界を問う独自設問。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Abstractの通気組織経由の根端への酸素拡散と、L型・S型側根の違いを照合。原論文の実験手順や数値は引用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-grain-filling-source-sink",
+    "domain": "農学",
+    "subdomain": "栽培・作物学",
+    "content": {
+      "question": "登熟中の穀粒へ、光合成している成熟葉から糖が運ばれるときを考える。この移動における葉・穀粒の役割と主な輸送組織はどれか。",
+      "choices": [
+        "葉がシンク、穀粒がソースで、主に師部を通る",
+        "葉がソース、穀粒がシンクで、主に木部を通る",
+        "葉も穀粒もソースで、糖の輸送は起こらない",
+        "葉がソース、穀粒がシンクで、主に師部を通る"
+      ],
+      "correctIndex": 3,
+      "explanation": "糖を供給する側をソース、消費・蓄積する側をシンクと呼ぶ。この場合は成熟葉から登熟中の穀粒へ、主に師部を通じて糖が送られる。器官の役割は発育段階などによって変わり得る。",
+      "distractorRationales": [
+        "この場面での糖の供給側と受け取り側が逆。",
+        "光合成産物の糖の転流は主に師部による。",
+        "穀粒が糖を受け取るという条件に合わない。",
+        "供給・受け取りと輸送組織を正しく対応させている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Biology 2e — 30.5 Transport of Water and Solutes in Plants",
+          "url": "https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants"
+        }
+      ]
+    },
+    "reason": "作物の収量形成に関わる同化産物の供給と蓄積を問う独自設問。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識・条件理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Transportation of Photosynthates in the Phloemの葉のsource、成長中の種子のsink、師部転流を照合。全器官を常に同じ役割へ固定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学術論文・FAOの公開資料で原理を照合。問題・四択・解説・計算条件を独自に構成し、原文・実験データ・図版・例題は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
