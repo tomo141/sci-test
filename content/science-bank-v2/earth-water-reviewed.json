@@ -1,0 +1,710 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000047",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "海面付近から真下へ音を送り、平らな海底で反射して戻るまでに2.0秒かかった。音速を経路全体で1500 m/sとすると、水深はおよそ何mか。",
+      "choices": [
+        "750 m",
+        "3000 m",
+        "1500 m",
+        "6000 m"
+      ],
+      "correctIndex": 2,
+      "explanation": "2.0秒は海底までの往復時間。音が進む全距離は3000 mなので、その半分の1500 mが水深となる。実測では音速の深さによる変化や送受波器の位置なども補正する。",
+      "distractorRationales": [
+        "往復の補正を二度行っている。",
+        "往復の距離を片道の水深としている。",
+        "1500×2.0÷2で求めた片道の距離。",
+        "往復の距離をさらに二倍にしている。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Ocean Exploration — Multibeam Sonar",
+          "url": "https://oceanexplorer.noaa.gov/technology/sonar-multibeam/"
+        }
+      ]
+    },
+    "reason": "ソナーという名称だけでなく往復時間の意味を問う。実際の測深の補正を不要とはしない。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NOAAのMultibeam Sonar本文で、音速とtwo-way travel timeによる深度推定を確認。自作の真下への往復条件で1500×2÷2を独立検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000049",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "海水全体の質量に対する、溶けている塩類の質量の割合は、海洋の平均でおよそどれか。",
+      "choices": [
+        "3.5%",
+        "0.035%",
+        "35%",
+        "0.35%"
+      ],
+      "correctIndex": 0,
+      "explanation": "平均的な目安は約3.5%、つまり海水1 kgあたり約35 gの塩類。河口や蒸発の強い海域などで変わり、海のどこでも同じ値ではない。",
+      "distractorRationales": [
+        "海洋の平均的な目安。",
+        "平均的な目安の約100分の1。",
+        "平均的な目安の約10倍。",
+        "平均的な目安の約10分の1。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Ocean Service — Why is the ocean salty?",
+          "url": "https://oceanservice.noaa.gov/facts/whysalty.html"
+        }
+      ]
+    },
+    "reason": "質量割合を明示し、実用塩分の数値・単位との無条件の同一視を避ける。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NOAA Why is the ocean salty?の35 parts per thousandと重量3.5%の段落を本文で確認。他段落の地球核からのマグマという誤表現は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000120",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "氷河が削った深い谷に、氷河の後退後などに海水が入り込んでできた、急な谷壁を持つ細長い湾を何というか。",
+      "choices": [
+        "三角州",
+        "フィヨルド",
+        "扇状地",
+        "リアス海岸"
+      ],
+      "correctIndex": 1,
+      "explanation": "フィヨルドは氷河が侵食した谷を海水が満たした湾。陸上のU字谷すべてをフィヨルドと呼ぶわけではない。リアス海岸は主に河川が刻んだ谷の沈水による。",
+      "distractorRationales": [
+        "河口付近に運ばれた土砂が堆積する地形。",
+        "氷河の谷が海水で満たされた指定の地形。",
+        "山地から平地へ出るところなどでできる扇状の堆積地形。",
+        "主に河川の谷が沈水した海岸で、氷河の谷という指定と異なる。"
+      ],
+      "sources": [
+        {
+          "title": "US National Park Service — U-Shaped Valleys, Fjords, and Hanging Valleys",
+          "url": "https://www.nps.gov/articles/ushapedvalleysfjordshangingvalleys.htm"
+        }
+      ]
+    },
+    "reason": "旧問は陸上のU字谷とフィヨルドを同一視していたため、海水の侵入を追加。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NPSのU-Shaped ValleysとFjords本文で、氷河侵食と谷底が海面下で海水に覆われる条件を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000074",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "月による地球の起潮力を理解するうえで重要なことはどれか。",
+      "choices": [
+        "月の重力は地球の近い側と遠い側で等しい",
+        "月の重力は海水にだけ働き、地球本体には働かない",
+        "月の重力が海水の塩分を周期的に変える",
+        "月の重力による加速度が、地球の中心と表面の各場所で異なる"
+      ],
+      "correctIndex": 3,
+      "explanation": "地球全体の運動に対し、月による重力の場所ごとの差が地球を引き伸ばす向きに働く。太陽も起潮力を生む。実際の海面変動は海盆や海岸の形にも依存する。",
+      "distractorRationales": [
+        "近い側ほど月による重力が強く、差を無視している。",
+        "月の重力は地球本体にも働く。",
+        "塩分変化を起潮力の原因にしている。",
+        "地球全体の運動との差として起潮力を捉えている。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA NESDIS — What Causes Tides?",
+          "url": "https://www.nesdis.noaa.gov/about/k-12-education/oceans-coasts/what-causes-tides"
+        }
+      ]
+    },
+    "reason": "旧解説の反対側で遠心力が強いという座標系の混同を除き、重力の差で説明。すべての場所で毎日二回と固定しない。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NOAA NESDIS本文のdifferential forceと、各場所の月重力から地球全体の重力を差し引く説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000169"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000064",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "同じ圧力で比べた海水の密度の違いを通じて、熱塩循環に関係する二つの主要な性質はどれか。",
+      "choices": [
+        "水温と塩分",
+        "緯度と経度",
+        "風向と風速",
+        "潮位と波高"
+      ],
+      "correctIndex": 0,
+      "explanation": "海水の密度は水温・塩分・圧力で変わる。同じ圧力での水温と塩分の違いは、深い水塊の形成などに関係する。海洋大循環の維持には風や潮汐による混合なども関わり、密度差だけですべてを説明できるわけではない。",
+      "distractorRationales": [
+        "指定した海水の密度に関わる性質。",
+        "場所を示す座標で、海水そのものの熱や塩分の性質ではない。",
+        "風の状態であり、指定した海水そのものの二つの性質ではない。",
+        "海面の変動を示す量で、指定した熱・塩分の二つの性質ではない。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 海洋に関する数値予報モデルの種類",
+          "url": "https://www.jma.go.jp/jma/kishou/know/whitep/1-3-4-2.html"
+        },
+        {
+          "title": "JAMSTEC — Blue Earth 174（2024年）、海水の鉛直混合に関する長船哲史氏の研究紹介",
+          "url": "https://www.jamstec.go.jp/j/pr/wp-content/uploads/2024/09/be174_all.pdf"
+        }
+      ]
+    },
+    "reason": "熱塩循環を密度差だけで維持できるとする旧一般化を修正。圧力をそろえる条件を追加。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁の数値海洋モデル解説で温度・塩分と密度差を確認。JAMSTEC Blue Earth 174の長船氏の鉛直混合の研究紹介の索引本文で風・潮汐との関係も確認。PDF全体は未読。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000107"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000109",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "土や岩石の全体積のうち、空隙の体積が占める割合を何というか。空隙同士のつながりの有無は問わない。",
+      "choices": [
+        "透水係数",
+        "間隙率",
+        "飽和度",
+        "間隙比"
+      ],
+      "correctIndex": 1,
+      "explanation": "間隙率は空隙体積を全体積で割った割合。間隙比は空隙体積を固体部分の体積で割る。間隙率だけから水の通りやすさは決まらない。",
+      "distractorRationales": [
+        "水の通りやすさに関わる係数で、体積割合ではない。",
+        "空隙体積を全体積で割る。",
+        "空隙のうち水が占める割合。",
+        "空隙体積を固体部分の体積で割る。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Water Resources Glossaries: Porosity",
+          "url": "https://water.usgs.gov/water-basics_glossary.html"
+        },
+        {
+          "title": "USGS UBGH2 sediment data — Void Ratio and Porosity metadata",
+          "url": "https://cmgds.marine.usgs.gov/catalog/whcmsc/SB_data_release/DR_P9ZLO4IM/UBGH2_Consol_Perm_Metadata.faq.html"
+        }
+      ]
+    },
+    "reason": "含水層という不明瞭な旧語を避け、全間隙率の定義を明確化。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Water Resources Glossariesのporosityと、UBGH2データのメタデータにあるVoid Ratio・Porosityの定義を索引本文で確認。空隙/全体積と空隙/固体体積を区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000111",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "蛇行していた河川に短絡する流路ができ、以前の大きな曲がりが本流から切り離されて湖として残った。この湖を何というか。",
+      "choices": [
+        "カルデラ湖",
+        "海跡湖",
+        "三日月湖",
+        "堰止湖"
+      ],
+      "correctIndex": 2,
+      "explanation": "三日月湖は、河川の蛇行部が短絡・切断されることで残る湖。河川が曲がること自体と、切断後に湖が残ることを区別する。",
+      "distractorRationales": [
+        "火山のカルデラに水がたまった湖。",
+        "海の一部が陸側に取り残された湖。",
+        "蛇行部の切断でできた指定の湖。",
+        "土砂や溶岩などによるせき止めでできた湖。"
+      ],
+      "sources": [
+        {
+          "title": "USGS EROS Earthshots — Oxbow Lakes",
+          "url": "https://eros.usgs.gov/earthshots/oxbow-lakes"
+        }
+      ]
+    },
+    "reason": "蛇行が作るのは曲流という同語反復を、切断による三日月湖の形成へ改訂。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS EROS Oxbow Lakesのmeanderからcutoffを経て独立した水域になる説明を確認。画像自体は設問に使用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000154",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "地表にたまった液体の水が、水面から水蒸気となって大気へ移る過程を何というか。",
+      "choices": [
+        "凝結",
+        "融解",
+        "凝固",
+        "蒸発"
+      ],
+      "correctIndex": 3,
+      "explanation": "蒸発は液体の水が気体の水蒸気へ変わる過程。沸騰していなくても起こる。地表から大気への水の移動には、植物の蒸散なども含まれる。",
+      "distractorRationales": [
+        "気体の水が液体へ変わる過程。",
+        "固体が液体へ変わる過程。",
+        "液体が固体へ変わる過程。",
+        "液体から水蒸気への指定した過程。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Glossary of Water Cycle Terms",
+          "url": "https://www.usgs.gov/glossary/glossary-water-cycle-terms"
+        }
+      ]
+    },
+    "reason": "雨が大気へ戻る全経路を蒸発だけとせず、液体から水蒸気への過程を指定。天文から水文へ再分類。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS GlossaryのEvaporationとEvapotranspirationの本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000164",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "黒潮と黒潮続流の熱輸送について、適切なのはどれか。",
+      "choices": [
+        "低緯度の熱を中緯度へ運び、冬には海から大気への熱放出にも関わる",
+        "高緯度の冷たい水を赤道へ運ぶことだけが役割である",
+        "熱は運ぶが、水の移動は伴わない",
+        "海流が強まると、沿岸のすべての場所が同じだけ昇温する"
+      ],
+      "correctIndex": 0,
+      "explanation": "黒潮・黒潮続流は低緯度から中緯度へ熱を運び、大気との熱交換にも関わる。沿岸の気候への影響は風・流路・季節などと組み合わさるため一律ではない。",
+      "distractorRationales": [
+        "気象庁が示す熱輸送と冬季の放出に合う。",
+        "黒潮の代表的な熱輸送の向きと異なる。",
+        "海流は水の移動を伴う。",
+        "場所や気象条件への依存を無視している。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 海洋の循環",
+          "url": "https://www.data.jma.go.jp/kaiyou/db/obs/knowledge/circulation.html"
+        }
+      ]
+    },
+    "reason": "温暖多湿を無条件に沿岸へ当てはめず、実際に運ばれる熱と影響の条件を明示。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁「海洋の循環」の黒潮続流の変動の本文で低緯度から中緯度への熱輸送と冬季の大気への熱放出を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000184",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "北半球の赤道から離れた深い海で、定常的な風応力によるエクマン成分を、応力が無視できる深さまで積分する。輸送の向きは風応力に対してどちらか。",
+      "choices": [
+        "同じ向き",
+        "右へ90°",
+        "左へ90°",
+        "右へ45°"
+      ],
+      "correctIndex": 1,
+      "explanation": "指定した定常的な条件で、深さ積分したエクマン輸送は北半球では風応力の右90°へ向かう。個々の深さの流速や、海面の流れの向きと同じ量ではない。",
+      "distractorRationales": [
+        "地球回転による転向を取り入れていない。",
+        "北半球の深さ積分した輸送の向き。",
+        "南半球の向き。",
+        "一定の渦動粘性を仮定した古典的な表面流の角度との混同。"
+      ],
+      "sources": [
+        {
+          "title": "Lynne Talley, Scripps/UC San Diego — SIO 210: Ekman dynamics",
+          "url": "https://sam.ucsd.edu/ltalley/sio210/dynamics_ekman/index.html"
+        }
+      ]
+    },
+    "reason": "深さ積分と表面流を区別し、赤道・底面応力・非定常の無条件な一般化を避ける。旧不明用語を削除。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "TalleyのSIO 210の本文で、深さ積分した輸送が北半球で右90°となることと、表層の角度が粘性の仮定によることを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-unconfined-water-table",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "不圧帯水層の地下水面（water table）は、圧力の観点ではどのような面か。毛管帯の細かな構造は考えない。",
+      "choices": [
+        "水圧が0 Paの絶対真空となる面",
+        "透水係数が必ず0となる面",
+        "間隙の水圧が大気圧に等しい面",
+        "地下水の密度が必ず最大となる面"
+      ],
+      "correctIndex": 2,
+      "explanation": "地下水面では水圧が大気圧に等しく、大気圧を基準にした圧力は0となる。水圧の絶対値が0という意味ではない。地上面や不透水層の上面と常に一致する面でもない。",
+      "distractorRationales": [
+        "基準圧力からの差と絶対圧力を混同している。",
+        "水を通さない境界という意味ではない。",
+        "地下水面の圧力条件。",
+        "地下水面の定義に密度の極大は使わない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — What is the difference between a confined and an unconfined (water table) aquifer?",
+          "url": "https://www.usgs.gov/faqs/what-difference-between-a-confined-and-unconfined-water-table-aquifer"
+        },
+        {
+          "title": "Thomas L. Holzer (2010) — The water table",
+          "url": "https://www.usgs.gov/publications/water-table"
+        }
+      ]
+    },
+    "reason": "新規。地下水面を単なる硬い岩盤や地表と混同せず、圧力基準を理解する問題。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGSのFAQ本文で地下水面のatmospheric pressureを確認。Holzer (2010)のUSGS掲載抄録で、飽和域の上端と無条件に同一視する定義の問題も確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-porosity-versus-permeability",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "全間隙率が大きい土や岩石について、水の通りやすさを考えるときに適切なのはどれか。",
+      "choices": [
+        "間隙率が大きければ、透水性も必ず高い",
+        "全間隙率と透水係数は同じ単位の同じ量である",
+        "空隙があれば、空隙同士がつながっていなくても水は容易に通る",
+        "空隙の大きさやつながり方によっては、間隙率が大きくても透水性は低い"
+      ],
+      "correctIndex": 3,
+      "explanation": "全間隙率は空間の割合で、透水性は水が移動できるかに関わる。細かな空隙やつながりにくい空隙を持つ地層では、間隙率だけから速い地下水流を予想できない。",
+      "distractorRationales": [
+        "空隙の大きさ・接続性などを無視している。",
+        "体積比と水の移動を表す係数を混同している。",
+        "連結していない空隙だけでは連続的な流路ができない。",
+        "空隙の量と流れやすさを区別している。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Open-File Report 93-643 — What is Ground Water?",
+          "url": "https://pubs.usgs.gov/of/1993/ofr93-643/"
+        }
+      ]
+    },
+    "reason": "新規。間隙率の名称を問う旧問とは別に、空隙の量から流動性を断定できないことを問う。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS What is Ground Water?のporosity・permeabilityと接続した空隙の説明を本文で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-darcy-specific-discharge",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "一次元の飽和した多孔質媒体でダルシー則が成り立つとする。座標x方向の比流量q、透水係数K＞0、水頭hについて、正しい式はどれか。",
+      "choices": [
+        "q＝−K dh/dx",
+        "q＝K dh/dx",
+        "q＝−(1/K) dh/dx",
+        "q＝−K dx/dh"
+      ],
+      "correctIndex": 0,
+      "explanation": "比流量qはq＝−K dh/dx。水は全水頭が低くなる側へ流れるため負号が付く。qは全断面積あたりの流量であり、間隙内の平均流速そのものとは異なる。",
+      "distractorRationales": [
+        "水頭勾配の逆向きに流れるダルシー則。",
+        "水頭の高い側へ流れる符号になっている。",
+        "Kで割る関係ではなく、次元も合わない。",
+        "水頭勾配の逆数ではなく勾配に比例する。"
+      ],
+      "sources": [
+        {
+          "title": "USGS TWRI Book 3, Chapter B2 — Introduction to Ground-Water Hydraulics, Part II",
+          "url": "https://water.usgs.gov/ogw/pubs/TWRI3-B2/TWRI3-B2-with-links.pdf"
+        }
+      ]
+    },
+    "reason": "新規。水頭勾配の符号と、比流量・間隙流速の区別を含める。資料の演習は転載しない。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS TWRI 3-B2 Part II p.17のQ/A＝−K dh/dl、Kの定義・次元を取得できた索引本文で確認。次元L/Tと符号を独立検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-coastal-upwelling-nutrients",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "海岸から沖へ表層水が運ばれ、下からの水がそれを補う沿岸湧昇が起きた。一般に表層へ届きやすくなるものはどれか。",
+      "choices": [
+        "比較的冷たく、栄養塩に乏しい水",
+        "比較的冷たく、栄養塩に富む水",
+        "比較的温かく、栄養塩に富む水",
+        "比較的温かく、栄養塩に乏しい水"
+      ],
+      "correctIndex": 1,
+      "explanation": "湧昇は下層の水を表層へ運ぶ。典型的にはその水は比較的冷たく栄養塩に富み、植物プランクトンの生産を支え得る。どの海でも常に同じ生産量になるという意味ではない。",
+      "distractorRationales": [
+        "典型的には下層から栄養塩も供給される。",
+        "典型的な湧昇による水温と栄養塩の変化。",
+        "栄養塩は合うが、典型的な下層水は表層より冷たい。",
+        "典型的な下層水の水温・栄養塩の両方と異なる。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Ocean Service — What is upwelling?",
+          "url": "https://oceanservice.noaa.gov/facts/upwelling.html"
+        }
+      ]
+    },
+    "reason": "新規。水平のエクマン輸送の角度とは別に、鉛直移動が栄養供給に与える意味を問う。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NOAA What is upwelling?本文で沖向き表層輸送の補償と、下層の冷たい栄養塩に富む水を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-water-budget-storage",
+    "domain": "地学",
+    "subdomain": "海洋・水文",
+    "content": {
+      "question": "ある貯水系について、同じ期間の総流入量I、蒸発や取水を含む総流出量O、貯留量の増加ΔSをそろえた。水の収支を表す式はどれか。",
+      "choices": [
+        "ΔS＝I＋O",
+        "ΔS＝O−I",
+        "ΔS＝I−O",
+        "IとOに関係なくΔS＝0"
+      ],
+      "correctIndex": 2,
+      "explanation": "貯留の増加は総流入から総流出を引いた量。期間と境界をそろえ、地下水などの出入りも必要に応じて計上する。流出が流入を超えれば、貯留は減る。",
+      "distractorRationales": [
+        "外へ出る量まで貯留の増加として足している。",
+        "増加の符号が逆。",
+        "同じ期間・境界の水収支。",
+        "貯留変化を常に0とする仮定は与えられていない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Circular 1186 — Ground-Water Development, Sustainability, and Water Budgets",
+          "url": "https://pubs.usgs.gov/circ/circ1186/html/gw_dev.html"
+        }
+      ]
+    },
+    "reason": "新規。流量と貯留、未計上の地下水、期間と系の境界の取り方を区別する。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Circular 1186の流入・流出・貯留変化の保存とwater budgetの定義を本文で確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "海洋・水文・地質の観測研究機関、著者の大学教材の取得できた本文・索引で事実を照合。設問・選択肢・説明を独自作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  }
+]
