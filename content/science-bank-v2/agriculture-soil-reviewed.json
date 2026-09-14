@@ -1,0 +1,576 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000182",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "肥料の「三要素」N・P・Kを元素名で表した組み合わせはどれか。",
+      "choices": [
+        "窒素・リン・カリウム",
+        "窒素・リン・カルシウム",
+        "炭素・水素・酸素",
+        "カルシウム・マグネシウム・硫黄"
+      ],
+      "correctIndex": 0,
+      "explanation": "肥料の三要素は窒素N・リンP・カリウムK。炭素・水素・酸素も植物に必要だが、この呼び名の三要素とは異なる。肥料表示で使う酸化物換算値と元素名も区別する。",
+      "distractorRationales": [
+        "N・P・Kに対応する。",
+        "カルシウムはCaでありKではない。",
+        "植物体に多い元素だが、肥料の三要素の呼び名とは異なる。",
+        "いずれも必須元素だが、N・P・Kの組み合わせではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — What is the right fertilizer for your lawn and garden?",
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/what-is-the-right-fertilizer-for-your-lawn-and-garden"
+        }
+      ]
+    },
+    "reason": "ヘリウムを除外するだけの旧問等を統合し、リン酸という物質名とリンという元素名を整理。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000062",
+      "10000000-0000-4000-8003-000000000070"
+    ],
+    "parameters": {
+      "b": -1.1,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭のN・P・Kの元素名を確認。地域の施肥量・法令や、各元素の働きを一つだけに限定した説明は流用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000152",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "土壌の陽イオン交換容量（CEC）について、適切な説明はどれか。",
+      "choices": [
+        "値が高いほど土壌が必ず強酸性であることを表す",
+        "主に硝酸イオンなどの陰イオンを保持できる量を表す",
+        "粘土や有機物などの負電荷によって、K⁺やCa²⁺等を交換可能な形で保持できる容量を表す",
+        "土壌中の全ての肥料成分の総質量と等しい"
+      ],
+      "correctIndex": 2,
+      "explanation": "CECは交換可能な陽イオンを保持する容量。粘土鉱物や有機物の電荷が関わる。現在どの陽イオンが占めているかや、全養分量、pH、透水性をそれだけで決める指標ではない。",
+      "distractorRationales": [
+        "CECとpHは別の性質で、CECが高ければ必ず酸性とはいえない。",
+        "NO₃⁻は陰イオンで、陽イオン交換の対象とは異なる。",
+        "負電荷に保持される交換可能な陽イオンの容量。",
+        "容量は現在の全養分の質量とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "USDA NRCS — Soil Tech Note 15A: Cation Exchange Capacity",
+          "url": "https://www.nrcs.usda.gov/state-offices/illinois/soil-tech-note-15a-cation-exchange-capacity"
+        }
+      ]
+    },
+    "reason": "CECの成分・効果の重複問題を統合し、全養分量・pHとの混同を除去。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000188",
+      "10000000-0000-4000-8007-000000000491",
+      "10000000-0000-4000-8005-000000000172",
+      "10000000-0000-4000-8007-000000000483"
+    ],
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "粘土・安定な有機物の負電荷がK・Ca・NH₄等を保持し、NO₃とは異なるという記述を照合。CEC上昇を全て有機物増加と断定する部分は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000153",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "トウモロコシの典型的な窒素欠乏症状と、植物体内での窒素の移動性について、適切な組み合わせはどれか。",
+      "choices": [
+        "窒素は移動しにくいため、古い下位葉から黄化しやすい",
+        "窒素は移動しやすく、新しい組織へ再配分されるため、古い下位葉から黄化しやすい",
+        "窒素は移動しやすいため、古い葉に残り、新しい上位葉だけが黄化しやすい",
+        "窒素は移動しにくいため、新しい上位葉だけが黄化しやすい"
+      ],
+      "correctIndex": 1,
+      "explanation": "窒素は植物体内で再移動しやすく、不足時には新しい組織へ回されるため古い葉に症状が出やすい。ただし黄化だけで原因を窒素不足と確定することはできない。",
+      "distractorRationales": [
+        "黄化しやすい位置は合っているが、窒素を移動しにくい元素としている点が違う",
+        "窒素の再移動と古い葉に症状が出やすいことが対応する",
+        "窒素は不足時に新しい組織へ再配分されるため、古い葉に症状が出やすい",
+        "窒素は移動しやすい元素であり、典型的には古い葉から症状が現れる"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — 4 key nutrient deficiencies to scout for early in the season",
+          "url": "https://blog-crop-news.extension.umn.edu/2017/05/4-key-nutrient-deficiencies-to-scout.html"
+        }
+      ]
+    },
+    "reason": "「黄化なら窒素欠乏」という一意診断を避け、典型症状が出る位置の仕組みへ改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000461"
+    ],
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Nitrogen節のトウモロコシ下位葉の黄化と窒素の可動性を照合。目視のみの施肥判断・病因確定にはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000192",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "土壌有機物が団粒形成に寄与するとき、土壌の水の出入りについてどの説明が適切か。",
+      "choices": [
+        "団粒間の大きな孔隙が小さな孔隙より水を強く保持し、団粒内の小さな孔隙が主な排水路になる",
+        "土壌に含まれる水の総量が同じなら、孔隙の違いによらず植物が利用できる量も同じになる",
+        "団粒は肥料成分だけを保持し、水の浸透や保持には関与しない",
+        "団粒の間の大きな孔隙は浸透を、団粒内の小さな孔隙は水の保持を支える"
+      ],
+      "correctIndex": 3,
+      "explanation": "大きさの異なる孔隙が、水の入りやすさと保持の両方に関わる。有機物を増やした場合の有効水分の増加量は土性などによって異なり、どの土壌でも同じ増加量にはならない。",
+      "distractorRationales": [
+        "大きな孔隙による排水・浸透と、小さな孔隙による保持の関係が逆",
+        "水の保持される強さが違うため、総水分量だけでは利用できる量は決まらない",
+        "団粒構造は水の入りやすさや保持にも関わる",
+        "大きな孔隙と小さな孔隙の役割を区別している"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — The connection between soil organic matter and soil water",
+          "url": "https://blog-crop-news.extension.umn.edu/2020/03/the-connection-between-soil-organic.html"
+        }
+      ]
+    },
+    "reason": "腐植の効果を万能の土壌改善として扱わず、団粒と孔隙の働きへ絞った。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000457"
+    ],
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "How soil aggregates affect soil waterと、効果が土性によって異なる説明を確認。増加量を全土壌共通の数値へ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000162",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "作物残渣が分解されるときに起こる、窒素の「有機化（immobilization）」とはどれか。",
+      "choices": [
+        "分解微生物が土壌の無機態窒素を取り込み、一時的に植物が利用しにくい形にすること",
+        "有機態窒素が分解されてアンモニウム等へ変わること",
+        "アンモニウム態窒素が亜硝酸を経て硝酸態窒素へ酸化されること",
+        "硝酸態窒素が還元され、窒素ガス等となって大気へ出ること"
+      ],
+      "correctIndex": 0,
+      "explanation": "微生物が残渣を分解する際に窒素を取り込むと、植物が使える無機態窒素が一時的に減ることがある。その後の分解で再び無機化され得るため、永久的な消失とは異なる。",
+      "distractorRationales": [
+        "無機態窒素が微生物の有機物へ取り込まれる現象。",
+        "これは反対向きの無機化。",
+        "これは硝化で、微生物体への有機化とは異なる。",
+        "これは脱窒で、微生物への取り込みとは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — Answers to 5 Spring Nitrogen FAQs",
+          "url": "https://blog-crop-news.extension.umn.edu/2018/04/answers-to-5-spring-nitrogen-faqs.html"
+        }
+      ]
+    },
+    "reason": "堆肥という名称だけの旧問から、有機物投入と窒素可給性が直ちに同じ向きとは限らないことへ改訂。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "第3問の残渣分解微生物による窒素取り込みと、その後の再放出を確認。具体的な施肥処方は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000069",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "同じ方法で測った土壌pHが同じ二つの酸性の鉱質土壌でも、同じ目標pHまで上げる石灰量が異なり得るのはなぜか。処理する土の量と、石灰の中和力はそろえる。",
+      "choices": [
+        "pHは土壌の酸性度とは関係しないから",
+        "どちらかのpH測定が必ず誤っているから",
+        "土壌に保持された酸性成分や、pH変化に抵抗する緩衝能が異なるから",
+        "同じpHなら石灰の必要量は必ず等しく、異なることはないから"
+      ],
+      "correctIndex": 2,
+      "explanation": "水で測るpHだけでは、土壌に保持された酸性成分まで同じとは限らない。緩衝能が異なると、同じ目標pHへ上げるのに必要な中和量も変わる。ここでは地域ごとの石灰施用量を決めているわけではない。",
+      "distractorRationales": [
+        "pHは酸性・アルカリ性を表すが、それだけで全ての中和量は決まらない。",
+        "同じpHと異なる緩衝能は両立する。",
+        "現在のpHと、pHを変えるのに必要な中和量を区別できる。",
+        "緩衝能を無視した説明。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — Soil test pH and liming: Common questions and answers",
+          "url": "https://blog-crop-news.extension.umn.edu/2024/03/soil-test-ph-and-liming-common.html"
+        }
+      ]
+    },
+    "reason": "pHという単語だけの重複問題を、現在の酸性度と石灰要求量の違いへ改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000165"
+    ],
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "水pHのactive acidityとbuffer pHのactive/reserve acidityを照合。泥炭土や地域固有の施肥表へ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000198",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "長く水で満たされて還元的になった土層に、青灰色などのグライ色が生じることがある。この色と関係する鉄の変化はどれか。",
+      "choices": [
+        "酸化が進み、赤褐色の鉄酸化物だけが増える",
+        "還元に伴い、鉄の状態が変化したり一部が移動したりする",
+        "有機物の蓄積で黒色の腐植層が形成される",
+        "蒸発に伴う塩類の集積で白い結晶が析出する"
+      ],
+      "correctIndex": 1,
+      "explanation": "酸素が乏しい還元的な条件では鉄の状態と移動性が変わり、灰色系のグライ色と関わる。赤褐色の酸化的な鉄の集積と区別する。土色だけで排水状態や原因を無条件に断定することはできない。",
+      "distractorRationales": [
+        "酸化的な鉄の集積に関連する色で、設問の還元的条件と逆。",
+        "鉄の還元や移動がグライ色に関わる。",
+        "黒色の有機物集積と、鉄の還元に関わるグライ色は異なる。",
+        "塩類の白い集積は、鉄の還元に関連するグライ色とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "USDA NRCS — Soil Handbook",
+          "url": "https://www.nrcs.usda.gov/sites/default/files/2024-06/Soil%20handbook%20Final%20Version.pdf"
+        }
+      ]
+    },
+    "reason": "グライ層を全水田に一律に存在する層とせず、還元的条件と土色の関係へ限定。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000470"
+    ],
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Soil Color（PDF15ページ）の赤色と酸化鉄、灰色・グライ色と還元鉄の対比を照合。母材などによる色の例外もあるため、土色だけの確定診断にしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-acid-soil-phosphorus-availability",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "酸性土壌に施したリンの可給性について、適切な説明はどれか。",
+      "choices": [
+        "リンの全量が同じなら、化学形によらず作物への可給性も等しい",
+        "主な固定機構は、カリウムと同じ粘土層間への取り込みである",
+        "pHが低くなるほど、他の条件によらず可給性は単調に上がる",
+        "鉄やアルミニウムに関わる反応で溶けにくい形をとり、可給性が低下することがある"
+      ],
+      "correctIndex": 3,
+      "explanation": "低pHの土壌では鉄やアルミニウムに関わる反応でリンの可給性が低下することがある。これはカリウムの粘土層間への固定と同じ仕組みではなく、土壌からリン原子が消えるわけでもない。",
+      "distractorRationales": [
+        "全量が同じでも、植物が利用できる形や溶けやすさは異なり得る。",
+        "カリウムの層間固定とリンの反応を混同している。",
+        "酸性側では鉄やアルミニウムとの反応で可給性が下がることがある。",
+        "難溶性の形への変化が可給性を下げ得る。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — P and K fixation in the soil: What you need to know",
+          "url": "https://blog-crop-news.extension.umn.edu/2022/11/p-and-k-fixation-in-soil-what-you-need.html"
+        }
+      ]
+    },
+    "reason": "栄養元素の存在量と作物が利用できる形を区別する独自設問。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "低pHでの鉄・アルミニウムとリンの反応、Kの層間固定との違いを確認。全量が永久に不可給になると断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-field-capacity-definition",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "十分に濡れた土壌で、重力による下向きの排水が大きく減った後に残る水分量を、一般に何というか。",
+      "choices": [
+        "圃場容水量（field capacity）",
+        "全孔隙が水で満たされた飽和含水量",
+        "永久しおれ点の水分量",
+        "オーブン乾燥後に残る水分量"
+      ],
+      "correctIndex": 0,
+      "explanation": "圃場容水量は、余分な水の排水後に土壌が保持する水の量を指す。飽和状態や永久しおれ点とは異なり、到達までの時間は土性などによって変わる。",
+      "distractorRationales": [
+        "排水が大きく減った後に残る水に対応する。",
+        "飽和状態では排水可能な水も含む。",
+        "永久しおれ点は植物が水を取り出せなくなる側の低い水分量。",
+        "圃場容水量は乾燥し切った状態ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — Basics of irrigation scheduling",
+          "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/basics-of-irrigation-scheduling"
+        }
+      ]
+    },
+    "reason": "保水性を飽和状態と混同しないための独自設問。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Field capacity・Permanent wilting point・Available water holding capacity節を照合。24時間で全ての土壌が達すると断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-rootzone-available-water",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "均一な土層の体積含水率が、圃場容水量で0.32、永久しおれ点で0.14である。根域の深さが0.40 mのとき、両者の差から求める根域の全有効水分量は、水深換算で何mmか。",
+      "choices": [
+        "18 mm",
+        "72 mm",
+        "128 mm",
+        "184 mm"
+      ],
+      "correctIndex": 1,
+      "explanation": "(0.32−0.14)×0.40 m＝0.072 m＝72 mm。これは両限界間の水量であり、72 mmを全て消費するまで作物に水ストレスがない、という意味ではない。",
+      "distractorRationales": [
+        "含水率差を0.10 mに掛けた量に相当し、指定の根域深さではない。",
+        "体積含水率差×根域深さをmmへ換算した値。",
+        "圃場容水量の全水量を使い、しおれ点の水を引いていない。",
+        "二つの含水率を足しており、差ではない。"
+      ],
+      "sources": [
+        {
+          "title": "FAO Irrigation and Drainage Paper 56 — Chapter 8: ETc under soil water stress conditions",
+          "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+        }
+      ]
+    },
+    "reason": "根域の水分量と含水率、全有効水分とストレスなしで使える水を分ける独自計算。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Total available waterの式82と、その後のReadily available waterの区別を確認。数値と選択肢は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-soil-bulk-density-porosity",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "土壌の乾燥かさ密度が1.30 g/cm³、土粒子密度が2.60 g/cm³である。この試料の全体積に占める孔隙の割合はいくらか。",
+      "choices": [
+        "0.25",
+        "0.75",
+        "0.50",
+        "2.00"
+      ],
+      "correctIndex": 2,
+      "explanation": "全体積V、固体体積Vₛ、乾燥質量Mなら、かさ密度M/V、粒子密度M/Vₛ。固体の体積割合は1.30/2.60＝0.50なので、孔隙率は1−0.50＝0.50となる。",
+      "distractorRationales": [
+        "密度の比をさらに半分にしている。",
+        "与えられた固体体積割合0.50と整合しない。",
+        "密度比が固体体積割合を表し、その補数になる。",
+        "密度比を逆にした値で、全体積に占める割合は1を超えない。"
+      ],
+      "sources": [
+        {
+          "title": "Virginia Tech — Soil and Soil Water Relationships",
+          "url": "https://www.pubs.ext.vt.edu/BSE/BSE-194/BSE-194.html"
+        }
+      ]
+    },
+    "reason": "乾燥かさ密度と土粒子密度を区別する独自設問。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Bulk Density節の全孔隙率＝1−bulk density/particle densityと各密度の定義を照合。砂のかさ密度を一律に低いとする周辺記述は使わない。独自の密度値で導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-soil-extract-ec-salinity",
+    "domain": "農学",
+    "subdomain": "土壌・植物栄養",
+    "content": {
+      "question": "同じ温度・同じ抽出法で測った土壌抽出液の電気伝導度（EC）は、主に何を評価するために使うか。",
+      "choices": [
+        "可溶性塩類の濃度の目安",
+        "土壌の酸性度を表すpHそのもの",
+        "陽イオンを交換可能な形で保持できる容量",
+        "土壌中の有機態窒素の総量"
+      ],
+      "correctIndex": 0,
+      "explanation": "溶けたイオンは電流を運ぶので、ECは塩類濃度の目安になる。pHとは別の測定量であり、比較には温度や抽出法をそろえる。塩類が多いと植物の吸水にも影響し得る。",
+      "distractorRationales": [
+        "溶存イオンによる電気の通りやすさを利用する。",
+        "酸性度はpHで、ECと同じ量ではない。",
+        "交換可能な陽イオンを保持する容量はCECで評価する。",
+        "ECだけで有機態窒素の総量は測定できない。"
+      ],
+      "sources": [
+        {
+          "title": "FAO Irrigation and Drainage Paper 56 — Chapter 8: ETc under soil water stress conditions",
+          "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+        }
+      ]
+    },
+    "reason": "pH・養分保持・塩類濃度を別指標として扱う独自設問。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Salinity stressの飽和抽出液ECₑによる塩類評価、単位dS/m、浸透ポテンシャルとの関係を確認。異なる抽出法の値を無条件に直接比較しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の農業普及資料とUSDA・FAOの公開資料で原理を確認。問題・四択・解説・計算の数値は独自表現とし、図版・栽培処方・例題は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
