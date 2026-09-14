@@ -1,0 +1,469 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000255",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "「条件が真なら処理A、偽なら処理Bを実行する」という制御の構造はどれか。",
+      "choices": [
+        "変数への代入",
+        "条件分岐",
+        "反復",
+        "関数の定義"
+      ],
+      "correctIndex": 1,
+      "explanation": "条件分岐では、条件の真偽などに応じて実行する処理を選ぶ。Pythonのifとelseもこのための構文。反復は処理を繰り返し、代入は名前と値の対応などを更新する。",
+      "distractorRationales": [
+        "値を設定する操作で、二つの処理を選ぶ構造ではない。",
+        "条件に応じて実行する側を選ぶ。",
+        "同じ処理を繰り返す構造。",
+        "呼び出せる処理を定める操作。"
+      ],
+      "sources": [
+        {
+          "title": "Python 3.14 — More Control Flow Tools",
+          "url": "https://docs.python.org/3.14/tutorial/controlflow.html"
+        }
+      ]
+    },
+    "reason": "セキュリティへの誤分類を訂正し、制御構造同士を比較。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§4.1のif・elif・elseによる条件分岐を確認。教材の入力例やコードは転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000260",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "コンパイルとインタープリターによる実行の関係として適切なのはどれか。",
+      "choices": [
+        "インタープリターを使う処理系は、中間コードへの変換を一切行えない",
+        "コンパイラーが出力するものは、必ずCPUが直接実行する機械語だけである",
+        "一つの言語には、全実装に共通する一種類の実行方式しか許されない",
+        "中間コードへコンパイルしてから、それをインタープリターで実行する処理系もある"
+      ],
+      "correctIndex": 3,
+      "explanation": "変換と解釈による実行は併用できる。例えばCPythonではPythonのソースをバイトコードへ変換し、その中間表現を実行する。「インタープリターならソースを一行ずつ読むだけ」という定義ではない。",
+      "distractorRationales": [
+        "CPythonのように中間コードへ変換してから実行できる。",
+        "バイトコードなどの中間表現へ出力する場合もある。",
+        "実行方式は言語仕様と処理系を分けて考える必要がある。",
+        "コンパイルと解釈実行を組み合わせることができる。"
+      ],
+      "sources": [
+        {
+          "title": "Python 3.14 — Glossary: bytecode and virtual machine",
+          "url": "https://docs.python.org/3.14/glossary.html"
+        }
+      ]
+    },
+    "reason": "一行ずつの解釈と事前コンパイルを排他的な二種類に分けた旧説明を修正。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "用語集のbytecodeでCPythonがソースを中間表現へコンパイルし仮想機械で実行する説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000110",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "値として取り得る範囲や、その値に対して行える操作を定める、整数・文字列などの分類を何というか。",
+      "choices": [
+        "データ型",
+        "変数名",
+        "メモリアドレス",
+        "スコープ"
+      ],
+      "correctIndex": 0,
+      "explanation": "データ型は、値の種類や利用できる操作を定める。例えばPythonのオブジェクトにも型があり、使える操作などに関係する。名前や配置場所、名前を参照できる範囲とは別の概念。",
+      "distractorRationales": [
+        "値の種類と操作に関係する分類。",
+        "値を参照するための名前で、型そのものではない。",
+        "配置場所を表す情報で、型そのものではない。",
+        "名前を参照できる範囲で、値の種類ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Python 3.14 — Data model",
+          "url": "https://docs.python.org/3.14/reference/datamodel.html"
+        }
+      ]
+    },
+    "reason": "同義の旧問を統合し、データベースへの誤分類を訂正。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§3.1の各オブジェクトのidentity・type・valueと、型が操作や取り得る値を定める説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000257"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000117",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "クラスを用いるプログラミングで、継承の基本的な役割はどれか。",
+      "choices": [
+        "クラスのインスタンスを一つ生成する",
+        "オブジェクトをファイルへ保存する表現に変換する",
+        "基底クラスの属性やメソッドを派生クラスで利用し、追加や再定義ができるようにする",
+        "全てのオブジェクトを同じメモリアドレスへ配置する"
+      ],
+      "correctIndex": 2,
+      "explanation": "継承では基底クラスとの関係を持つ派生クラスを定義する。例えばPythonでは属性を基底クラスへ探しに行く仕組みがあり、派生クラスでメソッドを上書きすることもできる。単にソースコードを複写する操作ではない。",
+      "distractorRationales": [
+        "インスタンス化の操作。",
+        "シリアライズの操作。",
+        "基底クラスの機能を利用・拡張する仕組み。",
+        "継承はメモリ上の同一の場所へ配置する機能ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Python 3.14 — Classes: Inheritance",
+          "url": "https://docs.python.org/3.14/tutorial/classes.html"
+        }
+      ]
+    },
+    "reason": "多態性を単に同名メソッドとする説明を避け、継承の役割に絞る。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§9.5の基底クラスをたどる属性の探索と、派生クラスによるメソッドのoverrideを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000103",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "非負整数nを受け取り、n＝0なら再帰せず終了し、それ以外ならn−1で一回だけ自分を呼ぶ関数を考える。資源不足を除いて、再帰が有限回で終わる理由はどれか。",
+      "choices": [
+        "自分自身を呼ぶ関数は、呼び出すだけで必ず停止するから",
+        "非負の引数が一つずつ減り、必ず終了条件の0へ達するから",
+        "基底ケースがどこかに書かれていれば、到達しなくてもよいから",
+        "再帰ではグローバル変数を使わないから"
+      ],
+      "correctIndex": 1,
+      "explanation": "終了条件が存在するだけでなく、そこへ確実に進むことが必要。この例では非負整数が一つずつ減るので、有限回で0になる。n＋1を渡し続けるなら、0の基底ケースがあっても正の入力からは到達しない。",
+      "distractorRationales": [
+        "再帰には停止しない定義もある。",
+        "減少する量と基底条件への到達が示されている。",
+        "到達できない基底ケースでは停止は保証されない。",
+        "グローバル変数の有無は、この停止の理由ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Marijn Haverbeke — Eloquent JavaScript, Functions: Recursion",
+          "url": "https://eloquentjavascript.net/03_functions.html"
+        }
+      ]
+    },
+    "reason": "基底ケースの存在だけで停止が保証されるという誤解を訂正。再帰という名前だけを問う旧7/264とは別の学習内容として保持。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Recursionの自分自身の呼び出しと終了条件の例を確認。設問は独立に定義した非負整数上の関数で、nの単調減少から停止を導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000196",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "Python 3.14で、同じ名前xに整数を代入した後、文字列を代入した。この動作の説明として適切なのはどれか。",
+      "choices": [
+        "元の整数オブジェクト自体が、必ず文字列へ変形した",
+        "Pythonには値の型が存在しないため、どんな操作も可能になった",
+        "最初の代入でxが整数専用になるので、必ず構文エラーになる",
+        "xが参照する対象を、別の型のオブジェクトへ結び直した"
+      ],
+      "correctIndex": 3,
+      "explanation": "Pythonでは名前がオブジェクトを参照し、オブジェクトに型がある。同じ名前を別のオブジェクトへ結び直すことができる。動的型付けは「型がない」「不正な型の操作も成功する」という意味ではない。",
+      "distractorRationales": [
+        "元の整数を変えるのでなく、名前の参照先を変える。",
+        "オブジェクトには型があり、使える操作にも制約がある。",
+        "通常の名前は初回代入だけで整数専用にはならない。",
+        "名前とオブジェクトの型を区別した説明。"
+      ],
+      "sources": [
+        {
+          "title": "Python 3.14 — Execution model: Naming and binding",
+          "url": "https://docs.python.org/3.14/reference/executionmodel.html"
+        },
+        {
+          "title": "Python 3.14 — Data model",
+          "url": "https://docs.python.org/3.14/reference/datamodel.html"
+        }
+      ]
+    },
+    "reason": "実行時に型が決まるという曖昧な表現から、名前の再束縛の具体例へ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "名前はオブジェクトを参照し代入が名前を束縛する規則と、オブジェクトの型の定義を確認。特殊な属性代入ではなく通常の名前xを扱う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000183",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "純粋関数の性質を表すものはどれか。ここでは同じ引数で正常に結果を返す呼び出しを比較する。",
+      "choices": [
+        "同じ引数なら同じ結果になり、外部状態の変更などの副作用を起こさない",
+        "同じ引数でも現在時刻を読み、その時刻を結果へ加える",
+        "結果は一定だが、呼び出すたびに外部ファイルへ一行書き足す",
+        "結果を返す前に、引数にない共有カウンターを一つ増やす"
+      ],
+      "correctIndex": 0,
+      "explanation": "純粋関数は結果を引数から定め、外部へ観測できる状態変更を伴わない。結果が毎回同じであることだけでは、ファイルへの書き込みなどの副作用を持つ関数を除外できない。",
+      "distractorRationales": [
+        "結果の決定性と副作用の不在をともに満たす。",
+        "引数以外の変化する外部状態へ依存する。",
+        "ファイルへの書き込みという副作用を持つ。",
+        "共有状態を変更する副作用を持つ。"
+      ],
+      "sources": [
+        {
+          "title": "Marijn Haverbeke — Eloquent JavaScript, Functions and side effects",
+          "url": "https://eloquentjavascript.net/03_functions.html"
+        }
+      ]
+    },
+    "reason": "結果の一致だけを十分条件とせず、乱数の明示的な種や例外の意味論に依存する曖昧な四肢を避ける。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Functions and side effectsのpure functionの定義、変化する外部束縛への非依存と同じ引数での同じ結果を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000185",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "コンパイラーのフロントエンドが主に行う処理はどれか。",
+      "choices": [
+        "実行中のプロセスへCPU時間を割り当てる",
+        "実行時のパケットの宛先を選ぶ",
+        "ソース言語の字句・構文・意味を解析し、後段で扱う表現を作る",
+        "完成したオブジェクトファイル間の外部参照を結び付ける"
+      ],
+      "correctIndex": 2,
+      "explanation": "フロントエンドはソース言語を解析して、その構造や意味を扱えるようにする。例えばClangではパーサーからSemaを呼んで意味を解析し、妥当な構文に対してASTを組み立てる。リンクやOSのスケジューリングとは別の役割。",
+      "distractorRationales": [
+        "OSのスケジューラーの役割。",
+        "ネットワークの転送の役割。",
+        "ソース言語の解析を担当する。",
+        "リンカーの代表的な役割。"
+      ],
+      "sources": [
+        {
+          "title": "Clang — CFE Internals Manual: Lexer, Parser and Sema",
+          "url": "https://clang.llvm.org/docs/InternalsManual.html"
+        }
+      ]
+    },
+    "reason": "全言語で前段と後段の境界が同じという説明を避け、代表的な役割を問う。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Lexer・Parserと、The Sema Libraryの意味解析・AST構築の説明を確認。コード生成を常に同じ一段階へ分けるとは断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000284",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "型付けと実行の規則を定めた言語で、自由変数のない型の合う式について、進行性と型保存が証明されている。この二性質による型安全性の保証として適切なのはどれか。",
+      "choices": [
+        "型が合う全プログラムが、必ず有限時間で終了する",
+        "型が合う式は、値でもなく次の実行規則もない行き詰まりに到達しない",
+        "型が合えば、利用者が望む仕様を必ず満たす",
+        "型が合えば、メモリの使用量は必ず一定になる"
+      ],
+      "correctIndex": 1,
+      "explanation": "進行性は型の合う式が値であるか実行を一歩進められること、型保存は一歩進めても型が保たれることを表す。組み合わせると行き詰まらないことを示せる。停止・業務仕様の正しさ・一定メモリ使用量までを、この二性質だけで保証するわけではない。",
+      "distractorRationales": [
+        "停止性は進行性と型保存だけからは一般に導けない。",
+        "進行性と型保存を組み合わせた保証。",
+        "型規則が業務仕様の全条件を表すとは限らない。",
+        "実行時の資源使用量の上限を与える保証ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Software Foundations — Programming Language Foundations: Types",
+          "url": "https://softwarefoundations.cis.upenn.edu/plf-current/Types.html"
+        }
+      ]
+    },
+    "reason": "旧問の型検査で拒否することと型安全性の意味の混同、複数解になり得る四肢を修正。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Progress・Preservation・Type Soundnessのwell-typed termがstuckへ到達しない導出を確認。型規則が健全であることを前提にし、静的型付け言語全般の無条件保証とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000294",
+    "domain": "情報・計算機科学",
+    "subdomain": "プログラミング・言語・コンパイラ",
+    "content": {
+      "question": "Haskellのモナド則で、左単位元則を表す式はどれか。pureは値をモナドへ入れる操作、>>=はbindとし、各式の型は整合しているものとする。",
+      "choices": [
+        "m >>= pure ≡ m",
+        "(m >>= f) >>= g ≡ m >>= (\\x -> f x >>= g)",
+        "pure a >>= f ≡ pure a",
+        "pure a >>= f ≡ f a"
+      ],
+      "correctIndex": 3,
+      "explanation": "値aをpureで入れてからfへ渡すことは、初めからf aを行うことと同じ、というのが左単位元則。m >>= pureは右単位元則、bindの括り方を変える式は結合則を表す。",
+      "distractorRationales": [
+        "右単位元則。",
+        "結合則。",
+        "一般のfの処理や結果を捨てており、一般には成立しない。",
+        "pureで入れた値をそのままfへ渡す左単位元則。"
+      ],
+      "sources": [
+        {
+          "title": "Haskell base 4.22 — Control.Monad: Monad laws",
+          "url": "https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Control-Monad.html"
+        }
+      ]
+    },
+    "reason": "旧問の結合則の選択肢番号の誤記と「以外の任意の式」という不明瞭な四肢を訂正。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "MonadのLeft identity・Right identity・Associativityとpure＝returnの整合条件を、取得した版の本文で確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "言語・コンパイラーの公式資料、著者公開教材の該当本文を照合。設問・選択肢・説明は独自作成し、教材の演習・コード・文章を転載していない。式は法則の確認に必要な最小限の記法。独立専門家の査読ではない。"
+    }
+  }
+]
