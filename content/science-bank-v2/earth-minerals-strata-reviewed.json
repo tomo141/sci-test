@@ -1,0 +1,732 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000160",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "モース硬度の基準となる10種類の鉱物で、硬度10に置かれているものはどれか。",
+      "choices": [
+        "ダイヤモンド",
+        "石英",
+        "コランダム",
+        "方解石"
+      ],
+      "correctIndex": 0,
+      "explanation": "硬度10の基準鉱物はダイヤモンド。モース硬度は傷のつきにくさを比べる尺度で、割れにくさや衝撃に対する強さと同じ量ではない。",
+      "distractorRationales": [
+        "モース硬度10の基準。",
+        "モース硬度7の基準。",
+        "モース硬度9の基準。",
+        "モース硬度3の基準。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Natural Gemstones: Mineral Gemstones",
+          "url": "https://pubs.usgs.gov/gip/gemstones/mineral.html"
+        }
+      ]
+    },
+    "reason": "硬度計や全物質の中で絶対最強という表現を避け、10種の基準鉱物に限定。同じ核心の旧問を統合。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Natural Gemstonesのscratch hardnessの定義と10種の表を本文・索引で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000042",
+      "10000000-0000-4000-8006-000000000077"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000104",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "石英のモース硬度は7、方解石は3である。この二つの数値から読み取れることとして適切なのはどれか。",
+      "choices": [
+        "石英の引っかき硬さは、方解石の正確に7/3倍である",
+        "石英の方が傷がつきにくい側に置かれるが、7/3という硬さの比は意味しない",
+        "石英の密度は、方解石の正確に7/3倍である",
+        "石英が割れるまでの衝撃エネルギーは、方解石の正確に7/3倍である"
+      ],
+      "correctIndex": 1,
+      "explanation": "モース尺度は引っかきに対する相対的な順を表す。数値の比が物理的な硬さ・密度・靭性の比を表すわけではない。",
+      "distractorRationales": [
+        "等間隔の比率尺度と誤解している。",
+        "相対的な引っかき硬さの尺度としての読み方。",
+        "硬度と密度を混同している。",
+        "硬度と衝撃に対する靭性を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Natural Gemstones: Mineral Gemstones",
+          "url": "https://pubs.usgs.gov/gip/gemstones/mineral.html"
+        },
+        {
+          "title": "GIA — Gems & Gemology, Summer 1973（モース尺度の解説）",
+          "url": "https://www.gia.edu/doc/summer_1973.pdf"
+        }
+      ]
+    },
+    "reason": "石英の数値の再暗記だけでなく、尺度の意味を問う。ダイヤモンドの基準値の問題と別の理解を扱う。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGSの基準値とGIA Summer 1973の索引本文でqualitative scratch scaleであり数値間の定量比を与えないことを照合。PDF全体の閲覧とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000046",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "石灰岩に多い鉱物である方解石の、化学成分はどれか。",
+      "choices": [
+        "NaCl",
+        "SiO₂",
+        "CaCO₃",
+        "Fe₂O₃"
+      ],
+      "correctIndex": 2,
+      "explanation": "方解石は炭酸カルシウムCaCO₃で、石灰岩の主な構成鉱物。石灰岩全体が必ず純粋なCaCO₃だけでできているわけではない。",
+      "distractorRationales": [
+        "岩塩の化学成分。",
+        "石英の化学成分。",
+        "方解石の化学成分。",
+        "赤鉄鉱の化学成分。"
+      ],
+      "sources": [
+        {
+          "title": "The Geological Society — Limestones",
+          "url": "https://www.geolsoc.org.uk/ks3/gsl/education/resources/rockcycle/page3524.html"
+        }
+      ]
+    },
+    "reason": "石灰岩を単一の純物質とせず、主な構成鉱物と化学成分を対応付ける。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Geological SocietyのLimestonesで主な鉱物calciteがcalcium carbonateであることを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000170",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "立方晶系の通常の慣用単位格子では、三つの軸長a・b・cと軸間角α・β・γはどの条件を満たすか。",
+      "choices": [
+        "a＝b、cは異なり、角度はすべて90°",
+        "a＝b、角度は90°・90°・120°",
+        "軸長はすべて異なり、角度もすべて異なる",
+        "a＝b＝c、角度はすべて90°"
+      ],
+      "correctIndex": 3,
+      "explanation": "立方晶系の通常の慣用単位格子は、三軸等長で互いに直角となる。逆に格子の長さと角度だけが偶然そろっても、原子配列の対称性が立方晶系とは限らない。",
+      "distractorRationales": [
+        "cが異なるという条件は立方晶系に合わない。",
+        "120°という軸間角は指定した立方晶の格子に合わない。",
+        "指定した立方晶の格子の制約に合わない。",
+        "立方晶系の慣用単位格子の条件。"
+      ],
+      "sources": [
+        {
+          "title": "IUCr — How to read Volume A of International Tables for Crystallography (2010)",
+          "url": "https://journals.iucr.org/j/issues/2010/05/02/kk5061/index.html"
+        }
+      ]
+    },
+    "reason": "格子の計量から晶系が必ず決まるという逆向きの推論を避け、既知の立方晶系の格子制約を問う。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IUCr 2010のTable 1と直後の、同じ格子長・90°でも低対称の場合があるという注記を本文・索引で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000116",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "通常の水晶を構成する低温型の石英（α石英）を、7晶系の区分で分類するとどれか。",
+      "choices": [
+        "三方晶系",
+        "六方晶系",
+        "立方晶系",
+        "単斜晶系"
+      ],
+      "correctIndex": 0,
+      "explanation": "低温型の石英は三方晶系。六角柱状の外形や、六方晶系のものと共通する格子の表記だけから、晶系を決めてはいけない。",
+      "distractorRationales": [
+        "低温型石英の晶系。",
+        "高温型などとの区別や、六角柱の外形との混同に注意が必要。",
+        "低温型石英の晶系ではない。",
+        "低温型石英の晶系ではない。"
+      ],
+      "sources": [
+        {
+          "title": "産総研 地質調査総合センター 地質標本館 — 水晶（石英）GSJ M32785",
+          "url": "https://www.gsj.jp/Muse/hyohon/mineral/m32785.html"
+        },
+        {
+          "title": "IUCr — How to read Volume A of International Tables for Crystallography (2010)",
+          "url": "https://journals.iucr.org/j/issues/2010/05/02/kk5061/index.html"
+        }
+      ]
+    },
+    "reason": "低温型石英を六方晶系とした旧正解を訂正し、肢そのものに答えの分類名を付ける形式も削除。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "地質標本館の水晶GSJ M32785の化学組成と三方晶系という所蔵情報を確認。IUCrの晶系と格子設定の区別も照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000190",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "同じ鉱物の複数の結晶領域が、結晶学的な規則に従う方位関係で接合し、鏡映や特定の回転などで互いに対応するものを何というか。",
+      "choices": [
+        "非晶質",
+        "双晶",
+        "固溶体",
+        "多形"
+      ],
+      "correctIndex": 1,
+      "explanation": "双晶は複数の結晶領域の方位関係に規則があるもの。多形は同じ化学組成で結晶構造が異なること、固溶体は組成の置換などを伴う一つの結晶相に関わる概念。",
+      "distractorRationales": [
+        "長距離の周期的な結晶構造を持たない状態。",
+        "指定した結晶領域の規則的な関係。",
+        "成分の置換などに関係する概念で、方位関係の名称ではない。",
+        "同じ組成で異なる結晶構造を取る関係。"
+      ],
+      "sources": [
+        {
+          "title": "IUCr — Does mathematical crystallography still have a role in the XXI century? (2008)",
+          "url": "https://journals.iucr.org/a/issues/2008/01/00/sc5006/"
+        },
+        {
+          "title": "IUCr Online Dictionary of Crystallography — Twin operation",
+          "url": "https://dictionary.iucr.org/Twin_operation"
+        }
+      ]
+    },
+    "reason": "ラツョー面などの不明な用語と、接触・貫入双晶の不正確な例を削除。まず双晶の結晶学的な意味を問う。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IUCr 2008 §6の結晶領域の方位関係と、IUCr Twin operationの対応操作の説明を本文・索引で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000182",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "変成相という区分の使い方として、最も適切なのはどれか。",
+      "choices": [
+        "一つの鉱物を見つければ、全岩組成に関係なく温度が一意に決まる",
+        "化石の種類の組合せから、地層の堆積時代を区分する",
+        "全岩組成も考慮した鉱物の組合せから、変成時の温度・圧力条件の範囲を考える",
+        "砕屑粒子の粒径から、礫岩・砂岩・泥岩などを区分する"
+      ],
+      "correctIndex": 2,
+      "explanation": "変成相は、鉱物の組合せと岩石の化学組成との関係を通じて、主に温度・圧力条件を整理する区分。境界は全岩組成などにも依存し、一つの鉱物から温度を一点に決める尺度ではない。",
+      "distractorRationales": [
+        "鉱物の安定性に関わる全岩組成や圧力などが抜けている。",
+        "生物層序による区分で、変成相の説明ではない。",
+        "変成相と鉱物組合せ・条件の関係。",
+        "砕屑性堆積岩の粒径による分類で、変成相の説明ではない。"
+      ],
+      "sources": [
+        {
+          "title": "John B. Brady, Smith College — Metamorphic Facies",
+          "url": "https://www.science.smith.edu/~jbrady/petrology/metrocks-topics/zones/mineralogy-page04.php"
+        }
+      ]
+    },
+    "reason": "単一鉱物・一つのP-T値で必ず決まるような旧説明を避け、全岩組成と条件の範囲を明示。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Bradyの大学教材の索引本文で、facies boundariesが温度・圧力だけでなくbulk compositionに依存する説明を照合。本文直接表示は取得不能だったため全ページ読了とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000162",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "次のうち堆積岩に分類され、古生物の化石を含むことがある岩石はどれか。",
+      "choices": [
+        "花崗岩",
+        "玄武岩",
+        "片麻岩",
+        "頁岩（けつがん）"
+      ],
+      "correctIndex": 3,
+      "explanation": "頁岩は細かい堆積物からできる堆積岩で、化石を保存することがある。化石の多くは堆積岩から見つかるが、すべての堆積岩に化石があるわけではなく、火山堆積物中に保存される例もある。",
+      "distractorRationales": [
+        "深成岩で、火成岩に分類される。",
+        "火山岩で、火成岩に分類される。",
+        "変成岩に分類される。",
+        "指定した堆積岩で、化石が保存される例がある。"
+      ],
+      "sources": [
+        {
+          "title": "US National Park Service — About Fossils",
+          "url": "https://www.nps.gov/subjects/fossils/about-fossils.htm"
+        },
+        {
+          "title": "US National Park Service — Mowry Shale",
+          "url": "https://www.nps.gov/places/mowry-shale.htm"
+        }
+      ]
+    },
+    "reason": "隕石など分類階層の違う肢を避け、具体的な岩石を比較。堆積岩以外には化石がないとはしない。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NPS About Fossilsの保存環境と、Mowry Shaleの魚の鱗の化石の観測記録を本文で確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000063",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "上下の逆転や断層による重なりがなく、順に堆積した地層について、地層累重の法則が示すのはどれか。",
+      "choices": [
+        "下位の地層ほど、先に堆積した",
+        "上位の地層ほど、先に堆積した",
+        "厚い地層ほど、必ず堆積年代が古い",
+        "すべての地層が、同じ時刻に堆積した"
+      ],
+      "correctIndex": 0,
+      "explanation": "指定した重なりでは、下の地層の上へ後から新しい層が重なるので、下位が古くなる。厚さだけから堆積期間や数値年代が決まるという法則ではない。",
+      "distractorRationales": [
+        "指定した地層の堆積順序。",
+        "上下の年代順が逆。",
+        "地層の厚さと形成順序を混同している。",
+        "順に堆積した条件と合わない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Fossils, Rocks, and Time: Superposition and Cross-Cutting Relations",
+          "url": "https://pubs.usgs.gov/gip/fossils/laws.html"
+        }
+      ]
+    },
+    "reason": "通常という曖昧な条件を上下逆転・断層のない堆積の重なりと明示し、同じ核心の旧問を統合。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGSのSuperpositionの説明で下の層より新しく上の層より古いという相対順を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000175",
+      "10000000-0000-4000-8007-000000000172",
+      "10000000-0000-4000-8004-000000000113"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000061",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "離れた地域の地層の時代を比べる示準化石として、一般に適する生物の特徴はどれか。",
+      "choices": [
+        "生存期間が長く、狭い地域にだけ分布する",
+        "生存期間が短く、広い地域に分布する",
+        "生存期間が長く、広い地域に分布する",
+        "生存期間が短く、狭い地域にだけ分布する"
+      ],
+      "correctIndex": 1,
+      "explanation": "出現から消滅までが短く広く分布する生物の化石は、離れた地層の時代を絞りやすい。化石の産出位置や、別の地層からの再堆積でないかも確認する。",
+      "distractorRationales": [
+        "時代を絞りにくく、離れた地域の対比にも使いにくい。",
+        "時代の限定と地域間の対比に向く。",
+        "広域対比はできても、長い生存期間のため時代を細かく絞りにくい。",
+        "時代は絞りやすいが、離れた地域間の対比には分布が限られる。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Geologic Time: Index Fossils",
+          "url": "https://pubs.usgs.gov/gip/geotime/fossils.html"
+        },
+        {
+          "title": "Smithsonian Human Origins Program — Dating: Index Fossils",
+          "url": "https://humanorigins.si.edu/evidence/dating"
+        }
+      ]
+    },
+    "reason": "生痕・微化石なども年代の手掛かりになるため、それらを排他的な誤答にせず、示準化石に向く性質を問う。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Geologic TimeのFossils and Rocksの限定された生存期間と、Smithsonian DatingのBiostratigraphy/Biochronology, and Index Fossils本文で短い時間範囲・広い地理的分布を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000050"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000062",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "鉱物中の親核種・娘核種の量と既知の放射性崩壊の速度などを用い、閉鎖系などの仮定を確かめて数値年代を推定する方法はどれか。",
+      "choices": [
+        "生物層序による対比",
+        "磁気層序による対比",
+        "放射年代測定",
+        "年輪のパターンによる年代対比"
+      ],
+      "correctIndex": 2,
+      "explanation": "放射年代測定は核種の崩壊を時計として使う。親核種の現在量だけで年代が決まるわけではなく、初期の娘核種や外部との物質の出入りなども扱う必要がある。",
+      "distractorRationales": [
+        "化石の産出の順序や組合せを用いる。",
+        "残留磁化などの記録を既知の変化と対比する。",
+        "指定した核種の崩壊に基づく方法。",
+        "年ごとの成長輪のパターンを対比する。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Geologic Time: Radiometric Time Scale",
+          "url": "https://pubs.usgs.gov/gip/geotime/radiometric.html"
+        },
+        {
+          "title": "USGS — Radiogenic Isotopes and the Eastern Mineral Resources Program",
+          "url": "https://pubs.usgs.gov/info/ayuso2/"
+        }
+      ]
+    },
+    "reason": "崩壊定数と現在の親核種濃度だけから年代が一意に求まるという旧条件を修正。同じ原理を問う旧問を統合。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Geologic TimeのRadiometric Time Scaleの索引本文で親・娘核種と壊変率を照合。USGS Radiogenic IsotopesのRadioactive Decay and Age Determinations本文で閉鎖系・親核種や娘核種の出入りを扱う仮定を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000178",
+      "10000000-0000-4000-8004-000000000125"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000066",
+    "domain": "地学",
+    "subdomain": "地球化学・炭素循環",
+    "content": {
+      "question": "²³⁸Uから始まる通常の放射性崩壊系列が、最終的に到達する安定な核種はどれか。",
+      "choices": [
+        "²⁰⁷Pb",
+        "²⁰⁸Pb",
+        "²⁰⁹Bi",
+        "²⁰⁶Pb"
+      ],
+      "correctIndex": 3,
+      "explanation": "²³⁸Uの系列は最終的に²⁰⁶Pbに到達する。²³⁵Uの系列の終点は²⁰⁷Pb、²³²Thの系列の終点は²⁰⁸Pbで、区別して年代測定に用いる。",
+      "distractorRationales": [
+        "²³⁵Uから始まる系列の終点。",
+        "²³²Thから始まる系列の終点。",
+        "²³⁸Uの通常の系列の終点ではない。",
+        "²³⁸Uから始まる系列の終点。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Geologic Time: Radiometric Time Scale",
+          "url": "https://pubs.usgs.gov/gip/geotime/radiometric.html"
+        }
+      ]
+    },
+    "reason": "同位体の対応に絞り、年代推定の誤差や古い半減期値について不要な断定をしない。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Radiometric Time Scaleの親核種とstable daughter productの表で三系列の対応を照合。表の半減期の精密値は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000056",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "Wentworthの粒径区分で、直径0.50 mmの砕屑粒子は、礫・砂・シルト・粘土のどの区分に入るか。",
+      "choices": [
+        "砂",
+        "礫",
+        "シルト",
+        "粘土"
+      ],
+      "correctIndex": 0,
+      "explanation": "この区分では砂はおよそ0.0625〜2 mmの粒径範囲で、0.50 mmはその内側にある。ここでの砂という語は主に粒径を表し、石英だけでできていることを要求しない。",
+      "distractorRationales": [
+        "0.50 mmは指定した砂の粒径範囲。",
+        "およそ2 mmを超える粗い粒径の区分。",
+        "およそ0.0625 mmより細かい区分。",
+        "シルトよりさらに細かい区分。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Open-File Report 2006-1046 — Nomenclature",
+          "url": "https://pubs.usgs.gov/of/2006/1046/htmldocs/nomenclature.htm"
+        }
+      ]
+    },
+    "reason": "小さな石や貝殻なら何でも砂とする旧条件を、分類法と境界から離れた粒径の例へ変更。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS OFR 2006-1046 NomenclatureのWentworthの区分を確認。0.0625＜0.50＜2を独立検算し、境界値の包含の違いを問わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-cross-cutting-sequence",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "地層Aを火成岩脈Bが切って貫入し、その岩脈Bを断層Cがずらしている。各過程が一度だけ起き、再活動などがないとすると、古いものからの順序はどれか。",
+      "choices": [
+        "B→A→C",
+        "A→B→C",
+        "A→C→B",
+        "C→A→B"
+      ],
+      "correctIndex": 1,
+      "explanation": "岩脈は切っている地層より後に入り、断層のずれは切っている岩脈より後に生じる。したがってA、B、Cの順。この関係だけでは何年前かという数値年代は決まらない。",
+      "distractorRationales": [
+        "Aを切るBがAより古くなっている。",
+        "貫入と切断の二つの関係に合う。",
+        "BをずらすCがBより古くなっている。",
+        "二つの切断関係に合わない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Fossils, Rocks, and Time: Superposition and Cross-Cutting Relations",
+          "url": "https://pubs.usgs.gov/gip/fossils/laws.html"
+        }
+      ]
+    },
+    "reason": "堆積の上下だけとは異なる、貫入と断層の切断関係から順序を判断する新規問題。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Cross-Cutting Relationsの、切る岩脈は切られた岩石より新しいという本文を照合。AよりBが後、BよりCが後という自作の三事象を独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-erosional-unconformity",
+    "domain": "地学",
+    "subdomain": "地質・堆積・年代",
+    "content": {
+      "question": "古い岩層が侵食され、その侵食面の上に新しい堆積層が重なった。地質記録に時間の間隙を含むこの重なりを、一般に何というか。",
+      "choices": [
+        "整合",
+        "褶曲",
+        "不整合",
+        "級化層理"
+      ],
+      "correctIndex": 2,
+      "explanation": "侵食などによって地質記録が欠け、その後の堆積層が重なる関係は不整合。地層が曲がる褶曲や、一つの層の内部の粒径変化とは区別する。",
+      "distractorRationales": [
+        "時間の間隙を含む指定の重なりを表す語ではない。",
+        "地層などが曲がる変形。",
+        "指定した侵食面を挟む重なり。",
+        "一つの層の中で粒径が系統的に変わる堆積構造。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Thesaurus — Unconformities",
+          "url": "https://apps.usgs.gov/thesaurus/term-simple.php?code=1198&thcode=2"
+        }
+      ]
+    },
+    "reason": "新規問題。地層の堆積順と、侵食によって失われた記録の区別を測る。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Thesaurusの、古い岩石が侵食された後に若い堆積岩が接するunconformitiesの定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "地質・結晶学の学会、調査・標本所蔵機関、研究機関、大学の著者教材の取得できた本文・索引で事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・画像・図表は転載していない。"
+    }
+  }
+]
