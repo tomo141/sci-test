@@ -1,0 +1,661 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000042",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "次のうち、地表などが放つ赤外線を吸収する温室効果ガスとして重要なものはどれか。",
+      "choices": [
+        "窒素 N₂",
+        "酸素 O₂",
+        "二酸化炭素 CO₂",
+        "アルゴン Ar"
+      ],
+      "correctIndex": 2,
+      "explanation": "CO₂は赤外線の特定の波長域を吸収・放射し、地球の放射収支に関わる。温室効果の強さは大気中の割合だけでは決まらず、水蒸気など他の成分も関わる。",
+      "distractorRationales": [
+        "乾燥大気で最も多いが、指定した代表的な温室効果ガスではない。",
+        "乾燥大気で二番目に多いが、指定した代表的な温室効果ガスではない。",
+        "赤外線吸収を用いた濃度測定も行われる温室効果ガス。",
+        "大気中に存在する希ガスだが、指定した代表的な温室効果ガスではない。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Global Monitoring Laboratory — Carbon Dioxide Measurements: NDIR",
+          "url": "https://gml.noaa.gov/ccgg/about/co2_measurements_ndir.html"
+        }
+      ]
+    },
+    "reason": "すべての赤外線を吸収するという一般化を避け、代表的な気体の作用を問う。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NOAAのNDIR測定法の本文でCO₂の赤外線吸収を照合。掲載された過去年の濃度を現在値として使用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000080",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "エルニーニョ現象の基本的な特徴はどれか。",
+      "choices": [
+        "太平洋赤道域の中部から東部で海面水温が平年より高い状態が持続する",
+        "太平洋赤道域の中部から東部で海面水温が平年より低い状態が持続する",
+        "北大西洋の全域で海面水温が一日だけ高くなる",
+        "世界中の海面水温が同時に同じ幅だけ高くなる"
+      ],
+      "correctIndex": 0,
+      "explanation": "エルニーニョは太平洋赤道域の中部から東部の持続的な高水温を特徴とする。低水温側の現象はラニーニャ。判定に使う海域・偏差・期間の基準は機関ごとに異なる。",
+      "distractorRationales": [
+        "現象の中心となる海域・偏差の向き・持続性に合う。",
+        "同海域の持続的な低水温はラニーニャに対応する。",
+        "対象海域と継続期間の両方が異なる。",
+        "地球全体で一様な昇温が起きるという定義ではない。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 大気の流れ・エルニーニョに関する用語",
+          "url": "https://www.jma.go.jp/jma/kishou/know/yougo_hp/haichi4.html"
+        }
+      ]
+    },
+    "reason": "単日の高温や全球一様な高温と区別し、複数の旧問を同一問題族に統合。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁の用語本文のエルニーニョ・ラニーニャ、国際的な統一定義がない旨を確認。特定月の発生状況は出題していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000102",
+      "10000000-0000-4000-8007-000000000174"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000105",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "融解などによる乱れのない極地の氷床コアで、気泡中の空気の平均年代と、それを包む氷の年代について一般に適切なのはどれか。",
+      "choices": [
+        "空気の年代は氷の年代より古い",
+        "空気の年代は氷の年代より若い",
+        "空気の年代は氷の年代と必ず一致する",
+        "空気の年代は氷の年代と無関係に常に現在である"
+      ],
+      "correctIndex": 1,
+      "explanation": "積もった雪の空隙はしばらく大気とつながり、圧密が進んでから空気が閉じ込められる。そのため、気体の平均年代は周囲の氷より若い。差は積雪量や圧密条件に依存し、一定ではない。",
+      "distractorRationales": [
+        "雪が積もった後もしばらく空気が交換される順序と逆。",
+        "空気が閉じ込められるまでの時間差を考慮している。",
+        "氷と気体の年代差を無視している。",
+        "閉じ込められた過去の空気を現在の空気と同一視している。"
+      ],
+      "sources": [
+        {
+          "title": "Bender, Sowers & Brook (1997) — Gases in ice cores, PNAS 94, 8343–8349",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC33751/"
+        }
+      ]
+    },
+    "reason": "記録試料名だけを問う旧問を、同じコアの異なる年代を区別する問いへ改訂。固定した年代差を採用しない。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Benderら(1997)の公開索引本文でbubble closeoff後の気体が氷より若いことと年代差の変動を確認。全文の直接取得はreCAPTCHAでできていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000180",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "深海堆積物の底生有孔虫殻に記録された酸素同位体比δ¹⁸Oを、氷期・間氷期の研究に使う際の説明として適切なのはどれか。",
+      "choices": [
+        "水温だけで決まり、海水の同位体組成には依存しない",
+        "海水の同位体組成だけで決まり、水温には依存しない",
+        "氷床量が変わっても、海水の同位体組成は変わらない",
+        "深層水温と、氷床量などで変わる海水の同位体組成の両方が関わる"
+      ],
+      "correctIndex": 3,
+      "explanation": "殻と海水の間の同位体分別は温度に依存し、海水自体のδ¹⁸Oも氷床量などに応じて変わる。したがって、殻の記録だけを一対一の温度計とみなさず、他の記録や条件と組み合わせて解釈する。",
+      "distractorRationales": [
+        "殻が形成される海水の同位体組成を無視している。",
+        "殻と海水の間の温度依存の分別を無視している。",
+        "陸上の氷床への水の出入りに伴う変化を無視している。",
+        "温度と海水組成の二つの影響を区別している。"
+      ],
+      "sources": [
+        {
+          "title": "Lisiecki & Raymo (2005) — LR04 Benthic Stack・論文とデータ",
+          "url": "https://www.lorraine-lisiecki.com/stack.html"
+        }
+      ]
+    },
+    "reason": "旧5/64の蒸発・凝結だけによる海底堆積物δ¹⁸Oの説明を訂正し、同じ能力を問う旧問へ統合。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Lisiecki本人のLR04公開ページで、底生δ¹⁸O記録がglobal ice volumeとdeep ocean temperatureを反映する説明を確認。グラフやデータ値は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000064"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000178",
+    "domain": "地学",
+    "subdomain": "地球化学・炭素循環",
+    "content": {
+      "question": "水試料の¹⁸O/¹⁶O比が、VSMOWを基準とした比の1.002倍だった。δ¹⁸Oの値はどれか。",
+      "choices": [
+        "+2‰",
+        "+0.002‰",
+        "−2‰",
+        "+1002‰"
+      ],
+      "correctIndex": 0,
+      "explanation": "δ¹⁸Oは、試料の¹⁸O/¹⁶O比を基準の比で割り、1を引いて1000倍した値を‰で表す。この例では(1.002−1)×1000＝+2‰。測定・比較では、用いた基準と校正方法もそろえる。",
+      "distractorRationales": [
+        "基準からの相対差を1000倍した値。",
+        "相対差を‰へ換算していない。",
+        "基準より高い比なのに符号を逆にしている。",
+        "基準に対する比から1を引いていない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Open-File Report 00-160 — 水の水素・酸素同位体比、導入部のδ定義",
+          "url": "https://pubs.usgs.gov/of/2000/ofr00-160/pdf/ofr00-160.pdf"
+        }
+      ]
+    },
+    "reason": "標準の同位体比そのものとδの相対偏差を区別。炭酸塩も常にVSMOWとする旧一般化を避ける。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS OFR 00-160導入部の公開索引にあるδ¹⁸OのVSMOW基準式を照合し、1.002から+2‰を独立検算。PDF全体は直接取得できていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000066",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "IPCC第6次評価報告書でいう平衡気候感度ECSが表すものはどれか。",
+      "choices": [
+        "CO₂濃度を毎年1%増やし、倍増した時点の全球平均地表気温の上昇量",
+        "CO₂濃度が一定のときの、一年間の最大気温と最低気温の差",
+        "CO₂濃度を産業革命前の2倍に保ち、指定された平衡状態に達したときの全球平均地表気温の上昇量",
+        "CO₂を1トン排出した場所の、翌日の最高気温の上昇量"
+      ],
+      "correctIndex": 2,
+      "explanation": "ECSはCO₂濃度の持続的な倍増に対する平衡時の全球平均地表気温の応答。AR6の定義では氷床に伴う長期のフィードバックを除く。年1%で増加させ倍増時点を見る量はTCRで、ECSと区別する。",
+      "distractorRationales": [
+        "平衡状態ではなく過渡気候応答TCRの設定。",
+        "季節変動の幅であり、CO₂倍増への平衡応答ではない。",
+        "AR6のECSの基本設定に合う。",
+        "局所・翌日の最高気温はECSの対象ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IPCC AR6 WGI (2021), Chapter 7 — Box 7.1: ECS and TCR",
+          "url": "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/"
+        }
+      ]
+    },
+    "reason": "気候感度のすべてを倍増時の同じ量とせず、ECSを特定。長期の氷床応答を無条件に含めない。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "AR6 WGI第7章Box 7.1の公開索引本文で持続的倍増・平衡・氷床フィードバックの除外とTCRを照合。用語の適用版を明記。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000194",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "大西洋子午面転覆循環（AMOC）が弱まり、北大西洋高緯度への海洋の熱供給が減ったとする。その効果と、将来の実際の気温変化について適切なのはどれか。",
+      "choices": [
+        "冷やす向きに働き、実際の気温変化の符号も必ず負になる",
+        "冷やす向きに働くが、実際の気温変化の符号は他の要因にも依存する",
+        "暖める向きに働き、実際の気温変化の符号も必ず正になる",
+        "暖める向きに働くが、実際の気温変化の符号は他の要因にも依存する"
+      ],
+      "correctIndex": 1,
+      "explanation": "海洋による北向きの熱輸送は北大西洋周辺を暖める働きを持つ。その供給の減少は比較対象より冷える向きの効果になる。ただし実際の変化には温室効果ガス、風、大気の熱輸送なども重なるため、これだけで将来の実温度を断定できない。",
+      "distractorRationales": [
+        "熱供給の減少による効果は正しいが、他の要因による昇温の可能性を排除している。",
+        "一つの要因の効果と、全要因を合わせた実際の変化を分けている。",
+        "熱供給の減少による効果が逆で、実際の変化も断定している。",
+        "全体の変化が他の要因にも依存する点は正しいが、熱供給の減少の効果が逆。"
+      ],
+      "sources": [
+        {
+          "title": "Met Office — Global ocean circulation",
+          "url": "https://www.metoffice.gov.uk/research/climate/cryosphere-oceans/ocean-circulation"
+        }
+      ]
+    },
+    "reason": "AMOC弱化なら必ず現状より寒冷化するという旧断定を除き、条件付きの因果と合成された変化を区別。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Met Officeの本文で北向き熱輸送と、その輸送がなければより寒い地域があることを確認。海洋熱供給が減る条件を設問に明示し、他条件一定の効果として推論。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000159",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "現在は氷河のない山地で、岩盤上のほぼ平行な擦痕と、モレーンが見つかった。この組合せが最も直接的に裏付ける過去の状態はどれか。",
+      "choices": [
+        "同じ時期に地球全体が完全に凍結していた",
+        "その場所の過去の気温が1℃単位で分かる",
+        "その場所を過去に氷河が通過した",
+        "その場所では過去に火山活動が一度もなかった"
+      ],
+      "correctIndex": 2,
+      "explanation": "氷河性の擦痕やモレーンは、その場所に過去の氷河が存在した証拠になる。全球凍結や正確な気温・年代までを、この組合せだけで確定することはできない。",
+      "distractorRationales": [
+        "局所的な氷河の証拠を全球凍結へ拡張している。",
+        "地形の存在だけでは、その精度の気温を求められない。",
+        "指定された二つの氷河性の記録に対応する。",
+        "過去の火山活動をすべて否定する証拠ではない。"
+      ],
+      "sources": [
+        {
+          "title": "US National Park Service — Glacial Striations",
+          "url": "https://www.nps.gov/articles/glacialstriations.htm"
+        },
+        {
+          "title": "US National Park Service, Yellowstone — Glaciers",
+          "url": "https://www.nps.gov/yell/learn/nature/glaciers.htm"
+        }
+      ]
+    },
+    "reason": "局所の氷河地形を全球の氷期の確定とする旧解説を限定。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NPSのGlacial Striations本文で基底の岩屑による擦痕、Yellowstone Glaciers本文でモレーンなどの過去の氷河の証拠を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000189",
+    "domain": "地学",
+    "subdomain": "古気候・気候科学",
+    "content": {
+      "question": "古気候研究で用いるMISというステージの区分は、主にどの記録に基づくか。",
+      "choices": [
+        "海洋堆積物中の有孔虫殻などの酸素同位体比",
+        "樹木の年輪に残る放射性炭素の含有量",
+        "岩石に記録された地磁気の極性反転",
+        "岩石のネオジム同位体比"
+      ],
+      "correctIndex": 0,
+      "explanation": "MISは海洋の酸素同位体記録の変動に基づく区分で、年代の比較にも使われる。氷床量や水温の変化と関係するが、各ステージの気候は同じではなく、奇数のすべてを独立した間氷期とはしない。",
+      "distractorRationales": [
+        "海洋酸素同位体ステージを定める基礎となる記録。",
+        "放射性炭素年代の研究などに使う記録だが、MISの区分基準ではない。",
+        "地磁気極性の年代区分に使われ、MISの基準とは異なる。",
+        "岩石の起源などの研究に使われ、MISの区分基準とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Lisiecki & Raymo (2005) — LR04 Benthic Stack・論文とデータ",
+          "url": "https://www.lorraine-lisiecki.com/stack.html"
+        }
+      ]
+    },
+    "reason": "旧説明の奇数＝間氷期を一律の同一視にせず、区分の根拠を問う。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Lisiecki本人のLR04公開ページの底生δ¹⁸OスタックとAges of MIS boundariesへの対応を確認。訂正済みでない論文表の境界番号を転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000122",
+    "domain": "地学",
+    "subdomain": "地球化学・炭素循環",
+    "content": {
+      "question": "地質学的な時間で考えた炭素循環で、大気・海洋側のCO₂を炭酸塩として岩石側へ移す正味の経路はどれか。",
+      "choices": [
+        "炭酸塩岩の熱分解と、それに伴うCO₂の放出",
+        "炭酸で炭酸塩を溶かし、その炭酸塩を元どおりに沈殿させるだけの閉じた往復",
+        "有機炭素を酸化してCO₂へ戻す反応",
+        "ケイ酸塩岩の炭酸による風化と、その産物を使う炭酸塩の形成・埋没を合わせた過程"
+      ],
+      "correctIndex": 3,
+      "explanation": "ケイ酸塩の風化と炭酸塩の形成を合わせると、CO₂を炭酸塩として固定する正味の経路になる。単純化した総反応の例はCaSiO₃＋CO₂→CaCO₃＋SiO₂。炭酸塩の溶解と同じ量の再沈殿だけでは、そのような正味の固定にならない。",
+      "distractorRationales": [
+        "指定された固定とは逆にCO₂を放出する。",
+        "溶解時に消費した分を再沈殿時に戻す往復で、正味の固定にならない。",
+        "有機炭素をCO₂へ戻す向きである。",
+        "風化単独でなく炭酸塩の形成・埋没までを含む指定の経路。"
+      ],
+      "sources": [
+        {
+          "title": "NASA Earth Observatory — The Carbon Cycle",
+          "url": "https://science.nasa.gov/earth/earth-observatory/the-carbon-cycle/"
+        },
+        {
+          "title": "NASA NTRS — Enhanced Weathering Strategies for Stabilizing Climate and Averting Ocean Acidification",
+          "url": "https://ntrs.nasa.gov/citations/20160005775"
+        }
+      ]
+    },
+    "reason": "炭素の貯蔵場所と固定過程が混在していた旧問を、比較可能な四つの過程へ改訂。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASAのslow carbon cycle本文とNTRSの原研究抄録でケイ酸塩風化から炭酸塩固定への経路を照合。総反応のCa・Si・C・Oの収支を独立確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000187",
+    "domain": "地学",
+    "subdomain": "地球化学・炭素循環",
+    "content": {
+      "question": "現在の試料の¹⁴³Nd/¹⁴⁴Nd比が、同じ時点のCHUR基準比の1.0005倍だった。現在のεNd値はどれか。",
+      "choices": [
+        "+0.5",
+        "+5",
+        "−5",
+        "+10005"
+      ],
+      "correctIndex": 1,
+      "explanation": "εNd＝[(¹⁴³Nd/¹⁴⁴Nd)試料÷(¹⁴³Nd/¹⁴⁴Nd)CHUR−1]×10000なので、+5。εは基準からの相対偏差の表し方で、岩石の起源はこの符号だけで一意に決まらない。過去の値を扱う場合は両方を同じ年代に補正する。",
+      "distractorRationales": [
+        "δで使う1000倍と、εの10000倍を混同している。",
+        "0.0005×10000で求めた値。",
+        "基準より高い比なのに符号を逆にしている。",
+        "比から1を引いていない。"
+      ],
+      "sources": [
+        {
+          "title": "Pettke et al. (2000) — Nd/Sr同位体データ、present-day epsilon-Ndの定義",
+          "url": "https://doi.pangaea.de/10.1594/PANGAEA.711040"
+        }
+      ]
+    },
+    "reason": "符号だけからマントル・地殻混入を確定する旧問を、比較する時点と定義が明確な計算へ改訂。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Pettkeらの原データのメタデータにあるpresent-day epsilon-Nd式を確認し、1.0005から+5を独立検算。測定データの数値を設問へ流用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000196",
+    "domain": "地学",
+    "subdomain": "地球化学・炭素循環",
+    "content": {
+      "question": "岩石学で酸素フガシティーを比較する基準として使うFMQバッファーは、どの鉱物の組合せに関係するか。",
+      "choices": [
+        "鉄かんらん石・赤鉄鉱・石英",
+        "苦土かんらん石・磁鉄鉱・方解石",
+        "鉄かんらん石・磁鉄鉱・石英",
+        "鉄かんらん石・磁鉄鉱・方解石"
+      ],
+      "correctIndex": 2,
+      "explanation": "FMQはfayalite（鉄かんらん石）、magnetite（磁鉄鉱）、quartz（石英）と酸素の平衡に対応する。理想化した反応は3Fe₂SiO₄＋O₂⇄2Fe₃O₄＋3SiO₂。基準値は温度・圧力に依存し、実際の岩石がすべてこの三鉱物を含むという意味ではない。",
+      "distractorRationales": [
+        "磁鉄鉱を赤鉄鉱へ置き換えており、指定の組ではない。",
+        "鉄かんらん石と石英を別の鉱物へ置き換えている。",
+        "FMQの三つの鉱物に対応する。",
+        "石英を方解石へ置き換えている。"
+      ],
+      "sources": [
+        {
+          "title": "Australian National University — Oxygen fugacity calculator: fayalite–magnetite–quartz",
+          "url": "https://fo2.rses.anu.edu.au/fo2app/"
+        }
+      ]
+    },
+    "reason": "旧問のフェアライトという誤表記と、すべてのマントルの酸化状態をFMQに固定する説明を訂正。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "ANUの計算器の公開索引本文でfayalite–magnetite–quartzの三相と安定範囲の注意を確認。直接取得は失敗。自作の反応式のFe・Si・Oを独立検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000123",
+    "domain": "地学",
+    "subdomain": "地球化学・炭素循環",
+    "content": {
+      "question": "地球の地殻全体の平均的な元素組成を、質量の割合で比べたとき、最も多い元素はどれか。",
+      "choices": [
+        "酸素",
+        "ケイ素",
+        "鉄",
+        "アルミニウム"
+      ],
+      "correctIndex": 0,
+      "explanation": "地殻では酸素が質量割合で最も多く、ケイ酸塩などの鉱物に含まれる。ここで扱うのは地殻であり、金属の核を含めた地球全体の組成とは区別する。",
+      "distractorRationales": [
+        "地殻の質量割合で第一位となる元素。",
+        "地殻に多いが、酸素より質量割合が小さい。",
+        "地球の核に多いが、地殻の質量割合では第一位ではない。",
+        "地殻に多い金属元素だが、酸素より質量割合が小さい。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Professional Paper 440-D — Composition of the Earth’s Crust, Table 18",
+          "url": "https://pubs.usgs.gov/pp/0440d/report.pdf"
+        }
+      ]
+    },
+    "reason": "大陸・地殻・全地球と原子数・質量割合を区別し、対象を固定。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS PP 440-D Table 18の公開索引で地殻の元素のweight percentと酸素の順位を確認。歴史的な推定の小数値を現在の厳密値として採用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000118",
+    "domain": "地学",
+    "subdomain": "地震・地球物理",
+    "content": {
+      "question": "磁性鉱物を含む溶岩が地磁場中で冷え、磁化が保持される温度域を通過して獲得する残留磁化は何と呼ばれるか。",
+      "choices": [
+        "堆積残留磁化",
+        "等温残留磁化",
+        "化学残留磁化",
+        "熱残留磁化"
+      ],
+      "correctIndex": 3,
+      "explanation": "熱残留磁化は、磁性鉱物が磁場の中で冷える過程で獲得する。適切に保存された記録は過去の地磁気を調べる手掛かりになる。磁化を得る温度は鉱物などで異なり、後の加熱や変質による上書きにも注意する。",
+      "distractorRationales": [
+        "主に堆積時の磁性粒子の配向などに関わり、指定の溶岩の冷却とは異なる。",
+        "温度を保って外部磁場を作用させて得る残留磁化で、指定した冷却過程とは異なる。",
+        "鉱物の生成・変化を通じて得る残留磁化で、指定の冷却過程とは異なる。",
+        "地磁場中での冷却による指定の残留磁化。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — History of the geomagnetic field (1969)",
+          "url": "https://www.usgs.gov/publications/history-geomagnetic-field"
+        }
+      ]
+    },
+    "reason": "堆積岩も記録を残せることを否定せず、冷却による磁化という形成過程を指定して唯一解にする。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGSのHistory of the geomagnetic field(1969)公開抄録で溶岩が地磁場中で冷えて磁化を保持する説明を確認。500℃をすべての鉱物に固定していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文・原データの定義、研究機関・大学・気象機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
