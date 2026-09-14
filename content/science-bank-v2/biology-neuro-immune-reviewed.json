@@ -1,0 +1,1002 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000410",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "骨格筋の反応を起こす脊髄反射について、情報の伝達順序を正しく表すのはどれか。介在ニューロンの有無は省略する。",
+      "choices": [
+        "受容器→感覚ニューロン→脊髄の回路→運動ニューロン→骨格筋",
+        "受容器→運動ニューロン→脊髄の回路→感覚ニューロン→骨格筋",
+        "骨格筋→運動ニューロン→受容器→感覚ニューロン→脊髄",
+        "脊髄の回路→受容器→骨格筋→感覚ニューロン→運動ニューロン"
+      ],
+      "correctIndex": 0,
+      "explanation": "感覚入力が脊髄の回路へ入り、運動ニューロンの出力が骨格筋へ届く。反射回路には単シナプス性のものも介在ニューロンを含むものもあり、すべての反射が脊髄だけで処理されるという意味ではない。",
+      "distractorRationales": [
+        "脊髄反射の入力から出力への順序。",
+        "感覚入力と運動出力の向きを逆にしている。",
+        "刺激を受け取る受容器から始まる反射弓の順序になっていない。",
+        "入力から脊髄、筋への伝達順序になっていない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Introduction to Behavioral Neuroscience, §1.2 Organization of the Nervous System",
+          "url": "https://openstax.org/books/introduction-behavioral-neuroscience/pages/1-2-organization-of-the-nervous-system"
+        }
+      ]
+    },
+    "reason": "あらゆる反射を同じ経路とする条件不足を、骨格筋への脊髄反射に限定。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§1.2のSimple human circuitの感覚受容器・脊髄・運動ニューロン・筋、および膝蓋腱反射の直接経路と介在ニューロンの説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000429",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "通常のイオン濃度条件にある成熟哺乳類のニューロンで、静止膜電位付近でシナプス後膜のAMPA受容体が開くと、初期の膜電位変化は一般にどうなるか。",
+      "choices": [
+        "Cl⁻の透過が増えて過分極する",
+        "Na⁺とK⁺などを通す陽イオン電流により脱分極する",
+        "K⁺だけの透過が増えて過分極する",
+        "受容体自身はイオンを通さず、Gタンパク質だけを介して作用する"
+      ],
+      "correctIndex": 1,
+      "explanation": "AMPA受容体は陽イオンを通すチャネル。静止膜電位付近では正味の内向き電流による脱分極が、速い興奮性シナプス後電位に寄与する。Na⁺だけを通すチャネルではなく、この入力だけで必ず活動電位が起こるとも限らない。",
+      "distractorRationales": [
+        "AMPA受容体をCl⁻選択的チャネルとしている。",
+        "指定した条件での典型的な初期応答。",
+        "AMPA受容体はK⁺だけを通すチャネルではなく、指定した条件では正味の内向き電流となる。",
+        "AMPA受容体はイオンチャネル型。代謝型グルタミン酸受容体とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Purves et al. — Neuroscience, Glutamate Receptors",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10802/"
+        }
+      ]
+    },
+    "reason": "旧Na⁺のみの説明と、脱分極・活動電位の混同を訂正。受容体と膜電位条件を明示。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Glutamate ReceptorsのAMPA等の非選択的陽イオン透過と反転電位、速いシナプス応答を照合。「常に興奮性」という本文の一般化は採用せず条件を限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000431",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "通常のニューロンの静止膜電位がK⁺の平衡電位に比較的近くなる主な理由はどれか。",
+      "choices": [
+        "細胞内外の全イオン濃度が等しくなるから",
+        "Na⁺チャネルだけが常時最大限に開いているから",
+        "静止時の膜はK⁺への透過性が比較的大きく、K⁺濃度勾配の影響を強く受けるから",
+        "細胞膜があらゆるイオンを完全に通さないから"
+      ],
+      "correctIndex": 2,
+      "explanation": "K⁺の濃度勾配と静止時の高いK⁺透過性が大きく寄与する。Na⁺やCl⁻などの透過性、イオン勾配を維持する輸送も関係するため、静止膜電位が必ずK⁺平衡電位と等しい、または全細胞で同じ値とはいえない。",
+      "distractorRationales": [
+        "濃度勾配が存在することを無視している。",
+        "通常の静止時の透過性を表していない。",
+        "静止膜電位がK⁺平衡電位に近い主な理由。",
+        "イオン透過性の寄与を否定している。"
+      ],
+      "sources": [
+        {
+          "title": "Purves et al. — Neuroscience, The Ionic Basis of the Resting Membrane Potential",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10931/"
+        }
+      ]
+    },
+    "reason": "静止電位を一律−70 mVとする説明、K⁺漏洩チャネルを内向き整流チャネルだけと同一視する説明を除去。重複する基礎問を統合。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "K⁺/Na⁺濃度勾配、膜透過性、K⁺平衡電位と静止電位の差を説明する本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000175"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000439",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "神経科学でいう長期増強（LTP）の基本的な意味はどれか。",
+      "choices": [
+        "刺激に続く一個の活動電位の振幅が一時的に大きくなること",
+        "刺激後にシナプス伝達の効率が長く低下すること",
+        "持続的な刺激への感覚受容器の応答が次第に弱くなること",
+        "ある刺激条件をきっかけに、シナプス伝達の効率の増大が持続すること"
+      ],
+      "correctIndex": 3,
+      "explanation": "LTPはシナプスの伝達が持続的に強まる現象を指す。持続時間や誘導条件、分子機構は系によって異なり、すべてのLTPが同じ受容体や機構に依存するとは限らない。",
+      "distractorRationales": [
+        "単一の活動電位の振幅変化を定義とする現象ではない。",
+        "長期抑圧（LTD）に対応する方向の変化。",
+        "感覚順応の説明で、シナプス伝達の持続的増強の定義ではない。",
+        "LTPの基本的な意味。"
+      ],
+      "sources": [
+        {
+          "title": "Bliss & Lømo (1973) — Long-lasting potentiation of synaptic transmission in the dentate area of the anaesthetized rabbit following stimulation of the perforant path",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/4727084/"
+        }
+      ]
+    },
+    "reason": "長期的な伝達増強を問う形へ絞り、無関係な成人神経新生の説明を削除。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文Abstractの刺激後に持続するシナプス応答増大を照合。特定実験の時間・機構を全LTPへ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000449",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "典型的なヘッブ型のスパイク時刻依存可塑性（STDP）で、数十ミリ秒程度の短い間隔で発火を対にしたときの代表的な関係はどれか。",
+      "choices": [
+        "シナプス前の発火が先なら増強、シナプス後の発火が先なら抑圧",
+        "シナプス前の発火が先なら抑圧、シナプス後の発火が先なら増強",
+        "どちらの発火が先でも増強",
+        "どちらの発火が先でも抑圧"
+      ],
+      "correctIndex": 0,
+      "explanation": "古典的なヘッブ型STDPでは、シナプス前入力とシナプス後発火の順序が増強・抑圧に関わる。BiとPooの培養海馬ニューロンの実験はこの代表例で、細胞種・初期の結合強度・刺激条件による違いがある。すべてのシナプスで成り立つ法則ではない。",
+      "distractorRationales": [
+        "典型的なヘッブ型STDPの代表的な方向。",
+        "指定した典型例の方向を逆にしている。",
+        "指定した典型例の、逆順での抑圧に合わない。",
+        "指定した典型例の、順方向での増強に合わない。"
+      ],
+      "sources": [
+        {
+          "title": "Bi & Poo (1998) — Synaptic modifications in cultured hippocampal neurons: dependence on spike timing, synaptic strength, and postsynaptic cell type",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9852584/"
+        }
+      ]
+    },
+    "reason": "壊れた誤答肢を全面改訂。典型的ヘッブ型に限定し、全神経回路への一般化を避ける。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文Abstractの約20 ms内の前後関係、LTP/LTD、初期結合強度と細胞種による条件を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000081",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "哺乳類の中枢神経系で、速い興奮性シナプス伝達の大部分を担う主要な神経伝達物質はどれか。",
+      "choices": [
+        "GABA",
+        "グルタミン酸",
+        "アセチルコリン",
+        "ドーパミン"
+      ],
+      "correctIndex": 1,
+      "explanation": "グルタミン酸は哺乳類の中枢神経系の主要な興奮性伝達物質で、AMPA受容体やNMDA受容体などに作用する。「興奮性の作用を持つ物質をすべて選ぶ」という設問ではない。",
+      "distractorRationales": [
+        "成熟した中枢神経系では主に抑制性伝達を担う。",
+        "指定した速い興奮性伝達の大部分を担う。",
+        "興奮性にも働くが、指定した中枢の主要な速い伝達物質には当たらない。",
+        "神経調節に重要だが、指定した速い興奮性伝達の大部分を担う物質ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Basic Neurochemistry — Glutamate and Aspartate Are the Major Excitatory Transmitters in the Brain",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK28252/"
+        }
+      ]
+    },
+    "reason": "アセチルコリンも興奮性となる旧問を、哺乳類中枢の主要な速い伝達へ限定して唯一正解にする。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "グルタミン酸受容体が脳の速い興奮性伝達の大部分を担い、多くの中枢シナプスでAMPA/NMDAが関与する本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000096",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "ヒトなどの哺乳類で、体内の概日リズムをまとめる中枢時計として働く視床下部の領域はどれか。",
+      "choices": [
+        "小脳皮質",
+        "延髄",
+        "視交叉上核（SCN）",
+        "嗅球"
+      ],
+      "correctIndex": 2,
+      "explanation": "視交叉上核は光の情報などを受け、体の時計を同調させる中枢として働く。体内時計はこの領域だけにあるわけではない。また同調因子（zeitgeber）は光などの外的な時刻の手がかりで、時計遺伝子そのものの別名ではない。",
+      "distractorRationales": [
+        "運動調節などに関わるが、指定した視床下部の中枢時計ではない。",
+        "呼吸・循環の調節などに関わるが、指定した領域ではない。",
+        "哺乳類の中枢時計として知られる領域。",
+        "嗅覚情報に関わるが、指定した領域ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NIGMS — Circadian Rhythms",
+          "url": "https://nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms"
+        }
+      ]
+    },
+    "reason": "対象を哺乳類へ限定し、zeitgeberを時計遺伝子と同一視する旧解説を訂正。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "概日リズムのmaster clock、視交叉上核、光による同調と体内の複数の時計の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000154",
+    "domain": "生物",
+    "subdomain": "神経科学・行動",
+    "content": {
+      "question": "特定の細胞に遺伝的に導入した光感受性タンパク質を使い、光を当てて神経活動を操作する手法はどれか。",
+      "choices": [
+        "電極だけを用いる電気刺激",
+        "薬剤で人工受容体を作動させる化学遺伝学",
+        "活動を測定するだけのカルシウムイメージング",
+        "オプトジェネティクス（光遺伝学）"
+      ],
+      "correctIndex": 3,
+      "explanation": "オプトジェネティクスでは遺伝的な細胞選択と光による操作を組み合わせる。チャネルロドプシンはその代表的な道具。使うタンパク質によって興奮や抑制を操作でき、すべての道具が同じイオンチャネルとは限らない。",
+      "distractorRationales": [
+        "光感受性タンパク質の遺伝的導入を用いる方式ではない。",
+        "主な操作入力が薬剤であり、この設問の光による操作とは異なる。",
+        "この肢は活動の測定だけを指し、指定した活動操作ではない。",
+        "遺伝的な標的化と光による活動操作を組み合わせる手法。"
+      ],
+      "sources": [
+        {
+          "title": "Boyden et al. (2005) — Millisecond-timescale, genetically targeted optical control of neural activity",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16116447/"
+        }
+      ]
+    },
+    "reason": "広義の電気生理学と互いに排他的でなかった旧肢を、操作方法が異なる具体的な手法へ修正。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文Abstractの遺伝的に標的化されたチャネルロドプシンによる光制御を照合。実験手順や刺激条件は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000409",
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "獲得免疫で、以前に経験した抗原に再び出会うと応答が速くなることを支える仕組みはどれか。",
+      "choices": [
+        "その抗原に応答できる記憶B細胞や記憶T細胞が残ること",
+        "初回に増えたすべての白血球が同じ数のまま残り続けること",
+        "補体分子が抗原の形を記憶して、遺伝情報として次の補体へ渡すこと",
+        "好中球が抗原に合わせた抗体を分泌する細胞へ変わること"
+      ],
+      "correctIndex": 0,
+      "explanation": "初回の応答後に残る記憶細胞は、同じ抗原への再応答を支える。これはワクチンの防御の基盤の一つでもあるが、再感染が必ず起こらない、または全ての抗原で永久に同じ効果が続くという意味ではない。",
+      "distractorRationales": [
+        "抗原に対応した獲得免疫の記憶の説明。",
+        "全白血球数の恒久的な維持が記憶の仕組みではない。",
+        "補体を抗原特異的なリンパ球の記憶と混同している。",
+        "抗体を分泌する形質細胞はB細胞由来で、好中球が変化したものではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Adaptive Immune Response",
+          "url": "https://openstax.org/books/biology-2e/pages/42-2-adaptive-immune-response"
+        }
+      ]
+    },
+    "reason": "再感染時に常に強い効果が出るという断定を避け、獲得免疫の記憶機構へ限定。ワクチンの記憶形成を問う同義問題を統合。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§42.2の免疫記憶、再曝露時の応答、記憶B/T細胞の本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000418"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000428",
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "MHCクラスIによる通常の内因性抗原提示経路で、提示されるペプチドの主な供給源はどれか。",
+      "choices": [
+        "エンドソーム・リソソーム内で外来タンパク質を分解して生じた断片",
+        "細胞質などのタンパク質が分解されて生じた断片",
+        "細胞の外で補体反応により切断された断片を、そのまま直接取り付けたもの",
+        "細胞外マトリックスのタンパク質を分解せず、そのまま取り付けたもの"
+      ],
+      "correctIndex": 1,
+      "explanation": "通常の内因性経路では、細胞内のタンパク質からできたペプチドがMHCクラスIに結合して提示される。ここでは外来抗原の交差提示などの経路を含めず、抗原の通常の由来を問う。",
+      "distractorRationales": [
+        "通常はMHCクラスII経路に対応する由来。外来抗原の交差提示はこの設問の範囲外。",
+        "指定した通常の内因性経路での供給源。",
+        "指定した細胞内の通常の処理・提示経路とは異なる。",
+        "通常提示されるのはタンパク質全体ではなくペプチド。"
+      ],
+      "sources": [
+        {
+          "title": "Janeway et al. — Immunobiology, Antigen Presentation to T Lymphocytes",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10766/"
+        }
+      ]
+    },
+    "reason": "細胞外由来の抗原は一切提示できないとする旧説明を避け、通常の内因性経路に限定。誤分類を免疫学へ修正。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Chapter 5冒頭の細胞内タンパク質の断片化と、細胞質由来ペプチドのMHC I提示を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000080",
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "通常のMHCクラスIIに拘束されたヘルパーT細胞の抗原認識で、MHCクラスIIと結び付く共受容体はどれか。",
+      "choices": [
+        "CD8",
+        "CD28",
+        "CD4",
+        "CD19"
+      ],
+      "correctIndex": 2,
+      "explanation": "CD4はMHCクラスIIと結び付く共受容体で、ヘルパーT細胞の抗原認識に関わる。CD8とMHCクラスIの対応とは区別する。",
+      "distractorRationales": [
+        "通常はMHCクラスIに対応する共受容体。",
+        "T細胞の共刺激に関わる分子で、指定したMHC II共受容体ではない。",
+        "MHCクラスIIに対応する共受容体。",
+        "B細胞の共受容体複合体に関わる分子で、指定したT細胞の共受容体ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Janeway et al. — Immunobiology, Antigen Presentation to T Lymphocytes",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10766/"
+        },
+        {
+          "title": "Janeway et al. — Immunobiology, Antigen recognition by T cells",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK27098/"
+        },
+        {
+          "title": "Janeway et al. — Immunobiology, Antigen receptor structure and signaling pathways",
+          "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK27130/"
+        }
+      ]
+    },
+    "reason": "MHC IIに対応するT細胞の共受容体を問う形にし、CD8・CD28・CD19との分子の役割の違いで比較。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "MHC II/CD4、MHC I/CD8の対応と、CD4/CD8が共受容体として直接認識に関わる本文を照合。 §6-8のT細胞CD28の共刺激と、B細胞CD19/CD21/CD81複合体も照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000438",
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "B細胞のクラススイッチ組換えで抗体がIgMからIgGなどへ変わるとき、この組換えそのものがもたらす基本的な変化はどれか。",
+      "choices": [
+        "重鎖のV(D)J配列を組み立て直し、定常領域は保つ",
+        "重鎖を保ち、軽鎖をκからλに入れ替える",
+        "DNAの組換えをせず、膜結合型の末端だけを分泌型に変える",
+        "抗原結合部位の配列を保ちながら、重鎖の定常領域を変える"
+      ],
+      "correctIndex": 3,
+      "explanation": "クラススイッチでは、既に組み立てられた可変領域に結び付く重鎖の定常領域が変わり、抗体のクラスと効果機能が変わる。可変領域への体細胞高頻度変異による親和性成熟は別の過程である。",
+      "distractorRationales": [
+        "V(D)J再構成とクラススイッチを混同している。",
+        "IgM/IgGなどのクラスは重鎖定常領域に対応し、軽鎖のκ/λでは決まらない。",
+        "膜型と分泌型の切替と、DNA組換えを伴うクラススイッチは異なる。",
+        "クラススイッチ組換えの基本的な変化。"
+      ],
+      "sources": [
+        {
+          "title": "Alberts et al. — Molecular Biology of the Cell, The Generation of Antibody Diversity",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26860/"
+        }
+      ]
+    },
+    "reason": "旧「相同組換え」とする不正確な説明を除き、クラススイッチ自体と親和性成熟を区別。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "B Cells Can Switch the Class of Antibody They Makeの可変領域・重鎖定常領域・DNA組換えの説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000448",
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "胚中心のB細胞で、体細胞高頻度変異（SHM）が親和性成熟に関わる過程はどれか。",
+      "choices": [
+        "抗体の可変領域に変異が生じ、抗原をよりよく認識できるB細胞が選択される",
+        "抗体の定常領域だけを変更し、可変領域の親和性を一律に高める",
+        "可変領域に変異が生じれば、その全てが選択なしに親和性を高める",
+        "B細胞の抗体ではなく、T細胞受容体の可変領域だけに変異を集中させる"
+      ],
+      "correctIndex": 0,
+      "explanation": "SHMは抗体の可変領域をコードする配列に変異を生み、その後の選択が親和性の高い抗体を作る細胞の増加につながる。変異の導入だけで、全ての抗体の親和性が自動的に上がるわけではない。",
+      "distractorRationales": [
+        "変異と選択を組み合わせた親和性成熟の説明。",
+        "抗体クラスの変化と親和性成熟を混同している。",
+        "変異には有利でないものもあり、選択の役割を欠く。",
+        "指定した抗体の親和性成熟での主な対象はB細胞の免疫グロブリン遺伝子。"
+      ],
+      "sources": [
+        {
+          "title": "Alberts et al. — Molecular Biology of the Cell, The Generation of Antibody Diversity",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26860/"
+        }
+      ]
+    },
+    "reason": "壊れた選択肢を全面改訂し、変異だけで親和性が上がるように読める説明を選択込みへ修正。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Antigen-Driven Somatic Hypermutation Fine-Tunes Antibody ResponsesのV領域変異、抗原によるクローン選択と親和性の上昇を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000040",
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "形質細胞が分泌し、抗原に結合して液性免疫を担う免疫グロブリンの別名はどれか。",
+      "choices": [
+        "ヘモグロビン",
+        "抗体",
+        "コラーゲン",
+        "アミラーゼ"
+      ],
+      "correctIndex": 1,
+      "explanation": "分泌された抗体は抗原に結合し、中和や排除の促進などに関わる。抗体の膜結合型はB細胞の抗原受容体としても働くため、すべての抗体が常に分泌型とは限らない。",
+      "distractorRationales": [
+        "主に赤血球内で酸素の運搬を担うタンパク質。",
+        "免疫グロブリンの別名。",
+        "結合組織などの構造を支えるタンパク質。",
+        "デンプンなどの分解に関わる酵素。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Antibodies",
+          "url": "https://openstax.org/books/biology-2e/pages/42-3-antibodies"
+        }
+      ]
+    },
+    "reason": "「抗原に結合するタンパク質」だけでは排除できない酵素等を、免疫グロブリンの具体的定義で区別。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§42.3の抗体/免疫グロブリン、形質細胞、液性免疫と膜型BCRの定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000179",
+    "domain": "生物",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "一般的なABO式血液型の規則で、O型の健康な成人の血清に通常見られる抗A・抗B抗体の組み合わせはどれか。",
+      "choices": [
+        "抗A抗体だけ",
+        "抗B抗体だけ",
+        "抗A抗体と抗B抗体の両方",
+        "どちらもない"
+      ],
+      "correctIndex": 2,
+      "explanation": "典型的なO型では赤血球にA抗原もB抗原もなく、血清には通常、抗Aと抗Bの両方が見られる。新生児や特殊な病態などを含む全員への無条件の断定ではなく、ABOの基本的な対応を問う。",
+      "distractorRationales": [
+        "基本的な対応ではB型の血清に相当する。",
+        "基本的な対応ではA型の血清に相当する。",
+        "典型的なO型の対応。",
+        "基本的な対応ではAB型の血清に相当する。"
+      ],
+      "sources": [
+        {
+          "title": "Dean — Blood Groups and Red Cell Antigens, The ABO blood group",
+          "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK2267/"
+        }
+      ]
+    },
+    "reason": "遺伝子型や輸血可否へ不必要に一般化せず、健康な成人の典型的な血清抗体を問う。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Chapter 5のAntibodies produced against ABO blood group antigensと、O型にanti-A/anti-Bがある説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000137",
+    "domain": "生物",
+    "subdomain": "生理学・人体",
+    "content": {
+      "question": "ヒトの循環系で、収縮によって血液を肺や全身へ送り出すポンプとして働く器官はどれか。",
+      "choices": [
+        "胃",
+        "肺",
+        "肝臓",
+        "心臓"
+      ],
+      "correctIndex": 3,
+      "explanation": "心臓の収縮が血液を送り出す。肺との循環と全身との循環をつなぎ、血液が組織へ酸素や栄養を届けることを支える。",
+      "distractorRationales": [
+        "主に食物の貯留・消化に関わる。",
+        "主に血液と空気の間のガス交換を行う。",
+        "代謝や物質の処理などを担うが、循環系の中心のポンプではない。",
+        "血液を送り出す循環系のポンプ。"
+      ],
+      "sources": [
+        {
+          "title": "NHLBI — How the Heart Works: The Heart",
+          "url": "https://www.nhlbi.nih.gov/health/heart"
+        },
+        {
+          "title": "NHLBI — How the Heart Works: How the Heart Beats",
+          "url": "https://www.nhlbi.nih.gov/health/heart/heart-beats"
+        }
+      ]
+    },
+    "reason": "器官の役割を具体化し、用語暗記についての無関係な定型説明を除去。",
+    "parameters": {
+      "b": -1.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "The Heartの循環系のポンプ、How the Heart Beats冒頭の収縮による肺と全身への送血を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000178",
+    "domain": "生物",
+    "subdomain": "生理学・人体",
+    "content": {
+      "question": "ヒトの赤血球で、ヘモグロビンが酸素を受け取り、組織で放すことを可能にする性質はどれか。",
+      "choices": [
+        "ヘムの鉄を含む部位で酸素を可逆的に結合・解離できる",
+        "酸素を不可逆的に分解して水に変える",
+        "酸素をポリペプチド鎖へ共有結合で固定し、タンパク質ごと分解する",
+        "酸素一分子ごとにATPを加水分解するポンプとして働く"
+      ],
+      "correctIndex": 0,
+      "explanation": "ヘモグロビンのヘムは酸素と結合でき、条件に応じて酸素を解離する。通常は肺で取り込み、組織へ渡すことに役立つ。酸素を分解して運ぶ機構ではない。",
+      "distractorRationales": [
+        "酸素を取り込み、放出できる基本的な性質。",
+        "運搬では酸素分子の可逆的結合・解離が重要。",
+        "酸素放出のたびにヘモグロビン全体を分解する機構ではない。",
+        "酸素結合をATP駆動ポンプによる能動輸送としている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, Transport of Gases",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-5-transport-of-gases"
+        }
+      ]
+    },
+    "reason": "酸素化状態の電子構造を「Fe²⁺のまま」と一律に断定せず、問う可逆的な酸素結合へ絞る。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§22.5のヘムによる酸素結合、可逆的なオキシヘモグロビン形成と組織での解離を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000038",
+    "domain": "生物",
+    "subdomain": "生理学・人体",
+    "content": {
+      "question": "通常のヒトの血液で、ヘモグロビンを多く含み、酸素の運搬を主に担うのはどれか。",
+      "choices": [
+        "白血球",
+        "赤血球",
+        "血小板",
+        "神経細胞"
+      ],
+      "correctIndex": 1,
+      "explanation": "赤血球はヘモグロビンを多く含み、肺から組織への酸素運搬を担う。血漿に溶けて運ばれる酸素もあるが、大部分はヘモグロビンに結合している。",
+      "distractorRationales": [
+        "主に免疫・防御に関わる血球。",
+        "ヘモグロビンを多く含む酸素運搬の担い手。",
+        "主に止血に関わる細胞片。",
+        "血液中の酸素運搬を担う血球ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, Transport of Gases",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-5-transport-of-gases"
+        },
+        {
+          "title": "OpenStax — Anatomy and Physiology, §18.3 Erythrocytes",
+          "url": "https://openstax.org/books/anatomy-and-physiology/pages/18-3-erythrocytes"
+        }
+      ]
+    },
+    "reason": "繰り返されていた定型解説を各肢の役割へ書き換え、血小板を完全な細胞と決めつけない。",
+    "parameters": {
+      "b": -1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§22.5の溶存酸素と赤血球のヘモグロビンによる運搬、§18.3の赤血球の機能を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000038",
+    "domain": "生物",
+    "subdomain": "生理学・人体",
+    "content": {
+      "question": "健康なヒトで、食後の血糖上昇に応じて働き、血糖を下げる方向の調節を担うホルモンはどれか。",
+      "choices": [
+        "グルカゴン",
+        "アドレナリン",
+        "インスリン",
+        "コルチゾール"
+      ],
+      "correctIndex": 2,
+      "explanation": "インスリンはグルコースの利用・貯蔵を促進するなどして血糖を下げる方向に働く。全細胞のグルコース取り込みがインスリン依存という意味ではない。",
+      "distractorRationales": [
+        "通常は血糖を上げる方向の調節に関わる。",
+        "緊急時の応答などで血糖を上げる方向に働く。",
+        "食後の血糖を下げる方向の調節を担う。",
+        "糖新生などを介して血糖を上げる方向に関わる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, The Endocrine Pancreas",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-9-the-endocrine-pancreas"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Endocrine Glands",
+          "url": "https://openstax.org/books/biology-2e/pages/37-5-endocrine-glands"
+        }
+      ]
+    },
+    "reason": "作用条件を食後の正常な調節に具体化し、チロキシンの複雑な作用を曖昧な誤答根拠にしない。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§17.9のインスリン/グルカゴンによる血糖調節、§37.5の副腎ホルモンと血糖の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000037",
+    "domain": "生物",
+    "subdomain": "生理学・人体",
+    "content": {
+      "question": "正常なヒトで、インスリンを産生・分泌する代表的な細胞はどれか。",
+      "choices": [
+        "膵島のα細胞",
+        "甲状腺の濾胞細胞",
+        "副腎髄質のクロム親和性細胞",
+        "膵島のβ細胞"
+      ],
+      "correctIndex": 3,
+      "explanation": "膵臓の膵島にあるβ細胞がインスリンを産生・分泌する。同じ膵島でもα細胞はグルカゴンを産生し、血糖調節に異なる役割を持つ。",
+      "distractorRationales": [
+        "主にグルカゴンを産生する。",
+        "甲状腺ホルモンを産生する。",
+        "アドレナリンなどのカテコールアミンを産生する。",
+        "インスリンを産生する代表的な細胞。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, The Endocrine Pancreas",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-9-the-endocrine-pancreas"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Endocrine Glands",
+          "url": "https://openstax.org/books/biology-2e/pages/37-5-endocrine-glands"
+        },
+        {
+          "title": "NIDDK — Pancreatic Islet Transplantation",
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments/pancreatic-islet-transplantation"
+        }
+      ]
+    },
+    "reason": "器官名だけの旧問を分泌細胞の区別へ具体化。血糖を下げる作用を問う別問とは異なる知識を問う。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "膵島のα/β細胞とホルモンの対応、NIDDKのβ細胞によるインスリン産生、内分泌腺の種類を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000089",
+    "domain": "生物",
+    "subdomain": "生理学・人体",
+    "content": {
+      "question": "正常な腎機能で、糸球体を通過した濾液から水・Na⁺の多くと、通常ほぼ全てのグルコースを回収する初期の尿細管区間はどれか。",
+      "choices": [
+        "近位尿細管",
+        "糸球体",
+        "ボーマン嚢の内腔",
+        "尿管"
+      ],
+      "correctIndex": 0,
+      "explanation": "近位尿細管は濾液から大量の水や溶質を再吸収する。再吸収はここだけで起こるわけではなく、その先の尿細管や集合管でも調節される。グルコースの回収にも輸送能力の限界がある。",
+      "distractorRationales": [
+        "指定した初期の大きな再吸収を担う区間。",
+        "血液の濾過に関わる毛細血管の構造。",
+        "濾過された液が入る空間で、指定した尿細管区間ではない。",
+        "腎臓から膀胱へ尿を運ぶ管。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, Tubular Reabsorption",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-6-tubular-reabsorption"
+        }
+      ]
+    },
+    "reason": "「原尿の再吸収」だけの曖昧さを、通常の初期尿細管での大量回収に限定。他部位の再吸収を排除しない。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§25.6の近位尿細管での水・Na⁺・グルコース回収、区間ごとの再吸収と輸送能力の限界を本文・表で照合。表の不正確な傍細胞/経細胞の語は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "神経・免疫・生理学の事実を公的研究機関、原論文、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  }
+]
