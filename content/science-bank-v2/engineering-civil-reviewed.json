@@ -1,0 +1,480 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000056",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "ポルトランドセメントを用いるコンクリートが硬化する際の、水の主な役割として適切なものはどれか。",
+      "choices": [
+        "水が全て蒸発し、残った粉末が押し固まる",
+        "水がセメントと化学反応し、水和生成物を作る",
+        "水が凍結し、氷が骨材を恒久的に接着する",
+        "水が鉄筋を腐食させ、そのさびだけで骨材を固定する"
+      ],
+      "correctIndex": 1,
+      "explanation": "硬化の中心はセメントと水の反応である水和。乾くだけで固まるのではなく、反応を進めるために水分を保つ養生が重要になる。",
+      "distractorRationales": [
+        "乾燥そのものを主な硬化機構としている。",
+        "水和反応によって結合する組織が形成される。",
+        "氷による接着はセメントの硬化機構ではない。",
+        "鉄筋がなくてもセメントペーストは硬化する。"
+      ],
+      "sources": [
+        {
+          "title": "American Cement Association — Applications of Cement",
+          "url": "https://www.cement.org/cement-concrete/applications-of-cement/"
+        }
+      ]
+    },
+    "reason": "結合材の名称のみの旧問を、乾燥と水和を区別する問いへ改訂。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "HydrationとCuring節の水との化学反応、養生中の水分保持を確認。配合比・施工手順の数値は用いていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000058",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "2径間以上にわたる橋の中間部にあり、橋桁などの上部構造からの荷重を支持する下部構造を何というか。",
+      "choices": [
+        "橋台",
+        "主桁",
+        "橋脚",
+        "高欄"
+      ],
+      "correctIndex": 2,
+      "explanation": "橋の中間部で上部構造を支持するのが橋脚。橋台は橋の端部側に設ける下部構造で、主桁は上部構造に属する。",
+      "distractorRationales": [
+        "中間部ではなく、端部側の下部構造。",
+        "支えられる上部構造の部材。",
+        "橋の中間部で上部構造からの荷重を受ける。",
+        "橋の端に沿って設ける防護用の構造で、橋脚ではない。"
+      ],
+      "sources": [
+        {
+          "title": "国土交通省 関東地方整備局 首都国道事務所 — みちに関する用語辞典",
+          "url": "https://www.ktr.mlit.go.jp/syuto/syuto_yougo001.html"
+        }
+      ]
+    },
+    "reason": "「橋を支える柱」だけでは橋台等と曖昧なため中間部を指定。同義の旧1件を統合。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "橋脚・橋台・上部構造・下部構造の項目を照合。定義文はそのまま転載せず、設問として独自に構成。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000070"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000133",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "同じ材料を用い、材齢・空気量・養生条件をそろえたコンクリートを比較する。十分に施工・締固めできる範囲で水セメント比を下げたとき、圧縮強度は一般にどうなるか。",
+      "choices": [
+        "高くなる傾向がある",
+        "低くなる傾向がある",
+        "水セメント比とは関係しない",
+        "水セメント比が半分なら必ずちょうど2倍になる"
+      ],
+      "correctIndex": 0,
+      "explanation": "材料や材齢などをそろえ、施工と養生を確保した条件では、水セメント比が低いほど圧縮強度が高い傾向がある。単純な反比例式や、施工性を無視した無条件の保証ではない。",
+      "distractorRationales": [
+        "指定した条件で認められる一般的な傾向。",
+        "通常の傾向と向きが逆。",
+        "水セメント比は強度に関係する主要因の一つ。",
+        "強度は水セメント比の逆数に厳密に比例するわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "American Cement Association — Applications of Cement",
+          "url": "https://www.cement.org/cement-concrete/applications-of-cement/"
+        },
+        {
+          "title": "American Concrete Institute — The most important single factor affecting compressive strength",
+          "url": "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=755"
+        },
+        {
+          "title": "American Concrete Institute — Factors governing the strength of concrete",
+          "url": "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=656"
+        }
+      ]
+    },
+    "reason": "条件なしで「低いほど高い」とした旧問へ比較条件を追加。無関係な名詞だけの誤答を除去。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "ACIの同一材料・十分な養生・材齢条件とw/cmの関係、強度要因の一覧、ACAの施工性・締固め・養生を損なわない条件を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000146",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "建物の制振を考えるモデルで、相対速度vに対して抵抗力が−cvとなる理想線形粘性ダンパーを用いる。c>0とすると、ダンパーで散逸するエネルギーの時間当たりの量はどれか。",
+      "choices": [
+        "−cv²",
+        "cv",
+        "cv²",
+        "cv²/2"
+      ],
+      "correctIndex": 2,
+      "explanation": "抵抗力が運動系にする仕事率は(−cv)v＝−cv²。したがって、運動系から失われるエネルギーの移動率はcv²で非負となる。完全な弾性ばねのように全量を蓄えて戻す要素とは異なる。",
+      "distractorRationales": [
+        "これはダンパーが運動系にする負の仕事率。",
+        "力の量であり、エネルギーの時間当たりの量ではない。",
+        "力の大きさと相対速度の積である。",
+        "ばねの位置エネルギーなどの1/2を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "ヤクモ株式会社 — 減衰とは：減衰比・減衰係数・ダンパーの種類",
+          "url": "https://www.yacmo.co.jp/technology/tips/vibration-damping/"
+        }
+      ]
+    },
+    "reason": "装置名だけの旧問を、理想粘性モデルのエネルギー散逸と蓄積の違いへ改訂。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "粘性減衰の抵抗力が速度に比例するモデル、減衰係数cの記述を確認。符号を明記した設問から仕事率を独自に導出。非線形の実機を全てこの式と同一視していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000094",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "塩化物イオンが鉄筋位置まで侵入したコンクリートで、鉄筋腐食を促す直接的な仕組みとして適切なものはどれか。",
+      "choices": [
+        "コンクリートの高いアルカリ性が常に鉄を溶かす",
+        "塩化物イオンが鋼材の不動態皮膜を局所的に損なう",
+        "塩化物の影響はpHの低下だけで、不動態皮膜の破壊とは関係しない",
+        "骨材の反応膨張そのものを、鉄筋の電気化学的な腐食とみなす"
+      ],
+      "correctIndex": 1,
+      "explanation": "コンクリート中のアルカリ性は通常、鋼材の不動態を保つ。塩化物はこの保護を局所的に破り、腐食を進める要因になる。腐食の進行には水分や酸素などの環境条件も関わる。",
+      "distractorRationales": [
+        "通常のアルカリ性による保護と逆の説明。",
+        "保護皮膜の局所的な破壊が腐食の原因になる。",
+        "塩化物は、不動態皮膜を局所的に破壊して腐食を促す。",
+        "骨材を含む反応膨張と鋼材の腐食は、異なる劣化機構。"
+      ],
+      "sources": [
+        {
+          "title": "American Concrete Institute — Concrete Corrosion",
+          "url": "https://www.concrete.org/topicsinconcrete/topicdetail.aspx?search=concrete+corrosion"
+        }
+      ]
+    },
+    "reason": "塩害と中性化・骨材反応を区別。旧重複1件を統合。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭の鋼材の保護層、高pHによる保護、塩化物による保護層破壊の説明を確認。高pHなら絶対に腐食しないという原文の断定は流用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000231"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000141",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "標準貫入試験で測定したN値が20、実測した打撃エネルギー効率が75％だった。基準効率60％へそろえるエネルギー補正だけを行い、他の補正係数を1とすると、N₆₀はいくらか。",
+      "choices": [
+        "16",
+        "20",
+        "25",
+        "約33.3"
+      ],
+      "correctIndex": 2,
+      "explanation": "N₆₀＝(実測効率/60％)N。75/60×20＝25となる。補正したN値も経験的な地盤評価の指標であり、それだけで基礎の支持力や沈下が一意に決まるわけではない。",
+      "distractorRationales": [
+        "60/75として比を逆にしている。",
+        "実測効率と基準効率の違いを補正していない。",
+        "75/60倍して25となる。",
+        "実測効率75％を無視して20/0.6としている。"
+      ],
+      "sources": [
+        {
+          "title": "FHWA — Soils and Foundations, Volume I (2006)",
+          "url": "https://www.fhwa.dot.gov/engineering/geotech/pubs/nhi06088.pdf"
+        }
+      ]
+    },
+    "reason": "他の選択肢が全て地盤と無関係だった旧問を、測定条件の補正の意味を問う設問へ改訂。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "3章の式3-2：N60＝(Ef/60)Nmeasと、ハンマー効率・他の補正の区別を確認。数値は教材の実測値ではなく独自設定。現行日本規格の指定値とはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000245",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "コンクリートの中性化（炭酸化）が鉄筋位置まで進むとき、pHと鉄筋の保護状態の変化として適切な組合せはどれか。",
+      "choices": [
+        "pHが低下し、不動態による保護が弱まる",
+        "pHが上昇し、不動態による保護が弱まる",
+        "pHが低下し、不動態による保護が強まる",
+        "pHが上昇し、不動態による保護が強まる"
+      ],
+      "correctIndex": 0,
+      "explanation": "二酸化炭素がセメントの水和物と反応すると、アルカリ性が低下する。これが鉄筋まで及ぶと保護皮膜が不安定になり、腐食しやすくなる。塩化物の侵入とは別の過程である。",
+      "distractorRationales": [
+        "アルカリ性の低下が保護皮膜を不安定にする。",
+        "炭酸化はpHを上げる過程ではない。",
+        "pH低下によって不動態の保護は不安定になる。",
+        "炭酸化ではpHは低下し、保護も弱まる。"
+      ],
+      "sources": [
+        {
+          "title": "The Concrete Society — Carbonation of concrete",
+          "url": "https://www.concrete.org.uk/fingertips/carbonation-of-concrete/"
+        },
+        {
+          "title": "American Concrete Institute — Concrete Corrosion",
+          "url": "https://www.concrete.org/topicsinconcrete/topicdetail.aspx?search=concrete+corrosion"
+        }
+      ]
+    },
+    "reason": "中性化によるリスクと腐食発生の無条件の断定を区別。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "炭酸化によるpH低下と保護層の不安定化、および水分条件の影響を確認。特定の構造物の寿命や腐食速度は推定していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000206",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "通常の吊り橋で、橋桁から吊り材を介して荷重を受ける主ケーブルは、主にどのような力で荷重を支えるか。",
+      "choices": [
+        "曲げモーメントだけ",
+        "圧縮力",
+        "引張力",
+        "ねじりモーメントだけ"
+      ],
+      "correctIndex": 2,
+      "explanation": "吊り材は橋桁の荷重を主ケーブルへ伝え、主ケーブルは張力を負担する。柔軟なケーブルを、剛な梁や圧縮柱と同じ仕組みで扱わない。",
+      "distractorRationales": [
+        "柔軟なケーブルは梁の曲げ剛性を主に使う部材ではない。",
+        "圧縮柱とは異なり、主に引張りで抵抗する。",
+        "主ケーブルに沿った張力で荷重を伝える。",
+        "主ケーブルの主要な荷重伝達の仕組みではない。"
+      ],
+      "sources": [
+        {
+          "title": "FHWA — Primer for the Inspection and Strength Evaluation of Suspension Bridge Cables",
+          "url": "https://www.fhwa.dot.gov/bridge/pubs/if11045.pdf"
+        }
+      ]
+    },
+    "reason": "誤分類を訂正し、重力を消す等の不自然な誤答から部材力の違いへ変更。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "2.1の橋桁・鉛直吊り材・主ケーブル・主塔との関係、および主ケーブルをtension cablesとする説明を確認。個別の点検基準は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000216",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "液状化後の再圧密などによって、杭の周囲の地盤が杭より大きく沈下する区間がある。その区間の地盤が杭へ及ぼす周面摩擦の作用として適切なものはどれか。",
+      "choices": [
+        "必ず上向きに作用し、杭頭荷重を小さくする",
+        "杭を下向きに引き込む負の摩擦力となりうる",
+        "杭と地盤の相対変位によらず常に0となる",
+        "杭の周面にはせん断力が働かず、杭先端だけに荷重が伝わる"
+      ],
+      "correctIndex": 1,
+      "explanation": "地盤が杭に対して下がると、周面摩擦が杭を下向きに引く負の摩擦力となりうる。杭基礎を選ぶだけでは十分でなく、相対沈下と追加の軸力も検討対象になる。",
+      "distractorRationales": [
+        "地盤と杭の相対移動の向きを逆に捉えている。",
+        "地盤が杭を引き下げる方向に摩擦が働く。",
+        "再圧密後などの摩擦を常に0とはできない。",
+        "杭の荷重伝達には周面摩擦も関わり、先端だけとは限らない。"
+      ],
+      "sources": [
+        {
+          "title": "FHWA — Liquefaction-Induced Downdrag on CFA Piles From Full-Scale Tests (2017)",
+          "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/structures/bridge/17060/index.cfm"
+        }
+      ]
+    },
+    "reason": "杭を使えば沈下が必ず解消するという単純化を避け、地盤と杭の相対変位による作用へ改訂。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Introductionの地盤と杭の相対沈下、負の摩擦力と追加荷重、中立面の説明を確認。本文の試験数値や設計推奨係数は流用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000226",
+    "domain": "工学",
+    "subdomain": "土木・地盤・防災",
+    "content": {
+      "question": "盛土の湿潤密度は2.16 Mg/m³、含水比は乾燥土の質量に対して20％だった。同じ土の指定された締固め試験による最大乾燥密度は2.00 Mg/m³である。乾燥密度の比を使う締固め度はどれか。",
+      "choices": [
+        "75％",
+        "108％",
+        "約130％",
+        "90％"
+      ],
+      "correctIndex": 3,
+      "explanation": "乾燥密度は2.16/(1＋0.20)＝1.80 Mg/m³。締固め度は1.80/2.00×100＝90％。湿潤密度を最大乾燥密度と直接比べない。",
+      "distractorRationales": [
+        "含水比による補正を二重に適用した結果。",
+        "湿潤密度をそのまま分子にしている。",
+        "1＋含水比を掛けており、乾燥密度への換算が逆。",
+        "乾燥密度に換算してから最大乾燥密度で割っている。"
+      ],
+      "sources": [
+        {
+          "title": "FHWA — Geotechnical Aspects of Pavements, Chapter 5",
+          "url": "https://www.fhwa.dot.gov/engineering/geotech/pubs/05037/05a.cfm"
+        }
+      ]
+    },
+    "reason": "旧文の「現場密度」を乾燥密度と明確に区別。含水比の定義と試験条件を指定。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式5.1の乾燥単位体積重量＝湿潤値/(1+w)、式5.4の締固め度を確認。密度で同じ比を計算。指定試験に対する割合であり、日本の工事の合否基準は提示していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "専門団体・公的機関の技術資料と機器メーカーの技術説明を照合。設問・四肢・解説は独自表現で、基準の数値・規格本文・図表・実験データ・掲載例題は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
