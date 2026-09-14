@@ -1,0 +1,370 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000056",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "CADの基本的な役割として最も適切なものはどれか。",
+      "choices": [
+        "完成品の抜取検査から、製造ロットの合否を統計的に判定する",
+        "部品の設計図や寸法を持つ3D形状を作成・変更する",
+        "材料を加熱して金型の中へ流し込み、実物を固める",
+        "測定器と標準を比較し、測定誤差を評価する"
+      ],
+      "correctIndex": 1,
+      "explanation": "CADはコンピュータを用いて設計を作成・修正するための仕組み。設計図、組立図、配線図、3Dモデルなどを扱う。どの種類の図かだけで正誤を分けることはできない。",
+      "distractorRationales": [
+        "品質検査の判定であり、設計作成という基本機能の説明ではない。",
+        "コンピュータ支援設計に対応する。",
+        "実際の鋳造工程の説明。",
+        "校正の作業であり、設計形状を作る機能ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Autodesk — CAD Software",
+          "url": "https://www.autodesk.com/solutions/cad-software"
+        }
+      ]
+    },
+    "reason": "旧四肢の設計図・組立図・配線図がいずれもCAD用途になる複数正解を解消。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "What is CAD software? の設計・技術図面の作成変更、2D/3Dと寸法の説明を確認。価格や製品構成は用いない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000059",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "デジタルの形状データに基づき、材料を層ごとに加えて立体部品を造形する製造の考え方はどれか。",
+      "choices": [
+        "除去加工",
+        "鋳造",
+        "付加製造",
+        "鍛造"
+      ],
+      "correctIndex": 2,
+      "explanation": "付加製造は必要な位置へ材料を加えて形を作る。材料を削り取る加工、型へ流し込んで固める鋳造、力で塑性変形させる鍛造とは基本的な方法が異なる。",
+      "distractorRationales": [
+        "材料を取り除く側の加工。",
+        "材料を型へ入れて固める方法。",
+        "材料を加えて積み上げる造形に対応する。",
+        "主に圧力による塑性変形を使う方法。"
+      ],
+      "sources": [
+        {
+          "title": "NIST — What is Additive Manufacturing?",
+          "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing"
+        }
+      ]
+    },
+    "reason": "旧問の基本概念を維持し、具体的な加工原理を四肢の理由へ記載。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭のデジタル設計から層ごとに造形する定義と、除去・型による成形との対比を確認。環境負荷やコストが必ず小さいという一般化はしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000140",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "トヨタ生産方式のジャスト・イン・タイムに最も沿う運用はどれか。",
+      "choices": [
+        "後工程で使われた分を必要な時期と量に合わせて補充する",
+        "設備の稼働率だけを最大にし、需要を問わず作り続ける",
+        "完成品の在庫をできるだけ増やしてから販売計画を考える",
+        "全工程の在庫を一律に0にし、工程のつながりは調整しない"
+      ],
+      "correctIndex": 0,
+      "explanation": "必要な物を、必要なときに、必要な量だけ流すために工程を連動させる。各設備が独立に作り過ぎる運用や、無条件に全在庫を0とすることとは異なる。",
+      "distractorRationales": [
+        "後工程の使用と補充を連動させている。",
+        "作り過ぎと工程間の滞留につながる。",
+        "需要と生産量を結び付けていない。",
+        "工程を同期させる考え方が欠けている。"
+      ],
+      "sources": [
+        {
+          "title": "Toyota Motor Corporation — Toyota Production System",
+          "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/"
+        }
+      ]
+    },
+    "reason": "無関係な誤答を並べた改善手法の旧問から、生産の流れと作り過ぎを区別する問いへ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Just-in-Time節の必要時・必要量、売れる速さに合わせる考え方、工程を連続してつなぐ説明を確認。企業の実績や優位性の宣伝文は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000135",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "熱電対の電圧から測温接点の温度を求める際、基準接点の温度も管理または測定して補償する必要がある主な理由はどれか。",
+      "choices": [
+        "基準側の温度を測るだけで、熱電対の非線形性がなくなるため",
+        "熱電対の電圧が測温接点の温度だけでなく基準接点の温度にも依存するため",
+        "基準接点を測れば、熱電対の種類を知らなくても常に同じ換算式を使えるため",
+        "基準接点の温度は、導体の電気抵抗だけを通じて出力へ影響するため"
+      ],
+      "correctIndex": 1,
+      "explanation": "熱電対の起電力は異種導体と両端の温度に依存する。測温接点の温度を決めるには、基準側の温度と熱電対の特性を考慮する。冷接点補償は基準側を必ず0 ℃に冷却するという意味ではない。",
+      "distractorRationales": [
+        "基準接点の補償をしても、電圧と温度の非線形な関係は残る。",
+        "同じ測温接点でも基準側の温度が違えば電圧が変わる。",
+        "熱電対の組合せごとに電圧と温度の関係が異なる。",
+        "基準接点の温度は、熱起電力そのものに関わる。"
+      ],
+      "sources": [
+        {
+          "title": "Analog Devices — The Basics of Thermocouples",
+          "url": "https://www.analog.com/en/resources/design-notes/the-basics-of-thermocouples.html"
+        }
+      ]
+    },
+    "reason": "熱電効果という名称だけの旧問を、基準接点の補償が必要な理由へ改訂。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭のSeebeck効果、温度を電圧だけでは決定できない説明、基準接点の温度と冷接点補償を確認。線形近似を全温度域へ適用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000149",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "QFD（品質機能展開）が製品の開発で主に扱う対応関係はどれか。",
+      "choices": [
+        "運転時間と部品の残存確率の対応",
+        "切削工具の位置と工作機械の送り速度の対応",
+        "顧客の要求と、それを実現する技術的な特性の対応",
+        "有限要素の節点と形状関数の対応"
+      ],
+      "correctIndex": 2,
+      "explanation": "QFDは顧客が求めることを整理し、設計・製造で実現する特性や活動へ展開する。名称が似た分析や単なる原価削減の手法と同一視しない。",
+      "distractorRationales": [
+        "信頼性や寿命の分析で扱う対応。",
+        "加工の軌跡や制御に関する対応。",
+        "顧客の要求を技術側で扱える形へつなぐ。",
+        "数値解析で近似場を構成する対応。"
+      ],
+      "sources": [
+        {
+          "title": "American Society for Quality — Quality Function Deployment",
+          "url": "https://asq.org/quality-resources/qfd-quality-function-deployment"
+        }
+      ]
+    },
+    "reason": "機能とコストという旧設問と顧客要求という解説の不一致を、QFDの目的へ統一。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "What is QFD? とQFD Explainedの顧客要求を技術的要求へ展開する定義、要求の優先順位を確認。House of Qualityの図は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000139",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "非修理部品の寿命Tを、一定の故障率λ>0を持つ指数分布で表す。R(t)＝P(T>t)としたとき、R(2t)をR(t)で表す式はどれか。",
+      "choices": [
+        "2R(t)",
+        "R(t)/2",
+        "1−R(t)",
+        "R(t)²"
+      ],
+      "correctIndex": 3,
+      "explanation": "指数分布の残存確率はR(t)＝e^(−λt)。したがってR(2t)＝e^(−2λt)＝R(t)²。故障率が一定でも、生き残っている割合が時間によらず一定という意味ではない。",
+      "distractorRationales": [
+        "確率は運転時間とともに2倍になるわけではない。",
+        "時間を2倍にすると残存確率が必ず半分になるわけではない。",
+        "これは時刻tまでに故障する確率。",
+        "指数の加法から残存確率の二乗になる。"
+      ],
+      "sources": [
+        {
+          "title": "NIST/SEMATECH e-Handbook — Exponential lifetime distribution",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr161.htm"
+        }
+      ]
+    },
+    "reason": "分布と確率過程を同列に並べる旧四肢を改訂。故障率と残存確率の混同を区別。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Reliability R(t)＝exp(−λt)、Failure Rate h(t)＝λと、寿命分布としての定義を確認。一般の寿命へ一定故障率を仮定していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000078",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "有限要素法で変位や温度などの未知の場を近似する際、形状関数の主な役割はどれか。",
+      "choices": [
+        "自由度の値を係数として組み合わせ、要素内の場を表す",
+        "全ての要素の寸法を必ず同じにする",
+        "物性値を全て1へ置き換える",
+        "境界条件を指定しなくても一意な解を保証する"
+      ],
+      "correctIndex": 0,
+      "explanation": "有限要素法では、形状関数の線形結合で未知の場を近似し、その係数となる自由度を求める。細分化や関数の選び方は解析の近似に関わるが、境界条件の不足を自動的に解決するわけではない。",
+      "distractorRationales": [
+        "有限次元の近似場を作る基底の役割。",
+        "要素の大きさは場所によって変えてよい。",
+        "物性は解析モデルの係数として別に扱う。",
+        "必要な境界条件やモデルの条件は依然必要。"
+      ],
+      "sources": [
+        {
+          "title": "COMSOL — The Finite Element Method (FEM)",
+          "url": "https://www.comsol.com/multiphysics/finite-element-method"
+        }
+      ]
+    },
+    "reason": "単に領域を分割するだけでは他の方法とも重なる旧問を、形状関数の役割へ明確化。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "有限次元空間での基底の線形結合、係数と自由度、要素と形状関数の選択の自由の記述を確認。ソフト例題や図は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-measurement-metrological-traceability",
+    "domain": "工学",
+    "subdomain": "製造・生産・計測",
+    "content": {
+      "question": "ある測定結果について、計量学的トレーサビリティを示す説明として適切なものはどれか。",
+      "choices": [
+        "測定器に校正済みのシールがあるので、どの測定にも誤差がない",
+        "同じメーカーの測定器を使い続けているので、参照標準は不要",
+        "文書化された切れ目のない校正のつながりで参照標準へ結び付け、各校正の不確かさを評価している",
+        "測定を繰り返すたびに同じ表示値が出るので、単位の基準に自動的につながる"
+      ],
+      "correctIndex": 2,
+      "explanation": "トレーサビリティは測定結果を参照標準へ結び付ける性質で、校正の連鎖と各段階の不確かさが必要。メーカー名や再現性だけでは示せず、不確かさが0になる保証でもない。",
+      "distractorRationales": [
+        "校正済みであることは全ての誤差が消える保証ではない。",
+        "製造元の同一性は標準へのつながりの代わりにならない。",
+        "校正の連鎖と不確かさを通じて結果を標準に関係付ける。",
+        "表示の繰返し性だけでは標準との対応は分からない。"
+      ],
+      "sources": [
+        {
+          "title": "NIST — Metrological Traceability: FAQs and Policy",
+          "url": "https://www.nist.gov/metrology/metrological-traceability"
+        }
+      ]
+    },
+    "reason": "校正シール・精度・繰返し性と測定結果のトレーサビリティを区別する独自設問。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NISTが採用するVIM 2.41の定義、文書化された校正の連鎖、測定結果と不確かさの関係を確認。規格文を逐語転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "開発元・製造元・専門団体・公的機関の技術資料を照合。問題と説明は独自表現とし、掲載例題・図表・製品情報・規格本文は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
