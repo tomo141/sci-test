@@ -1,0 +1,563 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000087",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "理想変圧器の一次巻数は200、二次巻数は50である。一次側へ実効値100 Vの交流電圧を加えたとき、二次側の電圧の実効値はいくらか。",
+      "choices": [
+        "400 V",
+        "50 V",
+        "25 V",
+        "10 V"
+      ],
+      "correctIndex": 2,
+      "explanation": "理想変圧器では電圧比が巻数比に等しい。V₂＝100×50/200＝25 V。ここでは損失や漏れ磁束を無視する。",
+      "distractorRationales": [
+        "巻数比を逆にしている。",
+        "二次巻数の数値をそのまま電圧にしている。",
+        "100×1/4＝25 Vとなる。",
+        "指定された巻数比1/4と一致しない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 2 — 15-6-transformers",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/15-6-transformers"
+        }
+      ]
+    },
+    "reason": "旧四肢と解説の計算不一致を訂正。交流・理想・実効値を明示し、変圧器の旧名称問題を同じ族へ統合。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式15.20・15.21の電圧比＝巻数比と、比を実効値へ適用できる記述を確認。旧問の数値を独立に再計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000053"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000054",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "降伏に至らない範囲で、順方向には電流を流しやすく、逆方向には流しにくい性質を利用する半導体素子はどれか。",
+      "choices": [
+        "抵抗器",
+        "コンデンサ",
+        "インダクタ",
+        "pn接合ダイオード"
+      ],
+      "correctIndex": 3,
+      "explanation": "pn接合は順方向の電圧で電流が増え、逆方向では降伏前の電流が小さい。この非対称な性質を整流に利用する。逆方向の電流があらゆる条件で厳密に0という意味ではない。",
+      "distractorRationales": [
+        "理想的な抵抗器の電圧と電流は極性を逆にすると共に反転する。",
+        "主に電界へエネルギーを蓄える素子。",
+        "主に磁界へエネルギーを蓄える素子。",
+        "順方向と逆方向の電流の非対称性を持つ。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 3 — 9-7-semiconductor-devices",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/9-7-semiconductor-devices"
+        }
+      ]
+    },
+    "reason": "整流の基礎を残し、逆方向には絶対に流れないという過剰な断定を避けた。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Diodes節の順・逆バイアス、式9.36、降伏時に逆方向電流が増える説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000052",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "理想ダイオード4個の全波ブリッジ整流器に正弦波電圧を入力し、出力へ抵抗だけを接続する。平滑用のコンデンサなどがないとき、出力電圧の波形はどうなるか。",
+      "choices": [
+        "極性が一定で、大きさが周期的に変わる脈流になる",
+        "入力と同じく正負の極性が交互に変わる",
+        "極性も大きさも一定の直流になる",
+        "正の半周期だけが出力され、負の半周期は常に0になる"
+      ],
+      "correctIndex": 0,
+      "explanation": "ブリッジは入力の正負で電流の経路を切り替え、負荷での向きをそろえる。平滑していないため大きさは変動し、理想条件では入力正弦波の絶対値の形になる。",
+      "distractorRationales": [
+        "全波整流は両半周期を同じ極性へそろえる。",
+        "負荷側では極性がそろう。",
+        "整流だけでは出力の大きさは一定にならない。",
+        "これは半波整流に対応する形。"
+      ],
+      "sources": [
+        {
+          "title": "Analog Devices — Full Bridge Rectifier",
+          "url": "https://www.analog.com/en/resources/glossary/full-bridge-rectifier.html"
+        }
+      ]
+    },
+    "reason": "整流という名称のみの旧問を、平滑との違いを判別する設問へ改訂。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "How does a bridge rectifier work? の両半周期で別経路・同じ極性・pulsating DC、および全波と半波の違いを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000060",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "絶縁された二つの導体へ正負の電荷を分けて蓄え、電界にエネルギーを蓄えることを基本とする電子部品はどれか。",
+      "choices": [
+        "抵抗器",
+        "コンデンサ",
+        "インダクタ",
+        "ヒューズ"
+      ],
+      "correctIndex": 1,
+      "explanation": "コンデンサは絶縁された導体間で電荷を分離する。片側が＋Q、他方が−Qなら全体の電荷は0でも、導体間に電位差と電界を持てる。",
+      "distractorRationales": [
+        "電力を熱へ散逸する抵抗の性質とは異なる。",
+        "絶縁された導体と電界を利用する。",
+        "蓄えるエネルギーは主に電流による磁界に対応する。",
+        "過電流で溶断する保護部品であり、この蓄積機構ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 2 — 8-1-capacitors-and-capacitance",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/8-1-capacitors-and-capacitance"
+        }
+      ]
+    },
+    "reason": "旧来の「電荷を蓄える」を具体化し、全体に正味の電荷が必要という誤解を避けた。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "導体の分離、誘電体、等量逆符号の電荷、全体の中性、内部の電界の記述を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000092",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "抵抗RとコンデンサCだけを直列にし、初めは無充電のコンデンサを理想的な一定電圧源で充電する。この回路の時定数τはどれか。",
+      "choices": [
+        "R/C",
+        "1/(RC)",
+        "RC",
+        "C/R"
+      ],
+      "correctIndex": 2,
+      "explanation": "充電時の電圧はV꜀(t)＝V₀(1−e^(−t/RC))。時定数τ＝RCで、τ後には最終電圧の約63.2％となる。τは完全に充電し終える時刻ではない。",
+      "distractorRationales": [
+        "単位は秒にならない。",
+        "RCの逆数は時間の逆数である。",
+        "Ω×F＝sで、指数の分母となる。",
+        "単位は秒にならない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 2 — 10-5-rc-circuits",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits"
+        }
+      ]
+    },
+    "reason": "旧解説の複数正解扱いを訂正し、回路・初期電荷・電源の条件を明記。土木へ誤分類された重複を統合。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式10.8・10.9の指数応答とτ＝RCを確認。1−e⁻¹を独立計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000225"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000130",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "シリコン半導体で、価電子数の異なる不純物原子を制御して導入し、電子や正孔の濃度を調整する処理は何か。",
+      "choices": [
+        "ドーピング",
+        "焼なましによる残留応力の除去",
+        "表面の機械研磨",
+        "薄膜の膜厚測定"
+      ],
+      "correctIndex": 0,
+      "explanation": "ドーピングは半導体へ意図した不純物を導入し、電気的性質を調整する。ドナーやアクセプターによって、n型・p型の性質を与えられる。単に汚染を増やす操作ではない。",
+      "distractorRationales": [
+        "目的に合う不純物と量を制御して導入する処理。",
+        "熱処理だけを指す名称で、不純物の導入そのものとは異なる。",
+        "表面の形状を整える処理。",
+        "寸法の測定であり、キャリアを調整する導入処理ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 3 — 9-6-semiconductors-and-doping",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping"
+        }
+      ]
+    },
+    "reason": "用語だけの旧問に、意図した不純物導入とキャリア濃度の対応を明示。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Dopingの異なる価電子数の不純物、Siに対する5価ドナー・3価アクセプター、n型・p型の説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000180",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "単相交流回路で、負荷にかかる電圧と流れる電流は同じ周波数の正弦波とする。電圧の実効値120 V、電流の実効値2 A、位相差φについてcosφ＝0.8のとき、有効電力はいくらか。",
+      "choices": [
+        "240 W",
+        "96 W",
+        "300 W",
+        "192 W"
+      ],
+      "correctIndex": 3,
+      "explanation": "有効電力は一周期平均の電力で、正弦波の条件ではP＝VᵣₘₛIᵣₘₛcosφ。120×2×0.8＝192 Wとなる。実効値を用いるため、さらに1/2を掛けない。",
+      "distractorRationales": [
+        "力率を掛けていない。",
+        "実効値の計算に、振幅値で使う1/2を重ねている。",
+        "力率で割っている。",
+        "電圧と電流の実効値の積に力率を掛けている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 2 — 15-4-power-in-an-ac-circuit",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/15-4-power-in-an-ac-circuit"
+        }
+      ]
+    },
+    "reason": "cosφを任意のひずみ波形へ一般化しない。位相差の名称のみを問う旧問を統合。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "正弦波の位相差、式15.12、一周期平均と実効値の関係、およびP＝Vrms Irms cosφの記述を確認。数値は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000148"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000233",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "順方向能動領域で動作するNPNバイポーラトランジスタについて、直流電流増幅率βを100とする。ベース電流Iʙが30 μAのとき、この増幅率を用いて求めるコレクタ電流I꜀はいくらか。",
+      "choices": [
+        "30 μA",
+        "3 mA",
+        "3.03 mA",
+        "300 mA"
+      ],
+      "correctIndex": 1,
+      "explanation": "順方向能動領域ではI꜀＝βIʙ。100×30 μA＝3000 μA＝3 mAとなる。エミッタ電流はベース電流も含むため、同じ近似で3.03 mA。",
+      "distractorRationales": [
+        "ベース電流をそのまま答えている。",
+        "指定されたβとIʙの積である。",
+        "エミッタ電流に対応し、求めるコレクタ電流ではない。",
+        "単位換算が100倍ずれている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 3 — 9-7-semiconductor-devices",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/9-7-semiconductor-devices"
+        }
+      ]
+    },
+    "reason": "旧正解番号を訂正。「主に増幅される電流」という曖昧さを避け、動作領域・対象端子を指定。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Junction Transistor節の三端子と式9.37のIc＝βIBを確認。数値と電流保存の適用は独立計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000243",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "一様ドーピングの平面nMOSで、チャネル短縮によりソース・ドレイン領域が空乏層電荷の一部を担い、ゲートが担う割合が減る。この電荷共有の寄与だけを考え、他の条件を固定すると、しきい値電圧は長チャネルの場合よりどうなるか。",
+      "choices": [
+        "高くなる",
+        "変わらない",
+        "低くなる",
+        "必ず0 Vになる"
+      ],
+      "correctIndex": 2,
+      "explanation": "ゲートが担う空乏層電荷の寄与が小さくなるため、しきい値電圧は低下する。ここで扱うのは一様ドーピングでの電荷共有によるロールオフであり、全ての素子構造・ドーピング分布で同じ変化を保証する主張ではない。",
+      "distractorRationales": [
+        "指定された電荷共有の寄与と逆向き。",
+        "ゲートに必要な電荷の寄与が変化している。",
+        "しきい値を構成する空乏層電荷の項が小さくなる。",
+        "低下しても、他の寄与もあるため必ず0にはならない。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 6.774 — Lecture 8, Dopant diffusion and profile measurement",
+          "url": "https://ocw.mit.edu/courses/6-774-physics-of-microfabrication-front-end-processing-fall-2004/1usKzT5lXIFBbXrwHd6MmOD3PbE3Z9HPO_transcript.pdf"
+        }
+      ]
+    },
+    "reason": "旧正解番号を訂正。チャネル短縮とドレイン電圧による効果を混同せず、電荷共有のモデルへ限定。",
+    "parameters": {
+      "b": 1.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "講義のslide 8に対応する逐語記録3ページ目末〜4ページ目の、一様濃度の長・短チャネル比較、電荷共有、しきい値の第三項の低下を照合。後続のドーピング分布による制御も確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-noninverting-amplifier-gain",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "理想演算増幅器の＋入力へ信号を入れ、出力から−入力へ20 kΩ、−入力から接地へ5 kΩを接続する。負帰還が働く線形動作範囲で、出力電圧/入力電圧はいくらか。",
+      "choices": [
+        "＋5",
+        "＋4",
+        "−4",
+        "＋1.25"
+      ],
+      "correctIndex": 0,
+      "explanation": "非反転増幅回路では、−入力の電圧は分圧により出力の5/(20＋5)倍となり、理想的な負帰還下では＋入力と等しい。したがって増幅率は1＋20/5＝5。",
+      "distractorRationales": [
+        "1＋帰還抵抗/接地側抵抗となる。",
+        "非反転回路の1を落としている。",
+        "反転増幅回路の式を適用している。",
+        "二つの抵抗の比を逆にしている。"
+      ],
+      "sources": [
+        {
+          "title": "Texas Instruments — Non-inverting amplifier circuit",
+          "url": "https://www.ti.com/lit/an/sboa271a/sboa271a.pdf"
+        }
+      ]
+    },
+    "reason": "回路の接続と適用条件から増幅率を見分ける独自設問。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Design DescriptionとDesign StepsのVo＝Vi(1＋R1/R2)、線形動作範囲の条件を確認。抵抗値と分圧の導出は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000221",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "二進数で与えたデジタル値を、それに対応するアナログの電圧や電流へ変換する回路はどれか。",
+      "choices": [
+        "ADC",
+        "CPU",
+        "RAM",
+        "DAC"
+      ],
+      "correctIndex": 3,
+      "explanation": "DACはデジタル値に対応するアナログ量を出力する。ADCはアナログ入力をデジタル値へ変える逆向きの変換。CPUの演算やRAMの記憶とは役割が異なる。",
+      "distractorRationales": [
+        "変換方向が逆。",
+        "主な役割は命令に従った演算と制御。",
+        "主な役割はデータの記憶。",
+        "デジタル値からアナログ量へ変換する。"
+      ],
+      "sources": [
+        {
+          "title": "Analog Devices — Digital-to-Analog Converters",
+          "url": "https://www.analog.com/en/product-category/digital-to-analog-converters.html"
+        }
+      ]
+    },
+    "reason": "機械工学への誤分類を訂正し、正答だけに変換方向を和訳した括弧を付けない。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭のbinary digital dataからanalog signalへの変換定義と、電圧・電流出力の分類を確認。製品性能の数値は用いない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000138",
+    "domain": "工学",
+    "subdomain": "電気・電子工学",
+    "content": {
+      "question": "半導体を用いる太陽電池が電気エネルギーを得る主な仕組みはどれか。",
+      "choices": [
+        "日射で水を沸騰させ、蒸気で発電機を回す",
+        "半導体が光を吸収して生じる電荷担体を電流として取り出す",
+        "日射で生じる二つの金属の温度差だけを利用する",
+        "あらかじめ蓄えた燃料の化学反応だけを利用する"
+      ],
+      "correctIndex": 1,
+      "explanation": "太陽電池は光の吸収によって生じる電子・正孔を利用して、光エネルギーを直接電気へ変換する。熱を経由してタービンを回す太陽熱発電とは機構が異なる。",
+      "distractorRationales": [
+        "太陽熱を熱機関に利用する仕組みである。",
+        "光電変換による発電の説明。",
+        "温度差による熱電変換と混同している。",
+        "太陽電池の光吸収による発電ではない。"
+      ],
+      "sources": [
+        {
+          "title": "U.S. Department of Energy — Solar Photovoltaic Cell Basics",
+          "url": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics"
+        }
+      ]
+    },
+    "reason": "旧解説の容量因子と稼働率の混同を除去し、太陽電池の原理へ絞った。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭の半導体の光吸収から電流を生じる説明を照合。製品効率・寿命・商用化の時点依存の記述は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材と機器メーカー・公的機関の技術解説を照合。設問・四肢・説明は独自の表現とし、例題・図表・製品データは転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
