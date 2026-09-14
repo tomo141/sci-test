@@ -1,0 +1,676 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000076",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "太陽系が属している銀河はどれか。",
+      "choices": [
+        "天の川銀河（銀河系）",
+        "アンドロメダ銀河（M31）",
+        "さんかく座銀河（M33）",
+        "大マゼラン雲"
+      ],
+      "correctIndex": 0,
+      "explanation": "太陽系は天の川銀河の内部にある。夜空の天の川は、この銀河の円盤を内側から見た姿に当たる。ほかの三つは、太陽系の属する銀河とは別の銀河。",
+      "distractorRationales": [
+        "太陽系が属する銀河。",
+        "天の川銀河とは別の銀河。",
+        "天の川銀河とは別の銀河。",
+        "天の川銀河に伴う別の銀河。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Solar System Facts",
+          "url": "https://science.nasa.gov/solar-system/solar-system-facts/"
+        }
+      ]
+    },
+    "reason": "銀河系の星数・公転周期の不要な断定を省き、所属する銀河を問う。同じ核心の旧問を統合。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Solar System FactsのIntroductionで太陽系の銀河系内の位置を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000152"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000072",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "太陽系の8惑星で、直径と質量がともに最大なのはどれか。",
+      "choices": [
+        "土星",
+        "木星",
+        "海王星",
+        "天王星"
+      ],
+      "correctIndex": 1,
+      "explanation": "木星は太陽系最大の惑星で、ほかの惑星をすべて合わせた質量よりも重い。最大の惑星を問うもので、太陽系全体で最も重い天体を問うものではない。",
+      "distractorRationales": [
+        "木星より小さく、質量も少ない。",
+        "指定した二つの量で最大の惑星。",
+        "木星より小さく、質量も少ない。",
+        "木星より小さく、質量も少ない。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Jupiter Resources",
+          "url": "https://science.nasa.gov/solar-system/resources/resource-packages/jupiter-resources/"
+        }
+      ]
+    },
+    "reason": "大きさの意味を直径と質量に限定し、同じ核心の三つの旧問を統合。",
+    "parameters": {
+      "b": -1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASA Jupiter ResourcesのOverviewで最大の惑星と他惑星合計を超える質量を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000157",
+      "10000000-0000-4000-8002-000000000043"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000070",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "月食が起こるときの配置と月の満ち欠けの組合せはどれか。",
+      "choices": [
+        "月が太陽と地球の間に入り、地上から太陽を隠す新月の配置",
+        "地球から見た太陽と月の方向が約90°離れた上弦の配置",
+        "月が地球の影に入る満月の配置",
+        "地球から見た太陽と月の方向が約90°離れた下弦の配置"
+      ],
+      "correctIndex": 2,
+      "explanation": "月食では地球の影が月にかかり、月は満月の位置にある。ただし月の軌道面には傾きがあるため、満月のたびに月食が起こるわけではない。",
+      "distractorRationales": [
+        "日食が起こり得る配置。",
+        "半月の配置で、地球の影に入る配置ではない。",
+        "月食が起こる配置。",
+        "半月の配置で、地球の影に入る配置ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Eclipses and the Moon",
+          "url": "https://science.nasa.gov/moon/eclipses/"
+        }
+      ]
+    },
+    "reason": "満月が月食の十分条件であるかのような解釈を避け、重複した旧月食問題を統合。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Lunar Eclipse BasicsとThe Moon’s Tilted Orbitで満月・地球の影・毎月起こらない理由を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000163",
+      "10000000-0000-4000-8002-000000000050"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000048",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "太陽系の惑星を、太陽からの軌道の順に並べたとき、最も内側にあるのはどれか。",
+      "choices": [
+        "金星",
+        "地球",
+        "火星",
+        "水星"
+      ],
+      "correctIndex": 3,
+      "explanation": "最も内側の惑星は水星で、その外側に金星・地球・火星が続く。太陽に最も近いことと、惑星の表面温度が最も高いことは同じではない。",
+      "distractorRationales": [
+        "水星の次に外側の惑星。",
+        "金星の次に外側の惑星。",
+        "地球の次に外側の惑星。",
+        "惑星の中で最も内側の軌道。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Mercury Facts",
+          "url": "https://science.nasa.gov/mercury/facts/"
+        }
+      ]
+    },
+    "reason": "瞬間的な距離ではなく軌道の順を問う形にし、定型文だけの誤答理由を置換。",
+    "parameters": {
+      "b": -1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASA Mercury Factsの冒頭・Introductionで太陽に最も近い惑星であることと、最も高温な惑星とは異なることを本文照合。惑星の軌道順はAbout the Planetsでも確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000121",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "太陽系の主小惑星帯は、主にどの二つの惑星の軌道の間に広がっているか。",
+      "choices": [
+        "火星と木星",
+        "地球と火星",
+        "木星と土星",
+        "土星と天王星"
+      ],
+      "correctIndex": 0,
+      "explanation": "主小惑星帯は火星と木星の軌道の間にある。小惑星がすべてこの領域に限られるという意味ではない。",
+      "distractorRationales": [
+        "主小惑星帯が広がる領域。",
+        "主小惑星帯の中心的な位置より内側。",
+        "主小惑星帯の中心的な位置より外側。",
+        "主小惑星帯よりさらに外側。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — About the Planets",
+          "url": "https://science.nasa.gov/solar-system/planets/"
+        }
+      ]
+    },
+    "reason": "太陽内部など極端な誤答肢を、惑星軌道の間の比較へ変更。主小惑星帯と小惑星全体の分布を区別。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "About the PlanetsのDwarf Planets/Ceresの段落でmain asteroid beltが火星・木星間にあることを本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000047",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "恒星のHR図で基本となる二つの物理量の組合せはどれか。",
+      "choices": [
+        "見かけの明るさと地球からの距離",
+        "光度と表面温度",
+        "質量と公転周期",
+        "年周視差と視線速度"
+      ],
+      "correctIndex": 1,
+      "explanation": "HR図は恒星が放つ光の量に対応する光度と、表面温度の関係を示す。絶対等級や色・スペクトル型で軸を表すこともある。地球から見た明るさだけでは、距離による違いも混ざる。",
+      "distractorRationales": [
+        "見かけの明るさには距離の影響があり、指定した基本の組合せではない。",
+        "恒星の状態や進化を比較するHR図の基本量。",
+        "HR図の基本となる二量ではない。",
+        "位置・距離や運動に関係する観測量。"
+      ],
+      "sources": [
+        {
+          "title": "ESA — A Hertzsprung-Russell diagram",
+          "url": "https://www.esa.int/ESA_Multimedia/Images/2004/10/A_Hertzsprung-Russell_diagram"
+        },
+        {
+          "title": "ESA Hipparcos — H-R Diagrams",
+          "url": "https://www.cosmos.esa.int/web/hipparcos/h-r-diagrams"
+        }
+      ]
+    },
+    "reason": "旧明るさの意味を光度と明確にし、天気図など無関係な図名での比較を改める。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "ESAの解説文でluminosityとtemperatureの対応を確認。ESA Hipparcosの索引本文で絶対等級MVと色B−Vを使うHR図の軸も確認。図の転載はしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000065",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "近傍の恒星の年周視差が0.20角度秒と正確に測れたとする。年周視差による距離の近似式から、この恒星までの距離は何パーセクか。",
+      "choices": [
+        "0.20パーセク",
+        "2.0パーセク",
+        "5.0パーセク",
+        "20パーセク"
+      ],
+      "correctIndex": 2,
+      "explanation": "年周視差pを角度秒、距離dをパーセクで表すとd＝1/pなので、1÷0.20＝5.0となる。年周視差は一年の見かけの往復移動の全幅ではなく、その振幅に相当する角度を使う。",
+      "distractorRationales": [
+        "視差の数値を距離として扱っている。",
+        "0.20の逆数ではない。",
+        "指定した単位で逆数を取った距離。",
+        "0.20の逆数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "日本天文学会 天文学辞典 — 年周視差",
+          "url": "https://astro-dic.jp/annual-parallax/"
+        },
+        {
+          "title": "日本天文学会 天文学辞典 — パーセク",
+          "url": "https://astro-dic.jp/parsec/"
+        }
+      ]
+    },
+    "reason": "年周視差の振幅と半年間の全移動角を区別し、単位と計算条件を明示。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "天文学辞典の年周視差の振幅の定義と、パーセクのd＝1/pを本文照合。1/0.20＝5も独立検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000068",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "炭素・酸素を主成分とし、電子の縮退圧で支えられる白色矮星を考える。冷たく非回転の標準モデルで、チャンドラセカール限界の代表値に最も近いのはどれか。",
+      "choices": [
+        "0.8太陽質量",
+        "2.2太陽質量",
+        "3.0太陽質量",
+        "1.4太陽質量"
+      ],
+      "correctIndex": 3,
+      "explanation": "この組成の標準的な限界質量は太陽質量の約1.4倍。値は電子当たりの核子数などの仮定に依存する。あらゆる白色矮星がこの質量まで成長する、あるいは必ず同じ経路で爆発するという主張ではない。",
+      "distractorRationales": [
+        "指定した限界の代表値より小さい。",
+        "指定した白色矮星の標準モデルの限界より大きい。",
+        "指定した白色矮星の標準モデルの限界より大きい。",
+        "指定した仮定でよく用いる代表値。"
+      ],
+      "sources": [
+        {
+          "title": "日本天文学会 天文学辞典 — チャンドラセカール限界質量",
+          "url": "https://astro-dic.jp/chandrasekhar-limit/"
+        }
+      ]
+    },
+    "reason": "組成とモデルを明示し、限界を超えると必ずIa型超新星になるという旧一般化を削除。同じ核心の旧問を統合。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "天文学辞典のゼロ温度電子縮退圧の定義と、μe＝2の場合の約1.46太陽質量という式を確認。設問は近い代表値を選ぶもので、精密値とはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000195"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000165",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "太陽系の惑星を組成・構造で分類するとき、地球型惑星に含まれる四つの組合せはどれか。",
+      "choices": [
+        "水星・金星・地球・火星",
+        "水星・金星・木星・土星",
+        "地球・火星・天王星・海王星",
+        "木星・土星・天王星・海王星"
+      ],
+      "correctIndex": 0,
+      "explanation": "水星・金星・地球・火星は、岩石質の地球型惑星に分類される。日本語の「内惑星」は通常、地球より内側を公転する水星と金星を指すため、この四つと同義に扱わない。",
+      "distractorRationales": [
+        "地球型惑星の四つ。",
+        "木星と土星は巨大ガス惑星。",
+        "天王星と海王星は巨大氷惑星。",
+        "太陽系外側の巨大惑星の組合せ。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — About the Planets",
+          "url": "https://science.nasa.gov/solar-system/planets/"
+        },
+        {
+          "title": "日本天文学会 天文学辞典 — 内惑星",
+          "url": "https://astro-dic.jp/inferior-planet/"
+        }
+      ]
+    },
+    "reason": "inner planetsを内惑星と直訳して地球・火星まで含めた旧説明を訂正。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASAのterrestrial planetsの構成と、日本天文学会の内惑星/inferior planetとinner planetの区別を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000057",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "IAUの2006年の太陽系の惑星の定義では、太陽を回り、自重でほぼ球形になることに加え、何が求められるか。",
+      "choices": [
+        "自分のまわりに衛星を一つ以上持つこと",
+        "軌道の近傍で力学的に卓越した存在になっていること",
+        "地表に液体の水があること",
+        "中心で水素核融合を続けていること"
+      ],
+      "correctIndex": 1,
+      "explanation": "定義には、自分の軌道の近傍を力学的に支配する条件が含まれる。近くに小天体が一つも残らないという意味ではない。太陽を公転するだけなら彗星や多くの小天体も該当するため、それだけでは惑星と決められない。",
+      "distractorRationales": [
+        "衛星を持つことはこの定義の必要条件ではない。",
+        "2006年の定義の第三の条件に対応する。",
+        "液体の水の有無はこの定義の必要条件ではない。",
+        "恒星に関わる性質で、惑星に要求する条件ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IAU — Pluto and the Solar System: The definition of a planet",
+          "url": "https://iauarchive.eso.org/public/themes/pluto/"
+        }
+      ]
+    },
+    "reason": "太陽を公転するだけで惑星とした旧問は彗星も正解となるため、採択年と太陽系内という適用範囲を明示して作り直す。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IAU archiveのThe definition of a planetで2006年の採択された三条件を本文照合。採択前の12惑星案とは区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000043",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "現在、地表の大部分に液体の水の海洋が広がっている太陽系の惑星はどれか。",
+      "choices": [
+        "火星",
+        "金星",
+        "地球",
+        "水星"
+      ],
+      "correctIndex": 2,
+      "explanation": "地球の地表には、長い期間にわたり液体の水を保つ海洋が広がっている。ほかの天体の過去の水や地下の海の有無を、この設問から否定するものではない。",
+      "distractorRationales": [
+        "現在の地表の大部分が液体の海洋に覆われてはいない。",
+        "現在の地表の大部分が液体の海洋に覆われてはいない。",
+        "指定した特徴を持つ惑星。",
+        "現在の地表の大部分が液体の海洋に覆われてはいない。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Facts About Earth",
+          "url": "https://science.nasa.gov/earth/facts/"
+        }
+      ]
+    },
+    "reason": "液体の水が存在するというだけの広い条件を、現在の惑星表面の海洋に限定。",
+    "parameters": {
+      "b": -1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASA Earth FactsのPotential for Lifeで地表の大部分を覆い、長期に液体で存在する水を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000185",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "銀河の形態分類で、中心付近を横切る恒星の棒状構造があり、そこから渦巻き腕が伸びるものはどれか。",
+      "choices": [
+        "楕円銀河",
+        "不規則銀河",
+        "棒を持たない渦巻銀河",
+        "棒渦巻銀河"
+      ],
+      "correctIndex": 3,
+      "explanation": "中心の棒状構造と渦巻き腕を持つ形態を棒渦巻銀河という。銀河の形の分類であり、棒が固体の棒として一体化しているという意味ではない。",
+      "distractorRationales": [
+        "指定した棒と渦巻き腕という形態ではない。",
+        "指定した規則的な棒と渦巻き腕の分類ではない。",
+        "設問では中心の棒を明示している。",
+        "指定した銀河の形態。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Hubble’s Barred and Booming Spiral Galaxy",
+          "url": "https://science.nasa.gov/missions/hubble/hubbles-barred-and-booming-spiral-galaxy/"
+        }
+      ]
+    },
+    "reason": "銀河と球状星団を混ぜた肢を、銀河の形態同士の比較に変更。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASAのUGC 6093の観測解説で、中心を横切る棒から腕が伸びるbarred spiralの本文を照合。画像は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000156",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "中心部での水素からヘリウムへの核融合を、現在の主要なエネルギー源としている太陽系の天体はどれか。",
+      "choices": [
+        "太陽",
+        "月",
+        "地球",
+        "火星"
+      ],
+      "correctIndex": 0,
+      "explanation": "太陽は恒星で、中心部の核融合が放射の主要なエネルギー源となる。一方、惑星や月も温度に応じて電磁波を放つため、単に「自ら光を発するか」だけで恒星と惑星を区別するのは不正確。",
+      "distractorRationales": [
+        "指定した核融合を続けている恒星。",
+        "現在の主要なエネルギー源として中心で水素核融合をしてはいない。",
+        "現在の主要なエネルギー源として中心で水素核融合をしてはいない。",
+        "現在の主要なエネルギー源として中心で水素核融合をしてはいない。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Our Sun: Facts",
+          "url": "https://science.nasa.gov/sun/facts/"
+        }
+      ]
+    },
+    "reason": "惑星・衛星の熱放射まで否定する旧自発光の条件を、水素核融合に限定。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASA Sun FactsのStructureで中心の水素からヘリウムへの核融合が熱・光の源になることを本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000062",
+    "domain": "地学",
+    "subdomain": "天文・宇宙",
+    "content": {
+      "question": "地球の南北の半球で、夏と冬が逆の時期になる主な理由はどれか。",
+      "choices": [
+        "地球の公転軌道が楕円で、太陽までの距離が季節で変わるため",
+        "地軸が公転面に垂直な方向から傾き、公転に伴って日照の受け方が変わるため",
+        "太陽表面の黒点の数が一年周期で増減するため",
+        "地球の自転により、昼と夜が一日に一回交代するため"
+      ],
+      "correctIndex": 1,
+      "explanation": "地軸の傾きにより、太陽光の当たり方と昼の長さが季節で変わる。一方の半球が太陽側に傾く時期には、他方は反対側に傾く。太陽との距離の変化だけでは、南北で逆になる季節を説明できない。",
+      "distractorRationales": [
+        "太陽までの距離変化は地球全体に関わり、指定した南北の逆転の説明ではない。",
+        "南北で異なる日照と季節を生む主要な仕組み。",
+        "太陽活動の代表的周期は約11年で、南北で逆になる季節の主因ではない。",
+        "昼夜の交代の説明で、一年を通じた季節の違いの説明ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Helio and You: Seasons on Earth, Mars, and Beyond",
+          "url": "https://science.nasa.gov/helio-and-you-seasons-on-earth-mars-and-beyond/"
+        },
+        {
+          "title": "日本天文学会 天文学辞典 — 歳差",
+          "url": "https://astro-dic.jp/precession/"
+        }
+      ]
+    },
+    "reason": "旧約23.4°の角度は公転面そのものからではなく法線からの傾き。南北で逆の季節となる機構を問う。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NASA HEATのWhy Do We Have Seasonsの本文で半球の傾きと季節を照合。日本天文学会の歳差の項で黄道の極からの地軸の傾きを確認。NASAの図説明の夏冬重複表現は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NASA・ESAの観測機関の解説、日本天文学会の用語解説、IAUの決議の説明で事実と適用範囲を照合。設問・肢・説明は独自に作成し、文章・演習問題・画像・図表を転載していない。"
+    }
+  }
+]
