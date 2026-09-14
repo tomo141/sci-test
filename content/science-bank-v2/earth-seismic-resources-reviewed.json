@@ -1,0 +1,572 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000158",
+    "domain": "地学",
+    "subdomain": "地震・地球物理",
+    "content": {
+      "question": "地震の記録で、同じ震源からの波が通常最初に到達する初動をつくるのはどれか。",
+      "choices": [
+        "S波",
+        "レイリー波",
+        "ラブ波",
+        "P波"
+      ],
+      "correctIndex": 3,
+      "explanation": "P波は最も速い地震波で、通常、地震計に最初の到達として記録される。S波はP波より遅く、レイリー波・ラブ波は表面波。個々の観測では伝播経路や検出できる振幅も考慮する。",
+      "distractorRationales": [
+        "P波より伝わる速度が遅い。",
+        "表面波で、通常の最初の初動ではない。",
+        "表面波で、通常の最初の初動ではない。",
+        "通常最初に到達する地震波。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — The Science of Earthquakes",
+          "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes"
+        }
+      ]
+    },
+    "reason": "古気候への旧誤分類を訂正し、同じ知識を問う旧2件を統合。津波を同じ種類の波の選択肢として混ぜない。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS The Science of EarthquakesのP波が先に到着する説明を確認。特定の観測点であらゆる波が必ず検出されるとはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000046",
+      "10000000-0000-4000-8003-000000000044"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000166",
+    "domain": "地学",
+    "subdomain": "地震・地球物理",
+    "content": {
+      "question": "地震でいう震源と震央の関係として適切なのはどれか。",
+      "choices": [
+        "震源は断層破壊が始まった点で、震央はその真上の地表の点である",
+        "震央は断層破壊が始まった点で、震源はその真上の地表の点である",
+        "震源は最大の被害が生じた地表の点で、震央は断層全体の中心である",
+        "震源は揺れを最初に検知した観測点で、震央は最後に検知した観測点である"
+      ],
+      "correctIndex": 0,
+      "explanation": "震源は断層の破壊が始まった点。震央はその地表への投影点である。実際に破壊する断層には広がりがあり、震央が必ず最大震度や最大被害の場所になるわけではない。",
+      "distractorRationales": [
+        "破壊開始点と地表への投影を区別している。",
+        "震源と震央が逆になっている。",
+        "被害地点や断層全体の中心で定義される用語ではない。",
+        "観測点の検知順序で定義される用語ではない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — The Science of Earthquakes",
+          "url": "https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes"
+        }
+      ]
+    },
+    "reason": "地球化学への旧誤分類と、深さだけから地表の揺れを一律に推定する解説を訂正。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGSのhypocenterとepicenterの定義を照合。破壊開始点と有限の断層面を区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000079",
+    "domain": "地学",
+    "subdomain": "地震・地球物理",
+    "content": {
+      "question": "標準的なマグニチュードと地震波の放出エネルギーの関係を使うと、マグニチュードが1大きい地震のエネルギーはおよそ何倍か。",
+      "choices": [
+        "約10倍",
+        "約32倍",
+        "約100倍",
+        "約1000倍"
+      ],
+      "correctIndex": 1,
+      "explanation": "標準的な関係ではエネルギー比は10の「1.5×マグニチュード差」乗。差が1なら10の1.5乗≒31.6で約32倍、差が2なら約1000倍。観測点の揺れの振幅や被害が同じ比になるという意味ではない。",
+      "distractorRationales": [
+        "エネルギーの標準的な倍率としては小さい。",
+        "10の1.5乗を丸めた約32倍。",
+        "この関係では差1ではなく、差が約1.33の場合に対応する。",
+        "この関係ではマグニチュード差2に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 震度・マグニチュード・地震情報について",
+          "url": "https://www.jma.go.jp/jma/kishou/know/faq/faq27.html"
+        }
+      ]
+    },
+    "reason": "地震モーメントや地点の振幅・被害を放射エネルギーと無条件に同一視しない。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "気象庁FAQの「標準的には」M差1で約32倍・差2で約1000倍という本文を確認。10の指数を独立検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000106",
+    "domain": "地学",
+    "subdomain": "地震・地球物理",
+    "content": {
+      "question": "剛性率μが一定の断層モデルで、すべった面積をA、平均すべり量をDとする。モーメントマグニチュードの計算の基礎となる地震モーメントM₀はどれか。",
+      "choices": [
+        "μA/D",
+        "μD/A",
+        "μAD",
+        "AD/μ"
+      ],
+      "correctIndex": 2,
+      "explanation": "地震モーメントはM₀＝μAD。SI単位ではPa×m²×m＝N·mとなる。放射された地震波のエネルギーとは異なる量で、単位の次元が一致することだけでは同じ物理量にならない。",
+      "distractorRationales": [
+        "平均すべり量で割っており、定義と次元が異なる。",
+        "断層面積で割っており、定義と次元が異なる。",
+        "剛性率・面積・平均すべり量の積。",
+        "剛性率で割っており、定義と次元が異なる。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Introduction to Finite-Fault Models",
+          "url": "https://earthquake.usgs.gov/data/finitefault/"
+        }
+      ]
+    },
+    "reason": "Mwをエネルギーそのものとする旧問を訂正し、存在しない「リヒター震度」の選択肢を除去。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Finite Faults本文の平均すべり×断層面積×剛性率とMwとの関係を確認。単位を独立検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000177",
+    "domain": "地学",
+    "subdomain": "資源・環境・防災・リモセン",
+    "content": {
+      "question": "水で飽和した緩い砂質地盤が、地震中に十分排水できず液状化する典型的な過程はどれか。",
+      "choices": [
+        "間隙水圧が上がり、土粒子の接触が支える有効応力が下がる",
+        "間隙水圧が上がり、土粒子の接触が支える有効応力も上がる",
+        "間隙水圧が下がり、土粒子の接触が支える有効応力が下がる",
+        "間隙水圧が下がり、土粒子の接触が支える有効応力も上がる"
+      ],
+      "correctIndex": 0,
+      "explanation": "排水が追いつかないと間隙水圧が増し、粒子同士の接触が受け持つ力が減る。これに伴ってせん断抵抗などが低下し、液体のような挙動を示しうる。起こりやすさは地盤・地下水・揺れの条件で変わる。",
+      "distractorRationales": [
+        "典型的な間隙水圧の増加と有効応力の減少。",
+        "水圧への荷重の移行と逆に、有効応力も増すとしている。",
+        "有効応力が減る方向は合うが、間隙水圧の変化が逆。",
+        "液状化する典型過程と水圧・有効応力の変化が逆。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — What are the Effects of Earthquakes? Ground Failure",
+          "url": "https://www.usgs.gov/programs/earthquake-hazards/what-are-effects-earthquakes"
+        }
+      ]
+    },
+    "reason": "壊れた旧選択肢を修復し、飽和・緩い粒状地盤・排水条件を指定。どの地盤でも必ず起こるとはしない。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Ground Failure本文の粒子接触から間隙水への荷重移行、排水制限時の水圧上昇を照合。説明内の古い深さ・堆積年代の数値を普遍的な境界には採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000124",
+    "domain": "地学",
+    "subdomain": "資源・環境・防災・リモセン",
+    "content": {
+      "question": "NOAAの津波観測システムDARTで、海底の観測装置が津波の通過に伴う変化を検出するために測る量はどれか。",
+      "choices": [
+        "海底の地盤の加速度",
+        "海底での地磁気の強さ",
+        "海水の電気伝導率",
+        "海底での水圧"
+      ],
+      "correctIndex": 3,
+      "explanation": "DARTの海底装置は水圧を測り、海水柱の高さの変化に関する情報を得る。観測は海面のブイなどを介して伝えられる。沿岸での津波の高さや到達時刻の予測には、観測と海底地形・伝播モデルなどを組み合わせる。",
+      "distractorRationales": [
+        "地震による地盤の揺れなどの量で、DARTが津波を捉えるために測る指定の量ではない。",
+        "地磁気の観測量で、DARTの指定の量ではない。",
+        "海水の性質に関する量で、DARTの指定の量ではない。",
+        "海水柱の変化を捉える指定された測定量。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Pacific Marine Environmental Laboratory — DART",
+          "url": "https://www.pmel.noaa.gov/edd/dart"
+        }
+      ]
+    },
+    "reason": "津波の到達時間予測の全情報を一つの海底装置に帰着する旧問を、観測する量へ限定。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "開発元NOAA PMELのDART本文でbottom pressure recorderと表面ブイの構成、水圧の監視を確認。通信の具体的な更新間隔は固定して出題しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000119",
+    "domain": "地学",
+    "subdomain": "資源・環境・防災・リモセン",
+    "content": {
+      "question": "人工衛星から地表を観測する次の方式のうち、自ら電磁波を地表へ送り、戻ってくる波を測る能動型の方式はどれか。",
+      "choices": [
+        "太陽光の反射を測る可視光画像観測",
+        "合成開口レーダ（SAR）による観測",
+        "地表が放つ熱赤外放射の観測",
+        "地表が自然に放つマイクロ波を測る放射計観測"
+      ],
+      "correctIndex": 1,
+      "explanation": "SARはマイクロ波を送信し、対象から戻る信号を受ける能動型の観測。太陽反射光や自然に放射される電磁波を受ける方式は受動型で、どちらもリモートセンシングに含まれる。",
+      "distractorRationales": [
+        "光源は観測装置が送る波ではなく太陽であり、受動型。",
+        "レーダが送信して戻る信号を測る能動型。",
+        "自然の熱放射を受ける受動型。",
+        "自ら照射せず自然放射を受ける受動型。"
+      ],
+      "sources": [
+        {
+          "title": "JAXA — 地球観測衛星と観測のしくみ",
+          "url": "https://www.satnavi.jaxa.jp/ja/satellite-knowledge/whats-eosatellite/observation/index.html"
+        }
+      ]
+    },
+    "reason": "リモートセンシングの総称だけを問う旧問を、能動・受動を区別する問いへ改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "JAXAの能動型・受動型の本文定義とSARの方式を照合。画像や表の転載はせず、赤域反射率など別段落の記述は採用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000114",
+    "domain": "地学",
+    "subdomain": "資源・環境・防災・リモセン",
+    "content": {
+      "question": "石油システムで、含まれる有機物から熱によって石油などを生成・供給する役割に着目した岩石の呼び名はどれか。",
+      "choices": [
+        "帽岩",
+        "貯留岩",
+        "根源岩",
+        "基盤岩"
+      ],
+      "correctIndex": 2,
+      "explanation": "根源岩は石油や天然ガスの供給源となる岩石。貯留岩は流体をためる役割、帽岩は漏出を抑える役割に着目した名称である。同じ地層が複数の役割を持つ場合もあり、これらを必ず別の岩石とする分類ではない。",
+      "distractorRationales": [
+        "石油・ガスの漏出を抑える封じ込めの役割に着目する。",
+        "生成・供給よりも流体をためる役割に着目する。",
+        "有機物からの生成・供給という指定の役割。",
+        "堆積層の下位などの地質学的な基盤を表し、指定された生成の役割の呼称ではない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Data Series 69-L — Geologic assessment of undiscovered oil and gas resources of the eastern Great Basin Province",
+          "url": "https://pubs.usgs.gov/publication/ds69L"
+        },
+        {
+          "title": "JOGMEC — 微生物起源ガス田を対象とした探鉱",
+          "url": "https://journal.jogmec.go.jp/oilgas/info-reports/info-reports_02035.html"
+        }
+      ]
+    },
+    "reason": "干酪根など表記のばらつきと壊れた旧説明を修正。根源岩と貯留岩の役割を分け、同じ地層に両方が成立する場合を除外しない。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS DS69-L抄録のsource rockのmaturation・generation・migrationとreservoirの区別、JOGMECの有機物に富む根源岩の熱分解起源の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000117",
+    "domain": "地学",
+    "subdomain": "資源・環境・防災・リモセン",
+    "content": {
+      "question": "栄養塩が過剰に流入した湖で藻類が大量に増え、その死骸が底層へ沈んだ。底層の酸素を消費し、貧酸素化につながる過程はどれか。",
+      "choices": [
+        "水面で大気中の酸素が水に溶け込む",
+        "生きた藻類が酸素を発生する光合成を行う",
+        "酸素の豊富な表層水が底層へ混ざる",
+        "微生物が有機物を好気的に分解する"
+      ],
+      "correctIndex": 3,
+      "explanation": "藻類などの有機物を微生物が好気的に分解すると酸素を消費する。酸素の供給や水の混合が追いつかないと貧酸素化しうる。藻類が存在すれば常に水中の酸素が多い、というわけではない。",
+      "distractorRationales": [
+        "水中への酸素の供給に当たり、指定した消費ではない。",
+        "酸素を発生する過程で、指定した消費ではない。",
+        "底層への酸素の供給に当たり、指定した消費ではない。",
+        "呼吸・分解によって酸素が消費される。"
+      ],
+      "sources": [
+        {
+          "title": "US EPA CADDIS — Nutrients",
+          "url": "https://www.epa.gov/caddis/nutrients"
+        }
+      ]
+    },
+    "reason": "深海魚など明白に無関係な旧選択肢を除き、過剰な生産から貧酸素へつながる機構を問う。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "EPA CADDIS Nutrientsの異栄養呼吸・分解による溶存酸素低下の本文を照合。全域・全時刻で必ず酸欠になるとはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000112",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "ガスを多く含む粘性の高いマグマが、減圧しながら上昇する場合、爆発的な噴火に結び付きやすい理由はどれか。",
+      "choices": [
+        "ガスが抜けにくく、蓄積した圧力や気泡の膨張でマグマが破砕されうる",
+        "粘性が高いと、ガスを含んでいても気泡は決して生じない",
+        "粘性の高いマグマでは、ガスが抵抗なくただちに抜ける",
+        "粘性だけで噴火様式が決まり、ガス量や上昇速度は関係しない"
+      ],
+      "correctIndex": 0,
+      "explanation": "高い粘性はガスの逃げにくさに関係し、ガス圧や膨張による破砕につながりうる。噴火の様式はガス量、上昇・噴出速度、組成などにも依存するので、粘性だけで一律には決まらない。",
+      "distractorRationales": [
+        "ガスの蓄積・膨張と破砕を関連付けている。",
+        "粘性が高いことは気泡が生じない条件ではない。",
+        "高粘性のマグマでガスが逃げにくい傾向と逆。",
+        "噴火に関わる他の重要な条件を除外している。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Volcanic Ash: Eruption Styles",
+          "url": "https://volcanoes.usgs.gov/volcanic_ash/eruption_styles.html"
+        },
+        {
+          "title": "USGS — Eruptions of Hawaiian Volcanoes, Lava viscosity and gas escape",
+          "url": "https://pubs.usgs.gov/gip/hawaii/page26.html"
+        }
+      ]
+    },
+    "reason": "高粘性だけで爆発を確定せず、ガスを含む上昇時の条件と傾向を指定。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGSのEruption Styles本文でガス・組成・温度・結晶・噴出速度、Hawaiian Volcanoes本文でガスの逃げにくさと圧力蓄積を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000197",
+    "domain": "地学",
+    "subdomain": "地震・地球物理",
+    "content": {
+      "question": "地球内核の地震学的研究でいう「P波速度の異方性」が意味するのはどれか。",
+      "choices": [
+        "P波の速度が深さだけで変わること",
+        "P波の速度が伝わる方向によって変わること",
+        "P波が内核をまったく通過できないこと",
+        "内核でP波とS波の速度が同じになること"
+      ],
+      "correctIndex": 1,
+      "explanation": "異方性は、ここでは波の速度が伝播方向に依存すること。内核の異方性の強さや方向は場所・深さによって違いうる。固体の内核はせん断波も伝えられ、液体外核でせん断波が伝わらないことと区別する。",
+      "distractorRationales": [
+        "深さによる不均質性だけでは、方向依存を意味しない。",
+        "P波速度の方向依存という指定された性質。",
+        "内核を通過するP波の観測と矛盾する。",
+        "方向依存の定義ではなく、P波とS波も同じ速度ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Ishii & Dziewoński (2002) — The innermost inner core of the earth: Evidence for a change in anisotropic behavior",
+          "url": "https://doi.org/10.1073/pnas.172508499"
+        },
+        {
+          "title": "Tkalčić & Phạm (2018) — Shear properties of Earth’s inner core constrained by a detection of J waves in global correlation wavefield",
+          "url": "https://researchportalplus.anu.edu.au/en/publications/shear-properties-of-earths-inner-core-constrained-by-a-detection-/"
+        }
+      ]
+    },
+    "reason": "旧誤答解説の「内核でS波は伝播しない」を訂正。結晶構造・配向の起源を唯一の確定済み機構として断定しない。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Ishii & Dziewoński(2002)の公開索引本文の伝播方向による速度差と内核内の変化を確認。ANUのTkalčić & Phạm(2018)原研究抄録で内核のJ波を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "earth-flood-map-assumptions",
+    "domain": "地学",
+    "subdomain": "資源・環境・防災・リモセン",
+    "content": {
+      "question": "洪水ハザードマップで浸水想定の色が塗られていない場所について、適切な読み方はどれか。",
+      "choices": [
+        "どんな降雨や河川の氾濫でも、浸水しないと保証される",
+        "過去に浸水した記録が一度もないことを意味する",
+        "地図が扱う河川や降雨などの条件外では浸水しうるため、着色の有無だけでは判断できない",
+        "色が塗られた場所より、地面の標高が必ず高い"
+      ],
+      "correctIndex": 2,
+      "explanation": "浸水想定は対象となる河川、降雨、計算条件などを前提としている。別の河川の氾濫、内水、想定と異なる降雨などでは、着色されていない場所でも浸水する場合がある。地図の対象と前提を併せて読む必要がある。",
+      "distractorRationales": [
+        "一定の前提を持つ想定を、無条件の保証にしている。",
+        "将来の想定の表示と、すべての過去の浸水履歴を混同している。",
+        "地図の前提と対象範囲を考慮している。",
+        "浸水想定の表示は、周囲との単純な標高順位ではない。"
+      ],
+      "sources": [
+        {
+          "title": "国土交通省 北海道開発局 旭川開発建設部 — 水害に備えてできること",
+          "url": "https://www.hkd.mlit.go.jp/as/tisui/a079ll0000003uqu.html"
+        }
+      ]
+    },
+    "reason": "新規。想定図の対象・前提と実際の現象を区別し、地図の空白を無条件の安全に読み替えない。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "国土交通省旭川開発建設部の本文で一定条件による地図と未着色地の浸水可能性、対象外の支川・内水・超過降雨などの説明を確認。個別地域の安全判定はしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究と研究機関・行政機関の取得できた本文・索引で事実を照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
