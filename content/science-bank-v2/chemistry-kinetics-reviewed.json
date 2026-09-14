@@ -1,0 +1,944 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000001",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "体積一定の均一系で、反応A→2Bだけが進む。化学量論係数で規格化した反応速度vの表し方はどれか。",
+      "choices": [
+        "v=−d[A]/dt=(1/2)d[B]/dt",
+        "v=d[A]/dt=(1/2)d[B]/dt",
+        "v=−d[A]/dt=2d[B]/dt",
+        "v=−2d[A]/dt=d[B]/dt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Aが1 mol減る間にBは2 mol増える。各成分の濃度変化を反応式の係数で割り、反応物の減少には負号を付けると同じvになる。",
+      "distractorRationales": [
+        "符号と化学量論係数の両方が一致する。",
+        "進行方向ではd[A]/dtは負なので、生成速度と同符号にはならない。",
+        "Bの増加速度はAの減少速度の2倍なので、2を掛けるのではなく割る。",
+        "右辺はBの生成速度であり、係数で規格化したvの2倍。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Chemical Reaction Rates",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-1-chemical-reaction-rates"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.1の係数で規格化した濃度の時間微分を照合。独自のA→2Bに対して物質収支から全肢を検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000002",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "同じ温度で同じ正味の反応を比較するとき、触媒の働きとして正しいのはどれか。",
+      "choices": [
+        "標準反応ギブズエネルギーの符号を反転させる",
+        "正味では再生される反応経路を与え、平衡へ近づく速度を上げる",
+        "平衡定数を触媒量に比例して大きくする",
+        "反応物と同じ化学量論で不可逆に消費され続ける"
+      ],
+      "correctIndex": 1,
+      "explanation": "触媒は反応途中で化学変化しても、触媒サイクル全体では再生される。反応経路と速度を変えるが、同じ温度の同じ反応の熱力学的平衡定数は変えない。",
+      "distractorRationales": [
+        "触媒は同じ反応の始状態・終状態の自由エネルギー差を反転しない。",
+        "触媒の速度論的な役割と正味の再生を表す。",
+        "平衡定数は触媒濃度に比例する量ではない。",
+        "正味で消費され続ける反応物とは役割が異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Catalysis",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-7-catalysis"
+        },
+        {
+          "title": "OpenStax — Chemistry 2e, Shifting Equilibria: Le Châtelier’s Principle",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.7の触媒の正味の再生と経路、§13.3 Effect of a Catalystの平衡定数不変を照合。旧8007/060は正解番号と肢説明が不一致。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000060"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000005",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "一定温度で初速度がv=k[A]²に従い、他の条件とkが変わらない。初濃度[A]を2倍にすると初速度は何倍か。",
+      "choices": [
+        "1倍",
+        "2倍",
+        "4倍",
+        "1/2倍"
+      ],
+      "correctIndex": 2,
+      "explanation": "指定された速度式に2[A]を代入するとk(2[A])²=4k[A]²。濃度依存性は実験で決めるもので、総括反応式の係数だけからは一般に決まらない。",
+      "distractorRationales": [
+        "Aに関して零次の場合の変化。",
+        "Aに関して一次の場合の変化。",
+        "二乗に比例する式から得られる。",
+        "ここでは濃度増加で速度が減少する式ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Rate Laws",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-3-rate-laws"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.3の速度式と実験的反応次数を照合。二乗の倍率を独立に検算。触媒濃度も無条件に一次とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000063",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "アレニウス式k=A exp(−E_a/RT)でAとE_aを温度によらない定数と近似する。ln kを縦軸、1/Tを横軸に取った直線の傾きはどれか。",
+      "choices": [
+        "E_a/R",
+        "−R/E_a",
+        "−E_a/(RT)",
+        "−E_a/R"
+      ],
+      "correctIndex": 3,
+      "explanation": "対数を取るとln k=ln A−(E_a/R)(1/T)。傾きは−E_a/R、切片はln Aとなる。この直線近似があらゆる温度範囲で成立するとは限らない。",
+      "distractorRationales": [
+        "符号が逆。",
+        "E_aとRの位置を逆にしている。",
+        "横軸の変数1/Tを傾きに含めている。",
+        "指定した座標での傾き。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Collision Theory",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.5のアレニウス式と線形表示を照合。旧8007/078の平衡定数を正解にする誤りを修正し、同じ式の旧3問を統合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000029",
+      "10000000-0000-4000-8007-000000000078"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000006",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "−d[A]/dt=k[A]に従う不可逆な一次反応で、k>0は一定とする。Aの半減期について正しいのはどれか。",
+      "choices": [
+        "ln 2/kで、Aの初濃度に依存しない",
+        "ln 2/kで、Aの初濃度に比例する",
+        "1/(k[A]₀)で、Aの初濃度に反比例する",
+        "[A]₀/(2k)で、Aの初濃度に比例する"
+      ],
+      "correctIndex": 0,
+      "explanation": "[A](t)=[A]₀ exp(−kt)が半分になる条件からexp(−kt)=1/2、したがってt=ln 2/k。初濃度はこの式から消える。",
+      "distractorRationales": [
+        "一次反応の式と依存性。",
+        "提示した式には初濃度がなく、比例するという後半が誤り。",
+        "−d[A]/dt=k[A]²の二次反応に対応する半減期。",
+        "−d[A]/dt=kの零次反応に対応する半減期。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Integrated Rate Laws",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-4-integrated-rate-laws"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.4 Half-Lives、First-Order Reactionsの導出と次数別の表を照合し、指数式から検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000007",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "単一の律速段階で近似できる多段階反応で、「律速段階」が指すのはどれか。",
+      "choices": [
+        "反応機構で最後に書かれた素過程",
+        "反応全体の進行速度を主に支配する素過程",
+        "最も安定な中間体を必ず生成する素過程",
+        "反応式の係数の和が最も大きい素過程"
+      ],
+      "correctIndex": 1,
+      "explanation": "律速段階は、指定条件で全体の速度を主に制限する段階。すべての反応に一つだけ明確な律速段階があるとは限らず、順番や係数だけでは決められない。",
+      "distractorRationales": [
+        "最後であることは律速の条件ではない。",
+        "全体の速度に対する支配的な役割を表す。",
+        "中間体の安定性だけでは、全体の速度支配は決まらない。",
+        "化学量論係数の和は、素過程の速さの順位を与えない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Reaction Mechanisms",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-6-reaction-mechanisms"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.6のrate-determining stepと前段階を伴う機構の説明を照合。次数が異なる速度定数の数値だけを比較する説明を避ける。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000017",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "反応のエネルギー障壁を越える過程で、遷移状態に対応するのはどれか。",
+      "choices": [
+        "反応前後で正味に再生される触媒そのもの",
+        "反応後に蓄積する安定な副生成物",
+        "反応経路上の障壁の頂上付近にある原子の配置",
+        "反応経路上のエネルギー極小にある中間体"
+      ],
+      "correctIndex": 2,
+      "explanation": "遷移状態は障壁を越える際の配置に対応する。中間体は経路上の極小として表されることがあり、遷移状態と区別される。",
+      "distractorRationales": [
+        "触媒という役割と、遷移状態という配置は同義ではない。",
+        "安定な生成物とは異なる。",
+        "単純な反応のエネルギー図での対応。",
+        "極小にある中間体は、障壁頂上の遷移状態ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Collision Theory",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.5 Figure 12.14の反応物・遷移状態・生成物と障壁を照合。活性化エネルギーと自由エネルギーを無条件に同一視しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000015",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "ラジカル連鎖反応で、ラジカルが反応して生成物を生み、新たなラジカルが次の反応を担う段階はどれか。",
+      "choices": [
+        "連鎖停止",
+        "連鎖開始",
+        "相分離",
+        "連鎖伝播（成長）"
+      ],
+      "correctIndex": 3,
+      "explanation": "連鎖伝播では反応を担うラジカルが引き継がれる。開始は最初のラジカルを作る段階、停止は反応を担うラジカルを失わせる段階。",
+      "distractorRationales": [
+        "ラジカルが失われ、連鎖を終える段階。",
+        "連鎖を始めるラジカルを作る段階。",
+        "物質が複数の相に分かれる現象。",
+        "ラジカルを次の反応へ引き継ぐ段階。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Organic Chemistry, Radical Halogenation",
+          "url": "https://openstax.org/books/organic-chemistry/pages/10-2-preparing-alkyl-halides-from-alkanes-radical-halogenation"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§10.2の開始・伝播・停止の区別を照合。特定の反応図や演習問題は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000004",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "ある光化学過程の量子収率を、光子と事象の個数で定義する。分母として使うのはどれか。",
+      "choices": [
+        "試料が吸収した光子数",
+        "試料へ入射した光子数",
+        "試料から蛍光として放出された光子数",
+        "試料が散乱した光子数"
+      ],
+      "correctIndex": 0,
+      "explanation": "量子収率は、定義した過程が起きた回数を吸収光子数で割る。入射光のうち吸収されなかった光子は、通常のこの定義の分母に含めない。",
+      "distractorRationales": [
+        "定義した事象数と対応する基準。",
+        "入射した光子すべてが吸収されるとは限らない。",
+        "蛍光量子収率なら分数の分子に当たる事象数であり、吸収光子の基準とは異なる。",
+        "散乱した光子は吸収した光子の数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — quantum yield",
+          "url": "https://goldbook.iupac.org/terms/view/Q04991"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book Q04991の索引から取得した定義本文で、defined events / photons absorbedを確認。個数と物質量の単位を混在させない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000069",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "分子が光を吸収して、より高いエネルギーの状態へ移る過程は何と呼ばれるか。",
+      "choices": [
+        "内部転換",
+        "光励起",
+        "蛍光放出",
+        "振動緩和"
+      ],
+      "correctIndex": 1,
+      "explanation": "光励起は光の吸収で励起状態を作る過程。光を放出する過程や、励起された後にエネルギーを失う過程と区別する。",
+      "distractorRationales": [
+        "通常は同じスピン多重度の電子状態間での無放射遷移を指す。",
+        "吸収によって励起状態を作る過程。",
+        "光の吸収ではなく放出に関する過程。",
+        "励起後に振動エネルギーを失う過程。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — photoexcitation",
+          "url": "https://goldbook.iupac.org/terms/view/P04613"
+        },
+        {
+          "title": "IUPAC Gold Book — internal conversion",
+          "url": "https://goldbook.iupac.org/terms/view/I03102"
+        },
+        {
+          "title": "IUPAC Gold Book — vibrational relaxation",
+          "url": "https://goldbook.iupac.org/terms/view/V06615"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book P04613の定義本文を索引から取得して確認。旧解説の「光励起は常に電子遷移」という限定と、リン光を単に遅延発光とする説明は除いた。 誤答肢はI03102の同じ多重度の無放射遷移、V06615の振動励起エネルギーの散逸も索引の定義本文で確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000009",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "ミカエリス・メンテン式v=V_max[S]/(K_m+[S])が成立し、K_m>0とする。[S]=K_mのときの初速度vはどれか。",
+      "choices": [
+        "V_max",
+        "2V_max",
+        "V_max/2",
+        "V_max/4"
+      ],
+      "correctIndex": 2,
+      "explanation": "[S]=K_mを代入すると分子がV_max K_m、分母が2K_mになり、v=V_max/2。K_mはこの式の下で半最大速度を与える基質濃度。",
+      "distractorRationales": [
+        "この式で基質濃度を十分大きくしたときの極限。",
+        "V_maxを超える値にはならない。",
+        "指定した基質濃度での値。",
+        "[S]=K_mでは分母は2K_mであり、4K_mではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — Michaelis constant",
+          "url": "https://goldbook.iupac.org/terms/view/M03891"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book M03891の定義と、Michaelis–Menten kineticsに従う場合という注記を索引本文で照合。指定した式への代入も検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000013",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "反応中間体Iに定常状態近似を使える時間範囲で、通常置く近似式はどれか。",
+      "choices": [
+        "[I]=0で、生成も消費も起きない",
+        "Iの生成速度だけを0とする",
+        "Iの消費速度だけを0とする",
+        "d[I]/dt≈0で、生成速度と消費速度がほぼ釣り合う"
+      ],
+      "correctIndex": 3,
+      "explanation": "定常状態近似では、中間体の正味の濃度変化を生成・消費に比べて小さいとして扱う。中間体が存在しない、反応が止まった、熱平衡であるという意味ではない。",
+      "distractorRationales": [
+        "濃度の時間変化が小さいことと、濃度そのものが0であることは異なる。",
+        "生成だけを止める近似ではない。",
+        "消費だけを止める近似ではない。",
+        "近似の内容を表す。"
+      ],
+      "sources": [
+        {
+          "title": "Patrick Fleming — Physical Chemistry, The Steady-State Approximation",
+          "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(Fleming)/12:_Chemical_Kinetics_II/12.05:_The_Steady-State_Approximation"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.5本文のd[I]/dtと、生成項−消費項≈0の式を照合。厳密な全時間一定ではなく、近似を使える時間範囲を明示した。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000008",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "非解離のLangmuir吸着モデルで、同等な独立サイトの各1か所に最大1分子が吸着する。定温で気体分圧P、吸着係数b>0とすると、被覆率θはどれか。",
+      "choices": [
+        "bP/(1+bP)",
+        "bP/(1−bP)",
+        "1/(1+bP)",
+        "1+bP"
+      ],
+      "correctIndex": 0,
+      "explanation": "空きサイトの割合は1−θ。吸着平衡からθ/(1−θ)=bPとなり、θ=bP/(1+bP)。低圧で0に近づき、高圧で1に近づく単分子層モデル。",
+      "distractorRationales": [
+        "指定した平衡と0≤θ≤1を満たす。",
+        "bP=1で発散し、単分子層の被覆率の範囲も破る。",
+        "被覆率ではなく、このモデルの空きサイトの割合。",
+        "P>0では1を超えるので被覆率にならない。"
+      ],
+      "sources": [
+        {
+          "title": "Roger Nix — Surface Science, Langmuir Isotherm from Equilibrium Considerations",
+          "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Surface_Science_(Nix)/03:_The_Langmuir_Isotherm/3.02:_Langmuir_Isotherm_-_derivation_from_equilibrium_considerations"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§3.2の非解離吸着、固定サイト、θ=bP/(1+bP)、被覆率によらない吸着係数の条件を確認。資料の固有の図や説明表現は使っていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000011",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "蛍光の単純な動的消光モデルで、吸収光量などを一定に保ち、静的消光や内部フィルター効果を無視できる。消光剤濃度[Q]と蛍光強度比I₀/Iの関係はどれか。",
+      "choices": [
+        "I₀/I=K_SV/[Q]",
+        "I₀/I=1+K_SV[Q]",
+        "I₀/I=1−K_SV[Q]",
+        "I₀/I=exp(−K_SV[Q])"
+      ],
+      "correctIndex": 1,
+      "explanation": "Stern–Volmer式はI₀/I=1+K_SV[Q]。この動的消光モデルではK_SV=k_qτ₀で、k_qは消光の二分子速度定数、τ₀は消光剤がないときの寿命。直線性だけで機構を一意に確定はできない。",
+      "distractorRationales": [
+        "消光剤がない極限で比が1にならない。",
+        "指定したモデルの式。",
+        "消光が強まるとIは下がるため、I₀/Iは増える。",
+        "この式では濃度増加とともに比が減少してしまう。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — Stern–Volmer kinetic relationships",
+          "url": "https://goldbook.iupac.org/terms/view/S06004"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book S06004の索引から取得した全定義の式(1)(2)と寿命の式を照合。動的消光、同じ吸収条件を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000014",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "光照射下でAとBが互いに光異性化し、副反応を無視できる。光定常状態で[A]と[B]が一定に保たれる条件はどれか。",
+      "choices": [
+        "A→Bだけが起こり、B→Aは必ず停止する",
+        "AとBの自由エネルギーが必ず等しくなる",
+        "A→BとB→Aの変換速度が釣り合う",
+        "照射強度が必ず0になる"
+      ],
+      "correctIndex": 2,
+      "explanation": "一定の照射条件で順逆の変換速度が釣り合うと、反応が進み続けても組成は一定になる。その組成は一般に暗所での熱平衡組成とは異なる。",
+      "distractorRationales": [
+        "AもBも存在して一定なら、一方向の消費だけでは維持できない。",
+        "光を受ける定常状態は、この自由エネルギー条件で定義しない。",
+        "各異性体の生成と消失が釣り合う。",
+        "照射を止めることは、光定常状態の必要条件ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — photostationary state",
+          "url": "https://goldbook.iupac.org/terms/view/P04654"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book P04654の定義本文を索引から取得し、光吸収下の生成・消失速度の釣合いを確認。A⇄Bのみに限定して物質収支を検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000010",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "光増感の説明として正しいのはどれか。",
+      "choices": [
+        "反応する分子が直接吸収した光だけで変化し、他の分子は関与しない",
+        "物質を暗所で加熱し、熱だけで反応を開始する",
+        "分子が発光した波長を分光器で測る操作だけを指す",
+        "別の分子がまず光を吸収し、その結果として対象分子の光化学・光物理過程が起こる"
+      ],
+      "correctIndex": 3,
+      "explanation": "光増感では、最初に光を吸収する増感剤と、影響を受ける分子を区別する。反応機構の用語としては、増感剤が反応全体で消費されない場合に用いる。",
+      "distractorRationales": [
+        "他の分子による吸収を介する点を除いており、光増感の説明ではない。",
+        "光の吸収を介さない加熱だけの過程は該当しない。",
+        "観測操作だけでは増感過程を意味しない。",
+        "増感剤による最初の吸収と対象分子の変化を区別している。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — photosensitization",
+          "url": "https://goldbook.iupac.org/terms/view/P04652"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book P04652の定義本文と機構論での非消費条件を索引本文で確認。増感を電子の一方向の供与だけに限定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000021",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "一次速度論的同位体効果の説明として最も適切なのはどれか。",
+      "choices": [
+        "同位体置換した原子の結合形成・切断が、律速段階または前平衡に関与して生じる速度への効果",
+        "同位体置換で反応速度が変われば、唯一の律速段階を必ず特定できること",
+        "同位体置換で陽子数が変わり、別の元素になることによる速度への効果",
+        "同位体置換した原子の結合は関係する段階で全く切れず形成もされない場合だけに限る効果"
+      ],
+      "correctIndex": 0,
+      "explanation": "一次同位体効果は、置換原子につながる結合の形成・切断に関係する。観測された効果には前平衡なども関わり得るため、大きな速度比だけから一つの律速段階を断定しない。",
+      "distractorRationales": [
+        "定義に含まれる結合変化と前平衡を表す。",
+        "複数段階の寄与があり、効果の大きさだけで唯一の機構とは決められない。",
+        "同位体は同じ元素で、陽子数は変わらない。",
+        "結合が形成・切断されない場合の二次同位体効果との区別が逆。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — primary isotope effect",
+          "url": "https://goldbook.iupac.org/terms/view/P04831"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book P04831のrate-controlling stepまたはpre-equilibrium stepの定義を索引本文で確認。旧問の律速段階だけへの限定を修正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000012",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "溶液中の電子移動を単純なMarcusモデルで記述するとき、再配向エネルギーλを構成するものとして適切なのはどれか。",
+      "choices": [
+        "反応の標準自由エネルギー変化だけ",
+        "分子内部の核配置の変化と、周囲の溶媒の分極配置の変化に伴う寄与",
+        "光子のエネルギーだけ",
+        "真空中で電子を無限遠へ取り去るエネルギーだけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "λは分子内部と周囲の再編成に対応するエネルギーの寄与を含む。反応の駆動力ΔG°や活性化障壁そのものとは区別される。対称な自己交換の単純モデルでは、障壁はλ/4となる。",
+      "distractorRationales": [
+        "駆動力ΔG°とλは独立に区別する量。",
+        "内圏の構造変化と外圏の溶媒分極の寄与。",
+        "熱的な電子移動にもλは現れ、吸収光子だけの量ではない。",
+        "イオン化エネルギーそのものとは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Rudolph A. Marcus — Electron Transfer Reactions in Chemistry: Theory and Experiment, Nobel Lecture 1992",
+          "url": "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Nobel Lectureの印刷pp.78–79、式(5b)(6)(8)をPDFの画像と本文で確認。λ=λ_o+λ_iとΔG°=0時の障壁を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000100",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "古典的な単純MarcusモデルでΔG‡=(λ+ΔG°)²/(4λ)、λ>0とする。λ・温度・速度式の前因子を一定にしたとき、−ΔG°>λの逆領域でΔG°をさらに負にするとどうなるか。",
+      "choices": [
+        "障壁は0のままで速度定数は増え続ける",
+        "障壁は下がり速度定数が増す",
+        "障壁が上がり速度定数が下がる",
+        "λが必ず負になる"
+      ],
+      "correctIndex": 2,
+      "explanation": "障壁はΔG°=−λで0となる。そこからΔG°をより負にすると二乗の項が増えるため、指定した条件では速度定数が下がる。反応自由エネルギーと反応熱は同一ではない。",
+      "distractorRationales": [
+        "0になるのはこの式ではΔG°=−λの点。",
+        "通常領域での傾向を逆領域へ延長している。",
+        "与えた障壁と速度式の条件から得られる。",
+        "λは正の一定値という条件であり、駆動力とは別。"
+      ],
+      "sources": [
+        {
+          "title": "Rudolph A. Marcus — Electron Transfer Reactions in Chemistry: Theory and Experiment, Nobel Lecture 1992",
+          "url": "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "印刷pp.78,80–82、式(5a)(5b)と逆領域の説明をPDFで確認。旧8007/100の正解番号を修正し、8005/033の同概念を統合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000033"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000039",
+    "domain": "化学",
+    "subdomain": "反応速度・触媒・光化学",
+    "content": {
+      "question": "Marcusの近似的な交差関係で、自己交換の速度定数をk₁₁,k₂₂、交差反応の平衡定数をK₁₂、補正因子をf₁₂とする。交差反応の速度定数k₁₂を与える標準的な形はどれか。",
+      "choices": [
+        "k₁₂≈k₁₁+k₂₂",
+        "k₁₂≈K₁₂/(k₁₁k₂₂)",
+        "k₁₂≈k₁₁k₂₂K₁₂f₁₂",
+        "k₁₂≈√(k₁₁k₂₂K₁₂f₁₂)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Marcus交差関係は、二つの自己交換と交差反応の平衡を結ぶ近似。平方根が必要で、補正因子をいつでも1としたり、あらゆる電子移動に厳密に成立すると扱ったりはしない。",
+      "distractorRationales": [
+        "単純な和では、駆動力と補正因子の依存性を表せない。",
+        "速度定数の単位も標準形の依存性も合わない。",
+        "積全体の平方根を取る操作が欠ける。",
+        "指定された記号での交差関係。"
+      ],
+      "sources": [
+        {
+          "title": "Rudolph A. Marcus — Electron Transfer Reactions in Chemistry: Theory and Experiment, Nobel Lecture 1992",
+          "url": "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、反応条件、近似、速度と平衡の区別を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Nobel Lecture印刷p.82の式(10)をPDFの本文・画像で照合。旧肢のアイリング／エアリングの重複と誤った説明を除去。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  }
+]

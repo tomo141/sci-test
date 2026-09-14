@@ -1,0 +1,945 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000024",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "アレニウスの酸の定義で、水に溶かしたときの特徴として適切なのはどれか。",
+      "choices": [
+        "水溶液中の水素イオン（オキソニウムイオン）を増やす",
+        "水溶液中の水酸化物イオンを増やす",
+        "必ず電子を放出して金属に変わる",
+        "水に溶けてもイオンを全く生じない"
+      ],
+      "correctIndex": 0,
+      "explanation": "アレニウスの酸は、水溶液中でH⁺、より具体的にはH₃O⁺などの水和した形を生じる物質として扱う。すべての酸塩基反応を記述する唯一の定義ではない。",
+      "distractorRationales": [
+        "指定された定義で酸を特徴づける。",
+        "アレニウスの塩基側の特徴。",
+        "酸塩基の定義と酸化還元を混同している。",
+        "酸の水溶液中での性質を表さない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Brønsted-Lowry Acids and Bases",
+          "url": "https://openstax.org/books/chemistry-2e/pages/14-1-bronsted-lowry-acids-and-bases"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.1のArrheniusの定義とhydroniumへの補足を照合。自由な裸の陽子だけが水中にあるという説明はしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000026",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "ルイス酸・塩基が付加体を作るとき、ルイス酸の役割はどれか。",
+      "choices": [
+        "結合に使う電子対を供与する",
+        "結合に使う電子対を受け入れる",
+        "必ず水素イオンを受け取る",
+        "必ず中性の水分子を放出する"
+      ],
+      "correctIndex": 1,
+      "explanation": "ルイス酸は電子対受容体、ルイス塩基は電子対供与体。プロトン移動を伴わない酸塩基反応も、この枠組みで扱える。",
+      "distractorRationales": [
+        "電子対供与体はルイス塩基。",
+        "ルイス酸の役割。",
+        "プロトン受容はブレンステッド塩基の説明で、ルイス酸の定義ではない。",
+        "水の生成はルイス酸塩基反応の必要条件ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Lewis Acids and Bases",
+          "url": "https://openstax.org/books/chemistry-2e/pages/15-2-lewis-acids-and-bases"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§15.2の電子対供与体・受容体と付加体を照合。酸と塩基の包含関係で別の肢も成立する旧分類問題を役割の問いへ変更。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000022"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000029",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "酸化還元反応で、ある化学種が電子を失う側の変化を何というか。",
+      "choices": [
+        "還元",
+        "中和",
+        "酸化",
+        "沈殿"
+      ],
+      "correctIndex": 2,
+      "explanation": "電子を失う側の変化は酸化。酸化数で記述すると、その原子の酸化数が増える方向に対応する。酸素そのものが関与しない酸化反応もある。",
+      "distractorRationales": [
+        "電子を受け取る側の変化。",
+        "酸と塩基の反応であり、電子を失うことによる分類ではない。",
+        "電子を失う側の変化。",
+        "溶液から固体が生じることであり、酸化の定義とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Classifying Chemical Reactions",
+          "url": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§4.2の酸化還元と酸化数増減の定義を照合。酸素との結合だけに限定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000061",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "湿った空気中で鉄がさびる過程で、金属鉄の鉄原子は主にどの変化を受けるか。",
+      "choices": [
+        "還元され、酸化数が下がる",
+        "融解し、鉄の液体になる",
+        "酸化数を変えずに気体になる",
+        "酸化され、酸化数が上がる"
+      ],
+      "correctIndex": 3,
+      "explanation": "金属鉄の酸化数0から、鉄(II)や鉄(III)を含む状態へ進む。通常のさびの形成には水と酸素が関わり、単なる状態変化とは異なる。",
+      "distractorRationales": [
+        "金属鉄の側の変化は還元ではない。",
+        "常温のさびの形成は鉄の融解ではない。",
+        "鉄が気化する現象ではない。",
+        "鉄が電子を失う側の変化に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Corrosion",
+          "url": "https://openstax.org/books/chemistry-2e/pages/17-6-corrosion"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§17.6の鉄表面の酸化と鉄(II)からさびに至る説明を照合。さびを単一の固定組成の化合物だけに限定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000030"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000070",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "過マンガン酸カリウムKMnO₄で、Kを+1、Oを−2として酸化数を割り当てると、Mnの酸化数はいくらか。",
+      "choices": [
+        "+7",
+        "+6",
+        "+4",
+        "+2"
+      ],
+      "correctIndex": 0,
+      "explanation": "化合物全体は電気的に中性なので、1+x+4(−2)=0。これを解くとMnの酸化数x=+7。酸化数は、実際の孤立したMn⁷⁺イオンがあるという意味ではない。",
+      "distractorRationales": [
+        "電荷収支から得られる値。",
+        "MnO₄²⁻なら得られる値で、KMnO₄とは異なる。",
+        "MnO₂でのMnに対応する値。",
+        "Mn²⁺イオンの酸化数に対応する値。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Classifying Chemical Reactions",
+          "url": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§4.2の酸化数の割り当て規則と全体の電荷収支を照合。KMnO₄への適用と全誤答の対応を独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000064",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "25℃の0.010 mol/LのHCl水溶液について、完全電離し、水の自己電離と活量係数のずれを無視すると、pHはいくらに近いか。",
+      "choices": [
+        "1",
+        "2",
+        "7",
+        "12"
+      ],
+      "correctIndex": 1,
+      "explanation": "この近似では[H⁺]≈0.010 mol/Lなので、pH≈−log₁₀(0.010)=2。厳密なpHの定義は水素イオンの活量に基づくため、濃度だけの式は近似として使う。",
+      "distractorRationales": [
+        "同じ近似で0.10 mol/L程度のH⁺に対応する。",
+        "指定した濃度と近似から得られる値。",
+        "25℃の中性付近であり、指定した酸の濃度に対応しない。",
+        "25℃の塩基性側の値であり、指定した塩酸には対応しない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, pH and pOH",
+          "url": "https://openstax.org/books/chemistry-2e/pages/14-2-ph-and-poh"
+        },
+        {
+          "title": "IUPAC Gold Book — pH",
+          "url": "https://goldbook.iupac.org/terms/view/P04524"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.2の常用対数による濃度近似とGold Book P04524の活量による定義を照合。旧正解番号12を修正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000074",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "弱酸HAとその共役塩基A⁻が十分な量ずつある緩衝液の性質として適切なのはどれか。",
+      "choices": [
+        "pHは溶質の種類によらず必ず7になる",
+        "酸や塩基をどれほど加えてもpHは全く変わらない",
+        "緩衝能の範囲で少量の酸や塩基を加えたとき、pH変化を小さくできる",
+        "水の自己電離だけでpHが決まり、HAとA⁻の比は関係しない"
+      ],
+      "correctIndex": 2,
+      "explanation": "加えた酸は主にA⁻、塩基は主にHAと反応するので、pHの変化が抑えられる。緩衝液にも容量があり、有限量の成分を使い切れば大きく変化する。",
+      "distractorRationales": [
+        "pHは酸の性質や成分比にも依存する。",
+        "緩衝作用には限界があり、変化が完全に0になるわけではない。",
+        "緩衝作用の範囲を含む説明。",
+        "共役酸塩基対の平衡と成分比が重要。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Buffers",
+          "url": "https://openstax.org/books/chemistry-2e/pages/14-6-buffers"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.6の緩衝作用とBuffer Capacityを照合。旧正解番号が強酸・強塩基の混合を指す誤りを修正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000081",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "HA⇄H⁺+A⁻の解離平衡について、活量係数を1と近似し、[HA]と[A⁻]を平衡濃度とする。ヘンダーソン・ハッセルバルヒ式はどれか。",
+      "choices": [
+        "pH=pK_a−log₁₀([A⁻]/[HA])",
+        "pH=pK_a×([A⁻]/[HA])",
+        "pH=K_a+log₁₀([A⁻]/[HA])",
+        "pH=pK_a+log₁₀([A⁻]/[HA])"
+      ],
+      "correctIndex": 3,
+      "explanation": "K_aの式をH⁺について解き、負の常用対数を取るとこの関係になる。調製時の濃度をそのまま使うときには、電離や添加による濃度変化が十分小さいかも確認する。",
+      "distractorRationales": [
+        "比を[A⁻]/[HA]としたままなら、対数の前は正号。",
+        "濃度比を直接pK_aに掛ける式ではない。",
+        "K_aではなく、その負の常用対数pK_aを用いる。",
+        "指定した濃度比と符号の組。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Buffers",
+          "url": "https://openstax.org/books/chemistry-2e/pages/14-6-buffers"
+        },
+        {
+          "title": "IUPAC Gold Book — pH",
+          "url": "https://goldbook.iupac.org/terms/view/P04524"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.6の解離式から対数式までを照合し、活量近似と平衡濃度を明示。初濃度近似の条件を区別。旧同文2件を統合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000035"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000031",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "酢酸水溶液を水酸化ナトリウムで中和するとき、Na⁺を除いた正味のイオン反応式はどれか。",
+      "choices": [
+        "CH₃COOH+OH⁻→CH₃COO⁻+H₂O",
+        "CH₃COOH+OH⁻→CH₃OH+CO₂",
+        "CH₃COOH+OH⁻→CH₃COO⁻+H₂",
+        "CH₃COOH+OH⁻→CH₃COOH₂⁺+O²⁻"
+      ],
+      "correctIndex": 0,
+      "explanation": "OH⁻が酢酸からプロトンを受け取り、水と酢酸イオンになる。酸が弱いことは、強塩基と中和しないことを意味しない。Na⁺はこの正味のプロトン移動には現れない。",
+      "distractorRationales": [
+        "原子と電荷の収支を満たす酸塩基反応。",
+        "通常の中和で酢酸の炭素骨格を分解する反応ではない。",
+        "水素ガスの発生ではなく、水が生成する。",
+        "OH⁻は酢酸へプロトンを付加する側ではなく、受け取る側。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Buffers",
+          "url": "https://openstax.org/books/chemistry-2e/pages/14-6-buffers"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.6の酢酸・酢酸イオン緩衝液への塩基添加を照合。正味のプロトン移動として原子・電荷収支を検算。pHが量比によらず常に一定になる説明は除去。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000071",
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "content": {
+      "question": "気体A⇄Bが平衡にある。温度と容積を一定にしてAだけを追加した直後、その後の正味の反応はどちらへ進むか。理想気体とし、副反応はないものとする。",
+      "choices": [
+        "B→Aへ進む",
+        "A→Bへ進む",
+        "正逆ともに完全に停止する",
+        "触媒を加えない限り方向は決まらない"
+      ],
+      "correctIndex": 1,
+      "explanation": "この反応の反応商はQ=p_B/p_A。Aの追加直後にQが小さくなってKを下回るため、Bが増える方向に進む。変化をすべて打ち消して、追加前と全く同じ組成に戻るという意味ではない。",
+      "distractorRationales": [
+        "Aを追加した直後のQ<Kとは逆の方向。",
+        "生成物側へ進み、Qが平衡値へ近づく。",
+        "平衡でも分子レベルの正逆反応は続いている。",
+        "触媒の有無はこの熱力学的な方向の決定条件ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Shifting Equilibria: Le Châtelier’s Principle",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§13.3の反応物追加と反応商の議論を確認。独自のA⇄Bで、定温・定容の条件からQの変化を検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000069",
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "content": {
+      "question": "N₂(g)+3H₂(g)⇄2NH₃(g)の正反応を発熱とする。理想気体で、気体の相が保たれる範囲を考える。圧縮・膨張は定温で行う。温度操作と圧縮・膨張をそれぞれ単独で行ったとき、どちらの操作もNH₃側を有利にする組はどれか。",
+      "choices": [
+        "加熱と圧縮",
+        "冷却と膨張",
+        "冷却と圧縮",
+        "加熱と膨張"
+      ],
+      "correctIndex": 2,
+      "explanation": "冷却は発熱方向を、定温での圧縮は気体の物質量が少ない側を有利にする。右辺は2 mol、左辺は4 molなので、圧縮はNH₃側を有利にする。平衡収率と生成速度は区別する。",
+      "distractorRationales": [
+        "圧縮は有利だが、加熱は発熱の正反応には不利。",
+        "冷却は有利だが、膨張は気体の多い反応物側を有利にする。",
+        "個別に考えた両操作がNH₃側に有利。",
+        "両操作とも指定した正反応側には不利。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Shifting Equilibria: Le Châtelier’s Principle",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§13.3の温度・圧縮の原理とHaber–Boschの反応式を照合。互いに競合する操作の合成結果を無条件に断定しない。本文の室温平衡定数の数値は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000034"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000056",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "電池の反応を記載した方向に進めるとn個の電子が移動する。反応商Qを活量で無次元に定義したとき、可逆起電力Eのネルンスト式はどれか。",
+      "choices": [
+        "E=E°+(RT/nF)ln Q",
+        "E=E°−(nF/RT)ln Q",
+        "E=E°−RT ln Q",
+        "E=E°−(RT/nF)ln Q"
+      ],
+      "correctIndex": 3,
+      "explanation": "Δ_rG=−nFEとΔ_rG=Δ_rG°+RT ln Qを組み合わせると得られる。Eは可逆な条件の起電力で、電流を流す実電池の端子電圧に無条件で等しいわけではない。",
+      "distractorRationales": [
+        "Qの定義を逆にしない限り符号が逆。",
+        "RT/nFの比を逆にしている。",
+        "nFで割らないとエネルギーと電圧の換算にならない。",
+        "指定した反応方向とQに対応する式。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Potential, Free Energy, and Equilibrium",
+          "url": "https://openstax.org/books/chemistry-2e/pages/17-4-potential-free-energy-and-equilibrium"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§17.4のΔGと電位、Nernst式の導出を照合。反応商、自然対数、反応方向、可逆起電力を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000051",
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "content": {
+      "question": "熱力学的平衡定数Kを無次元の活量で定義する。標準反応ギブズエネルギーΔ_rG°との関係はどれか。",
+      "choices": [
+        "Δ_rG°=−RT ln K",
+        "Δ_rG°=RT ln K",
+        "Δ_rG°=−RTK",
+        "Δ_rG°=−ln K/(RT)"
+      ],
+      "correctIndex": 0,
+      "explanation": "平衡ではΔ_rG=Δ_rG°+RT ln Q=0かつQ=Kなので、Δ_rG°=−RT ln K。一般に平衡で0になるのは実際の組成でのΔ_rGであり、Δ_rG°とは区別する。",
+      "distractorRationales": [
+        "平衡条件を代入して得られる。",
+        "符号が逆。",
+        "Kそのものではなく自然対数を使う。",
+        "エネルギーの次元にも合わない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Free Energy",
+          "url": "https://openstax.org/books/chemistry-2e/pages/16-4-free-energy"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§16.4 Free Energy and Equilibriumの式を照合。標準状態と実際の組成での反応ギブズエネルギーを区別し、Kの無次元化を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000024",
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "content": {
+      "question": "定温で、液体に希薄に溶ける気体の濃度が、その気体の分圧に比例するという近似則はどれか。化学反応による追加の取り込みはないものとする。",
+      "choices": [
+        "ラウールの法則",
+        "ヘンリーの法則",
+        "ダルトンの分圧の法則",
+        "アボガドロの法則"
+      ],
+      "correctIndex": 1,
+      "explanation": "ヘンリーの法則では、指定した濃度の定義に応じてC=kPなどと書く。比例係数は溶媒、気体、温度に依存し、定義によって逆数型の定数も使われる。",
+      "distractorRationales": [
+        "理想溶液成分の分圧を、そのモル分率と純物質の蒸気圧に結び付ける。",
+        "希薄な溶存気体の濃度と分圧の関係。",
+        "混合気体の全圧を各分圧の和として扱う法則。",
+        "同温同圧の理想気体の体積と物質量の関係。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Solubility",
+          "url": "https://openstax.org/books/chemistry-2e/pages/11-3-solubility"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§11.3のCg=kPgと温度・溶媒・気体による係数の違いを照合。全圧ではなく対象気体の分圧、希薄・非反応の条件を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000075"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000067",
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "content": {
+      "question": "非揮発性の溶質を含む理想溶液で、溶媒のモル分率をx、同じ温度の純溶媒の蒸気圧をp*とする。ラウールの法則による溶媒の蒸気圧pはどれか。",
+      "choices": [
+        "p=p*/x",
+        "p=(1−x)p*",
+        "p=xp*",
+        "p=p*+x"
+      ],
+      "correctIndex": 2,
+      "explanation": "理想溶液の溶媒の蒸気圧は、そのモル分率と純溶媒の蒸気圧の積になる。0<x<1ではp<p*であり、溶質による蒸気圧降下を表す。",
+      "distractorRationales": [
+        "x<1で純溶媒より高い蒸気圧となり、指定した式と逆。",
+        "1−xは二成分系なら溶質のモル分率で、溶媒の割合ではない。",
+        "ラウールの法則に対応する。",
+        "圧力と無次元量をそのまま足すことはできない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Colligative Properties",
+          "url": "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§11.4のRaoultの式と非揮発性溶質の条件を照合。理想溶液と温度を限定して全肢を検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000059",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "化学反応に伴う熱の出入りを、校正した熱容量と温度変化などから測る装置はどれか。",
+      "choices": [
+        "分光光度計",
+        "質量分析計",
+        "クロマトグラフ",
+        "カロリメーター（熱量計）"
+      ],
+      "correctIndex": 3,
+      "explanation": "熱量計は反応などによる熱の移動を測定する。温度変化だけでなく装置や試料の熱容量、熱損失などを考慮する。定圧と定容の測定で直接対応する熱力学量は異なる。",
+      "distractorRationales": [
+        "光の吸収や透過などを調べる装置。",
+        "イオンの質量と電荷に関係する分析を行う装置。",
+        "成分の分離に利用する装置。",
+        "熱の出入りを測る装置。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Calorimetry",
+          "url": "https://openstax.org/books/chemistry-2e/pages/5-2-calorimetry"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§5.2の熱量計、校正された熱容量と温度変化による熱の測定を照合。熱と温度を同一量として扱わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000087",
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "content": {
+      "question": "均一な多成分の単純圧縮系で、温度と圧力を一定にして組成を変える。化学ポテンシャルμ_iと物質量n_iに関するGibbs–Duhemの関係はどれか。",
+      "choices": [
+        "Σ_i n_i dμ_i=0",
+        "すべての成分でμ_i=0",
+        "すべての異なる成分でμ_iが等しい",
+        "すべての成分でdμ_i=0"
+      ],
+      "correctIndex": 0,
+      "explanation": "G=Σ_i n_iμ_iを微分し、dG=−S dT+V dp+Σ_i μ_i dn_iと比較するとΣ_i n_i dμ_i=−S dT+V dp。定温・定圧では右辺が0になる。各μ_iの変化が個別に0という意味ではない。",
+      "distractorRationales": [
+        "指定した条件での化学ポテンシャル間の制約。",
+        "化学ポテンシャルの値が0になるという式ではない。",
+        "異なる成分の化学ポテンシャルが等しいという条件ではない。",
+        "組成変化で各μ_iは変わり得るが、加重和に制約がある。"
+      ],
+      "sources": [
+        {
+          "title": "Paul Ellgen — Thermodynamics and Chemical Equilibrium, Gibbs-Duhem Equation",
+          "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Thermodynamics_and_Chemical_Equilibrium_(Ellgen)/14:_Chemical_Potential_-_Extending_the_Scope_of_the_Fundamental_Equation/14.08:_Gibbs-Duhem_Equation"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.8のGの示量性と微分、Σn_i dμ_i=−S dT+V dp、定温定圧の式を照合。温度・圧力の条件を問題文へ戻した。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000090",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "温度や溶存種の活量などを指定して作るPourbaix図（電位–pH図）から直接読み取る情報はどれか。",
+      "choices": [
+        "金属が1時間で失う質量",
+        "電位とpHに応じた化学種の熱力学的な安定領域",
+        "保護皮膜が破壊されるまでの時間",
+        "電極反応の活性化エネルギー"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pourbaix図は指定条件の平衡に基づく安定領域を表す。腐食速度や皮膜の保護性能を直接与える図ではなく、実際の挙動には速度論や物質移動も関わる。",
+      "distractorRationales": [
+        "腐食速度の測定や速度論の情報が必要。",
+        "平衡図として与えられる情報。",
+        "皮膜の形成・損傷の速度や構造などが必要。",
+        "平衡状態の自由エネルギーと活性化障壁は別の情報。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 10.626 — Lecture 11: Pourbaix Diagram",
+          "url": "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/3810acd9feaaf35e0f5e0c4f64f8cf84_MIT10_626S14_Lec11.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "講義ノートp.3 §2.2を本文とPDF画像で照合。平衡のみ、速度情報は含まないこと、活量や温度の指定を確認。資料中の別箇所のpHの対数表現や電極式は転載・採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000019",
+    "domain": "化学",
+    "subdomain": "酸塩基・酸化還元・電気化学",
+    "content": {
+      "question": "温度などを一定にして電極反応を調べるTafelプロットで、通常比較する量の組はどれか。",
+      "choices": [
+        "吸光度と試料の光路長",
+        "電極の質量と溶液の体積",
+        "過電圧と、電流密度の絶対値の対数",
+        "反応熱と原子番号"
+      ],
+      "correctIndex": 2,
+      "explanation": "過電圧η=E−E_eqと電流密度の絶対値の対数の関係から速度論の手掛かりを得る。対数の底や電流の規格化を明示し、物質移動などの影響も区別して評価する。",
+      "distractorRationales": [
+        "光吸収の関係であり、Tafelプロットの軸ではない。",
+        "この組だけでは電流の電位依存性を表さない。",
+        "電極の速度論で用いる関係。",
+        "Tafelプロットが扱う量ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC — Quantities, Units and Symbols in Physical Chemistry, 4th Edition, Abridged Version",
+          "url": "https://iupac.org/wp-content/uploads/2025/03/IUPAC-GB4Abridged.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "第4版abridgedの印刷p.60（PDF p.72）のη、電流密度j=I/A、Tafel slopeを画像と本文で照合。自然対数と常用対数で傾きの数値が変わること、同じ面積でIからjへ換算することを区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000068",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "通常の希薄なフェノールフタレイン指示薬について、pH約7の水溶液からpH約10の水溶液に変えたときの色の変化はどれか。",
+      "choices": [
+        "青から黄色",
+        "赤から無色",
+        "黄色から緑",
+        "無色から赤系の色（ピンク〜赤紫）"
+      ],
+      "correctIndex": 3,
+      "explanation": "フェノールフタレインはこの範囲では、低いpH側で無色、弱い塩基性側で赤系に発色する。赤と赤紫の呼び方だけを別の正誤にしない。すべての塩基性条件で同じ色と一般化はしない。",
+      "distractorRationales": [
+        "この指示薬の指定範囲での変化ではない。",
+        "指定したpHを上げる方向と逆。",
+        "この指示薬の色の組ではない。",
+        "指定した範囲での色の変化。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Acid-Base Titrations",
+          "url": "https://openstax.org/books/chemistry-2e/pages/14-7-acid-base-titrations"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、活量と濃度、平衡と速度、温度や圧力の条件を明確化。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.7のphenolphthalein、無色からred/pinkへの変化と指示薬の変色域を照合。赤／赤紫を排他的な正誤にした旧肢を統合し、強塩基性の無限定な主張を除去。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・式の適用条件を一次資料や著者の教材で照合し、設問・全選択肢・解説を独自に作成。資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  }
+]
