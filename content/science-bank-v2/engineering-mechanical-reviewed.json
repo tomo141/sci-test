@@ -1,0 +1,472 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000096",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "損失のない歯車減速機が定常運転しており、出力軸の角速度の大きさは入力軸の1/4である。出力トルクの大きさは入力トルクの何倍か。",
+      "choices": [
+        "1/4倍",
+        "4倍",
+        "1倍",
+        "2倍"
+      ],
+      "correctIndex": 1,
+      "explanation": "定常運転で損失がなければ入出力の動力は等しい。動力P＝Tωなので、角速度が1/4になるとトルクは4倍になる。エネルギーや仕事率そのものが4倍になるわけではない。",
+      "distractorRationales": [
+        "速度とトルクを同じ比率で変えている。",
+        "同じ動力を小さい角速度で伝えるため4倍になる。",
+        "速度が変わるのに動力とトルクを両方一定にはできない。",
+        "この速度比に平方根の関係はない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Work and Power for Rotational Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion"
+        }
+      ]
+    },
+    "reason": "旧誤答欄の減速比10という別条件を除き、定常運転・トルクの大きさを明記。電気分野の同義旧問を統合。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "回転の仕事率P＝τωを確認し、定常・損失なしの動力釣合いへ適用。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000202"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000053",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "歯数18の外歯車が歯数54の外歯車を直接駆動する。駆動側が360 rpmで回転するとき、従動側の回転数の大きさはいくらか。",
+      "choices": [
+        "1,080 rpm",
+        "360 rpm",
+        "120 rpm",
+        "60 rpm"
+      ],
+      "correctIndex": 2,
+      "explanation": "かみ合う歯車の回転数は歯数に反比例する。従動側は360×18/54＝120 rpm。外歯車同士の回転方向は逆になるが、ここでは回転数の大きさを問う。",
+      "distractorRationales": [
+        "歯数比を逆に用いている。",
+        "歯数が等しい場合の値。",
+        "駆動側回転数に駆動側歯数/従動側歯数を掛けた値。",
+        "この歯数比は6:1ではなく3:1。"
+      ],
+      "sources": [
+        {
+          "title": "Yi Zhangほか — Introduction to Mechanisms, Chapter 7",
+          "url": "https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt7.html"
+        }
+      ]
+    },
+    "reason": "無関係な色温度やpHの四肢を速度比の誤りへ置換。減速比の旧問も同じ問題族として扱う。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "かみ合いによる速度比と歯数比の例を確認。設問の18・54・360は独自設定して再計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000222"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000134",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "回転軸を支え、相対運動に伴う摩擦を低減するために用いる機械要素はどれか。",
+      "choices": [
+        "歯車",
+        "軸受",
+        "カム",
+        "コイルばね"
+      ],
+      "correctIndex": 1,
+      "explanation": "軸受は軸を支持しながら相対運動を可能にする部品。転がり軸受では玉やころなどの転動体を使う。摩擦を小さくするが、実物の摩擦がゼロになるという意味ではない。",
+      "distractorRationales": [
+        "主にかみ合いによって回転やトルクを伝える。",
+        "支持と摩擦低減を担う部品。",
+        "輪郭によって従節へ所定の運動を与える。",
+        "弾性変形で力やエネルギーを蓄える。"
+      ],
+      "sources": [
+        {
+          "title": "NSK — Introduction to Bearings",
+          "url": "https://www.nsk.com/tools-resources/introduction-bearings/"
+        }
+      ]
+    },
+    "reason": "単なる正誤の定型解説を各機械要素の役割へ改訂。同義の旧2問を統合。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Bearings冒頭の回転軸の支持、Rolling Elements、摩擦低減の基本機能を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000058",
+      "10000000-0000-4000-8005-000000000179"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000071",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "自重と摩擦を無視できる水平な棒状のてこで、一定の荷重を静かに支える。支点から荷重までの距離は固定し、支点から力点までの距離だけを2倍にする。力はてこに垂直に加えるとき、必要な力は元の何倍か。",
+      "choices": [
+        "2倍",
+        "4倍",
+        "1倍",
+        "1/2倍"
+      ],
+      "correctIndex": 3,
+      "explanation": "支点まわりのモーメントの釣合いより、荷重×荷重側の腕＝加える力×力点側の腕。荷重側を変えず力点側の腕を2倍にすれば、必要な力は半分になる。",
+      "distractorRationales": [
+        "荷重側の腕を2倍にした場合との混同。",
+        "腕と力の関係は、この条件では二乗ではない。",
+        "荷重だけでなく力点側の腕も釣合いに関わる。",
+        "同じモーメントを2倍の腕で作るので力は半分。"
+      ],
+      "sources": [
+        {
+          "title": "Yi Zhangほか — Introduction to Mechanisms, Chapter 1",
+          "url": "https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt1.html"
+        }
+      ]
+    },
+    "reason": "荷重を遠ざけるのか力点を遠ざけるのか曖昧だった旧問を訂正。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "1.1.2のトルクと力の垂直距離、および荷重側・力点側のモーメントの説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000055",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "理想的な油圧装置で、二つのピストン面は同じ高さにあり、出力側の面積は入力側の9倍である。ピストンの重さと摩擦を無視し、両外面は同じ大気圧を受ける。静的に釣り合う出力側の力は入力側の何倍か。",
+      "choices": [
+        "9倍",
+        "3倍",
+        "1倍",
+        "1/9倍"
+      ],
+      "correctIndex": 0,
+      "explanation": "同じ高さの液体では圧力が等しく、大気圧を差し引いた圧力についてF入力/A入力＝F出力/A出力となる。面積比が9なら力の比も9。増力しても、無損失なら出力側の移動距離は短くなる。",
+      "distractorRationales": [
+        "力は同じ圧力に面積を掛けた値。",
+        "面積の比を長さの比へ平方根で戻す必要はない。",
+        "圧力は同じでも、面積が異なるので力は異なる。",
+        "面積比を逆にしている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Pascal’s Principle and Hydraulics",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/14-3-pascals-principle-and-hydraulics"
+        }
+      ]
+    },
+    "reason": "油圧という名称だけの旧問を、圧力と力の違いを識別する設問へ改訂。高さと外圧を指定。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "同じ高さの理想ピストンでF₁/A₁＝F₂/A₂となる説明と、摩擦を無視する条件を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000242",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "転がり軸受の基本定格寿命L₁₀が表すものはどれか。",
+      "choices": [
+        "潤滑剤を必ず交換する時期",
+        "全ての軸受が故障するまでの平均回転数",
+        "静止中に許容される最大荷重",
+        "同一条件の軸受群の90％が転がり疲労を生じずに到達する寿命"
+      ],
+      "correctIndex": 3,
+      "explanation": "L₁₀は同じ条件の軸受群を対象にした、信頼度90％の基本的な疲労寿命。個々の軸受の寿命を保証する値ではなく、潤滑剤の交換周期や全原因の故障時刻を直接意味しない。",
+      "distractorRationales": [
+        "保守周期は潤滑や運転環境なども踏まえて決める。",
+        "L₁₀は平均でも全数の故障時刻でもない。",
+        "荷重の定格と、回転数などで表す疲労寿命は別。",
+        "統計的な基本定格寿命の定義。"
+      ],
+      "sources": [
+        {
+          "title": "NSK — Dynamic Load Ratings and Fatigue Life",
+          "url": "https://www.nsk.com/tools-resources/abc-bearings/dynamic-load-ratings-and-fatigue-life/"
+        }
+      ]
+    },
+    "reason": "静定格荷重を正解としていた旧番号を訂正。平均寿命・保守期限・全原因の故障と区別。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Basic Rating Lifeの90％の信頼度、同一条件群、疲労によるフレーキングの定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-cam-dwell",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "回転するカムのある角度区間で、従節の位置が変わらず静止するよう設計されている。この区間を表す用語はどれか。",
+      "choices": [
+        "ドウェル",
+        "ライズ",
+        "リターン",
+        "バックラッシ"
+      ],
+      "correctIndex": 0,
+      "explanation": "カムが回転していても、従節を一定位置で休止させる区間をドウェルという。ライズやリターンは従節の位置を変化させる区間である。",
+      "distractorRationales": [
+        "カムの運動と従節の休止を両立させる区間。",
+        "従節の位置が上昇側へ変化する。",
+        "従節が元の位置へ戻る側に変化する。",
+        "歯車などの隙間による遊びで、カムの所定の休止区間とは別。"
+      ],
+      "sources": [
+        {
+          "title": "Yi Zhangほか — Introduction to Mechanisms, Chapter 6",
+          "url": "https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt6.html"
+        }
+      ]
+    },
+    "reason": "機構の運動設計を問う独自設問。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "6.4のMotion eventsでrise、dwell、returnと、dwellで従節が休止することを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-slider-crank-motion",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "クランクが連続回転できる標準的なスライダクランク機構では、クランクの回転とスライダのどの運動を相互に変換するか。",
+      "choices": [
+        "一方向に進み続ける等速直線運動",
+        "軸方向位置を変えない回転運動",
+        "往復する直線運動",
+        "必ず一定速度で動く円運動"
+      ],
+      "correctIndex": 2,
+      "explanation": "回転するクランクとスライダを連接棒で結ぶと、スライダは案内に沿って往復する。クランクの角速度が一定でもスライダの速度は一般に一定ではない。",
+      "distractorRationales": [
+        "スライダは行程の端で折り返す。",
+        "この機構のスライダは案内に沿って並進する。",
+        "回転と直線往復運動を結ぶ基本的な機構。",
+        "スライダの軌跡は直線で、速度も一定とは限らない。"
+      ],
+      "sources": [
+        {
+          "title": "Yi Zhangほか — Introduction to Mechanisms, Chapter 5",
+          "url": "https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt5.html"
+        }
+      ]
+    },
+    "reason": "機構の変換と速度の一定性を区別する独自設問。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "スライダクランクと、回転・直線運動の変換、ピストン機構の説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-gear-backlash",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "歯車の回転方向を反転すると、歯面間の隙間を詰める間だけ入力が動いても出力が動かない。この遊びに対応する用語はどれか。",
+      "choices": [
+        "クリープ",
+        "座屈",
+        "加工硬化",
+        "バックラッシ"
+      ],
+      "correctIndex": 3,
+      "explanation": "かみ合いの隙間による遊びをバックラッシという。反転時の位置決めに影響する。一方で潤滑や熱膨張などを考慮した適切な隙間も必要で、単に隙間をなくせば常に良いとは限らない。",
+      "distractorRationales": [
+        "持続荷重下で時間とともに進む変形。",
+        "圧縮などによって生じる構造の不安定現象。",
+        "塑性加工による強度の増加。",
+        "歯面間の隙間に起因する反転時の遊び。"
+      ],
+      "sources": [
+        {
+          "title": "Brian Dengel — A primer on backlash, its purpose in gear designs",
+          "url": "https://khkgears.us/media/1n2lxhd5/gear-solutions_khk_a-primer-on-backlash-and-its-purpose-in-gear-designs.pdf"
+        }
+      ]
+    },
+    "reason": "公称の速度比とは別に、反転時の遊びを問う独自設問。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "歯溝の幅と相手歯厚の差としての定義、反転時の位置決め、潤滑・熱膨張のための隙間を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-ball-bearing-life-load",
+    "domain": "工学",
+    "subdomain": "機械工学",
+    "content": {
+      "question": "玉軸受について、基本動定格荷重Cを一定とし、基本定格寿命をL₁₀＝(C/P)³［百万回転］で計算する。動等価荷重Pだけを2倍にすると、L₁₀は元の何倍になるか。",
+      "choices": [
+        "1/2倍",
+        "1/8倍",
+        "2倍",
+        "8倍"
+      ],
+      "correctIndex": 1,
+      "explanation": "式のPを2Pへ置き換えると(C/(2P))³＝(1/8)(C/P)³。荷重を2倍にすると基本定格寿命は1/8となる。この指数3は玉軸受の基本式で、ころ軸受の指数とは区別する。",
+      "distractorRationales": [
+        "荷重への依存を一次式と取り違えている。",
+        "分母の荷重比を3乗した逆数。",
+        "荷重増大によって疲労寿命が長くなる式ではない。",
+        "3乗は正しいが、増減の向きが逆。"
+      ],
+      "sources": [
+        {
+          "title": "NSK — Dynamic Load Ratings and Fatigue Life",
+          "url": "https://www.nsk.com/tools-resources/abc-bearings/dynamic-load-ratings-and-fatigue-life/"
+        }
+      ]
+    },
+    "reason": "名称の定義とは別に、指定した定格モデルによる負荷の影響を問う独自設問。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "玉軸受のL₁₀＝(C/P)³と単位、ころ軸受の指数10/3との区別を確認。設問の2倍による比は独立計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材と製造者の技術資料の該当本文を照合。設問・四肢・説明は独自作成し、例題・図表・製品データを転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
