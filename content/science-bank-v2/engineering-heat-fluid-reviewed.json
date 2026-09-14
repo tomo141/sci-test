@@ -1,0 +1,466 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000208",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "非圧縮・非粘性流体の定常流れで、同じ流線上にある同じ高さの2点を比べる。途中にポンプやタービンがないとき、ベルヌーイの式からいえることはどれか。",
+      "choices": [
+        "流速が大きい点ほど静圧も高い",
+        "流速が大きい点ほど静圧が低い",
+        "2点の静圧は流速によらず等しい",
+        "静圧と流速の積が2点で等しい"
+      ],
+      "correctIndex": 1,
+      "explanation": "この条件ではp＋ρv²/2が一定となる。流速の増加分だけ運動エネルギー密度が増え、静圧が下がる。高さ・損失・外部からの仕事が異なる場合へ、そのまま一般化しない。",
+      "distractorRationales": [
+        "指定条件では変化の向きが逆。",
+        "同じ流線でのエネルギー保存から従う。",
+        "流速が異なれば静圧にも差が必要。",
+        "一定となるのは静圧と運動エネルギー密度の和。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 1 — 14-6-bernoullis-equation",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/14-6-bernoullis-equation"
+        }
+      ]
+    },
+    "reason": "旧問の高さ・流線・仕事条件の不足を訂正。同義の名称問題2件を統合。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Energy Conservation節、式14.16、同一高さにしたベルヌーイの式を照合。教材の身近な事例の解釈は流用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000073",
+      "10000000-0000-4000-8005-000000000183"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000228",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "水平な円管内で、非圧縮ニュートン流体が十分発達した定常層流として流れている。管壁ですべりはない。管の半径・長さ・粘度を変えず、入口圧力−出口圧力の正の値を2倍にすると、層流が維持される範囲で平均流速はどうなるか。",
+      "choices": [
+        "1/2倍になる",
+        "変わらない",
+        "4倍になる",
+        "2倍になる"
+      ],
+      "correctIndex": 3,
+      "explanation": "ハーゲン・ポアズイユ則では平均流速はr²Δp/(8μL)。半径r・長さL・粘度μが一定なら、正の入口出口圧力差Δpに比例する。",
+      "distractorRationales": [
+        "圧力差に反比例するわけではない。",
+        "圧力差が流れの駆動力となる。",
+        "圧力差の二乗には比例しない。",
+        "式でΔpだけが2倍になる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 1 — 14-7-viscosity-and-turbulence",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/14-7-viscosity-and-turbulence"
+        }
+      ]
+    },
+    "reason": "符号付き圧力勾配が「大きい」という曖昧な旧表現を、正の入口出口圧力差へ変更。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式14.18・14.19の抵抗と流量、水平円管・層流の条件を照合。Qを断面積πr²で割り平均流速を導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000217",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "通常の静止流体の内部にある一点で、微小な面をさまざまな向きに考える。圧力と、その圧力による面への力の関係として正しいものはどれか。",
+      "choices": [
+        "圧力は同じスカラー値で、力は各面に垂直に働く",
+        "圧力は同じ値で、力は各面に平行に働く",
+        "面の向きによらず、力は重力と同じ向きにだけ働く",
+        "面の向きによって圧力は変わるが、力の向きは固定される"
+      ],
+      "correctIndex": 0,
+      "explanation": "静止流体の圧力は一点では向きによらないスカラー量。圧力による力は面の法線方向に作用する。深さの違う点で圧力が変わることとは別である。",
+      "distractorRationales": [
+        "圧力の等方性と、力の方向を区別している。",
+        "面に平行な力はせん断成分で、静圧の力ではない。",
+        "水平面以外にも、その面に垂直な圧力の力が働く。",
+        "一点での圧力は面の向きによらない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 1 — 14-1-fluids-density-and-pressure",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure"
+        }
+      ]
+    },
+    "reason": "「圧力の向き」という旧問を、圧力の値と力の向きの違いへ訂正。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "流体圧力はスカラー、圧力による力は面に垂直、静止流体はせん断を支えないという末尾の説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000059",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "厚さd、面積A、一定の熱伝導率kを持つ平板を考える。両面の温度差ΔTを一定に保ち、内部発熱のない一次元の定常熱伝導が成立している。厚さだけを2倍にすると、通過する熱量の時間当たりの大きさはどうなるか。",
+      "choices": [
+        "2倍になる",
+        "4倍になる",
+        "1/2倍になる",
+        "変わらない"
+      ],
+      "correctIndex": 2,
+      "explanation": "平板の定常熱伝導ではQ̇＝kAΔT/d。両面の温度差・面積・熱伝導率を保って厚さだけを2倍にすると、熱の移動率は半分になる。",
+      "distractorRationales": [
+        "厚さには反比例する。",
+        "面積を拡大する問題ではない。",
+        "式の分母dだけが2倍になる。",
+        "熱伝導率が同じでも経路の長さが変わる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 2 — 1-6-mechanisms-of-heat-transfer",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/1-6-mechanisms-of-heat-transfer"
+        }
+      ]
+    },
+    "reason": "熱伝導率の名称のみの旧問を、材料特性と形状の効果を区別する問いへ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式1.9のkAΔT/dと温度勾配の式を確認。教材例題の形状変更とは異なり、厚さのみ変更する条件を設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000137",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "翼の揚力について、「前縁で分かれた空気は上下の経路を通り、後縁へ必ず同時に到着する」と説明する。この説明の問題点として適切なものはどれか。",
+      "choices": [
+        "ベルヌーイの式は空気には適用できないこと",
+        "分かれた空気が同時に到着するという条件には根拠がないこと",
+        "翼の上面には圧力が作用しないこと",
+        "揚力は空気の流れの変化とは無関係なこと"
+      ],
+      "correctIndex": 1,
+      "explanation": "後縁での同時到着は物理法則が要求する条件ではない。正しい速度場・圧力場から力を求める必要があり、圧力による説明と流れの運動量変化による説明は両立する。",
+      "distractorRationales": [
+        "適用条件を満たす空気の流れには使える。",
+        "誤りは、通過時間を根拠なく等しいと置く点。",
+        "上面と下面の双方に圧力が働く。",
+        "流れの運動量変化は翼に働く力と結び付く。"
+      ],
+      "sources": [
+        {
+          "title": "NASA Glenn — Bernoulli and Newton",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bernoulli-and-newton/"
+        }
+      ]
+    },
+    "reason": "圧力差だけの旧説明を発展させ、広まっている誤った通過時間の仮定を識別する設問へ改訂。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "What is the argument? とGeneration of Liftの、equal transit仮説の誤り、上下両面の作用、保存則の両立を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000247",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "平衡近傍で流束Jᵢ＝ΣⱼLᵢⱼXⱼと書き、Xⱼを共役な熱力学的な力とする。微視的可逆性が成立し、外部磁場・回転がなく、対象2変数の時間反転に対する偶奇性が同じなら、オンサーガー相反関係が要求するのはどれか。",
+      "choices": [
+        "L₁₂＝0かつL₂₁＝0",
+        "L₁₁＝L₂₂",
+        "L₁₂L₂₁＝1",
+        "L₁₂＝L₂₁"
+      ],
+      "correctIndex": 3,
+      "explanation": "この条件では交差応答係数が対称になる。結合が消えることや対角成分が等しいことは要求しない。磁場・回転や異なる時間反転の偶奇性がある場合は、符号と場の反転を含む関係へ注意が必要。",
+      "distractorRationales": [
+        "相反性は交差応答が存在しないという条件ではない。",
+        "異なる過程の自己応答係数が等しいとは限らない。",
+        "交差係数の積を1へ固定する条件ではない。",
+        "指定した条件では交差係数を交換しても等しい。"
+      ],
+      "sources": [
+        {
+          "title": "S. D. Brechet — Onsager-Casimir reciprocal relations (2022)",
+          "url": "https://arxiv.org/pdf/2210.04289"
+        }
+      ]
+    },
+    "reason": "旧正解番号を訂正。相反関係を名称でなく係数の関係で問い、対称性の成立条件を明記。",
+    "parameters": {
+      "b": 1.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式33と式59〜61の時間反転の偶奇性、磁場と回転の反転を含む関係を確認し、同じ偶奇性・場0の形を適用。論文の導出全体の妥当性を検証したという記録ではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-flow-mass-continuity",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "分岐・漏れ・内部への蓄積がない定常流れの管について、2断面で密度がρ₁、ρ₂、面積がA₁、A₂、一様な流速がv₁、v₂である。圧縮性を無視しないとき、質量保存から一般に等しくなる量はどれか。",
+      "choices": [
+        "ρ₁A₁v₁とρ₂A₂v₂",
+        "A₁v₁とA₂v₂",
+        "ρ₁v₁とρ₂v₂",
+        "ρ₁A₁とρ₂A₂"
+      ],
+      "correctIndex": 0,
+      "explanation": "定常流れでは、時間当たりに入る質量と出る質量が等しい。質量流量はρAvである。密度が変化する流れでは体積流量Avが等しいとは限らない。",
+      "distractorRationales": [
+        "両断面の質量流量に対応する。",
+        "体積流量は密度が異なる場合に一致しない。",
+        "断面積の違いを考慮していない。",
+        "流速を含まず、時間当たりの流量になっていない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 1 — 14-5-fluid-dynamics",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/14-5-fluid-dynamics"
+        }
+      ]
+    },
+    "reason": "体積流量と質量流量を区別する独自設問。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Mass Conservationの式14.15、密度を含む質量流量と非圧縮の場合の簡約を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-reynolds-force-ratio",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "代表長さL、流速U、密度ρ、粘度μを用いたレイノルズ数Re＝ρUL/μが表す、力の相対的な大きさはどれか。",
+      "choices": [
+        "粘性力に対する表面張力の大きさ",
+        "重力に対する浮力の大きさ",
+        "粘性力に対する慣性力の大きさ",
+        "慣性力に対する圧縮性の大きさ"
+      ],
+      "correctIndex": 2,
+      "explanation": "レイノルズ数は慣性力と粘性力の代表的な比。粘性の影響や流れの相似を考える指標になるが、形状や条件を問わず一つの値で全ての層流・乱流を決めるものではない。",
+      "distractorRationales": [
+        "表面張力はこの定義の力の組合せに入らない。",
+        "重力加速度を含む相似数ではない。",
+        "分子が慣性、分母が粘性の代表的な寄与となる。",
+        "圧縮性を考える代表的な指標とは別。"
+      ],
+      "sources": [
+        {
+          "title": "NASA Glenn — Similarity Parameters",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/similarity-parameters/"
+        }
+      ]
+    },
+    "reason": "レイノルズ数の力学的意味を問う独自設問。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Reynolds Number節の慣性力/粘性力、ρVL/μ、実験と実機の相似を確認。単一の流速境界の記述は流用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-heat-exchanger-energy-balance",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "定常運転の熱交換器で、片側の液体が60 ℃から40 ℃へ冷える。質量流量は0.5 kg/s、比熱は一定で4.0 kJ/(kg·K)とする。相変化、軸仕事、運動・位置エネルギーの変化、圧力変化の影響を無視すると、この液体から取り去られる熱の移動率はいくらか。",
+      "choices": [
+        "10 kW",
+        "40 kW",
+        "80 kW",
+        "120 kW"
+      ],
+      "correctIndex": 1,
+      "explanation": "Q̇＝ṁcₚ(T入口−T出口)＝0.5×4.0×20＝40 kJ/s＝40 kW。物質の温度そのものではなく、入口と出口の温度差を使う。",
+      "distractorRationales": [
+        "質量流量と温度差だけを掛け、比熱を落としている。",
+        "質量流量×比熱×温度差の結果。",
+        "質量流量0.5を掛けていない。",
+        "出口との温度差でなく入口の60を使っている。"
+      ],
+      "sources": [
+        {
+          "title": "Armfield — HT36 Extended Tubular Heat Exchanger, Issue 4",
+          "url": "https://chme.nmsu.edu/_assets/images/HT36-Instruction-Manual-Issue-4.pdf"
+        }
+      ]
+    },
+    "reason": "熱流の時間当たりの量と熱エネルギーを区別する独自設問。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Exercise BのTheory/Backgroundで質量流量×比熱×温度差を照合。原資料の装置寸法・測定データ・表は用いず、SI単位で独自の数値を設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-heat-pump-cop",
+    "domain": "工学",
+    "subdomain": "熱・流体工学",
+    "content": {
+      "question": "ある周期でヒートポンプへ仕事W＝1 kJを投入し、低温側からQ꜀＝3 kJの熱を受け取る。周期後に作動物質の状態は元に戻る。高温側への放熱を用いる暖房の成績係数COPはいくらか。",
+      "choices": [
+        "1/4",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctIndex": 3,
+      "explanation": "エネルギー保存から高温側への放熱はQʜ＝Q꜀＋W＝4 kJ。暖房COP＝Qʜ/W＝4となる。周囲からくみ上げた熱を含むため、COPが1を超えてもエネルギー保存に反しない。",
+      "distractorRationales": [
+        "暖房COPの分子と分母が逆。",
+        "投入仕事以外に低温側から受け取る熱を考慮していない。",
+        "低温側の除熱を用いる冷凍の成績係数に対応する。",
+        "高温側への放熱4 kJを投入仕事1 kJで割る。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax University Physics Volume 2 — 4-3-refrigerators-and-heat-pumps",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/4-3-refrigerators-and-heat-pumps"
+        }
+      ]
+    },
+    "reason": "熱機関の効率や冷凍COPと暖房COPを区別する独自設問。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式4.3・4.4の冷凍と暖房の成績係数、およびW＝Qh−Qcを照合。エネルギー量は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開教材・公的機関の解説・装置メーカーの一次資料・著者論文で式と成立条件を確認。設問・四肢・解説は独自表現。図表・掲載例題・測定値を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
