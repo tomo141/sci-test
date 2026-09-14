@@ -1,0 +1,1 @@
+ScienceSans-Bold.ttf is a fixed weight (700) instance of NotoSansJP[wght].ttf from https://github.com/google/fonts/tree/main/ofl/notosansjp, generated with FontTools 4.60.2. Copyright and redistribution terms are in OFL.txt. The font is used for Japanese text in share images.

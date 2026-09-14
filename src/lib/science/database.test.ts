@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -80,5 +80,29 @@ describe.sequential("atomic issuance and answers", () => {
   it("enforces a shared database rate limit", async () => {
     expect((await db.query<{ok:boolean}>("select science_rate_limit('test',60,1) ok")).rows[0].ok).toBe(true);
     expect((await db.query<{ok:boolean}>("select science_rate_limit('test',60,1) ok")).rows[0].ok).toBe(false);
+  });
+  it("preserves access on unsubscribe and makes consent and welcome jobs idempotent", async () => {
+    await db.query("select science_update_consents($1,$2,$3)",[uid,{science:true,weekly:true,domain_opening:false},operation]);
+    await db.query("select science_update_consents($1,$2,$3)",[uid,{science:true,weekly:true,domain_opening:false},operation]);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_outbox where kind='mail'")).rows[0].n).toBe(2);
+    await expect(db.query("select science_update_consents($1,$2,$3)",[uid,{science:false},operation])).rejects.toThrow("operation_reused");
+    await db.query("select science_update_consents($1,$2,gen_random_uuid())",[uid,{science:false,weekly:false,domain_opening:false}]);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_outbox where state='cancelled'")).rows[0].n).toBe(2);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_entitlements where user_id=$1",[uid])).rows[0].n).toBe(1);
+    expect((await db.query<{enabled:boolean}>("select enabled from science_consents where user_id=$1 and topic='science'",[uid])).rows[0].enabled).toBe(false);
+  });
+  it("ranks first eligible completions, keeps ties, and computes personal best independently",async()=>{
+    await db.query("insert into science_profiles(user_id,nickname,ranking_opt_in) values($1,'second',true) on conflict(user_id) do update set ranking_opt_in=true",[other]);
+    await db.query("update science_profiles set ranking_opt_in=true,nickname='first' where user_id=$1",[uid]);
+    for(const [user,v,score,completed] of [[uid,visitor,600,'2026-09-14T01:00:00Z'],[uid,visitor,900,'2026-09-14T02:00:00Z'],[other,wrongVisitor,600,'2026-09-14T03:00:00Z']] as const){
+      await db.query("insert into science_attempts(visitor_id,user_id,definition,model_version,kind,total,state,ordinal,completed_at,result) values($1,$2,'{}','science-3pl-reference-v1','full',50,'completed',50,$3,$4)",[v,user,completed,{total:score}]);
+    }
+    const result=await db.query<{place:number;score:string;profile_id:string|null}>("select * from science_rankings('full','2026-09-13T15:00:00Z','2026-09-14T15:00:00Z',50,'science-3pl-reference-v1',null)");
+    expect(result.rows).toHaveLength(2);
+    result.rows.forEach(r=>{expect(Number(r.place)).toBe(1);expect(Number(r.score)).toBe(600);expect(r.profile_id).toBeNull();});
+    const best=await db.query<{score:number}>("select (result->>'total')::int score from science_personal_bests where owner_key=$1 and kind='full'",['user:'+uid]);
+    expect(best.rows[0].score).toBe(900);
+    await db.query("update science_profiles set ranking_opt_in=false where user_id=$1",[other]);
+    expect((await db.query("select * from science_rankings('full','2026-09-13T15:00:00Z','2026-09-14T15:00:00Z',50,'science-3pl-reference-v1',null)")).rows).toHaveLength(1);
   });
 });

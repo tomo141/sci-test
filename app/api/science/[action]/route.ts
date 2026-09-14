@@ -1,8 +1,9 @@
 import { NextRequest } from "next/server";
 import { z } from "zod";
 import { domains } from "@/src/lib/data/taxonomy";
-import { answerExam, examState, ownedAttempt, reviewAttempt, startExam } from "@/src/lib/science/engine";
+import { answerExam, examState, ownedAttempt, publicAttempt, reviewAttempt, startExam } from "@/src/lib/science/engine";
 import { checked, context, endpoint, rateLimit, requireUser, ScienceError } from "@/src/lib/science/server";
+import { accountData } from "@/src/lib/science/account";
 
 const id = z.string().uuid();
 const attemptInput = z.object({ attemptId: id }).strict();
@@ -15,6 +16,23 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     if (raw.length > 32_768) throw new ScienceError("入力が長すぎます。", 413);
     const body = JSON.parse(raw);
     const ctx = await context(true, action === "start" ? body.refShare : undefined);
+    if(action === "account") {
+      await rateLimit(ctx,"account",30);
+      return accountData(ctx,z.object({page:z.number().int().min(0).max(10000).default(0)}).strict().parse(body).page);
+    }
+    if(action === "profile") {
+      const userId=requireUser(ctx);
+      const input=z.object({nickname:z.string().trim().min(1).max(30),bio:z.string().trim().max(160),interests:z.array(z.enum(domains)).max(10),isPublic:z.boolean(),rankingOptIn:z.boolean()}).strict().parse(body);
+      await rateLimit(ctx,"profile",10);
+      checked(await ctx.db.from("science_profiles").update({nickname:input.nickname,bio:input.bio,interests:[...new Set(input.interests)],is_public:input.isPublic,ranking_opt_in:input.rankingOptIn,updated_at:new Date().toISOString()}).eq("user_id",userId).select("user_id").single());
+      return {saved:true};
+    }
+    if(action === "preferences") {
+      const userId=requireUser(ctx);
+      const input=z.object({preferences:z.object({science:z.boolean(),weekly:z.boolean(),domain_opening:z.boolean()}).strict(),operationId:id}).strict().parse(body);
+      checked(await ctx.db.rpc("science_update_consents",{p_user:userId,p_preferences:input.preferences,p_operation:input.operationId}));
+      return {saved:true};
+    }
     if (action === "start") {
       const input = z.object({ kind: z.enum(["trial", "full", "domain", "weekly", "lab"]), domain: z.enum(domains).optional(), refShare: id.optional() }).strict().parse(body);
       return startExam(ctx, input.kind, input.domain);
@@ -23,6 +41,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       await rateLimit(ctx, "state", 120);
       return examState(ctx, attemptInput.parse(body).attemptId);
     }
+    if (action === "result") return { attempt: publicAttempt(await ownedAttempt(ctx, attemptInput.parse(body).attemptId)), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId };
     if (action === "answer") {
       return answerExam(ctx, z.object({ attemptId: id, ordinal: z.number().int().min(0).max(99), token: id, operationId: id, selectedIndex: z.number().int().min(0).max(3) }).strict().parse(body));
     }

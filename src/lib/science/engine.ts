@@ -59,7 +59,7 @@ async function candidateBank(ctx: Context, release: string | null, kind: ExamKin
   return rows.filter(({ science_items: q }) => q.status === "published" && q.quality_passed && q.rights_checked && !seen.has(q.family_id) && (!q.author_id || q.author_id !== ctx.userId) && (!q.expires_at || new Date(q.expires_at) > new Date())).map((r) => ({ revisionId: r.revision_id, familyId: r.science_items.family_id, domain: r.science_items.domain, a: r.a, b: r.b, c: r.c, authorId: r.science_items.author_id, focus: r.focus, anchor: r.anchor, exposures: 0 }));
 }
 
-function publicAttempt(a: Attempt): PublicAttempt {
+export function publicAttempt(a: Attempt): PublicAttempt {
   return { id: a.id, definition: a.definition, ordinal: a.ordinal, state: a.state, competitive: a.competitive, completed_at: a.completed_at, result: a.result };
 }
 function publicQuestion(q: Issued): PublicQuestion {

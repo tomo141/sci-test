@@ -1,0 +1,46 @@
+import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import { scoreResponses, type Response } from "./model";
+import { checked, type Context } from "./server";
+import { publicAttempt } from "./engine";
+import type { Attempt, AttemptResult } from "./types";
+
+export type ScienceProfile = { public_id: string; nickname: string; bio: string; interests: ScienceDomain[]; is_public: boolean; ranking_opt_in: boolean };
+export type Preferences = { science: boolean; weekly: boolean; domain_opening: boolean };
+export type AccountData = {
+  signedIn: boolean; profile: ScienceProfile | null; preferences: Preferences;
+  current: ReturnType<typeof scoreResponses>; history: ReturnType<typeof publicAttempt>[]; historyTotal: number; page: number;
+  bests: { id: string; kind: string; domain: string | null; total: number; result: AttemptResult }[];
+  badges: { code: string; awarded_at: string }[];
+  legacy: { id: string; score: number; answer_count: number; created_at: string }[]; legacyTotal: number;
+};
+
+export async function accountData(ctx: Context, page: number): Promise<AccountData> {
+  const scoped = <T extends {eq:(key:string,value:string)=>T}>(query:T) => ctx.userId ? query.eq("user_id",ctx.userId) : query.eq("visitor_id",ctx.visitor.id);
+  const historyQuery=ctx.db.from("science_attempts").select("*",{count:"exact"});
+  const historyPromise=scoped(historyQuery).order("started_at",{ascending:false}).order("id").range(page*20,page*20+19);
+  const bestPromise=ctx.db.from("science_personal_bests").select("id,kind,domain,total,result").eq("owner_key",ctx.userId?`user:${ctx.userId}`:`visitor:${ctx.visitor.id}`);
+  const currentPromises=domains.map(async(domain)=>{
+    const query=ctx.db.from("science_responses").select("domain,a,b,c,is_correct,answered_at").eq("domain",domain).eq("eligible",true);
+    const records=checked(await scoped(query).order("answered_at",{ascending:false}).order("attempt_id").order("ordinal",{ascending:false}).limit(100)) as {domain:ScienceDomain;a:number;b:number;c:number;is_correct:boolean;answered_at:string}[];
+    return records.reverse().map((r):Response=>({...r,correct:r.is_correct,eligible:true,answeredAt:r.answered_at}));
+  });
+  const [historyResponse,bestResponse,fields]=await Promise.all([historyPromise,bestPromise,Promise.all(currentPromises)]);
+  const history=checked(historyResponse) as Attempt[];
+  let profile:ScienceProfile|null=null,preferences:Preferences={science:false,weekly:false,domain_opening:false};
+  let badges:AccountData["badges"]=[],legacy:AccountData["legacy"]=[],legacyTotal=0;
+  if(ctx.userId){
+    // Badges derive from committed facts and are safe to recompute after a missed background job.
+    const awarded=await ctx.db.rpc("science_award_badges",{p_user:ctx.userId});
+    if(awarded.error)checked(awarded);
+    const [p,c,b,l]=await Promise.all([
+      ctx.db.from("science_profiles").select("public_id,nickname,bio,interests,is_public,ranking_opt_in").eq("user_id",ctx.userId).single(),
+      ctx.db.from("science_consents").select("topic,enabled").eq("user_id",ctx.userId),
+      ctx.db.from("science_badges").select("code,awarded_at").eq("user_id",ctx.userId).order("awarded_at"),
+      ctx.db.from("score_history").select("id,score,answer_count,created_at",{count:"exact"}).eq("user_id",ctx.userId).order("created_at",{ascending:false}).range(page*20,page*20+19)
+    ]);
+    profile=checked(p) as ScienceProfile;
+    preferences={...preferences,...Object.fromEntries(checked(c).map((r)=>[r.topic,r.enabled]))};
+    badges=checked(b);legacy=checked(l);legacyTotal=l.count??0;
+  }
+  return {signedIn:!!ctx.userId,profile,preferences,current:scoreResponses(fields.flat(),true),history:history.map(publicAttempt),historyTotal:historyResponse.count??0,page,bests:checked(bestResponse) as AccountData["bests"],badges,legacy,legacyTotal};
+}
