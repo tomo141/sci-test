@@ -1,0 +1,473 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000278",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "OSの仮想記憶で、プロセスが使うアドレス空間と物理メモリの関係として適切なのはどれか。",
+      "choices": [
+        "仮想アドレスを物理メモリなどの実際の配置へ対応付け、プロセスにアドレス空間を見せる",
+        "プログラムに物理メモリの番地だけを直接使わせ、配置を変えられなくする",
+        "全プロセスの同じ仮想アドレスを、必ず同じ物理メモリに割り当てる",
+        "仮想アドレスを使うたびに、必ずディスクからデータを読み込む"
+      ],
+      "correctIndex": 0,
+      "explanation": "仮想記憶は、実際の配置と区別したアドレス空間を提供する仕組み。プロセスごとの対応付けや保護ができ、必要に応じたディスクへの退避とも組み合わせられる。ディスクからの毎回の読み込みが定義ではない。",
+      "distractorRationales": [
+        "仮想記憶のアドレス空間の抽象化を表す。",
+        "物理番地への固定は、この抽象化とは違う。",
+        "対応はプロセスごとに異なり得る。",
+        "主記憶にあるページへのアクセスで毎回ディスクを読む必要はない。"
+      ],
+      "sources": [
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: The Abstraction: Address Spaces",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf"
+        },
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: Beyond Physical Memory: Mechanisms",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf"
+        }
+      ]
+    },
+    "reason": "AIへの誤分類を修正。仮想記憶の定義をディスクへの退避だけに限定しない。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "OSTEP第13章§13.3のアドレス空間・仮想化と、第21章のディスクを用いた拡張を区別して確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000085",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "通常の主記憶に使うDRAMと、SSDに使うNANDフラッシュを比較する。電源を切った後のデータ保持の性質として適切なのはどれか。",
+      "choices": [
+        "DRAMは不揮発性で、NANDフラッシュは揮発性",
+        "両方とも揮発性",
+        "DRAMは揮発性で、NANDフラッシュは不揮発性",
+        "両方とも不揮発性"
+      ],
+      "correctIndex": 2,
+      "explanation": "DRAMは電源とリフレッシュによる保持を必要とする。一方、NANDフラッシュは電源がなくても情報を保持する不揮発性の記憶。無期限の保持や、書き込み途中のデータが停電しても必ず無事であるという意味ではない。",
+      "distractorRationales": [
+        "両者の性質が逆。",
+        "NANDフラッシュは不揮発性。",
+        "通常のDRAMとNANDフラッシュの性質。",
+        "通常のDRAMは揮発性。"
+      ],
+      "sources": [
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: Flash-based SSDs",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf"
+        }
+      ]
+    },
+    "reason": "RAMというアクセス方式全体を揮発性と断定せず、DRAMとNANDへ対象を指定。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "OSTEP第44章冒頭で、DRAMとは異なりフラッシュ型SSDが電源喪失後も情報を保持する説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000186",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "CPUで、一つの命令が実行段階にいる間に別の命令を解読するなど、異なる命令の処理段階を重ねて進める方式はどれか。",
+      "choices": [
+        "デマンドページング",
+        "命令パイプライン",
+        "ガベージコレクション",
+        "排他ロック"
+      ],
+      "correctIndex": 1,
+      "explanation": "パイプラインは仕事を段階に分け、異なる命令の段階を重ねて処理することでスループットの向上を狙う。単に一命令を取り出し・解読・実行する流れ自体とは区別する。一命令の完了時間が必ず短くなるとは限らない。",
+      "distractorRationales": [
+        "必要なページを主記憶へ用意する仕組み。",
+        "異なる命令を異なる段階で同時に処理する。",
+        "不要なメモリを回収する仕組み。",
+        "保護する処理区間の同時実行を制限する仕組み。"
+      ],
+      "sources": [
+        {
+          "title": "Computation Structures — Performance Measures: Pipelining",
+          "url": "https://computationstructures.org/notes/performance/notes.html"
+        }
+      ]
+    },
+    "reason": "命令を処理する段階が存在することだけをパイプラインと呼ぶ旧問を訂正。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "パイプラインの各段の同時計算、レイテンシとスループットの区別を確認。教材の回路の数値や図は流用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000080",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "一つのCPUコアで、OSが複数のプロセスを短い時間間隔で切り替え、並行して進んでいるように扱う機能はどれか。",
+      "choices": [
+        "マルチタスク",
+        "ファイル圧縮",
+        "メモリの不揮発化",
+        "パケットの暗号化"
+      ],
+      "correctIndex": 0,
+      "explanation": "CPUを時間的に分けて各プロセスに割り当てると、一つのコアでも複数の仕事を並行して進められる。同じ瞬間に複数のプロセスの命令を複数コアで実行する並列性とは区別する。",
+      "distractorRationales": [
+        "CPUの時間を分けて複数の仕事を進める。",
+        "データの表現量を減らす処理。",
+        "電源を切った後の保持の性質で、CPUの切替ではない。",
+        "通信内容の保護で、プロセスの切替ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: The Abstraction: The Process",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf"
+        }
+      ]
+    },
+    "reason": "光合成・蒸留など他分野の誤答を除き、単一コアと並行・並列を区別。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "第4章のTime sharingの説明と、プロセスの実行状態を切り替える機構を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000267"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000090",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "一般的な同一プロセス内の複数スレッドについて、共有するものと個別に持つ実行状態の組合せはどれか。",
+      "choices": [
+        "アドレス空間は別々で、プログラムカウンターは一つを共有する",
+        "アドレス空間もプログラムカウンターも一つを共有する",
+        "アドレス空間もプログラムカウンターも別々にする",
+        "アドレス空間を共有し、プログラムカウンターなどの実行状態は個別に持つ"
+      ],
+      "correctIndex": 3,
+      "explanation": "スレッドは同一プロセスのアドレス空間を共有し、個別のプログラムカウンターやレジスタ状態を持つ。それぞれが使うスタックもあるが、同一アドレス空間内の領域なので、別スレッドからのアクセスが常に物理的に禁止されるという意味ではない。",
+      "distractorRationales": [
+        "一般的なプロセス内のスレッドは同じアドレス空間を使う。",
+        "それぞれの実行位置は個別に保持する。",
+        "アドレス空間は共有する。",
+        "共有する記憶空間と、個別の実行状態を区別している。"
+      ],
+      "sources": [
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: Concurrency: An Introduction",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf"
+        }
+      ]
+    },
+    "reason": "スレッドという名前の識別から、共有する状態と個別の状態の理解へ改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "第26章冒頭の同じaddress spaceと各スレッドのPC・registers、個別スタックの説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000179",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "デマンドページングで、プロセスにとって有効なページが主記憶に存在せず、そのページへアクセスした。OSに対応を求める通常の契機となる例外はどれか。",
+      "choices": [
+        "ゼロ除算例外",
+        "タイマー割り込み",
+        "ページフォルト",
+        "システムコールによる明示的なファイル読み込み"
+      ],
+      "correctIndex": 2,
+      "explanation": "ページが主記憶にないと、ページフォルトを契機にOSが必要な処理を行う。これは通常のメモリ管理でも起こる。TLBのミスだけなら、ページテーブルで変換を見つけて続行できる場合があり、ディスクからの読み込みと同じではない。",
+      "distractorRationales": [
+        "このアクセスで除算はしていない。",
+        "一定時間の経過による通知ではない。",
+        "非在住ページへのアクセスをOSへ知らせる契機。",
+        "アプリケーションがファイル読み込みを明示する必要はない。"
+      ],
+      "sources": [
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: Beyond Physical Memory: Mechanisms",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf"
+        },
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: Paging: Faster Translations",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf"
+        }
+      ]
+    },
+    "reason": "TLBミス・ページフォルト・破損を区別し、合法な非在住ページの条件へ限定。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "第21章§21.2–21.3のpresent bitとページフォルト、第19章のTLBミス処理を確認。ページフォルトの原因全般をこの例だけに限定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000191",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "共有変数に触れる全スレッドが、同じミューテックスを取得してから保護対象の処理を行い、終わったら解放する。この使い方の直接の効果はどれか。",
+      "choices": [
+        "全ての命令をCPU上で同時に実行できる",
+        "保護した区間を、同時に複数のスレッドが実行しないようにする",
+        "どのような複数ロックの使い方でもデッドロックを防ぐ",
+        "保護対象の変数を自動的に暗号化する"
+      ],
+      "correctIndex": 1,
+      "explanation": "ミューテックスは排他制御を提供する。同じロックで保護した区間へ同時に入ることを防ぐが、ロックを使わないアクセスまで自動的に安全にしたり、複数ロックの取得順の問題を全て解消したりはしない。",
+      "distractorRationales": [
+        "同時実行を増やすことが直接の役割ではない。",
+        "同じロックによる区間の同時実行を防ぐ。",
+        "複数ロックの使い方によってはデッドロックになり得る。",
+        "暗号化の機能ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: Locks",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf"
+        }
+      ]
+    },
+    "reason": "HTTPなどの無関係な誤答から、排他制御の保証の範囲を問う四肢へ変更。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "第28章§28.1–28.2のcritical sectionとmutexによるmutual exclusionを確認。全関係アクセスが同じロックを用いる前提を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000094",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "仮想アドレスから物理アドレスへの変換情報をキャッシュして、アドレス変換を高速化するハードウェアはどれか。",
+      "choices": [
+        "TLB",
+        "L1データキャッシュ",
+        "分岐予測器",
+        "演算用レジスタファイル"
+      ],
+      "correctIndex": 0,
+      "explanation": "TLBは最近使われる仮想・物理アドレスの対応などを保持する。データ本体を保持するキャッシュとは役割が違う。TLBに目的の変換がないことだけで、目的のページが主記憶にもないとは判断できない。",
+      "distractorRationales": [
+        "アドレス変換の情報をキャッシュする。",
+        "主にデータ本体をキャッシュする。",
+        "制御フローの分岐先などを予測する。",
+        "命令の演算に使う値などを保持する。"
+      ],
+      "sources": [
+        {
+          "title": "Arpaci-Dusseau & Arpaci-Dusseau — OSTEP: Paging: Faster Translations",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf"
+        }
+      ]
+    },
+    "reason": "キャッシュする対象と、ミスから言えることを明確にする。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "第19章冒頭のhardware cache of virtual-to-physical address translationsと、TLBミス時のページテーブル参照を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000287",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "Linuxのforkで、親子が持つプライベートな匿名メモリにcopy-on-writeを使う主な目的はどれか。",
+      "choices": [
+        "親の全メモリを直ちに物理コピーし、以後のコピーを禁止する",
+        "親子の全ての書き込みを、その後も常に同じメモリへ反映する",
+        "ページテーブルを不要にして、全仮想アドレスを物理番地にする",
+        "書き込みが必要になるまでページを共有し、最初のコピーの負担を抑える"
+      ],
+      "correctIndex": 3,
+      "explanation": "ページをいったん共有し、独立した内容が必要な書き込み時に必要なページを分けることで、fork直後の大量コピーを避ける。ページテーブルや子の管理情報などの作成コストは残る。明示的な共有メモリの扱いとは別である。",
+      "distractorRationales": [
+        "初めに全ページをコピーする方式ではない。",
+        "プライベートなメモリでは、親子の変更を常に共有するわけではない。",
+        "仮想記憶のページテーブルはなお必要。",
+        "不要なコピーを後回しにして減らす目的。"
+      ],
+      "sources": [
+        {
+          "title": "Linux man-pages — fork(2)",
+          "url": "https://man7.org/linux/man-pages/man2/fork.2.html"
+        }
+      ]
+    },
+    "reason": "すべてのメモリ領域の共有関係を一律に断定せず、Linuxと私有領域の条件を示す。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "fork(2)のLinuxでのcopy-on-writeと、ページテーブル・task structureの作成コストを確認。親子の通常のプライベートなメモリに対象を限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-amdahl-fixed-work-limit",
+    "domain": "情報・計算機科学",
+    "subdomain": "OS・ハードウェア・並列",
+    "content": {
+      "question": "仕事量を固定した計算で、一台での実行時間の20％は並列化できず、残り80％は台数に比例して速くできるとする。通信などの追加コストを無視して台数を増やしたとき、全体の高速化倍率が近づく上限はどれか。",
+      "choices": [
+        "4倍",
+        "5倍",
+        "20倍",
+        "上限なく増える"
+      ],
+      "correctIndex": 1,
+      "explanation": "台数をNとすると元の実行時間に対する比は0.2＋0.8/N。高速化はその逆数なので、Nを増やすと1/0.2＝5倍に近づく。コードの行数でなく実行時間の割合であり、仕事量を固定した仮定での結果。",
+      "distractorRationales": [
+        "並列化できる部分とできない部分の比4とは違う。",
+        "残る逐次処理の20％が5倍の上限を与える。",
+        "20％を倍率20と読み替えている。",
+        "逐次部分の実行時間が残るため、無限には増えない。"
+      ],
+      "sources": [
+        {
+          "title": "LLNL — Introduction to Parallel Computing Tutorial: Amdahl’s Law",
+          "url": "https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial"
+        }
+      ]
+    },
+    "reason": "新規。台数増加と速度の無条件な比例を避け、逐次部分・固定仕事量・追加コストの前提を示す。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Amdahlの式1/(P/N＋S)と固定仕事量のstrong scalingの条件を確認。S＝0.2、P＝0.8を独自に代入して上限を導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "OS教材の著者公開本文・Linux manual・大学教材・LLNLの資料を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
