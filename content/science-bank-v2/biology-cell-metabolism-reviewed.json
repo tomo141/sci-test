@@ -1,0 +1,662 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000440",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "動物細胞のマクロオートファジーで、細胞質成分を分解へ運ぶ代表的な過程はどれか。",
+      "choices": [
+        "二重膜のオートファゴソームに包み、リソソームへ届ける",
+        "ポリユビキチンを目印に、26Sプロテアソームの内部へ送る",
+        "小胞体からゴルジ体を経て、分泌小胞で細胞外へ放出する",
+        "細胞外成分を小胞に取り込み、エンドソーム経由でリソソームへ届ける"
+      ],
+      "correctIndex": 0,
+      "explanation": "マクロオートファジーでは、細胞質の一部を二重膜の構造に隔離し、最終的にリソソーム内で分解する。オートファジーのすべての型が二重膜を使うわけではなく、この過程が起きたことだけで細胞死とは判断できない。",
+      "distractorRationales": [
+        "マクロオートファジーの代表的な過程。",
+        "ユビキチン・プロテアソーム系の説明。",
+        "分泌経路の説明。",
+        "細胞外から取り込んだ成分を運ぶエンドサイトーシス経路の説明。"
+      ],
+      "sources": [
+        {
+          "title": "Nobel Prize 2016 — Advanced Information: Autophagy",
+          "url": "https://www.nobelprize.org/prizes/medicine/2016/advanced-information/_/"
+        }
+      ]
+    },
+    "reason": "オートファジーの複数の型を混同せず、動物細胞のマクロオートファジーに範囲を限定。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Advanced InformationのIntroductionで二重膜への隔離とリソソーム分解を本文照合。タンパク質・細胞小器官の更新に関わる説明も確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000442",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "古典的カドヘリンであるE-カドヘリンによる細胞間接着を、最も適切に表すのはどれか。",
+      "choices": [
+        "細胞外Ca²⁺を必要とせず、主に細胞外マトリックスへ接着する",
+        "細胞外Ca²⁺に依存し、向かい合う細胞上のE-カドヘリン同士が結合する",
+        "隣接細胞の細胞質をつなぐ水性のチャネルを作る",
+        "隣接する細胞の脂質二重層を融合させ、一つの細胞にする"
+      ],
+      "correctIndex": 1,
+      "explanation": "E-カドヘリンはCa²⁺に依存して働く細胞間接着分子で、同じ種類の接着分子同士の結合をホモフィリックな結合という。「同じ分子」と「同じ細胞種」は同義ではない。",
+      "distractorRationales": [
+        "カドヘリンのCa²⁺依存性と細胞間接着という特徴に合わない。",
+        "指定した古典的カドヘリンの特徴。",
+        "ギャップ結合のチャネルの説明。",
+        "カドヘリン接着は細胞膜の融合そのものではない。"
+      ],
+      "sources": [
+        {
+          "title": "Gilbert — Developmental Biology, Morphogenesis and Cell Adhesion",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10021/"
+        }
+      ]
+    },
+    "reason": "ホモフィリックを同種の細胞との結合と同一視する曖昧さを除き、古典的なE-カドヘリンに限定。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Cadherinsの段落でCa²⁺依存性、隣接細胞の同じ型のカドヘリンとの結合を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000450",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "ユビキチン・プロテアソーム系によるタンパク質分解の代表的な説明はどれか。",
+      "choices": [
+        "細胞小器官を二重膜で包み、そのままリソソームへ送る",
+        "エンドソームを経由した膜タンパク質を、リソソームの加水分解酵素で分解する",
+        "分解の目印となるポリユビキチン鎖を認識し、26Sプロテアソームが基質を分解する",
+        "タンパク質を小胞体からゴルジ体へ運び、分泌小胞で細胞外へ放出する"
+      ],
+      "correctIndex": 2,
+      "explanation": "この経路では、適切なポリユビキチン鎖などを手掛かりに基質を認識し、ほどいてプロテアソーム内部で分解する。ユビキチンの修飾には分解以外の働きもあるため、修飾されたタンパク質がすべてこの経路で分解されるとは限らない。",
+      "distractorRationales": [
+        "マクロオートファジーに関わる過程。",
+        "リソソームによる分解の経路で、26Sプロテアソームでの分解ではない。",
+        "指定した分解系の代表的な働き。",
+        "細胞外への分泌経路の説明で、指定した分解系ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Nobel Prize 2004 — Scientific Background: Ubiquitin-mediated protein degradation",
+          "url": "https://www.nobelprize.org/uploads/2018/06/advanced-chemistryprize2004.pdf"
+        }
+      ]
+    },
+    "reason": "オートファジーとリソソームを独立した三経路のように並べた旧問を訂正。ユビキチン修飾を常に分解の目印とする断定も除去。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Nobel Prize 2004学術背景PDFのp.7相当の索引本文で、19S/20S、ポリユビキチン認識、ほどきと分解、非分解性のユビキチン機能を照合。PDF全ページの閲覧とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000172",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "細胞内の情報伝達で、アデニリルシクラーゼがATPから作るセカンドメッセンジャーはどれか。",
+      "choices": [
+        "cGMP",
+        "IP₃",
+        "ジアシルグリセロール（DAG）",
+        "cAMP"
+      ],
+      "correctIndex": 3,
+      "explanation": "アデニリルシクラーゼはATPを材料にcAMPを作る。cGMPはグアニリルシクラーゼがGTPから作る別の分子。受容体の種類によって下流の経路は異なるため、すべてのGPCRがcAMPを増やすとは限らない。",
+      "distractorRationales": [
+        "GTPを材料とするグアニリルシクラーゼの生成物。",
+        "ホスホリパーゼCによる膜リン脂質の切断で生じる。",
+        "IP₃とともに膜リン脂質の切断で生じる。",
+        "指定した酵素の生成物。"
+      ],
+      "sources": [
+        {
+          "title": "Cooper — The Cell, Pathways of Intracellular Signal Transduction",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9870/"
+        }
+      ]
+    },
+    "reason": "すべてのGPCRの刺激でアデニリルシクラーゼが活性化するかのような旧条件を除去。酵素と生成物の対応に絞り、同じ核心の旧問を統合。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "The cAMP PathwayでATPからのcAMP生成、膜リン脂質経路でIP₃とDAGを本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000436"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000151",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "RasからRaf、MEK、ERKへと活性化が伝わる代表的なカスケードは、どの経路に当たるか。",
+      "choices": [
+        "MAPK/ERK経路",
+        "JAK/STAT経路",
+        "Notch経路",
+        "cAMP/PKA経路"
+      ],
+      "correctIndex": 0,
+      "explanation": "Raf、MEK、ERKと続くリン酸化カスケードはMAPK/ERK経路の中心となる。ERKはMAPKの一群であり、MAPKのすべてがERKという意味ではない。異なる経路が互いに影響する場合もある。",
+      "distractorRationales": [
+        "指定したカスケードに対応する。",
+        "JAKとSTATを中心とする別の代表的経路。",
+        "受容体の切断と細胞内部分の働きなどを介する経路。",
+        "cAMPによるPKAの調節を中心とする経路。"
+      ],
+      "sources": [
+        {
+          "title": "Cooper — The Cell, Pathways of Intracellular Signal Transduction",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9870/"
+        }
+      ]
+    },
+    "reason": "MAPKのすべてをRas/Raf/MEK/ERKと同一視しないよう、ERK経路を明示。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Ras, Raf, and the MAP Kinase PathwayのRaf→MEK→ERKの本文と、ERKがMAPK群に属する説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000143",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "酵素の活性部位とは別の場所に調節分子が結合し、構造の変化を通じて活性が変わる。その結合場所は一般に何と呼ばれるか。",
+      "choices": [
+        "プロモーター",
+        "アロステリック部位",
+        "オペレーター",
+        "活性部位"
+      ],
+      "correctIndex": 1,
+      "explanation": "アロステリック部位は活性部位とは区別される調節分子の結合場所。そこでの結合が酵素の働きに影響する。影響は阻害に限らず、活性化である場合もある。",
+      "distractorRationales": [
+        "転写開始や調節に関わるDNA領域。",
+        "指定した調節分子の結合場所。",
+        "転写調節タンパク質が結合するDNA上の領域。",
+        "設問では、その場所とは別の部位を指定している。"
+      ],
+      "sources": [
+        {
+          "title": "Assay Guidance Manual — Mechanism of Action Assays for Enzymes",
+          "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK92001/"
+        }
+      ]
+    },
+    "reason": "活性部位・結合部位・触媒部位を排他的な選択肢にした旧問を改め、活性部位と別の調節部位の区別を問う。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Glossaryのactive site、allosteric effector、allosteric siteの定義を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000146",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "ある代謝経路の最終産物が増えると、その産物が経路の上流の酵素を阻害し、自分自身の産生を抑える。この調節はどれか。",
+      "choices": [
+        "最終産物による正のフィードバック",
+        "基質の増加による前向きの活性化",
+        "最終産物による負のフィードバック",
+        "酵素量の増加による経路全体の促進"
+      ],
+      "correctIndex": 2,
+      "explanation": "産物の増加が、その産物を作る経路を抑えるので負のフィードバックとなる。このような終産物阻害は、代謝産物の過剰な蓄積を抑える仕組みの一つ。実際の代謝経路がすべて同じ方法で制御されるわけではない。",
+      "distractorRationales": [
+        "自分の産生を促す向きなら正のフィードバック。",
+        "設問の信号は上流の基質ではなく下流の最終産物。",
+        "産物の増加がその産生を抑える指定の関係。",
+        "設問の変化は酵素の増量ではなく活性の阻害。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, §6.5 Enzymes",
+          "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes"
+        }
+      ]
+    },
+    "reason": "フィードバックとアロステリック阻害を互いに排他的な方式として比較せず、制御の向きで区別する。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Feedback Inhibition in Metabolic Pathwaysの、産物が経路の初期酵素を阻害する説明を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000079",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "通常のエムデン・マイヤーホフ経路の解糖系で、グルコース1分子から最終的に生じる炭素骨格はどれか。後続の発酵反応は含めない。",
+      "choices": [
+        "乳酸2分子",
+        "アセチルCoA2分子",
+        "クエン酸2分子",
+        "ピルビン酸2分子"
+      ],
+      "correctIndex": 3,
+      "explanation": "6炭素のグルコースが、3炭素のピルビン酸2分子へ分かれる。乳酸を作る発酵では、この後にピルビン酸が還元される。解糖系の生成物と、後続の反応の生成物を区別する。",
+      "distractorRationales": [
+        "乳酸生成はピルビン酸からの後続の反応。",
+        "ピルビン酸からの酸化的脱炭酸などで生じる別の生成物。",
+        "クエン酸回路の反応で生じる生成物。",
+        "この解糖系の炭素骨格の収支に合う。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, §7.2 Glycolysis",
+          "url": "https://openstax.org/books/biology-2e/pages/7-2-glycolysis"
+        }
+      ]
+    },
+    "reason": "解糖系の最終産物と発酵の生成物を区別し、経路とグルコース当たりの分子数を明示。同じ核心の旧問を統合。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§7.2冒頭の6炭素グルコースから3炭素ピルビン酸2分子への変換を本文照合。6＝3×2の炭素収支も独立に確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000427"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000098",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "哺乳類の細胞で、ミトコンドリア以外にも脂肪酸のβ酸化を担う小器官はどれか。",
+      "choices": [
+        "ペルオキシソーム",
+        "ゴルジ体",
+        "核",
+        "リソソーム"
+      ],
+      "correctIndex": 0,
+      "explanation": "脂肪酸のβ酸化はミトコンドリアだけでなく、ペルオキシソームでも行われる。両者には基質への選好や反応の仕組みの違いがあり、すべての脂肪酸を同じ割合で処理するわけではない。",
+      "distractorRationales": [
+        "ミトコンドリアとともに脂肪酸のβ酸化を担う。",
+        "分泌・膜輸送に関わる加工や仕分けの場。",
+        "遺伝情報の保持や転写などの場。",
+        "加水分解による細胞内成分の分解を担うが、指定したβ酸化の場ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Cooper — The Cell, Peroxisomes",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9930/"
+        },
+        {
+          "title": "A direct comparison between peroxisomal and mitochondrial preferences for fatty-acyl beta-oxidation (1984)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6091766/"
+        }
+      ]
+    },
+    "reason": "β酸化をミトコンドリアだけの機能と受け取れる旧問を訂正。動物細胞に範囲を限定して、もう一つの場を問う。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CooperのFunctions of Peroxisomesで動物細胞の両小器官での脂肪酸酸化を本文照合。1984年比較研究の抄録でも両者のβ酸化と基質選好を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000446",
+    "domain": "生物",
+    "subdomain": "微生物・ウイルス・バイオテク",
+    "content": {
+      "question": "野生型の大腸菌のlacオペロンについて、他の条件が同じなら、リプレッサーによる抑制が解除され、cAMP–CRPによる活性化も働く条件はどれか。",
+      "choices": [
+        "ラクトースなし・グルコース豊富",
+        "ラクトースあり・グルコース乏しい",
+        "ラクトースあり・グルコース豊富",
+        "ラクトースなし・グルコース乏しい"
+      ],
+      "correctIndex": 1,
+      "explanation": "ラクトース由来のアロラクトースがリプレッサーに結合し、抑制を解除する。グルコースが乏しい条件ではcAMP–CRPによる活性化も働きやすく、lac遺伝子の転写が促される。これは基本的な制御モデルで、他の条件を問わず絶対最大の転写量になるという意味ではない。",
+      "distractorRationales": [
+        "リプレッサーによる抑制が残り、指定した活性化条件にも合わない。",
+        "抑制解除とcAMP–CRPによる活性化がともに期待される。",
+        "抑制は解除され得るが、cAMP–CRPによる活性化は弱くなる。",
+        "活性化側の条件は整っても、ラクトースによる抑制解除がない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §11.7 Gene Regulation: Operon Theory",
+          "url": "https://openstax.org/books/microbiology/pages/11-7-gene-regulation-operon-theory"
+        }
+      ]
+    },
+    "reason": "転写が最大になるという絶対表現を避け、野生型の基本モデルで二つの調節が同時に働く条件を問う。同じ核心の旧問を統合。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "lac operonとcatabolite repressionの説明でアロラクトース、リプレッサー、グルコースとcAMP–CRP/CAPの関係を本文・索引本文で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000171"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000166",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "酵素と基質の結合を説明する誘導適合モデルで、特に重視するのはどれか。",
+      "choices": [
+        "結合の前後で、酵素の構造が完全に固定されていること",
+        "基質の結合によって、酵素が必ず不可逆的に分解されること",
+        "基質の結合に伴い、酵素の構造が変化すること",
+        "酵素のアミノ酸配列が、基質の種類に応じて書き換わること"
+      ],
+      "correctIndex": 2,
+      "explanation": "誘導適合モデルでは、結合する酵素と基質を完全に硬い物体とせず、結合に伴う構造の変化を考える。その変化は触媒反応が進む配置を作ることに関わる。酵素のアミノ酸配列が書き換わるという意味ではない。",
+      "distractorRationales": [
+        "構造を固定した単純な鍵と鍵穴の描像に近い。",
+        "触媒として繰り返し働く結合モデルの説明ではない。",
+        "誘導適合の中心的な考え方。",
+        "立体構造の変化と一次配列の変更は異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, §6.5 Enzymes",
+          "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes"
+        }
+      ]
+    },
+    "reason": "酵素の配列や分解と立体構造の変化を区別し、モデルの説明として限定。同じ核心の旧問を統合。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Induced Fitの段落で、基質結合に伴う酵素の構造変化と触媒に適した配置を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000425"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000083",
+    "domain": "生物",
+    "subdomain": "微生物・ウイルス・バイオテク",
+    "content": {
+      "question": "典型的なグラム陽性細菌がグラム染色で紫色を保ちやすい性質に関わる、厚い細胞壁層の主成分はどれか。",
+      "choices": [
+        "セルロース",
+        "キチン",
+        "コラーゲン",
+        "ペプチドグリカン"
+      ],
+      "correctIndex": 3,
+      "explanation": "典型的なグラム陽性細菌には厚いペプチドグリカン層があり、染色でできた色素の複合体を保持しやすい。細菌の状態や種類による例外もあるため、すべての細菌を外れなく二分類できるという意味ではない。",
+      "distractorRationales": [
+        "植物の細胞壁などに多い多糖。",
+        "菌類の細胞壁などに見られる多糖。",
+        "動物の細胞外マトリックスに多いタンパク質。",
+        "指定した細菌の細胞壁の主要な構成成分。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §2.4 Staining Microscopic Specimens",
+          "url": "https://openstax.org/books/microbiology/pages/2-4-staining-microscopic-specimens"
+        }
+      ]
+    },
+    "reason": "設問にグラムという答えを含み、架空・不適切な染色名を並べた旧問を、細胞壁の構造の知識へ改める。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gram Stainingの本文・索引本文で、典型的な陽性菌の厚いペプチドグリカン層と紫色の複合体の保持を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000092",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "タンパク質の構造の階層で、一本のポリペプチド鎖全体の三次元的な折り畳みを指すのはどれか。",
+      "choices": [
+        "三次構造",
+        "一次構造",
+        "二次構造",
+        "四次構造"
+      ],
+      "correctIndex": 0,
+      "explanation": "一本の鎖全体の立体的な折り畳みが三次構造。一次構造はアミノ酸配列、二次構造はαヘリックスやβシートなどの局所的な構造、四次構造は複数のポリペプチド鎖の組み合わせを指す。",
+      "distractorRationales": [
+        "一本の鎖全体の立体構造。",
+        "アミノ酸の並びの順序。",
+        "αヘリックスやβシートなどの構造。",
+        "複数の鎖が組み合わさる構造。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, §3.4 Proteins",
+          "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins"
+        }
+      ]
+    },
+    "reason": "水素結合・疎水性相互作用など、すべてが三次構造に寄与し得る四択を除去。まず構造階層の違いを一意に問う。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Protein Structureの本文とFigure 3.30の索引説明文で一次から四次までの定義を照合。図そのものを閲覧したとはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000447",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "同じリガンドが結合する複数の部位を持つタンパク質で、最初のリガンドの結合が、残る部位のそのリガンドへの親和性を下げる。この関係はどれか。",
+      "choices": [
+        "正の協同性",
+        "負の協同性",
+        "独立した非協同的な結合",
+        "競争相手による同一部位の占有"
+      ],
+      "correctIndex": 1,
+      "explanation": "ある部位の結合によって他の部位に同じリガンドが結合しにくくなる関係が、負の協同性。逆に結合しやすくなるなら正の協同性という。協同性は常に結合を強める性質ではなく、アロステリック調節のすべてを協同性と呼ぶわけでもない。",
+      "distractorRationales": [
+        "他の部位への結合を強める向き。",
+        "指定した親和性の低下を表す。",
+        "一方への結合が他方に影響しない場合。",
+        "別の競争相手が同じ場所を占める説明で、指定の部位間の関係と異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Ha & Ferrell (2016) — Thresholds and ultrasensitivity from negative cooperativity",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27174675/"
+        }
+      ]
+    },
+    "reason": "協同性を正の協同性だけで定義した旧問を修正。同じリガンドの部位間の影響と、別リガンドの競合を区別。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Ha & Ferrell (2016)のAbstract冒頭で、最初のリガンド結合が後続の結合を難しくする負の協同性の定義を照合。濃度応答曲線が常に同じ形になるとは一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文の抄録、著者の教材、Nobel Prizeの学術解説で生物学的事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  }
+]
