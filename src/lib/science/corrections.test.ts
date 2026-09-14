@@ -13,6 +13,12 @@ function records(kind:"trial"|"weekly"){
   return {attempt,issued,answers,update};
 }
 describe("corrected scoring",()=>{
+  it("preserves answers and correct counts while excluding known items revealed by sign-in",()=>{
+    const r=records("trial"),original=structuredClone(r.answers);
+    const result=correctedResult(r.attempt,r.issued,r.answers,{epoch:3,updates:new Map(),ineligibleOrdinals:new Set([0,10])});
+    expect(result.correctCount).toBe(7);expect(result.answerCount).toBe(20);expect(result.total).toBeNull();
+    expect(result.identityAdjustments?.excludedCount).toBe(2);expect(result.corrections?.count).toBe(0);expect(r.answers).toEqual(original);
+  });
   it("uses the same reduced denominator for a withdrawn weekly question without changing raw answers",()=>{
     const r=records("weekly"),original=structuredClone(r.answers);
     const result=correctedResult(r.attempt,r.issued,r.answers,{epoch:1,updates:new Map([["revision-0",r.update(0)]])});

@@ -60,7 +60,7 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
   const next=nextKind(state.group,result.definition.kind);
   return <main className="page-container max-w-4xl py-8">
     <ResultSummary result={result}/>
-    {!!result.corrections?.count&&<ResultVersionHistory attemptId={attemptId}/>}
+    {(!!result.corrections?.count||!!result.identityAdjustments?.excludedCount)&&<ResultVersionHistory attemptId={attemptId}/>}
     {result.definition.kind==="weekly"&&!state.attempt.competitive&&<p className="mt-3 rounded-xl bg-amber-50 p-4 text-sm leading-7">参考参加の記録です。締切後の完了、再挑戦、作問・事前閲覧がある記録は競争順位へ加えません。</p>}
     <AppCard className="mt-6"><h2 className="text-2xl font-black">この結果を、科学好きな人へ</h2><p className="mt-3 leading-7">ニックネームとこの受験結果だけを公開します。メールアドレスや個別の回答、問題の正解は公開しません。あとで公開を取り消せます。</p>
       <label className="mt-4 block text-sm font-bold">公開するニックネーム<input value={nickname} onChange={(e)=>setNickname(e.target.value)} maxLength={30} className="mt-2 block min-h-12 w-full rounded-xl border p-3"/></label>

@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -221,5 +221,42 @@ describe.sequential("atomic issuance and answers", () => {
     expect(history.map(h=>h.score)).toEqual([700,680]);
     expect((await db.query<{ok:boolean}>("select science_store_current($1,'{\"version\":\"current\"}',now(),0) ok",[uid])).rows[0].ok).toBe(false);
     expect((await db.query<{allowed:boolean}>("select has_table_privilege('authenticated','science_result_revisions','SELECT') allowed")).rows[0].allowed).toBe(false);
+  });
+});
+
+describe.sequential("verified identity exposure",()=>{
+  it("joins only proven devices and excludes later duplicates and legacy aliases without rewriting answers",async()=>{
+    const owner="10000000-0000-4000-8000-000000000099";
+    const v1="20000000-0000-4000-8000-000000000091",v2="20000000-0000-4000-8000-000000000092";
+    const a1="30000000-0000-4000-8000-000000000091",a2="30000000-0000-4000-8000-000000000092";
+    const q1="40000000-0000-4000-8000-000000000091",q2="40000000-0000-4000-8000-000000000092";
+    const legacy="90000000-0000-4000-8000-000000000091";
+    await db.query("insert into auth.users(id,email,email_confirmed_at) values($1,'identity@example.invalid',now())",[owner]);
+    await db.query("insert into science_visitors(id,token_hash,route_group) values($1,$2,'A'),($3,$4,'D')",[v1,"c".repeat(64),v2,"d".repeat(64)]);
+    const content={question:"Identity test question",choices:["1","2","3","4"],correctIndex:1,explanation:"Identity test explanation"};
+    for(const [id,family] of [[q1,"identity-family"],[q2,"legacy-family"]])await db.query("insert into science_items(id,family_id,domain,subdomain,content,status) values($1,$2,'math','algebra',$3,'published')",[id,family,content]);
+    for(const [id,v] of [[a1,v1],[a2,v2]])await db.query("insert into science_attempts(id,visitor_id,definition,model_version,kind,total,ordinal,state,completed_at,result) values($1,$2,'{}','science-3pl-reference-v1','trial',20,20,'completed',now(),'{\"total\":500}')",[id,v]);
+    for(const [a,v,ordinal,q,family,date] of [[a1,v1,0,q1,"identity-family","2026-09-10"],[a2,v2,0,q1,"identity-family","2026-09-11"],[a2,v2,1,q2,"legacy-family","2026-09-11"]] as const){
+      await db.query("insert into science_issued(attempt_id,ordinal,revision_id,family_id,choice_order,snapshot,predicted,selection_probability,selection_reason,candidate_count,eligible,issued_at) values($1,$2,$3,$4,'[0,1,2,3]',$5,.625,1,'test',1,true,$6)",[a,ordinal,q,family,{domain:"math",a:1,b:0,c:.25,content},date]);
+      await db.query("insert into science_answers(attempt_id,ordinal,operation_id,selected_index,is_correct,answered_at) values($1,$2,gen_random_uuid(),1,true,$3)",[a,ordinal,date]);
+      await db.query("insert into science_exposures(visitor_id,family_id,first_attempt_id,reason,seen_at) values($1,$2,$3,'trial',$4)",[v,family,a,date]);
+    }
+    await db.query("insert into questions(id,title,question_text,domain,ability_axis,difficulty_initial,difficulty_internal) values($1,'legacy','legacy question','math','knowledge',500,0)",[legacy]);
+    await db.query("insert into science_legacy_families(question_id,family_id,reason) values($1,'legacy-family','Reviewed equivalent legacy wording')",[legacy]);
+    const oldSession=(await db.query<{id:string}>("insert into exam_sessions(user_id) values($1) returning id",[owner])).rows[0].id;
+    await db.query("insert into exam_answers(session_id,user_id,question_id,selected_choice_index,is_correct,answered_at) values($1,$2,$3,1,true,'2026-09-01')",[oldSession,owner,legacy]);
+    await expect(db.query("select science_claim_visitor($1,$2,$3)",[v2,"not-the-token",owner])).rejects.toThrow("invalid_owner");
+    expect((await db.query<{user_id:string|null}>("select user_id from science_attempts where id=$1",[a2])).rows[0].user_id).toBeNull();
+    await db.query("select science_claim_visitor($1,$2,$3)",[v1,"c".repeat(64),owner]);
+    await db.query("select science_claim_visitor($1,$2,$3)",[v2,"d".repeat(64),owner]);
+    const effective=(await db.query<{attempt_id:string;ordinal:number;eligible:boolean}>("select attempt_id,ordinal,eligible from science_responses where user_id=$1 order by attempt_id,ordinal",[owner])).rows;
+    expect(effective.map(r=>r.eligible)).toEqual([true,false,false]);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_answers where attempt_id in ($1,$2) and is_correct",[a1,a2])).rows[0].n).toBe(3);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_issued where attempt_id in ($1,$2) and eligible",[a1,a2])).rows[0].n).toBe(3);
+    expect((await db.query<{state:boolean;competitive:boolean}>("select needs_recalculation state,competitive from science_attempts where id=$1",[a2])).rows[0]).toEqual({state:true,competitive:false});
+    expect((await db.query<{result:unknown}>("select result from science_result_revisions where attempt_id=$1",[a2])).rows[0].result).toEqual({total:500});
+    expect((await db.query<{route_group:string}>("select route_group from science_visitors where id=$1",[v2])).rows[0].route_group).toBe("A");
+    await db.query("select science_claim_visitor($1,$2,$3)",[v2,"d".repeat(64),owner]);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_response_exclusions where attempt_id=$1",[a2])).rows[0].n).toBe(2);
   });
 });

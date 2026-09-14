@@ -191,6 +191,7 @@ create function public.science_create_attempt(p_visitor uuid,p_user uuid,p_defin
 returns public.science_attempts language plpgsql set search_path=public as $$
 declare v science_visitors; a science_attempts; kind text; needs_account boolean;
 begin
+  perform 1 from science_config where key='correction_epoch' for share;
   select * into v from science_visitors where id=p_visitor for update;
   if not found or (v.user_id is not null and v.user_id is distinct from p_user) then raise exception 'not_found' using errcode='P0002'; end if;
   if p_user is not null then
@@ -216,6 +217,7 @@ create function public.science_issue(p_attempt uuid,p_visitor uuid,p_user uuid,p
 returns public.science_issued language plpgsql set search_path=public as $$
 declare a science_attempts; q science_items; issued science_issued; params science_release_items; known boolean; eligible boolean;
 begin
+  perform 1 from science_config where key='correction_epoch' for share;
   select * into a from science_attempts where id=p_attempt for update;
   if not found or not science_owns(p_attempt,p_visitor,p_user) then raise exception 'not_found' using errcode='P0002'; end if;
   select * into issued from science_issued where attempt_id=p_attempt and ordinal=p_ordinal;

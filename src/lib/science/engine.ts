@@ -26,11 +26,11 @@ export async function attemptRecords(ctx: Context, id: string) {
   ]);
   const issued = checked(issuedResponse) as Issued[];
   const answers = checked(answerResponse) as Answer[];
-  const corrections = await correctionState(ctx.db, issued.map(q => q.revision_id));
+  const corrections = await correctionState(ctx.db, issued.map(q => q.revision_id), id);
   const responses: Response[] = answers.map((answer) => {
     const question = issued.find((q) => q.ordinal === answer.ordinal);
     if (!question) throw new ScienceError("保存記録を確認する必要があります。", 503, "inconsistent_record");
-    return { ...question.snapshot, correct: answer.is_correct, eligible: question.eligible && !corrections.updates.get(question.revision_id)?.excluded, answeredAt: answer.answered_at };
+    return { ...question.snapshot, correct: answer.is_correct, eligible: question.eligible && !corrections.updates.get(question.revision_id)?.excluded && !corrections.ineligibleOrdinals.has(question.ordinal), answeredAt: answer.answered_at };
   });
   return { issued, answers, responses, corrections };
 }
