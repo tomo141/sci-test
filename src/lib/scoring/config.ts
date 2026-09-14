@@ -19,6 +19,7 @@ export const scoringConfig = {
   overallAbilityBlend: 0.35,
   domainAbilityBlend: 0.4,
   axisAbilityBlend: 0.25,
+  subdomainAbilityBlend: 0.25,
   firstQuestionTargetDifficulty: 100,
   lowCumulativeRateThreshold: 0.7,
   lowRateTargetBand: { min: 0.7, max: 0.9 },

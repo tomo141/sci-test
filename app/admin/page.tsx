@@ -4,6 +4,7 @@ import { AppButton } from "@/components/ui/AppButton";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { getAdminDashboardData } from "@/src/lib/admin/dashboard";
+import { getBankHealthData } from "@/src/lib/admin/bankHealth";
 import { isAdminUser } from "@/src/lib/admin/role";
 import { createServerSupabaseClient } from "@/src/lib/supabase/server";
 
@@ -46,6 +47,7 @@ export default async function AdminPage() {
   if (!admin) return <NoAdminAccess />;
 
   const dashboard = await getAdminDashboardData();
+  const bankHealth = await getBankHealthData();
   const kpis = [
     ["受験開始数", `${dashboard.examStarts.toLocaleString()}人`, "実データ"],
     ["速報到達率", `${dashboard.completed10Rate}%`, "実データ"],
@@ -129,6 +131,45 @@ export default async function AdminPage() {
             </div>
           </AppCard>
         </section>
+        <AppCard className="mt-6 overflow-x-auto">
+          <div className="mb-4 flex flex-col justify-between gap-3 md:flex-row md:items-center">
+            <div>
+              <h3 className="text-xl font-black">問題バンク健全性</h3>
+              <p className="mt-1 text-sm text-[var(--color-muted)]">
+                {bankHealth.generatedAt ? `最終更新: ${bankHealth.generatedAt}` : "pnpm questions:gaps 実行後に表示されます"}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <StatusBadge tone="yellow">不足 {bankHealth.totalGap}</StatusBadge>
+              <StatusBadge tone="yellow">未達 {bankHealth.belowTarget}/{bankHealth.totalSubdomains}</StatusBadge>
+              <StatusBadge tone="green">達成 {bankHealth.complete}</StatusBadge>
+            </div>
+          </div>
+          <table className="w-full min-w-[860px] text-sm">
+            <thead>
+              <tr className="text-left text-[var(--color-muted)]">
+                {["大分野", "小分野", "現在", "目標", "不足", "L100-300", "L400-600", "L700-900", "公開済"].map((h) => (
+                  <th key={h} className="border-b border-[var(--color-border)] p-3">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {bankHealth.worstRows.map((row) => (
+                <tr key={`${row.domain}/${row.subdomain}`}>
+                  <td className="border-b border-[var(--color-border)] p-3 font-bold">{row.domain}</td>
+                  <td className="border-b border-[var(--color-border)] p-3">{row.subdomain}</td>
+                  <td className="border-b border-[var(--color-border)] p-3">{row.current}</td>
+                  <td className="border-b border-[var(--color-border)] p-3">{row.target}</td>
+                  <td className="border-b border-[var(--color-border)] p-3 font-black text-[var(--color-danger-700)]">{row.gap}</td>
+                  <td className="border-b border-[var(--color-border)] p-3">{row.levels["L100-300"] ?? 0}</td>
+                  <td className="border-b border-[var(--color-border)] p-3">{row.levels["L400-600"] ?? 0}</td>
+                  <td className="border-b border-[var(--color-border)] p-3">{row.levels["L700-900"] ?? 0}</td>
+                  <td className="border-b border-[var(--color-border)] p-3">{row.statuses?.published ?? 0}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </AppCard>
         <AppCard className="mt-6 overflow-x-auto">
           <div className="mb-4 flex items-center justify-between gap-3">
             <h3 className="text-xl font-black">要改善の問題</h3>

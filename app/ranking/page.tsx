@@ -6,7 +6,7 @@ import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { RankingDomainFilter } from "@/components/ranking/RankingDomainFilter";
-import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import { domains, isSubdomainOf, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
 import { scoringConfig } from "@/src/lib/scoring/config";
 import type { Metadata } from "next";
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 };
 
 type Props = {
-  searchParams: Promise<{ domain?: string }>;
+  searchParams: Promise<{ domain?: string; subdomain?: string }>;
 };
 
 function isDomainFilter(value: string | undefined): value is ScienceDomain {
@@ -38,11 +38,14 @@ function isDomainFilter(value: string | undefined): value is ScienceDomain {
 export default async function RankingPage({ searchParams }: Props) {
   const params = await searchParams;
   const activeDomain = isDomainFilter(params.domain) ? params.domain : "総合";
-  const rows = await getPublicLeaderboard(100, activeDomain);
+  const activeSubdomain =
+    activeDomain !== "総合" && isSubdomainOf(activeDomain, params.subdomain) ? params.subdomain : undefined;
+  const rows = await getPublicLeaderboard(100, activeDomain, activeSubdomain);
   const isDomainRanking = activeDomain !== "総合";
-  const scoreLabel = isDomainRanking ? "分野スコア" : "最新推定スコア";
+  const isSubdomainRanking = !!activeSubdomain;
+  const scoreLabel = isSubdomainRanking ? "小分野スコア" : isDomainRanking ? "分野スコア" : "最新推定スコア";
   const formatScore = (score: number) =>
-    isDomainRanking ? `${score} / ${scoringConfig.domainMaxScore}` : String(score);
+    isDomainRanking && !isSubdomainRanking ? `${score} / ${scoringConfig.domainMaxScore}` : String(score);
 
   return (
     <>
@@ -50,7 +53,9 @@ export default async function RankingPage({ searchParams }: Props) {
       <main className="page-container py-8">
         <h1 className="flex items-center gap-3 text-4xl font-black"><Trophy className="text-[var(--color-accent-yellow-600)]" />ランキング</h1>
         <p className="mt-2 font-bold text-[var(--color-ink-soft)]">
-          {activeDomain === "総合" ? "総合スコアのランキングです。" : `${activeDomain}分野のランキングです。`}
+          {activeSubdomain
+            ? `${activeDomain} / ${activeSubdomain} のランキングです。`
+            : activeDomain === "総合" ? "総合スコアのランキングです。" : `${activeDomain}分野のランキングです。`}
         </p>
         <div className="mt-6 grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
           <section className="min-w-0">
@@ -91,7 +96,9 @@ export default async function RankingPage({ searchParams }: Props) {
             ) : (
               <AppCard>
                 <h2 className="text-xl font-black">
-                  {activeDomain === "総合" ? "ランキングはまだ集計前です" : `${activeDomain}のランキングはまだ集計前です`}
+                  {activeSubdomain
+                    ? `${activeSubdomain}のランキングはまだ集計前です`
+                    : activeDomain === "総合" ? "ランキングはまだ集計前です" : `${activeDomain}のランキングはまだ集計前です`}
                 </h2>
                 <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
                   保存済みの受験結果がランキング集計に反映されると、公開用ニックネーム・スコア・回答数・称号だけが表示されます。メールアドレスや本名は表示されません。
@@ -102,7 +109,7 @@ export default async function RankingPage({ searchParams }: Props) {
           </section>
           <aside className="grid gap-5">
             <Suspense fallback={<AppCard><p className="font-bold text-[var(--color-muted)]">分野を読み込み中...</p></AppCard>}>
-              <RankingDomainFilter active={activeDomain} />
+              <RankingDomainFilter active={activeDomain} activeSubdomain={activeSubdomain} />
             </Suspense>
             <AppCard>
               <h2 className="text-xl font-black">あなたの順位</h2>

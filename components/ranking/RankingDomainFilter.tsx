@@ -2,12 +2,18 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { AppCard } from "@/components/ui/AppCard";
-import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import { domains, subdomainsByDomain, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { DomainIcon } from "@/components/ui/DomainIcon";
 
 type FilterValue = "総合" | ScienceDomain;
 
-export function RankingDomainFilter({ active }: { active: FilterValue }) {
+export function RankingDomainFilter({
+  active,
+  activeSubdomain
+}: {
+  active: FilterValue;
+  activeSubdomain?: string;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -15,8 +21,10 @@ export function RankingDomainFilter({ active }: { active: FilterValue }) {
     const params = new URLSearchParams(searchParams.toString());
     if (value === "総合") {
       params.delete("domain");
+      params.delete("subdomain");
     } else {
       params.set("domain", value);
+      params.delete("subdomain");
     }
     const query = params.toString();
     router.push(query ? `/ranking?${query}` : "/ranking");
@@ -41,6 +49,30 @@ export function RankingDomainFilter({ active }: { active: FilterValue }) {
           </button>
         ))}
       </div>
+      {active !== "総合" ? (
+        <div className="mt-5 grid gap-2">
+          <label className="text-sm font-bold text-[var(--color-muted)]" htmlFor="ranking-subdomain">
+            小分野
+          </label>
+          <select
+            id="ranking-subdomain"
+            className="h-12 rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm font-bold"
+            value={activeSubdomain || ""}
+            onChange={(event) => {
+              const params = new URLSearchParams(searchParams.toString());
+              params.set("domain", active);
+              if (event.target.value) params.set("subdomain", event.target.value);
+              else params.delete("subdomain");
+              router.push(`/ranking?${params.toString()}`);
+            }}
+          >
+            <option value="">分野全体</option>
+            {subdomainsByDomain[active].map((subdomain) => (
+              <option key={subdomain} value={subdomain}>{subdomain}</option>
+            ))}
+          </select>
+        </div>
+      ) : null}
     </AppCard>
   );
 }

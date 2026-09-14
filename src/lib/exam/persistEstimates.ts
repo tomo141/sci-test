@@ -1,5 +1,5 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
-import { domains } from "@/src/lib/data/taxonomy";
+import { domains, subdomainKey, subdomainsByDomain } from "@/src/lib/data/taxonomy";
 import type { Estimate } from "@/src/lib/scoring/types";
 
 export async function persistProficiencyEstimates(
@@ -30,7 +30,22 @@ export async function persistProficiencyEstimates(
       answer_count: estimate.counts.domains[domain],
       standard_error: estimate.uncertainties.domains[domain],
       updated_at: new Date().toISOString()
-    }))
+    })),
+    ...domains.flatMap((domain) =>
+      subdomainsByDomain[domain].map((subdomain) => {
+        const key = subdomainKey(domain, subdomain);
+        return {
+          user_id: userId,
+          session_id: sessionId,
+          scope: "subdomain",
+          scope_key: key,
+          ability: estimate.subdomains[key],
+          answer_count: estimate.counts.subdomains[key],
+          standard_error: estimate.uncertainties.subdomains[key],
+          updated_at: new Date().toISOString()
+        };
+      })
+    )
   ].filter((row) => row.answer_count > 0);
 
   if (!rows.length) return;

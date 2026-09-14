@@ -11,7 +11,7 @@ import { RadarScoreChart } from "@/components/charts/RadarScoreChart";
 import { SaveResultButton } from "@/components/exam/SaveResultButton";
 import { useExamAnswers } from "@/components/exam/useExamAnswers";
 import { ReviewListSection } from "@/components/karte/ReviewListSection";
-import { domains } from "@/src/lib/data/taxonomy";
+import { domains, subdomainKey, subdomainsByDomain } from "@/src/lib/data/taxonomy";
 import { EXAM_PLAN_STORAGE_KEY, type ExamPlan } from "@/src/lib/exam/session";
 import { scoringConfig } from "@/src/lib/scoring/config";
 import { domainScorePercent, internalScorePercent } from "@/src/lib/scoring/domainScore";
@@ -47,8 +47,10 @@ export function KarteResultClient() {
   const estimate = useMemo(() => estimateFromAnswers(answers), [answers]);
   const correctCount = answers.filter((answer) => answer.correct).length;
   const correctRate = answers.length ? correctCount / answers.length : 0;
-  const targetDomain = examPlan?.mode === "domain" ? examPlan.targetDomain : undefined;
-  const isDomainExam = !!targetDomain;
+  const targetDomain = examPlan?.mode === "domain" || examPlan?.mode === "subdomain" ? examPlan.targetDomain : undefined;
+  const targetSubdomain = examPlan?.mode === "subdomain" ? examPlan.targetSubdomain : undefined;
+  const isDomainExam = !!targetDomain && !targetSubdomain;
+  const isSubdomainExam = !!targetDomain && !!targetSubdomain;
   const domainData = domains.map((name) => {
     if (!isDomainExam) return { name, score: estimate.domains[name] };
     const hasDomainScore = estimate.counts.domains[name] > 0;
@@ -59,8 +61,13 @@ export function KarteResultClient() {
   });
   const domainMaxScore = isDomainExam ? scoringConfig.maxScore : scoringConfig.domainMaxScore;
   const bestDomains = topDomains(domainData);
-  const displayScore = targetDomain ? roundInternalScore(estimate.internal.domains[targetDomain].value) : estimate.overall;
-  const displayLabel = targetDomain ? `分野スコア（${targetDomain}）` : "総合スコア";
+  const targetSubdomainKey = targetDomain && targetSubdomain ? subdomainKey(targetDomain, targetSubdomain) : null;
+  const displayScore = targetSubdomainKey
+    ? estimate.subdomains[targetSubdomainKey]
+    : targetDomain ? roundInternalScore(estimate.internal.domains[targetDomain].value) : estimate.overall;
+  const displayLabel = targetSubdomain
+    ? `小分野スコア（${targetDomain} / ${targetSubdomain}）`
+    : targetDomain ? `分野スコア（${targetDomain}）` : "総合スコア";
   const title = rankTitle(estimate.overall);
   const badges = [
     answers.length > 0 ? "挑戦者" : null,
@@ -113,7 +120,7 @@ export function KarteResultClient() {
           <h2 className="text-xl font-black">10の科学分野バランス</h2>
           {isDomainExam ? (
             <p className="mt-2 text-sm font-bold leading-7 text-[var(--color-muted)]">
-              分野スコア受験をしていない分野は、総合スコア受験の値（なければ500）を採用しています。
+              分野・小分野スコア受験をしていない分野は、総合スコア受験の値（なければ500）を採用しています。
             </p>
           ) : null}
           <RadarScoreChart data={domainData} label="10の科学分野バランス" maxScore={domainMaxScore} />
@@ -138,6 +145,30 @@ export function KarteResultClient() {
               </div>
             ))}
           </div>
+          <h3 className="mt-6 text-lg font-black">小分野内訳</h3>
+          <div className="mt-3 grid gap-3">
+            {domains.map((domain) => (
+              <details key={domain} className="rounded-xl border border-[var(--color-border)] p-3">
+                <summary className="cursor-pointer font-black">{domain}</summary>
+                <div className="mt-3 grid gap-2">
+                  {subdomainsByDomain[domain].map((subdomain) => {
+                    const key = subdomainKey(domain, subdomain);
+                    const count = estimate.counts.subdomains[key] || 0;
+                    const score = estimate.subdomains[key];
+                    return (
+                      <div key={key}>
+                        <div className="flex justify-between gap-3 text-xs font-bold">
+                          <span>{subdomain}</span>
+                          <span>{count > 0 ? `${score} / ${scoringConfig.maxScore}` : "—"}</span>
+                        </div>
+                        {count > 0 ? <ProgressBar value={internalScorePercent(score)} /> : null}
+                      </div>
+                    );
+                  })}
+                </div>
+              </details>
+            ))}
+          </div>
         </AppCard>
         <div className="grid gap-6">
           <AppCard><h2 className="mb-3 text-xl font-black">得意分野 TOP3</h2>{bestDomains.map((item, i) => <p key={item.name} className="mb-2 rounded-xl bg-[var(--color-primary-50)] p-3 font-bold">{i + 1}. {item.name} {item.score}点</p>)}</AppCard>
@@ -151,8 +182,9 @@ export function KarteResultClient() {
           scoreLow={estimate.scoreRange[0]}
           scoreHigh={estimate.scoreRange[1]}
           answerCount={answers.length}
-          scoreKind={isDomainExam ? "domain" : "overall"}
+          scoreKind={isSubdomainExam ? "subdomain" : isDomainExam ? "domain" : "overall"}
           domain={targetDomain}
+          subdomain={targetSubdomain}
         />
         <AppButton href="/ranking" variant="secondary"><Trophy />ランキングを見る</AppButton>
       </div>

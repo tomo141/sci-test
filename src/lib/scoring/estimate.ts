@@ -1,4 +1,11 @@
-import { abilityAxes, domains, type AbilityAxis, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import {
+  abilityAxes,
+  domains,
+  subdomainKey,
+  subdomainsByDomain,
+  type AbilityAxis,
+  type ScienceDomain
+} from "@/src/lib/data/taxonomy";
 import { createInitialAbilityState, updateAbilityState } from "./ability";
 import { scoringConfig } from "./config";
 import { internalToDomainScore } from "./domainScore";
@@ -39,6 +46,14 @@ function toDisplayState(state: AbilityState): Estimate {
     domains: Object.fromEntries(
       domains.map((domain) => [domain, internalToDomainScore(state.domains[domain].value)])
     ) as Record<ScienceDomain, number>,
+    subdomains: Object.fromEntries(
+      domains.flatMap((domain) =>
+        subdomainsByDomain[domain].map((subdomain) => {
+          const key = subdomainKey(domain, subdomain);
+          return [key, roundStep(clamp(state.subdomains[key]?.value ?? scoringConfig.initialAbility))];
+        })
+      )
+    ),
     axes: Object.fromEntries(
       abilityAxes.map((axis) => [axis, roundStep(clamp(state.axes[axis].value))])
     ) as Record<AbilityAxis, number>,
@@ -46,6 +61,14 @@ function toDisplayState(state: AbilityState): Estimate {
     counts: {
       overall: state.overall.count,
       domains: Object.fromEntries(domains.map((domain) => [domain, state.domains[domain].count])) as EstimateCounts["domains"],
+      subdomains: Object.fromEntries(
+        domains.flatMap((domain) =>
+          subdomainsByDomain[domain].map((subdomain) => {
+            const key = subdomainKey(domain, subdomain);
+            return [key, state.subdomains[key]?.count ?? 0];
+          })
+        )
+      ),
       axes: Object.fromEntries(abilityAxes.map((axis) => [axis, state.axes[axis].count])) as EstimateCounts["axes"]
     },
     uncertainties: {
@@ -53,6 +76,14 @@ function toDisplayState(state: AbilityState): Estimate {
       domains: Object.fromEntries(
         domains.map((domain) => [domain, scaleUncertaintyToDomain(state.domains[domain].uncertainty)])
       ) as EstimateUncertainties["domains"],
+      subdomains: Object.fromEntries(
+        domains.flatMap((domain) =>
+          subdomainsByDomain[domain].map((subdomain) => {
+            const key = subdomainKey(domain, subdomain);
+            return [key, state.subdomains[key]?.uncertainty ?? scoringConfig.initialStandardError];
+          })
+        )
+      ),
       axes: Object.fromEntries(abilityAxes.map((axis) => [axis, state.axes[axis].uncertainty])) as EstimateUncertainties["axes"]
     },
     standardError,
@@ -87,8 +118,22 @@ export function estimateFromAnswers(answers: AnswerRecord[]): Estimate {
 export function blendedAbilityForQuestion(
   state: AbilityState,
   domain: ScienceDomain,
-  abilityAxis: AbilityAxis
+  abilityAxis: AbilityAxis,
+  subdomain?: string
 ) {
+  if (subdomain) {
+    const key = subdomainKey(domain, subdomain);
+    const subdomainValue = state.subdomains[key]?.value ?? state.domains[domain].value;
+    const baseTotal =
+      scoringConfig.overallAbilityBlend + scoringConfig.domainAbilityBlend + scoringConfig.axisAbilityBlend;
+    const remaining = 1 - scoringConfig.subdomainAbilityBlend;
+    return (
+      (scoringConfig.overallAbilityBlend / baseTotal) * remaining * state.overall.value +
+      (scoringConfig.domainAbilityBlend / baseTotal) * remaining * state.domains[domain].value +
+      (scoringConfig.axisAbilityBlend / baseTotal) * remaining * state.axes[abilityAxis].value +
+      scoringConfig.subdomainAbilityBlend * subdomainValue
+    );
+  }
   return (
     scoringConfig.overallAbilityBlend * state.overall.value +
     scoringConfig.domainAbilityBlend * state.domains[domain].value +

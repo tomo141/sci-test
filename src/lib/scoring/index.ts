@@ -18,6 +18,7 @@ export {
 export {
   createExamPlan,
   createDomainExamPlan,
+  createSubdomainExamPlan,
   getCoverageSlot,
   uncoveredCells,
   coveredCells,

@@ -3,8 +3,9 @@ import { domains, type AbilityAxis, type ScienceDomain } from "@/src/lib/data/ta
 export type ExamPlan = {
   sessionSeed: string;
   domainOrder: ScienceDomain[];
-  mode?: "overall" | "domain";
+  mode?: "overall" | "domain" | "subdomain";
   targetDomain?: ScienceDomain;
+  targetSubdomain?: string;
 };
 
 export type CoverageSlot = {
@@ -50,7 +51,7 @@ export function pickWithSeed<T>(items: readonly T[], seed: string): T {
 }
 
 export function getDomainOrderForBlock(plan: ExamPlan, blockIndex: number): ScienceDomain[] {
-  if (plan.mode === "domain" && plan.targetDomain) {
+  if ((plan.mode === "domain" || plan.mode === "subdomain") && plan.targetDomain) {
     return Array.from({ length: DOMAINS_PER_BLOCK }, () => plan.targetDomain as ScienceDomain);
   }
   if (blockIndex === 0 && plan.domainOrder.length === DOMAINS_PER_BLOCK) {
@@ -71,6 +72,20 @@ export function createDomainExamPlan(targetDomain: ScienceDomain, sessionSeed = 
   return {
     mode: "domain",
     targetDomain,
+    sessionSeed,
+    domainOrder: Array.from({ length: DOMAINS_PER_BLOCK }, () => targetDomain)
+  };
+}
+
+export function createSubdomainExamPlan(
+  targetDomain: ScienceDomain,
+  targetSubdomain: string,
+  sessionSeed = crypto.randomUUID()
+): ExamPlan {
+  return {
+    mode: "subdomain",
+    targetDomain,
+    targetSubdomain,
     sessionSeed,
     domainOrder: Array.from({ length: DOMAINS_PER_BLOCK }, () => targetDomain)
   };

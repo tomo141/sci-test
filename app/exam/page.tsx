@@ -11,11 +11,12 @@ import type { AnswerFeedback } from "@/src/lib/exam/explanation";
 import { estimateFromAnswers } from "@/src/lib/scoring/scoring";
 import { examConfig } from "@/src/lib/exam/config";
 import type { PublicQuestion } from "@/src/lib/exam/publicQuestion";
-import { domains } from "@/src/lib/data/taxonomy";
+import { domains, subdomainsByDomain, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import {
   EXAM_PLAN_STORAGE_KEY,
   createDomainExamPlan,
   createExamPlan,
+  createSubdomainExamPlan,
   loadOrCreateExamPlan,
   type ClientExamAnswer,
   type ExamPlan
@@ -31,6 +32,7 @@ const ANONYMOUS_SESSION_STORAGE_KEY = "sci-test-anonymous-session-id";
 const ACTIVE_SESSION_STORAGE_KEY = "sci-test-active-exam-session";
 const ANSWER_SYNC_QUEUE_STORAGE_KEY = "sci-test-answer-sync-queue";
 const DEFAULT_EXAM_VALUE = "overall";
+const SUBDOMAIN_EXAM_VALUE = "subdomain";
 
 type ActiveExamSession = {
   sessionId: string | null;
@@ -189,6 +191,9 @@ export default function ExamPage() {
   const [startReady, setStartReady] = useState(false);
   const [examStarted, setExamStarted] = useState(false);
   const [selectedExamValue, setSelectedExamValue] = useState(DEFAULT_EXAM_VALUE);
+  const [selectedSubdomainDomain, setSelectedSubdomainDomain] = useState<ScienceDomain>(domains[0]);
+  const [selectedSubdomain, setSelectedSubdomain] = useState<string>(subdomainsByDomain[domains[0]][0]);
+  const [releasedSubdomains, setReleasedSubdomains] = useState<Record<string, string[]> | null>(null);
 
   const estimate = useMemo(() => estimateFromAnswers(answers), [answers]);
   const correctCount = answers.filter((a) => a.correct).length;
@@ -201,7 +206,9 @@ export default function ExamPage() {
       ? `第 ${questionNumber} 問 / ${QUESTIONS_PER_CYCLE} 問`
       : `第 ${questionNumber} 問（${cycleNumber}周目 ${positionInCycle}/${QUESTIONS_PER_CYCLE}）`;
   const examModeLabel =
-    examPlan?.mode === "domain" && examPlan.targetDomain ? `分野スコア（${examPlan.targetDomain}）` : "総合スコア";
+    examPlan?.mode === "subdomain" && examPlan.targetDomain && examPlan.targetSubdomain
+      ? `小分野スコア（${examPlan.targetDomain} / ${examPlan.targetSubdomain}）`
+      : examPlan?.mode === "domain" && examPlan.targetDomain ? `分野スコア（${examPlan.targetDomain}）` : "総合スコア";
 
   const loadQuestion = useCallback(async (plan: ExamPlan, previousAnswers: ClientExamAnswer[]) => {
     setQuestionLoading(true);
@@ -234,6 +241,24 @@ export default function ExamPage() {
   }, [questionLoading]);
 
   useEffect(() => {
+    void fetch("/api/exam/subdomains")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data?.subdomains) setReleasedSubdomains(data.subdomains as Record<string, string[]>);
+      })
+      .catch(() => setReleasedSubdomains(null));
+  }, []);
+
+  useEffect(() => {
+    const options = releasedSubdomains
+      ? (releasedSubdomains[selectedSubdomainDomain] || [])
+      : [...subdomainsByDomain[selectedSubdomainDomain]];
+    if (!options.includes(selectedSubdomain)) {
+      setSelectedSubdomain(options[0] || subdomainsByDomain[selectedSubdomainDomain][0]);
+    }
+  }, [releasedSubdomains, selectedSubdomain, selectedSubdomainDomain]);
+
+  useEffect(() => {
     const existingAnonymousId = window.localStorage.getItem(ANONYMOUS_SESSION_STORAGE_KEY) || crypto.randomUUID();
     window.localStorage.setItem(ANONYMOUS_SESSION_STORAGE_KEY, existingAnonymousId);
     setAnonymousSessionId(existingAnonymousId);
@@ -254,7 +279,15 @@ export default function ExamPage() {
     setExamPlan(plan);
     setExamStarted(true);
     setStartReady(true);
-    setSelectedExamValue(plan.mode === "domain" && plan.targetDomain ? plan.targetDomain : DEFAULT_EXAM_VALUE);
+    setSelectedExamValue(
+      plan.mode === "subdomain"
+        ? SUBDOMAIN_EXAM_VALUE
+        : plan.mode === "domain" && plan.targetDomain ? plan.targetDomain : DEFAULT_EXAM_VALUE
+    );
+    if (plan.mode === "subdomain" && plan.targetDomain && plan.targetSubdomain) {
+      setSelectedSubdomainDomain(plan.targetDomain);
+      setSelectedSubdomain(plan.targetSubdomain);
+    }
 
     const activeSession = loadJson<ActiveExamSession | null>(ACTIVE_SESSION_STORAGE_KEY, null);
     const parsedAnswers = existingAnswers ? (JSON.parse(existingAnswers) as ClientExamAnswer[]) : [];
@@ -340,7 +373,10 @@ export default function ExamPage() {
 
   const startExam = async () => {
     const targetDomain = domains.find((domain) => domain === selectedExamValue);
-    const newPlan = targetDomain ? createDomainExamPlan(targetDomain) : createExamPlan();
+    const newPlan =
+      selectedExamValue === SUBDOMAIN_EXAM_VALUE
+        ? createSubdomainExamPlan(selectedSubdomainDomain, selectedSubdomain)
+        : targetDomain ? createDomainExamPlan(targetDomain) : createExamPlan();
     window.localStorage.removeItem(ANSWERS_STORAGE_KEY);
     window.localStorage.removeItem(ANSWER_SYNC_QUEUE_STORAGE_KEY);
     window.localStorage.setItem(EXAM_PLAN_STORAGE_KEY, JSON.stringify(newPlan));
@@ -436,6 +472,7 @@ export default function ExamPage() {
     const currentAnswer: ClientExamAnswer = {
       questionId: currentQuestion.id,
       domain: currentQuestion.domain,
+      subdomain: currentQuestion.subdomain,
       abilityAxis: currentQuestion.abilityAxis,
       difficulty: currentQuestion.difficulty,
       discrimination: currentQuestion.discrimination,
@@ -545,6 +582,10 @@ export default function ExamPage() {
   };
 
   if (startReady && !examStarted) {
+    const visibleSubdomains = releasedSubdomains
+      ? (releasedSubdomains[selectedSubdomainDomain] || [])
+      : [...subdomainsByDomain[selectedSubdomainDomain]];
+
     return (
       <main className="mx-auto max-w-3xl px-4 py-16">
         <AppCard>
@@ -559,12 +600,56 @@ export default function ExamPage() {
               onChange={(event) => setSelectedExamValue(event.target.value)}
             >
               <option value={DEFAULT_EXAM_VALUE}>総合スコア</option>
+              <option value={SUBDOMAIN_EXAM_VALUE}>小分野スコア</option>
               {domains.map((domain) => (
                 <option key={domain} value={domain}>分野スコア（{domain}）</option>
               ))}
             </select>
           </div>
-          <AppButton className="mt-6 w-full" onClick={() => void startExam()}>
+          {selectedExamValue === SUBDOMAIN_EXAM_VALUE ? (
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-2">
+                <label className="text-sm font-bold text-[var(--color-muted)]" htmlFor="subdomain-domain">
+                  大分野
+                </label>
+                <select
+                  id="subdomain-domain"
+                  className="h-12 rounded-lg border border-[var(--color-border)] bg-white px-4 font-bold text-[var(--color-ink)]"
+                  value={selectedSubdomainDomain}
+                  onChange={(event) => setSelectedSubdomainDomain(event.target.value as ScienceDomain)}
+                >
+                  {domains.map((domain) => (
+                    <option key={domain} value={domain}>{domain}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="grid gap-2">
+                <label className="text-sm font-bold text-[var(--color-muted)]" htmlFor="subdomain">
+                  小分野
+                </label>
+                <select
+                  id="subdomain"
+                  className="h-12 rounded-lg border border-[var(--color-border)] bg-white px-4 font-bold text-[var(--color-ink)]"
+                  value={selectedSubdomain}
+                  onChange={(event) => setSelectedSubdomain(event.target.value)}
+                >
+                  {visibleSubdomains.map((subdomain) => (
+                    <option key={subdomain} value={subdomain}>{subdomain}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          ) : null}
+          {selectedExamValue === SUBDOMAIN_EXAM_VALUE && visibleSubdomains.length === 0 ? (
+            <p className="mt-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-primary-50)] p-3 text-sm font-bold text-[var(--color-muted)]">
+              公開中の小分野はまだありません。
+            </p>
+          ) : null}
+          <AppButton
+            className="mt-6 w-full"
+            disabled={selectedExamValue === SUBDOMAIN_EXAM_VALUE && visibleSubdomains.length === 0}
+            onClick={() => void startExam()}
+          >
             受験する
           </AppButton>
         </AppCard>

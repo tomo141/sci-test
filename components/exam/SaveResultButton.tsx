@@ -10,14 +10,16 @@ export function SaveResultButton({
   scoreHigh,
   answerCount,
   scoreKind = "overall",
-  domain
+  domain,
+  subdomain
 }: {
   score: number;
   scoreLow: number;
   scoreHigh: number;
   answerCount: number;
-  scoreKind?: "overall" | "domain";
+  scoreKind?: "overall" | "domain" | "subdomain";
   domain?: string;
+  subdomain?: string;
 }) {
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "login" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -26,10 +28,24 @@ export function SaveResultButton({
     setStatus("saving");
     setMessage("");
     const sessionId = window.localStorage.getItem("sci-test-session-id") || "local-preview";
+    const storedPlan = window.localStorage.getItem("sci-test-exam-plan");
+    const plan = storedPlan ? JSON.parse(storedPlan) as { mode?: string; targetDomain?: string; targetSubdomain?: string } : null;
+    const resolvedScoreKind = plan?.mode === "subdomain" || plan?.mode === "domain" ? plan.mode : scoreKind;
+    const resolvedDomain = plan?.targetDomain || domain;
+    const resolvedSubdomain = plan?.targetSubdomain || subdomain;
     const response = await fetch("/api/exam/save", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sessionId, score, scoreLow, scoreHigh, answerCount, scoreKind, domain })
+      body: JSON.stringify({
+        sessionId,
+        score,
+        scoreLow,
+        scoreHigh,
+        answerCount,
+        scoreKind: resolvedScoreKind,
+        domain: resolvedDomain,
+        subdomain: resolvedSubdomain
+      })
     }).catch(() => null);
     if (response?.ok) {
       setStatus("saved");

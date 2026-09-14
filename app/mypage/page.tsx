@@ -32,8 +32,9 @@ type ScoreHistoryRow = {
   score: number;
   answer_count: number;
   created_at: string;
-  score_kind: "overall" | "domain";
+  score_kind: "overall" | "domain" | "subdomain";
   domain: string | null;
+  subdomain: string | null;
 };
 
 type EducationProfileRow = {
@@ -74,7 +75,7 @@ export default async function MyPage() {
     const [profileResult, educationResult, historiesResult, marketingResult, userBadgesResult, totalBadgesResult, trainingCountResult] = await Promise.all([
       supabase.from("profiles").select("nickname").eq("id", userId).maybeSingle(),
       supabase.from("education_profiles").select("highest_education, specialty").eq("user_id", userId).maybeSingle(),
-      supabase.from("score_history").select("score, answer_count, created_at, score_kind, domain").eq("user_id", userId).order("created_at", { ascending: false }).limit(20),
+      supabase.from("score_history").select("score, answer_count, created_at, score_kind, domain, subdomain").eq("user_id", userId).order("created_at", { ascending: false }).limit(20),
       supabase.from("marketing_consents").select("consented, training_unlocked_at").eq("user_id", userId).maybeSingle(),
       supabase.from("user_badges").select("awarded_at, badges(name)").eq("user_id", userId).order("awarded_at", { ascending: false }),
       supabase.from("badges").select("id", { count: "exact", head: true }),
@@ -93,7 +94,7 @@ export default async function MyPage() {
   }
 
   const historyRows = (histories || []) as ScoreHistoryRow[];
-  const overallHistories = historyRows.filter((row) => row.score_kind !== "domain");
+  const overallHistories = historyRows.filter((row) => row.score_kind === "overall");
   const domainHistories = historyRows.filter((row) => row.score_kind === "domain");
   const scoreHistory = overallHistories.map((row) => ({
     date: new Date(row.created_at).toLocaleDateString("ja-JP", { month: "numeric", day: "numeric" }),
@@ -185,7 +186,11 @@ export default async function MyPage() {
             <h2 className="mb-3 text-xl font-black">最近の検定履歴</h2>
             {historyRows.length ? historyRows.slice(0, 3).map((row) => (
               <p key={row.created_at} className="border-b border-[var(--color-border)] py-3 font-bold">
-                {new Date(row.created_at).toLocaleString("ja-JP")} {row.score_kind === "domain" ? `分野（${row.domain || "未設定"}）` : "総合"} {Math.round(Number(row.score))} / {scoringConfig.maxScore}
+                {new Date(row.created_at).toLocaleString("ja-JP")}{" "}
+                {row.score_kind === "subdomain"
+                  ? `小分野（${row.domain || "未設定"} / ${row.subdomain || "未設定"}）`
+                  : row.score_kind === "domain" ? `分野（${row.domain || "未設定"}）` : "総合"}{" "}
+                {Math.round(Number(row.score))} / {scoringConfig.maxScore}
               </p>
             )) : <p className="leading-8 text-[var(--color-ink-soft)]">保存済みの検定履歴はまだありません。</p>}
           </AppCard>

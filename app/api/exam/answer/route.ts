@@ -22,8 +22,9 @@ import type { AnswerRecord } from "@/src/lib/scoring/types";
 const examPlanSchema = z.object({
   sessionSeed: z.string(),
   domainOrder: z.array(z.string()).length(10),
-  mode: z.enum(["overall", "domain"]).optional(),
-  targetDomain: z.string().optional()
+  mode: z.enum(["overall", "domain", "subdomain"]).optional(),
+  targetDomain: z.string().optional(),
+  targetSubdomain: z.string().optional()
 });
 
 const answerSchema = z.object({
@@ -38,6 +39,7 @@ const answerSchema = z.object({
       z.object({
         questionId: z.string(),
         domain: z.string(),
+        subdomain: z.string().optional(),
         abilityAxis: z.string(),
         difficulty: z.number(),
         discrimination: z.number().optional(),
@@ -71,6 +73,7 @@ export async function POST(request: Request) {
   const currentAnswer: AnswerRecord = {
     questionId: question.id,
     domain: question.domain,
+    subdomain: question.subdomain,
     abilityAxis: question.abilityAxis,
     difficulty: question.difficulty,
     discrimination: question.discrimination,

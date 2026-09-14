@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createDomainExamPlan, createExamPlan } from "@/src/lib/scoring";
-import { isScienceDomain } from "@/src/lib/exam/session";
+import { createDomainExamPlan, createExamPlan, createSubdomainExamPlan } from "@/src/lib/scoring";
+import { isScienceDomain, isSubdomainOf } from "@/src/lib/data/taxonomy";
 import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimit";
 import { createServiceRoleClient } from "@/src/lib/supabase/server";
 
@@ -9,8 +9,9 @@ const startSchema = z.object({
   anonymousSessionId: z.string().optional(),
   sessionSeed: z.string().optional(),
   examPlan: z.any().optional(),
-  examMode: z.enum(["overall", "domain"]).optional(),
-  targetDomain: z.string().optional()
+  examMode: z.enum(["overall", "domain", "subdomain"]).optional(),
+  targetDomain: z.string().optional(),
+  targetSubdomain: z.string().optional()
 });
 
 export async function POST(request: Request) {
@@ -21,7 +22,11 @@ export async function POST(request: Request) {
   const anonymousSessionId = body.anonymousSessionId || crypto.randomUUID();
   const examPlan =
     body.examPlan ||
-    (body.examMode === "domain" && isScienceDomain(body.targetDomain)
+    (body.examMode === "subdomain" &&
+    isScienceDomain(body.targetDomain) &&
+    isSubdomainOf(body.targetDomain, body.targetSubdomain)
+      ? createSubdomainExamPlan(body.targetDomain, body.targetSubdomain, body.sessionSeed)
+      : body.examMode === "domain" && isScienceDomain(body.targetDomain)
       ? createDomainExamPlan(body.targetDomain, body.sessionSeed)
       : createExamPlan(body.sessionSeed));
   const supabase = createServiceRoleClient();
@@ -39,7 +44,8 @@ export async function POST(request: Request) {
     anonymous_session_id: anonymousSessionId,
     status: "active",
     exam_mode: examPlan.mode || "overall",
-    target_domain: examPlan.mode === "domain" ? examPlan.targetDomain : null
+    target_domain: examPlan.mode === "domain" || examPlan.mode === "subdomain" ? examPlan.targetDomain : null,
+    target_subdomain: examPlan.mode === "subdomain" ? examPlan.targetSubdomain : null
   };
   let { data, error } = await supabase
     .from("exam_sessions")
@@ -47,7 +53,7 @@ export async function POST(request: Request) {
     .select("id, anonymous_session_id")
     .single();
 
-  if (error?.message?.includes("exam_mode") || error?.message?.includes("target_domain")) {
+  if (error?.message?.includes("exam_mode") || error?.message?.includes("target_domain") || error?.message?.includes("target_subdomain")) {
     const retry = await supabase
       .from("exam_sessions")
       .insert({ anonymous_session_id: anonymousSessionId, status: "active" })

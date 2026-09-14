@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { questions } from "@/src/lib/data/questions";
 import { domains } from "@/src/lib/data/taxonomy";
-import { createExamPlan, getCoverageSlot, getDomainOrderForBlock, shuffleWithSeed, uncoveredCells } from "./coverage";
+import { createExamPlan, createSubdomainExamPlan, getCoverageSlot, getDomainOrderForBlock, shuffleWithSeed, uncoveredCells } from "./coverage";
 import { selectAdaptiveQuestion, selectFirstQuestion } from "./adaptive";
 import { maxDifficultyCeiling, predictCorrectProbability } from "./probability";
 import { scoringConfig } from "./config";
@@ -132,6 +132,41 @@ describe("adaptive selection", () => {
     expect(maxDifficultyCeiling(19)).toBe(900);
     expect(maxDifficultyCeiling(20)).toBe(900);
     expect(maxDifficultyCeiling(9)).toBeCloseTo(478.9473684211);
+  });
+
+  it("keeps subdomain exams inside the target subdomain and reuses questions when the pool is small", () => {
+    const targetDomain = "数学";
+    const targetSubdomain = "数と代数";
+    const plan = createSubdomainExamPlan(targetDomain, targetSubdomain, "tiny-subdomain-pool");
+    const targetPool = questions
+      .filter((question) => question.domain === targetDomain && question.subdomain === targetSubdomain)
+      .slice(0, 2);
+    const distractors = questions
+      .filter((question) => question.domain !== targetDomain || question.subdomain !== targetSubdomain)
+      .slice(0, 10);
+    const tinyBank = [...targetPool, ...distractors];
+    const answers: AnswerRecord[] = [];
+    const selectedIds = new Set<string>();
+
+    for (let step = 0; step < 20; step += 1) {
+      const selection = selectAdaptiveQuestion({ questions: tinyBank, answers, plan });
+      expect(selection).not.toBeNull();
+      expect(selection!.question.domain).toBe(targetDomain);
+      expect(selection!.question.subdomain).toBe(targetSubdomain);
+      selectedIds.add(selection!.question.id);
+      answers.push({
+        questionId: selection!.question.id,
+        domain: selection!.question.domain,
+        subdomain: selection!.question.subdomain,
+        abilityAxis: selection!.question.abilityAxis,
+        difficulty: selection!.question.difficulty,
+        discrimination: selection!.question.discrimination,
+        correct: true,
+        qualityScore: selection!.question.qualityScore
+      });
+    }
+
+    expect(selectedIds.size).toBeLessThan(20);
   });
 });
 

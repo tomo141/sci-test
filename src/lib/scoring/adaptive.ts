@@ -51,7 +51,7 @@ function estimateProbability(question: Question, answers: AnswerRecord[], questi
   const estimate = estimateFromAnswers(answers);
   const selectionRate = effectiveCumulativeRateForSelection(estimate.cumulativeCorrectRate, questionIndex);
   const ability =
-    blendedAbilityForQuestion(estimate.internal, question.domain, question.abilityAxis) +
+    blendedAbilityForQuestion(estimate.internal, question.domain, question.abilityAxis, question.subdomain) +
     selectionAbilityInflation(selectionRate);
   return predictCorrectProbability(ability, question.difficulty, question.discrimination);
 }
@@ -106,15 +106,24 @@ function filterCandidates(
   now: Date,
   requireSlot: boolean,
   requirePublished: boolean,
-  questionIndex: number
+  questionIndex: number,
+  allowAnswered = false,
+  plan?: ExamPlan
 ) {
   const difficultyCeiling = maxDifficultyCeiling(questionIndex);
   const answeredIds = new Set(answers.map((answer) => answer.questionId));
   return questions.filter((question) => {
     if (question.abilityAxis !== BASIC_AXIS) return false;
-    if (answeredIds.has(question.id)) return false;
+    if (!allowAnswered && answeredIds.has(question.id)) return false;
     if (question.difficulty > difficultyCeiling) return false;
     if (requirePublished && !isPublishedAndValid(question, now)) return false;
+    if (plan?.mode === "subdomain") {
+      return (
+        question.domain === plan.targetDomain &&
+        question.subdomain === plan.targetSubdomain &&
+        question.abilityAxis === slot.abilityAxis
+      );
+    }
     if (requireSlot && slot.required) {
       return question.domain === slot.domain && question.abilityAxis === slot.abilityAxis;
     }
@@ -204,7 +213,7 @@ export function selectFirstQuestion(context: AdaptiveSelectionContext): Adaptive
   const targetDifficulty = scoringConfig.firstQuestionTargetDifficulty;
   const rng = createRng(`${plan.sessionSeed}:select:0`);
 
-  const domainCandidates = filterCandidates(questions, [], slot, now, true, true, 0).filter(
+  const domainCandidates = filterCandidates(questions, [], slot, now, true, true, 0, false, plan).filter(
     (question) => question.domain === slot.domain && question.abilityAxis === slot.abilityAxis
   );
 
@@ -219,7 +228,7 @@ export function selectFirstQuestion(context: AdaptiveSelectionContext): Adaptive
   const pool = ranked.slice(0, Math.min(scoringConfig.candidatePoolSize, ranked.length));
   const picked = pool.length
     ? pickFromTopWeighted(pool, rng).question
-    : filterCandidates(questions, [], slot, now, true, true, 0)[0];
+    : filterCandidates(questions, [], slot, now, true, true, 0, false, plan)[0];
   if (!picked) return null;
 
   return {
@@ -299,18 +308,38 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
       now,
       stage.requireSlot,
       stage.requirePublished,
-      questionIndex
+      questionIndex,
+      false,
+      plan
     );
+    const retryCandidates = candidates.length
+      ? candidates
+      : plan.mode === "subdomain"
+        ? filterCandidates(
+            questions,
+            [],
+            slot,
+            now,
+            stage.requireSlot,
+            stage.requirePublished,
+            questionIndex,
+            true,
+            plan
+          )
+        : candidates;
     const inBandCandidates = candidates.filter(
+      (question) => distanceToBand(estimateProbability(question, uniqueAnswers, questionIndex), band) === 0
+    );
+    const retryInBandCandidates = retryCandidates.filter(
       (question) => distanceToBand(estimateProbability(question, uniqueAnswers, questionIndex), band) === 0
     );
 
     if (!inBandCandidates.length && selectionRate >= 1) {
-      const hardest = selectHardestAvailable(candidates, uniqueAnswers, slot, selectionRate, rng, questionIndex);
+      const hardest = selectHardestAvailable(retryCandidates, uniqueAnswers, slot, selectionRate, rng, questionIndex);
       if (hardest) return hardest;
     }
 
-    const pool = inBandCandidates.length ? inBandCandidates : candidates;
+    const pool = retryInBandCandidates.length ? retryInBandCandidates : retryCandidates;
 
     const selection = selectFromCandidates(
       pool,
@@ -330,10 +359,22 @@ export function selectAdaptiveQuestion(context: AdaptiveSelectionContext): Adapt
     (question) =>
       !uniqueAnswers.some((answer) => answer.questionId === question.id) &&
       isPublishedAndValid(question, now) &&
-      question.difficulty <= maxDifficultyCeiling(questionIndex)
+      question.difficulty <= maxDifficultyCeiling(questionIndex) &&
+      (plan.mode !== "subdomain" ||
+        (question.domain === plan.targetDomain && question.subdomain === plan.targetSubdomain))
   );
   const target = (baseBand.min + baseBand.max) / 2;
-  return selectClosestToTarget(anyUnanswered, uniqueAnswers, slot, target, rng, questionIndex);
+  const fallbackPool =
+    anyUnanswered.length || plan.mode !== "subdomain"
+      ? anyUnanswered
+      : questions.filter(
+          (question) =>
+            isPublishedAndValid(question, now) &&
+            question.difficulty <= maxDifficultyCeiling(questionIndex) &&
+            question.domain === plan.targetDomain &&
+            question.subdomain === plan.targetSubdomain
+        );
+  return selectClosestToTarget(fallbackPool, uniqueAnswers, slot, target, rng, questionIndex);
 }
 
 export function nextQuestionForAnswers(

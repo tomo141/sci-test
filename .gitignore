@@ -29,3 +29,8 @@ blob-report/
 *.tsbuildinfo
 next-env.d.ts
 .vercel
+
+# local implementation evidence (never deploy credentials or service snapshots)
+implementation/*.log
+implementation/baseline.json
+implementation/local/

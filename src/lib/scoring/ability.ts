@@ -1,4 +1,11 @@
-import { abilityAxes, domains, type AbilityAxis, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import {
+  abilityAxes,
+  domains,
+  subdomainKey,
+  subdomainsByDomain,
+  type AbilityAxis,
+  type ScienceDomain
+} from "@/src/lib/data/taxonomy";
 import { scoringConfig } from "./config";
 import { predictCorrectProbability } from "./probability";
 import type { AbilityDimensionState, AbilityState, AnswerRecord } from "./types";
@@ -25,6 +32,11 @@ export function createInitialAbilityState(): AbilityState {
       ScienceDomain,
       AbilityDimensionState
     >,
+    subdomains: Object.fromEntries(
+      domains.flatMap((domain) =>
+        subdomainsByDomain[domain].map((subdomain) => [subdomainKey(domain, subdomain), createDimension()])
+      )
+    ),
     axes: Object.fromEntries(abilityAxes.map((axis) => [axis, createDimension()])) as Record<
       AbilityAxis,
       AbilityDimensionState
@@ -94,12 +106,26 @@ export function updateAbilityState(
   answer: AnswerRecord,
   cumulativeCorrectRate = 0
 ): AbilityState {
+  const answerSubdomainKey = answer.subdomain ? subdomainKey(answer.domain, answer.subdomain) : null;
+  const subdomainState = answerSubdomainKey ? state.subdomains[answerSubdomainKey] ?? {
+    value: state.domains[answer.domain]?.value ?? scoringConfig.initialAbility,
+    count: 0,
+    uncertainty: scoringConfig.initialStandardError
+  } : null;
+
   return {
     overall: updateDimension(state.overall, answer, cumulativeCorrectRate),
     domains: {
       ...state.domains,
       [answer.domain]: updateDimension(state.domains[answer.domain], answer, cumulativeCorrectRate)
     },
+    subdomains:
+      answerSubdomainKey && subdomainState
+        ? {
+            ...state.subdomains,
+            [answerSubdomainKey]: updateDimension(subdomainState, answer, cumulativeCorrectRate)
+          }
+        : state.subdomains,
     axes: {
       ...state.axes,
       [answer.abilityAxis]: updateDimension(state.axes[answer.abilityAxis], answer, cumulativeCorrectRate)

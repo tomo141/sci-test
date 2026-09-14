@@ -13,8 +13,9 @@ const saveSchema = z.object({
   scoreLow: z.number(),
   scoreHigh: z.number(),
   answerCount: z.number().int().nonnegative(),
-  scoreKind: z.enum(["overall", "domain"]).optional(),
-  domain: z.string().optional()
+  scoreKind: z.enum(["overall", "domain", "subdomain"]).optional(),
+  domain: z.string().optional(),
+  subdomain: z.string().optional()
 });
 
 export async function POST(request: Request) {
@@ -51,11 +52,12 @@ export async function POST(request: Request) {
     score_high: parsed.data.scoreHigh,
     answer_count: parsed.data.answerCount,
     score_kind: parsed.data.scoreKind || "overall",
-    domain: parsed.data.scoreKind === "domain" ? parsed.data.domain || null : null
+    domain: parsed.data.scoreKind === "domain" || parsed.data.scoreKind === "subdomain" ? parsed.data.domain || null : null,
+    subdomain: parsed.data.scoreKind === "subdomain" ? parsed.data.subdomain || null : null
   };
   let { error } = await writeClient.from("score_history").insert(scoreHistoryRow);
 
-  if (error?.message?.includes("score_kind") || error?.message?.includes("domain")) {
+  if (error?.message?.includes("score_kind") || error?.message?.includes("domain") || error?.message?.includes("subdomain")) {
     const retry = await writeClient.from("score_history").insert({
       user_id: scoreHistoryRow.user_id,
       session_id: scoreHistoryRow.session_id,

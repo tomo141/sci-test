@@ -21,6 +21,7 @@ export function toClientExamAnswers(rows: ExamAnswerRow[], bank: Question[]): Cl
     answers.push({
       questionId: row.question_id,
       domain: question.domain,
+      subdomain: question.subdomain,
       abilityAxis: question.abilityAxis,
       difficulty: row.served_difficulty ?? question.difficulty,
       discrimination: question.discrimination,

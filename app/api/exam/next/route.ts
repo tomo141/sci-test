@@ -9,8 +9,9 @@ import { enforceRateLimit, rateLimitPolicies } from "@/src/lib/security/rateLimi
 const examPlanSchema = z.object({
   sessionSeed: z.string(),
   domainOrder: z.array(z.string()).length(10),
-  mode: z.enum(["overall", "domain"]).optional(),
-  targetDomain: z.string().optional()
+  mode: z.enum(["overall", "domain", "subdomain"]).optional(),
+  targetDomain: z.string().optional(),
+  targetSubdomain: z.string().optional()
 });
 
 const nextSchema = z.object({
@@ -20,6 +21,7 @@ const nextSchema = z.object({
       z.object({
         questionId: z.string(),
         domain: z.string(),
+        subdomain: z.string().optional(),
         abilityAxis: z.string(),
         difficulty: z.number(),
         discrimination: z.number().optional(),

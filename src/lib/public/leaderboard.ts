@@ -96,6 +96,48 @@ async function getDomainLeaderboard(domain: ScienceDomain, limit: number): Promi
   return [];
 }
 
+async function getSubdomainLeaderboard(
+  domain: ScienceDomain,
+  subdomain: string,
+  limit: number
+): Promise<PublicLeaderboardRow[]> {
+  const supabase = createServiceRoleClient();
+  if (!supabase) return [];
+
+  const { data: histories, error } = await supabase
+    .from("score_history")
+    .select("user_id, score, answer_count, profiles(nickname)")
+    .eq("score_kind", "subdomain")
+    .eq("domain", domain)
+    .eq("subdomain", subdomain)
+    .not("user_id", "is", null)
+    .gt("answer_count", 0)
+    .order("score", { ascending: false })
+    .order("answer_count", { ascending: false })
+    .limit(limit * 5);
+
+  if (error || !histories?.length) return [];
+
+  const bestRows = dedupeBestPerUser(
+    histories.map((row) => ({
+      user_id: row.user_id as string,
+      ability: Number(row.score),
+      answer_count: Number(row.answer_count),
+      profiles: row.profiles as ProfileRef
+    })),
+    limit
+  );
+
+  return bestRows.map((row, index) => ({
+    rank: index + 1,
+    nickname: readNickname(row.profiles, index),
+    score: row.ability,
+    answerCount: row.answer_count,
+    bestDomain: `${domain}/${subdomain}`,
+    title: rankTitle(row.ability)
+  }));
+}
+
 async function getOverallLeaderboard(limit: number): Promise<PublicLeaderboardRow[]> {
   const supabase = createServiceRoleClient();
   if (!supabase) return [];
@@ -153,8 +195,12 @@ async function getOverallLeaderboard(limit: number): Promise<PublicLeaderboardRo
 
 export async function getPublicLeaderboard(
   limit = 100,
-  domain: ScienceDomain | "総合" = "総合"
+  domain: ScienceDomain | "総合" = "総合",
+  subdomain?: string
 ): Promise<PublicLeaderboardRow[]> {
+  if (domain !== "総合" && subdomain) {
+    return getSubdomainLeaderboard(domain, subdomain, limit);
+  }
   if (domain !== "総合") {
     return getDomainLeaderboard(domain, limit);
   }
