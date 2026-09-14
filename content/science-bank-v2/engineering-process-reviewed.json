@@ -1,0 +1,372 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000060",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "化学プラントの設計意図からの逸脱を、「なし」「多い」「逆」などのガイドワードで系統的に考える手法はどれか。",
+      "choices": [
+        "故障モードごとの影響を調べるFMEA",
+        "統計的な工程変動を監視する管理図",
+        "危険性と運転上の問題を検討するHAZOP",
+        "製品の環境負荷をライフサイクルで評価するLCA"
+      ],
+      "correctIndex": 2,
+      "explanation": "HAZOPはガイドワードを使って設計意図からの逸脱を洗い出し、その原因や影響を検討する。FMEAも危険源の発見に役立つため、「危険を探す」というだけでは両者を区別できない。",
+      "distractorRationales": [
+        "FMEAは個々の故障モードを起点として影響を検討する。",
+        "管理図は時系列の工程データから変動を監視する。",
+        "ガイドワードを用いた設計意図からの逸脱の検討が特徴。",
+        "LCAは資源採取から廃棄等までの環境負荷を評価する。"
+      ],
+      "sources": [
+        {
+          "title": "IChemE — Hazops and Human Factors",
+          "url": "https://www.icheme.org/media/9843/xix-paper-56.pdf"
+        }
+      ]
+    },
+    "reason": "危険源の洗い出しだけではFMEA等も正解になる旧問を、HAZOPを特徴付ける方法へ限定。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PDF3ページの二つの原則とガイドワードの役割を確認。実プラントの安全認証や法令適合を保証する設問ではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000144",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "組換えタンパク質の生産宿主を選ぶ際、一般的な大腸菌の発現系では哺乳類細胞の発現系に比べて何が制約になりやすいか。特殊な糖鎖改変を施した株は考えない。",
+      "choices": [
+        "プラスミドに載せた遺伝子を転写する仕組みがないこと",
+        "ヒト型の複雑なN結合型糖鎖を付加する仕組みを通常は持たないこと",
+        "リボソームでアミノ酸をつなぐ仕組みがないこと",
+        "タンパク質の一次構造をDNA配列で指定できないこと"
+      ],
+      "correctIndex": 1,
+      "explanation": "一般的な大腸菌は組換えタンパク質を発現できるが、哺乳類型の複雑な糖鎖修飾をそのまま再現する宿主ではない。必要な修飾や折り畳みも宿主選択に影響する。哺乳類細胞なら目的の糖鎖が無条件に完全再現されるという意味でもない。",
+      "distractorRationales": [
+        "大腸菌にも遺伝子を転写する仕組みがある。",
+        "通常の大腸菌発現系と哺乳類細胞発現系の差となる。",
+        "大腸菌もリボソームで翻訳する。",
+        "遺伝子の配列でアミノ酸配列を指定して発現させることができる。"
+      ],
+      "sources": [
+        {
+          "title": "Thermo Fisher Scientific — Basic Mammalian Expression Support: Getting Started",
+          "url": "https://www.thermofisher.com/jp/ja/home/technical-resources/technical-reference-library/protein-expression-support-center/basic-mammalian-expression-support/basic-mammalian-expression-support-getting-started.html"
+        }
+      ]
+    },
+    "reason": "宿主以外の石英・鉄板等を誤答にした旧問を、宿主選択に関わる翻訳後修飾へ改訂。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Generalの宿主比較表でE. coliとMammalian CellsのN-linked glycosylationを照合。増殖時間の数値や全菌株への断定は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000147",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "通常の活性汚泥法で、生分解可能な有機物を取り除くために曝気する主な理由はどれか。",
+      "choices": [
+        "微生物を全て殺して有機物の分解を止めるため",
+        "溶存酸素を除き、メタン生成だけを促すため",
+        "全ての溶存有機物を、微生物を介さず気泡のろ過だけで除くため",
+        "好気的に働く微生物へ酸素を供給し、有機物の分解を支えるため"
+      ],
+      "correctIndex": 3,
+      "explanation": "活性汚泥法では微生物を含む水を曝気・混合し、好気的な生物処理を進める。増えた微生物の一部は沈降分離して返送する。曝気だけで全ての汚染物質が除去されるわけではない。",
+      "distractorRationales": [
+        "活性汚泥は微生物の働きを利用する処理。",
+        "通常の曝気槽は酸素を供給する。嫌気性のメタン生成とは条件が異なる。",
+        "主に微生物の代謝を利用し、気泡の物理的ろ過だけで溶存有機物を除く方式ではない。",
+        "有機物を分解する微生物の働きに必要な酸素を供給する。"
+      ],
+      "sources": [
+        {
+          "title": "US EPA — Primer for Municipal Wastewater Treatment Systems",
+          "url": "https://www.epa.gov/sites/default/files/2015-09/documents/primer.pdf"
+        }
+      ]
+    },
+    "reason": "好気・嫌気を一括りにした旧問を、通常の活性汚泥の曝気目的へ限定。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Suspended Growth Processes（PDF12〜13ページ）の酸素供給・混合・有機物分解・汚泥返送を確認。硝化と全窒素除去は同一視しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000132",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "定常に流れる反応器の出口で測った滞留時間分布を、確率密度E(t)で表す。E(t)はt≧0で非負、全積分は1である。T＞0について、∫₀ᵀ E(t)dtは何を表すか。",
+      "choices": [
+        "出口を通る流体のうち、反応器内に滞在した時間がT以下である割合",
+        "出口の流体の平均滞留時間",
+        "時刻Tに反応器内にある物質の総質量",
+        "反応器内で必ず反応を終えた分子の割合"
+      ],
+      "correctIndex": 0,
+      "explanation": "E(t)は出口の流体の滞留時間の確率密度で、その0からTまでの積分は累積分布F(T)となる。平均滞留時間には∫₀∞ tE(t)dtを使う。滞留時間だけから反応完結は保証できない。",
+      "distractorRationales": [
+        "確率密度を指定範囲で積分した累積割合。",
+        "平均には滞留時間tを重みとして全範囲で積分する。",
+        "E(t)の積分は無次元の割合で、槽内総質量ではない。",
+        "反応率には反応速度や混合などの条件も必要。"
+      ],
+      "sources": [
+        {
+          "title": "University of Michigan — Elements of Chemical Reaction Engineering, Chapter 16 Summary",
+          "url": "https://websites.umich.edu/~elements/7e/16chap/summary.html"
+        }
+      ]
+    },
+    "reason": "略語RTDだけを問う旧問を、分布・累積割合・平均の違いへ改訂。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "A. RTD FunctionとB. Cumulative Distribution Functionの本文にある、出口の分子の滞在時間とT以下の割合を照合。式は確率密度の定義から独立に導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000150",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "シリコンの深掘りエッチングで用いるBosch方式のDRIEは、深く側壁が立った形状を作るために、主にどの工程を繰り返すか。",
+      "choices": [
+        "レジストの露光だけを繰り返す",
+        "基板の全面を等方的に削る工程だけを続ける",
+        "シリコンのエッチングと、側壁を保護する膜の形成を交互に行う",
+        "金属を溶かして鋳型へ流す工程だけを繰り返す"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bosch方式はエッチングと保護膜形成のサイクルで横方向の削れを抑えながら深く加工する。DRIEには低温で行う別方式もあり、全てのDRIEが同じサイクルを使うわけではない。",
+      "distractorRationales": [
+        "露光は主にパターンを定義する工程で、これだけではシリコンを深く削れない。",
+        "横方向の削れを抑える保護工程が説明されていない。",
+        "側壁保護とエッチングを組み合わせる方式。",
+        "金属の鋳造の説明で、シリコンのプラズマエッチングとは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Oxford Instruments — DRIE",
+          "url": "https://plasma.oxinst.com/technologies/drie-new-template"
+        }
+      ]
+    },
+    "reason": "DRIEと無関係な加工名だけを比べた旧問を、特定方式の異方性を生む工程へ改訂。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "DRIE processのBosch方式のエッチング・堆積の交互サイクルと、別のCryo processを照合。装置条件や操作手順は引用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000081",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "MEMSのウエハーを単位としたバッチ加工の考え方として、適切なのはどれか。",
+      "choices": [
+        "完成したチップを毎回一つだけ手で組み立てること",
+        "共通の成膜・エッチングなどを使い、ウエハー上の多数のデバイスをまとめて作ること",
+        "どの製造工程も一回の露光だけで完了させること",
+        "多数のチップの出力を平均して検査を省くこと"
+      ],
+      "correctIndex": 1,
+      "explanation": "ウエハー上の多数のデバイスへ共通の加工工程を適用することで量産につなげる。全工程が同時に終わる、あるいは個別の検査・切り分け・実装が不要という意味ではない。",
+      "distractorRationales": [
+        "チップを一つずつ手作業で組み立てる方式を指すものではない。",
+        "多数のデバイスに共通する加工をまとめて行う考え方。",
+        "成膜やエッチング等は別の工程で、露光だけでは完了しない。",
+        "バッチ加工は製造方法であり、個々の品質確認を不要にするものではない。"
+      ],
+      "sources": [
+        {
+          "title": "Stanford University — Fabrication of CMUTs",
+          "url": "https://techfinder.stanford.edu/technology/fabrication-cmuts"
+        }
+      ]
+    },
+    "reason": "バッチと逐次の語だけを比べる旧問を、共通工程と一括製造の意味へ改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Advantagesのwet etching・oxidation・depositionをバッチ工程として量産へ使う説明を照合。特許固有の寸法・工程条件は使わず、一般的なバッチ加工の考え方を問う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "familyKey": "eng-cstr-first-order-steady-conversion",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "一定温度・一定容積120 Lの完全混合連続槽で、液相の不可逆一次反応A→Bを行う。流入・流出の体積流量は共に6 L/min、速度定数k＝0.15 min⁻¹。密度変化を無視し、定常状態のAの転化率はいくらか。",
+      "choices": [
+        "25%",
+        "約95%",
+        "75%",
+        "60%"
+      ],
+      "correctIndex": 2,
+      "explanation": "空間時間τ＝V/q＝20 min。定常のAの収支はqC₀−qC−kCV＝0なので、C/C₀＝1/(1＋kτ)＝1/4。転化率は1−C/C₀＝75%。起動途中や押出し流れの式とは異なる。",
+      "distractorRationales": [
+        "25%は出口に未反応で残るAの濃度比。",
+        "1−exp(−kτ)に相当し、この完全混合連続槽の定常の式ではない。",
+        "1−1/(1＋3)＝0.75となる。",
+        "与えられた流量・容積・速度定数の収支とは一致しない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Michigan — Startup of a CSTR",
+          "url": "https://websites.umich.edu/~elements/5e/06chap/expanded_ch06_cstr.pdf"
+        }
+      ]
+    },
+    "reason": "完全混合・定常・一定体積流量の仮定と一次反応の収支を組み合わせる独自設問。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式6-8の物質収支と6-11の定常濃度C_AS＝C_A0/(1＋τk)を照合。PDFの抽出式と検索索引を併用し、独立の定常収支から再導出。数値は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-binary-vle-relative-volatility",
+    "domain": "工学",
+    "subdomain": "化学・バイオ・微細加工",
+    "content": {
+      "question": "気液平衡にある二成分A・Bを考える。Aの液相モル分率をx、気相モル分率をyとし、相対揮発度をα＝(y/x)/((1−y)/(1−x))と定義する。この平衡状態でα＝3、x＝0.25なら、yはいくらか。",
+      "choices": [
+        "0.50",
+        "0.25",
+        "0.75",
+        "0.90"
+      ],
+      "correctIndex": 0,
+      "explanation": "定義を整理するとy＝αx/(1＋(α−1)x)。したがってy＝0.75/1.5＝0.50となる。Aがより揮発しやすく、気相のAの割合は液相より高い。質量分率ではなくモル分率の関係である。",
+      "distractorRationales": [
+        "定義式へ代入すると0.50になる。",
+        "α＝1のときのx＝yと混同している。",
+        "αxだけを計算し、分母の規格化を落としている。",
+        "定義式へ戻すとα＝27となり、指定された3に一致しない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Colorado Boulder, LearnChemE — Vapor-Liquid Equilibrium for Non-Ideal Solutions",
+          "url": "https://learncheme.com/quiz-yourself/interactive-self-study-modules/vle-for-non-ideal-solutions/vle-for-non-ideal-solutions-screencast/"
+        }
+      ]
+    },
+    "reason": "蒸留等の分離の基礎となる気液の組成関係を、二成分の定義から計算する独自設問。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Important Equationsの相対揮発度K₁/K₂と、各相のモル分率の和が1である式を照合。独自のα・xからyを導出し、全肢を定義へ代入。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・公的機関・メーカーの技術資料で原理を照合。問題・選択肢・解説は独自表現とし、例題・図表・実験操作は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
