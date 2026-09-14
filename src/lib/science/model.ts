@@ -1,7 +1,7 @@
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import { MODEL_VERSION, CURRENT_VERSION } from "./versions";
 
-export const MODEL_VERSION = "science-3pl-reference-v1";
-export const CURRENT_VERSION = "domain-window100-half30-v1";
+export { MODEL_VERSION, CURRENT_VERSION } from "./versions";
 export type Parameters = { a: number; b: number; c: number };
 export type Response = Parameters & { domain: ScienceDomain; correct: boolean; eligible: boolean; answeredAt?: string };
 export type Posterior = { theta: number[]; mass: number[] };

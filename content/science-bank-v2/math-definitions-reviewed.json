@@ -1,0 +1,370 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000003",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "実または複素ノルム空間 X がバナッハ空間であるための必要十分条件はどれか。",
+      "choices": [
+        "ノルムの定める距離に関して、X 内のすべてのコーシー列が X 内で収束する",
+        "X が有限次元である",
+        "ノルムが必ず内積から定まる",
+        "X 内のすべての有界点列が収束する"
+      ],
+      "correctIndex": 0,
+      "explanation": "バナッハ空間は完備なノルム空間。完備とは、ノルムで測ってコーシー列となる列が、その空間の点へ収束することをいう。有限次元に限らず、内積からノルムが定まるとも限らない。",
+      "distractorRationales": [
+        "そのノルムに関する完備性そのもの。",
+        "有限次元のノルム空間は完備だが、無限次元のバナッハ空間もある。",
+        "内積に由来する完備空間はヒルベルト空間。バナッハ空間全般には要求しない。",
+        "実数の列1,−1,1,−1,…は有界だが収束しない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Banach Space",
+          "url": "https://mathworld.wolfram.com/BanachSpace.html"
+        }
+      ]
+    },
+    "reason": "用語の包含による曖昧さを避け、完備性の必要十分条件を問う形へ修正。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭の完備ノルム空間の定義、およびヒルベルト空間との包含関係を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000002",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "位相空間 X で、X を覆う任意の開集合族から、有限個を選んでなお X 全体を覆える。この性質の名称はどれか。",
+      "choices": [
+        "コンパクト性",
+        "連結性",
+        "可分性",
+        "離散性"
+      ],
+      "correctIndex": 0,
+      "explanation": "任意の開被覆が有限部分被覆を持つことがコンパクト性の定義。最初に与えられる被覆自体が有限である必要はない。",
+      "distractorRationales": [
+        "任意の開被覆について有限部分被覆の存在を求める性質。",
+        "空間を互いに交わらない非空の開集合2つへ分離できない性質。",
+        "可算な稠密部分集合を持つ性質。",
+        "すべての部分集合が開集合である位相の性質。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Compact Space",
+          "url": "https://mathworld.wolfram.com/CompactSpace.html"
+        }
+      ]
+    },
+    "reason": "定義の量化を明確化し、一般の位相空間に対応した誤答理由へ修正。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭の任意の開被覆が有限部分被覆を持つ定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000342",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "1≠0の可換単位環 R の真のイデアル I を考える。I が素イデアルであることの定義に当たる条件はどれか。",
+      "choices": [
+        "任意の a,b∈R について、ab∈I ならば a∈I または b∈I",
+        "I の元の個数が素数である",
+        "任意の a,b∈R について、ab∈I ならば a∈I かつ b∈I",
+        "I のすべての元が R で可逆である"
+      ],
+      "correctIndex": 0,
+      "explanation": "素イデアルは、積がIに入れば因子の少なくとも一方がIに入る真のイデアル。『または』を『かつ』に変えることはできない。",
+      "distractorRationales": [
+        "真のイデアルという仮定と合わせて素イデアルの定義になる。",
+        "素イデアルの『素』は元の個数が素数という意味ではない。",
+        "たとえば整数環の(2)では2×1が属しても1は属さない。",
+        "イデアルは0を含む。1≠0の環で0は可逆ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Prime Ideal",
+          "url": "https://mathworld.wolfram.com/PrimeIdeal.html"
+        }
+      ]
+    },
+    "reason": "幾何・位相から代数へ分類を訂正。環・真のイデアル・量化の条件を補足。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "素イデアルの積に関する定義と、真のイデアルを要求する通常の規約を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000010",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "滑らかな多様体 M について、点 p∈M と接ベクトル v∈TₚM の組 (p,v) をすべて集めて作るベクトル束の一般的な名称はどれか。",
+      "choices": [
+        "接束",
+        "余接束",
+        "標構束",
+        "法束"
+      ],
+      "correctIndex": 0,
+      "explanation": "各点の接空間を、どの点での接ベクトルかという情報とともにまとめたものが接束TM。射影は(p,v)をpへ送る。",
+      "distractorRationales": [
+        "各点の接空間をファイバーとするベクトル束。",
+        "各接空間の双対空間をファイバーとする束。",
+        "各接空間の基底である標構を集める束。",
+        "埋め込みなどに対する法方向を扱う束で、この構成とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Tangent Bundle",
+          "url": "https://mathworld.wolfram.com/TangentBundle.html"
+        }
+      ]
+    },
+    "reason": "滑らかさと底点の情報を明記し、近い概念を具体的に区別。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "各点pと接ベクトルv∈T_pMの組からなるTMの定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000015",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "群 G と、次元2以上の複素ベクトル空間 V を考える。群準同型 ρ:G→GL(V) によって指定されるものはどれか。",
+      "choices": [
+        "G の V 上の線形表現",
+        "V の実数値ノルム",
+        "G の中心そのもの",
+        "V の線形汎関数"
+      ],
+      "correctIndex": 0,
+      "explanation": "線形表現は、群の各元を可逆線形写像へ対応させ、群の積と写像の合成を整合させるもの。ρ(gh)=ρ(g)ρ(h)を満たす。",
+      "distractorRationales": [
+        "GL(V)への群準同型が線形表現を定める。",
+        "ノルムの入力はVのベクトルであり、出力は非負実数。",
+        "中心はGのすべての元と可換な元からなる部分群。写像ρの名称ではない。",
+        "線形汎関数はVから係数体への線形写像であり、写像の型が異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Group Representation",
+          "url": "https://mathworld.wolfram.com/GroupRepresentation.html"
+        }
+      ]
+    },
+    "reason": "群の作用も正解になり得た旧選択肢を改め、線形表現の写像を明示。",
+    "parameters": {
+      "b": 1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "GからGL(V)への群準同型としての定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000347",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "体 F 上の有限次元ベクトル空間 V≠{0} と表現 ρ:G→GL(V) を考える。ρ が既約であることの定義はどれか。",
+      "choices": [
+        "G が有限群であること",
+        "G に関して不変な V の部分空間が {0} と V だけであること",
+        "V の次元が偶数であること",
+        "すべての ρ(g) が同じ行列であること"
+      ],
+      "correctIndex": 1,
+      "explanation": "既約とは、0でも全体でもない不変部分空間が存在しないこと。不変部分空間Wでは、どのg∈Gを作用させてもρ(g)W⊂Wが成り立つ。",
+      "distractorRationales": [
+        "有限群にも既約でない表現がある。群の有限性はこの定義ではない。",
+        "非自明な不変部分空間がないという条件。",
+        "既約表現には1次元のものもあり、偶数次元を要求しない。",
+        "すべて同じ行列であることは既約性の定義ではない。高次元の自明表現は既約でない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Irreducible Representation",
+          "url": "https://mathworld.wolfram.com/IrreducibleRepresentation.html"
+        }
+      ]
+    },
+    "reason": "V≠{0}を明示し、誤答肢の不自然な日本語と条件不足のシューアの補題への言及を除いた。",
+    "parameters": {
+      "b": 1.6,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭の非自明な不変部分空間を持たない条件を照合。零空間を除く通常の定義を採用。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000323",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "体 F の乗法について、定義に含まれる条件はどれか。0と1はそれぞれ加法・乗法の単位元とする。",
+      "choices": [
+        "0を含むすべての元に乗法逆元がある",
+        "0以外のすべての元に乗法逆元がある",
+        "乗法単位元1は存在しない",
+        "乗法は必ず非可換である"
+      ],
+      "correctIndex": 1,
+      "explanation": "体では0≠1であり、0以外の元aにはa·a⁻¹=1を満たす逆元が存在する。乗法は可換で、0は乗法逆元を持たない。",
+      "distractorRationales": [
+        "0に何を掛けても0なので、0≠1の体では逆元を持たない。",
+        "非零元全体は乗法について群になる。",
+        "体には乗法単位元1が存在する。",
+        "体の乗法は可換である。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Field",
+          "url": "https://mathworld.wolfram.com/Field.html"
+        }
+      ]
+    },
+    "reason": "小分野を代数へ訂正し、零元の例外を用語とともに明示。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "体の可換な除法構造と、加法・乗法の単位元が異なるという定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000130",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "f(x,y)=x²y+y³ を x に関して偏微分した ∂f/∂x はどれか。",
+      "choices": [
+        "x²+3y²",
+        "2xy",
+        "2xy+3y²",
+        "2y"
+      ],
+      "correctIndex": 1,
+      "explanation": "xについて偏微分するときはyを一定として扱う。x²yの微分は2xy、y³の微分は0なので、合計は2xy。",
+      "distractorRationales": [
+        "yに関して偏微分した式。",
+        "yを固定してxだけで微分した式。",
+        "y³をxで微分しても3y²にはならず、0となる。",
+        "x²を微分した因子2xのxが抜けている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 3 §4.3 Partial Derivatives",
+          "url": "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives"
+        }
+      ]
+    },
+    "reason": "変数を固定する条件と各誤答の微分対象を確認。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "式4.12のxに関する偏微分の定義とyを固定する操作を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義を参照して設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  }
+]

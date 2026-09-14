@@ -1,0 +1,830 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000009",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "reason": "微分可能性を明示し、全肢共通の定型説明を具体的な違いに置き換えた。",
+    "content": {
+      "question": "微分可能な関数の、各点での瞬間的な変化率を求める操作はどれ？",
+      "choices": [
+        "積分",
+        "微分",
+        "因数分解",
+        "標準化"
+      ],
+      "correctIndex": 1,
+      "explanation": "微分によって導関数を求めます。ある点での微分係数は、平均変化率の極限として定まり、その点での接線の傾きを表します。",
+      "distractorRationales": [
+        "積分は量の蓄積や符号付き面積などを扱います。瞬間変化率を求める操作の名称ではありません。",
+        "微分係数や導関数を求める操作が微分です。",
+        "因数分解は式を積の形に直す操作です。",
+        "統計での標準化は尺度を揃える変換で、微分の名称ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Calculus Volume 1, 3.1 Defining the Derivative",
+          "url": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.5,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "瞬間変化率と微分係数の定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000008",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "reason": "曖昧な「関係が深い」をやめ、非負・連続の条件と積分区間を示した。",
+    "content": {
+      "question": "a<bで、f(x)は区間[a,b]で連続かつ非負とする。曲線y=f(x)、x軸、x=a、x=bで囲まれた部分の面積を一般に与える式はどれ？",
+      "choices": [
+        "∫ₐᵇ f(x) dx",
+        "f′(a)",
+        "f(a)+f(b)",
+        "f(b)−f(a)"
+      ],
+      "correctIndex": 0,
+      "explanation": "連続かつ非負の関数では、この領域の面積はaからbまでの定積分です。関数が負になる区間もある場合、定積分は符号付き面積となる点に注意します。",
+      "distractorRationales": [
+        "指定した条件で、面積を与える定積分です。",
+        "微分係数は局所的な変化率であり、区間全体の面積ではありません。",
+        "両端の値の和だけでは、途中の曲線や区間の幅を反映できません。",
+        "これは両端での関数値の変化です。f自身を積分した値とは一般に異なります。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Calculus Volume 1, 5.2 The Definite Integral",
+          "url": "https://openstax.org/books/calculus-volume-1/pages/5-2-the-definite-integral"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.1,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "定積分と符号付き面積、および非負の関数での面積の一致を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000007",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "reason": "包含関係のある選択肢を整理し、確率0を不可能と断定する旧説明を除いた。",
+    "content": {
+      "question": "通常の確率P(A)について、すべての事象Aで成り立つ範囲の条件はどれ？",
+      "choices": [
+        "0≤P(A)≤1",
+        "−1≤P(A)≤0",
+        "1<P(A)",
+        "P(A)≥1"
+      ],
+      "correctIndex": 0,
+      "explanation": "確率は0以上1以下です。0や1も含みます。百分率で書く場合は0%から100%ですが、確率そのものの数値と百分率の数値を混同しないようにします。",
+      "distractorRationales": [
+        "確率の非負性と上限1の両方を正しく表します。",
+        "正の確率を持つ事象があるため、この条件は常には成り立ちません。",
+        "1を超える値は通常の確率の範囲外です。",
+        "例えば公平なコインの表の確率は1/2であり、1以上ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, College Algebra 2e, 9.7 Probability",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/9-7-probability"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -2,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Constructing Probability Modelsの標本空間と、0≤P(E)≤1の記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000004",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "reason": "最多値が複数ある場合を補い、個別の誤答理由を記述した。",
+    "content": {
+      "question": "データの中で、出現回数が最も多い値を表す名称はどれ？",
+      "choices": [
+        "平均値",
+        "中央値",
+        "最頻値",
+        "標準偏差"
+      ],
+      "correctIndex": 2,
+      "explanation": "出現回数が最大の値を最頻値といいます。同じ最大回数で現れる値が複数あれば、最頻値も複数になり得ます。",
+      "distractorRationales": [
+        "算術平均は合計をデータ数で割った値で、出現回数の最大とは異なります。",
+        "中央値は並べたデータの中央を表し、最も頻繁な値とは限りません。",
+        "最も高い度数を持つ値を表す名称です。",
+        "標準偏差はばらつきを表す量です。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, 8.3 Mean, Median and Mode",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/8-3-mean-median-and-mode"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.8,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "最頻値の定義と、同数最多が複数ある場合の記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000008",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "reason": "同じ確率・統計の語で誤答肢を作り直し、標本空間との違いを説明した。",
+    "content": {
+      "question": "確率を考える試行について、起こり得る結果をすべて集めた集合を何という？",
+      "choices": [
+        "標本空間",
+        "事象の補集合",
+        "確率変数の期待値",
+        "標本平均"
+      ],
+      "correctIndex": 0,
+      "explanation": "試行の結果全体の集合が標本空間です。例えば、1から6の目を持つさいころを1回振り、出目を結果とする場合の標本空間は{1,2,3,4,5,6}です。",
+      "distractorRationales": [
+        "結果全体を集めた集合の名称に一致します。",
+        "補集合は、ある事象に含まれない結果を集めたもので、一般には結果全体ではありません。",
+        "期待値は確率変数の値の重み付き平均であり、結果の集合ではありません。",
+        "標本平均は観測値の算術平均であり、標本空間とは異なります。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, College Algebra 2e, 9.7 Probability",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/9-7-probability"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.2,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Constructing Probability Modelsの標本空間と、0≤P(E)≤1の記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000006",
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "reason": "a≠0を明示し、定数関数を混同しない表現にした。",
+    "content": {
+      "question": "実数a,bについてa≠0とする。y=ax+bで表される関数を、日本の学校数学では何という？",
+      "choices": [
+        "一次関数",
+        "二次関数",
+        "指数関数",
+        "反比例の関数"
+      ],
+      "correctIndex": 0,
+      "explanation": "xの一次式ax+bで表す関数なので一次関数です。aはグラフの傾き、bはy切片です。a=0の場合は定数関数となるため、ここでは除いています。",
+      "distractorRationales": [
+        "xについての次数が1なので一次関数です。",
+        "二次関数ではx²の項の係数が0でないことが必要です。",
+        "指数関数では変数が指数の位置に現れます。",
+        "反比例は通常y=k/x（k≠0）で表し、この式とは異なります。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, College Algebra 2e, 4.1 Linear Functions",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/4-1-linear-functions"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.9,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "f(x)=mx+bの表示と傾き・定数関数の場合の区別を確認。日本語の一次関数としてa≠0を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000007",
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "reason": "小分野を関数に整理し、語の羅列だった誤答説明を改訂した。",
+    "content": {
+      "question": "sin（サイン）、cos（コサイン）、tan（タンジェント）をまとめた呼び方はどれ？",
+      "choices": [
+        "指数関数",
+        "三角関数",
+        "対数関数",
+        "一次関数"
+      ],
+      "correctIndex": 1,
+      "explanation": "sin・cos・tanは代表的な三角関数です。直角三角形では鋭角に対応した辺の長さの比で導入でき、角度の関数として扱います。",
+      "distractorRationales": [
+        "変数が指数に現れる関数を指し、この3つの総称ではありません。",
+        "sin・cos・tanは三角関数に含まれます。",
+        "対数関数は指数関数の逆関数として扱われ、この3つの総称ではありません。",
+        "一次式で表す関数の名称であり、この3つの総称ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, 10.8 Right Triangle Trigonometry",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-8-right-triangle-trigonometry"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.9,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "sin・cos・tanの名称と、直角三角形での辺の比による定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000001",
+    "domain": "数学",
+    "subdomain": "離散数学・組合せ",
+    "reason": "意味を持たない記号の誤答肢を、混同し得る別の演算へ置き換えた。",
+    "content": {
+      "question": "正の整数nについて、1×2×…×nで定義する階乗の通常の記号はどれ？",
+      "choices": [
+        "n!",
+        "n²",
+        "2ⁿ",
+        "n+1"
+      ],
+      "correctIndex": 0,
+      "explanation": "nの階乗はn!と書きます。例えば4!=4×3×2×1=24です。0の階乗は0!=1と定めます。",
+      "distractorRationales": [
+        "階乗を表す通常の記号です。",
+        "n²はnを2回掛けた数で、1からnまでの積とは一般に異なります。",
+        "2ⁿは2をn回掛けた数です。",
+        "n+1はnに1を足した数で、階乗ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, College Algebra 2e, 9.5 Counting Principles",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/9-5-counting-principles"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.7,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "n個の区別できる対象の順列にn!を使う表記と0!=1を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000003",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "reason": "一般的に任意の辺を底辺と呼べることとの混同を避け、名称を明確にした。",
+    "content": {
+      "question": "直角三角形で、直角に向かい合う最も長い辺に付けられた特別な名称はどれ？",
+      "choices": [
+        "斜辺",
+        "中線",
+        "外角",
+        "垂心"
+      ],
+      "correctIndex": 0,
+      "explanation": "直角に向かい合う辺が斜辺です。直角三角形のほかの2辺より長く、三平方の定理では斜辺の長さの2乗が、ほかの2辺の長さの2乗の和になります。",
+      "distractorRationales": [
+        "直角に向かい合う辺を指す名称です。",
+        "中線は頂点と対辺の中点を結ぶ線分です。",
+        "外角は角度を表す語で、辺の名称ではありません。",
+        "垂心は3本の高さの交点で、辺ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, 10.3 Triangles",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-3-triangles"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -2,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "右角に向かい合う最長辺をhypotenuseとする定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000003",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "reason": "rが半径であることを問題文に示し、円周との違いを説明した。",
+    "content": {
+      "question": "半径rの平面上の円の面積を表す公式はどれ？",
+      "choices": [
+        "πr²",
+        "2πr",
+        "πr",
+        "r²"
+      ],
+      "correctIndex": 0,
+      "explanation": "円の面積はπr²です。半径を2倍にすると、面積は4倍になります。円周の長さ2πrと区別しましょう。",
+      "distractorRationales": [
+        "半径の2乗に円周率を掛けた、円の面積の公式です。",
+        "これは円周の長さです。",
+        "rの1乗であり、面積の公式ではありません。",
+        "半径を一辺とする正方形の面積で、円の面積にはπが必要です。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, Chapter 10 Key Concepts",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-key-concepts"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.9,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "10.4のC=πd=2πrと10.6のA=πr²を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000001",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "reason": "円周率の定義を問題文へ加え、無関係な用語の羅列を省いた。",
+    "content": {
+      "question": "平面上の円で、円周の長さを直径で割った比「円周率」を表す通常の記号はどれ？",
+      "choices": [
+        "π",
+        "Σ",
+        "Δ",
+        "Ω"
+      ],
+      "correctIndex": 0,
+      "explanation": "円周率の記号はπです。円周Cと直径dの関係はC=πdなので、C/d=πとなります。",
+      "distractorRationales": [
+        "円周率を表す通常の記号です。",
+        "この大文字シグマは円周率の記号ではありません。",
+        "この大文字デルタは円周率の記号ではありません。",
+        "この大文字オメガは円周率の記号ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, Chapter 10 Key Concepts",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-key-concepts"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -2.3,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "10.4のC=πd=2πrと10.6のA=πr²を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000002",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "reason": "定型説明を除き、虚数単位の定義に集中させた。",
+    "content": {
+      "question": "虚数単位iを2乗した値はどれ？",
+      "choices": [
+        "−1",
+        "0",
+        "1",
+        "2"
+      ],
+      "correctIndex": 0,
+      "explanation": "虚数単位iはi²=−1を満たします。実数の2乗は負になりませんが、複素数ではこのような数を扱います。",
+      "distractorRationales": [
+        "虚数単位の定義から−1です。",
+        "iは0ではなく、その2乗も0ではありません。",
+        "i⁴は1ですが、i²は−1です。",
+        "i²=−1という定義と一致しません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, College Algebra 2e, 2.4 Complex Numbers",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/2-4-complex-numbers"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.6,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "虚数単位のi²=−1と、複素数a+biの実部・虚部を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000005",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "reason": "実数係数とa≠0を補い、無関係な公式だった誤答肢を係数の混同に揃えた。",
+    "content": {
+      "question": "実数係数の二次方程式ax²+bx+c=0（a≠0）の、通常の判別式Dはどれ？",
+      "choices": [
+        "b²−4ac",
+        "b²+4ac",
+        "a²−4bc",
+        "4ac−b²"
+      ],
+      "correctIndex": 0,
+      "explanation": "通常の判別式はD=b²−4acです。D>0なら異なる実数解が2個、D=0なら重解、D<0なら実数解はありません。",
+      "distractorRationales": [
+        "解の公式の根号内に現れる、通常の判別式です。",
+        "4acの前の符号が異なります。",
+        "2乗する係数と積を作る係数が異なります。",
+        "通常の判別式の符号を反転した式です。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, College Algebra 2e, 2.5 Quadratic Equations",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/2-5-quadratic-equations"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.1,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "判別式b²−4acの定義と実根の個数に関する符号判定を確認。有理性についての表は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000010",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "reason": "行と列を区別する説明を補い、小分野を線形代数に整理した。",
+    "content": {
+      "question": "数を行と列に沿って長方形状に並べたものを、通常何という？",
+      "choices": [
+        "行列",
+        "数列の和",
+        "素因数分解",
+        "真理値"
+      ],
+      "correctIndex": 0,
+      "explanation": "行列は数などの要素を行・列に並べたものです。m行n列ならm×n行列と呼びます。行と列の位置を区別して扱います。",
+      "distractorRationales": [
+        "行・列に並んだ配列の名称です。",
+        "数列の和は項を足した結果で、配列そのものの名称ではありません。",
+        "素因数分解は整数を素数の積として表す操作です。",
+        "真理値は命題が真か偽かを表し、配列の名称ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, College Algebra 2e, 7.5 Matrices and Matrix Operations",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/7-5-matrices-and-matrix-operations"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.5,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Matrices節の長方形状の配列、行・列、m×nの定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000010",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "reason": "一般のノルムを単にユークリッド長と同一視せず、定義の条件を示した。",
+    "content": {
+      "question": "ベクトル空間で、大きさを表す非負の量で、零の判定・絶対同次性・三角不等式を満たすものはどれ？",
+      "choices": [
+        "ノルム",
+        "モード",
+        "メディアン",
+        "サンプル"
+      ],
+      "correctIndex": 0,
+      "explanation": "ノルムは、ベクトルの大きさを扱う関数です。零ベクトルだけが大きさ0となり、スカラー倍で絶対値の倍率が掛かり、三角不等式を満たします。",
+      "distractorRationales": [
+        "設問の3条件はノルムを定義する条件です。",
+        "統計でのモードは最頻値を表します。",
+        "メディアンは中央値を表します。",
+        "サンプルは標本を表し、設問の条件で定める量の名称ではありません。"
+      ],
+      "sources": [
+        {
+          "title": "Eric W. Weisstein, Vector Norm, Wolfram MathWorld",
+          "url": "https://mathworld.wolfram.com/VectorNorm.html"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -0.5,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "非負性と零の判定、絶対同次性、三角不等式の3条件を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000006",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "reason": "{0}との違いを補い、それぞれの記号の役割を説明した。",
+    "content": {
+      "question": "要素を1つも持たない空集合を表す、通常の記号はどれ？",
+      "choices": [
+        "∅",
+        "∞",
+        "∈",
+        "∪"
+      ],
+      "correctIndex": 0,
+      "explanation": "空集合は∅と表します。要素を書かない波括弧{}でも表せます。{0}は0を1つの要素として持つので、空集合とは異なります。",
+      "distractorRationales": [
+        "空集合を表す記号です。",
+        "無限大を表す記号で、空集合の記号ではありません。",
+        "ある要素が集合に属することを表す記号です。",
+        "集合の和集合を作る演算の記号です。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, 1.1 Basic Set Concepts",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.8,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "要素のない集合を∅または{}と表す記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000005",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "reason": "状況によって空集合にもなるという混同を避け、要素の所属条件で選択肢を揃えた。",
+    "content": {
+      "question": "2つの集合A,Bについて、A∩Bを定義する説明はどれ？",
+      "choices": [
+        "AまたはBの少なくとも一方に属する要素の集合",
+        "AにもBにも属する要素の集合",
+        "Aに属しBには属さない要素の集合",
+        "AにもBにも属さない要素の集合"
+      ],
+      "correctIndex": 1,
+      "explanation": "A∩BはAとBの共通部分です。要素xがこの集合に属するには、x∈Aとx∈Bの両方を満たす必要があります。",
+      "distractorRationales": [
+        "これは和集合A∪Bの説明です。",
+        "共通部分A∩Bの定義です。",
+        "これは差集合A\\Bの説明です。",
+        "全体集合を定めた場合の、A∪Bの補集合に当たります。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, 1.4 Set Operations with Two Sets",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.5,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "A∩Bが両方に属する要素を集めた集合であるという定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000009",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "reason": "無意味な演算の誤答肢を、他の論理結合子に置き換えた。",
+    "content": {
+      "question": "命題P,Qに対して「PならばQ」という含意を表す記号はどれ？",
+      "choices": [
+        "P→Q",
+        "P∧Q",
+        "P∨Q",
+        "P↔Q"
+      ],
+      "correctIndex": 0,
+      "explanation": "P→Qが「PならばQ」を表します。古典命題論理ではPが真でQが偽のときだけ、この含意が偽になります。",
+      "distractorRationales": [
+        "Pを前件、Qを後件とする含意です。",
+        "これは「PかつQ」という連言です。",
+        "これは「PまたはQ」という選言です。",
+        "これは「PであることとQであることが同値」という双条件です。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax, Contemporary Mathematics, 2.2 Compound Statements",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/2-2-compound-statements"
+        }
+      ]
+    },
+    "parameters": {
+      "b": -1.4,
+      "basis": "基礎用語・記号・定義に関するAstraの初期判断。実回答による難度校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Table 2.3の含意・連言・選言・同値の記号を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "依頼の範囲で設問・説明・誤答理由を独自に記述。参照先の練習問題や固有の例文を転載せず、既知の定義・公式を照合した。"
+    }
+  }
+]

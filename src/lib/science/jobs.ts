@@ -13,14 +13,13 @@ async function weeklySet(db:ReturnType<typeof service>,date=new Date()){
   const week=periodBounds("week",date);
   const existing=await db.from("science_weekly_sets").select("id").eq("id",week.key).maybeSingle();
   if(existing.error)checked(existing);if(existing.data)return {state:"already_published",week:week.key};
-  const [items,formal,previous]=await Promise.all([
+  const [items,reservedFamilies]=await Promise.all([
     readAll<Item>((a,b)=>db.from("science_items").select("*").eq("status","published").eq("rights_checked",true).eq("quality_passed",true).order("id").range(a,b)),
-    readAll<{revision_id:string}>((a,b)=>db.from("science_release_items").select("release_id,revision_id").order("release_id").order("revision_id").range(a,b)),
-    readAll<{revision_ids:string[]}>((a,b)=>db.from("science_weekly_sets").select("id,revision_ids").order("id").range(a,b))
+    readAll<{family_id:string}>((a,b)=>db.from("science_reserved_weekly_families").select("family_id").order("family_id").range(a,b))
   ]);
-  const reserved=new Set([...formal.map(r=>r.revision_id),...previous.flatMap(r=>r.revision_ids)]);
+  const reserved=new Set(reservedFamilies.map(r=>r.family_id));
   const rank=(id:string)=>createHash("sha256").update(week.key+":"+id).digest("hex");
-  const picked=domains.map(domain=>items.filter(q=>q.domain===domain&&!reserved.has(q.id)&&(!q.expires_at||new Date(q.expires_at).getTime()>=Date.parse(week.end))).sort((a,b)=>rank(a.id).localeCompare(rank(b.id)))[0]);
+  const picked=domains.map(domain=>items.filter(q=>q.domain===domain&&!reserved.has(q.family_id)&&(!q.expires_at||new Date(q.expires_at).getTime()>=Date.parse(week.end))).sort((a,b)=>rank(a.id).localeCompare(rank(b.id)))[0]);
   if(picked.some(q=>!q))return {state:"needs_reviewed_weekly_questions",week:week.key,missingDomains:domains.filter((_,i)=>!picked[i])};
   const created=checked(await db.rpc("science_publish_week",{p_id:week.key,p_starts:week.start,p_ends:week.end,p_revisions:picked.map(q=>q.id)}));
   return {state:created?"published":"already_published",week:week.key};

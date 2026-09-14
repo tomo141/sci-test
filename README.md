@@ -1,77 +1,31 @@
-# 全分野科学検定 β版
+# 全分野科学検定 — 改装版
 
-科学好きのための、全分野科学力の成長可視化・トレーニングができる検定アプリです。Next.js / TypeScript / Tailwind CSS / Supabase を前提に、ローカルプレビューできるβ版として実装しています。
+2026-09-14の要件に基づくNext.js / Supabaseアプリ。腕試し20問、本試験50/100問、分野20問、今週の10問、みんなの出題ラボを扱う。制作「理系とーく 川村智祥」。
 
-## セットアップ
+実装・検証・本番反映の状態は [implementation/STATUS.md](implementation/STATUS.md)、本番変更の実行記録は [implementation/DEPLOYMENT.md](implementation/DEPLOYMENT.md) を参照。ブランチにコードがあることを、本番で利用できることと同一視しない。
 
-1. `pnpm install`
-2. `.env.example` を `.env.local` にコピーし、必要な値を設定
-3. `pnpm dev`
-4. `http://localhost:3000` を開く
+## 開発と検証
 
-Supabaseの環境変数が未設定でも、ローカルUIと主要画面は確認できます。設定時だけ認証を有効化する想定です。
+1. 依存を `pnpm install --frozen-lockfile` で復元する。
+2. `.env.example` を参考に `.env.local` を用意する。ローカル・Vercelプレビューは独立した検証DBを使う。本番プロジェクトの接続先を引き継いでも、Vercelのproduction以外ではアプリから接続を拒否する。
+3. `pnpm dev` で起動する。DB未設定でもトップ・案内・登録の説明を確認できる。受験成功やランキングは代替データで作らない。
+4. `pnpm test`、`pnpm lint`、`pnpm build`、`pnpm bank:test` を実行する。
+5. `pnpm test:e2e` はPC・スマホの画面を確認する。Chromeがインストール済みのMacでは `PLAYWRIGHT_CHANNEL=chrome pnpm test:e2e`。接続済みの受験試験は独立した検証DBを用意した上で `SCIENCE_E2E_CONNECTED=1` を指定する。既定では接続試験を明示的にスキップする。
 
-## 実装済み画面
+この作業ではNode 25.8.0を使用。直接TypeScriptを読むオフライン準備スクリプトには、Nodeの型除去に対応する実行環境が必要。
 
-- トップページ
-- 腕試し受験ページ
-- 腕試し速報・結果ページ
-- 腕試しカルテページ
-- ログインページ
-- アカウント登録ページ
-- パスワード再設定ページ
-- ランキングページ
-- トレーニングページ
-- マイページ
-- 管理画面
-- 利用規約
-- プライバシーポリシー
+## DB・認証・問題
 
-## Supabase
+- 新版の記録は `science_*` テーブル。APIとservice_roleのRPCが所有確認・出題・採点を行う。ブラウザに正解バンクや管理権限を渡さない。
+- 認証はメールの確認コード。一般ユーザーへの送信にはSupabaseのcustom SMTP設定が必要。受験権とメール配信同意は別に保持する。
+- 管理権限の正本は `science_admins`。旧版の `ADMIN_EMAILS` や利用者が変更できるプロフィールを権限判定に使わない。
+- 内容を確認した問題は `content/science-bank-v2/`。`pnpm bank:prepare` でローカル候補を作成し、`pnpm bank:inspect` で投入前の状態を確認する。準備・照合だけではDBへ書き込まない。
+- 旧本番の問題との対応は、承認済みのローカルバックアップを準備コマンドの引数に渡す。既出の別表現も同じ問題族として扱い、回答経験を失わない。
+- 投入は `scripts/import-science-bank.mjs` の明示的な `--stage`、公開切替は `--activate`。管理者ID・元ファイルのハッシュ・内容確認・出典・権利根拠を検証する。初期は正式100問×10分野と週替わり用20問が必要。実測による難度校正済みを意味しない。
+- 既存本番への移行では `0001` から再実行しない。承認・バックアップ・段階別SQLと旧権限切替の順は実行記録を参照する。`pnpm deployment:check` は適用ハッシュと件数を読み取るだけで、SMTPや実受験の合格を代行しない。
 
-マイグレーションは `supabase/migrations/0001_initial_schema.sql` にあります。
+## 旧版資料
 
-含まれる主なテーブル:
+以下は改装前の履歴であり、新版の設定・公開手順には使わない。旧テーブル・作問スクリプト・結果は移行のため保持している。`questions:*` コマンド群と `docs/launch-runbook.md` も旧版向け。現行の手順は上記と `implementation/` にある。
 
-- `profiles`
-- `marketing_consents`
-- `education_profiles`
-- `exam_sessions`
-- `exam_answers`
-- `questions`
-- `question_choices`
-- `question_sources`
-- `question_statistics`
-- `question_feedback`
-- `proficiency_estimates`
-- `score_history`
-- `badges`
-- `user_badges`
-- `leaderboard_snapshots`
-- `admin_audit_logs`
-
-RLSは、一般ユーザーが自分のプロフィール・回答・履歴だけを扱い、ランキングは公開用情報だけを表示し、管理者のみ管理データを閲覧できる方針で定義しています。
-
-## 問題インポート
-
-問題JSON schemaは `supabase/seed/question_schema.json`、サンプルは `supabase/seed/sample_questions.json` です。CSV投入時も同じ列構造に揃えてから、`science-bank-publisher` スキルで検証・QC・投入する想定です。
-
-## Vercel / Xserver DNS
-
-Vercelに通常のNext.jsアプリとして接続し、環境変数を設定してください。ドメイン `sci-test.rikei-talk.com` のDNSはXserverのサーバーパネルで管理し、Vercelが提示するCNAMEへ向けます。
-
-詳細な公開手順は `docs/launch-runbook.md` を参照してください。
-
-## 管理者作成
-
-初期は `profiles.role = 'admin'` または `ADMIN_EMAILS` の許可リストで管理者を判定する想定です。本番ではSupabase管理画面から対象ユーザーのroleを更新してください。
-
-## テスト
-
-- `pnpm test`: スコアリングロジックのVitest
-- `pnpm test:e2e`: Playwrightの主要フロースモーク
-- `pnpm lint`: Next.js lint
-
-## 注意
-
-本スコアは全分野科学検定独自の推定基準です。学位の保有、採用、進学、資格等を保証・証明するものではありません。
+[改装前READMEの保存版](docs/legacy-readme-20260914.md)

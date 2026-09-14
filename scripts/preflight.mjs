@@ -2,15 +2,12 @@ const requiredEnv = [
   "NEXT_PUBLIC_APP_URL",
   "NEXT_PUBLIC_SUPABASE_URL",
   "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-  "SUPABASE_SERVICE_ROLE_KEY",
-  "ADMIN_EMAILS"
+  "SUPABASE_SERVICE_ROLE_KEY"
 ];
 
 const securityEnv = [
   "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
-  "TURNSTILE_SECRET_KEY",
-  "UPSTASH_REDIS_REST_URL",
-  "UPSTASH_REDIS_REST_TOKEN"
+  "TURNSTILE_SECRET_KEY"
 ];
 
 const missing = requiredEnv.filter((name) => !process.env[name]);
@@ -36,7 +33,10 @@ if (missingSecurity.length > 0) {
     process.exit(1);
   }
   console.warn(`Warning: ${message}`);
-  console.warn("Turnstile and Upstash are recommended for production. See: pnpm security:check");
+  console.warn("Turnstile is not configured. The new science APIs still require the shared DB rate limiter.");
 }
 
-console.log("Preflight env check passed.");
+if(Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)!==Boolean(process.env.TURNSTILE_SECRET_KEY)){
+  console.error("Turnstile requires both the public site key and server secret.");process.exit(1);
+}
+console.log("Environment presence checks passed. SMTP, database permissions and a real exam remain separate checks.");

@@ -2,12 +2,16 @@ import { createHash,createHmac, randomBytes, randomInt } from "node:crypto";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
+import { databaseEnvironmentAllowed } from "@/src/lib/supabase/environment";
 import type { Visitor, ReleaseConfig } from "./types";
 
 export class ScienceError extends Error {
   constructor(message: string, public status = 400, public code = "invalid_request", public extra?: Record<string, unknown>) { super(message); }
 }
 export function service() {
+  if (!databaseEnvironmentAllowed(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.VERCEL_ENV)) {
+    throw new ScienceError("このプレビューの受験機能は準備中です。", 503, "preview_database_not_configured");
+  }
   const client = createServiceRoleClient();
   if (!client) throw new ScienceError("現在、保存先に接続できません。時間を置いてお試しください。", 503, "unavailable");
   return client;

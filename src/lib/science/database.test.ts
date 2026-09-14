@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql", "0020_science_license_versions.sql", "0021_science_auth_boundary.sql", "0022_science_consent_export.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql", "0020_science_license_versions.sql", "0021_science_auth_boundary.sql", "0022_science_consent_export.sql", "0023_science_bank_import.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -306,5 +306,68 @@ describe("current mail export",()=>{
       await expect(db.query("select * from science_consent_export_page($1)",[uid])).rejects.toThrow(/permission denied/);
       await db.exec("rollback to browser_export");
     }finally{await db.exec("rollback;reset role");}
+  });
+});
+
+
+describe("reviewed bank import",()=>{
+  it("keeps the active bank unchanged on capacity failure, then activates a complete staged bank atomically",async()=>{
+    await db.exec("begin");
+    try{
+      const fields=["数学","物理","化学","生物","地学","工学","農学","情報・計算機科学","医歯薬学","人文社会科学"];
+      const manifest="9".repeat(64);
+      const rows=fields.flatMap((domain,d)=>Array.from({length:102},(_,n)=>({
+        id:`41000000-0000-4000-8000-${String(d*102+n+1).padStart(12,"0")}`,
+        family_id:`complete-import-fixture:${d}:${n}`,version:1,legacy_id:null,legacy_ids:[],domain,subdomain:"fixture",
+        content:{question:`Import fixture ${d}/${n}`,choices:["One","Two","Three","Four"],correctIndex:0,explanation:"Reviewed fixture explanation",distractorRationales:["one","two","three","four"],sources:[{title:"Fixture source"}]},
+        use:n<100?"formal":"weekly-reserve",parameters:{a:1,b:0,c:.25,focus:false,anchor:false},parameter_evidence:{stage:"initial_assumption"},
+        review_evidence:{releaseApproval:"approved",sourceChecked:true,uniqueAnswerChecked:true,distractorRationalesChecked:true,rightsBasis:"Original test fixture only",contentSha256:"a".repeat(64),reason:"Complete capacity test fixture"}
+      })));
+      const missing=rows[99],initial=rows.filter(q=>q.id!==missing.id);
+      const previous=(await db.query<{id:string}>("select id from science_releases where state='active'")).rows.map(r=>r.id);
+      const gate=(await db.query<{value:unknown}>("select value from science_config where key='release'")).rows[0].value;
+      const r=(await db.query<{id:string}>("insert into science_releases(name,model_version,settings) values('Complete import fixture','science-3pl-reference-v1',$1) returning id",[{importManifest:manifest,expectedRevisions:initial.map(q=>q.id)}])).rows[0].id;
+      await db.exec("set role service_role");
+      for(let offset=0;offset<initial.length;offset+=100)await db.query("select science_import_bank_batch($1,$2,$3,$4)",[r,uid,manifest,initial.slice(offset,offset+100)]);
+      await db.exec("savepoint insufficient_capacity");
+      await expect(db.query("select science_finish_bank_import($1,$2,$3,'Test publication capacity')",[r,uid,manifest])).rejects.toThrow("domain_capacity_below_100");
+      await db.exec("rollback to insufficient_capacity");
+      expect((await db.query<{id:string}>("select id from science_releases where state='active'")).rows.map(x=>x.id)).toEqual(previous);
+      expect((await db.query<{n:number}>("select count(*)::int n from science_items where family_id like 'complete-import-fixture:%' and status='published'")).rows[0].n).toBe(0);
+      await db.query("update science_releases set settings=jsonb_set(settings,'{expectedRevisions}',$2) where id=$1",[r,rows.map(q=>q.id)]);
+      await db.query("select science_import_bank_batch($1,$2,$3,$4)",[r,uid,manifest,[missing]]);
+      await db.query("select science_finish_bank_import($1,$2,$3,'Test complete bank publication')",[r,uid,manifest]);
+      expect((await db.query<{id:string}>("select id from science_releases where state='active'")).rows.map(x=>x.id)).toEqual([r]);
+      expect((await db.query<{n:number}>("select count(*)::int n from science_items where family_id like 'complete-import-fixture:%' and status='published'")).rows[0].n).toBe(1020);
+      expect((await db.query<{n:number}>("select count(*)::int n from science_release_items where release_id=$1",[r])).rows[0].n).toBe(1000);
+      expect((await db.query<{n:number}>("select count(*)::int n from science_reserved_weekly_families where family_id like 'complete-import-fixture:%'")).rows[0].n).toBe(1000);
+      expect((await db.query<{value:unknown}>("select value from science_config where key='release'")).rows[0].value).toEqual(gate);
+    }finally{await db.exec("rollback;reset role");}
+  });
+  it("stages idempotently, reconciles already claimed legacy exposure, and rolls back invalid publication",async()=>{
+    const item="40000000-0000-4000-8000-000000000071",legacy="90000000-0000-4000-8000-000000000071";
+    const manifest="7".repeat(64),family="bank-import-fixture";
+    const content={question:"Import fixture question?",choices:["One","Two","Three","Four"],correctIndex:0,explanation:"Reviewed fixture explanation",distractorRationales:["one","two","three","four"],sources:[{title:"Fixture source"}]};
+    const row={id:item,family_id:family,version:1,legacy_id:legacy,legacy_ids:[legacy],domain:"数学",subdomain:"数と代数",content,use:"formal",parameters:{a:1,b:0,c:.25,focus:true,anchor:false},parameter_evidence:{stage:"initial_assumption"},review_evidence:{releaseApproval:"approved",sourceChecked:true,uniqueAnswerChecked:true,distractorRationalesChecked:true,rightsBasis:"Original test fixture only",contentSha256:"8".repeat(64),reason:"Reviewed fixture and aliases"}};
+    const releaseId=(await db.query<{id:string}>("insert into science_releases(name,model_version,settings) values('Import fixture','science-3pl-reference-v1',$1) returning id",[{importManifest:manifest,expectedRevisions:[item]}])).rows[0].id;
+    await db.query("insert into questions(id,title,question_text,domain,ability_axis,difficulty_initial,difficulty_internal) values($1,'import fixture','older import question','math','knowledge',500,0)",[legacy]);
+    const oldSession=(await db.query<{id:string}>("insert into exam_sessions(user_id) values($1) returning id",[uid])).rows[0].id;
+    await db.query("insert into exam_answers(session_id,user_id,question_id,selected_choice_index,is_correct,answered_at) values($1,$2,$3,0,true,'2026-09-01')",[oldSession,uid,legacy]);
+    const call="select science_import_bank_batch($1,$2,$3,$4)";
+    await db.exec("set role service_role");
+    try{
+      await expect(db.query(call,[releaseId,uid,manifest,[{...row,review_evidence:{...row.review_evidence,sourceChecked:false}}]])).rejects.toThrow("review_evidence_required");
+      expect((await db.query("select id from science_items where id=$1",[item])).rows).toHaveLength(0);
+      await db.query(call,[releaseId,uid,manifest,[row]]);await db.query(call,[releaseId,uid,manifest,[row]]);
+      expect((await db.query<{status:string}>("select status from science_items where id=$1",[item])).rows[0].status).toBe("draft");
+      expect((await db.query("select * from science_legacy_families where question_id=$1",[legacy])).rows).toHaveLength(1);
+      expect((await db.query("select * from science_exposures where user_id=$1 and family_id=$2 and reason='legacy'",[uid,family])).rows).toHaveLength(1);
+      await expect(db.query(call,[releaseId,uid,manifest,[{...row,content:{...content,correctIndex:2}}]])).rejects.toThrow("immutable_revision_conflict");
+      await expect(db.query("select science_finish_bank_import($1,$2,$3,'Initial publication test')",[releaseId,uid,manifest])).rejects.toThrow("weekly_reserve_below_two");
+      expect((await db.query<{status:string}>("select status from science_items where id=$1",[item])).rows[0].status).toBe("draft");
+      expect((await db.query("select * from science_reserved_weekly_families where family_id=$1",[family])).rows).toHaveLength(1);
+      const clone=(await db.query<{id:string}>("insert into science_items(family_id,version,domain,subdomain,content) values($1,2,'数学','数と代数',$2) returning id",[family,content])).rows[0].id;
+      expect(clone).not.toBe(item);expect((await db.query("select * from science_reserved_weekly_families where family_id=$1",[family])).rows).toHaveLength(1);
+    }finally{await db.exec("reset role");}
   });
 });

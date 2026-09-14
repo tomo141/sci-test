@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {PGlite} from '@electric-sql/pglite';
+import {buildUpgrade} from './lib/science-upgrade.mjs';
 const backup=process.argv[2],output='implementation/local/deployment';
 if(!backup||!path.resolve(backup).startsWith(path.resolve('implementation/local')+path.sep))throw new Error('Ignored local backup required');
 const tables=['profiles','education_profiles','marketing_consents','questions','question_choices','question_sources','exam_sessions','exam_answers','proficiency_estimates','score_history','question_statistics','badges','user_badges','leaderboard_snapshots','event_logs','question_feedback','admin_audit_logs'];
@@ -27,13 +28,13 @@ try{
   result.stages.push('local_backup_loaded');
   const bundle=fs.readFileSync(output+'/additive-schema.sql','utf8');result.bundleSha256=createHash('sha256').update(bundle).digest('hex');
   await db.exec(bundle);result.stages.push('additive_schema_passed');
-  result.followups=[];
-  for(const name of fs.readdirSync('supabase/migrations').filter(n=>/^\d{4}_/.test(n)&&Number(n.slice(0,4))>=20).sort()){
-    const sql=fs.readFileSync('supabase/migrations/'+name,'utf8');await db.exec(sql);
-    result.followups.push({name,sha256:createHash('sha256').update(sql).digest('hex')});
-  }
+  const followups=await buildUpgrade('followups');await db.exec(followups.sql);result.followups=followups.migrations;
+  result.followupBundleSha256=followups.sha256;
   result.stages.push('followup_migrations_passed');
-  await db.exec(fs.readFileSync('supabase/migrations/0007_legacy_security_and_identity.sql','utf8'));result.stages.push('security_cutover_passed');
+  const cutover=await buildUpgrade('cutover');await db.exec(cutover.sql);result.cutoverBundleSha256=cutover.sha256;result.stages.push('security_cutover_passed');
+  const ledger=(await db.query('select name,sha256 from science_migration_history')).rows;
+  result.recordedMigrations=ledger.length;
+  if([...followups.migrations,...cutover.migrations,...followups.prerequisites].some(q=>!ledger.some(r=>r.name===q.name&&r.sha256===q.sha256)))throw new Error('Migration ledger mismatch');
   for(const table of tables){
     const expected=inputs.get(table),columns=Object.keys(expected[0]??{});
     const actual=(await db.query(`select ${columns.length?columns.map(c=>'"'+c+'"').join(','):'*'} from ${table}`)).rows;

@@ -1,0 +1,770 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000122",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000307",
+      "10000000-0000-4000-8007-000000000303"
+    ],
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "実数 x が 2x + 5 = 11 を満たすとき、x はどれか。",
+      "choices": [
+        "3",
+        "8",
+        "6",
+        "2"
+      ],
+      "correctIndex": 0,
+      "explanation": "両辺から5を引くと2x=6。両辺を2で割るとx=3となり、元の式に代入しても11になる。",
+      "distractorRationales": [
+        "2×3+5=11を満たす。",
+        "2×8+5=21となり、11ではない。",
+        "2x=6の6を、そのままxとした値。",
+        "2×2+5=9となり、11ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §2.2 Linear Equations in One Variable",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/2-2-linear-equations-in-one-variable"
+        }
+      ]
+    },
+    "reason": "不明瞭だった誤答説明を代入による検証へ修正。計算対象だけが違う同種の一次方程式も既出扱いにする。",
+    "parameters": {
+      "b": -1.8,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "両辺への同一操作と一次方程式の解法。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000129",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000317"
+    ],
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "行列 A = [[1, 2], [3, 4]] の行列式 det(A) はどれか。",
+      "choices": [
+        "−2",
+        "2",
+        "10",
+        "4"
+      ],
+      "correctIndex": 0,
+      "explanation": "2×2行列の行列式は対角方向の積の差。1×4−2×3=−2となる。",
+      "distractorRationales": [
+        "1×4−2×3=−2。",
+        "引く順序を逆にすると2になる。",
+        "1×4+2×3=10であり、行列式ではない。",
+        "1×4だけの値で、2×3を引いていない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §7.8 Solving Systems with Cramer's Rule",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule"
+        }
+      ]
+    },
+    "reason": "線形代数へ分類を訂正し、各誤答の実際の計算根拠を明確化。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "2×2行列の行列式 ad−bc の定義。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000139",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "content": {
+      "question": "関数 f(x)=2ˣ について、f(3) はどれか。",
+      "choices": [
+        "6",
+        "9",
+        "8",
+        "16"
+      ],
+      "correctIndex": 2,
+      "explanation": "ここで指数は自然数3なので、2³=2×2×2=8と計算できる。実数の指数全般を『同じ数をその回数だけ掛ける』とは説明しない。",
+      "distractorRationales": [
+        "2×3の値であり、2³ではない。",
+        "3²の値であり、底と指数が逆。",
+        "2×2×2の積は8。",
+        "2⁴の値であり、f(4)に当たる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §1.2 Exponents and Scientific Notation",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/1-2-exponents-and-scientific-notation"
+        }
+      ]
+    },
+    "reason": "実数指数まで『x回掛ける』としていた説明の適用範囲を訂正。",
+    "parameters": {
+      "b": -1.6,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "自然数の指数と積の定義。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000125",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000309",
+      "10000000-0000-4000-8007-000000000319"
+    ],
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "実関数 f(x)=x² の x=2 における微分係数 f′(2) はどれか。",
+      "choices": [
+        "4",
+        "2",
+        "8",
+        "1"
+      ],
+      "correctIndex": 0,
+      "explanation": "べき関数の微分則からf′(x)=2x。x=2を代入するとf′(2)=4となる。",
+      "distractorRationales": [
+        "f′(x)=2xに2を代入した値。",
+        "xの値そのものと微分係数は異なる。",
+        "f′(2)をさらに2倍した値になっている。",
+        "この関数のx=2での変化率は1ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 1 §3.3 Differentiation Rules",
+          "url": "https://openstax.org/books/calculus-volume-1/pages/3-3-differentiation-rules"
+        }
+      ]
+    },
+    "reason": "微分係数と関数値の区別を維持し、同じ計算を問う旧版を統合。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "べき関数の微分則と定数倍。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000127",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000325"
+    ],
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "実数 x について不定積分 ∫x² dx を表すものはどれか。C は任意定数とする。",
+      "choices": [
+        "2x + C",
+        "x³ + C",
+        "x³/3 + C",
+        "x²/2 + C"
+      ],
+      "correctIndex": 2,
+      "explanation": "x³/3+Cを微分するとx²に戻る。積分定数Cは、微分すると0になる任意の定数を表す。",
+      "distractorRationales": [
+        "微分すると2となり、x²にはならない。",
+        "微分すると3x²となり、係数が異なる。",
+        "微分するとx²となる。",
+        "微分するとxとなり、x²にはならない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 1 §4.10 Antiderivatives",
+          "url": "https://openstax.org/books/calculus-volume-1/pages/4-10-antiderivatives"
+        }
+      ]
+    },
+    "reason": "誤答説明を各候補の微分で検証し直し、重複出題を統合。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "原始関数の定義と区間上の積分定数。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000128",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "content": {
+      "question": "自然対数 ln(e²) の値はどれか。",
+      "choices": [
+        "e²",
+        "2e",
+        "1/2",
+        "2"
+      ],
+      "correctIndex": 3,
+      "explanation": "自然対数は底eの対数で、eを何乗すれば入力になるかを表す。e²の指数は2なのでln(e²)=2。",
+      "distractorRationales": [
+        "これは対数を取る前の数。",
+        "対数は入力の指数に底を掛ける操作ではない。",
+        "eの1/2乗はe²と異なる。",
+        "eを2乗するとe²になる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §6.3 Logarithmic Functions",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/6-3-logarithmic-functions"
+        }
+      ]
+    },
+    "reason": "対数の逆関数としての意味と誤答を照合。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "対数と指数関数が逆関数であること。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000136",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000302"
+    ],
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "5個のデータ 2, 4, 4, 6, 9 の算術平均はどれか。",
+      "choices": [
+        "4",
+        "4.5",
+        "6",
+        "5"
+      ],
+      "correctIndex": 3,
+      "explanation": "合計は2+4+4+6+9=25。データ数5で割ると、算術平均は5となる。",
+      "distractorRationales": [
+        "このデータでは中央値・最頻値は4だが、平均は5。",
+        "合計25を5で割った値ではない。",
+        "個々の観測値の一つで、平均ではない。",
+        "25÷5=5。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Contemporary Mathematics §8.3 Mean, Median, and Mode",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/8-3-mean-median-and-mode"
+        }
+      ]
+    },
+    "reason": "算術平均の小分野を修正し、同一データの旧問を統合。",
+    "parameters": {
+      "b": -1.5,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "算術平均と順序付けたデータの中央値。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000304",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "ユークリッド平面で、一辺の長さが5 cmの正方形の面積はどれか。",
+      "choices": [
+        "5 cm²",
+        "10 cm²",
+        "20 cm²",
+        "25 cm²"
+      ],
+      "correctIndex": 3,
+      "explanation": "正方形の面積は一辺×一辺。5 cm×5 cm=25 cm²となる。",
+      "distractorRationales": [
+        "一辺の長さの数値5を面積にしたもの。",
+        "5を2倍しても面積にはならない。",
+        "周の長さの数値は20だが、その単位はcm。",
+        "5×5=25で、面積の単位はcm²。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Contemporary Mathematics §10.6 Area",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-6-area"
+        }
+      ]
+    },
+    "reason": "確率・統計から幾何へ分類を訂正。長さと面積の単位を照合。",
+    "parameters": {
+      "b": -2,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "長方形・正方形の面積。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000305",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "content": {
+      "question": "関数 y=2x で、x=3 のときの y はどれか。",
+      "choices": [
+        "6",
+        "8",
+        "9",
+        "5"
+      ],
+      "correctIndex": 0,
+      "explanation": "xを3に置き換えるとy=2×3=6。2xは2とxの積を表す。",
+      "distractorRationales": [
+        "2×3=6。",
+        "2³=8であり、2xとは式が違う。",
+        "3²=9であり、2xではない。",
+        "2+3=5であり、掛け算を足し算に変えている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §4.1 Linear Functions",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/4-1-linear-functions"
+        }
+      ]
+    },
+    "reason": "関数の値を代入して求める内容へ分類し直し、指数・加算との違いを明記。",
+    "parameters": {
+      "b": -2,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "関数の式による入力と出力の関係。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000137",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000308"
+    ],
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "互いに独立で、それぞれ表・裏が同じ確率で出る3枚のコインを1回ずつ投げる。表がちょうど2枚出る確率はどれか。",
+      "choices": [
+        "3/8",
+        "1/4",
+        "1/2",
+        "1/8"
+      ],
+      "correctIndex": 0,
+      "explanation": "区別できる3枚の表裏は2³=8通りで、独立・公平という仮定の下で等確率。表が2枚になるのは表表裏・表裏表・裏表表の3通りなので3/8。",
+      "distractorRationales": [
+        "等確率の8通り中3通り。",
+        "8通り中2通りの確率で、該当する場合を1通り落としている。",
+        "該当するのは半数の4通りではない。",
+        "8通り中1通りの確率で、配置の違いを数えていない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §9.7 Probability",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/9-7-probability"
+        }
+      ]
+    },
+    "reason": "独立性と公平性を追記し、場合の数と全誤答肢を照合。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "等確率な標本空間における場合の数の比。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000314",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "content": {
+      "question": "二次関数 y=x²−4x+3 のグラフの頂点のx座標はどれか。",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "平方完成するとy=(x−2)²−1。二乗の項が0となるx=2で最小となり、頂点は(2,−1)。",
+      "distractorRationales": [
+        "x=1はy=0になる点だが、頂点ではない。",
+        "標準形(x−2)²−1の頂点のx座標。",
+        "x=3もy=0になる点だが、頂点ではない。",
+        "一次の係数の絶対値をそのまま使うことはできない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §5.1 Quadratic Functions",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/5-1-quadratic-functions"
+        }
+      ]
+    },
+    "reason": "確率・統計から関数へ分類を訂正し、解と頂点の混同を明確化。",
+    "parameters": {
+      "b": -1,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "平方完成した標準形と頂点の座標。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000315",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "赤玉3個と白玉2個だけが入った袋から、各玉を等確率で1個選ぶ。赤玉を選ぶ確率はどれか。",
+      "choices": [
+        "3/10",
+        "2/5",
+        "3/5",
+        "1/2"
+      ],
+      "correctIndex": 2,
+      "explanation": "玉は合計5個。そのうち赤は3個で、各玉が等確率だから赤を選ぶ確率は3/5。",
+      "distractorRationales": [
+        "分母は合計5個で、10ではない。",
+        "白玉を選ぶ確率。",
+        "5個中3個が赤なので3/5。",
+        "色は2種類でも、各色の確率が同じとは限らない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §9.7 Probability",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/9-7-probability"
+        }
+      ]
+    },
+    "reason": "各玉を等確率で選ぶ条件を追記し、色の種類数との混同を説明。",
+    "parameters": {
+      "b": -1.7,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "等確率な標本空間における場合の数の比。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000126",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000306"
+    ],
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "1から6までの目がそれぞれ同じ確率で出るさいころを1回振る。偶数の目が出る確率はどれか。",
+      "choices": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "1/6"
+      ],
+      "correctIndex": 1,
+      "explanation": "偶数は2・4・6の3通り。等確率の6通り中3通りなので3/6=1/2。",
+      "distractorRationales": [
+        "6通り中2通りの場合の確率で、偶数は3通りある。",
+        "2・4・6の3通りを全6通りで割った値。",
+        "6通り中4通りの場合の確率。奇数も偶数も3通りであり、両者の取り違えではこの値にならない。",
+        "特定の1つの目が出る確率。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §9.7 Probability",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/9-7-probability"
+        }
+      ]
+    },
+    "reason": "さいころの公平性を明記し、2/3の誤答説明の計算ミスを訂正。",
+    "parameters": {
+      "b": -1.6,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "等確率な標本空間における場合の数の比。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000138",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "多項式 x²−9 の因数分解として、恒等的に等しいものはどれか。",
+      "choices": [
+        "(x−3)²",
+        "(x+3)(x−3)",
+        "(x+9)(x−1)",
+        "(x+3)²"
+      ],
+      "correctIndex": 1,
+      "explanation": "平方の差a²−b²=(a+b)(a−b)にa=x、b=3を当てはめる。積を展開するとx²−9に戻る。",
+      "distractorRationales": [
+        "展開するとx²−6x+9。",
+        "展開するとx²−9。",
+        "展開するとx²+8x−9。",
+        "展開するとx²+6x+9。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §1.5 Factoring Polynomials",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/1-5-factoring-polynomials"
+        }
+      ]
+    },
+    "reason": "全候補を展開して唯一正解と説明を確認。",
+    "parameters": {
+      "b": -1,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "平方の差と二次式の因数分解。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000124",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "二次方程式 x²−5x+6=0 の解をすべて挙げたものはどれか。",
+      "choices": [
+        "1 と 6",
+        "−2 と −3",
+        "2 と −3",
+        "2 と 3"
+      ],
+      "correctIndex": 3,
+      "explanation": "左辺は(x−2)(x−3)と因数分解できる。積が0になるのはx=2またはx=3。",
+      "distractorRationales": [
+        "この2数の和は7であり、因数の条件と一致しない。",
+        "この2数を根に持つ式はx²+5x+6=0。",
+        "この2数を根に持つ式はx²+x−6=0。",
+        "(x−2)(x−3)=0の2つの解。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §1.5 Factoring Polynomials",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/1-5-factoring-polynomials"
+        }
+      ]
+    },
+    "reason": "根をすべて問うことを明示し、各根の組から式を検証。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "平方の差と二次式の因数分解。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000316",
+    "equivalentLegacyIds": [],
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "データ 2, 2, 5, 8, 9 の中央値はどれか。",
+      "choices": [
+        "5.2",
+        "8",
+        "2",
+        "5"
+      ],
+      "correctIndex": 3,
+      "explanation": "小さい順に並んだ5個の中央、3番目の値は5。偶数個の場合の中央値は中央の2値の平均を取る。",
+      "distractorRationales": [
+        "これは算術平均26÷5=5.2。",
+        "4番目の値であり、中央ではない。",
+        "このデータの最頻値は2。",
+        "並べた5個の3番目に位置する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Contemporary Mathematics §8.3 Mean, Median, and Mode",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/8-3-mean-median-and-mode"
+        }
+      ]
+    },
+    "reason": "離散数学から確率・統計へ分類を修正し、平均・最頻値と区別。",
+    "parameters": {
+      "b": -1.5,
+      "basis": "内容を読み直した初期難度の仮定。回答実績による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "算術平均と順序付けたデータの中央値。各選択肢を定義・代入・計算で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "旧運営問題の題材から独自に文章・解説を再構成。数学的事実と自前の計算を用い、参照書の例題・図版・文章は転載していない。"
+    }
+  }
+]

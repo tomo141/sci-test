@@ -1,60 +1,193 @@
 [
   {
     "legacyId": "10000000-0000-4000-8007-000000000337",
-    "domain": "数学", "subdomain": "線形代数",
+    "domain": "数学",
+    "subdomain": "線形代数",
     "reason": "最小多項式のモニック性を正しい語で示し、無意味な誤答肢と小分野の誤分類を修正した。",
     "content": {
       "question": "体F上のn次正方行列A（n≥1）の最小多項式m_A(x)について、正しい説明はどれ？",
-      "choices": ["m_A(A)=0を満たす、次数が最小のモニック多項式である", "Aの行列式と常に等しい定数多項式である", "次数は必ずnより大きい", "最小多項式は、零多項式そのものである"],
+      "choices": [
+        "m_A(A)=0を満たす、次数が最小のモニック多項式である",
+        "Aの行列式と常に等しい定数多項式である",
+        "次数は必ずnより大きい",
+        "最小多項式は、零多項式そのものである"
+      ],
       "correctIndex": 0,
       "explanation": "モニックとは最高次の係数が1という意味です。最小多項式はAを代入すると零行列になるモニック多項式のうち、次数が最小のものです。特性多項式を割り切り、その次数はn以下です。",
-      "distractorRationales": ["最小次数と最高次係数1という条件で最小多項式が一意に定まります。", "行列式は1つのスカラー値です。最小多項式は一般に正の次数をもち、行列式とは別の対象です。", "ケーリー・ハミルトンの定理から特性多項式はAを零化するため、最小多項式の次数はn以下です。", "零多項式を許すと最小次数を定められません。最小多項式はモニックな非零多項式として定義します。"],
-      "sources": [{"title": "Eric W. Weisstein / Todd Rowland, Matrix Minimal Polynomial, Wolfram MathWorld", "url": "https://mathworld.wolfram.com/MatrixMinimalPolynomial.html"}]
+      "distractorRationales": [
+        "最小次数と最高次係数1という条件で最小多項式が一意に定まります。",
+        "行列式は1つのスカラー値です。最小多項式は一般に正の次数をもち、行列式とは別の対象です。",
+        "ケーリー・ハミルトンの定理から特性多項式はAを零化するため、最小多項式の次数はn以下です。",
+        "零多項式を許すと最小次数を定められません。最小多項式はモニックな非零多項式として定義します。"
+      ],
+      "sources": [
+        {
+          "title": "Eric W. Weisstein / Todd Rowland, Matrix Minimal Polynomial, Wolfram MathWorld",
+          "url": "https://mathworld.wolfram.com/MatrixMinimalPolynomial.html"
+        }
+      ]
     },
-    "review": {"status":"content_checked","reviewer":"Astra","observedAt":"2026-09-14","sourceLocation":"最小次数のmonic polynomialという定義と、零化多項式および特性多項式を割り切るという記述を確認。","sourceChecked":true,"uniqueAnswerChecked":true,"distractorRationalesChecked":true,"releaseApproval":"pending"}
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "最小次数のmonic polynomialという定義と、零化多項式および特性多項式を割り切るという記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "今回の実装依頼の範囲で設問・解説・誤答理由を新しく記述した。参照先の本文転載を行わず、学術上の事実・定義・反例を確認する根拠として示した。"
+    },
+    "parameters": {
+      "b": 1.0,
+      "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    }
   },
   {
     "legacyId": "10000000-0000-4000-8007-000000000322",
-    "equivalentLegacyIds": ["10000000-0000-4000-8005-000000000108"],
-    "domain": "数学", "subdomain": "幾何・位相",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000108"
+    ],
+    "domain": "数学",
+    "subdomain": "幾何・位相",
     "reason": "『境界点を含まない』も開集合の同値な特徴になり、複数正解だったため誤答肢を変更。近傍について曖昧な別問題も同じ問題族にまとめる。",
     "content": {
       "question": "ユークリッド空間ℝⁿの部分集合Uが開集合であることの定義はどれ？",
-      "choices": ["各点を中心とする半径1の開球を必ずUが含む", "Uの各点に、その点を中心としUに含まれる正の半径の開球が存在する", "Uがすべての集積点を含む", "Uが有界である"],
+      "choices": [
+        "各点を中心とする半径1の開球を必ずUが含む",
+        "Uの各点に、その点を中心としUに含まれる正の半径の開球が存在する",
+        "Uがすべての集積点を含む",
+        "Uが有界である"
+      ],
       "correctIndex": 1,
       "explanation": "どのx∈Uにも、十分小さいε>0を選んで開球B(x,ε)をUの中に収められることが定義です。半径εは点ごとに異なってかまいません。有界性とは独立の性質です。",
-      "distractorRationales": ["半径を1に固定する必要はありません。例えばℝの開区間(0,1)は開集合ですが、半径1の開球は内部に収まりません。", "各点が内部点であるという開集合の定義に一致します。", "すべての集積点を含むことは、閉集合を特徴づける条件です。", "有界かどうかだけでは開集合を判定できません。(0,1)も[0,1]も有界ですが、ℝで開集合なのは前者です。"],
-      "sources": [{"title": "Eric W. Weisstein, Open Set, Wolfram MathWorld", "url": "https://mathworld.wolfram.com/OpenSet.html"}]
+      "distractorRationales": [
+        "半径を1に固定する必要はありません。例えばℝの開区間(0,1)は開集合ですが、半径1の開球は内部に収まりません。",
+        "各点が内部点であるという開集合の定義に一致します。",
+        "すべての集積点を含むことは、閉集合を特徴づける条件です。",
+        "有界かどうかだけでは開集合を判定できません。(0,1)も[0,1]も有界ですが、ℝで開集合なのは前者です。"
+      ],
+      "sources": [
+        {
+          "title": "Eric W. Weisstein, Open Set, Wolfram MathWorld",
+          "url": "https://mathworld.wolfram.com/OpenSet.html"
+        }
+      ]
     },
-    "review": {"status":"content_checked","reviewer":"Astra","observedAt":"2026-09-14","sourceLocation":"距離空間で各点の近傍が集合に含まれる定義を確認。誤答肢には(0,1)などの反例で正解との相違を検証。","sourceChecked":true,"uniqueAnswerChecked":true,"distractorRationalesChecked":true,"releaseApproval":"pending"}
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "距離空間で各点の近傍が集合に含まれる定義を確認。誤答肢には(0,1)などの反例で正解との相違を検証。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "今回の実装依頼の範囲で設問・解説・誤答理由を新しく記述した。参照先の本文転載を行わず、学術上の事実・定義・反例を確認する根拠として示した。"
+    },
+    "parameters": {
+      "b": 0.6,
+      "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    }
   },
   {
     "legacyId": "10000000-0000-4000-8007-000000000330",
-    "equivalentLegacyIds": ["10000000-0000-4000-8006-000000000131", "10000000-0000-4000-8007-000000000346"],
-    "domain": "数学", "subdomain": "数と代数",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000131",
+      "10000000-0000-4000-8007-000000000346"
+    ],
+    "domain": "数学",
+    "subdomain": "数と代数",
     "reason": "同値な2式を正誤に分けていた複数正解を解消。別の言い換え問題も同じ問題族にする。",
     "content": {
       "question": "pを素数、aをpで割り切れない整数とする。フェルマーの小定理から必ず成り立つ合同式はどれ？",
-      "choices": ["a^(p−1) ≡ 0 (mod p)", "a^(p−1) ≡ 1 (mod p)", "a^(p+1) ≡ 1 (mod p)", "a^p ≡ 0 (mod p)"],
+      "choices": [
+        "a^(p−1) ≡ 0 (mod p)",
+        "a^(p−1) ≡ 1 (mod p)",
+        "a^(p+1) ≡ 1 (mod p)",
+        "a^p ≡ 0 (mod p)"
+      ],
       "correctIndex": 1,
       "explanation": "aがpで割り切れなければ、a^(p−1)をpで割った余りは1です。両辺にaを掛けるとa^p ≡ a (mod p)も得られます。この同値な形を誤答として扱ってはいけません。",
-      "distractorRationales": ["この条件での余りは0ではなく1です。", "フェルマーの小定理の結論に一致します。", "例えばp=5、a=2なら2^6≡4 (mod 5)であり、常には成り立ちません。", "pが素数でaを割り切らないので、aの正の整数乗もpで割り切れません。"],
-      "sources": [{"title": "Eric W. Weisstein, Fermat's Little Theorem, Wolfram MathWorld", "url": "https://mathworld.wolfram.com/FermatsLittleTheorem.html"}]
+      "distractorRationales": [
+        "この条件での余りは0ではなく1です。",
+        "フェルマーの小定理の結論に一致します。",
+        "例えばp=5、a=2なら2^6≡4 (mod 5)であり、常には成り立ちません。",
+        "pが素数でaを割り切らないので、aの正の整数乗もpで割り切れません。"
+      ],
+      "sources": [
+        {
+          "title": "Eric W. Weisstein, Fermat's Little Theorem, Wolfram MathWorld",
+          "url": "https://mathworld.wolfram.com/FermatsLittleTheorem.html"
+        }
+      ]
     },
-    "review": {"status":"content_checked","reviewer":"Astra","observedAt":"2026-09-14","sourceLocation":"a^p≡aと、pがaを割り切らない場合のa^(p−1)≡1という両方の記述を確認。","sourceChecked":true,"uniqueAnswerChecked":true,"distractorRationalesChecked":true,"releaseApproval":"pending"}
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "a^p≡aと、pがaを割り切らない場合のa^(p−1)≡1という両方の記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "今回の実装依頼の範囲で設問・解説・誤答理由を新しく記述した。参照先の本文転載を行わず、学術上の事実・定義・反例を確認する根拠として示した。"
+    },
+    "parameters": {
+      "b": 0.3,
+      "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    }
   },
   {
     "legacyId": "10000000-0000-4000-8007-000000000344",
-    "domain": "数学", "subdomain": "解析・微分積分",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
     "reason": "境界への連続性と、元の定義域の外へ延長した関数についての等式であることを明示。小分野も修正した。",
     "content": {
       "question": "上半円板で正則な関数fが、直径の内部（実軸上）まで連続に延長され、そこで実数値をとる。シュワルツの鏡像原理による延長Fが満たす関係はどれ？（z̄はzの複素共役）",
-      "choices": ["Fは必ず定数関数になる", "Fは実軸上以外では定義できない", "F(z̄)=F(z)がすべてのzで成り立つ", "F(z̄)=F(z)の複素共役が成り立つ"],
+      "choices": [
+        "Fは必ず定数関数になる",
+        "Fは実軸上以外では定義できない",
+        "F(z̄)=F(z)がすべてのzで成り立つ",
+        "F(z̄) は F(z) の複素共役に等しい"
+      ],
       "correctIndex": 3,
       "explanation": "下半円板でF(z)=f(z̄)の複素共役と定めると、実軸をまたいで正則に延長できます。境界で連続に実数値をとるという条件が、上下を接続する鍵です。",
-      "distractorRationales": ["f(z)=zのような非定数関数も条件を満たします。", "元々上半円板で定義されており、原理は下半円板への延長を保証します。", "一般には右辺にも複素共役が必要です。F(z)=zを考えると、実数でないzではこの式は成り立ちません。", "実軸について対称な点の値が複素共役になるという結論に一致します。"],
-      "sources": [{"title": "Eric W. Weisstein / Todd Rowland, Schwarz Reflection Principle, Wolfram MathWorld", "url": "https://mathworld.wolfram.com/SchwarzReflectionPrinciple.html"}]
+      "distractorRationales": [
+        "f(z)=zのような非定数関数も条件を満たします。",
+        "元々上半円板で定義されており、原理は下半円板への延長を保証します。",
+        "一般には右辺にも複素共役が必要です。F(z)=zを考えると、実数でないzではこの式は成り立ちません。",
+        "実軸について対称な点の値が複素共役になるという結論に一致します。"
+      ],
+      "sources": [
+        {
+          "title": "Eric W. Weisstein / Todd Rowland, Schwarz Reflection Principle, Wolfram MathWorld",
+          "url": "https://mathworld.wolfram.com/SchwarzReflectionPrinciple.html"
+        }
+      ]
     },
-    "review": {"status":"content_checked","reviewer":"Astra","observedAt":"2026-09-14","sourceLocation":"上半円板・実軸への連続延長・境界上の実数値という仮定と共役対称の延長式を確認。","sourceChecked":true,"uniqueAnswerChecked":true,"distractorRationalesChecked":true,"releaseApproval":"pending"}
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "上半円板・実軸への連続延長・境界上の実数値という仮定と共役対称の延長式を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "今回の実装依頼の範囲で設問・解説・誤答理由を新しく記述した。参照先の本文転載を行わず、学術上の事実・定義・反例を確認する根拠として示した。"
+    },
+    "parameters": {
+      "b": 1.8,
+      "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    }
   }
 ]

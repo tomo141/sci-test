@@ -2,11 +2,12 @@ import { cookies } from "next/headers";
 import type { CookieOptions } from "@supabase/ssr";
 import { createServerClient } from "@supabase/ssr";
 import { createClient as createSupabaseClient } from "@supabase/supabase-js";
+import { databaseEnvironmentAllowed } from "./environment";
 
 export async function createServerSupabaseClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
+  if (!url || !key || !databaseEnvironmentAllowed(url, process.env.VERCEL_ENV)) return null;
 
   const cookieStore = await cookies();
   return createServerClient(url, key, {
@@ -28,7 +29,7 @@ export async function createServerSupabaseClient() {
 export function createServiceRoleClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) return null;
+  if (!url || !key || !databaseEnvironmentAllowed(url, process.env.VERCEL_ENV)) return null;
   return createSupabaseClient(url, key, {
     auth: {
       autoRefreshToken: false,

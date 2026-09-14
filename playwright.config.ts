@@ -3,12 +3,14 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests/e2e",
   webServer: {
-    command: "pnpm dev",
-    url: "http://127.0.0.1:3000",
-    reuseExistingServer: true
+    command: "node node_modules/next/dist/bin/next dev --hostname 127.0.0.1 --port 3017",
+    url: "http://127.0.0.1:3017",
+    reuseExistingServer: !process.env.CI,
+    timeout: 90_000
   },
   use: {
-    baseURL: "http://127.0.0.1:3000",
+    baseURL: "http://127.0.0.1:3017",
+    channel: process.env.PLAYWRIGHT_CHANNEL,
     trace: "on-first-retry"
   },
   projects: [
