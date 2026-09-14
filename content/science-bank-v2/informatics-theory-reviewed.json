@@ -1,0 +1,374 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000270",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "計算量クラスPとNPについて、2026年9月15日時点で数学的に確立している関係はどれか。",
+      "choices": [
+        "P＝NP",
+        "PとNPは共通の問題を持たない",
+        "PはNPに含まれる（P⊆NP）",
+        "PはNPに含まれない"
+      ],
+      "correctIndex": 2,
+      "explanation": "決定性の多項式時間で解ける問題は、非決定性の多項式時間でも解けるためP⊆NP。包含が真の包含か、両者が等しいかは未解決である。",
+      "distractorRationales": [
+        "等号が成り立つかは未解決。",
+        "P⊆NPであり、共通の問題がある。",
+        "定義から確立している包含関係。",
+        "P⊆NPに反する。"
+      ],
+      "sources": [
+        {
+          "title": "Stephen Cook — The P versus NP Problem",
+          "url": "https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf"
+        },
+        {
+          "title": "Clay Mathematics Institute — P vs NP",
+          "url": "https://www.claymath.org/millennium/p-vs-np/"
+        }
+      ]
+    },
+    "reason": "セキュリティから計算理論へ訂正。既知の包含と未解決の等号を区別し、観測日を明記。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CookのP/NPの定義と包含関係、CMIのUnsolved表示を観測日現在で確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000290",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "Lは既知のNP完全な判定問題で、対象QがNPに属することも証明済みである。通常の多項式時間多対一還元を用いてQのNP完全性を示すため、追加で十分な条件はどれか。",
+      "choices": [
+        "Qの各入力を、答えを保って多項式時間でLの入力へ変換できる",
+        "Lの各入力を、答えを保って多項式時間でQの入力へ変換できる",
+        "Qに少なくとも一つYESとなる入力がある",
+        "Qの全入力を、指数時間でLの入力へ変換できる"
+      ],
+      "correctIndex": 1,
+      "explanation": "必要な方向はL≤pQ。NPの任意の問題からLへの還元にこれをつなげるとQのNP困難性が従い、証明済みのQ∈NPと合わせてNP完全になる。逆向きの還元だけでは難しさの下限を示せない。",
+      "distractorRationales": [
+        "逆向きだけではQがNP困難とは限らない。",
+        "既知の難しい問題をQで解ける形へ変換する方向。",
+        "YES入力の存在だけでは計算量の下限にならない。",
+        "時間制約も還元の方向も、この十分条件を満たさない。"
+      ],
+      "sources": [
+        {
+          "title": "Stephen Cook — The P versus NP Problem",
+          "url": "https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf"
+        }
+      ]
+    },
+    "reason": "旧問に不足したQ∈NPを明記し、線形時間を不十分とする旧解説を除去。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Definition 3・4とProposition 1(b)の還元の方向、NP所属、推移性を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000300",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "Baker・Gill・Solovayの相対化の結果では、Pᴬ＝NPᴬとなるオラクルAと、Pᴮ≠NPᴮとなるオラクルBが存在する。この結果について正しい読み方はどれか。",
+      "choices": [
+        "通常のオラクルなしモデルでP＝NPが証明された",
+        "通常のオラクルなしモデルでP≠NPが証明された",
+        "どのオラクルXを付けてもPˣ＝NPˣになる",
+        "付与するオラクルにより関係が変わり、通常のP対NPをこの結果だけで決着できない"
+      ],
+      "correctIndex": 3,
+      "explanation": "オラクル付きの二つの異なるモデルで、等号と不等号がそれぞれ成立する。任意のオラクルを付けてもそのまま通用する議論だけでは、通常のP対NPをどちらかに決着させられない。",
+      "distractorRationales": [
+        "オラクルA付きの等号を、オラクルなしへ移すことはできない。",
+        "オラクルB付きの不等号を、オラクルなしへ移すことはできない。",
+        "不等号となるBの存在に反する。",
+        "異なる相対化モデルの結果と通常の問題を区別している。"
+      ],
+      "sources": [
+        {
+          "title": "Baker, Gill & Solovay — Relativizations of the P = ? NP Question",
+          "url": "https://epubs.siam.org/doi/abs/10.1137/0204037"
+        }
+      ]
+    },
+    "reason": "標準モデルへの誤った推論と相対化の限界を比較。量子計算など無関係な誤答を除去。",
+    "parameters": {
+      "b": 1.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文の公開抄録で、再帰的集合Aによる等号とBによる不等号の構成結果を確認。本文の証明を読了した扱いにはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000176",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "チューリング機械Mが言語Lを「認識する」とき、Lに属さない入力に対する動作として許されるものはどれか。",
+      "choices": [
+        "停止して拒否する場合も、停止しない場合もある",
+        "必ず停止して受理する",
+        "すべて必ず停止して拒否しなければならない",
+        "すべて必ず停止せずに動き続けなければならない"
+      ],
+      "correctIndex": 0,
+      "explanation": "認識では、Lに属する入力は停止して受理し、それ以外は受理しない。Lの外では拒否して停止しても、停止しなくてもよい。全入力で停止して正しく受理・拒否する機械は、さらにLを決定する。",
+      "distractorRationales": [
+        "認識の定義で許される二つの非受理の動作。",
+        "Lに属さない入力を受理してはならない。",
+        "これは決定する機械に必要な、認識より強い条件。",
+        "Lの外で停止して拒否することも許される。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 18.404J — Lecture 7: Decision Problems for Automata and Grammars",
+          "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/1b34887be491d500d385f8fb88eb20f0_4MgN6uxd4i4.pdf"
+        }
+      ]
+    },
+    "reason": "言語クラスが包含され複数の選択肢を認識できる旧問を、認識と決定の停止条件の比較へ変更。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "講義書き起こし冒頭の受理・拒否・無限実行の三つ、および常に停止するdeciderの説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000199",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "有限アルファベットの文字、空語、空集合から、和・連接・Kleene閉包で作る理論上の正規表現を考える。これらで表せる言語の集合と、ちょうど一致する言語クラスはどれか。",
+      "choices": [
+        "文脈自由言語全体",
+        "決定可能な言語全体",
+        "正規言語全体",
+        "チューリング認識可能な言語全体"
+      ],
+      "correctIndex": 2,
+      "explanation": "この定義の正規表現と有限オートマトンは同じ言語クラスを表す。上位の言語クラスには正規でない言語も含まれる。実用の正規表現エンジンにある後方参照は、ここでいう理論上の正規表現には含めない。",
+      "distractorRationales": [
+        "正規でない文脈自由言語もあるため、全体とは一致しない。",
+        "決定可能でも正規でない言語がある。",
+        "有限オートマトンと等しい表現能力を持つ。",
+        "認識可能な言語全体は、正規言語だけではない。"
+      ],
+      "sources": [
+        {
+          "title": "Russ Cox — Regular Expression Matching Can Be Simple And Fast",
+          "url": "https://swtch.com/~rsc/regexp/regexp1.html"
+        }
+      ]
+    },
+    "reason": "「認識できる」だと上位クラスの一部も該当する曖昧さを、表せる言語全体の一致へ限定。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Regular ExpressionsとFinite Automataの構文・表現能力、後方参照が理論上の正規表現と異なる説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000188",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "有限個のブール変数を含む命題論理式について、それを真にする割当てが存在するかを判定する一般のSATについて、確立している性質はどれか。",
+      "choices": [
+        "決定不能であり、全入力で停止する判定法は存在しない",
+        "NP完全だが決定可能であり、全割当ての有限な列挙でも判定できる",
+        "どのSAT入力も必ず充足可能である",
+        "NPに属さず、充足する割当てが与えられても多項式時間で検証できない"
+      ],
+      "correctIndex": 1,
+      "explanation": "SATはNP完全。変数がn個なら2ⁿ通りの割当てを調べれば有限時間で判定できるので、決定不能ではない。NP完全という事実だけから、すべての解法に指数時間が必要と証明されたことにはならない。",
+      "distractorRationales": [
+        "有限個の割当てを列挙する判定法がある。",
+        "計算量の分類と決定可能性を正しく分けている。",
+        "xとその否定を同時に要求する式などは充足不能。",
+        "与えられた割当てで論理式を評価でき、SATはNPに属する。"
+      ],
+      "sources": [
+        {
+          "title": "Stephen Cook — The P versus NP Problem",
+          "url": "https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf"
+        }
+      ]
+    },
+    "reason": "NP完全と時間の上界・決定不能を同じ選択軸に置く旧問を、両立する保証の理解へ改訂。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "SATの定義、NP所属とNP完全性の記述を確認。有限ブール割当ての列挙と、決定可能性との区別を独立に導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000092",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "ラムダ計算の項(λx.M)Nで、Nは自由変数のないラムダ抽象とする。外側の関数適用を1回β簡約する、一般の変換規則はどれか。M[x:=N]は、M内の自由なxをNで置換する記法とする。",
+      "choices": [
+        "N[x:=M]",
+        "λx.(M N)",
+        "M（置換はしない）",
+        "M[x:=N]"
+      ],
+      "correctIndex": 3,
+      "explanation": "β簡約は関数本体Mの仮引数xに実引数Nを代入する。内側の別のλxで束縛されるxまで置換しない。Nが閉じている条件により、代入する項の自由変数が捕獲される問題はここでは生じない。",
+      "distractorRationales": [
+        "実引数の側へ関数本体を代入する方向ではない。",
+        "関数適用を消さず、新しい抽象へ包む規則ではない。",
+        "xが現れる本体では一般に結果が変わる。",
+        "関数本体へ実引数を代入するβ簡約。"
+      ],
+      "sources": [
+        {
+          "title": "Software Foundations — Stlc: The Simply Typed Lambda-Calculus",
+          "url": "https://softwarefoundations.cis.upenn.edu/plf-current/Stlc.html"
+        }
+      ]
+    },
+    "reason": "δ簡約を標準用語ではないとする旧解説を除去し、置換の方向と対象を直接問う。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Substitutionの自由変数・閉じた項の条件と、ST_AppAbsの本体へ値を代入する規則を照合。型注釈を省いた記法で設問を作成。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000095",
+    "domain": "情報・計算機科学",
+    "subdomain": "計算理論・形式手法",
+    "content": {
+      "question": "有限な記述で与えられた任意のチューリング機械Mについて、次のうちRiceの定理が適用される非自明な言語の性質であり、一般には決定不能なものはどれか。",
+      "choices": [
+        "記述された状態の個数が10個以下か",
+        "遷移表に指定された記号aが現れるか",
+        "Mが受理する言語L(M)が空集合か",
+        "機械の記述の文字数が1,000文字以下か"
+      ],
+      "correctIndex": 2,
+      "explanation": "空言語かどうかはMの表面的な記述ではなく、受理する言語そのものの性質。同じ言語を受理する機械では答えが同じで、空言語も非空言語もあり非自明なのでRiceの定理が適用される。ほかの三つは有限な記述を調べて判定できる。",
+      "distractorRationales": [
+        "記述中の状態を数えれば判定でき、言語だけでは決まらない。",
+        "有限な遷移表を走査して判定できる。",
+        "受理言語の非自明な性質で、Riceの定理の対象。",
+        "有限な記述の長さを数えれば判定できる。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 6.045J — Lecture 10: Self-reference and the recursion theorem",
+          "url": "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/2fe1aea3ab4dd67aff81f2a04fc010ef_MIT6_045JS11_lec10.pdf"
+        }
+      ]
+    },
+    "reason": "単なる定理名当てと無関係な物理用語を除き、意味的性質と有限な記述の性質を比較。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "スライド21以降のRiceの定理と、満たす言語・満たさない言語が存在する非自明性の定義を確認。空言語と構文的な記述条件の比較を独立作成。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原著者の論文・公式問題解説、大学講義、実装者の技術解説の取得した本文・抄録を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
