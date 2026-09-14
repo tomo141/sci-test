@@ -1,0 +1,574 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000205",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "室温を目標温度へ近づけるためのフィードバック制御に当たるものはどれか。",
+      "choices": [
+        "実際の室温と目標温度の差を測り、冷暖房の出力を調整する",
+        "毎日同じ時間だけ一定出力で運転する",
+        "室温は測らず、外気温だけから運転出力を決める",
+        "設置時に決めた出力を室温によらず維持する"
+      ],
+      "correctIndex": 0,
+      "explanation": "制御した結果である室温を測定して戻し、目標との差を次の操作に使うのがフィードバック。外気温だけを先に用いる操作とは区別する。制御性能や安定性は設計に依存する。",
+      "distractorRationales": [
+        "制御対象の出力を戻して次の操作に反映している。",
+        "実際の室温を戻す経路がない。",
+        "外乱側の情報だけを用いており、室温のフィードバックではない。",
+        "目標との差を測って修正していない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Michigan CTMS — PID Controller Design",
+          "url": "https://ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlPID"
+        }
+      ]
+    },
+    "reason": "土木への誤分類と旧正解番号を訂正。名称・一般目的だけを問う旧3件も同じ問題族へ統合。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引に取得された本文の、出力yを参照値と比較して偏差eを作り制御入力を更新する記述を照合。直接取得403を全文読了とはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000054",
+      "10000000-0000-4000-8006-000000000090",
+      "10000000-0000-4000-8007-000000000207"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000215",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "偏差e(t)を入力とする理想的な連続時間PID制御で、P・I・Dの各項が用いる量の組合せはどれか。",
+      "choices": [
+        "P：偏差の積分、I：現在の偏差、D：偏差の微分",
+        "P：現在の偏差、I：偏差の時間積分、D：偏差の時間微分",
+        "P：現在の偏差、I：偏差の時間微分、D：偏差の時間積分",
+        "P：偏差の時間微分、I：偏差の時間積分、D：現在の偏差"
+      ],
+      "correctIndex": 1,
+      "explanation": "理想PIDはu＝Kₚe＋Kᵢ∫e dt＋Kᴅde/dt。Pは現在値、Iは蓄積、Dは変化率を用いる。実装では微分フィルターなどを加える場合がある。",
+      "distractorRationales": [
+        "PとIが逆。",
+        "比例・積分・微分に対応する。",
+        "IとDが逆。",
+        "PとDが逆。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — PID controller in parallel form",
+          "url": "https://www.mathworks.com/help/control/ref/pid.html"
+        }
+      ]
+    },
+    "reason": "効果を無条件に保証する旧四肢と誤った正解番号を、各項の数学的定義へ変更。P・Iの名称のみの旧問を統合。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "連続時間の並列形式Kp＋Ki/s＋Kd s、および微分フィルター付き形式を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000051",
+      "10000000-0000-4000-8005-000000000074"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000085",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "制御器に、非ゼロの積分ゲインを持つ偏差e(t)の積分項を含める。入力飽和などがなく、系が一定の平衡状態に落ち着いたとする。このとき定常偏差が0である必要がある理由はどれか。",
+      "choices": [
+        "比例項がなくても全ての制御対象は安定だから",
+        "微分項が一定偏差を打ち消し続けるから",
+        "一定の非ゼロ偏差が残ると積分状態が変化し続け、平衡状態にならないから",
+        "積分項がセンサーの測定誤差を必ず除去するから"
+      ],
+      "correctIndex": 2,
+      "explanation": "積分状態zに対してż＝eと書ける。平衡ではż＝0なのでe＝0が必要。この議論は平衡への収束を仮定しており、積分器を加えるだけで安定化や目標の実現を保証するものではない。",
+      "distractorRationales": [
+        "積分器の追加だけで安定性は保証されない。",
+        "一定偏差の微分は0になる。",
+        "積分状態の平衡条件から導かれる。",
+        "測定の偏りがあると、測定値と実際の値の差は残りうる。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — PID controller in parallel form",
+          "url": "https://www.mathworks.com/help/control/ref/pid.html"
+        }
+      ]
+    },
+    "reason": "偏差が必ず最終的にゼロへ収束するという旧断定を、成立条件と理由の問いへ訂正。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Ki/sの積分項を確認し、ż＝eと平衡条件ż＝0から独立に導出。飽和なし・平衡到達を設問に明記。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000095",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "Bode線図で、無次元の振幅比10をデシベルで表したゲインはいくらか。",
+      "choices": [
+        "10 dB",
+        "100 dB",
+        "−20 dB",
+        "20 dB"
+      ],
+      "correctIndex": 3,
+      "explanation": "振幅比のデシベル表示は20 log₁₀|G|。|G|＝10なら20 dBとなる。電力比を10 log₁₀で表す場合とは区別する。",
+      "distractorRationales": [
+        "振幅比に電力比用の係数10を用いている。",
+        "振幅比を二乗した100を、対数化せずそのままdBとしている。",
+        "振幅比1/10の場合の値。",
+        "20 log₁₀10＝20。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — Bode frequency response",
+          "url": "https://www.mathworks.com/help/control/ref/dynamicsystem.bode.html"
+        }
+      ]
+    },
+    "reason": "単位の暗記を振幅比の変換へ改訂。同義の旧ゲイン単位問を統合。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "振幅のdB表示とmagdb＝20*log10(mag)、位相の別表示を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000219"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000184",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "連続時間の線形時不変な1入力1出力系で、初期状態を0とする。入力と出力のラプラス変換U(s)、Y(s)の関係Y(s)＝G(s)U(s)に現れるG(s)はどれか。",
+      "choices": [
+        "伝達関数",
+        "初期状態ベクトル",
+        "制御入力の時系列",
+        "状態遷移行列そのもの"
+      ],
+      "correctIndex": 0,
+      "explanation": "G(s)は指定した入力から出力への伝達関数。ゼロ初期状態での入出力関係を表す。閉ループだけに使う名称ではなく、非ゼロ初期状態からの応答は別に扱う。",
+      "distractorRationales": [
+        "指定したゼロ状態での入出力関係を表す。",
+        "初期状態はここでは0であり、G(s)とは別。",
+        "u(t)は入力そのもの。",
+        "状態遷移は内部状態の時間変化を表し、G(s)とは別の量。"
+      ],
+      "sources": [
+        {
+          "title": "University of Michigan CTMS — System Modeling",
+          "url": "https://ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=SystemModeling"
+        }
+      ]
+    },
+    "reason": "初期条件と線形時不変の仮定を補い、閉ループ専用という旧誤解とグリーン関数との曖昧な四肢を除去。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引に取得されたTransfer Function RepresentationのLTI・初期条件0・式(8)Y/U・式(10)を照合。資料全体の直接取得は確認していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000136",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "剛体リンクの形状と接続が既知のロボットアームで、各関節角から手先の位置・姿勢を求める問題はどれか。",
+      "choices": [
+        "逆運動学",
+        "逆動力学",
+        "順運動学",
+        "軌道の時間最適化"
+      ],
+      "correctIndex": 2,
+      "explanation": "順運動学は関節の値から手先の位置・姿勢を求める。逆運動学は目的の手先配置を実現する関節の値を求める問題で、解が一つとは限らない。",
+      "distractorRationales": [
+        "与えるものと求めるものの向きが逆。",
+        "指定した運動を実現する力・トルクを求める問題。",
+        "関節配置から手先配置を計算する。",
+        "運動に要する時間などを最適化する別の問題。"
+      ],
+      "sources": [
+        {
+          "title": "Kevin M. Lynch and Frank C. Park — Modern Robotics: Inverse Kinematics of Open Chains",
+          "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/inverse-kinematics-of-open-chains/"
+        }
+      ]
+    },
+    "reason": "逆運動学の逆という正解と同義になりうる旧誤答を除去。位置だけでなく姿勢も含める。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "講義Transcriptの順・逆運動学の定義と、逆運動学の解の個数に関する説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000082",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "モデル予測制御（MPC）のリシーディングホライズン方式の基本的な進め方はどれか。",
+      "choices": [
+        "最初に求めた入力列を、その後の測定を使わず最後まで実行する",
+        "未来の入力列を最適化し、最初の入力を適用した後、新しい測定・推定で再び計算する",
+        "制御対象のモデルを使わず、偏差を一定倍率で増幅するだけである",
+        "予測区間の最後の入力だけを適用し、その区間中は測定値を更新しない"
+      ],
+      "correctIndex": 1,
+      "explanation": "MPCでは有限の予測区間についてモデルと評価関数を用いて入力列を求める。最初の入力を適用し、区間を先へ移して状態情報を更新し、再計算する。",
+      "distractorRationales": [
+        "測定を更新しない固定の入力列とは異なる。",
+        "予測・最適化・一部適用・更新を繰り返す。",
+        "モデルを用いる将来予測と最適化が欠ける。",
+        "適用するのは最初の入力で、その後に状態情報と予測区間を更新する。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — Control Robot Manipulator Using C/GMRES Solver",
+          "url": "https://www.mathworks.com/help/mpc/ug/control-robot-manipulator-using-cgmres-solver.html"
+        }
+      ]
+    },
+    "reason": "最適制御全般とMPCを一つの名称にまとめた旧問を、MPCの実行方式へ限定。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Backgroundの有限区間での入力列最適化、最初の操作のみ適用、測定更新と区間移動の記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000244",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "線形系の標準的なH∞制御と、確率雑音を仮定しない決定論的なLQRの評価基準の違いとして適切なものはどれか。",
+      "choices": [
+        "H∞は二次コストの時間積分、LQRは閉ループ伝達のH∞ノルムを小さくする",
+        "どちらも入力数と出力数を最小にするだけである",
+        "H∞は指定した閉ループ伝達のH∞ノルム、LQRは状態と入力の重み付き二次コストの時間積分を小さくする",
+        "LQRは必ずコストの確率的期待値を使い、決定論的には定義できない"
+      ],
+      "correctIndex": 2,
+      "explanation": "H∞設計では、外乱から評価出力への閉ループ伝達などについてH∞ノルムを抑える。LQRでは、例えば∫(xᵀQx＋uᵀRu)dtを最小化する。LQRそのものに確率的期待値が必須というわけではない。",
+      "distractorRationales": [
+        "二つの代表的な評価基準を逆にしている。",
+        "入力・出力の数を最小にすることが定義ではない。",
+        "対象とする基準を適切に区別している。",
+        "確率雑音を用いないLQRも定義される。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — H-infinity optimal controller",
+          "url": "https://www.mathworks.com/help/robust/ref/dynamicsystem.hinfsyn.html"
+        },
+        {
+          "title": "MathWorks — Linear-Quadratic Regulator design",
+          "url": "https://www.mathworks.com/help/control/ref/lti.lqr.html"
+        }
+      ]
+    },
+    "reason": "旧正解番号とLQ＝期待値という断定を訂正。無指定の全不確かさに対する保証へ拡張しない。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "hinfsynの外乱w・評価出力z・閉ループH∞ノルムと、lqrのAlgorithmsにある決定論的二次コスト積分を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000235",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "二つの加熱器へ与える電力をそれぞれ操作し、二つの部屋の温度を出力として扱う。各加熱器は両方の部屋の温度に影響する。この全体を一つの系と見た入出力分類はどれか。",
+      "choices": [
+        "1入力1出力のSISO系",
+        "状態変数が2個あるだけのSISO系",
+        "1入力多出力の系",
+        "2入力2出力のMIMO系"
+      ],
+      "correctIndex": 3,
+      "explanation": "入力は二つの加熱器への操作、出力は二つの温度なのでMIMOに当たる。入出力の数と内部状態の数は別であり、相互作用を含めて全体を扱える。",
+      "distractorRationales": [
+        "独立に操作する入力も観測する出力も一つではない。",
+        "状態数を数えるだけでは入出力分類は決まらない。",
+        "操作入力も二つある。",
+        "複数の入力と複数の出力を持つ系。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — State-space model",
+          "url": "https://www.mathworks.com/help/control/ref/ss.html"
+        },
+        {
+          "title": "MathWorks — Bode frequency response",
+          "url": "https://www.mathworks.com/help/control/ref/dynamicsystem.bode.html"
+        }
+      ]
+    },
+    "reason": "略語の暗記を具体的な入出力の数え方へ改訂。状態数・サンプリング周期との混同を除去。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "ssの入力u・出力y・状態xと各行列の次元、bodeの複数入出力モデルと各入出力経路の説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-continuous-asymptotic-stability",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "連続時間の線形系ẋ＝Axで、Aは実数の2×2定数行列とする。任意の初期状態からx(t)が0へ収束するのは、固有値が次のどの組合せの場合か。",
+      "choices": [
+        "−1＋2iと−1−2i",
+        "iと−i",
+        "0と−1",
+        "1と−3"
+      ],
+      "correctIndex": 0,
+      "explanation": "全ての固有値の実部が負なら原点は漸近安定。複素固有値でも実部が負なら振動しながら減衰する。実部0を含む場合は、一般に全ての初期状態が0へ収束するとはいえない。",
+      "distractorRationales": [
+        "両方の実部が−1で負。",
+        "減衰しない振動があり、原点へ収束しない。",
+        "固有値0の方向に一定の状態が残りうる。",
+        "正の固有値の方向で増大する初期状態がある。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 18.03 — Linear Phase Portraits, Lecture 35",
+          "url": "https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/f6a33b930d231d48eae3030fd09f7280_MIT18_03S10_c35.pdf"
+        }
+      ]
+    },
+    "reason": "連続時間の漸近安定を、離散時間の単位円条件や単なる有界性と区別する独自設問。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Stability節の2次元線形系、負実部と漸近安定、純虚数・零固有値を持つ境界の説明を確認。組合せは独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-pid-antiwindup",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "PID制御で、アクチュエータが上限に達しているのに偏差の積分値が増え続け、上限から戻った後の回復が遅くなる。この問題に対するアンチワインドアップの考え方はどれか。",
+      "choices": [
+        "微分ゲインを無制限に大きくする",
+        "出力を上限で切るだけで、内部の積分は常にそのまま続ける",
+        "飽和を考慮して積分の蓄積を条件付きで止める、または補正する",
+        "飽和中は測定を止め、最後に得られた偏差を固定して積分し続ける"
+      ],
+      "correctIndex": 2,
+      "explanation": "出力の飽和を無視した積分の蓄積がワインドアップを生む。条件付き積分やバック計算により内部の積分状態を調整し、飽和からの回復を改善する。出力を切るだけでは積分の蓄積は解消しない。",
+      "distractorRationales": [
+        "積分の過剰な蓄積を直接処理していない。",
+        "操作量に上限があっても積分値は増え続けうる。",
+        "飽和と内部積分の不一致に対応する。",
+        "非ゼロ偏差を固定しても積分の蓄積は続き、飽和への対処にならない。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — Anti-Windup Control Using PID Controller Block",
+          "url": "https://www.mathworks.com/help/simulink/slref/anti-windup-control-using-a-pid-controller.html"
+        }
+      ]
+    },
+    "reason": "理想積分制御の定常偏差の議論とは別に、実際の入力制約による問題を問う独自設問。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "飽和時の積分windup、back-calculationの内部追従、clampingの条件付き積分を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-controllability-rank",
+    "domain": "工学",
+    "subdomain": "制御・システム",
+    "content": {
+      "question": "入力に制約のない連続時間線形系ẋ＝Ax＋Buで、A＝[[0,1],[0,0]]、B＝[0,2]ᵀとする。可制御性について正しいものはどれか。",
+      "choices": [
+        "可制御性行列の階数は1なので可制御でない",
+        "可制御性行列[B,AB]の階数が2なので可制御である",
+        "Aの固有値が0なので、入力では状態を動かせない",
+        "出力行列Cが与えられていないため可制御性は判定できない"
+      ],
+      "correctIndex": 1,
+      "explanation": "AB＝[2,0]ᵀなので[B,AB]＝[[0,2],[2,0]]。行列式は−4で階数2となり、状態数と等しいため可制御である。出力行列Cを使う可観測性とは別の判定。",
+      "distractorRationales": [
+        "二つの列は独立で、階数は2。",
+        "状態数に等しい階数を持つ。",
+        "無入力時の固有値だけでは可制御性は決まらない。",
+        "可制御性はAとBで判定できる。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — Controllability of state-space model",
+          "url": "https://www.mathworks.com/help/control/ref/statespacemodel.ctrb.html"
+        }
+      ]
+    },
+    "reason": "可制御性・安定性・可観測性を区別する独自設問。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Descriptionの[B,AB,…,Aⁿ⁻¹B]と、階数＝状態数の条件を確認。設問の行列と行列式は独立計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学教材・著者の講義・公式技術文書の該当箇所を照合。設問と四肢・説明は独自作成し、掲載された演習・図表・ソフトの例題コードは転載していない。取得範囲を各出典記録に明記。独立専門家の査読ではない。"
+    }
+  }
+]
