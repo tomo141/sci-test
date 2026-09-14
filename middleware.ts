@@ -1,8 +1,10 @@
-import { type NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import { maybeRateLimitApi } from "@/src/lib/security/middlewareRateLimit";
 import { updateSession } from "@/src/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
+  // Mail tokens and job Bearer tokens are independent of a browser login/session.
+  if (request.nextUrl.pathname.startsWith("/unsubscribe/") || request.nextUrl.pathname.startsWith("/api/science-jobs/")) return NextResponse.next();
   const limited = await maybeRateLimitApi(request);
   if (limited) return limited;
 

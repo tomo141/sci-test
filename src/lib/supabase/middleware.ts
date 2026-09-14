@@ -1,12 +1,13 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { type NextRequest, NextResponse } from "next/server";
+import { databaseEnvironmentAllowed } from "./environment";
 
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return supabaseResponse;
+  if (!url || !key || !databaseEnvironmentAllowed(url, process.env.VERCEL_ENV)) return supabaseResponse;
 
   const supabase = createServerClient(url, key, {
     cookies: {

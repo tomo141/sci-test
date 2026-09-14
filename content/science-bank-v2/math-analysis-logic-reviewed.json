@@ -1,0 +1,469 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000134",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000336"
+    ],
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "実数全体で微分可能な関数 y(x) が y′=y を満たす。この方程式の解を過不足なく表す形はどれか。",
+      "choices": [
+        "y=Ceˣ（Cは任意の実数）",
+        "y=eˣ+C（Cは任意の実数）",
+        "y=Cx（Cは任意の実数）",
+        "y=Ce⁻ˣ（Cは任意の実数）"
+      ],
+      "correctIndex": 0,
+      "explanation": "(e⁻ˣy)′=e⁻ˣ(y′−y)=0なので、e⁻ˣyは定数C。したがってy=Ceˣであり、C=0の零解も含む。",
+      "distractorRationales": [
+        "代入するとy′=Ceˣ=yとなり、積の微分からすべての解を含むと分かる。",
+        "導関数はeˣ。C≠0ではy′とyが一致しない。",
+        "導関数はC。C≠0ではCxとすべてのxで一致しない。",
+        "導関数は−Ce⁻ˣなので、非零のCではy′=−yとなる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 2 §4.3 Separable Equations",
+          "url": "https://openstax.org/books/calculus-volume-2/pages/4-3-separable-equations"
+        }
+      ]
+    },
+    "reason": "C=0を除いてしまう説明を避け、解全体を問うことを明記。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "変数分離法と、除算で失われる定数解を先に確認する手順を照合。一般解は積の微分により独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000318",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "定積分 ∫₀¹ x dx の値はどれか。",
+      "choices": [
+        "0",
+        "1/2",
+        "1",
+        "2"
+      ],
+      "correctIndex": 1,
+      "explanation": "xの原始関数はx²/2。積分区間の端点を代入した差は1²/2−0²/2=1/2となる。",
+      "distractorRationales": [
+        "積分する関数は区間内部で正なので、積分は0ではない。",
+        "原始関数の端点での差から求まる。",
+        "上端での関数値f(1)そのものではない。",
+        "原始関数は2x²ではなくx²/2。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 1 §5.3 The Fundamental Theorem of Calculus",
+          "url": "https://openstax.org/books/calculus-volume-1/pages/5-3-the-fundamental-theorem-of-calculus"
+        }
+      ]
+    },
+    "reason": "積分記号と区間を明確化し、各数値の誤答理由を確認。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Theorem 5.5の連続関数の積分F(b)−F(a)を照合し、原始関数と端点を独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000328",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "開区間上の実数値関数 f が、その区間内の点 a で微分可能である。この仮定から必ずいえることはどれか。",
+      "choices": [
+        "fはaで連続である",
+        "f′(a)=0である",
+        "f′はaの近くのすべての点で存在する",
+        "fはaで2階微分可能である"
+      ],
+      "correctIndex": 0,
+      "explanation": "1点aで微分可能なら、その点で連続である。f(x)−f(a)を差商とx−aの積で表して極限を取ると0になる。近くの点での微分可能性や2階微分可能性までは要求されない。",
+      "distractorRationales": [
+        "微分可能性から、その点での連続性が従う。",
+        "f(x)=xでは導関数は1。",
+        "たとえばf(x)=x²|sin(1/x)|（x≠0）、f(0)=0は0で微分可能だが、0へ近づく非零の零点付近に微分できない点がある。",
+        "f(x)=x|x|は0で微分可能だが、f′(x)=2|x|は0で微分可能でない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 1 §3.2 The Derivative as a Function",
+          "url": "https://openstax.org/books/calculus-volume-1/pages/3-2-the-derivative-as-a-function"
+        }
+      ]
+    },
+    "reason": "一点での微分可能性と近傍・高階の条件を区別。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Theorem 3.1『微分可能なら連続』と差商による証明を照合。誤答肢の反例は独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000338",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "f(x)=eˣ の x=0 を中心とする3次のテイラー多項式はどれか。",
+      "choices": [
+        "1+x+x²+x³",
+        "1+x+x²/2+x³/6",
+        "x+x²/2+x³/6",
+        "1+x+x²/2+x³/3"
+      ],
+      "correctIndex": 1,
+      "explanation": "eˣのn階導関数はすべてeˣであり、0での値は1。係数f⁽ⁿ⁾(0)/n!をn=0,1,2,3に適用すると1+x+x²/2+x³/6となる。",
+      "distractorRationales": [
+        "2次以降の階乗で割る操作が抜けている。",
+        "0次から3次までのテイラー係数と一致する。",
+        "定数項f(0)=1が抜けている。",
+        "3次の分母は3ではなく3!=6。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 2 §6.3 Taylor and Maclaurin Series",
+          "url": "https://openstax.org/books/calculus-volume-2/pages/6-3-taylor-and-maclaurin-series"
+        }
+      ]
+    },
+    "reason": "展開中心と次数を明示し、近似式と無限級数を区別。",
+    "parameters": {
+      "b": 0,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Taylor多項式の一般係数と、eˣのMaclaurin展開∑xⁿ/n!を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000005",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "実ベクトル空間の線形写像 T:ℝⁿ→ℝᵐ を考える。核 ker T を表す集合はどれか。",
+      "choices": [
+        "{v∈ℝⁿ : T(v)=0}",
+        "{T(v) : v∈ℝⁿ}",
+        "ℝᵐ のすべての非零ベクトル",
+        "{v∈ℝⁿ : v≠0}"
+      ],
+      "correctIndex": 0,
+      "explanation": "核は零ベクトルへ送られる入力ベクトル全体。写像の値として現れる出力ベクトル全体は像と呼ばれる。核には必ず入力側の零ベクトルが含まれる。",
+      "distractorRationales": [
+        "零ベクトルへの逆像としての定義。",
+        "Tの像を表す集合。",
+        "出力側の非零ベクトル全体は核の定義ではない。",
+        "線形写像ではT(0)=0なので、核から0を除くことはできない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Null Space",
+          "url": "https://mathworld.wolfram.com/NullSpace.html"
+        },
+        {
+          "title": "Wolfram MathWorld — Linear Transformation Kernel",
+          "url": "https://mathworld.wolfram.com/LinearTransformationKernel.html"
+        }
+      ]
+    },
+    "reason": "定義域・値域と零ベクトルの役割を明示。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Null Space冒頭のT(X)=0と集合式、Linear Transformation Kernelの同義語参照を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000332",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "元が2個以上ある群 G の単位元を e とする。任意の g∈G に対して必ず成り立つ式はどれか。",
+      "choices": [
+        "eg=ge=g",
+        "eg=ge=e",
+        "g²=e",
+        "eg=g⁻¹"
+      ],
+      "correctIndex": 0,
+      "explanation": "単位元は、左右どちらから掛けても相手の元を変えない元。群の公理によりeg=ge=gが成り立つ。",
+      "distractorRationales": [
+        "左右の単位元としての性質。",
+        "g≠eを選ぶと、eg=gなのでeにはならない。",
+        "位数3の巡回群の生成元では成り立たず、一般の群の法則ではない。",
+        "gの逆元がgと異なる群もあり、一般には成り立たない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Group",
+          "url": "https://mathworld.wolfram.com/Group.html"
+        }
+      ]
+    },
+    "reason": "自明群だけで複数肢が同じになるのを避け、一般の群で必ずいえる法則を問う。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "群の公理3の左右の単位元IA=AI=Aを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000001",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "群 G の元 a の逆元を a⁻¹、単位元を e とする。逆元の定義に当たる式はどれか。",
+      "choices": [
+        "aa⁻¹=a⁻¹a=e",
+        "aa⁻¹=a",
+        "aa⁻¹=a⁻¹",
+        "a⁻¹=e（すべてのaについて）"
+      ],
+      "correctIndex": 0,
+      "explanation": "逆元a⁻¹は、aと左右どちらの順序で掛けても単位元eになる元。単位元自身の逆元はeだが、一般の元の逆元がすべてeになるわけではない。",
+      "distractorRationales": [
+        "左右の積が単位元になるという定義。",
+        "たとえば正の実数の乗法群でa=2なら、積は1であり2ではない。",
+        "同じ例で積は1であり1/2ではない。",
+        "正の実数の乗法群で2の逆元は1/2。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Group",
+          "url": "https://mathworld.wolfram.com/Group.html"
+        }
+      ]
+    },
+    "reason": "『逆元を持つのは群』という答えを含む旧文面から、定義の理解を問う設問へ修正。",
+    "parameters": {
+      "b": 0,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "群の公理4のAA⁻¹=A⁻¹A=Iを照合し、誤答肢を正の実数の乗法群で検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000310",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "content": {
+      "question": "実数 x について、命題『x>3』の否定と同値なものはどれか。",
+      "choices": [
+        "x<3",
+        "x≤3",
+        "x≥3",
+        "x=3"
+      ],
+      "correctIndex": 1,
+      "explanation": "実数は3より大きいか、3以下かのどちらか一方に属する。x=3でも元の命題は偽なので、否定には等号を含める。",
+      "distractorRationales": [
+        "x=3のとき否定が真になる場合を含んでいない。",
+        "元の命題と真偽が常に逆になる。",
+        "x>3を満たす場合も含むため否定ではない。",
+        "x<3のときも元の命題は偽だが、この条件には含まれない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Contemporary Mathematics §2.1 Statements and Quantifiers",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/2-1-statements-and-quantifiers"
+        }
+      ]
+    },
+    "reason": "実数に範囲を指定し、境界の等号を説明。",
+    "parameters": {
+      "b": -1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "否定の真理値が元の命題と反対になる定義を照合し、x<3・x=3・x>3の場合で検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000312",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "content": {
+      "question": "実数の区間 (0,1) に属する x の条件はどれか。",
+      "choices": [
+        "0≤x≤1",
+        "0<x<1",
+        "0≤x<1",
+        "0<x≤1"
+      ],
+      "correctIndex": 1,
+      "explanation": "丸括弧の端点は区間に含めない。(0,1)は0より大きく1より小さい実数の集合を表す。",
+      "distractorRationales": [
+        "閉区間[0,1]の条件。",
+        "両方の端点を除く開区間の条件。",
+        "半開区間[0,1)の条件。",
+        "半開区間(0,1]の条件。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §2.7 Linear Inequalities and Absolute Value Inequalities",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/2-7-linear-inequalities-and-absolute-value-inequalities"
+        }
+      ]
+    },
+    "reason": "組の表記との混同を避け、実数の区間であることを指定。",
+    "parameters": {
+      "b": -1.1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Using Interval NotationのTable 1、(a,b)={x:a<x<b}を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000339",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "content": {
+      "question": "空でない集合 D 上の述語 P(x,y) について、∀x∈D ∃y∈D P(x,y) の意味はどれか。",
+      "choices": [
+        "どのxに対しても、P(x,y)を満たすyが少なくとも1つある。yはxによって変わってよい",
+        "すべてのxに共通する1つのyがあり、P(x,y)を満たす",
+        "どのxに対しても、P(x,y)を満たすyがちょうど1つある",
+        "少なくとも1つのxがあり、すべてのyについてP(x,y)を満たす"
+      ],
+      "correctIndex": 0,
+      "explanation": "外側の∀xでxを任意に取ったあと、内側の∃yでそのxに対応するyの存在を求める。すべてのxに同じyを使うことや、yの一意性までは主張しない。",
+      "distractorRationales": [
+        "量化子の順序に従った読み方。",
+        "∃y∀x P(x,y)に対応する、一般にはより強い条件。",
+        "∃は少なくとも1つの存在を表し、一意性は含まない。",
+        "∃x∀y P(x,y)に対応し、量化する変数と順序が異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Open Logic Project — forall x: Calgary §25.3 The order of quantifiers",
+          "url": "https://forallx.openlogicproject.org/html/Ch25.html"
+        }
+      ]
+    },
+    "reason": "量化域と依存関係を明示し、存在と一意性を区別。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§25.3の∀x∃yと∃y∀xの意味・非同値性を照合。独自の一般述語の文面へ整理。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  }
+]

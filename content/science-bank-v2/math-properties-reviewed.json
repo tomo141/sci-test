@@ -1,0 +1,800 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000327",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000135",
+      "10000000-0000-4000-8007-000000000331"
+    ],
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "実数を成分とする n×n 行列 A（n≥2）が逆行列を持つための必要十分条件はどれか。",
+      "choices": [
+        "det(A) ≠ 0",
+        "tr(A) ≠ 0",
+        "A が対称行列である",
+        "A のすべての成分が 0 でない"
+      ],
+      "correctIndex": 0,
+      "explanation": "正方行列が可逆であることと、その行列式が0でないことは同値。トレース、対称性、各成分が0かどうかだけでは可逆性を判定できない。",
+      "distractorRationales": [
+        "行列式が0でないことが、逆行列の存在と同値。",
+        "diag(1,0)はトレースが1でも逆行列を持たない。",
+        "零行列は対称だが可逆でない。",
+        "全成分が1の2×2行列は、行列式が0で可逆でない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Matrix Inverse",
+          "url": "https://mathworld.wolfram.com/MatrixInverse.html"
+        }
+      ]
+    },
+    "reason": "実数上の正方行列と必要十分条件を明示。数値や表現だけが違う旧設問を同じ問題族へ対応付けた。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭の逆行列と行列式非零の同値条件、2×2の逆行列の式。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000133",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000341"
+    ],
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "i²=−1 とする。オイラーの公式 e^(iθ)=cos θ+i sin θ を用いると、e^(iπ) はいくつか。",
+      "choices": [
+        "−1",
+        "1",
+        "i",
+        "0"
+      ],
+      "correctIndex": 0,
+      "explanation": "θ=πを代入すると、cos π=−1、sin π=0なので、e^(iπ)=−1となる。",
+      "distractorRationales": [
+        "実部が−1、虚部が0になる。",
+        "e^(i·0)やe^(i·2π)の値。",
+        "e^(iπ/2)の値。",
+        "複素指数関数はこの点で0にならない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Euler Formula",
+          "url": "https://mathworld.wolfram.com/EulerFormula.html"
+        }
+      ]
+    },
+    "reason": "代入点・虚数単位の意味を明示し、同一設問の重複をまとめた。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "式(1)と、x=πの特殊例である式(3)。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000324",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "実ベクトル v=(3,4) のユークリッドノルム（ℓ²ノルム）はいくつか。",
+      "choices": [
+        "7",
+        "12",
+        "25",
+        "5"
+      ],
+      "correctIndex": 3,
+      "explanation": "ℓ²ノルムは成分の二乗和の平方根なので、√(3²+4²)=√25=5。",
+      "distractorRationales": [
+        "成分の絶対値の和で、ここではℓ¹ノルム。",
+        "成分を掛け合わせた値。",
+        "二乗和の値で、まだ平方根を取っていない。",
+        "二乗和の平方根を取った値。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — L²-Norm",
+          "url": "https://mathworld.wolfram.com/L2-Norm.html"
+        }
+      ]
+    },
+    "reason": "一般のノルムでは正解が定まらないため、ℓ²ノルムと明示。誤分類も修正。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "式(2)の有限次元ベクトルのℓ²ノルム。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000103",
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "content": {
+      "question": "a,b,c は正の実数で a≠1、c≠1 とする。log_a b = (log_c b)/(log_c a) の名称はどれか。",
+      "choices": [
+        "対数の底の変換公式",
+        "対数の積の公式",
+        "指数法則",
+        "二項定理"
+      ],
+      "correctIndex": 0,
+      "explanation": "対数の底をaからcへ変える式。分子に真数b、分母に元の底aの対数を置く。a≠1なので分母は0ではない。",
+      "distractorRationales": [
+        "同じ値の対数を、別の底の対数の比で表す公式。",
+        "log_a(xy)=log_a x+log_a yの形で、積を和へ変える。",
+        "a^x a^y=a^(x+y)など、指数を含む式の法則。",
+        "(x+y)^nの展開の係数を与える定理。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax College Algebra 2e §6.5",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/6-5-logarithmic-properties"
+        }
+      ]
+    },
+    "reason": "実対数が定義され、分母が0でない条件を補った。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "The Change-of-Base Formula の正の真数・底≠1という条件と公式。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000004",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "可測空間 (X,𝓕) 上の関数 μ:𝓕→[0,∞] が、μ(∅)=0 と、互いに交わらない可測集合列についての可算加法性を満たす。この μ を何というか。",
+      "choices": [
+        "測度",
+        "確率密度関数",
+        "位相",
+        "ベクトル空間のノルム"
+      ],
+      "correctIndex": 0,
+      "explanation": "測度は可測集合に非負の大きさを割り当てる。互いに交わらない可算個の集合の合併には、それぞれの測度の和を割り当てる。",
+      "distractorRationales": [
+        "空集合を0とし、互いに交わらない可測集合列について可算加法性を満たす集合関数。",
+        "点の変数を持つ関数であり、可測集合そのものを入力するμとは異なる。",
+        "位相は開集合の集まり。集合へ大きさを割り当てる関数ではない。",
+        "ノルムはベクトルへ長さを割り当て、三角不等式などを満たす。"
+      ],
+      "sources": [
+        {
+          "title": "John K. Hunter, Measure Theory（UC Davis, 2011）",
+          "url": "https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes.pdf"
+        }
+      ]
+    },
+    "reason": "σ加法性だけの曖昧な定義を、σ代数上の非負測度の条件へ修正。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "本文p.5、Definition 1.9 の定義域・値域・空集合・可算加法性。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000006",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000335"
+    ],
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "確率空間 (Ω,𝓕,P) における確率測度 P の規格化条件はどれか。",
+      "choices": [
+        "P(Ω)=1",
+        "P(Ω)=0",
+        "P(A)=1/2 がすべての A∈𝓕 で成り立つ",
+        "P(∅)=1"
+      ],
+      "correctIndex": 0,
+      "explanation": "標本空間Ω全体に確率1を割り当てる。空集合の確率は0。事象を重ねて足した値を常に1にする、という条件ではない。",
+      "distractorRationales": [
+        "全体の確率を1にする条件。",
+        "全体を0とすると、確率測度の規格化を満たさない。",
+        "Ω自身や空集合も事象なので、この条件は成立しない。",
+        "空集合の確率は0。"
+      ],
+      "sources": [
+        {
+          "title": "John K. Hunter, Measure Theory（UC Davis, 2011）",
+          "url": "https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes.pdf"
+        }
+      ]
+    },
+    "reason": "『全確率の和』をP(Ω)=1へ明確化し、重なりのある事象の和と区別。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "本文p.5、Definition 1.9の後の probability measure と μ(X)=1。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000345",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "同じ可測空間上の確率測度 P,Q について、P が Q に関して絶対連続である（P≪Q）ことの定義はどれか。",
+      "choices": [
+        "すべての可測集合 A で、Q(A)=0 ならば P(A)=0",
+        "すべての可測集合 A で、P(A)=0 ならば Q(A)=0",
+        "すべての可測集合 A で、P(A)=Q(A)",
+        "ある可測集合 A で、P(A)=1 かつ Q(A)=0"
+      ],
+      "correctIndex": 0,
+      "explanation": "P≪Qは、Qにとって零集合である集合がPにとっても零集合になるという片方向の条件。互いに絶対連続という場合は、さらにQ≪Pも求める。",
+      "distractorRationales": [
+        "P≪Qの定義。",
+        "向きが逆で、Q≪Pの定義。",
+        "同じ測度なら絶対連続だが、同じ測度であることまでは要求しない。",
+        "このAはQの零集合なのにPが1を与えるため、P≪Qに反する。"
+      ],
+      "sources": [
+        {
+          "title": "John K. Hunter, Measure Theory（UC Davis, 2011）",
+          "url": "https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes.pdf"
+        }
+      ]
+    },
+    "reason": "『互いに』と片方向の記号の不一致を訂正。",
+    "parameters": {
+      "b": 1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "本文p.74、Definition 6.22とabsolute continuity is not symmetricの説明。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000132",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000313"
+    ],
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "content": {
+      "question": "角度を度数法で表すとき、sin 30° はいくつか。",
+      "choices": [
+        "√3/2",
+        "√2/2",
+        "1",
+        "1/2"
+      ],
+      "correctIndex": 3,
+      "explanation": "30°・60°・90°の直角三角形では、30°の対辺と斜辺の比が1:2なので、sin 30°=1/2。",
+      "distractorRationales": [
+        "sin 60°またはcos 30°の値。",
+        "sin 45°またはcos 45°の値。",
+        "sin 90°の値。",
+        "30°の対辺の長さを斜辺の長さで割った値。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Contemporary Mathematics §10.8",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-8-right-triangle-trigonometry"
+        }
+      ]
+    },
+    "reason": "角度の単位を明示し、同一問題を1つの問題族へ集約。",
+    "parameters": {
+      "b": -1.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Table 10.2の特殊角、30°・60°・90°の辺長比。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000123",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "ユークリッド平面の直角三角形で、斜辺の長さが5、ほかの一辺の長さが3である。残る一辺の長さはいくつか。",
+      "choices": [
+        "2",
+        "4",
+        "√34",
+        "8"
+      ],
+      "correctIndex": 1,
+      "explanation": "残る辺をxとすると、x²+3²=5²。よってx²=16であり、長さは正なのでx=4。",
+      "distractorRationales": [
+        "辺の長さを単に5−3としている。二乗の関係を使う。",
+        "5²−3²=16の正の平方根。",
+        "5²+3²の平方根であり、5を斜辺として扱っていない。",
+        "5+3を計算した値で、直角三角形の関係を満たさない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Contemporary Mathematics §10.8",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-8-right-triangle-trigonometry"
+        }
+      ]
+    },
+    "reason": "斜辺とそれ以外の辺を区別し、非ユークリッド幾何を含めない。",
+    "parameters": {
+      "b": -1.3,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Pythagorean Theoremのa²+b²=c²と斜辺cの定義。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000140",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000320"
+    ],
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "ユークリッド空間で、半径 r>0 の球の体積を表す式はどれか。",
+      "choices": [
+        "4πr²",
+        "πr²",
+        "2πr³",
+        "(4/3)πr³"
+      ],
+      "correctIndex": 3,
+      "explanation": "球の体積は(4/3)πr³。半径を2倍にすると体積は8倍になる。",
+      "distractorRationales": [
+        "球の表面積であり、体積ではない。",
+        "同じ半径の円の面積。",
+        "半径r、高さ2rの円柱の体積で、球の体積とは異なる。",
+        "球の体積の公式。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Calculus Volume 3 §5.5",
+          "url": "https://openstax.org/books/calculus-volume-3/pages/5-5-triple-integrals-in-cylindrical-and-spherical-coordinates"
+        }
+      ]
+    },
+    "reason": "半径の正値と空間を明示。表面積・断面積・外接円柱との違いを説明。",
+    "parameters": {
+      "b": -1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "球座標で球の体積を積分し、4πr³/3を得る説明。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000098",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "ユークリッド平面上の三角形で、3つの内角の和は何度か。",
+      "choices": [
+        "180°",
+        "90°",
+        "360°",
+        "270°"
+      ],
+      "correctIndex": 0,
+      "explanation": "平面上の三角形の内角の和は180°。球面上の測地線で囲んだ三角形などには、この結論をそのまま適用できない。",
+      "distractorRationales": [
+        "ユークリッド平面の三角形について成り立つ。",
+        "直角1つの大きさで、三角形全体の内角の和ではない。",
+        "平面上の四角形の内角の和。",
+        "ユークリッド平面の三角形の内角の和にはならない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Contemporary Mathematics §10.8",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/10-8-right-triangle-trigonometry"
+        }
+      ]
+    },
+    "reason": "『三角形』だけで曲面上の三角形まで含めないよう前提を補った。",
+    "parameters": {
+      "b": -1.9,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "三角形の角度計算の説明：interior angles of a triangle add up to180°。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000102",
+    "domain": "数学",
+    "subdomain": "関数・数学基礎",
+    "content": {
+      "question": "一次関数 y=ax+b（a≠0）で、x の増分に対する y の増分の比 Δy/Δx（Δx≠0）はどれか。",
+      "choices": [
+        "a",
+        "b",
+        "a+b",
+        "b/a"
+      ],
+      "correctIndex": 0,
+      "explanation": "2点の差を取るとΔy=aΔxとなり、Δy/Δx=a。この一定の比を直線の傾きという。",
+      "distractorRationales": [
+        "xの増分1あたりのyの増分で、直線の傾き。",
+        "y切片を表す定数で、差を取ると打ち消される。",
+        "x=1での関数値であり、一般の傾きではない。",
+        "この比は一般に傾きを表さない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax College Algebra 2e §4.1",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/4-1-linear-functions"
+        }
+      ]
+    },
+    "reason": "定数項と切片という重なる誤答肢を改め、傾きを増分比として問う。",
+    "parameters": {
+      "b": -1.6,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "直線の傾きをΔy/Δxとし、一次式の係数で表す定義。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000016",
+    "domain": "数学",
+    "subdomain": "離散数学・組合せ",
+    "content": {
+      "question": "互いに区別できる n 個（n≥3）のものをすべて使い、1列に並べる順列の総数を表す式はどれか。",
+      "choices": [
+        "n!",
+        "2^n",
+        "n²",
+        "n(n−1)/2"
+      ],
+      "correctIndex": 0,
+      "explanation": "先頭はn通り、その次はn−1通りと続き、積の法則からn(n−1)…1=n!通りとなる。",
+      "distractorRationales": [
+        "区別できる全n個を並べる総数。",
+        "n個それぞれを選ぶ・選ばないという部分集合の総数。",
+        "n通りから重複を許して2回選ぶときの総数。",
+        "n個から順序を区別せず2個を選ぶ組合せの総数。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax College Algebra 2e §9.5",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/9-5-counting-principles"
+        }
+      ]
+    },
+    "reason": "同じものを含む順列や円順列と混同しない条件を追加。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "積の法則と、異なるn個すべての順列n!。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000109",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "群 G の自己準同型（endomorphism）の定義はどれか。",
+      "choices": [
+        "G から G 自身への群準同型",
+        "G から G 自身への全単射な群準同型に限ったもの",
+        "G の任意の部分集合",
+        "G から任意の集合への写像で、演算を保たなくてよいもの"
+      ],
+      "correctIndex": 0,
+      "explanation": "自己準同型は、定義域と終域が同じ群Gである準同型。全単射である必要はなく、全単射なら自己同型と呼ぶ。",
+      "distractorRationales": [
+        "演算を保つ写像G→Gが自己準同型。",
+        "自己同型の定義であり、自己準同型全体より強い条件。",
+        "自己準同型は写像で、単なる部分集合ではない。",
+        "群準同型には群演算を保つ条件が必要。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Endomorphism",
+          "url": "https://mathworld.wolfram.com/Endomorphism.html"
+        }
+      ]
+    },
+    "reason": "自己同型との包含による曖昧さを避け、自己準同型の定義を問う形へ変更。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "代数学における冒頭の定義。自己への準同型で全射は要求しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000012",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "母数 θ の推定量 T が、モデルで許されるすべての θ について E_θ[T]=θ を満たす。この性質を何というか。",
+      "choices": [
+        "不偏性",
+        "一致性",
+        "最尤性",
+        "頑健性"
+      ],
+      "correctIndex": 0,
+      "explanation": "不偏性は、標本抽出を繰り返したときの推定量の期待値が母数と一致する性質。1回の推定値が必ず真の値になるという意味ではない。",
+      "distractorRationales": [
+        "期待値が母数に一致するという、この設問の条件。",
+        "標本数を増やしたとき、推定量が母数へ確率収束する性質。",
+        "観測データの尤度を最大化して推定値を求める考え方。",
+        "外れ値やモデルのずれなどに影響されにくい性質。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Unbiased Estimator",
+          "url": "https://mathworld.wolfram.com/UnbiasedEstimator.html"
+        }
+      ]
+    },
+    "reason": "推定方式と性質を混ぜた選択肢を整理し、不偏な最尤推定量等の重なりに配慮。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "推定量の期待値が対象の母数に等しい定義式。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000311",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "正の整数12と18の最大公約数はいくつか。",
+      "choices": [
+        "2",
+        "3",
+        "6",
+        "36"
+      ],
+      "correctIndex": 2,
+      "explanation": "12の正の約数は1,2,3,4,6,12、18では1,2,3,6,9,18。共通する約数の最大は6。",
+      "distractorRationales": [
+        "共通の約数だが最大ではない。",
+        "共通の約数だが、より大きい6も共通の約数。",
+        "両方を割り切る正の整数のうち最大。",
+        "両者の最小公倍数であり、約数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Greatest Common Divisor",
+          "url": "https://mathworld.wolfram.com/GreatestCommonDivisor.html"
+        }
+      ]
+    },
+    "reason": "最大公約数と最小公倍数を区別し、各数値の根拠を修正。",
+    "parameters": {
+      "b": -1.5,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭の正の整数に共通する最大の約数という定義。12と18の約数は独立計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000321",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "2つの正の整数 a,b が互いに素であることの定義はどれか。",
+      "choices": [
+        "gcd(a,b)=1",
+        "a,b がどちらも素数である",
+        "a が b で割り切れる",
+        "a+b が素数である"
+      ],
+      "correctIndex": 0,
+      "explanation": "互いに素とは、共通の正の約数が1だけということ。例えば8と15はどちらも合成数だが互いに素。",
+      "distractorRationales": [
+        "最大公約数が1という定義。",
+        "8と15のように、両方が合成数でも互いに素になれる。",
+        "例えばa=12,b=6では割り切れるが最大公約数は6。",
+        "1と3は互いに素でも和は4であり、和が素数である必要はない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Relatively Prime",
+          "url": "https://mathworld.wolfram.com/RelativelyPrime.html"
+        }
+      ]
+    },
+    "reason": "0の場合を避ける正の整数という前提と、必要十分でない条件の反例を補足。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭の共通の正の因子が1だけ、gcd=1という定義。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "既存設問の数学的事実と定義を確認し、条件・設問・解説・各肢の根拠を独自に記述。参考文献の演習問題・図表・固有の説明文は転載していない。"
+    }
+  }
+]
