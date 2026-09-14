@@ -1,0 +1,760 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000258",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "SQLの表で、行を識別する代表のキーとして指定し、その列または列の組に一意性と非NULLを要求するものはどれか。",
+      "choices": [
+        "外部キー",
+        "主キー",
+        "ビュー",
+        "トリガー"
+      ],
+      "correctIndex": 1,
+      "explanation": "主キーは一つの列でも、複数列の組でも指定できる。各行のキーは一意で、構成列にNULLは許されない。外部キーは参照先との対応を守る別の制約である。",
+      "distractorRationales": [
+        "参照先のキーとの対応を守る制約で、表の代表の識別子とは別。",
+        "一意性と非NULLを要求する指定のキー。",
+        "問い合わせを表のように扱う仕組み。",
+        "特定の操作などを契機に処理を実行する仕組み。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Constraints",
+          "url": "https://www.postgresql.org/docs/18/ddl-constraints.html"
+        }
+      ]
+    },
+    "reason": "主キーを必ず単一列とする旧説明を修正。AIへの誤分類を訂正し、旧同義問を統合。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 §5.5.4で列または列の組、一意性、非NULLを確認。§5.5.5の外部キーが同じ表や主キー以外の一意キーも参照できることと整合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000087"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000268",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "SELECTなどを用いて、リレーショナルデータベースに問い合わせる代表的な言語はどれか。",
+      "choices": [
+        "HTML",
+        "CSS",
+        "SQL",
+        "HTTP"
+      ],
+      "correctIndex": 2,
+      "explanation": "SQLは表への問い合わせやデータ操作などを記述する言語。SELECTでは返す列、対象の表、絞り込み条件などを指定できる。",
+      "distractorRationales": [
+        "Web文書の構造を表す言語。",
+        "表示のスタイルを指定する言語。",
+        "リレーショナルデータベースへの問い合わせに使う言語。",
+        "通信の意味や形式を定めるプロトコル。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Querying a Table",
+          "url": "https://www.postgresql.org/docs/18/tutorial-select.html"
+        }
+      ]
+    },
+    "reason": "AIへの誤分類を訂正し、旧同義問を一つの問題族にまとめる。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 Querying a TableでSQL SELECTによる検索と列・表・条件の構成を確認。教材の表や演習は流用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000072"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000119",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "リレーショナルデータベースの設計で、正規化の主な目的として適切なのはどれか。",
+      "choices": [
+        "同じ事実の重複保持や不適切な依存関係を減らし、更新時の不整合を抑える",
+        "表を必ず一つにまとめ、結合を使わなくする",
+        "問い合わせをすべて暗号化し、権限の設定を不要にする",
+        "どの問い合わせでも実行時間が最短になるよう保証する"
+      ],
+      "correctIndex": 0,
+      "explanation": "正規化は属性間の依存関係に基づき、冗長性や更新・挿入・削除時の異常を減らす設計。検索性能とは別に考える必要があり、正規化すれば常に速くなるという保証はない。",
+      "distractorRationales": [
+        "正規化の整合性に関する狙いに合う。",
+        "単一の表へまとめることが目的ではない。",
+        "暗号化やアクセス制御を置き換える仕組みではない。",
+        "検索の最速性を保証する設計原理ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Microsoft Learn — Description of the database normalization basics",
+          "url": "https://learn.microsoft.com/en-us/office/troubleshoot/access/database-normalization-description"
+        }
+      ]
+    },
+    "reason": "OS・計算理論への誤分類を訂正し、旧2件の同義問を統合。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Microsoft Learnの正規化の定義で冗長性・依存関係・同じ情報の更新不整合を確認。正規化が性能低下を必ず起こすとも断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000276",
+      "10000000-0000-4000-8007-000000000279"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000112",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "SQLで A INNER JOIN B ON 条件 を実行する。結果に含まれる行の説明として適切なのはどれか。",
+      "choices": [
+        "Aの各行を必ず一行だけ返し、Bの重複は自動的に除く",
+        "AとBの全行を別々に縦へ並べる",
+        "Aの全行を返し、対応するBがなければB側をNULLで埋める",
+        "AとBから選んだ行の組のうち、ON条件がTRUEになる組を返す"
+      ],
+      "correctIndex": 3,
+      "explanation": "INNER JOINは条件を満たす行の組を結合する。Aの一行にBの複数行が対応すれば複数の結果行になる。条件がFALSEまたはUNKNOWNの組は含めない。",
+      "distractorRationales": [
+        "結合は重複を自動で除去する処理ではない。",
+        "縦へ連結する集合演算などと、横へ組み合わせる結合を混同している。",
+        "不一致のAの行をNULLで補うのはLEFT OUTER JOIN。",
+        "ON条件がTRUEになる組という定義に合う。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Table Expressions: Joined Tables",
+          "url": "https://www.postgresql.org/docs/18/queries-table-expressions.html"
+        }
+      ]
+    },
+    "reason": "一致する行という曖昧な説明を行の組へ改訂。重複が消えるとはしない。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 §7.2.1.1で条件がTRUEとなる各組と、外部結合のNULL補完を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000106",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "トランザクション内の複数のデータ更新を、一部だけ確定させず「すべて確定するか、どれも確定しないか」として扱うACIDの性質はどれか。",
+      "choices": [
+        "可用性",
+        "認証",
+        "耐久性",
+        "原子性"
+      ],
+      "correctIndex": 3,
+      "explanation": "原子性は操作群の全部かゼロかという性質。耐久性は確定した更新を障害後も保持する性質である。原子性だけで外部へのメール送信などが自動的に取り消されるわけではない。",
+      "distractorRationales": [
+        "要求に応答できることに関する性質。",
+        "相手が誰であるかの確認。",
+        "確定した更新を保持する性質で、全か無かとは区別する。",
+        "指定した全部かゼロかの性質。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Transactions",
+          "url": "https://www.postgresql.org/docs/18/tutorial-transactions.html"
+        }
+      ]
+    },
+    "reason": "頭文字だけでなく意味を問う形へ改訂し、旧2件を同一問題族へ統合。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 Transactionsのall-or-nothingと確定後の永続性を照合。DB外の副作用までロールバックすると拡張しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000182",
+      "10000000-0000-4000-8007-000000000291"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000198",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "文書の全文検索で使う転置インデックスは、基本的に何から何への対応を保持するか。",
+      "choices": [
+        "文書から、その文書に現れる語の集合への対応",
+        "語から、その語が現れる文書などの識別子の集合への対応",
+        "文書から、その文書がリンクする別の文書の集合への対応",
+        "語から、その語の類義語の集合への対応"
+      ],
+      "correctIndex": 1,
+      "explanation": "語を手掛かりに、その語を含む文書などの候補へ進めるようにする。複数語の検索では識別子集合を組み合わせることもでき、毎回すべての文書を全文走査する負担を減らせる。",
+      "distractorRationales": [
+        "文書から語をたどる向きであり、問うている転置索引と逆。",
+        "語と出現先の対応という転置インデックスの構成。",
+        "文書間のリンクの対応で、語の出現先の索引ではない。",
+        "類義語辞書の対応で、文書中の出現先ではない。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 17 — GIN Indexes: Introduction",
+          "url": "https://www.postgresql.org/docs/17/gin.html"
+        }
+      ]
+    },
+    "reason": "画像圧縮や電力変換など無関係な旧選択肢を、対応関係の比較へ改訂。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 17 GIN Introductionのkeyとposting list、行IDの集合を確認。索引の一般構成として独自に説明。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000093",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "教科書的なB+木で、内部ノードと葉ノードの役割の説明として適切なのはどれか。",
+      "choices": [
+        "内部ノードは探索を振り分けるキーと子への参照を持ち、葉はレコードまたはその参照を持つ",
+        "内部ノードだけがすべてのレコードを持ち、葉は空である",
+        "内部ノードには子への参照がなく、毎回すべての葉を線形に探す",
+        "葉の深さは挿入順に任意に変わり、平衡を保たない"
+      ],
+      "correctIndex": 0,
+      "explanation": "B+木は平衡多分木で、内部ノードが探索を案内し、葉にレコード本体またはその所在を集める。葉を順にたどるリンクなどは範囲検索にも役立つ。内部ノードもキーや管理情報は持つため「何のデータもない」という意味ではない。",
+      "distractorRationales": [
+        "内部の案内と葉のレコード格納という役割分担。",
+        "葉にレコードを置く基本構成と逆。",
+        "木の枝をたどって絞り込む構成を否定している。",
+        "葉の深さをそろえる平衡性と異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Andy Pavlo, Carnegie Mellon University — 15-445/645, Fall 2022, Lecture 08: Tree Indexes",
+          "url": "https://15445.courses.cs.cmu.edu/fall2022/notes/08-trees.pdf"
+        }
+      ]
+    },
+    "reason": "旧問は「平衡二分木でない」も正しかったため複数正解を修復。データという語がキーまで否定する曖昧さも除く。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CMU Lecture 08 §2、PDF本文の内部ノードの子参照、葉のrecord IDsまたはtuple data、全葉が同じ深さを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000288",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "PostgreSQLで使うMVCCの基本的な考え方として適切なのはどれか。",
+      "choices": [
+        "読み取りは他の取引の未コミット更新を常にそのまま参照する",
+        "複数の版を扱い、隔離レベルに応じたスナップショットでデータを読む",
+        "複数の取引が存在しても、SQLを必ず一つのスレッドで順に実行する",
+        "更新時に旧版を直ちに消し、すべての読み取りを最新版へ強制する"
+      ],
+      "correctIndex": 1,
+      "explanation": "MVCCはデータの複数の版を利用し、可視性の規則に従って読む方式。通常の読み取りと書き込みの競合を減らせる。スナップショットの時点は隔離レベルに依存し、ロックや更新間の待ちが一切なくなるわけではない。",
+      "distractorRationales": [
+        "未コミットの他取引の更新を常に読む仕組みではない。",
+        "複数版と可視性の規則を表している。",
+        "直列実行を必須とする方式ではない。",
+        "古いスナップショットに必要な版の扱いと矛盾する。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Concurrency Control: Introduction",
+          "url": "https://www.postgresql.org/docs/18/mvcc-intro.html"
+        },
+        {
+          "title": "PostgreSQL 18 — Transaction Isolation",
+          "url": "https://www.postgresql.org/docs/18/transaction-iso.html"
+        }
+      ]
+    },
+    "reason": "MVCCと特定の隔離レベルを同一視する旧解説を訂正。AIへの誤分類を修正。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 §13.1と§13.2でMVCCとRead Committedの文単位、Repeatable Readの取引内スナップショットを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000298",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "PostgreSQL 18で、コミットに成功したトランザクション群の結果が、どの順序の直列実行とも同じにならない「直列化異常」について、適切なのはどれか。",
+      "choices": [
+        "Repeatable ReadでもSerializableでも起こりうる",
+        "Repeatable Readでは防がれるが、Serializableでは起こりうる",
+        "Repeatable Readでは起こりうるが、Serializableでは防がれる",
+        "Repeatable ReadでもSerializableでも防がれる"
+      ],
+      "correctIndex": 2,
+      "explanation": "PostgreSQLのRepeatable Readはスナップショットに基づくが、直列化異常までは防がない。Serializableは直列実行と整合しない関係を検出し、一部を失敗させて防ぐことがある。アプリ側は取引全体の再試行を扱う。",
+      "distractorRationales": [
+        "Serializableが持つ直列化異常を防ぐ保証を否定している。",
+        "二つの隔離レベルの保証の関係が逆。",
+        "Repeatable ReadとSerializableの保証の差に合う。",
+        "Repeatable ReadにもSerializableと同じ保証があるとしている。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Transaction Isolation",
+          "url": "https://www.postgresql.org/docs/18/transaction-iso.html"
+        }
+      ]
+    },
+    "reason": "すべてのDB製品で同名の隔離が同じとせず、製品・版を明示。性能が常に上か下かという旧断定を除去。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 §13.2の隔離表、Repeatable Readでのserialization anomaliesとSerializableの失敗・再試行の説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000283",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "B木やB+木を外部記憶の索引として使う際、一ノードに多くのキーと子への参照を持たせる主な利点はどれか。",
+      "choices": [
+        "索引があれば、どの検索も記憶容量によらず一回の比較で終わる",
+        "キーを保存しなくても探索できるようになる",
+        "表の全行を常に一つのディスクブロックに収められる",
+        "木の高さを小さくし、探索で読むページ数を減らしやすい"
+      ],
+      "correctIndex": 3,
+      "explanation": "一ノードで多数の候補へ分岐できると、同じ件数でも木を低く保ちやすい。ページ単位の読み書きに合う索引となる。範囲検索で返す件数やキャッシュの状態などもI/Oに影響する。",
+      "distractorRationales": [
+        "探索の比較回数が常に一回になるという保証はない。",
+        "探索を案内するキーは必要。",
+        "表全体が一ページに収まるという意味ではない。",
+        "多分岐によって高さとページ参照を抑える利点。"
+      ],
+      "sources": [
+        {
+          "title": "Andy Pavlo, Carnegie Mellon University — 15-445/645, Fall 2022, Lecture 08: Tree Indexes",
+          "url": "https://15445.courses.cs.cmu.edu/fall2022/notes/08-trees.pdf"
+        }
+      ]
+    },
+    "reason": "プログラミング言語への誤分類を訂正し、O(1)保証などの混同を除く。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CMU Lecture 08 §2のM-way探索木と大きなブロックを読むDB向けの説明を確認。返却件数を無視したI/Oの固定値を置かない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-sql-null-predicate",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "SQLの整数列xについて、値がNULLの行を取り出す標準的なWHERE条件はどれか。",
+      "choices": [
+        "x = NULL",
+        "x IS NULL",
+        "x = 0",
+        "x <> NULL"
+      ],
+      "correctIndex": 1,
+      "explanation": "NULLの判定にはIS NULLを使う。通常の比較でNULLを含む場合、結果はUNKNOWNとなり、WHEREはTRUEの行だけを残す。0とNULLは異なる。",
+      "distractorRationales": [
+        "NULLとの通常の等号比較はTRUEにならない。",
+        "NULLかどうかを判定する述語。",
+        "欠けた値と数値0を混同している。",
+        "NULLとの通常の不等号比較もTRUEにならない。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Comparison Functions and Operators",
+          "url": "https://www.postgresql.org/docs/18/functions-comparison.html"
+        },
+        {
+          "title": "PostgreSQL 18 — Querying a Table",
+          "url": "https://www.postgresql.org/docs/18/tutorial-select.html"
+        }
+      ]
+    },
+    "reason": "新規。未取得・NULLを0と同一視せず、三値論理を明確に問う。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18のComparison Functionsで普通の比較のUNKNOWNとIS NULL、Querying a TableのWHEREのTRUEを確認。ローカルPGliteでNULL比較とIS NULLの結果を独立確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-sql-left-join-multiplicity",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "表Aの列kには1と2の計2行、表Bの列kには1と1の計2行だけがある。SELECT * FROM A LEFT JOIN B ON A.k = B.k; の結果は何行か。",
+      "choices": [
+        "2行",
+        "4行",
+        "3行",
+        "1行"
+      ],
+      "correctIndex": 2,
+      "explanation": "Aのk=1はBの二行に対応するので二行になる。Aのk=2は一致するBがなくても、B側がNULLの一行として残る。合計三行。LEFT JOINは左の各行を一行に固定する操作ではない。",
+      "distractorRationales": [
+        "Bの二行との対応を一行にまとめてしまっている。",
+        "条件を満たさない組まで直積として数えている。",
+        "一致する二行とNULL補完の一行の合計。",
+        "不一致のAの行とBの重複を両方落としている。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Table Expressions: Joined Tables",
+          "url": "https://www.postgresql.org/docs/18/queries-table-expressions.html"
+        }
+      ]
+    },
+    "reason": "新規。左の各行は残ることと、結果の行数が増えることを区別。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18のLEFT OUTER JOINの定義を確認。教材とは別の自作データをローカルPGliteで実行し、結果3行を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-sql-count-nulls",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "表Tの整数列xに4、NULL、9の計3行がある。SELECT COUNT(*), COUNT(x) FROM T; が返す二つの値は順にどれか。",
+      "choices": [
+        "3と2",
+        "2と3",
+        "3と3",
+        "2と2"
+      ],
+      "correctIndex": 0,
+      "explanation": "COUNT(*)は入力行を数えるので3。COUNT(x)はxがNULLでない行を数えるので2。NULLを値0として足す操作ではない。",
+      "distractorRationales": [
+        "全行数と非NULLの行数を区別した結果。",
+        "二種類のCOUNTの役割が逆。",
+        "COUNT(x)にもNULLの行を含めている。",
+        "COUNT(*)からもNULLを含む行を除いている。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Aggregate Functions",
+          "url": "https://www.postgresql.org/docs/18/functions-aggregate.html"
+        }
+      ]
+    },
+    "reason": "新規。行数と値がある行数を区別する。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 Aggregate FunctionsのCOUNT二形式を確認。自作の3行をローカルPGliteで実行し、3と2を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-sql-order-guarantee",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "PostgreSQLで表に主キーと索引がある。ORDER BYを指定しないSELECTの結果の行順は、どう考えるべきか。",
+      "choices": [
+        "必ず主キーの昇順になる",
+        "必ずINSERTした順になる",
+        "索引がある場合だけ主キーの昇順が保証される",
+        "順序は保証されず、必要な並び順はORDER BYで指定する"
+      ],
+      "correctIndex": 3,
+      "explanation": "ORDER BYがなければ、実行計画などによって返る順序は変わりうる。望む順序は明示する。同じ値が並ぶ場合に順序を完全に決めたいなら、一意な列などを追加の並び順に使う。",
+      "distractorRationales": [
+        "主キーがあるだけでは出力順の保証にならない。",
+        "保存・挿入順を問い合わせ結果の契約にしている。",
+        "索引の存在だけで並び順を保証できるわけではない。",
+        "SQLの結果順を明示する考え方。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Sorting Rows (ORDER BY)",
+          "url": "https://www.postgresql.org/docs/18/queries-order.html"
+        }
+      ]
+    },
+    "reason": "新規。たまたま観測された順序を仕様の保証と混同しない。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 Sorting RowsでORDER BYなしの順序がunspecifiedであることと、複数キーの並び順を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-sql-foreign-key-reference",
+    "domain": "情報・計算機科学",
+    "subdomain": "データベース",
+    "content": {
+      "question": "SQLの外部キー制約が直接守るものはどれか。NULLを許さない一列の外部キーを考える。",
+      "choices": [
+        "参照する側の値が表の中で必ず一意になること",
+        "参照する値に対応する参照先のキーが存在すること",
+        "参照する列が自動的に暗号化されること",
+        "参照される表へのすべての変更が禁止されること"
+      ],
+      "correctIndex": 1,
+      "explanation": "外部キーは参照整合性を守る。参照する側に同じ値が複数あってもよく、一意性が必要なら別に制約を置く。参照先は別の表とは限らず、同じ表の場合もある。削除などへの動作も定義に依存する。",
+      "distractorRationales": [
+        "参照する側の一意性は外部キーだけでは保証しない。",
+        "参照先のキーとの対応を守るという定義。",
+        "暗号化の機能ではない。",
+        "参照先のすべての変更を一律に禁じるものではない。"
+      ],
+      "sources": [
+        {
+          "title": "PostgreSQL 18 — Constraints",
+          "url": "https://www.postgresql.org/docs/18/ddl-constraints.html"
+        }
+      ]
+    },
+    "reason": "新規。主キーとの役割の違いと、参照する側の重複を区別。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PostgreSQL 18 §5.5.5の参照整合性、一意キー・自己参照と削除動作を確認。NULLや複合キーの別規則が干渉しない条件を指定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000097",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "古典的な2相コミットで、参加者が準備完了を記録した後、コーディネータが停止し、最終決定を他からも確認できない。起こりうることはどれか。",
+      "choices": [
+        "参加者は待たずに自由にコミットか中止を選べる",
+        "全参加者の変更が自動的にただちに中止される",
+        "決定を確認できるまで、参加者が処理を完了できず待つ",
+        "すべての参加者が必ず同時に再起動する"
+      ],
+      "correctIndex": 2,
+      "explanation": "古典的な2相コミットには、決定が分からない参加者が待たされる状況がある。各参加者が独立に決定すると、全体でコミットと中止が食い違うおそれがある。これは原子性と進行可能性を区別する例である。",
+      "distractorRationales": [
+        "各参加者の自由な決定では全体の原子性を守れない。",
+        "準備完了後は、すでに決定されたかもしれない結果を勝手に中止とできない。",
+        "決定を確認できない場合のブロッキング。",
+        "2相コミットから一斉再起動が導かれるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "Gray & Lamport (2004/2006) — Consensus on Transaction Commit",
+          "url": "https://arxiv.org/abs/cs/0408036"
+        }
+      ]
+    },
+    "reason": "準備完了・最終決定不明・他からも得られない条件を追加し、コーディネータ障害なら常に止まるとの過度な一般化を除く。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gray & Lamportの原研究の公開抄録でclassic Two-Phase Commitがcoordinator failureでblockすることを確認。すべての故障時点・拡張方式に一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "DB製品の公式仕様・実装者の大学教材・原研究の取得できた本文と索引を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・データを転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
