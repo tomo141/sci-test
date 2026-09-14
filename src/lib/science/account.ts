@@ -10,7 +10,7 @@ export type ScienceProfile = { public_id: string; nickname: string; bio: string;
 export type Preferences = { science: boolean; weekly: boolean; domain_opening: boolean };
 export type AccountData = {
   signedIn: boolean; profile: ScienceProfile | null; preferences: Preferences;
-  current: ReturnType<typeof scoreResponses>; history: ReturnType<typeof publicAttempt>[]; historyTotal: number; page: number;
+  current: ReturnType<typeof scoreResponses>; history: ReturnType<typeof publicAttempt>[]; historyTotal: number; page: number; recalculationPending: number;
   bests: { id: string; kind: string; domain: string | null; total: number; result: AttemptResult }[];
   badges: { code: string; awarded_at: string }[];
   legacy: { id: string; score: number; answer_count: number; created_at: string }[]; legacyTotal: number;
@@ -24,7 +24,11 @@ export async function accountData(ctx: Context, page: number): Promise<AccountDa
   const historyResponse=await historyPromise;
   const history:Attempt[]=[];
   for(const attempt of checked(historyResponse) as Attempt[])history.push(await refreshCorrectedAttempt(ctx.db,attempt));
-  const [bestResponse,current]=await Promise.all([bestQuery,currentEstimate(ctx.db,ctx.userId?{userId:ctx.userId}:{visitorId:ctx.visitor.id})]);
+  const pendingQuery=ctx.db.from("science_attempts").select("id",{count:"exact",head:true}).eq("state","completed").eq("needs_recalculation",true);
+  const pendingPromise=ctx.userId?pendingQuery.eq("user_id",ctx.userId):pendingQuery.eq("visitor_id",ctx.visitor.id);
+  const [bestResponse,current,pending]=await Promise.all([bestQuery,currentEstimate(ctx.db,ctx.userId?{userId:ctx.userId}:{visitorId:ctx.visitor.id}),pendingPromise]);
+  if(pending.error)checked(pending);
+  if(pending.count===null)throw new ScienceError("再計算中の履歴件数を取得できませんでした。",503);
   if(historyResponse.count===null)throw new ScienceError("履歴件数を取得できませんでした。",503);
   let profile:ScienceProfile|null=null,preferences:Preferences={science:false,weekly:false,domain_opening:false};
   let badges:AccountData["badges"]=[],legacy:AccountData["legacy"]=[],legacyTotal=0;
@@ -44,5 +48,5 @@ export async function accountData(ctx: Context, page: number): Promise<AccountDa
     if(l.count===null)throw new ScienceError("旧版の履歴件数を取得できませんでした。",503);
     legacyTotal=l.count;
   }
-  return {signedIn:!!ctx.userId,profile,preferences,current,history:history.map(publicAttempt),historyTotal:historyResponse.count,page,bests:checked(bestResponse) as AccountData["bests"],badges,legacy,legacyTotal};
+  return {signedIn:!!ctx.userId,profile,preferences,current,history:history.map(publicAttempt),historyTotal:historyResponse.count,page,recalculationPending:pending.count,bests:checked(bestResponse) as AccountData["bests"],badges,legacy,legacyTotal};
 }

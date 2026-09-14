@@ -1,0 +1,793 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000107",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "aを含む開区間で、a以外では定義された実数値関数fを考える。limₓ→ₐ f(x)=Lのε–δによる定義では、区間内のすべてのxについて『0<|x−a|<δならば|f(x)−L|<ε』を要求する。正のεとδを選ぶ順序はどれか。",
+      "choices": [
+        "あるε>0を1つ選び、すべてのδ>0について条件を満たす",
+        "すべてのε>0に対し、条件を満たすδ>0が存在する",
+        "すべてのδ>0に対し、条件を満たすε>0が存在する",
+        "εとδの大小が逆になることだけを要求する"
+      ],
+      "correctIndex": 1,
+      "explanation": "条件は、0<|x−a|<δならば|f(x)−L|<εとなること。どれほど小さなε>0が指定されても、それに応じたδ>0を選べなければならない。δはεに依存してよい。",
+      "distractorRationales": [
+        "1つの誤差幅だけを満たしても、任意の小さな誤差幅での近さは保証しない。",
+        "任意のεに対してδを選ぶという定義の順序。",
+        "量化の順序と役割が逆で、Lへの収束の定義ではない。",
+        "δとεの単なる大小関係では、f(x)がLに近づくことを表せない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 1 §2.5 The Precise Definition of a Limit",
+          "url": "https://openstax.org/books/calculus-volume-1/pages/2-5-the-precise-definition-of-a-limit"
+        }
+      ]
+    },
+    "reason": "『limで表す概念』という用語の復唱から、極限の定義を問う形に改訂。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Definitionの∀ε>0 ∃δ>0と0<|x−a|<δという条件を照合。量化順序を入れ替えた条件を定義と混同しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000007",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "2π周期の連続関数fのフーリエ級数をa₀/2+Σₙ₌₁∞[aₙcos(nx)+bₙsin(nx)]と書く。この表記でn≥1のaₙを定める式はどれか。",
+      "choices": [
+        "(1/π)∫₋π^π f(x)cos(nx) dx",
+        "(1/π)∫₋π^π f(x)sin(nx) dx",
+        "f⁽ⁿ⁾(0)/n!",
+        "(1/2π)∫₋π^π f(x) dx"
+      ],
+      "correctIndex": 0,
+      "explanation": "cos(nx)どうしの直交性と、∫₋π^π cos²(nx) dx=πから、余弦係数は(1/π)∫₋π^π f(x)cos(nx) dxと定まる。ここでは級数の各点収束を追加で主張していない。",
+      "distractorRationales": [
+        "この表記での余弦係数の定義。",
+        "正弦係数bₙを表す式。",
+        "0を中心とするテイラー係数であり、fの高階微分が存在するとも限らない。",
+        "定数項a₀/2を表す式。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Fourier Series",
+          "url": "https://mathworld.wolfram.com/FourierSeries.html"
+        }
+      ]
+    },
+    "reason": "任意の周期関数が無条件で各点収束するような説明を避け、係数の規約を明記。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "式(6)〜(9)の級数表記と余弦係数を照合。収束に別の条件が必要な説明も確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000110",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "測度空間(X,𝒜,μ)の可測集合Eでμ(E)<∞とする。E上で1、それ以外で0となる指示関数1_Eのルベーグ積分はどれか。",
+      "choices": [
+        "1（Eの大きさによらない）",
+        "0（Eの大きさによらない）",
+        "μ(E)",
+        "μ(X)（Eの大きさによらない）"
+      ],
+      "correctIndex": 2,
+      "explanation": "単関数の積分は、関数値とその値を取る集合の測度の積を足し合わせて定める。したがって∫1_E dμ=1·μ(E)=μ(E)。",
+      "distractorRationales": [
+        "関数値が1でも積分は集合の測度に依存する。",
+        "測度が正の集合なら積分も正になる。",
+        "指示関数の積分の定義。",
+        "Eの外では0なので、X全体の測度がそのまま入るわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "John K. Hunter — Measure Theory, Chapter 4 Integration",
+          "url": "https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes.pdf"
+        }
+      ]
+    },
+    "reason": "人物名の復唱と文字化けした誤答肢を除き、積分の基本定義を問う。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Chapter 4 §4.1 Definition 4.1の単関数の積分Σcᵢμ(Eᵢ)を照合。Eの測度を有限とした。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000333",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "半径Rの球面上で、3本の短い大円弧に囲まれた非退化な凸球面三角形を考える。その面積をA、内角をα、β、γ（ラジアン）とすると、正しい関係式はどれか。",
+      "choices": [
+        "α+β+γ=π",
+        "α+β+γ=π+A/R²",
+        "α+β+γ=π−A/R²",
+        "α+β+γ=A/R²"
+      ],
+      "correctIndex": 1,
+      "explanation": "球面過剰の公式よりA=R²(α+β+γ−π)。面積Aは正なので、内角和はπより大きい。平面の三角形の内角和と区別する。",
+      "distractorRationales": [
+        "平面の三角形の関係。正の面積をもつ球面三角形では超過分がある。",
+        "球面過剰の公式を内角和について解いた形。",
+        "正の曲率をもつ球面では超過分を足す。",
+        "平面の基準となるπが抜けている。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Spherical Triangle",
+          "url": "https://mathworld.wolfram.com/SphericalTriangle.html"
+        }
+      ]
+    },
+    "reason": "『正曲率の曲面』だけの旧条件を、辺と領域が明確な球面三角形へ限定。小分野も幾何へ修正。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Spherical Triangleの面積R²[(α+β+γ)−π]を照合。大円弧・凸・非退化という範囲を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000100",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "平面上の凸四角形で4辺の長さがすべて等しい。この条件を満たす四角形全体の名称はどれか。正方形もその特別な場合として含める。",
+      "choices": [
+        "ひし形",
+        "正方形",
+        "長方形",
+        "正五角形"
+      ],
+      "correctIndex": 0,
+      "explanation": "4辺が等しい凸四角形はひし形。角が直角とは限らない。ひし形のうち4つの角が直角であるものが正方形である。",
+      "distractorRationales": [
+        "4辺が等しい凸四角形全体に対応する。",
+        "直角という追加条件が必要で、条件を満たす四角形全体ではない。",
+        "4つの角が直角である四角形で、4辺が等しいとは限らない。",
+        "辺が5本の図形であり、四角形ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Rhombus",
+          "url": "https://mathworld.wolfram.com/Rhombus.html"
+        }
+      ]
+    },
+    "reason": "4辺が等しいだけで正方形とした旧正解を訂正。包含関係による曖昧さを避ける。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭の等辺平行四辺形としての定義を照合し、直角でないひし形が条件を満たすことを検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000340",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "pとqを相異なる奇素数とし、(p/q)をルジャンドル記号とする。二次剰余の相互法則が与える(p/q)(q/p)の値はどれか。",
+      "choices": [
+        "常に1",
+        "常に−1",
+        "0",
+        "(−1)^((p−1)(q−1)/4)"
+      ],
+      "correctIndex": 3,
+      "explanation": "相異なる奇素数では両方のルジャンドル記号が±1。両素数がともに4で割って3余るときだけ積が−1となり、それ以外では1となる。指数の式はこの場合分けを表す。",
+      "distractorRationales": [
+        "p=3、q=7では積は−1。",
+        "p=3、q=5では積は1。",
+        "相異なる素数なので、分子は分母で割り切れず0にはならない。",
+        "二次剰余の相互法則の式。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Quadratic Reciprocity Theorem",
+          "url": "https://mathworld.wolfram.com/QuadraticReciprocityTheorem.html"
+        }
+      ]
+    },
+    "reason": "相異なるという必要条件を追加し、幾何という旧分類と曖昧な誤答肢を修正。",
+    "parameters": {
+      "b": 1.8,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭のdistinct odd primesと式(2)を照合。p=3,q=7およびp=3,q=5を直接の平方剰余で検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000350",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "次の整域のうち、一意因子分解整域ではないものはどれか。ℤは整数、ℚは有理数、i²=−1とする。",
+      "choices": [
+        "ℤ",
+        "ℚ[x]",
+        "ℤ[√−5]",
+        "ℤ[i]"
+      ],
+      "correctIndex": 2,
+      "explanation": "ℤ[√−5]では6=2·3=(1+√−5)(1−√−5)と分解できる。ノルムN(a+b√−5)=a²+5b²には2や3という値がないため、ここに現れる4つの因子はすべて既約で、2つの分解は単元と順序の違いでは一致しない。",
+      "distractorRationales": [
+        "整数には素因数分解の一意性がある。",
+        "体上の1変数多項式環はユークリッド整域であり、一意因子分解整域。",
+        "6の本質的に異なる既約分解が存在する。",
+        "ガウス整数環はユークリッド整域であり、一意因子分解整域。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Unique Factorization Domain",
+          "url": "https://mathworld.wolfram.com/UniqueFactorizationDomain.html"
+        },
+        {
+          "title": "Keith Conrad — Factoring in Quadratic Fields",
+          "url": "https://kconrad.math.uconn.edu/blurbs/ugradnumthy/quadraticundergrad.pdf"
+        }
+      ]
+    },
+    "reason": "分解の反例と環を明示し、幾何という旧分類を訂正。",
+    "parameters": {
+      "b": 2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Unique Factorization Domainの定義・ℤ、体上の多項式環、ℤ[i]の例、Conrad §3のノルム・単元判定を照合。√−5の場合のノルムと2種類の既約分解は独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000022",
+    "domain": "数学",
+    "subdomain": "情報数理",
+    "content": {
+      "question": "有限の入出力アルファベットをもつ定常な離散無記憶通信路の容量をC>0とする。シャノンの通信路符号化定理が保証する内容はどれか。",
+      "choices": [
+        "R>Cでも、十分長い符号なら必ず誤り確率を0へ近づけられる",
+        "Cはどの入力分布でも同じ相互情報量を取るという意味である",
+        "0<R<Cなら、符号長を増やすことで復号誤り確率を0へ近づける符号列が存在する",
+        "R<Cなら、どんな符号を選んでも有限の符号長で誤りが完全に0になる"
+      ],
+      "correctIndex": 2,
+      "explanation": "容量より小さな通信速度では、適切な符号を選び符号長を増やすことで誤り確率を任意に小さくできる。定理は符号の存在と漸近的な信頼性を述べ、任意の符号や有限長での完全無誤りを保証しない。",
+      "distractorRationales": [
+        "容量を超える固定レートでは、誤り確率を0に近づけることはできない。",
+        "容量は入力分布について相互情報量を最大化した値であり、すべての分布で一定とは限らない。",
+        "容量未満での達成可能性を述べる内容。",
+        "符号の選択が必要で、誤り確率の漸近的な低下と有限長の完全無誤りは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "MIT OpenCourseWare — 6.441 Information Theory, Theorem 16.6",
+          "url": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/5d8f16adc3385c9ff2975b121bd620e4_MIT6_441S16_course_notes.pdf"
+        }
+      ]
+    },
+    "reason": "通信速度・誤り確率・符号長の関係を明記し、有限長で無条件に誤りゼロになる説明を避ける。",
+    "parameters": {
+      "b": 1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "MIT 6.441のTheorems 16.4〜16.6と16.5の証明にある符号列・誤り確率→0を照合。有限アルファベットの定常無記憶通信路へ限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000023",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "0<q<1とする。ヤコビのテータ関数θ₃(0,q)を表す級数はどれか。",
+      "choices": [
+        "1+2Σₙ₌₁∞ qⁿ",
+        "1+2Σₙ₌₁∞ q^(n²)",
+        "Σₙ₌₀∞ qⁿ/n!",
+        "Σₙ₌₁∞ qⁿ/n"
+      ],
+      "correctIndex": 1,
+      "explanation": "θ₃(z,q)=1+2Σₙ₌₁∞q^(n²)cos(2nz)にz=0を入れると、余弦はすべて1になる。したがってθ₃(0,q)=1+2q+2q⁴+2q⁹+…となる。",
+      "distractorRationales": [
+        "指数がnであり、二乗n²ではない。q²の項も現れてしまう。",
+        "テータ関数θ₃の級数定義に一致する。",
+        "指数関数exp(q)の級数。",
+        "−ln(1−q)の級数で、定数項も異なる。"
+      ],
+      "sources": [
+        {
+          "title": "NIST DLMF — §20.2, equation 20.2.3",
+          "url": "https://dlmf.nist.gov/20.2#E3"
+        }
+      ]
+    },
+    "reason": "複数の特殊関数が『関連する』と言えてしまう旧設問を、関数と級数規約を明示した定義問題へ改訂。",
+    "parameters": {
+      "b": 1.9,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "NIST DLMF 20.2.3を照合し、z=0でcos(2nz)=1となることと最初の項を独立に確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000025",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "実リー群Gの単位元eにおける接空間TₑGに、群から自然に定まるリー括弧を入れたものを何というか。",
+      "choices": [
+        "Gの基本群",
+        "Gの整数環",
+        "Gのリー代数",
+        "Gの商体"
+      ],
+      "correctIndex": 2,
+      "explanation": "Gのリー代数は単位元での接空間を台とする実ベクトル空間で、双線形なリー括弧を備える。括弧は[x,x]=0とヤコビ恒等式を満たす。単なる近傍の座標表示を指す名称ではない。",
+      "distractorRationales": [
+        "基本群は基点付きループのホモトピー類から作られる。",
+        "整数環は代数的整数などの文脈で用いられる環で、この接空間の構造ではない。",
+        "単位元での接空間と括弧から定まる構造。",
+        "商体は整域から分数を作って得る体であり、リー群の接空間からの構成ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Pavel Etingof / MIT OpenCourseWare — Lie Groups and Lie Algebras, Theorem 8.8",
+          "url": "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf"
+        }
+      ]
+    },
+    "reason": "『近傍を座標化するとリー環』という不正確な旧説明を、接空間と括弧による定義へ修正。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Definition 8.4とTheorem 8.8のT₁G上の自然なリー代数構造を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000013",
+    "domain": "数学",
+    "subdomain": "数値解析・最適化",
+    "content": {
+      "question": "fとgは実数の2変数についてC¹級とする。制約g(x,y)=0の下でfが点pで局所極値を取り、∇g(p)≠0である。ラグランジュ乗数法による必要条件はどれか。",
+      "choices": [
+        "∇f(p)=0でなければならない",
+        "∇g(p)=0でなければならない",
+        "ある実数λについて∇f(p)=λ∇g(p)",
+        "f(p)=g(p)でなければならない"
+      ],
+      "correctIndex": 2,
+      "explanation": "制約曲線の接線方向ではfの変化率が0になるため、∇fは制約の法線∇gの実数倍になる。∇g(p)≠0という条件が必要条件の適用を支える。条件を満たす候補が必ず極値になるとは限らない。",
+      "distractorRationales": [
+        "制約付き極値では、周囲の全方向で変化率が0になる必要はない。",
+        "設問の正則性の仮定に反する。",
+        "勾配が平行になるというラグランジュ乗数の必要条件。",
+        "fの値と制約関数の値が一致する必要はない。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Lagrange Multiplier",
+          "url": "https://mathworld.wolfram.com/LagrangeMultiplier.html"
+        }
+      ]
+    },
+    "reason": "名称だけを問う旧設問から、制約の正則性を含む必要条件へ変更。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭のC¹条件と∇g≠0、式(1)〜(2)を照合。λの符号は任意の実数に吸収できる。十分条件とはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000104",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "向きと通常の内積を備えた3次元ユークリッド空間で、aとbは一次独立なベクトルとする。外積a×bについて正しいものはどれか。",
+      "choices": [
+        "aにもbにも垂直な非零ベクトルである",
+        "内積a·bと同じスカラーである",
+        "必ず零ベクトルである",
+        "必ずaと平行な非零ベクトルである"
+      ],
+      "correctIndex": 0,
+      "explanation": "外積は両方のベクトルと直交する。大きさは|a||b|sinθで、aとbが一次独立ならθは0でもπでもないので、外積は非零になる。",
+      "distractorRationales": [
+        "直交性と、一次独立である場合の非零性を合わせた性質。",
+        "内積はスカラー、外積はベクトルである。",
+        "一次独立という条件により、外積は非零。",
+        "aと直交する非零ベクトルなので、aと平行にはならない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Calculus Volume 3 §2.4 The Cross Product",
+          "url": "https://openstax.org/books/calculus-volume-3/pages/2-4-the-cross-product"
+        }
+      ]
+    },
+    "reason": "零ベクトルの選択肢が平行な入力で正解にならないよう、一次独立を明記。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.4の直交性、Theorem 2.7の大きさ|a||b|sinθを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000326",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "X₁,…,Xₙは独立同分布で、共通の分散は0<σ²<∞、n≥2とする。標本平均X̄=(X₁+…+Xₙ)/nの分散はどれか。",
+      "choices": [
+        "σ²/n",
+        "σ²/√n",
+        "nσ²",
+        "σ²"
+      ],
+      "correctIndex": 0,
+      "explanation": "独立性により和の分散はnσ²。確率変数を1/n倍すると分散は1/n²倍になるので、Var(X̄)=nσ²/n²=σ²/n。正規分布の仮定や、大標本による近似は不要である。",
+      "distractorRationales": [
+        "独立な和の分散と定数倍の法則から得られる。",
+        "標準誤差の1/√nという倍率を、分散にそのまま使っている。",
+        "和X₁+…+Xₙの分散であり、平均にする1/n²の効果が抜けている。",
+        "n≥2かつσ²>0なので、平均の分散は元の分散より小さい。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Introductory Statistics 2e §7.1 The Central Limit Theorem for Sample Means (Averages)",
+          "url": "https://openstax.org/books/introductory-statistics-2e/pages/7-1-the-central-limit-theorem-for-sample-means-averages"
+        }
+      ]
+    },
+    "reason": "必要な独立性・有限分散を明示し、線形代数という旧分類を訂正。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.1の標本平均の分散・標準誤差を照合。σ²/nは独立性と定数倍の分散から独立に導出し、中心極限定理の近似と区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000112",
+    "domain": "数学",
+    "subdomain": "線形代数",
+    "content": {
+      "question": "実対称行列Aについて、有限次元のスペクトル定理が保証する内容はどれか。",
+      "choices": [
+        "固有値はすべて正である",
+        "直交行列Qと実対角行列Dを用いてA=QDQᵀと書ける",
+        "固有値はすべて相異なる",
+        "行列式は必ず0でない"
+      ],
+      "correctIndex": 1,
+      "explanation": "実対称行列には実固有値と、正規直交する固有ベクトルの基底がある。その基底を列に並べたQを使うと、A=QDQᵀと直交対角化できる。",
+      "distractorRationales": [
+        "負の対角成分をもつ対角行列も実対称であり、正定値とは限らない。",
+        "実対称行列の直交対角化を表す。",
+        "単位行列には重複する固有値1がある。",
+        "零行列も実対称であり、行列式は0。"
+      ],
+      "sources": [
+        {
+          "title": "MIT OpenCourseWare — 18.06 Linear Algebra, Lecture 32 transcript",
+          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/3d558eb07500e733e88234c73d4afa80_MIT18_06S10_L32.pdf"
+        }
+      ]
+    },
+    "reason": "一般の無限次元作用素の定義域・スペクトル測度を曖昧に扱わず、有限次元の実対称行列へ限定。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "MIT 18.06 Lecture 32 transcriptの最初のページ、実固有値・重複時も十分な固有ベクトル・QΛQᵀという説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000017",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "content": {
+      "question": "圏の射f:A→Bとg:B→Cを考える。先にf、次にgを適用する順に合成し、これをg∘fと書く。合成射の始域と終域はどれか。",
+      "choices": [
+        "C→A",
+        "B→B",
+        "A→C",
+        "C→B"
+      ],
+      "correctIndex": 2,
+      "explanation": "合成はfの終域Bとgの始域Bが一致するため定義され、入力側のAから出力側のCへの射になる。圏では、このように合成可能な射について結合則と恒等射の法則が成り立つ。",
+      "distractorRationales": [
+        "始域と終域が逆であり、逆射の存在も仮定されていない。",
+        "中間の対象Bを両端に置いてしまっている。",
+        "fの始域Aからgの終域Cへの射。",
+        "入力はCではなくAから始まる。"
+      ],
+      "sources": [
+        {
+          "title": "Wolfram MathWorld — Category",
+          "url": "https://mathworld.wolfram.com/Category.html"
+        }
+      ]
+    },
+    "reason": "対象と射という語の組合せから、合成の型を問う内容へ具体化。文献による合成記号の順序の違いを設問内で固定。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": true,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Categoryの合成可能性・始域終域と結合則を照合。参照先と記号の並びが異なるため、設問は『先にf、次にg』を明記。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000121",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "2+3×4を通常の演算順序で計算するといくつになるか。",
+      "choices": [
+        "20",
+        "10",
+        "14",
+        "24"
+      ],
+      "correctIndex": 2,
+      "explanation": "括弧のない式では、足し算より先に掛け算を行う。3×4=12を求めてから2を足すので14。",
+      "distractorRationales": [
+        "先に2+3を計算した値であり、元の式にはその括弧がない。",
+        "3×4=12なので、そこに2を足した値ではない。",
+        "掛け算を先に行った結果。",
+        "2×3×4の値であり、元の足し算を掛け算に変えている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §1.1 Real Numbers: Algebra Essentials",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+        }
+      ]
+    },
+    "reason": "旧版の同文問題を同一の問題族にまとめ、演算順序と各誤答を検算。",
+    "parameters": {
+      "b": -2,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.1 Order of Operationsの掛け算・割り算を足し算・引き算より先に行う規則を照合。計算は独立に確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000301"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000101",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "連立一次方程式で、必要なら各式の両辺を非零の定数倍し、2つの式を足し引きして1つの未知数を消す方法を何というか。",
+      "choices": [
+        "因数分解",
+        "代入法",
+        "平方完成",
+        "加減法"
+      ],
+      "correctIndex": 3,
+      "explanation": "加減法は、消したい未知数の係数をそろえて式を足し引きする方法。非零の定数倍は解を変えず、残った未知数を先に求められる。",
+      "distractorRationales": [
+        "式を積の形へ変形する操作であり、式どうしを足し引きする方法の名称ではない。",
+        "一方の式で表した未知数を、もう一方の式へ代入する方法。",
+        "二次式を平方の形を含む式に直す操作。",
+        "係数を調整し、式の加減で未知数を消去する方法。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Algebra 2e §7.1 Systems of Linear Equations: Two Variables",
+          "url": "https://openstax.org/books/college-algebra-2e/pages/7-1-systems-of-linear-equations-two-variables"
+        }
+      ]
+    },
+    "reason": "式の非零定数倍と解を保つ操作を明記。最初の週替わり候補として正式問題とは別枠にする。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.1 Solving Systems of Equations in Two Variables by the Addition Methodの説明と非零定数倍の手順を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。計算・反例は独立に検算。参考文献の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "use": "weekly-reserve"
+  }
+]

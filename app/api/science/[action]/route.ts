@@ -67,7 +67,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       return {attempt:publicAttempt(attempt),question:null,group:ctx.visitor.route_group,signedIn:!!ctx.userId,share:share.data};
     }
     if (action === "answer") {
-      return answerExam(ctx, z.object({ attemptId: id, ordinal: z.number().int().min(0).max(99), token: id, operationId: id, selectedIndex: z.number().int().min(0).max(3) }).strict().parse(body));
+      return answerExam(ctx, z.object({ attemptId: id, ordinal: z.number().int().min(0).max(99), token: id, operationId: id, selectedIndex: z.number().int().min(0).max(3).nullable() }).strict().parse(body));
     }
     if (action === "review") return reviewAttempt(ctx, attemptInput.parse(body).attemptId);
     if (action === "result_history") {
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       const userId = requireUser(ctx);
       const input = z.object({ attemptId: id, revisionId: id, enabled: z.boolean() }).strict().parse(body);
       const review = await reviewAttempt(ctx, input.attemptId);
-      if (!review.rows.some((r) => r.revisionId === input.revisionId)) throw new ScienceError("復習できる問題が見つかりません。", 404);
+      if (!review.rows.some((r) => r.revisionId === input.revisionId && r.selectedIndex!==null)) throw new ScienceError("復習できる問題が見つかりません。", 404);
       const query = input.enabled ? ctx.db.from("science_bookmarks").upsert({ user_id: userId, revision_id: input.revisionId }, { onConflict: "user_id,revision_id" }).select("revision_id") : ctx.db.from("science_bookmarks").delete().eq("user_id", userId).eq("revision_id", input.revisionId).select("revision_id");
       checked(await query);
       return { saved: true };

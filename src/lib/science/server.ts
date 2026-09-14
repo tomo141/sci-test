@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
 import { databaseEnvironmentAllowed } from "@/src/lib/supabase/environment";
+import { sameRequestOrigin } from "@/src/lib/security/origin";
 import type { Visitor, ReleaseConfig } from "./types";
 
 export class ScienceError extends Error {
@@ -21,6 +22,7 @@ export function checked<T>(response: { data: T | null; error: { code?: string; m
     const message = response.error?.message;
     if(message==="terms_changed")throw new ScienceError("投稿条件が更新されています。一覧を開き直し、全文を確認してから投稿してください。",409,"terms_changed");
     if(message==="item_unavailable")throw new ScienceError("この問題は確認のため出題を止めています。保存済みの進捗から、時間を置いて再試行してください。",409,"item_unavailable");
+    if(message==="item_not_withdrawn")throw new ScienceError("この問題はスキップできません。最新の進捗を読み込み、答えを選んでください。",409,"conflict");
     if(message==="pending_correction"||response.error?.message?.includes("science_one_pending_correction"))throw new ScienceError("この問題には確認待ちの修正版があります。修正版の確認欄から修正・取り下げを行ってください。",409,"pending_correction");
     if(message==="not_pending")throw new ScienceError("この修正版は別の操作で処理されています。一覧を再読み込みしてください。",409,"not_pending");
     if(message==="not_held"||message==="corrected_revision_cannot_reopen")throw new ScienceError("この版は保留解除できません。訂正済みの場合は修正版を使用してください。",409,"cannot_reopen");
@@ -111,8 +113,7 @@ export async function rateLimit(ctx: Context, action: string, limit: number, sec
 export async function endpoint(request: NextRequest, fn: () => Promise<unknown>) {
   try {
     if (request.method !== "GET") {
-      const origin = request.headers.get("origin");
-      if (!origin || origin !== new URL(request.url).origin) throw new ScienceError("画面を再読み込みして操作してください。", 403, "origin_required");
+      if (!sameRequestOrigin(request)) throw new ScienceError("画面を再読み込みして操作してください。", 403, "origin_required");
       if (Number(request.headers.get("content-length")) > 32_768) throw new ScienceError("入力が長すぎます。", 413);
       const ip=(request.headers.get("x-vercel-forwarded-for")??request.headers.get("x-forwarded-for")??"unknown").split(",")[0].trim();
       const digest=createHmac("sha256",process.env.SUPABASE_SERVICE_ROLE_KEY??"local-unconfigured").update(ip).digest("hex");

@@ -4,10 +4,11 @@ import type { RevisionUpdate } from "./corrections";
 
 export function correctedResult(attempt:Attempt,issued:Issued[],answers:Answer[],state:{epoch:number;updates:Map<string,RevisionUpdate>;ineligibleOrdinals?:Set<number>}):AttemptResult{
   const excluded=new Set(issued.filter(i=>state.updates.get(i.revision_id)?.excluded).map(i=>i.ordinal));
+  for(const answer of answers)if(answer.selected_index===null)excluded.add(answer.ordinal);
   const responses=answers.map(answer=>{
     const q=issued.find(i=>i.ordinal===answer.ordinal);
     if(!q)throw new Error("保存記録の確認が必要です。");
-    return {...q.snapshot,correct:answer.is_correct,eligible:q.eligible&&!excluded.has(q.ordinal)&&!state.ineligibleOrdinals?.has(q.ordinal),answeredAt:answer.answered_at};
+    return {...q.snapshot,correct:answer.is_correct===true,eligible:q.eligible&&!excluded.has(q.ordinal)&&!state.ineligibleOrdinals?.has(q.ordinal),answeredAt:answer.answered_at};
   });
   const updates=issued.flatMap(i=>state.updates.has(i.revision_id)?[state.updates.get(i.revision_id)!]:[]);
   return {...scoreResponses(responses),definition:attempt.definition,originalAnswerCount:attempt.total,

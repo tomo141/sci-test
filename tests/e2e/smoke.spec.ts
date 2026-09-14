@@ -3,8 +3,16 @@ import { expect, test } from "@playwright/test";
 test("public entrances lead to the selected exam without starting one", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "あなたの科学は、 どこまで広い？" })).toBeVisible();
+  const planResponse=page.waitForResponse(response=>response.url().endsWith("/api/science/plan")&&response.request().method()==="POST");
   await page.getByRole("link", { name: "20問で腕試しする" }).click();
-  await expect(page.getByRole("heading", { name: "腕試し20問" })).toBeVisible();
+  await expect(page).toHaveURL(/\/exam\?kind=trial$/);
+  await expect(page.getByRole("heading", { name: "20問の腕試し",level:1 })).toBeVisible();
+  const response=await planResponse;
+  expect(response.status()).not.toBe(403);
+  if(process.env.SCIENCE_E2E_CONNECTED!=="1"){
+    expect(response.status()).toBe(503);
+    expect(["preview_database_not_configured","unavailable"]).toContain((await response.json()).code);
+  }
   await expect(page.getByRole("checkbox")).not.toBeChecked();
   await page.goto("/exam?kind=domain&domain=物理");
   await expect(page.getByLabel("受験する分野")).toHaveValue("物理");

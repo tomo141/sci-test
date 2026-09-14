@@ -30,7 +30,7 @@ export async function attemptRecords(ctx: Context, id: string) {
   const responses: Response[] = answers.map((answer) => {
     const question = issued.find((q) => q.ordinal === answer.ordinal);
     if (!question) throw new ScienceError("保存記録を確認する必要があります。", 503, "inconsistent_record");
-    return { ...question.snapshot, correct: answer.is_correct, eligible: question.eligible && !corrections.updates.get(question.revision_id)?.excluded && !corrections.ineligibleOrdinals.has(question.ordinal), answeredAt: answer.answered_at };
+    return { ...question.snapshot, correct: answer.is_correct===true, eligible: answer.selected_index!==null && question.eligible && !corrections.updates.get(question.revision_id)?.excluded && !corrections.ineligibleOrdinals.has(question.ordinal), answeredAt: answer.answered_at };
   });
   return { issued, answers, responses, corrections };
 }
@@ -137,7 +137,7 @@ export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDo
   return examState(ctx, a.id);
 }
 
-export async function answerExam(ctx: Context, input: { attemptId: string; ordinal: number; token: string; operationId: string; selectedIndex: number }) {
+export async function answerExam(ctx: Context, input: { attemptId: string; ordinal: number; token: string; operationId: string; selectedIndex: number | null }) {
   await rateLimit(ctx, "answer", 120);
   const a = await ownedAttempt(ctx, input.attemptId);
   const records = await attemptRecords(ctx, a.id);
@@ -146,14 +146,14 @@ export async function answerExam(ctx: Context, input: { attemptId: string; ordin
   let result: AttemptResult | null = null;
   const previous = records.answers.find((r) => r.operation_id === input.operationId);
   if (!previous && a.ordinal + 1 === a.total && a.ordinal === input.ordinal) {
-    const correct = issued.choice_order[input.selectedIndex] === issued.snapshot.content.correctIndex;
-    result = correctedResult(a, records.issued, [...records.answers, { attempt_id:a.id, ordinal:input.ordinal, operation_id:input.operationId, selected_index:input.selectedIndex, is_correct:correct, answered_at:new Date().toISOString() }], records.corrections);
+    const correct = input.selectedIndex===null ? null : issued.choice_order[input.selectedIndex] === issued.snapshot.content.correctIndex;
+    result = correctedResult(a, records.issued, [...records.answers, { attempt_id:a.id, ordinal:input.ordinal, operation_id:input.operationId, selected_index:input.selectedIndex, is_correct:correct, skip_reason:input.selectedIndex===null?"question_withdrawn":null, answered_at:new Date().toISOString() }], records.corrections);
   }
   const committed = checked(await ctx.db.rpc("science_commit_answer", { p_attempt: a.id, p_visitor: ctx.visitor.id, p_user: ctx.userId, p_ordinal: input.ordinal, p_token: input.token, p_operation: input.operationId, p_selected: input.selectedIndex, p_result: result })) as Attempt;
   // Answer commitment is reported independently of issuing the next question, so a later outage
   // cannot make the browser treat an already committed response as unsaved.
   return { attempt: publicAttempt(committed), savedOrdinal: input.ordinal, group: ctx.visitor.route_group, signedIn: !!ctx.userId,
-    ...(a.kind === "lab" ? { explanation: { correctIndex: issued.choice_order.indexOf(issued.snapshot.content.correctIndex), selectedIndex: input.selectedIndex, content: issued.snapshot.content, revisionId: issued.revision_id } } : {}) };
+    ...(a.kind === "lab" && input.selectedIndex!==null ? { explanation: { correctIndex: issued.choice_order.indexOf(issued.snapshot.content.correctIndex), selectedIndex: input.selectedIndex, content: issued.snapshot.content, revisionId: issued.revision_id } } : {}) };
 }
 
 export async function reviewAttempt(ctx: Context, id: string) {
@@ -162,6 +162,6 @@ export async function reviewAttempt(ctx: Context, id: string) {
   const { issued, answers, corrections } = await attemptRecords(ctx, id);
   return { attempt: publicAttempt(a), rows: answers.map((answer) => {
     const q = issued.find((r) => r.ordinal === answer.ordinal)!;
-    return { ordinal: answer.ordinal, revisionId: q.revision_id, domain: q.snapshot.domain, content: q.snapshot.content, selectedIndex: q.choice_order[answer.selected_index], correct: answer.is_correct, creditName:q.snapshot.creditName, update:corrections.updates.get(q.revision_id)??null };
+    return { ordinal: answer.ordinal, revisionId: q.revision_id, domain: q.snapshot.domain, content: answer.selected_index===null?null:q.snapshot.content, selectedIndex: answer.selected_index===null?null:q.choice_order[answer.selected_index], correct: answer.is_correct, skipReason:answer.skip_reason, creditName:q.snapshot.creditName, update:corrections.updates.get(q.revision_id)??null };
   }) };
 }

@@ -8,11 +8,19 @@ function records(kind:"trial"|"weekly"){
   const exam=definition(kind);
   const attempt={total:exam.count,definition:exam} as Attempt;
   const issued=Array.from({length:exam.count},(_,ordinal)=>({ordinal,revision_id:`revision-${ordinal}`,eligible:exam.formal,snapshot:{domain:domains[ordinal%10],a:1,b:0,c:.25}})) as Issued[];
-  const answers=issued.map((i,ordinal)=>({ordinal,is_correct:ordinal<7,answered_at:"2026-09-14T00:00:00Z"})) as Answer[];
+  const answers=issued.map((i,ordinal)=>({ordinal,selected_index:0,is_correct:ordinal<7,skip_reason:null,answered_at:"2026-09-14T00:00:00Z"})) as Answer[];
   const update=(ordinal:number)=>({source_revision:`revision-${ordinal}`,excluded:true,approved_at:"2026-09-15T00:00:00Z"}) as RevisionUpdate;
   return {attempt,issued,answers,update};
 }
 describe("corrected scoring",()=>{
+  it("does not score a skip as a response even if correction metadata is not supplied",()=>{
+    const r=records("trial");
+    r.answers[0]={...r.answers[0],selected_index:null,is_correct:null,skip_reason:"question_withdrawn"};
+    const original=structuredClone(r.answers);
+    const result=correctedResult(r.attempt,r.issued,r.answers,{epoch:2,updates:new Map()});
+    expect(result.correctCount).toBe(6);expect(result.answerCount).toBe(19);expect(result.originalAnswerCount).toBe(20);
+    expect(result.domains[domains[0]].count).toBe(1);expect(result.corrections?.excludedCount).toBe(1);expect(r.answers).toEqual(original);
+  });
   it("preserves answers and correct counts while excluding known items revealed by sign-in",()=>{
     const r=records("trial"),original=structuredClone(r.answers);
     const result=correctedResult(r.attempt,r.issued,r.answers,{epoch:3,updates:new Map(),ineligibleOrdinals:new Set([0,10])});

@@ -12,7 +12,7 @@ import { definition, type ExamKind, type ExamDefinition } from "@/src/lib/scienc
 import { RequestError, scienceApi } from "@/src/lib/science/client";
 import type { ExamState, PublicAttempt } from "@/src/lib/science/types";
 
-const pendingSchema = z.object({ attemptId: z.string().uuid(), ordinal: z.number().int().min(0).max(99), token: z.string().uuid(), operationId: z.string().uuid(), selectedIndex: z.number().int().min(0).max(3) });
+const pendingSchema = z.object({ attemptId: z.string().uuid(), ordinal: z.number().int().min(0).max(99), token: z.string().uuid(), operationId: z.string().uuid(), selectedIndex: z.number().int().min(0).max(3).nullable() });
 type Pending = z.infer<typeof pendingSchema>;
 const storageKey = (id: string) => `science-pending:${id}`;
 
@@ -34,7 +34,7 @@ export function ExamClient({ initialAttempt, kind, initialDomain, refShare }: { 
   const registrationPath = `/signup?next=${encodeURIComponent(`/exam?kind=${kind}${kind === "domain" ? `&domain=${domain}` : ""}`)}`;
 
   const adopt = useCallback((next: ExamState) => {
-    setState(next); setSelected(next.question?.withdrawn ? 0 : null);
+    setState(next); setSelected(null);
     if (next.attempt.state === "completed") router.replace(`/result?attempt=${next.attempt.id}`);
     try {
       const raw = localStorage.getItem(storageKey(next.attempt.id));
@@ -67,9 +67,9 @@ export function ExamClient({ initialAttempt, kind, initialDomain, refShare }: { 
     } catch (e) { setError(e as RequestError); } finally { setBusy(false); }
   }
   async function answer() {
-    if (!state?.question || selected === null) return;
+    if (!state?.question || (selected === null && !state.question.withdrawn && !pending)) return;
     setBusy(true); setError(null); setSaveNote("送信中…");
-    const input = pending ?? { attemptId: state.attempt.id, ordinal: state.question.ordinal, token: state.question.token, operationId: crypto.randomUUID(), selectedIndex: selected };
+    const input = pending ?? { attemptId: state.attempt.id, ordinal: state.question.ordinal, token: state.question.token, operationId: crypto.randomUUID(), selectedIndex: state.question.withdrawn ? null : selected };
     setPending(input);
     try { localStorage.setItem(storageKey(input.attemptId), JSON.stringify(input)); } catch { /* The operation remains available in memory for retry. */ }
     try {
@@ -107,7 +107,7 @@ export function ExamClient({ initialAttempt, kind, initialDomain, refShare }: { 
         <h1 ref={title} tabIndex={-1} className="mt-4 whitespace-pre-wrap text-xl font-bold leading-9 outline-none">{state.question.question}</h1>
         {state.attempt.definition.kind==="lab"&&<p className="mt-3 text-xs text-[var(--color-muted)]">作問：{state.question.creditName||"匿名の投稿者"}{state.question.aiAssisted&&" · AI補助あり（作者申告）"}</p>}
         <fieldset disabled={busy || !!pending} className="mt-6 grid gap-3"><legend className="sr-only">答えを一つ選んでください</legend>{state.question.choices.map((text,i) => <label key={i} className={`flex cursor-pointer items-start gap-3 rounded-xl border-2 p-4 ${selected === i ? "border-[var(--color-primary-700)] bg-[var(--color-primary-50)]" : "border-[var(--color-border)]"}`}><input type="radio" name="answer" value={i} checked={selected===i} onChange={() => setSelected(i)} className="mt-1 h-5 w-5" /><span className="whitespace-pre-wrap leading-7">{text}</span></label>)}</fieldset>
-        <AppButton disabled={busy || selected===null} onClick={() => void answer()} className="mt-6 w-full">{busy ? "保存中…" : pending ? "同じ回答を再送する" : state.question.withdrawn ? "採点から除外して次へ" : "この回答を確定する"}</AppButton>
+        <AppButton disabled={busy || (selected===null && !state.question.withdrawn && !pending)} onClick={() => void answer()} className="mt-6 w-full">{busy ? "保存中…" : pending ? "同じ操作を再送する" : state.question.withdrawn ? "未回答でスキップして次へ" : "この回答を確定する"}</AppButton>
       </>}
       {explanation && <><h1 className="text-2xl font-black">{explanation.correctIndex === explanation.selectedIndex ? "正解！" : "解説を見てみよう"}</h1><p className="mt-4 whitespace-pre-wrap leading-8">{explanation.content.explanation}</p><FeedbackForm key={state.attempt.ordinal} attemptId={state.attempt.id} ordinal={state.attempt.ordinal-1}/><AppButton className="mt-6" onClick={() => { setExplanation(undefined); void refresh(state.attempt.id); }}>次の問題へ</AppButton></>}
       <p role="status" className="mt-4 text-sm text-[var(--color-muted)]">{saveNote}</p>{errorBox}

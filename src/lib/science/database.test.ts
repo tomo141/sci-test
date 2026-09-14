@@ -1,5 +1,5 @@
 import { PGlite } from "@electric-sql/pglite";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql", "0020_science_license_versions.sql", "0021_science_auth_boundary.sql", "0022_science_consent_export.sql", "0023_science_bank_import.sql", "0024_science_review_recovery.sql"]) {
+  for (const name of readdirSync("supabase/migrations").filter(n => /^\d{4}_.*\.sql$/.test(n)).sort()) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }

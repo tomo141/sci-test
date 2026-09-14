@@ -1,0 +1,146 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000019",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "複素平面の開集合上で正則な関数を f(x+iy)=u(x,y)+iv(x,y) と書く。必ず満たすコーシー・リーマンの関係式はどれか。添字は偏微分を表す。",
+      "choices": ["uₓ=vᵧ、uᵧ=−vₓ", "uₓ=−vᵧ、uᵧ=vₓ", "uₓ=vₓ、uᵧ=vᵧ", "uₓ=0、vᵧ=0"],
+      "correctIndex": 0,
+      "explanation": "実軸方向の差商の極限はuₓ+ivₓ、虚軸方向ではvᵧ−iuᵧ。複素微分が存在するなら両者が一致するので、実部と虚部を比べるとuₓ=vᵧ、uᵧ=−vₓとなる。",
+      "distractorRationales": ["実軸方向と虚軸方向から求めた導関数を一致させる関係式。", "f(z)=zではuₓ=vᵧ=1なので、第1式が成り立たない。", "f(z)=zではuₓ=1、vₓ=0なので、第1式が成り立たない。", "f(z)=zではuₓ=vᵧ=1であり、0とは限らない。"],
+      "sources": [{"title": "MIT OpenCourseWare — 18.305 Lecture 2, equations (2.7)–(2.9)", "url": "https://ocw.mit.edu/courses/18-305-advanced-analytic-methods-in-science-and-engineering-fall-2004/09cfb5e3efabe59c46bfebfcfaecf743_second1.pdf"}]
+    },
+    "reason": "関係のない分野の方程式名を並べた旧選択肢から、関係式そのものと符号を問う内容へ改訂。",
+    "parameters": {"b": 0.9, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "Lecture 2の式(2.7)〜(2.9)を照合。虚軸方向の差商を独立に計算し、誤答肢をf(z)=zで検算。必要条件のみを扱う。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000021",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "κを正の定数とする。1次元の熱方程式 ∂u/∂t=κ∂²u/∂x² の分類はどれか。",
+      "choices": ["2階楕円型偏微分方程式", "2階双曲型偏微分方程式", "2階放物型偏微分方程式", "1階常微分方程式"],
+      "correctIndex": 2,
+      "explanation": "熱方程式は放物型偏微分方程式の代表例。xとtについての2階の主要部はx方向だけにあり、2変数の2階方程式の分類では判別式が0になる。最高階の微分は空間に関する2階である。",
+      "distractorRationales": ["楕円型の代表例はラプラス方程式。熱方程式の主要部の分類とは異なる。", "双曲型の代表例は波動方程式。熱方程式は時間2階の波動方程式ではない。", "熱方程式の標準的な分類。", "独立変数はxとtの2つで、空間2階の偏微分を含む。"],
+      "sources": [{"title": "Wolfram MathWorld — Parabolic Partial Differential Equation", "url": "https://mathworld.wolfram.com/ParabolicPartialDifferentialEquation.html"}, {"title": "Wolfram MathWorld — Heat Conduction Equation", "url": "https://mathworld.wolfram.com/HeatConductionEquation.html"}]
+    },
+    "reason": "方程式と係数の条件を明示し、存在しない分類を誤答肢に使わない。",
+    "parameters": {"b": 1.1, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "放物型の2階主要部の判別条件と熱方程式の例、Heat Conduction Equationの式(2)を照合。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000009",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "content": {
+      "question": "π(x)をx以下の素数の個数、lnを自然対数とする。素数定理によると、x→∞のときπ(x)との比が1へ近づく関数はどれか。",
+      "choices": ["x²", "ln x", "√x", "x/ln x"],
+      "correctIndex": 3,
+      "explanation": "素数定理はπ(x)∼x/ln x、すなわちπ(x)/(x/ln x)→1を述べる。有限のxでの等式や、両者の差が0へ近づくという主張ではない。",
+      "distractorRationales": ["素数の個数はxを超えないので、π(x)/x²は0へ近づく。", "素数定理の主項x/ln xより増加が遅く、比は1へ近づかない。", "x/ln xより増加が遅く、比は1へ近づかない。", "素数定理の漸近同値を表す関数。"],
+      "sources": [{"title": "Wolfram MathWorld — Prime Number Theorem", "url": "https://mathworld.wolfram.com/PrimeNumberTheorem.html"}]
+    },
+    "reason": "π(x)、対数の底、漸近記号の意味を明記。",
+    "parameters": {"b": 0.7, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "式(3)のπ(n)∼n/ln nと式(11)の比の極限を照合。誤答肢との増加速度を独立に比較。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000008",
+    "domain": "数学",
+    "subdomain": "離散数学・組合せ",
+    "content": {
+      "question": "n≥3とする。自己ループと多重辺のない無向完全グラフKₙの辺数を表す式はどれか。",
+      "choices": ["n(n−1)", "n(n−1)/2", "n²", "n−1"],
+      "correctIndex": 1,
+      "explanation": "完全グラフには、異なる2頂点の各組に1本ずつ辺がある。n頂点から順序を区別せず2つ選ぶ組合せの数はn(n−1)/2。",
+      "distractorRationales": ["各辺を両端から1回ずつ、計2回数えている。", "異なる2頂点を選ぶ組合せの数と一致する。", "同じ頂点の組を含め、順序も区別して数えた値。", "n頂点の木の辺数。n≥3の完全グラフにはそれより多くの辺がある。"],
+      "sources": [{"title": "Wolfram MathWorld — Complete Graph", "url": "https://mathworld.wolfram.com/CompleteGraph.html"}]
+    },
+    "reason": "有向・無向とループの扱いを明記し、特定のnで正解と一致する旧誤答肢2nを差し替え。",
+    "parameters": {"b": 0.1, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "完全グラフの定義と無向の場合の二項係数n choose 2を照合。n≥3で各誤答値が正解と一致しないことを検算。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000334",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "content": {
+      "question": "複素関数f(z)=1/zの、z=1における複素導関数f′(1)はどれか。",
+      "choices": ["i", "−1", "0", "1"],
+      "correctIndex": 1,
+      "explanation": "h≠0について差商(1/(1+h)−1)/h=−1/(1+h)。複素数hがどの方向から0へ近づいても極限は−1になる。",
+      "distractorRationales": ["差商の極限は実数−1。虚数方向から近づけてもiにはならない。", "複素微分の定義から求まる値。", "fは1の近くで定数ではなく、差商の極限も0ではない。", "1/zの微分に現れる負号が抜けている。"],
+      "sources": [{"title": "Wolfram MathWorld — Complex Differentiable", "url": "https://mathworld.wolfram.com/ComplexDifferentiable.html"}]
+    },
+    "reason": "確率・統計という旧分類を修正し、複素差商から独立に検算。",
+    "parameters": {"b": 0.4, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "冒頭の複素差商による定義と、近づく方向によらない極限という条件を照合。差商の整理と極限は独立に計算。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000111",
+    "domain": "数学",
+    "subdomain": "幾何・位相",
+    "content": {
+      "question": "滑らかな多様体の各点の接空間に、点に関して滑らかに変化する正定値の内積を備えた構造を何というか。",
+      "choices": ["複素構造", "シンプレクティック構造", "リーマン計量", "アフィン接続"],
+      "correctIndex": 2,
+      "explanation": "各接空間上の正定値対称双線形形式を滑らかに与えたものがリーマン計量。この計量を備えた滑らかな多様体をリーマン多様体と呼ぶ。局所的にユークリッド空間と同相であるだけでは、計量を指定したことにはならない。",
+      "distractorRationales": ["複素多様体としての座標の構造であり、正定値内積の指定そのものではない。", "非退化で閉じた交代2形式を与える構造で、対称な内積とは異なる。", "接空間の内積を滑らかに与える構造の名称。", "ベクトル場の方向微分を定める構造で、内積の指定そのものではない。"],
+      "sources": [{"title": "Wolfram MathWorld — Riemannian Metric", "url": "https://mathworld.wolfram.com/RiemannianMetric.html"}, {"title": "Wolfram MathWorld — Riemannian Manifold", "url": "https://mathworld.wolfram.com/RiemannianManifold.html"}]
+    },
+    "reason": "旧設問は位相多様体の条件しか述べておらず、リーマン多様体と特定できなかった。必要な計量構造を問う形へ改訂。",
+    "parameters": {"b": 1.2, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "Riemannian Metricの各接空間の内積と、Riemannian Manifoldの計量付き多様体という定義を照合。滑らかさ・正定値性を明記。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000329",
+    "domain": "数学",
+    "subdomain": "論理・集合論",
+    "content": {
+      "question": "すべての整数n≥1についてP(n)を示す通常の数学的帰納法を使う。基底P(1)を確認したあと、帰納段階で示す内容はどれか。",
+      "choices": ["任意の整数k≥1について、P(k)が成り立つならP(k+1)も成り立つ", "P(2)とP(3)だけが成り立つ", "十分大きなnではP(n)が成り立たない", "少なくとも1つのnについてP(n)が成り立つ"],
+      "correctIndex": 0,
+      "explanation": "P(1)を出発点に、任意のkからk+1へ真であることを渡せれば、すべての整数n≥1へ連鎖する。有限個の例の確認だけでは帰納段階を示したことにならない。",
+      "distractorRationales": ["任意のkについての含意を示すのが通常の帰納段階。", "その先へ進む一般の含意が示されていない。", "証明したい全称命題に反する内容。", "存在の確認は全称命題の証明にも帰納段階にもならない。"],
+      "sources": [{"title": "Wolfram MathWorld — Mathematical Induction", "url": "https://mathworld.wolfram.com/MathematicalInduction.html"}]
+    },
+    "reason": "旧解説の『完全帰納法』という呼称を通常の数学的帰納法へ整理し、基底と帰納段階を分離。",
+    "parameters": {"b": -0.1, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "n₀での基底と、任意のk≥n₀からk+1への含意という定義を照合。通常の帰納法と強い帰納法の区別も確認。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000018",
+    "domain": "数学",
+    "subdomain": "数値解析・最適化",
+    "content": {
+      "question": "対角成分がすべて非零の連立一次方程式Ax=bを反復法で解く。未知数を順に更新し、同じ反復内ですでに更新した成分は新しい値を直ちに使う標準的な方法はどれか。",
+      "choices": ["ヤコビ法", "ガウス・ザイデル法", "ガウス消去法", "LU分解による直接解法"],
+      "correctIndex": 1,
+      "explanation": "ガウス・ザイデル法では、現在の反復で先に更新した成分をそのまま後の成分の計算に使う。ヤコビ法は各成分の更新で、他の成分について前の反復の値だけを使う。この更新規則だけで、すべての行列に対する収束が保証されるわけではない。",
+      "distractorRationales": ["他の成分は前の反復の値を使い、同じ反復内の新しい値を直ちには使わない。", "成分を順次更新して新しい値を利用する方法。", "行基本変形などで消去を進める直接法で、この反復規則ではない。", "三角行列への分解と代入を使う直接法で、この反復規則ではない。"],
+      "sources": [{"title": "Netlib — Templates for the Solution of Linear Systems: The Gauss-Seidel Method", "url": "https://www.netlib.org/linalg/html_templates/node14.html"}]
+    },
+    "reason": "無関係な法則名の旧誤答肢を実在する線形方程式の解法へ差し替え、更新規則を問う。",
+    "parameters": {"b": 0.8, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "The Gauss-Seidel Method冒頭の逐次更新・既更新値の即時利用と、ヤコビ法との対比を照合。一般の行列での収束保証は主張しない。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000106",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "content": {
+      "question": "実数全体で確率密度がf(x)=exp(−x²/2)/√(2π)と表される分布はどれか。",
+      "choices": ["[0,1]の一様分布", "平均1の指数分布", "標準コーシー分布", "標準正規分布"],
+      "correctIndex": 3,
+      "explanation": "平均0、分散1の正規分布が標準正規分布で、密度はexp(−x²/2)/√(2π)。平均と分散が分かるだけでは、一般の分布を正規分布と決めることはできない。",
+      "distractorRationales": ["密度は[0,1]上で1、区間外で0となる。", "密度はx≥0でexp(−x)、x<0で0となる。", "密度は1/[π(1+x²)]で、尾の減り方が異なる。", "提示された密度は標準正規分布の定義式。"],
+      "sources": [{"title": "NIST/SEMATECH e-Handbook — 1.3.6.6.1 Normal Distribution", "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3661.htm"}]
+    },
+    "reason": "平均と分散だけから正規分布を示唆する旧文面を修正し、密度から一意に答えられる形に変更。",
+    "parameters": {"b": 0.2, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "Probability Density Functionの標準化μ=0・σ=1と標準正規密度、Common Statisticsの平均・標準偏差を照合。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
+  }
+]
