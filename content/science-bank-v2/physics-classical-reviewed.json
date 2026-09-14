@@ -1,0 +1,1043 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000142",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "慣性系で、質量2 kgの物体に一定の合力10 Nが同じ向きに5秒間働く。初速度が0のとき、5秒後の速さはどれか。ニュートン力学で考える。",
+      "choices": [
+        "5 m/s",
+        "10 m/s",
+        "25 m/s",
+        "50 m/s"
+      ],
+      "correctIndex": 2,
+      "explanation": "加速度はF/m=5 m/s²。初速度0なので速さはat=5×5=25 m/s。",
+      "distractorRationales": [
+        "加速度の数値5をそのまま速さにしている。",
+        "力の数値10を速さとして使うことはできない。",
+        "F/mで加速度を求め、経過時間を掛けた値。",
+        "Ftの数値50は力積であり、速さには質量で割る必要がある。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §5.3 Newton’s Second Law",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§5.3式5.3–5.4の合力と加速度を照合。v(0)=0からaを時間積分し25 m/sを独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000362"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000143",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "水平な直線上で、質量3 kg・速度+4 m/sの物体Aが、静止した質量1 kgの物体Bと衝突して一体になる。衝突中の外力の水平力積を無視できるとき、直後の共通速度はどれか。",
+      "choices": [
+        "+1 m/s",
+        "+2 m/s",
+        "+4 m/s",
+        "+3 m/s"
+      ],
+      "correctIndex": 3,
+      "explanation": "水平運動量を保存して3×4=(3+1)v。したがってv=+3 m/s。完全非弾性衝突では運動エネルギーの保存は要求しない。",
+      "distractorRationales": [
+        "全運動量12 kg·m/sを全質量4 kgで割った値にならない。",
+        "速度の単純平均では、異なる質量の重みが反映されない。",
+        "Bも一体となって動くので、Aだけの衝突前速度とは異なる。",
+        "全運動量を一体になった全質量で割った速度。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §9.3 Conservation of Linear Momentum",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/9-3-conservation-of-linear-momentum"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§9.3の外力0の運動量保存と結合後の運動量(m₁+m₂)vを照合。12/4=3を独立に検算し、旧版の1 m/sの誤答理由を訂正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000363"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000144",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "慣性系で、半径r>0の円を一定の速さv>0で回る質点の向心加速度の大きさを表す一般式はどれか。",
+      "choices": [
+        "vr",
+        "v²/r",
+        "v/r²",
+        "2πv/r"
+      ],
+      "correctIndex": 1,
+      "explanation": "速さが一定でも速度の向きは変わる。中心に向く加速度の大きさはv²/r。",
+      "distractorRationales": [
+        "次元は長さ²/時間で、加速度ではない。",
+        "等速円運動の向心加速度を表す。",
+        "次元は1/(長さ·時間)で、加速度ではない。",
+        "次元は1/時間で、加速度ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §6.3 Centripetal Force",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/6-3-centripetal-force"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§6.3冒頭のa_c=v²/r、向きの説明を照合。全肢の次元を確認し、旧版の周期・角運動量への曖昧な説明を削除。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000149",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "重力加速度の大きさgが一定とみなせる範囲で、物体を静止状態から落とす。空気抵抗を無視し、まだ地面に達していない時刻t>0での速さを表す式はどれか。",
+      "choices": [
+        "gt/2",
+        "gt",
+        "gt²/2",
+        "g/t"
+      ],
+      "correctIndex": 1,
+      "explanation": "落下方向を正にするとdv/dt=g、v(0)=0よりv=gt。",
+      "distractorRationales": [
+        "速さの式に1/2は付かない。",
+        "一定の加速度を時間積分した速さ。",
+        "これは初速度0のときの落下距離で、長さの次元をもつ。",
+        "次元は長さ/時間³であり、速さではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §3.5 Free Fall",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/3-5-free-fall"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§3.5の一定重力・空気抵抗を除いた自由落下式を照合。座標の向きと速さを区別し、各式の次元を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000357"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000016",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "ここで「重さ」は物体に働く重力の大きさを意味する。質量mの物体について、ニュートン力学で正しい説明はどれか。",
+      "choices": [
+        "質量のSI単位はニュートンである",
+        "重力加速度の大きさgの場所では、重さはmgである",
+        "同じ物体の重さはgが異なっても常に同じである",
+        "重さと質量は同じ次元の量である"
+      ],
+      "correctIndex": 1,
+      "explanation": "質量はkgで表し、重さは重力という力の大きさなのでNで表す。gが変われば同じ質量でも重さは変わる。",
+      "distractorRationales": [
+        "ニュートンは力の単位。質量の単位はkg。",
+        "重力の大きさを表すw=mgの関係。",
+        "質量が同じでもgに比例して重さが変わる。",
+        "重さは力、質量は質量であり次元が異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §5.4 Mass and Weight",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/5-4-mass-and-weight"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -1.1,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§5.4 Weight、式5.8–5.9を照合。体重計の見かけの重さと混同しないよう語義を問題文に限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000372",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "慣性系の固定点Oを基準に、質点の位置ベクトルをr、運動量をpとする。Oのまわりの軌道角運動量Lの定義はどれか。",
+      "choices": [
+        "L = r × p",
+        "L = p × r",
+        "L = r · p",
+        "L = r + p"
+      ],
+      "correctIndex": 0,
+      "explanation": "軌道角運動量はL=r×p。×は外積で、順序を逆にすると符号が反転する。",
+      "distractorRationales": [
+        "位置から運動量への順の外積が定義。",
+        "外積の順序が逆で、一般に−Lとなる。",
+        "内積はスカラーで、角運動量ベクトルではない。",
+        "位置と運動量は次元が異なり、そのまま足せない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §11.2 Angular Momentum",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§11.2の角運動量の外積による定義と右手則を照合。スピン角運動量の一般定義とは区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000124",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "ニュートン力学の質点系を、慣性系の固定点Oについて考える。Oのまわりの合外力モーメントが0の間、保存されるといえる量はどれか。",
+      "choices": [
+        "系の運動エネルギー",
+        "系の角速度",
+        "Oのまわりの全角運動量",
+        "Oから各質点までの距離"
+      ],
+      "correctIndex": 2,
+      "explanation": "角運動量の変化率は合外力モーメントに等しい。これが0ならOのまわりの全角運動量が一定になる。",
+      "distractorRationales": [
+        "内部のエネルギー変換などがあり、運動エネルギー一定まではいえない。",
+        "慣性モーメントが変わる場合は角速度も変わり得る。",
+        "指定した点について角運動量保存が成り立つ。",
+        "各質点の距離が変わる運動も可能。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §11.3 Conservation of Angular Momentum",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/11-3-conservation-of-angular-momentum"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§11.3の固定慣性系内の点・合外力モーメント0という保存条件と式11.10–11.11を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000121",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "通常の金属導線で電流を運ぶ粒子を自由電子とみなす。電子の平均的なドリフト方向と、慣用的に定めた電流の向きの関係はどれか。",
+      "choices": [
+        "同じ向き",
+        "逆向き",
+        "常に直角",
+        "電子の熱運動があるので平均の向きは定められない"
+      ],
+      "correctIndex": 1,
+      "explanation": "電子は負の電荷をもつので、電子の平均移動と慣用的な電流は逆向き。個々の不規則な運動とドリフトの平均を区別する。",
+      "distractorRationales": [
+        "正電荷が担う電流ならこの関係になるが、ここでは電子を考える。",
+        "電荷が負であることから逆向きになる。",
+        "負電荷は向きを反転させるのであり、直角にはしない。",
+        "熱運動があっても平均としてのドリフト速度は定義できる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §9.2 Model of Conduction in Metals",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/9-2-model-of-conduction-in-metals"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§9.2のドリフト速度、J=nqv_dと電子の向きの説明を照合。「電子の移動方向」を平均ドリフトへ限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000159",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "起電力12 V・内部抵抗2 Ωの電池に、抵抗10 Ωをつないだ単純な直流回路を考える。導線の抵抗を無視し、定常状態で流れる電流はどれか。",
+      "choices": [
+        "0.5 A",
+        "1.0 A",
+        "1.2 A",
+        "6.0 A"
+      ],
+      "correctIndex": 1,
+      "explanation": "内部抵抗と外部抵抗を合わせて12 Ω。I=12 V/(10+2) Ω=1.0 A。",
+      "distractorRationales": [
+        "電流0.5 Aなら必要な全抵抗は24 Ωであり、条件に合わない。",
+        "内部抵抗も含めた回路全体の電流。",
+        "内部抵抗を無視して12/10とした値。",
+        "外部抵抗を無視して12/2とした値。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §10.1 Electromotive Force",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-1-electromotive-force"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§10.1のI=ε/(R+r)を照合。既存問題の数値を独立に再計算し、起電力と端子電圧を区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000154",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "真空中で静止した2個の点電荷q₁、q₂（ともに0ではない）が距離r>0だけ離れている。互いに及ぼす電気力の大きさを表すクーロンの法則はどれか。k=1/(4πε₀)とする。",
+      "choices": [
+        "F = k|q₁+q₂|/r²",
+        "F = k|q₁q₂|/r²",
+        "F = k|q₁q₂|/r",
+        "F = k|q₁q₂|/r³"
+      ],
+      "correctIndex": 1,
+      "explanation": "静止した点電荷間の電気力の大きさは、電荷の積の絶対値に比例し、距離の2乗に反比例する。",
+      "distractorRationales": [
+        "電荷の和ではなく積を使う。",
+        "静電的な点電荷間のクーロンの法則。",
+        "距離の1乗ではなく2乗に反比例する。",
+        "距離の3乗ではなく2乗に反比例する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §5.3 Coulomb’s Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/5-3-coulombs-law"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§5.3の点電荷間の力と真空の誘電率を照合。電荷の符号は力の向きを決め、大きさには積の絶対値を使う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000369"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000150",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "抵抗4 Ωと12 Ωを理想的な導線で並列につなぐ。この2端子間の合成抵抗はどれか。",
+      "choices": [
+        "3 Ω",
+        "6 Ω",
+        "8 Ω",
+        "16 Ω"
+      ],
+      "correctIndex": 0,
+      "explanation": "1/R=1/4+1/12=1/3よりR=3 Ω。どちらの抵抗よりも小さい。",
+      "distractorRationales": [
+        "並列接続の逆数和から得られる。",
+        "逆数和を計算した結果にはならず、4 Ωより大きい。",
+        "2つの抵抗の算術平均であり、合成抵抗ではない。",
+        "これは直列接続での抵抗の和。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §10.2 Resistors in Series and Parallel",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§10.2式10.3の並列の逆数和を照合し、4×12/(4+12)=3を独立に確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000375"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000366",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "抵抗2 Ωと4 Ωが、枝分かれのない直流回路に直列につながれている。定常状態でそれぞれに流れる電流について正しいのはどれか。",
+      "choices": [
+        "2 Ωの抵抗の電流が2倍",
+        "4 Ωの抵抗の電流が2倍",
+        "両方に同じ電流が流れる",
+        "片方にだけ電流が流れる"
+      ],
+      "correctIndex": 2,
+      "explanation": "枝分かれのない定常回路では電荷が途中に蓄積し続けないため、直列の各抵抗を同じ電流が流れる。",
+      "distractorRationales": [
+        "同じ電圧を別々に加えた並列の比較とは条件が異なる。",
+        "抵抗の比だけから直列の電流を変えることはできない。",
+        "直列接続では各素子の電流が等しい。",
+        "定常状態の閉回路で片方だけに電流が流れることはない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §10.2 Resistors in Series and Parallel",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§10.2の直列接続の要点「same current」を照合。旧問題の「同じ電圧で」という曖昧さを除いた。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000011",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "温度などの条件を一定に保ったオーム性抵抗で、電圧Vと電流Iの関係を表す式はどれか。Rはその条件で一定の抵抗値とする。",
+      "choices": [
+        "V = IR",
+        "V = I/R",
+        "V = R/I",
+        "V = I + R"
+      ],
+      "correctIndex": 0,
+      "explanation": "オーム性の抵抗ではV=IRで、電圧と電流が比例する。すべての素子が常にこの比例関係に従うわけではない。",
+      "distractorRationales": [
+        "抵抗Rを比例定数とするオームの法則。",
+        "Rで割るのはI=V/Rへ変形するとき。",
+        "電流の逆数に比例する法則ではない。",
+        "電流と抵抗は次元が異なり、単純に足せない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §9.4 Ohm’s Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§9.4のオーム性と非オーム性の区別を照合。Rを一定とみなす条件を補った。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000146",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "巻数Nが一定のコイルで、各巻線を貫く磁束が同じΦ(t)とする。回路の正方向と面の向きを右手則で対応させたとき、誘導起電力εを与えるファラデーの法則はどれか。",
+      "choices": [
+        "ε = −N dΦ/dt",
+        "ε = −NΦ",
+        "ε = −(1/N) dΦ/dt",
+        "ε = −N d²Φ/dt²"
+      ],
+      "correctIndex": 0,
+      "explanation": "各巻線の磁束の時間変化を足し合わせ、ε=−N dΦ/dt。磁束そのものの大きさだけでは決まらない。",
+      "distractorRationales": [
+        "一定巻数・各巻線で同じ磁束という条件の式。",
+        "磁束ではなく、その時間変化率を使う。",
+        "巻数が増えると各巻線の起電力が加わるので、Nで割らない。",
+        "必要なのは時間の1階微分。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §13.1 Faraday’s Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§13.1式13.3を照合。巻数一定・磁束の定義・向きの規約を明示し、コイル面積だけで比較する旧肢を変更。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000152",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "一定の物質量の理想気体を、体積一定のまま平衡状態から別の平衡状態へ変化させる。圧力pは絶対温度T>0とどう関係するか。",
+      "choices": [
+        "Tに比例する",
+        "Tに反比例する",
+        "T²に比例する",
+        "Tによらず一定である"
+      ],
+      "correctIndex": 0,
+      "explanation": "pV=nRTでnとVが一定なので、p=(nR/V)T。セルシウス温度の数値に比例するという意味ではない。",
+      "distractorRationales": [
+        "nR/Vを一定の比例定数とする関係。",
+        "体積一定で温度を上げると圧力は上がる。",
+        "理想気体の状態方程式ではTの1乗に比例する。",
+        "物質量と体積が一定でも温度が変われば圧力は変わる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §2.1 Molecular Model of an Ideal Gas",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/2-1-molecular-model-of-an-ideal-gas"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.1のpV=nRTを照合し、n,Vを固定した比例関係を導出。実在気体の全条件へ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000373",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "断熱された剛体容器の中で、理想気体が真空だった部分へ自由膨張する。外部への仕事が0で、初めと終わりの平衡状態を比較するとき、気体の温度はどうなるか。",
+      "choices": [
+        "必ず下がる",
+        "必ず上がる",
+        "変わらない",
+        "必ず0 Kになる"
+      ],
+      "correctIndex": 2,
+      "explanation": "Q=0かつW=0なのでΔU=0。理想気体の内部エネルギーは温度だけで決まるため、自由膨張の前後で温度は変わらない。",
+      "distractorRationales": [
+        "外部に正の仕事をする断熱膨張と自由膨張を混同している。",
+        "この条件では内部エネルギーが増える熱・仕事の入力がない。",
+        "熱力学第一法則と理想気体の内部エネルギーの性質による。",
+        "断熱であることから絶対零度になるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §3.6 Adiabatic Processes for an Ideal Gas",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/3-6-adiabatic-processes-for-an-ideal-gas"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§3.6のfree expansion、Q=W=0・内部エネルギー一定・理想気体で温度不変を照合。旧版の「断熱膨張なら必ず冷える」という一般化を訂正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000383",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "絶対温度T_H>T_L>0の2つの熱浴の間で働くカルノー熱機関の効率を表す一般式はどれか。",
+      "choices": [
+        "η = 1 − T_L/T_H",
+        "η = 1 − T_H/T_L",
+        "η = T_H − T_L",
+        "η = T_L/T_H"
+      ],
+      "correctIndex": 0,
+      "explanation": "カルノー効率はη=1−T_L/T_H。両温度にはケルビンで表した絶対温度を用いる。",
+      "distractorRationales": [
+        "2つの熱浴の絶対温度から決まる可逆熱機関の効率。",
+        "温度比が逆で、この条件では負になる。",
+        "温度の次元が残り、無次元の効率にならない。",
+        "低温側へ捨てる熱の比に対応し、熱効率そのものではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, §4.5 The Carnot Cycle",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§4.5式4.5とCarnot’s Principleを照合。作動物質に依存しないことと絶対温度の条件を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000032"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000116",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "静止した空気中を進む小振幅の平面音波を考える。空気の微小部分の、波による集団的な振動方向はどれか。",
+      "choices": [
+        "音の進行方向に平行",
+        "音の進行方向に垂直",
+        "音源から耳まで一方向に流れ続ける",
+        "空気は動かず、圧力だけが変わる"
+      ],
+      "correctIndex": 0,
+      "explanation": "空気中の通常の音波は縦波で、空気の微小部分が進行方向に沿って前後に振動する。分子の不規則な熱運動とは区別する。",
+      "distractorRationales": [
+        "縦波の振動方向。",
+        "これは横波に対応する向き。",
+        "波の伝播と、空気全体の一方向の輸送を混同している。",
+        "圧力変動には空気の集団的な変位も伴う。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §17.1 Sound Waves",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/17-1-sound-waves"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§17.1の圧縮・希薄部の伝播と、空気の振動が進行方向に平行という記述を照合。線形な小振幅波に限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000122",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "単一周波数f>0の周期的な進行波で、波長をλ、位相速度をvとする。これらの関係を表す一般式はどれか。",
+      "choices": [
+        "v = fλ",
+        "v = f/λ",
+        "v = λ/f",
+        "v = 1/(fλ)"
+      ],
+      "correctIndex": 0,
+      "explanation": "1周期1/fの間に位相が1波長λだけ進むため、v=λ/(1/f)=fλ。",
+      "distractorRationales": [
+        "位相速度・周波数・波長の関係。",
+        "次元は1/(時間·長さ)で、速度ではない。",
+        "次元は長さ·時間で、速度ではない。",
+        "次元は時間/長さで、速度の逆数になる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §16.1 Traveling Waves",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/16-1-traveling-waves"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§16.1のv=λ/T、T=1/fを照合して導出。分散媒質の群速度と混同しないよう位相速度を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000157",
+      "10000000-0000-4000-8007-000000000365"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000151",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "風のない空気中で、一定の周波数の音を出す音源が、空気に対して静止した観測者へ一直線に近づく。音源の速さは音速より小さい。観測される周波数は、音源が静止しているときに比べてどうなるか。",
+      "choices": [
+        "低くなる",
+        "変わらない",
+        "高くなる",
+        "必ず2倍になる"
+      ],
+      "correctIndex": 2,
+      "explanation": "接近する音源の前方では波面の間隔が短くなり、観測者に到達する波の周波数が高くなる。",
+      "distractorRationales": [
+        "これは同じ条件で遠ざかる場合の変化。",
+        "音源と観測者が接近しているので変化する。",
+        "接近する音源によるドップラー効果。",
+        "増加の程度は音源の速さに依存し、常に2倍ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, §17.7 The Doppler Effect",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/17-7-the-doppler-effect"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§17.7の静止観測者に接近する音源による波面間隔と周波数の変化を照合。風・超音速・斜めの運動を条件から除外。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000386",
+      "10000000-0000-4000-8007-000000000374"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000155",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "均質で等方的な透明媒質1から2へ光が屈折する。屈折率をn₁,n₂、境界面の法線から測った入射角と屈折角をθ₁,θ₂とすると、スネルの法則はどれか。",
+      "choices": [
+        "n₁ cosθ₁ = n₂ cosθ₂",
+        "n₁ sinθ₁ = n₂ sinθ₂",
+        "n₁ tanθ₁ = n₂ tanθ₂",
+        "n₁θ₁ = n₂θ₂ が任意の角度で厳密に成立する"
+      ],
+      "correctIndex": 1,
+      "explanation": "スネルの法則はn₁sinθ₁=n₂sinθ₂。角度は境界面そのものからではなく法線から測る。",
+      "distractorRationales": [
+        "法線からの角度ではcosではなくsinを用いる。",
+        "屈折率と角度の正弦を結ぶ法則。",
+        "tanを使う式ではない。",
+        "小角近似として使える場合はあるが、任意の角度で厳密ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §1.3 Refraction",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/1-3-refraction"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.3の屈折の法則と角度の規約を照合。法線からの角度を明示し、誤答に対する旧版の不正確なBrewster角の説明を除去。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000381"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000160",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "空気中の薄い収束レンズが、光軸付近の実物体の実像を反対側に結ぶ。焦点距離f、物体距離a、像距離bをすべて正の距離とすると、近軸近似で成立する関係はどれか。",
+      "choices": [
+        "1/f = 1/a + 1/b",
+        "1/f = 1/a − 1/b",
+        "f = a + b",
+        "f = ab"
+      ],
+      "correctIndex": 0,
+      "explanation": "指定した実物体・実像の符号規約では、薄いレンズの公式は1/f=1/a+1/b。",
+      "distractorRationales": [
+        "この条件での薄いレンズの公式。",
+        "実像距離を正に取る規約では和になる。",
+        "焦点距離は物体距離と像距離の単純な和ではない。",
+        "右辺は長さ²となり、焦点距離の次元と合わない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §2.4 Thin Lenses",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/2-4-thin-lenses"
+        }
+      ]
+    },
+    "reason": "適用条件と符号・単位を補い、旧版の誤答説明を独立に検算して書き直した。同内容の旧問題は同じ問題族へ関連付ける。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "問う知識と必要な操作の範囲による初期仮定。実回答から推定した難度ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.4式2.19と実像・収束レンズの符号規約を照合。任意の符号規約や厚いレンズへ無条件に使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理法則・定義を文献の該当箇所と照合し、設問・解説・選択肢の理由は独自に記述。文献の演習問題や図版、固有の説明文を転載していない。"
+    }
+  }
+]

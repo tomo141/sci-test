@@ -66,3 +66,9 @@
 - 22:25 JSTの読み取りでも本番の新台帳・問題・管理者・プロフィール・受験はPGRST205で未取得。本人へ依頼した初回SQLの実行結果はまだ受け取っていない。
 
 通信元チェックはブラウザ試験で失敗を再現し、Next.js 15.5.24の `NextURL` によるループバック正規化を実コード・試験で照合した。照合対象を実際のHostへ直し、Originのポート・通信方式も一致させる。任意のx-forwarded-hostやOrigin欠落は許容しない。[Next.jsの通信元照合の説明](https://nextjs.org/docs/app/api-reference/config/next-config-js/serverActions)も参照したが、このアプリでは独自APIの検証として実装している。22:32 JSTに142テスト・本番ビルド・PC/スマホ8件が通過。実DBでの受験から共有までの一巡は未検証。
+
+## 798b114のGitHub反映とプレビュー
+
+`798b114a325299e4849aa6686f098be6cb768198` を改装ブランチへpush済み。[VercelのデプロイCDWxjJcVLnMZXiY4Q8AWrv6aCVyt](https://vercel.com/rikei-talk/sci-test/CDWxjJcVLnMZXiY4Q8AWrv6aCVyt) はReady、ビルド47秒。[プレビュー](https://sci-test-6iasesuqi-rikei-talk.vercel.app/) の版で、腕試し画面のURL・「20問の腕試し」の見出し・参加条件と、検証用DB未接続の準備中表示を実ブラウザで確認した。受験を開始できたという検証ではない。本番は以前のmainのままで、SQL適用・本番への昇格・Cron設定は未実行。
+
+22:57 JSTの読み取りでも台帳・主要4テーブルはPGRST205、件数は未取得のNULL。初回SQLの適用を確認できていない。読み取りには実行権限の検証やメール受信試験を含めていない。

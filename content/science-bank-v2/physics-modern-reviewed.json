@@ -1,0 +1,947 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000153",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "1次元の量子状態で、位置xと同じ方向の運動量pₓの標準偏差をΔx、Δpₓとする。両方が有限の場合、積ΔxΔpₓが取り得る最小値はどれか。ℏ=h/(2π)とする。",
+      "choices": [
+        "0",
+        "ℏ/2",
+        "ℏ",
+        "2ℏ"
+      ],
+      "correctIndex": 1,
+      "explanation": "位置・運動量の不確定性関係はΔxΔpₓ≥ℏ/2。ガウス型の最小不確定状態で等号を達成できる。ここでのばらつきは量子状態についての標準偏差であり、測定器の誤差だけを意味しない。",
+      "distractorRationales": [
+        "位置と同方向の運動量の標準偏差の積を0にはできない。",
+        "普遍的な下限で、等号を達成する状態がある。",
+        "この値未満でも、ℏ/2以上の状態は存在する。",
+        "最小値としては大きすぎる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §7.2 The Heisenberg Uncertainty Principle",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-2-the-heisenberg-uncertainty-principle"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.2式7.15とガウス状態での標準偏差・等号の説明を照合。弱い下限を別の正解肢にしないよう、達成可能な最小値を問う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000041",
+      "10000000-0000-4000-8007-000000000376",
+      "10000000-0000-4000-8007-000000000391"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000125",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "非相対論的な閉じた量子系の純粋状態|ψ(t)⟩を考える。ハミルトニアンをHとすると、時間発展を与えるシュレーディンガー方程式はどれか。",
+      "choices": [
+        "iℏ d|ψ⟩/dt = H|ψ⟩",
+        "iℏ d²|ψ⟩/dt² = H|ψ⟩",
+        "H|ψ⟩ = 0 がすべての時刻で必要",
+        "d|ψ⟩/dt = −H|ψ⟩/ℏ"
+      ],
+      "correctIndex": 0,
+      "explanation": "シュレーディンガー表示ではiℏ d|ψ⟩/dt=H|ψ⟩。初期状態とハミルトニアンから状態の時間発展を求める。",
+      "distractorRationales": [
+        "時間について1階のシュレーディンガー方程式。",
+        "時間2階微分の式ではなく、次元も一致しない。",
+        "エネルギー0の状態だけに制限する必要はない。",
+        "実数の減衰式に変わっており、虚数単位iが欠ける。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §7.3 The Schrödinger Equation",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-3-the-schrodinger-equation"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.3式7.23の時間依存方程式をハミルトニアンの記法へ直して照合。一般の開放系や混合状態の運動方程式と区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000026"
+    ]
+  },
+  {
+    "familyKey": "physics:born-probability-density",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "1次元空間で、規格化されたスピンのない1粒子の波動関数をψ(x,t)とする。時刻tに粒子を位置x付近で見いだす確率密度はどれか。",
+      "choices": [
+        "ψ(x,t)",
+        "|ψ(x,t)|²",
+        "dψ(x,t)/dx",
+        "∫|ψ(x,t)|² dx を全空間で積分した値"
+      ],
+      "correctIndex": 1,
+      "explanation": "位置の確率密度は|ψ|²。区間に見いだす確率は、その区間で|ψ|²を積分して求める。",
+      "distractorRationales": [
+        "波動関数は複素数になり得て、そのまま確率密度にはできない。",
+        "複素共役との積ψ*ψによるボルンの規則。",
+        "空間微分は位置の確率密度を直接与えない。",
+        "全空間の積分は規格化により1で、位置ごとの密度ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §7.1 Wave Functions",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.1の位置確率密度|Ψ|²と区間確率の解釈を照合。密度と点の確率、全空間の規格化を区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000045",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "電子の固有スピン量子数sの値はどれか。特定の軸への射影量子数mₛではなく、sを問う。",
+      "choices": [
+        "0",
+        "1/2",
+        "1",
+        "2"
+      ],
+      "correctIndex": 1,
+      "explanation": "電子はスピン1/2の粒子。射影量子数mₛは−1/2または+1/2だが、固有スピン量子数sは1/2。",
+      "distractorRationales": [
+        "電子はスピン0の粒子ではない。",
+        "電子の固有スピン量子数。",
+        "光子などで現れる値で、電子のsではない。",
+        "電子の固有スピン量子数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §8.3 Electron Spin",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/8-3-electron-spin"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§8.3式8.29とTable 8.4でsとmₛを照合。スピン角運動量の大きさそのものは√(s(s+1))ℏであり、sと混同しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000367",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "仕事関数φの金属に、周波数fの弱い単色光を当てる。1光子による外部光電効果でhf>φのとき、表面から出た光電子の最大運動エネルギーK_maxはどれか。",
+      "choices": [
+        "hf + φ",
+        "φ − hf",
+        "hf − φ",
+        "hfφ"
+      ],
+      "correctIndex": 2,
+      "explanation": "光子のエネルギーhfのうち、表面から取り出すためにφを使うため、K_max=hf−φ。強い光で起こり得る多光子過程はこの条件に含めない。",
+      "distractorRationales": [
+        "取り出す仕事分を加えるのではなく差し引く。",
+        "この条件では負になり、運動エネルギーの式として不適切。",
+        "1光子のエネルギー収支を表す。",
+        "エネルギーの2乗の次元になってしまう。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §6.2 Photoelectric Effect",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-2-photoelectric-effect"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§6.2式6.13–6.14の光子エネルギー・仕事関数・最大運動エネルギーを照合。旧版の単に「電子が飛び出す」条件を光による放出へ限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000017"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000018",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "電磁場を量子化したとき、光の量子を何と呼ぶか。",
+      "choices": [
+        "フォノン",
+        "光子（フォトン）",
+        "陽子（プロトン）",
+        "中性子"
+      ],
+      "correctIndex": 1,
+      "explanation": "光子は電磁場の量子。物質中の振動の量子であるフォノンや、原子核を構成する陽子・中性子とは区別する。",
+      "distractorRationales": [
+        "フォノンは結晶などの集団的な振動の量子。",
+        "光を量子的に扱う際の光子。",
+        "陽子は光の量子ではない。",
+        "中性子は光の量子ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §6.2 Photoelectric Effect",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-2-photoelectric-effect"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§6.2の光子とE=hfを照合。名称を混同しやすい3種と独立に比較。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000147",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "ボーア半径a₀の大きさに最も近いものはどれか。",
+      "choices": [
+        "5.3×10⁻¹⁵ m",
+        "5.3×10⁻¹¹ m",
+        "5.3×10⁻⁷ m",
+        "5.3×10⁻³ m"
+      ],
+      "correctIndex": 1,
+      "explanation": "a₀は約5.29×10⁻¹¹ m。ボーア模型の水素原子の最内軌道の長さ尺度で、量子力学で電子の位置がこの半径に固定されるという意味ではない。",
+      "distractorRationales": [
+        "約1万分の1で、原子の電子軌道の尺度より小さい。",
+        "約0.053 nmに相当するボーア半径。",
+        "約1万倍で、可視光の波長程度の尺度。",
+        "ミリメートル程度となり、原子の尺度ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §6.4 Bohr’s Model of the Hydrogen Atom",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§6.4式6.39の5.29×10⁻¹¹ mを照合。精密な最新桁を問わず、大きさと模型の意味を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000035",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "ボーア模型の水素原子で、基底準位のエネルギーをE₁<0、主量子数をn=1,2,…とする。第n準位のエネルギーEₙを表す一般式はどれか。",
+      "choices": [
+        "Eₙ = E₁/n²",
+        "Eₙ = n²E₁",
+        "Eₙ = E₁/n",
+        "Eₙ = −E₁/n²"
+      ],
+      "correctIndex": 0,
+      "explanation": "ボーア模型ではEₙ=E₁/n²で、E₁は約−13.6 eV。精密なスペクトルには相対論的効果などの補正が必要であり、模型が全準位を厳密に説明するわけではない。",
+      "distractorRationales": [
+        "ボーア模型のn依存性。",
+        "nが大きいほど強く束縛される式となり、模型と逆。",
+        "nの1乗ではなく2乗に反比例する。",
+        "E₁<0の符号を反転させ、束縛準位が正になる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §6.4 Bohr’s Model of the Hydrogen Atom",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§6.4式6.44–6.46を照合。旧版の「正確に与えた理論」という過大な表現を模型内の式へ訂正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000128",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "H(λ)=H₀+λVとする。H₀の孤立した非縮退固有値Eₙ⁽⁰⁾に属する規格化状態を|n⟩とし、通常の時間に依存しない摂動論を適用できるとする。Eₙ(λ)=Eₙ⁽⁰⁾+λEₙ⁽¹⁾+…の係数Eₙ⁽¹⁾はどれか。",
+      "choices": [
+        "⟨n|V|n⟩",
+        "⟨n|H₀|n⟩",
+        "⟨n|V²|n⟩",
+        "−⟨n|V|n⟩"
+      ],
+      "correctIndex": 0,
+      "explanation": "非縮退摂動論の1次のエネルギー補正係数は、摂動Vの非摂動状態での期待値。縮退がある場合は、一般に縮退部分空間での対角化が必要になる。",
+      "distractorRationales": [
+        "1次摂動方程式に⟨n|を掛けて得る対角行列要素。",
+        "これは非摂動のエネルギーEₙ⁽⁰⁾。",
+        "通常はエネルギー²の次元をもち、1次補正ではない。",
+        "符号を一律に反転させる理由はない。"
+      ],
+      "sources": [
+        {
+          "title": "MIT OpenCourseWare — 8.06 Quantum Physics III, Chapter 1: Non-degenerate and Degenerate Perturbation Theory",
+          "url": "https://ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2018/a0889c5ca8a479c3e56c544d646fb770_MIT8_06S18ch1.pdf"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.1、印刷p.6の式1.1.20–1.1.21を照合し、規格化・非縮退の仮定を明示。VとλV、補正係数と補正全体を区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000358",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "ポテンシャルV(x)=mω²x²/2（m>0、ω>0）の1次元量子調和振動子で、ポテンシャルの底をエネルギー0とする。基底状態のエネルギーはどれか。",
+      "choices": [
+        "0",
+        "ℏω/2",
+        "ℏω",
+        "−ℏω/2"
+      ],
+      "correctIndex": 1,
+      "explanation": "エネルギー準位はEₙ=(n+1/2)ℏω、n=0,1,…。基底状態にも零点エネルギーℏω/2がある。低温ならすべての量子運動が消えるとはいえない。",
+      "distractorRationales": [
+        "古典的な静止状態の最小値と、量子系の基底状態を混同している。",
+        "n=0の準位で、ポテンシャルの底より上にある。",
+        "隣り合う準位の間隔に対応する。",
+        "与えられた非負のポテンシャルと運動エネルギーでは、この負の基底値にならない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §7.5 The Quantum Harmonic Oscillator",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-5-the-quantum-harmonic-oscillator"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.5式7.54–7.56を照合。旧版の0 Kで運動が単純に止まるような説明を、定義が明確な量子系で訂正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000378",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "正準集団で、エネルギーEᵢの個々の微視的状態iの確率に比例する重みはどれか。温度T>0、β=1/(k_B T)とし、同じエネルギーの状態数は別に数える。",
+      "choices": [
+        "exp(−βEᵢ)",
+        "exp(+βEᵢ)",
+        "Eᵢ/T",
+        "βEᵢ²"
+      ],
+      "correctIndex": 0,
+      "explanation": "個々の状態の重みはexp(−βEᵢ)。確率は全状態の重みの和Zで割って規格化する。エネルギーの値ごとに確率をまとめるなら縮退度も必要。",
+      "distractorRationales": [
+        "正準分布のボルツマン因子。",
+        "温度が正の場合のエネルギー依存性の符号が逆。",
+        "次元が残り、一般には非負の確率重みにもならない。",
+        "指数関数による正準分布ではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Chapter 1: The Fundamentals of Statistical Mechanics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S1.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.3式1.21–1.22の個々の状態の分布と、§1.3.3の縮退度を含めたエネルギー別の和を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000028"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000388",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "粒子数N、体積Vを固定した正準集団の分配関数をZとする。温度T>0でのヘルムホルツ自由エネルギーFとZの関係はどれか。lnは自然対数とする。",
+      "choices": [
+        "F = k_B T ln Z",
+        "F = −k_B T ln Z",
+        "F = −k_B T Z",
+        "F = −ln Z/(k_B T)"
+      ],
+      "correctIndex": 1,
+      "explanation": "正準集団ではF=−k_B T ln Z。正準分布の規格化因子Zから自由エネルギーを求められる。",
+      "distractorRationales": [
+        "符号が逆。",
+        "正準集団のヘルムホルツ自由エネルギー。",
+        "Zそのものではなくln Zを使う。",
+        "エネルギーの逆数の次元となり、自由エネルギーではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Chapter 1: The Fundamentals of Statistical Mechanics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S1.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 1,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.3.4式1.36とFの自然変数を照合。旧版の「正則分布」という誤記を正準集団に修正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000387",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "単一成分の単純な圧縮可能系で、ヘルムホルツ自由エネルギーをF(T,V,N)とする。化学ポテンシャルμを与える偏微分はどれか。",
+      "choices": [
+        "(∂F/∂N)をT,V一定で評価する",
+        "(∂F/∂T)をV,N一定で評価する",
+        "(∂F/∂V)をT,N一定で評価する",
+        "FをNで割った値は、条件によらず必ずμになる"
+      ],
+      "correctIndex": 0,
+      "explanation": "dF=−S dT−p dV+μ dNなので、μ=(∂F/∂N)_{T,V}。粒子を増やすとき、何を一定に保つかを指定する必要がある。",
+      "distractorRationales": [
+        "粒子数に共役な係数μを取り出す。",
+        "この偏微分は−S。",
+        "この偏微分は−p。",
+        "一般にはF=μN−pVであり、F/Nをそのままμにはできない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Chapter 1: The Fundamentals of Statistical Mechanics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S1.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.4のdFとμ=(∂F/∂N)_{T,V}、§1.4.3の示量性を照合。有限の1粒子を足す差分と偏微分を混同しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000368",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "微視的状態Ω個（有限）が等確率で実現するミクロカノニカルな記述で、ボルツマンのエントロピーSはどれか。k_Bはボルツマン定数、lnは自然対数とする。",
+      "choices": [
+        "S = k_B Ω",
+        "S = k_B ln Ω",
+        "S = −k_B ln Ω",
+        "S = k_B/Ω"
+      ],
+      "correctIndex": 1,
+      "explanation": "等確率の微視的状態の数を使うとS=k_B ln Ω。単に日常語の「乱雑さ」だけで定義する量ではない。",
+      "distractorRationales": [
+        "状態数そのものではなく、その対数を使う。",
+        "等確率の場合のボルツマンの式。",
+        "Ωが増えるほどエントロピーが減る式になっている。",
+        "等確率の場合の式は状態数の逆数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Chapter 1: The Fundamentals of Statistical Mechanics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S1.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.2と§1.4のS=k_B logΩ、および§1.3.3のp=1/Ωでの確認を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000126",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "相互作用を無視できるフェルミ粒子の大正準集団で、エネルギーEの1粒子状態の平均占有数はどれか。β=1/(k_B T)、T>0、化学ポテンシャルをμとする。",
+      "choices": [
+        "1/[exp(β(E−μ))−1]",
+        "1/[exp(β(E−μ))+1]",
+        "exp(−β(E−μ))",
+        "exp(+β(E−μ))"
+      ],
+      "correctIndex": 1,
+      "explanation": "フェルミ・ディラック分布は1/[exp(β(E−μ))+1]。1つの1粒子状態には同種フェルミ粒子を高々1個しか入れられない。",
+      "distractorRationales": [
+        "ボース粒子に対応する分母の符号。",
+        "平均占有数が0から1の間になるフェルミ分布。",
+        "希薄な極限での近似にはなるが、一般のフェルミ分布ではない。",
+        "低エネルギー側の占有を表す分布ではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Chapter 3: Quantum Gases",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S3.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§3.6.1のフェルミ分布と、§3.6.2のT→0極限を照合。スピンなどを含めた1粒子状態ごとの占有数を問う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000389",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "3次元の自由電子気体をT=0で考える。フェルミ波数をk_Fとすると、フェルミ面はどれか。",
+      "choices": [
+        "実空間で電子が存在できる試料の表面",
+        "波数空間で|k|=k_Fとなる面",
+        "実空間で原子が並ぶ結晶面",
+        "電子の位置確率が0になる面"
+      ],
+      "correctIndex": 1,
+      "explanation": "自由電子気体では低いエネルギーから状態を占有する。占有された波数領域の境界|k|=k_Fがフェルミ面で、実空間の表面ではない。",
+      "distractorRationales": [
+        "フェルミ面は試料の実際の外形ではない。",
+        "自由電子の占有領域の境界となる波数空間の面。",
+        "結晶面は実空間での原子配列に関する量。",
+        "波動関数の節面とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Chapter 3: Quantum Gases",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S3.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§3.6.2のFermi sea・sphereと境界|k|=k_Fの定義を照合。一般の結晶で球形とは限らないため自由電子気体へ限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000048",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "ハミルトニアンが温度に依存しない系の正準集団を考える。粒子数Nと体積Vを固定し、C_V=(∂⟨E⟩/∂T)_{V,N}とする。エネルギーの分散Var(E)はどれか。",
+      "choices": [
+        "k_B T² C_V",
+        "k_B T C_V",
+        "C_V/(k_B T²)",
+        "−k_B T² C_V"
+      ],
+      "correctIndex": 0,
+      "explanation": "ln Zのβによる2階微分からVar(E)=k_B T² C_V。平衡状態でのエネルギーの揺らぎと、温度変化への応答である熱容量を結ぶ。",
+      "distractorRationales": [
+        "正準集団のエネルギー揺らぎと熱容量の関係。",
+        "Tが1つ不足し、エネルギー²の次元にならない。",
+        "正しい比例関係・次元ではない。",
+        "符号が逆で、非負の分散に合わない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Chapter 1: The Fundamentals of Statistical Mechanics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S1.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 1.7,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.3.2式1.25–1.27を照合し、dβ/dT=−1/(k_B T²)から独立に導出。温度依存の有効ハミルトニアンへ無条件に拡張しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000393"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000398",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "相関長ξが連続相転移点でべき乗的に発散する系を考える。換算温度t=(T−T_c)/T_cに対し、相関長の臨界指数ν>0を定める標準的な関係はどれか。",
+      "choices": [
+        "ξ ∝ |t|^ν",
+        "ξ ∝ |t|^(−ν)",
+        "ξ ∝ exp(−|t|)",
+        "ξ ∝ ln(1+|t|)"
+      ],
+      "correctIndex": 1,
+      "explanation": "相関長の発散をξ∝|t|^(−ν)で表す。νの値は系の普遍性クラスなどに依存し、常に平均場値1/2とは限らない。",
+      "distractorRationales": [
+        "t→0で0に近づき、発散を表さない。",
+        "相関長のべき乗発散に対応する定義。",
+        "t→0で有限値へ近づく。",
+        "t→0で0へ近づき、べき乗発散ではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Field Theory, Chapter 2: My First Path Integral",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/sft/sfthtml/S2.html"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 1.9,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Chapter 2のMore Critical Exponentsでξとνの関係、平均場と低次元の値の違いを照合。べき乗発散する場合に範囲を限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000050"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000148",
+    "domain": "物理",
+    "subdomain": "相対論・宇宙論",
+    "content": {
+      "question": "慣性系Sに対して一定の速さ0<v<cで動く時計を考える。その時計が刻む2回の出来事の固有時間間隔をΔτ、同じ2出来事のSでの時間間隔をΔtとする。正しい式はどれか。",
+      "choices": [
+        "Δt = Δτ√(1−v²/c²)",
+        "Δt = Δτ/√(1−v²/c²)",
+        "Δt = Δτ(1−v/c)",
+        "Δt = Δτ が速さによらず成立する"
+      ],
+      "correctIndex": 1,
+      "explanation": "同じ時計上の2出来事についてΔt=γΔτ、γ=1/√(1−v²/c²)>1。比較する出来事を固定すれば、各時間間隔を明確に区別できる。",
+      "distractorRationales": [
+        "固有時間を求める逆の変形と混同している。",
+        "ローレンツ因子γを掛けた時間膨張の式。",
+        "特殊相対論の時間間隔の変換ではない。",
+        "v>0ではこの2つの時間間隔は等しくない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §5.3 Time Dilation",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/5-3-time-dilation"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§5.3のProper TimeとΔt=γΔτを照合。曖昧な「動く方が遅い」だけの比較を避け、同じ時計上の2出来事を指定。加速度を一般相対論だけの対象とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000396",
+      "10000000-0000-4000-8007-000000000371"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000361",
+    "domain": "物理",
+    "subdomain": "相対論・宇宙論",
+    "content": {
+      "question": "特殊相対性理論で、真空中の光速について述べる原理はどれか。比較する観測者は慣性系にいるとする。",
+      "choices": [
+        "光源の速度をcに単純に加えた値になる",
+        "すべての慣性系で、どの方向にも同じcとなる",
+        "観測者の質量に比例して変わる",
+        "観測者の時計が違えば光速も自由に変わる"
+      ],
+      "correctIndex": 1,
+      "explanation": "特殊相対論では真空中の光速cはすべての慣性系で同じ。曲がった時空の任意の座標速度まで同じだと主張する原理ではない。",
+      "distractorRationales": [
+        "光にガリレイ的な速度の加算を適用できない。",
+        "真空中の光速不変の原理。",
+        "観測者の質量による比例関係はない。",
+        "時間や距離の測定の変換は光速不変と整合する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, §5.1 Invariance of Physical Laws",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/5-1-invariance-of-physical-laws"
+        }
+      ]
+    },
+    "reason": "量・系・近似・比較条件を明示して設問と全肢を再確認。学説の範囲と実測の精密値を混同せず、旧問題の曖昧さを除く。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "内容の専門性・必要な前提知識から置いた初期仮定で、実回答に基づく推定値ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§5.1 Second Postulate of Special Relativityの「all inertial frames」を照合。旧版の「どの観測者」から条件を限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物理の定義・法則を公開教材の該当箇所と照合し、設問・解説・全肢の理由は独自に記述。文献の演習問題・図表や固有の説明文を転載していない。"
+    }
+  }
+]
