@@ -1,0 +1,560 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000074",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "Web文書に対してCSSが主に担う役割はどれか。",
+      "choices": [
+        "データベースの行を検索・更新する",
+        "要素の表示やレイアウトを指定する",
+        "IPパケットの配送先を選ぶ",
+        "公開鍵証明書の署名を検証する"
+      ],
+      "correctIndex": 1,
+      "explanation": "CSSはHTMLやXMLの要素の表示を指定するスタイルシート言語。色や余白、レイアウトなどを扱う。文書の意味・構造を示すHTMLと組み合わせて使う。",
+      "distractorRationales": [
+        "通常はSQLなどが担う処理。",
+        "CSSの中心的な役割。",
+        "ネットワークのルーティングの役割。",
+        "暗号プロトコル等の検証であり、CSSの役割ではない。"
+      ],
+      "sources": [
+        {
+          "title": "MDN — CSS: Cascading Style Sheets",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        }
+      ]
+    },
+    "reason": "無関係な電源制御を除き、Webを支える別の機能と区別する。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CSSページ冒頭のpresentation・renderingと対象文書の定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000071",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "Web文書で、見出し・段落・リンクなどの意味や構造をマークアップする代表的な言語はどれか。",
+      "choices": [
+        "SQL",
+        "CSS",
+        "HTML",
+        "JSON"
+      ],
+      "correctIndex": 2,
+      "explanation": "HTMLは見出し、段落、リンクなどの要素でWeb文書の意味と構造を記述する。CSSは表示の指定、SQLはデータ操作、JSONはデータの交換・表現に使う形式。",
+      "distractorRationales": [
+        "データベースへの問い合わせなどに使う。",
+        "文書の表示を指定するスタイルシート言語。",
+        "文書の意味と構造を示すマークアップ言語。",
+        "構造化データの表現形式で、HTMLの文書要素を定義しない。"
+      ],
+      "sources": [
+        {
+          "title": "MDN — HTML: HyperText Markup Language",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        }
+      ]
+    },
+    "reason": "文書構造と表示・データ形式の役割を区別し、旧定型解説を除去。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "HTML冒頭のmeaning and structureとCSSによるappearanceの区別を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000189",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "ポインターで目標を選ぶ操作にフィッツの法則を用いるとき、目標までの距離と移動方向の目標幅から主に予測する量はどれか。",
+      "choices": [
+        "入力装置のサンプリング周波数",
+        "クリック信号のネットワーク伝送時間",
+        "画面に表示できるピクセルの総数",
+        "目標へ移動して到達する操作の所要時間"
+      ],
+      "correctIndex": 3,
+      "explanation": "フィッツの法則は、距離と目標幅から目標獲得に要する時間をモデル化する。遠い目標や小さい目標は一般に難しくなる。係数は装置や課題等の実測で推定するもので、個々の操作時間を厳密に決める物理法則ではない。",
+      "distractorRationales": [
+        "装置の測定頻度そのものを予測する法則ではない。",
+        "人の目標獲得とネットワーク伝送は別の過程。",
+        "ディスプレイの仕様値を求める式ではない。",
+        "距離と幅を操作難度へ結び付け、移動時間を予測する。"
+      ],
+      "sources": [
+        {
+          "title": "I. Scott MacKenzie — Fitts’ Law as a Research and Design Tool in Human-Computer Interaction",
+          "url": "https://www.yorku.ca/mack/hci1992.html"
+        }
+      ]
+    },
+    "reason": "指向操作をポインターの目標獲得へ具体化し、経験的モデルの予測範囲を明記。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "著者公開版の検索索引抜粋で、距離A・幅W、従属変数MT、回帰係数と予測の説明を確認。直接取得は失敗しており、全文を読了した扱いにはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000195",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "高次元データを2次元へ可視化するt-SNEの説明として、最も適切なものはどれか。",
+      "choices": [
+        "点どうしの類似度を確率で表し、高次元と低次元の分布のずれを小さくする非線形な配置を求める",
+        "全ての点間距離を、元の空間と必ず完全に一致させる",
+        "元の座標の二つの軸を必ずそのまま選び、他の軸を捨てる",
+        "入力の各成分をフーリエ変換するだけで、座標の次元数は変えない"
+      ],
+      "correctIndex": 0,
+      "explanation": "t-SNEは高次元・低次元の点の類似度を確率分布で表し、そのKLダイバージェンスを小さくする。特に近傍関係を扱う可視化であり、すべての元の距離の厳密な再現を保証するものではない。",
+      "distractorRationales": [
+        "確率的な類似度と非線形な低次元配置を用いる。",
+        "一般の高次元配置の全距離を2次元で保存する保証はない。",
+        "元の二つの軸を選ぶだけの方法ではない。",
+        "フーリエ変換とは異なる次元削減・可視化の方法。"
+      ],
+      "sources": [
+        {
+          "title": "van der Maaten & Hinton — Visualizing Data using t-SNE",
+          "url": "https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf"
+        }
+      ]
+    },
+    "reason": "無関係なCRC・RAIDとの用語当てから、類似度と距離保存の範囲の理解へ改訂。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文のSNEの近傍確率・非対称な費用、t-SNEのPとStudent-tに基づくQのKL最小化を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-web-keyboard-equivalent",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "通常のWebフォームで、ポインター操作が難しい人にも送信機能を提供したい。WCAG 2.2のキーボード操作に関する要件に沿う方針はどれか。",
+      "choices": [
+        "送信ボタンに色を付け、マウスだけで押せるようにする",
+        "Tabでボタンへ移動できるが、実行には必ずクリックを要求する",
+        "キーボードだけでも送信まで完了でき、個々のキーに特定の入力タイミングを要求しない",
+        "送信操作を速いダブルクリックだけに限定する"
+      ],
+      "correctIndex": 2,
+      "explanation": "通常のフォーム送信はキーボードインターフェースから実行できる必要がある。フォーカス移動だけでなく機能の完了までを含む。自由描画の軌跡のような例外のある機能と、通常のフォーム送信を分けている。",
+      "distractorRationales": [
+        "色の変更だけではキーボードから機能を実行できない。",
+        "移動だけ可能でも、送信がキーボードで完了しない。",
+        "この機能をキーボードから実行できる条件。",
+        "ポインター操作と特定タイミングを必須にしている。"
+      ],
+      "sources": [
+        {
+          "title": "W3C — Understanding WCAG 2.2: Keyboard",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html"
+        }
+      ]
+    },
+    "reason": "新規。キーボードでフォーカスすることと機能を完了することを区別する。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "SC 2.1.1の全機能・個々のキーストロークのタイミング・軌跡依存の例外と、フォーム送信の例を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-web-color-redundant-encoding",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "折れ線グラフの2系列が赤と緑だけで区別され、同じ太さ・線種で、系列名は色見本の凡例にしかない。色の違いを見分けにくい人にも区別できるようにする改善はどれか。",
+      "choices": [
+        "線種を実線と破線に分け、系列名も各線の近くに記す",
+        "赤と緑の彩度だけを上げ、ほかは変えない",
+        "色を説明する凡例を削除する",
+        "2系列を同じ色・同じ線種にし、名称を付けない"
+      ],
+      "correctIndex": 0,
+      "explanation": "線種と直接の名称を併用すると、色を見分けられなくても系列を対応付けやすい。色による区別は使い続けてもよいが、情報を色の違いだけへ依存させない。これだけで図全体のアクセシビリティが保証されるわけではない。",
+      "distractorRationales": [
+        "色以外の視覚的な手掛かりを加えている。",
+        "彩度だけでは色を見分けにくい人への識別手掛かりにならない。",
+        "系列との対応をさらに分かりにくくする。",
+        "どちらの線か識別する情報を失う。"
+      ],
+      "sources": [
+        {
+          "title": "W3C — Understanding WCAG 2.2: Use of Color",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html"
+        }
+      ]
+    },
+    "reason": "新規。原資料の例を転載せず、線種と直接ラベルのグラフを独自に設問化。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "SC 1.4.1の色による情報を別の視覚的手段でも示す趣旨と、色の利用自体を禁止しない説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-web-svg-vector-scaling",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "ビットマップ画像を含めず、SVGの円やパスだけで描いた図を拡大表示する。PNGの画素を単に拡大する場合との基本的な違いはどれか。",
+      "choices": [
+        "SVGは必ずPNGよりファイル容量が小さい",
+        "SVGは元の図形情報を失い、画素数しか保存しない",
+        "SVGでは曲線を記述できず、直線の拡大しかできない",
+        "SVGは図形の記述から表示サイズに応じて描画できる"
+      ],
+      "correctIndex": 3,
+      "explanation": "SVGのベクトル図形は座標や曲線などの記述から描画するので、元画像の画素を引き伸ばす方式とは異なる。容量の大小は内容次第。SVGに埋め込んだビットマップまで自動的に高精細になるという意味ではない。",
+      "distractorRationales": [
+        "図の複雑さや圧縮などによるため、必ず小さいとはいえない。",
+        "円やパスは画素配列だけでなく図形を記述する。",
+        "パスには曲線も記述できる。",
+        "ベクトル表現を拡大表示する基本的な仕組み。"
+      ],
+      "sources": [
+        {
+          "title": "MDN — SVG: Scalable Vector Graphics",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/SVG"
+        },
+        {
+          "title": "MDN — SVG image element",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/image"
+        }
+      ]
+    },
+    "reason": "新規。埋め込んだ画像を除く条件を示し、拡大と容量の保証を分ける。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "SVGのベクトル表現・表示サイズ、image要素がラスター画像も含められることを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-web-log-axis-midpoint",
+    "domain": "情報・計算機科学",
+    "subdomain": "Web・HCI・可視化",
+    "content": {
+      "question": "正の値を表す対数軸で、10と1,000の目盛りのちょうど中間の位置に対応する値はどれか。",
+      "choices": [
+        "505",
+        "100",
+        "500",
+        "31.6"
+      ],
+      "correctIndex": 1,
+      "explanation": "対数軸では等しい倍率の変化が等しい距離になる。10→100と100→1,000はいずれも10倍なので、100が中間。算術平均505ではなく、幾何平均√(10×1,000)に対応する。",
+      "distractorRationales": [
+        "線形軸での中間に当たる算術平均。",
+        "両側への倍率が10で等しい。",
+        "1,000の半分は、この二つの目盛りの中間ではない。",
+        "約31.6は10と100の幾何平均。"
+      ],
+      "sources": [
+        {
+          "title": "D3 — Logarithmic scales",
+          "url": "https://d3js.org/d3-scale/log"
+        }
+      ]
+    },
+    "reason": "新規。線形軸と対数軸の目盛りの読み方を比較する。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "対数スケールのy＝m log(x)＋bと正の領域での定義を確認。設問の数値は独立作成し、対数の平均から導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000187",
+    "domain": "情報・計算機科学",
+    "subdomain": "情報理論・倫理・その他",
+    "content": {
+      "question": "有限種類の記号を可逆な二進接頭符号で1記号ずつ符号化する。記号Xの確率をp(x)、平均符号長をLビットとすると、常にL以下となる情報量はどれか。",
+      "choices": [
+        "最大確率maxₓp(x)の逆数",
+        "記号へ割り当てた整数値の分散",
+        "エントロピーH(X)＝−Σₓp(x)log₂p(x)",
+        "記号の種類数そのもの"
+      ],
+      "correctIndex": 2,
+      "explanation": "二進接頭符号の平均長はエントロピー以上になる。符号長は整数なので、最適な符号でも常にH(X)と一致するわけではない。記号名を数値に置き換えた分散とは別の量である。",
+      "distractorRationales": [
+        "例えば等確率の4記号なら逆数4だが、平均長2ビットで符号化できる。",
+        "記号に付けた数値の尺度で変わり、この下限にはならない。",
+        "底2のエントロピーが平均ビット数の下限。",
+        "等確率の4記号なら、4より少ない2ビットで符号化できる。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 6.450 — Lecture 2: Source coding and entropy bounds",
+          "url": "https://ocw.mit.edu/courses/6-450-principles-of-digital-communication-i-fall-2009/1811fc78b310cb16f387254cb2efca5e_MIT6_450F09_slide02.pdf"
+        }
+      ]
+    },
+    "reason": "接頭符号の条件と底2・ビットの単位を追加し、符号長の境界と分散を区別。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "スライド24以降の平均符号長の定義と、接頭符号のH(X)≤Lmin<H(X)＋1を確認。独自の4記号の反例で誤答を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000192",
+    "domain": "情報・計算機科学",
+    "subdomain": "情報理論・倫理・その他",
+    "content": {
+      "question": "Scrum Guideで、1か月以内の固定長とされ、計画・Daily Scrum・レビュー・振り返りなどを含むイベントはどれか。",
+      "choices": [
+        "Sprint（スプリント）",
+        "Sprint Reviewだけ",
+        "Daily Scrumだけ",
+        "Product Backlog"
+      ],
+      "correctIndex": 0,
+      "explanation": "スプリントは1か月以内の固定長のイベントで、Scrumの各イベントや必要な作業を含む。レビューやDaily Scrumはその中のイベント。スプリントはScrumの用語であり、アジャイルの全手法が必ず同じ構成を取るとはしない。",
+      "distractorRationales": [
+        "Scrumの反復を形作り、他のイベントを含む。",
+        "成果と今後を検査する、スプリント内のイベント。",
+        "進捗と計画を調整する、通常15分のイベント。",
+        "プロダクトで必要な作業を整理した一覧で、時間枠のイベントではない。"
+      ],
+      "sources": [
+        {
+          "title": "Schwaber & Sutherland — The Scrum Guide",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        }
+      ]
+    },
+    "reason": "アジャイル全般への過度な一般化をScrumへ限定し、地質年代など無関係な誤答を除去。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "The Sprintの固定長・1か月以下・各イベントを内包する定義、Daily ScrumとSprint Reviewの定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000200",
+    "domain": "情報・計算機科学",
+    "subdomain": "情報理論・倫理・その他",
+    "content": {
+      "question": "説明可能AIの手法LIMEが、一つの予測を説明するために取る基本的な方法はどれか。",
+      "choices": [
+        "モデルが正解率100％になるまで訓練し直す",
+        "入力特徴と現実の結果の因果関係を、説明の生成だけで証明する",
+        "全入力について元モデルと完全に同じ、唯一の簡単な式を必ず求める",
+        "対象の予測の近傍で、元モデルの振る舞いを解釈しやすいモデルで近似する"
+      ],
+      "correctIndex": 3,
+      "explanation": "LIMEは対象の予測の周辺で説明用のモデルを学習する。局所的な振る舞いの近似と、全入力での完全な一致や因果関係の証明は異なる。説明が得られても、予測が正しいことまで自動的に保証されるわけではない。",
+      "distractorRationales": [
+        "元の分類器を完全正解にする訓練法ではない。",
+        "局所的な予測の近似だけで因果関係は証明されない。",
+        "全域での完全一致や説明の一意性を保証する手法ではない。",
+        "LIMEの局所的で解釈可能な説明モデルに対応する。"
+      ],
+      "sources": [
+        {
+          "title": "Ribeiro, Singh & Guestrin — Why Should I Trust You?",
+          "url": "https://arxiv.org/abs/1602.04938"
+        }
+      ]
+    },
+    "reason": "分野名の用語当てから、具体的な説明手法と保証範囲を問う形へ変更。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文の公開抄録の、予測の周辺で解釈可能なモデルを学習する定義を確認。全文や因果推論の実験を読了した扱いにはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-privacy-epsilon-strength",
+    "domain": "情報・計算機科学",
+    "subdomain": "情報理論・倫理・その他",
+    "content": {
+      "question": "同じ「隣接データ集合」の定義を使う純粋なε差分プライバシー（δ＝0）で、εの値を大きくした場合、要求する保証はどう変わるか。",
+      "choices": [
+        "必ず各個人の氏名が公開される",
+        "許容する出力確率比の上限が大きくなり、要求する条件は緩くなる",
+        "許容する出力確率比の上限が小さくなり、要求する条件は厳しくなる",
+        "隣接する二つのデータ集合で、必ず同じ値を出力しなければならなくなる"
+      ],
+      "correctIndex": 1,
+      "explanation": "隣接するD、D′と任意の出力事象Sに対し、Pr[M(D)∈S]≤e^ε Pr[M(D′)∈S]を要求する。εが大きいほど許容範囲は広い。保証の条件が緩くなるのであって、個人情報が必ず公開されると断定するものではない。",
+      "distractorRationales": [
+        "保証が緩いことから特定の情報の公開が必ず起こるとはいえない。",
+        "e^εが増え、許容する出力確率比の上限が大きくなる。",
+        "εが小さくなる場合と逆。",
+        "同じ実行結果を強制する条件ではなく、出力分布を比較する。"
+      ],
+      "sources": [
+        {
+          "title": "Dwork & Roth — The Algorithmic Foundations of Differential Privacy",
+          "url": "https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf"
+        }
+      ]
+    },
+    "reason": "新規。パラメーターの大小と保証の強弱を区別し、必ず漏れる・完全に同じ出力といった過大な推論を避ける。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Definition 2.4の隣接データ・任意の出力事象の確率不等式と、δ＝0の場合を確認。εの単調性から保証の強さを導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究、原著者の教材、W3C・実装者の公式資料の本文・公開抄録・索引抜粋を、各sourceLocation記載の範囲で照合。設問・選択肢・説明は独自作成し、資料の文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  }
+]
