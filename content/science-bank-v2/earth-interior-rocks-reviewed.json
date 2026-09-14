@@ -1,0 +1,664 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000041",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "地球の主磁場を維持するダイナモ作用が、主に起きている領域はどれか。",
+      "choices": [
+        "液体の外核",
+        "固体の内核",
+        "地殻",
+        "上部マントル"
+      ],
+      "correctIndex": 0,
+      "explanation": "電気をよく通す外核の液体金属の運動が電流を生み、磁場の維持に関わる。地殻の磁化や電離圏の電流にも磁場はあるが、地球の主磁場の起源とは区別する。",
+      "distractorRationales": [
+        "主磁場を維持するダイナモが働く領域。",
+        "外核とは状態の異なる固体の領域。",
+        "磁化はあるが主磁場の主要な起源ではない。",
+        "主磁場を維持する液体金属の領域ではない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — How does the Earth’s core generate a magnetic field?",
+          "url": "https://www.usgs.gov/faqs/how-does-earths-core-generate-a-magnetic-field"
+        }
+      ]
+    },
+    "reason": "主磁場と局所的な磁場を分け、外核の対流・ダイナモを問う旧問を統合。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS FAQ本文で外核の導電性流体の運動、誘導電流、磁場の維持を照合。熱源の内訳や反転周期は問わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000168",
+      "10000000-0000-4000-8007-000000000188"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000101",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "海洋側のプレートが他方の下へ沈み込む境界で、典型的に伴う地形の組合せはどれか。",
+      "choices": [
+        "中央海嶺と、新しく広がる海洋底",
+        "海溝と、その陸側の火山弧",
+        "大陸の衝突帯と、境界全体に広がる中央海嶺",
+        "境界に沿う横ずれ断層と、連続した海洋底拡大軸"
+      ],
+      "correctIndex": 1,
+      "explanation": "沈み込み帯には海溝と、その陸側の火山弧が伴うことが多い。海洋側と大陸側の境界というだけでは運動の向きが定まらないので、沈み込みを条件にしている。",
+      "distractorRationales": [
+        "主に海洋底が拡大する境界の組合せ。",
+        "指定した沈み込み帯の典型的な組合せ。",
+        "大陸衝突と中央海嶺の形成を一組の特徴にしている。",
+        "横ずれと拡大を同じ場所の一律の特徴として混同している。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — This Dynamic Earth: Understanding plate motions",
+          "url": "https://pubs.usgs.gov/gip/dynamic/understanding.html"
+        }
+      ]
+    },
+    "reason": "海洋・大陸という名称だけで必ず沈み込みとした旧条件を修正。同じ核心の収束境界問題を統合。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Understanding plate motionsのOceanic-continental/Oceanic-oceanic convergenceで海溝と火山弧を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000075",
+      "10000000-0000-4000-8007-000000000186"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000063",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "地球のマントルの大部分について、地震波とプレート運動の時間尺度を考えた説明として最も適切なのはどれか。",
+      "choices": [
+        "全体が液体のマグマなので、地震の横波は通れない",
+        "気体なので、圧力を伝えることができない",
+        "主に固体だが、長い地質学的時間では変形して流動できる",
+        "固体なので、どれほど長い時間がたっても変形しない"
+      ],
+      "correctIndex": 2,
+      "explanation": "マントルの大部分は固体の岩石であり、長い時間には変形・流動する。この流れや沈み込むプレートなどを含めて、マントル対流とプレート運動を考える。",
+      "distractorRationales": [
+        "局所的な融解をマントル全体の状態へ一般化している。",
+        "マントルの状態の説明ではない。",
+        "短い時間の固体としての応答と、長期の流動を区別している。",
+        "固体も高温・応力と長い時間のもとでは変形し得る。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Are the tectonic plates floating on magma?",
+          "url": "https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma"
+        }
+      ]
+    },
+    "reason": "マントル対流を全体が溶けたマグマの循環と誤解させないよう、状態と時間尺度を問う。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS FAQの短時間ではsolid rock、長い地質学的時間ではslowly flowsという本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000065",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "地球内部のD″領域は、主にどこを指すか。",
+      "choices": [
+        "地殻と上部マントルの境界付近",
+        "内核の中心付近",
+        "外核の最上部で、核・マントル境界のすぐ下",
+        "下部マントルの最下部で、核・マントル境界のすぐ上"
+      ],
+      "correctIndex": 3,
+      "explanation": "D″領域は核・マントル境界の上にあるマントル最深部を指す。地震波の速度や異方性の地域差、鉱物の相転移などが研究されている。",
+      "distractorRationales": [
+        "モホロビチッチ不連続面に関係する位置。",
+        "D″領域は内核ではない。",
+        "境界の上下を逆にしており、そこは外核側。",
+        "D″領域の位置。"
+      ],
+      "sources": [
+        {
+          "title": "東京大学 地球惑星科学専攻 — 地震波形解析による異方性構造の高解像度イメージング（2021）",
+          "url": "https://www.eps.s.u-tokyo.ac.jp/focus20210620/"
+        }
+      ]
+    },
+    "reason": "旧設問・正解理由がともにCMB直下となっていた誤りを直上へ訂正。厚さを全球一律の固定値にはしない。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "東京大学2021年研究発表でCMB上のマントル最深部をD″領域とする本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000200",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "沈み込み帯で、スラブのヒンジ（曲がり始める部分）が海側へ後退する運動を特に何と呼ぶか。",
+      "choices": [
+        "スラブ・ロールバック",
+        "リッジプッシュ",
+        "大陸衝突",
+        "海底の堆積物の圧密"
+      ],
+      "correctIndex": 0,
+      "explanation": "この沈み込み口の後退をスラブ・ロールバックという。背弧の拡大に関わる場合があるが、上盤の運動やマントルの流れなども関わり、後退すれば必ず同じ拡大量になるわけではない。",
+      "distractorRationales": [
+        "指定したヒンジの後退運動。",
+        "海嶺付近の高まりに関係する重力による力。",
+        "大陸同士の収束・衝突の呼称。",
+        "埋没した堆積物の間隙などが減る過程。"
+      ],
+      "sources": [
+        {
+          "title": "Sdrolias & Müller (2006) — Controls on back-arc basin formation",
+          "url": "https://doi.org/10.1029/2005GC001090"
+        }
+      ]
+    },
+    "reason": "バックア弧などの不自然な用語と、否定文の強さだけで当てられる旧問を改め、運動の定義を問う。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Sdrolias & Müller (2006) §5のヒンジの海側への移動という定義、Abstractの背弧拡大に関わる複数要因を本文・索引本文で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000179",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "プレート運動の駆動に関わるスラブプルを、最も適切に説明したものはどれか。",
+      "choices": [
+        "海嶺の高い部分から重力で横へ広がる効果",
+        "冷たく密度の高い沈み込む板が重力で沈み、つながる板を引く効果",
+        "マントルの流れが板の底面に及ぼすせん断力",
+        "海溝で板が曲がることに伴う、沈み込みへの抵抗力"
+      ],
+      "correctIndex": 1,
+      "explanation": "スラブプルは、周囲に対して負の浮力を持つ沈み込んだ板の重力による牽引を指す。海嶺からの重力による広がりであるリッジプッシュとは区別する。",
+      "distractorRationales": [
+        "リッジプッシュ側の説明。",
+        "スラブプルの力の起源と作用。",
+        "板の底面に働く応力で、沈み込む板の負の浮力による牽引とは別。",
+        "曲げに伴う抵抗で、指定した重力による牽引ではない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — This Dynamic Earth: Some unanswered questions",
+          "url": "https://pubs.usgs.gov/gip/dynamic/unanswered.html"
+        }
+      ]
+    },
+    "reason": "大陸プレートだけを相手とせず、沈み込む板の負の浮力という機構に絞る。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Some unanswered questionsの冷たく密度の高いスラブの重力沈降が残りの板を引く説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000061",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "花崗岩を成因に基づいて分類した組合せはどれか。",
+      "choices": [
+        "堆積岩・砕屑岩",
+        "変成岩・接触変成岩",
+        "火成岩・深成岩",
+        "火成岩・火山岩"
+      ],
+      "correctIndex": 2,
+      "explanation": "花崗岩は地下でマグマが冷えて結晶化した深成岩で、火成岩の一種。地表やその近くで固まる火山岩とは、形成する場所や組織が異なる。",
+      "distractorRationales": [
+        "堆積物が固まる成因の分類。",
+        "主に固体のまま変成する成因の分類。",
+        "花崗岩の成因に対応する。",
+        "火成岩の一種ではあるが、花崗岩を火山岩とは分類しない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — What are igneous rocks?",
+          "url": "https://www.usgs.gov/faqs/what-are-igneous-rocks"
+        }
+      ]
+    },
+    "reason": "三大分類とその一種を混在させた四択を、成因と細分類の組合せへ変更。同文の旧問を統合。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS What are igneous rocks?のIntrusive Igneous Rocksでgraniteの分類と地下での結晶成長を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000151"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000161",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "ホットスポットに関係する火山の分布について、観測例に合うのはどれか。",
+      "choices": [
+        "必ずプレートの収束境界にだけ存在する",
+        "必ずプレート境界から遠い内部にだけ存在する",
+        "プレート上の古い火山は、板が動いても熱源の真上から動かない",
+        "プレート内部にも、境界付近にも存在する例がある"
+      ],
+      "correctIndex": 3,
+      "explanation": "ハワイはプレート内部の例で、アイスランドはプレート境界付近の例。ホットスポットを「境界には存在しない」と定義しない。火山列の形成では、板と熱源の相対運動が重要になる。",
+      "distractorRationales": [
+        "ハワイのようなプレート内部の例に合わない。",
+        "アイスランドのような境界付近の例に合わない。",
+        "火山を載せた板と熱源の相対運動を無視している。",
+        "観測される両方の位置の例に合う。"
+      ],
+      "sources": [
+        {
+          "title": "USGS Hawaiian Volcano Observatory — Volcano Watch: Hotspots",
+          "url": "https://www.usgs.gov/news/volcano-watch-hotspots"
+        }
+      ]
+    },
+    "reason": "ホットスポットは必ず板内部・完全に固定という旧一般化を修正。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS HVO Volcano Watch本文でHawaii等の内部例とIceland等の境界付近の例を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000171",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "中央海嶺で両側のプレートが離れ、新しい海洋地殻が形成される境界はどれか。",
+      "choices": [
+        "発散境界",
+        "沈み込み境界",
+        "大陸衝突境界",
+        "トランスフォーム境界"
+      ],
+      "correctIndex": 0,
+      "explanation": "発散境界ではプレートが離れ、中央海嶺などで新しい海洋地殻が作られる。プレート同士が近づく収束境界や、横へずれる境界とは区別される。",
+      "distractorRationales": [
+        "指定したプレートの相対運動。",
+        "一方の板が他方の下へ入る収束境界。",
+        "大陸同士が近づく収束境界。",
+        "主に横へすれ違う境界。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — This Dynamic Earth: Understanding plate motions",
+          "url": "https://pubs.usgs.gov/gip/dynamic/understanding.html"
+        }
+      ]
+    },
+    "reason": "新しくできる玄武岩質地殻と海洋プレート全体を区別。境界の比較にホットスポットを混ぜない。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Understanding plate motionsのDivergent boundariesで離れる板と新しい海洋地殻の生成を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000071",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "岩石の変成作用の代表的な過程はどれか。",
+      "choices": [
+        "岩石全体が融け、マグマとして再び固まる",
+        "主に固体のまま、温度・圧力・流体などの影響で鉱物や組織が変わる",
+        "河川で運ばれた砂が地表付近に積もる",
+        "海水が蒸発し、溶けていた塩類が結晶化する"
+      ],
+      "correctIndex": 1,
+      "explanation": "変成作用では主に固体のまま鉱物の組合せや組織が変化する。必ず高温と高圧の両方が必要というわけではなく、貫入したマグマの熱が主要因となる接触変成作用もある。",
+      "distractorRationales": [
+        "溶融後の固化は火成岩を作る過程。",
+        "変成作用の代表的な過程。",
+        "堆積の過程。",
+        "蒸発岩を生む沈殿の過程で、既存岩石の変成とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — What are metamorphic rocks?",
+          "url": "https://www.usgs.gov/faqs/what-are-metamorphic-rocks"
+        }
+      ]
+    },
+    "reason": "温度と圧力が常に同時に上がるという解釈を避け、固体反応と接触変成を区別する。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS FAQの成因の組合せとContact metamorphismを本文照合。すべての変成岩が密度を増すという一般化は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000067",
+    "domain": "地学",
+    "subdomain": "地震・地球物理",
+    "content": {
+      "question": "外核を液体とする地球内部モデルと、地震波の伝わり方の対応として適切なのはどれか。",
+      "choices": [
+        "外核には質量がないため、どんな波も入れない",
+        "外核が液体なので、横波は伝わるが縦波は伝わらない",
+        "外核が地震波の時間尺度で剪断の弾性復元力を支えず、内部をS波が伝わらない",
+        "外核が鉄を含むため、固体か液体かにかかわらずS波が伝わらない"
+      ],
+      "correctIndex": 2,
+      "explanation": "横波であるS波には剪断の弾性復元力が必要で、液体の外核内部は伝わらない。圧縮・膨張の波であるP波は液体も伝わる。",
+      "distractorRationales": [
+        "外核は大きな質量と密度を持つ。",
+        "縦波と横波の対応が逆。",
+        "液体の外核とS波の伝播の対応。",
+        "物質が鉄であることだけでS波の可否は決まらない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Are the tectonic plates floating on magma?",
+          "url": "https://www.usgs.gov/faqs/are-tectonic-plates-floating-magma"
+        }
+      ]
+    },
+    "reason": "固体同士の重複肢と、液体・超臨界流体というS波だけでは分けられない肢を除去。波と状態の機構を問う旧問題を統合。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS FAQで液体外核によるS波の遮断とP波の伝播を本文照合。表面波や流体の粘性波一般を否定する設問ではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000191",
+      "10000000-0000-4000-8005-000000000060"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000153",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "火成岩に共通する基本的な成因はどれか。",
+      "choices": [
+        "地表付近で砂や泥が堆積して固まること",
+        "岩石が主に固体のまま熱などで再結晶すること",
+        "生物が作る骨格だけが集積して固まること",
+        "マグマや溶岩が冷えて固まること"
+      ],
+      "correctIndex": 3,
+      "explanation": "溶けた岩石物質が冷却・固化してできるのが火成岩。地下で固まる深成岩も、地表付近で固まる火山岩も含む。",
+      "distractorRationales": [
+        "砕屑性の堆積岩に関わる成因。",
+        "変成作用の説明。",
+        "生物源の堆積岩に関わる成因。",
+        "火成岩の基本的な成因。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Collecting Rocks: Types of Rocks",
+          "url": "https://pubs.usgs.gov/gip/collect1/collectgip.html"
+        }
+      ]
+    },
+    "reason": "名称だけを重複して問う旧問を統合し、他の岩石の成因と比較する四択へ変更。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Collecting RocksのTypes of Rocksで、溶けた岩石の冷却・固化による火成岩の定義を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000045"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000103",
+    "domain": "地学",
+    "subdomain": "鉱物・岩石・結晶",
+    "content": {
+      "question": "マグマが冷えて岩石になるとき、ほかの条件が同程度なら、結晶の粒径について一般的に期待される傾向はどれか。",
+      "choices": [
+        "ゆっくり冷えるほど結晶が成長する時間があり、粗粒になりやすい",
+        "急冷するほど結晶が成長する時間が長く、粗粒になりやすい",
+        "冷却速度にかかわらず、結晶の大きさはすべて同じになる",
+        "ゆっくり冷却すると必ず結晶ができず、ガラスだけになる"
+      ],
+      "correctIndex": 0,
+      "explanation": "冷却に時間がかかると結晶が成長しやすく、急冷では細粒やガラス質になりやすい。実際の組織には組成や冷却履歴も影響する。",
+      "distractorRationales": [
+        "結晶成長の時間を考えた一般的な傾向。",
+        "急冷と成長時間の関係が逆。",
+        "結晶の成長に使える時間の影響を無視している。",
+        "急冷でガラス質になる場合などと逆の説明。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — What are igneous rocks?",
+          "url": "https://www.usgs.gov/faqs/what-are-igneous-rocks"
+        }
+      ]
+    },
+    "reason": "旧斑れという不明な語と、火山岩は斑れがなく深成岩はあるという誤説明を削除。冷却速度と粒径の傾向を問う。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS What are igneous rocks?のslow cooling/quick coolingと粒径・ガラス質の説明を本文照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  },
+  {
+    "familyKey": "earth-lithosphere-components",
+    "domain": "地学",
+    "subdomain": "プレート・地球内部・地殻",
+    "content": {
+      "question": "プレートテクトニクスでいうリソスフェア（岩石圏）を構成する範囲はどれか。",
+      "choices": [
+        "地殻だけ",
+        "地殻と、上部マントルのうち力学的に硬い最上部",
+        "マントル全体と外核",
+        "液体の外核だけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "リソスフェアは地殻と硬い最上部マントルを含む。地殻・マントルという主に組成による区分と、力学的な硬さによる区分を混同しない。",
+      "distractorRationales": [
+        "マントル側の硬い部分が抜けている。",
+        "リソスフェアの基本的な範囲。",
+        "マントル全体や外核を含む区分ではない。",
+        "液体の外核を指す語ではない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — This Dynamic Earth: Inside the Earth",
+          "url": "https://pubs.usgs.gov/gip/dynamic/inside.html"
+        }
+      ]
+    },
+    "reason": "旧問に欠けていた、地殻とプレート全体の区別を測る独立の新規問題。既存の同義問題がないことを旧設問一覧で確認。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "USGS Inside the Earthで上部マントルの硬い部分と地殻がrigid layer/lithosphereを作る本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "USGSの地球科学解説、東京大学の研究発表、背弧形成の原論文の取得できた本文を用いて事実を照合。設問・肢・説明を独自に作成し、資料の文章・演習・図表は転載していない。"
+    }
+  }
+]
