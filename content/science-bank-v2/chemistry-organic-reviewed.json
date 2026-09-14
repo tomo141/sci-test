@@ -1,0 +1,654 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000065",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "環を持たず、炭素間の結合がすべて単結合である飽和炭化水素の一般式はどれか。炭素原子数をnとする。",
+      "choices": [
+        "CₙH₂ₙ₊₂",
+        "CₙH₂ₙ",
+        "CₙH₂ₙ₋₂",
+        "CₙHₙ"
+      ],
+      "correctIndex": 0,
+      "explanation": "環のないアルカンはCₙH₂ₙ₊₂で表される。枝分かれがあっても成立する。環や多重結合がある炭化水素には、この式をそのまま適用できない。",
+      "distractorRationales": [
+        "指定されたアルカンの一般式。",
+        "環が一つの飽和炭化水素などの式で、指定した条件とは異なる。",
+        "環のない一つの三重結合を持つアルキンなどに対応する。",
+        "一般のアルカンを表さず、メタンCH₄やエタンC₂H₆とも一致しない。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Alkanes and Alkane Isomers",
+          "url": "https://openstax.org/books/organic-chemistry/pages/3-2-alkanes-and-alkane-isomers"
+        }
+      ]
+    },
+    "reason": "旧キーがアルケンを指す誤りを訂正。芳香族をすべてベンゼン骨格に限定する旧解説は削除した。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§3.2の飽和炭化水素の一般式と直鎖・分岐異性体を照合。環なしを明示した。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000032",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "水中でフェノールがエタノールより強い酸であることを説明する、重要な要因はどれか。",
+      "choices": [
+        "フェノールの沸点だけで酸性度が決まる",
+        "フェノキシドイオンで負電荷が芳香環へ非局在化する",
+        "フェノールが必ず完全電離する",
+        "フェノキシドイオンの負電荷が酸素にだけ完全に局在する"
+      ],
+      "correctIndex": 1,
+      "explanation": "フェノールの共役塩基であるフェノキシドでは、酸素と芳香環にまたがる共鳴が共役塩基を安定化する。エタノールの共役塩基には同じ芳香環への非局在化がない。酸性度の比較では溶媒の条件も大切である。",
+      "distractorRationales": [
+        "沸点は酸解離平衡を単独で決める量ではない。",
+        "脱プロトン化した形の安定化を説明する要因。",
+        "フェノールは水中で弱酸であり、完全電離を仮定しない。",
+        "芳香環へ非局在化できる点を逆に説明している。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Properties of Alcohols and Phenols",
+          "url": "https://openstax.org/books/organic-chemistry/pages/17-2-properties-of-alcohols-and-phenols"
+        }
+      ]
+    },
+    "reason": "一般のアルコール全部に同じpKaと構造を仮定せず、比較対象をエタノール・水中に限定した。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§17.2のフェノールとアルコールの酸性度、Figure 17.3周囲の本文のphenoxide共鳴を照合。図は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000066",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "分子の立体構造が、その鏡像と回転・平行移動だけでは重ね合わせられない性質を何というか。",
+      "choices": [
+        "同位体性",
+        "芳香族性",
+        "キラリティー",
+        "電気陰性度"
+      ],
+      "correctIndex": 2,
+      "explanation": "鏡像と重ね合わせられない立体的な性質をキラリティーという。キラルであるために、必ず炭素原子の不斉中心を持つとは限らない。",
+      "distractorRationales": [
+        "核種の違いによる概念で、鏡像との幾何学的関係ではない。",
+        "環状の電子構造に関する性質で、鏡像との重ね合わせの定義ではない。",
+        "鏡像と重ね合わせられないことを表す。",
+        "結合電子を引き寄せる傾向に関する量。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — chirality (C01058)",
+          "url": "https://goldbook.iupac.org/terms/view/C01058"
+        }
+      ]
+    },
+    "reason": "旧本文の「非重合理」を修正し、分子の性質と鏡像異性体の組を区別した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book C01058の検索索引から取得した定義本文を照合。鏡像と非重ね合わせ可能という幾何学的条件を使用。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000176",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "ベンゼン環を保ったまま、環上の水素原子一つだけを水素以外の原子・原子団に置き換えた誘導体は、置換数でどう分類するか。",
+      "choices": [
+        "無置換ベンゼン",
+        "二置換ベンゼン",
+        "三置換ベンゼン",
+        "一置換ベンゼン"
+      ],
+      "correctIndex": 3,
+      "explanation": "ベンゼン環上で置き換えた水素の数が一つなので、一置換（モノ置換）ベンゼンである。置換数と、官能基による別の分類は区別して考える。",
+      "distractorRationales": [
+        "水素の置換がない場合。",
+        "環上の二か所の水素を置き換えた場合。",
+        "環上の三か所の水素を置き換えた場合。",
+        "指定された一か所の置換に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Naming Aromatic Compounds",
+          "url": "https://openstax.org/books/organic-chemistry/pages/15-1-naming-aromatic-compounds"
+        }
+      ]
+    },
+    "reason": "アルコール等の重なり得る分類を誤答にしていた旧問を改訂。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§15.1のmonosubstituted / disubstituted benzenesの本文を照合。互いに排他的な置換数の選択肢にした。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000038",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "第一級アルコールR–CH₂OHを、通常のDess–Martin酸化で炭素骨格を保って酸化したときの生成官能基はどれか。Rはアルキル基とする。",
+      "choices": [
+        "アルデヒド（R–CHO）",
+        "ケトン（R–CO–R）",
+        "エーテル（R–O–R）",
+        "エステル（R–COO–R）"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dess–Martin酸化では第一級アルコールの–CH₂OHが–CHOとなる。第一級アルコールをどのような条件で酸化しても同じ生成物になる、という意味ではない。",
+      "distractorRationales": [
+        "指定された酸化に対応する。",
+        "同じ炭素骨格の第一級アルコールからこの構造にはならない。",
+        "酸素の両側に炭素基を持つ結合は、この酸化の生成官能基ではない。",
+        "指定した酸化だけでエステル結合を作るわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Oxidation of Alcohols",
+          "url": "https://openstax.org/books/organic-chemistry/pages/17-7-oxidation-of-alcohols"
+        }
+      ]
+    },
+    "reason": "「穏やか」という曖昧な条件を試薬系で特定し、酸化条件による違いを残した。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§17.7本文のDess–Martinによる第一級→アルデヒド、第二級→ケトンを照合。練習問題・反応図は使っていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000030",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "ハメット式log₁₀(kX/kH)=ρσで、特定の位置にある置換基Xの電子効果を表す置換基定数はどれか。",
+      "choices": [
+        "ρ",
+        "σ",
+        "kX",
+        "kH"
+      ],
+      "correctIndex": 1,
+      "explanation": "σは置換基とその位置に対応する定数で、ρは対象とする反応が置換基効果にどの程度応答するかを表す。通常のハメット式は主にメタ・パラ置換ベンゼン誘導体の系列に用いる。",
+      "distractorRationales": [
+        "反応系列の応答を表し、置換基定数とは役割が異なる。",
+        "問われた置換基定数。",
+        "置換体についての反応速度定数。",
+        "基準となる水素置換体の反応速度定数。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — Hammett equation (H02732)",
+          "url": "https://goldbook.iupac.org/terms/view/H02732"
+        }
+      ]
+    },
+    "reason": "根拠のない旧「テーラー定数」等を削除し、同じ式の各量を区別する問いにした。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book H02732の索引本文とIUPAC 1994用語集Hの式・σ/ρの定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000025",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "四面体型の反応炭素で、求核剤が脱離基の反対側から一段階で置換する典型的なS_N2反応の立体化学はどれか。",
+      "choices": [
+        "平面カルボカチオンが必ず蓄積する",
+        "立体配置が必ず保持される",
+        "反応炭素まわりの幾何学的な配置が反転する",
+        "求核剤は必ず脱離基と同じ側から結合する"
+      ],
+      "correctIndex": 2,
+      "explanation": "典型的な炭素上のS_N2では、背面攻撃と脱離が一つの段階で起こり、ワルデン反転を生じる。反応で置換基の優先順位も変わり得るため、R/S記号が必ず逆になるという言い方はしない。",
+      "distractorRationales": [
+        "独立したカルボカチオン中間体を経る機構は、指定したS_N2機構ではない。",
+        "指定された一回の背面置換では幾何学的に反転する。",
+        "背面攻撃に伴うワルデン反転。",
+        "指定した背面攻撃と逆。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, The SN2 Reaction",
+          "url": "https://openstax.org/books/organic-chemistry/pages/11-2-the-sn2-reaction"
+        }
+      ]
+    },
+    "reason": "旧「ワルデン転位」を反転へ修正。三級基質なら必ずS_N1という断定を削除した。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§11.2の一段階・中間体なし・脱離基と反対側からの結合とinversionの本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000065",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "ベンゼン環が求電子剤E⁺と反応し、脱プロトン化によって芳香族性を回復して環上のHがEに置き換わる反応を何というか。",
+      "choices": [
+        "芳香族求核置換",
+        "アルケンの求電子付加",
+        "ラジカル重合",
+        "芳香族求電子置換"
+      ],
+      "correctIndex": 3,
+      "explanation": "この機構は芳香族求電子置換（EAS）。求電子剤が電子豊富な環と結合した後、H⁺が脱離して芳香族性が回復する。「電子求引基が置換する」という意味ではない。",
+      "distractorRationales": [
+        "求核剤が関与する別の置換分類。",
+        "付加したままの生成物を作る分類で、指定した置換とは異なる。",
+        "多数のモノマーをつなぐ連鎖過程ではない。",
+        "求電子剤による芳香環上の水素の置換に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Chapter 16 Summary",
+          "url": "https://openstax.org/books/organic-chemistry/pages/16-summary"
+        }
+      ]
+    },
+    "reason": "旧「電子求引芳香族置換」という不正確な名称と、求電子剤・電子求引基の混同を訂正。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Chapter 16 Summary冒頭の二段階機構と芳香環の回復を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000027",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "次の中性炭化水素のうち、基底状態で六つのπ電子が六員環全体に共役した代表的な芳香族化合物はどれか。",
+      "choices": [
+        "ベンゼン",
+        "シクロヘキサン",
+        "シクロヘキセン",
+        "1,3-シクロヘキサジエン"
+      ],
+      "correctIndex": 0,
+      "explanation": "ベンゼンでは六つの炭素のp軌道が環状に重なり、六つのπ電子を持つ。六員環であることだけでは芳香族とはいえず、環を一周する共役と電子数が重要。",
+      "distractorRationales": [
+        "六つのπ電子を持つ芳香族の代表例。",
+        "炭素間は単結合で、指定したπ共役を持たない。",
+        "二重結合一つだけでは環全体の共役にならない。",
+        "二重結合は共役しているが、飽和炭素で環全体の共役が途切れる。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Aromaticity and the Hückel 4n + 2 Rule",
+          "url": "https://openstax.org/books/organic-chemistry/pages/15-3-aromaticity-and-the-huckel-4n-2-rule"
+        }
+      ]
+    },
+    "reason": "六員環というだけで選べる旧肢を改訂。Hückel則をあらゆる多環系へ無条件に一般化しない。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§15.3のベンゼンの六π電子・平面環状共役を照合。誤答の各構造で連続するp軌道の有無を独立確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000031",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "軌道対称性の選択則では、基底状態から熱的に起こる4π電子系の協奏的な電子環状反応は、どちらの回転様式が許容されるか。",
+      "choices": [
+        "逆旋的（両端が逆向きに回転）",
+        "同旋的（両端が同じ向きに回転）",
+        "同旋・逆旋とも必ず等確率",
+        "両端の軌道の向きは反応と無関係"
+      ],
+      "correctIndex": 1,
+      "explanation": "4π電子系の熱的な電子環状反応は同旋的（conrotatory）。軌道対称性の許容・禁制は反応経路を制約するが、許容なら必ず高収率で進むという保証ではない。",
+      "distractorRationales": [
+        "6π電子系の熱的反応での許容様式と取り違えている。",
+        "4π電子系の熱的反応に対応する。",
+        "二つの様式を等確率にする選択則ではない。",
+        "末端軌道の対称性と重なりが結合の形成・開裂に関係する。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Electrocyclic Reactions",
+          "url": "https://openstax.org/books/organic-chemistry/pages/30-2-electrocyclic-reactions"
+        },
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Stereochemistry of Thermal Electrocyclic Reactions",
+          "url": "https://openstax.org/books/organic-chemistry/pages/30-3-stereochemistry-of-thermal-electrocyclic-reactions"
+        }
+      ]
+    },
+    "reason": "旧「周辺性反応」という誤訳を削除。人物名だけでなく、熱・電子数・協奏性を指定した選択則の理解を問う。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§30.2の同旋/逆旋の定義と§30.3の基底状態HOMO、共役ジエンの同旋・トリエンの逆旋の本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000034",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "ハモンドの仮説は、遷移状態と、それに続く不安定な中間体のエネルギーが近いとき、その二つの構造について何を示唆するか。",
+      "choices": [
+        "必ず原子の結合順序が完全に一致する",
+        "エネルギーが近いほど必ず鏡像異性体になる",
+        "小さな構造変化で互いに移れるような類似性がある",
+        "遷移状態は安定な生成物として単離できる"
+      ],
+      "correctIndex": 2,
+      "explanation": "エネルギーが近い隣接した状態は構造も似ている、という定性的な考え方である。遷移状態と中間体を同一物とするわけではなく、すべての反応座標で構造を厳密に決める公式でもない。",
+      "distractorRationales": [
+        "完全に同一の結合状態であるとは要求しない。",
+        "鏡像関係を結論する仮説ではない。",
+        "エネルギーの近い遷移状態と中間体の構造の類似を表す。",
+        "遷移状態は通常の安定生成物として単離する対象ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC — Glossary of terms used in physical organic chemistry, Hammond principle",
+          "url": "https://iupac.qmul.ac.uk/gtpoc/H.html"
+        }
+      ]
+    },
+    "reason": "反応中間体そのものの構造を問う旧記述と、根拠のない法則名の誤答肢を修正。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IUPAC Recommendations 1994のHammond principle項目本文を照合。遷移状態と不安定中間体のエネルギーが近い条件を使用。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000035",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "配座AとBが生成物形成より速く平衡化し、それぞれ不可逆的にPとQを作る。PとQは相互変換しない。Curtin–Hammett原理の下で生成物比について適切なのはどれか。",
+      "choices": [
+        "AとBの平衡濃度比だけで決まる",
+        "PとQが最終的に熱力学的平衡になるため、その安定性だけで決まる",
+        "平衡で少ない配座からの生成物が必ず多くなる",
+        "共通のエネルギー基準で比較した二つの遷移状態の自由エネルギー差に対応する"
+      ],
+      "correctIndex": 3,
+      "explanation": "生成速度の比はkA[A]/(kB[B])で、速い配座平衡の下では遷移状態の標準自由エネルギー差にまとめて表せる。反応物の平衡と生成物の平衡は別であり、この条件は生成物の熱力学支配ではない。",
+      "distractorRationales": [
+        "各配座から生成物へ進む速度定数も必要。",
+        "生成物どうしは相互変換しないという条件に反する。",
+        "少ない配座が有利とは限らず、速度定数との組合せで決まる。",
+        "速い配座平衡と各反応の速度を合わせて記述している。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — Curtin–Hammett principle (C01480)",
+          "url": "https://goldbook.iupac.org/terms/view/C01480"
+        }
+      ]
+    },
+    "reason": "旧「生成物比率が平衡支配」「通常は平衡に乏しい異性体が支配」という誤った断定を修正。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book C01480の検索索引で取得した定義・速度定数と配座平衡に関する補足を照合。遷移状態の比較の共通基準も明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000036",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "Morita–Baylis–Hillman反応で、アルデヒドと炭素–炭素結合を作る相手として典型的なのはどれか。求核的なホスフィンなどを触媒に用いる場合を考える。",
+      "choices": [
+        "電子求引基で活性化されたアルケン",
+        "多重結合も官能基もない単純なアルカン",
+        "飽和炭素鎖の第一級アルコール",
+        "置換基のないベンゼン"
+      ],
+      "correctIndex": 0,
+      "explanation": "典型的にはアクリル酸エステルやエノンなどの電子不足アルケンを用い、求核触媒による活性化を経てアルデヒドとの炭素–炭素結合を作る。活性メチレン化合物との縮合として定義するのは不適切。",
+      "distractorRationales": [
+        "この反応で利用する典型的な基質。",
+        "単純なアルカンには同じ求核触媒付加の部位がない。",
+        "アルデヒドと反応し得る条件はあるが、指定した炭素–炭素結合形成の典型的な相手ではない。",
+        "通常のベンゼン環を電子不足アルケンと同じように活性化する反応ではない。"
+      ],
+      "sources": [
+        {
+          "title": "The Journal of Organic Chemistry — Influence of Michael Acceptor Stereochemistry on Intramolecular Morita–Baylis–Hillman Reactions",
+          "url": "https://pubs.acs.org/doi/10.1021/jo051802l"
+        },
+        {
+          "title": "New Journal of Chemistry — A multi-pronged mechanistic study of the phosphine-mediated conjugate addition of an alcohol to an acetylenic ester",
+          "url": "https://pubs.rsc.org/en/content/articlehtml/2014/nj/c4nj01070a"
+        }
+      ]
+    },
+    "reason": "旧問の活性メチレン化合物という誤記を修正。触媒と基質の組合せに焦点を絞った。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "JOC 2006の原論文の索引掲載Abstractにある、ホスフィン触媒・エノンと側鎖アルデヒドを照合。NJC原論文の索引掲載序論でMoritaのアルデヒド捕捉の説明も確認。購読限定の1968年原報を本文読了とはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000037",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "オレフィンメタセシスに用いる代表的なGrubbs触媒の中心金属はどれか。",
+      "choices": [
+        "パラジウム（Pd）",
+        "ルテニウム（Ru）",
+        "ニッケル（Ni）",
+        "銅（Cu）"
+      ],
+      "correctIndex": 1,
+      "explanation": "代表的なGrubbs触媒はルテニウム錯体。オレフィンメタセシスでは、炭素–炭素二重結合を持つ部分どうしが組み替わる。すべてのメタセシス触媒がルテニウムという意味ではない。",
+      "distractorRationales": [
+        "代表的なGrubbs触媒の中心金属ではない。",
+        "代表的なGrubbs触媒の中心金属。",
+        "代表的なGrubbs触媒の中心金属ではない。",
+        "代表的なGrubbs触媒の中心金属ではない。"
+      ],
+      "sources": [
+        {
+          "title": "The Royal Swedish Academy of Sciences — Nobel Prize in Chemistry 2005, Presentation Speech",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2005/ceremony-speech/"
+        }
+      ]
+    },
+    "reason": "旧問題の人物ごとの不正確な表記・無関係な説明を整理し、触媒の化学的特徴を問う。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "2005年授賞式スピーチの索引掲載本文でGrubbsのRu触媒とSchrockのMo触媒を区別。触媒性能全般や空気中の安定性を全世代へ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "化学の定義・法則と適用条件を一次資料や著者の教材で照合。設問・全肢・解説は独自に作成し、資料の演習問題・図表・固有の表現は転載していない。"
+    }
+  }
+]

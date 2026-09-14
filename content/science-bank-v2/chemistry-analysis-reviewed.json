@@ -1,0 +1,438 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000030",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "リトマス紙を使って水溶液を調べる目的として適切なのはどれか。",
+      "choices": [
+        "酸性・塩基性をおおまかに判定する",
+        "試料の質量を0.1 mg単位で測る",
+        "溶けている元素をすべて特定する",
+        "色一つからpHを小数第二位まで決定する"
+      ],
+      "correctIndex": 0,
+      "explanation": "リトマスは酸塩基指示薬で、変色するpHの範囲を持つ。簡単な酸性・塩基性の判定に使えるが、同じ色になるpHの範囲があるため、正確なpH値を一意に読み取れるわけではない。",
+      "distractorRationales": [
+        "酸塩基指示薬としての用途。",
+        "質量を測る器具ではない。",
+        "元素分析を行うものではない。",
+        "一定の変色域を持つ指示薬から、その精度のpHは決められない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry: Atoms First, Acid-Base Titrations",
+          "url": "https://openstax.org/books/chemistry-atoms-first/pages/14-7-acid-base-titrations"
+        }
+      ]
+    },
+    "reason": "旧「pHを測る紙」を定性的な判定へ訂正。同じリトマスの色判定の別IDは同一問題族とした。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.7の酸塩基指示薬の変色域と、litmusの変色区間に関する本文・図の説明を照合。色から精密なpHを決めない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000059"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000024",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "ガラス電極を用いる一般的なpHメーターは、参照電極と組み合わせて何を測り、校正してpHに換算するか。",
+      "choices": [
+        "溶液を通過した光の色",
+        "電極間の電位差",
+        "溶液の粘度",
+        "試料の質量減少"
+      ],
+      "correctIndex": 1,
+      "explanation": "ガラス膜は水素イオンに応答する。参照電極との電位差を測り、標準液による校正と温度の条件を踏まえてpHを求める。溶液が無色でも測定できる。",
+      "distractorRationales": [
+        "指示薬の目視判定とは異なる電気化学的測定。",
+        "水素イオン応答を電位差として取り出す。",
+        "粘度計の測定量である。",
+        "重量分析の測定量である。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — pH glass electrode (P04545)",
+          "url": "https://goldbook.iupac.org/terms/view/P04545"
+        },
+        {
+          "title": "IUPAC Gold Book — operational pH cell (O04298)",
+          "url": "https://goldbook.iupac.org/terms/view/O04298"
+        }
+      ]
+    },
+    "reason": "装置名と測定対象が同語反復になっていた旧問を、実際の検出原理へ具体化した。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book P04545の水素イオン応答電極、O04298の応答電極と参照電極のセルの索引本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000026",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "固定相と、一定方向へ動く移動相への成分の分布の違いを利用する分離法はどれか。",
+      "choices": [
+        "単純なろ過",
+        "中和滴定",
+        "クロマトグラフィー",
+        "燃焼による元素分析"
+      ],
+      "correctIndex": 2,
+      "explanation": "クロマトグラフィーでは固定相と移動相の間で成分の分布・保持が異なり、移動の違いとして分離する。すべての方式で分離の要因が極性だけというわけではない。",
+      "distractorRationales": [
+        "通常は粒子をろ材で分ける操作で、指定された二相への分布による方法ではない。",
+        "酸塩基反応の当量関係を利用する分析。",
+        "固定相と移動相を用いる分離法。",
+        "燃焼して生成物を測定する分析である。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — chromatography (C01075)",
+          "url": "https://goldbook.iupac.org/terms/view/C01075"
+        }
+      ]
+    },
+    "reason": "目的の名称当てから分離原理の問いへ改訂。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book C01075の固定相・移動相と二相間分布の定義本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000040",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "薄層クロマトグラフィーのR_Fは、同じ展開で出発線から測ったどの距離の比か。",
+      "choices": [
+        "溶媒先端の距離 ÷ スポット中心の距離",
+        "スポットの幅 ÷ プレートの幅",
+        "プレートの長さ ÷ スポットの幅",
+        "スポット中心の距離 ÷ 溶媒先端の距離"
+      ],
+      "correctIndex": 3,
+      "explanation": "R_Fはスポット中心の移動距離を、同時に進んだ溶媒先端の距離で割った値。溶媒や固定相などの測定条件に依存するため、物質に固有の普遍的定数や分子量の直接測定値ではない。",
+      "distractorRationales": [
+        "分子と分母を逆にしている。",
+        "移動距離の比ではない。",
+        "展開した距離を用いる定義ではない。",
+        "出発線を共通にした移動距離の比。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — retardation factor (R05353)",
+          "url": "https://goldbook.iupac.org/terms/view/R05353"
+        }
+      ]
+    },
+    "reason": "極性・親和性を測定条件なしで物質固有の性質に結びつける旧説明を改め、定義を明確にした。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book R05353のスポット中心と移動相の同時移動距離の比を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000055",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "試料から作ったイオンをm/zに応じて分離・検出する分析法はどれか。",
+      "choices": [
+        "質量分析",
+        "赤外吸収分光",
+        "旋光度測定",
+        "熱量測定"
+      ],
+      "correctIndex": 0,
+      "explanation": "質量分析はイオンのm/zと信号を用いて試料を調べる。分子イオンだけでなく、付加イオンや断片イオン、多価イオンを観測することもあるので、すべてのピーク位置をそのまま中性分子の分子量と解釈しない。",
+      "distractorRationales": [
+        "m/zに基づくイオンの分析である。",
+        "主に分子振動などによる赤外光の吸収を測る。",
+        "偏光面の回転を測る。",
+        "熱の出入りを測る。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — mass analysis (M03710)",
+          "url": "https://goldbook.iupac.org/terms/view/M03710"
+        }
+      ]
+    },
+    "reason": "旧問にある同位体分離は蒸留等とも条件次第で重なり得るため、m/zを直接扱う測定原理へ限定。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book M03710のイオンのm/zによる分析を照合。旧同位体分析の設問も同じ測定原理の族へ関連付けた。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000070"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000061",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "有機分子の中赤外吸収スペクトルで、官能基の手がかりとなる吸収の主な起源はどれか。",
+      "choices": [
+        "原子核が別の元素に変わる反応",
+        "結合の伸縮・変角などの分子振動の遷移",
+        "全分子で同じ波長の可視発光",
+        "試料全体が容器の中を移動する並進運動だけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "中赤外領域では、結合の伸縮や変角といった分子振動に関係する吸収から官能基を調べられる。単一ピークだけですべての分子構造を一意に決められるという意味ではない。",
+      "distractorRationales": [
+        "通常の赤外吸収では元素が変わる核反応を利用しない。",
+        "官能基を調べる赤外吸収の主な起源。",
+        "物質によって異なる吸収を測るもので、共通の可視発光ではない。",
+        "容器内の並進だけでは官能基ごとの赤外吸収を説明しない。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Infrared Spectroscopy",
+          "url": "https://openstax.org/books/organic-chemistry/pages/12-6-infrared-spectroscopy"
+        }
+      ]
+    },
+    "reason": "回転遷移を無条件にすべて赤外の特徴とする旧文を避け、中赤外の分子振動に限定。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.6の中赤外・結合伸縮/変角・振動と官能基に関する本文を照合。図版は使用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000025",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "試料による散乱・発光を無視し、容器と溶媒の影響を補正した。入射光強度をI₀、透過光強度をIとすると、常用対数で定義する吸光度Aはどれか。",
+      "choices": [
+        "I/I₀",
+        "1−I/I₀",
+        "log₁₀(I₀/I)",
+        "log₁₀(I/I₀)"
+      ],
+      "correctIndex": 2,
+      "explanation": "常用対数による吸光度はA=log₁₀(I₀/I)。透過率そのものや、吸収された光の割合とは異なる。I=I₀ならA=0で、透過光が減るとAは増える。",
+      "distractorRationales": [
+        "透過率であり、そのまま吸光度ではない。",
+        "指定された条件で吸収された割合に対応し、対数で定義する吸光度とは異なる。",
+        "指定された吸光度の定義。",
+        "光が吸収される通常の条件では符号が逆になる。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — absorbance (A00028)",
+          "url": "https://goldbook.iupac.org/terms/view/A00028"
+        },
+        {
+          "title": "IUPAC Gold Book — Beer–Lambert law (B00626)",
+          "url": "https://goldbook.iupac.org/terms/view/B00626"
+        }
+      ]
+    },
+    "reason": "単なる光の「吸収量」としていた旧説明を、透過率・吸収率との違いが分かる測定量へ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book A00028の入射/透過比の対数、B00626の十進対数式を照合。容器・溶媒・散乱等の扱いを明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8010-000000000016",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "Beer–Lambert則が成立する範囲で、同じ物質・波長・温度の溶液を比較する。吸光種の濃度を2倍、光路長を半分にすると、吸光度はどうなるか。",
+      "choices": [
+        "2倍になる",
+        "半分になる",
+        "4倍になる",
+        "変わらない"
+      ],
+      "correctIndex": 3,
+      "explanation": "A=εclで、モル吸光係数εが同じなら、濃度cと光路長lの積が同じなので吸光度も同じ。濃度変化で化学種の割合や相互作用が変わる場合などには、この前提の確認が必要。",
+      "distractorRationales": [
+        "濃度だけの変化を見て光路長の半減を無視している。",
+        "光路長だけの変化を見て濃度の倍増を無視している。",
+        "二つの操作をどちらも倍増として扱っている。",
+        "2c×(l/2)=clなので同じ。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — Beer–Lambert law (B00626)",
+          "url": "https://goldbook.iupac.org/terms/view/B00626"
+        }
+      ]
+    },
+    "reason": "旧法則の比例関係と条件の問題を同一族へ関連付け、成分やεが変わらない条件を明示。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book B00626の単色光・均一媒質・A=εclと帯域の条件を照合し、式への代入を独立検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000079"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000088",
+    "domain": "化学",
+    "subdomain": "分析化学・分光",
+    "content": {
+      "question": "構造情報を調べるタンデム質量分析（MS/MS）で、前駆イオンを選んだ後の代表的な操作はどれか。",
+      "choices": [
+        "そのイオンを解離させ、生成したイオンのm/zを分析する",
+        "質量分析をせず、試料の沸点だけを測る",
+        "すべてのイオンを中性化し、電荷なしで同じm/z分析をする",
+        "同じスペクトルを二度表示するだけで新しい断片情報を得る"
+      ],
+      "correctIndex": 0,
+      "explanation": "典型的なMS/MSでは、選んだ前駆イオンを衝突などで解離させ、生成物イオンを分析する。空間を分ける装置も、同じ場所で時間的に操作する装置もある。前駆イオンの信号が全く得られなければ、選択して分析できるとは限らない。",
+      "distractorRationales": [
+        "前駆イオンと断片の関係から構造の手がかりを得る。",
+        "タンデム質量分析の追加段階ではない。",
+        "m/zに基づくイオン分析と矛盾する。",
+        "同じデータの再表示は新しい解離分析ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — tandem mass spectrometer (T06250)",
+          "url": "https://goldbook.iupac.org/terms/view/T06250"
+        },
+        {
+          "title": "IUPAC Gold Book — tandem mass spectrometry in time (12592)",
+          "url": "https://goldbook.iupac.org/terms/view/12592"
+        }
+      ]
+    },
+    "reason": "EI分子イオンが弱いというだけでMS/MSを万能な解決とする旧文を避け、選択可能な前駆イオンと測定操作を明示。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book T06250の逐次段階と12592の選択・解離・生成イオン分析の定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "測定の定義・原理と条件を一次資料や著者の教材で照合。設問・全肢・解説を独自に作成し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  }
+]

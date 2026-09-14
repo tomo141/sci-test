@@ -1,0 +1,616 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000066",
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "content": {
+      "question": "[Ag(NH₃)₂]⁺のような錯イオンの説明として適切なのはどれか。",
+      "choices": [
+        "中心金属に配位子が結合した、全体として電荷を持つ化学種",
+        "中心金属の種類によらず必ず中性である",
+        "金属原子同士だけが金属結合でつながった単体である",
+        "配位子は存在せず、Ag⁺が単独で存在することを表す"
+      ],
+      "correctIndex": 0,
+      "explanation": "この錯イオンではAgが中心金属で、二つのNH₃が配位子である。全体の電荷は+1。配位化合物には中性のものもあるが、錯イオンと呼ぶ場合は全体に電荷を持つ。",
+      "distractorRationales": [
+        "指定された錯イオンの構成に対応する。",
+        "錯イオン全体には電荷がある。",
+        "NH₃配位子を含み、金属単体ではない。",
+        "式のNH₃はAgに結合した配位子を表す。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Coordination Chemistry of Transition Metals",
+          "url": "https://openstax.org/books/chemistry-2e/pages/19-2-coordination-chemistry-of-transition-metals"
+        }
+      ]
+    },
+    "reason": "旧キーと肢の理由が食い違う誤りを訂正し、錯イオンと中性錯体を区別した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§19.2の配位圏・配位子と[Ag(NH₃)₂]⁺の本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000054",
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "content": {
+      "question": "六つの単座配位子が中心金属を囲む六配位錯体で、代表的な配位構造はどれか。",
+      "choices": [
+        "正四面体型",
+        "正八面体型",
+        "直線型",
+        "正方形平面型"
+      ],
+      "correctIndex": 1,
+      "explanation": "六配位錯体の代表的な構造は正八面体型で、六つの供与原子が頂点の方向に位置する。配位数だけで例外なく唯一の構造が決まるという意味ではない。",
+      "distractorRationales": [
+        "代表的には四配位の構造。",
+        "六配位でよく見られる構造。",
+        "代表的には二配位の構造。",
+        "代表的には四配位の構造。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Coordination Chemistry of Transition Metals",
+          "url": "https://openstax.org/books/chemistry-2e/pages/19-2-coordination-chemistry-of-transition-metals"
+        }
+      ]
+    },
+    "reason": "配位子数と供与原子数を混同しないよう単座を明記。「典型」を全称命題にしない。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§19.2のTable 19.5と八面体の六供与原子の説明を照合。表や図は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000064",
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "content": {
+      "question": "一つの配位子の離れた二つ以上の結合部位が、同じ中心金属に結合することを何というか。",
+      "choices": [
+        "一つの部位だけによる単座配位",
+        "金属を介さない単純な中和",
+        "キレート形成",
+        "金属単体の結晶成長"
+      ],
+      "correctIndex": 2,
+      "explanation": "同一配位子の複数部位が一つの中心原子に結合するとキレートを形成する。配位子の個数と配位数は一致するとは限らず、配位数では金属に結合する供与原子を数える。",
+      "distractorRationales": [
+        "複数部位が結合するという条件と異なる。",
+        "酸塩基の中和だけを表す現象ではない。",
+        "同一配位子が複数部位で一つの金属に結合している。",
+        "配位子と金属との結合を作ることで、金属単体の成長ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — chelation (C01012)",
+          "url": "https://goldbook.iupac.org/terms/view/C01012"
+        },
+        {
+          "title": "IUPAC Gold Book — denticity (D01594)",
+          "url": "https://goldbook.iupac.org/terms/view/D01594"
+        }
+      ]
+    },
+    "reason": "旧解説の「配位数＝配位子の数」を訂正。すべての多座配位子が条件によらず強く結合するとはしない。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book C01012の同一配位子内の複数結合部位、D01594の配位する供与基数の定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000027",
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "content": {
+      "question": "単純な結晶場モデルで、正八面体型d⁶錯体の分裂Δₒが電子対形成エネルギーPより十分大きいとする。低温で優勢な低スピン配置の不対電子数はいくつか。",
+      "choices": [
+        "4個",
+        "2個",
+        "6個",
+        "0個"
+      ],
+      "correctIndex": 3,
+      "explanation": "強い八面体場では、低い三つのt₂g軌道に六電子が対を作って入り、t₂g⁶e_g⁰となる。不対電子は0。d電子数を指定しないまま、高スピン・低スピンの両方が存在すると一般化はできない。",
+      "distractorRationales": [
+        "八面体d⁶の高スピン配置では4個だが、指定した条件とは異なる。",
+        "指定されたt₂g⁶の配置では全電子が対を作る。",
+        "五つのd軌道しかないため六電子すべてを別のd軌道へ一個ずつ置くことはできない。",
+        "低スピンd⁶では全電子が対を作る。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Spectroscopic and Magnetic Properties of Coordination Compounds",
+          "url": "https://openstax.org/books/chemistry-2e/pages/19-3-spectroscopic-and-magnetic-properties-of-coordination-compounds"
+        }
+      ]
+    },
+    "reason": "旧問のd電子数・条件不足を補い、二つの同義IDを関連付けた。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§19.3のΔₒとP、強場/弱場の六d電子の充填を照合し、t₂g三軌道の電子数を独立確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000086"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000028",
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "content": {
+      "question": "遷移金属錯体の18電子則で数える電子の範囲として適切なのはどれか。",
+      "choices": [
+        "金属中心に残る非結合電子と金属–配位子結合の電子",
+        "金属原子の内殻電子だけ",
+        "配位子の数だけを電子数とみなす",
+        "錯体を構成する全原子のすべての電子"
+      ],
+      "correctIndex": 0,
+      "explanation": "18電子則は金属中心の価電子領域に関する電子数の経験則で、配位子との結合に関わる電子も数える。18電子から外れる安定錯体もあり、反応速度や安定性を例外なく決める法則ではない。",
+      "distractorRationales": [
+        "金属中心に関係する非結合電子と結合電子を数える。",
+        "内殻電子を18まで数える規則ではない。",
+        "配位子ごとの電子供与の扱いが必要で、個数だけとは異なる。",
+        "錯体全体の総電子数は一般に18よりはるかに多い。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — eighteen-electron rule (E01913)",
+          "url": "https://goldbook.iupac.org/terms/view/E01913"
+        }
+      ]
+    },
+    "reason": "「18電子なら安定で反応性が低い」を無条件の正誤基準にせず、数える範囲を明確化。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book E01913の電子数の数え方を照合。安定性についての強い一般化は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000077",
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "content": {
+      "question": "正方形平面型Pt(II)錯体でいう速度論的なトランス効果とは、配位子が主に何へ及ぼす影響か。",
+      "choices": [
+        "溶液のpHだけを一定にすること",
+        "反対側にある配位子の置換反応速度を増すこと",
+        "反対側の結合長だけで定義する基底状態の変化",
+        "すべての配位子を同時に同じ速さで交換させること"
+      ],
+      "correctIndex": 1,
+      "explanation": "トランス効果は、ある配位子の反対側の置換が速くなるという速度論的な効果。基底状態の結合長や結合の強さへのトランス影響と区別する。置換が単純な解離機構だけで進むと決めつけない。",
+      "distractorRationales": [
+        "酸塩基緩衝作用の定義ではない。",
+        "置換反応の速度に現れる効果。",
+        "通常トランス影響として区別する内容。",
+        "位置と配位子の種類に依存する効果である。"
+      ],
+      "sources": [
+        {
+          "title": "Douglas College — Chem 2330, The Trans Effect",
+          "url": "https://chem.libretexts.org/Courses/Douglas_College/DC%3A_Chem_2330_%28O%27Connor%29/5%3A_Reactions_of_the_Transition_Metals/5.4%3A_The_Trans_Effect"
+        }
+      ]
+    },
+    "reason": "旧キーの誤りと「解離を促進」という機構を限定しすぎる表現を訂正。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "大学教材の索引掲載Definitions & Examplesで、kinetic trans effectの置換速度とtrans influenceの基底状態の区別を照合。他の一般化は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000084",
+    "domain": "化学",
+    "subdomain": "無機化学",
+    "content": {
+      "question": "HSAB原理が示す一般的な親和性の傾向はどれか。他の要因がほぼ同じ条件で比較する。",
+      "choices": [
+        "硬い酸は必ず軟らかい塩基だけを選ぶ",
+        "硬さ・軟らかさは酸塩基の親和性と無関係",
+        "硬い酸と硬い塩基、軟らかい酸と軟らかい塩基の組が有利になりやすい",
+        "すべての組合せの平衡定数を同じ値にする"
+      ],
+      "correctIndex": 2,
+      "explanation": "HSABは分極しやすさなどに基づくルイス酸・塩基の分類と、対応する相手への親和性の傾向を示す。結合の強さを条件によらず数値で決める規則ではない。",
+      "distractorRationales": [
+        "原理の傾向を逆にしている。",
+        "親和性の傾向を整理するための概念である。",
+        "他の条件が近いときのHSABの傾向。",
+        "数値的に同一の平衡定数を与えるものではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — hard acid (H02740)",
+          "url": "https://goldbook.iupac.org/terms/view/H02740"
+        }
+      ]
+    },
+    "reason": "異なる酸を含む組合せ間で「最も強い」を無条件に競わせる旧問を改めた。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book H02740のother things approximately equalと、hard-hard/soft-softの追加安定化、非定量的な定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000060",
+    "domain": "化学",
+    "subdomain": "物理化学",
+    "content": {
+      "question": "溶液の表面や界面に集まり、表面張力・界面張力を低下させる作用で特徴づけられる物質を何というか。",
+      "choices": [
+        "酸塩基指示薬",
+        "放射性トレーサー",
+        "乾燥剤",
+        "界面活性剤"
+      ],
+      "correctIndex": 3,
+      "explanation": "界面活性剤は表面・界面に吸着し、表面張力や界面張力を下げる。親水性と疎水性を併せ持つ分子が代表的だが、すべてを単一の分子構造で定義するわけではない。",
+      "distractorRationales": [
+        "pHに応じた色などの変化を利用する物質。",
+        "放射性の標識を追跡に使う物質。",
+        "水分を除去する目的で使う物質。",
+        "指定された界面での作用に基づく名称。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — surfactant (S06194)",
+          "url": "https://goldbook.iupac.org/terms/view/S06194"
+        }
+      ]
+    },
+    "reason": "小分野を界面を扱う物理化学へ訂正し、別作用を併せ持つかどうかとは独立の定義を示した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book S06194の表面/界面張力の低下と界面への正の吸着を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000072",
+    "domain": "化学",
+    "subdomain": "化学結合・結晶・固体",
+    "content": {
+      "question": "吸着した化学種と固体表面の間に化学結合を形成する吸着を、通常どう分類するか。",
+      "choices": [
+        "化学吸着",
+        "物理吸着のみ",
+        "単純な蒸発",
+        "液滴の乳化"
+      ],
+      "correctIndex": 0,
+      "explanation": "表面との化学結合形成を伴うものを化学吸着という。物理吸着は主に分子間力による。観測した吸着量や熱の大きさ一つだけで、常に機構を一意に決められるとは限らない。",
+      "distractorRationales": [
+        "表面との化学結合形成に基づく分類。",
+        "化学結合を伴うという条件では、物理吸着だけとはしない。",
+        "液体などから気相へ移る現象である。",
+        "液体中に別の液体の滴を分散させる現象である。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — chemisorption (C01048)",
+          "url": "https://goldbook.iupac.org/terms/view/C01048"
+        }
+      ]
+    },
+    "reason": "単に相互作用が「強い」ことだけを定義にせず、結合形成を明示。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Gold Book C01048の吸着剤と吸着質の間の化学結合形成の定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000062",
+    "domain": "化学",
+    "subdomain": "化学結合・結晶・固体",
+    "content": {
+      "question": "立方晶で結晶軸を通常の直交座標としてとる。ミラー指数(100)の面の法線方向はどれか。",
+      "choices": [
+        "[010]",
+        "[100]",
+        "[001]",
+        "[111]"
+      ],
+      "correctIndex": 1,
+      "explanation": "立方晶では(hkl)面の法線は[hkl]方向に対応するので、(100)面は[100]方向に垂直である。この対応を、すべての非立方晶の結晶軸へそのまま適用してはいけない。",
+      "distractorRationales": [
+        "(100)面内の方向の一つで、法線ではない。",
+        "指定された立方晶の(100)面の法線。",
+        "(100)面内の方向の一つで、法線ではない。",
+        "立方体の体対角線方向で、(100)面の法線とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "International Union of Crystallography — Projections of cubic crystals",
+          "url": "https://www.iucr.org/what-we-do/education/pamphlets/projections-of-cubic-crystals"
+        }
+      ]
+    },
+    "reason": "面・方向・対角線・螺旋軸が混ざる旧肢を、方向指数で比較する問いに修正。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IUCr教材のミラー指数の逆切片、(100)と[100]の関係、他の晶系への注意を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000075",
+    "domain": "化学",
+    "subdomain": "理論・材料・高分子化学",
+    "content": {
+      "question": "化学量論に基づく原子経済性（atom economy）が高い合成反応とは、どのような反応か。",
+      "choices": [
+        "実際に得た収量を理論収量で割った値だけが大きい",
+        "反応液の密度だけが高い",
+        "反応物に含まれる原子の質量のうち、目的生成物へ入る割合が大きい",
+        "試薬の単価だけが低い"
+      ],
+      "correctIndex": 2,
+      "explanation": "原子経済性は、つり合った反応式の化学量論に基づき、反応物の原子を目的生成物へどれだけ取り込めるかを評価する。実収率や溶媒使用量なども合成の評価には重要だが、同じ指標ではない。",
+      "distractorRationales": [
+        "実収率の説明であり、原子経済性とは異なる。",
+        "密度の大小とは別の指標。",
+        "反応物から目的生成物への原子の利用を評価している。",
+        "価格の指標ではない。"
+      ],
+      "sources": [
+        {
+          "title": "American Chemical Society — 12 Principles of Green Chemistry, Atom Economy",
+          "url": "https://www.acs.org/green-chemistry-sustainability/principles/12-principles-of-green-chemistry.html"
+        }
+      ]
+    },
+    "reason": "原子経済性をグリーンケミストリー全体と同義にする旧文と架空の色名の誤答を改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "ACSの第2原則とMichael Cannによる原子経済性・収率の違いの本文を照合。例題の反応・数値は使用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000058",
+    "domain": "化学",
+    "subdomain": "理論・材料・高分子化学",
+    "content": {
+      "question": "エチレンCH₂=CH₂の付加重合でできるポリエチレンの繰り返し構造はどれか。鎖の末端は考えない。",
+      "choices": [
+        "–CH=CH–",
+        "–O–CH₂–",
+        "–CO–NH–",
+        "–CH₂–CH₂–"
+      ],
+      "correctIndex": 3,
+      "explanation": "エチレンの二重結合が重合に使われ、炭素鎖に–CH₂–CH₂–が繰り返される。理想化した繰り返し単位の説明であり、鎖末端の構造を含む分子式を示しているわけではない。",
+      "distractorRationales": [
+        "主鎖に二重結合が残る構造で、ポリエチレンの構造ではない。",
+        "モノマーにない酸素を含む。",
+        "モノマーにない窒素と酸素を含む。",
+        "エチレンの付加でできる繰り返し構造。"
+      ],
+      "sources": [
+        {
+          "title": "John McMurry / OpenStax — Organic Chemistry, Chain-Growth Polymers",
+          "url": "https://openstax.org/books/organic-chemistry/pages/31-1-chain-growth-polymers"
+        }
+      ]
+    },
+    "reason": "付加重合の構造変化を問う形にし、開始剤を反応で消費されない触媒と呼ぶ誤解を避けた。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§31.1のビニルモノマーへの連鎖付加とエチレンの重合の説明を照合。炭素・水素の数と結合価を独立に確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000074",
+    "domain": "化学",
+    "subdomain": "理論・材料・高分子化学",
+    "content": {
+      "question": "基底状態の電子系を扱う密度汎関数理論（DFT）で、エネルギーをその汎関数として記述する基本変数はどれか。",
+      "choices": [
+        "位置の関数としての電子密度n(r)",
+        "核の質量密度だけ",
+        "試料の温度分布だけ",
+        "電子の古典的な軌道をすべて指定した時間表"
+      ],
+      "correctIndex": 0,
+      "explanation": "DFTは空間内の電子密度を基本変数にする。汎関数は、密度のような関数を入力としてエネルギーなどの量を対応させるもの。密度という変数を選ぶことと、実用的な計算法の精度が保証されることは別である。",
+      "distractorRationales": [
+        "電子の空間分布を表す基本変数。",
+        "核の質量分布だけでは、問われた電子密度の変数とはならない。",
+        "温度分布を電子密度の代わりに用いる理論ではない。",
+        "古典的な電子軌道を追跡する方法ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Nobel Prize — Walter Kohn, Facts / Work",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1998/kohn/facts/"
+        },
+        {
+          "title": "Walter Kohn — Biographical",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1998/kohn/biographical/"
+        }
+      ]
+    },
+    "reason": "旧問が汎関数そのものと入力変数を取り違えている点を修正。近接する旧DFTの別IDは同一問題族にまとめた。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Nobel公式Workの電子密度を基本変数とする説明と、Kohn本人の自伝の索引掲載部分にある密度による基底状態エネルギーの変分原理を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "定義・化学法則・測定条件を一次資料や著者の教材で照合し、設問・全選択肢・説明を独自に作成した。出典の演習問題・図表・固有の説明文は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000029",
+      "10000000-0000-4000-8007-000000000091"
+    ]
+  }
+]
