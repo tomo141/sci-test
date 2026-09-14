@@ -1,0 +1,563 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000052",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "黄銅（真鍮）の基本となる金属元素の組合せはどれか。",
+      "choices": [
+        "銅とスズ",
+        "鉄とニッケル",
+        "銅と亜鉛",
+        "アルミニウムと銅"
+      ],
+      "correctIndex": 2,
+      "explanation": "黄銅は銅と亜鉛を基本とする合金。用途に応じて他の元素を加える場合もあり、銅と亜鉛だけに限定した名称ではない。",
+      "distractorRationales": [
+        "銅とスズを基本とする合金は一般に青銅の仲間。",
+        "黄銅は鉄を主成分としない。",
+        "黄銅の基本となる組合せ。",
+        "アルミニウムを主成分とする合金は黄銅ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Copper Development Association — Wrought Copper Alloys: Brasses",
+          "url": "https://uns.copper.org/wrought/brasses.php"
+        }
+      ]
+    },
+    "reason": "黄銅の基本成分を直接問い、全てが二元合金という誤解を避ける。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Standard DesignationのCopper-Zinc Alloys、Leaded Brasses、Tin Brassesの分類を確認。個々の製品組成値は用いていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000051",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "炭素鋼で、炭素と組み合わされる主成分の金属元素はどれか。",
+      "choices": [
+        "銅",
+        "アルミニウム",
+        "チタン",
+        "鉄"
+      ],
+      "correctIndex": 3,
+      "explanation": "炭素鋼は鉄を主成分とし、炭素などを含む合金。鋼種や製造条件により組成や性質は異なり、炭素だけで全ての性質が決まるわけではない。",
+      "distractorRationales": [
+        "銅合金と鉄鋼は別の材料群。",
+        "アルミニウム合金を炭素鋼とは呼ばない。",
+        "チタン合金を炭素鋼とは呼ばない。",
+        "炭素鋼の母体となる金属。"
+      ],
+      "sources": [
+        {
+          "title": "World Steel Association — Raw materials",
+          "url": "https://worldsteel.org/about-steel/raw-materials/"
+        }
+      ]
+    },
+    "reason": "鋼と鋳鉄の境界を曖昧に問わず、主成分の金属へ限定。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Steel is an alloy consisting primarily of ironの説明を確認。特定鋼種の規格や全ての合金の数値境界は問わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000083",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "一軸引張りの線形弾性範囲で、ヤング率Eが表すものはどれか。",
+      "choices": [
+        "応力とひずみの比例係数",
+        "破断までの最大公称応力",
+        "押込み硬さの測定値",
+        "単位温度変化あたりの熱ひずみ"
+      ],
+      "correctIndex": 0,
+      "explanation": "線形弾性範囲ではσ＝Eεで、Eは応力とひずみの比例係数。同じ応力ならEが大きい材料ほど弾性ひずみが小さい。強度や硬さの定義とは区別する。",
+      "distractorRationales": [
+        "指定した範囲でE＝σ/εとなる。",
+        "引張強さに対応する指標。",
+        "圧子の押込みに対する抵抗の指標。",
+        "線膨張係数に対応する指標。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Introduction to Elastic Response",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e8b60e8a1efb6e7275372cc77f23ae9b_MIT3_11F99_elas_1.pdf"
+        }
+      ]
+    },
+    "reason": "正解番号と誤答解説が矛盾していた箇所を訂正し、非線形弾性への無条件の一般化を除去。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "σ＝Eεと一軸の微小弾性ひずみの定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000098",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "金属の引張試験で、延性を評価するために用いる指標はどれか。",
+      "choices": [
+        "引張強さ",
+        "破断伸び",
+        "ヤング率",
+        "ビッカース硬さ"
+      ],
+      "correctIndex": 1,
+      "explanation": "破断伸びは初期の標点距離に対する、破断後の標点距離の増加割合であり、延性の評価に用いる。試験片の形状や標点距離、試験条件にも依存する。",
+      "distractorRationales": [
+        "応力の最大値から得る強度の指標。",
+        "破断に至るまでの伸びを用いた延性の指標。",
+        "線形弾性域の変形しにくさの指標。",
+        "圧子による押込みに対する抵抗の指標。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Stress-Strain Curves",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/ss.pdf"
+        }
+      ]
+    },
+    "reason": "破断伸びを材料だけで決まる普遍値としない。強度・剛性・硬さを区別。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "引張試験、破断伸びと延性、標点区間のくびれ割合・試験片形状への依存を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000181",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "明瞭な降伏点を示さない金属について、0.2％耐力を応力–ひずみ曲線から求める一般的な作図はどれか。",
+      "choices": [
+        "原点からひずみ0.2％の点までの割線を引く",
+        "曲線で公称応力が最大の点を選ぶ",
+        "ひずみ0.2％から初期弾性直線に平行な線を引き、曲線との交点を求める",
+        "破断時の全ひずみを0.2％に置き換える"
+      ],
+      "correctIndex": 2,
+      "explanation": "0.2％のひずみをオフセットし、弾性域と同じ傾きの直線との交点を用いる。所定の塑性伸びに対応する耐力であり、比例限界や塑性変形の厳密な開始点と同一とは限らない。",
+      "distractorRationales": [
+        "原点を通る割線では所定の塑性伸びを指定できない。",
+        "これは引張強さを求める操作。",
+        "所定のオフセットを用いる標準的な作図。",
+        "破断ひずみを書き換える手続きではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Stress-Strain Curves",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/ss.pdf"
+        }
+      ]
+    },
+    "reason": "旧問は降伏応力と弾性限界を正誤で分けにくかったため、定義した0.2％耐力へ改訂。同義の旧誤問も統合。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "offset yield stressの0.2％、傾きEの平行線、弾性限界・比例限界との区別を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000210"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000093",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "焼入れ可能な炭素鋼をオーステナイト化した後、拡散による変態を抑えながら十分に冷却する。焼入れで生成を狙う硬い組織はどれか。",
+      "choices": [
+        "パーライト",
+        "フェライトと黒鉛の混合組織",
+        "残留オーステナイトだけの組織",
+        "マルテンサイト"
+      ],
+      "correctIndex": 3,
+      "explanation": "拡散による変態を抑えて冷却すると、オーステナイトから無拡散のマルテンサイト変態が起こる。得られる量は組成や冷却条件によるため、どんな鋼も冷やすだけで全量が変態するとは限らない。",
+      "distractorRationales": [
+        "拡散を伴う変態による層状組織で、指定した焼入れの狙いとは異なる。",
+        "この焼入れで狙う組織ではない。",
+        "未変態の相が残ることはあるが、生成を狙う硬化組織とは異なる。",
+        "指定した冷却条件で狙う無拡散変態の生成組織。"
+      ],
+      "sources": [
+        {
+          "title": "H. K. D. H. Bhadeshia — Heat Treatment of Steels, AP3",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2000/practicals/AP3/AP3.html"
+        }
+      ]
+    },
+    "reason": "全ての鋼をA₃以上から急冷すればほぼ全量変態するという旧断定を除去。同義の旧問を統合。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CCTと臨界冷却条件、拡散変態を回避したマルテンサイト生成、焼入性の説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000236"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000088",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "結晶性金属の塑性変形で、転位の移動が果たす役割として適切なものはどれか。",
+      "choices": [
+        "全ての原子面を同時にずらさず、局所的なずれを進めてすべりを可能にする",
+        "結晶内の全ての結合を同時に切断する",
+        "結晶全体を液体にしてから形を変える",
+        "粒界を消して完全結晶を作る"
+      ],
+      "correctIndex": 0,
+      "explanation": "転位は線状の結晶欠陥。その移動により局所的なずれが伝わり、完全結晶の原子面全体を同時にすべらせるより低い応力で塑性変形が進みうる。",
+      "distractorRationales": [
+        "転位すべりの基本的な役割。",
+        "局所的に結合が組み替わり、全結合の同時切断は必要ない。",
+        "固体内で進む変形であり融解は不要。",
+        "粒界の除去や完全結晶化が転位移動の役割ではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Dislocations",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/dn.pdf"
+        }
+      ]
+    },
+    "reason": "移動の説明に絞り、別問の加工硬化の答えを本文で先に教えない。同義の旧問を統合。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Theoretical yield strengthと転位の導入、転位移動による塑性変形の説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000241"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000232",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "同じ応力比・環境条件で評価したS–N線図に、水平な限度を仮定できる材料を考える。「疲労限度」と「10⁶回での疲労強度」の違いとして適切なのはどれか。",
+      "choices": [
+        "どちらも1回の静的引張りで破断する応力を表す",
+        "疲労限度は10⁶回での応力を指し、10⁶回での疲労強度は繰返し数を限定しない値である",
+        "疲労限度は繰返し数を増やしても破断しないと扱う応力の限度で、10⁶回での疲労強度は有限の繰返し数を指定した値である",
+        "疲労限度は荷重の平均応力を指し、10⁶回での疲労強度は繰返し数そのものを指す"
+      ],
+      "correctIndex": 2,
+      "explanation": "疲労限度と有限回数の疲労強度は同義ではない。水平な限度を仮定できない材料もある。実際の評価では平均応力、環境、試験のばらつきなどを考慮し、無期限の安全保証にはしない。",
+      "distractorRationales": [
+        "S–N線図は繰返し荷重による疲労を扱う。",
+        "有限回数の指定と、繰返し数を限定しない限度を逆にしている。",
+        "繰返し数を限定しない理想化と、指定回数の値を区別している。",
+        "平均応力は試験条件であり、10⁶回での疲労強度も応力の指標。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Fatigue",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/fatigue.pdf"
+        }
+      ]
+    },
+    "reason": "疲労限度と疲労強度を同義とし、衝撃破壊を正解にしていた旧問を訂正。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "S–N curvesのendurance limit、限度を持たない材料、寿命のばらつき、平均応力の影響を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-cold-work-hardening",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "回復や再結晶がほとんど進まない条件で、金属を冷間塑性加工すると加工硬化することがある。その主要な説明はどれか。",
+      "choices": [
+        "融解して原子が自由に動くため",
+        "転位が全て消滅して完全結晶になるため",
+        "炭素が外部から必ず侵入するため",
+        "増加した転位同士の相互作用などにより、さらに転位を動かすことが難しくなるため"
+      ],
+      "correctIndex": 3,
+      "explanation": "塑性加工で転位が増え、相互作用や障害によって転位運動が妨げられると、さらに変形させる応力が増す。熱による回復・再結晶などが進む条件とは区別する。",
+      "distractorRationales": [
+        "冷間加工は融解させる操作ではない。",
+        "加工硬化を転位の全消滅で説明することはできない。",
+        "浸炭のように外部から炭素を加える処理とは別。",
+        "転位移動への抵抗の増加が加工硬化につながる。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Dislocations",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/dn.pdf"
+        }
+      ]
+    },
+    "reason": "旧転位問の付随説明だった加工硬化を、回復等の条件を指定した独自設問へ整理。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Dislocation motion and hardeningで転位密度増加・jog・転位移動の妨害を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-martensite-tempering",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "焼入れでマルテンサイトを得た鋼の「焼戻し」に当たる処理はどれか。",
+      "choices": [
+        "完全に融解して鋳型へ流し込む",
+        "オーステナイトが生成しない温度範囲へ再加熱し、組織と機械的性質を調整する",
+        "オーステナイト化した直後に急冷する操作だけを指す",
+        "炭素を含む気体中に置き、必ず表面の炭素濃度を増加させる"
+      ],
+      "correctIndex": 1,
+      "explanation": "焼戻しは焼入れ後に、オーステナイトが生成する範囲より低い温度で加熱して組織を変える熱処理。条件によって二次硬化や脆化もあり、必ず軟化・靱性向上するとは限らない。",
+      "distractorRationales": [
+        "鋳造であり、固体の焼戻しとは異なる。",
+        "焼戻しの温度範囲と目的を示す。",
+        "これは焼入れの操作で、焼戻しの再加熱とは別。",
+        "表面へ炭素を導入する浸炭との混同。"
+      ],
+      "sources": [
+        {
+          "title": "H. K. D. H. Bhadeshia — Tempered Martensite",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2004/Tempered.Martensite/tempered.martensite.html"
+        }
+      ]
+    },
+    "reason": "焼入れ・焼戻し・浸炭を区別する独自設問。軟化と靱性改善を無条件に保証しない。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Introductionの定義、Hardnessの二次硬化、Temper Embrittlementの条件依存を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-creep-versus-relaxation",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "一定温度で、材料に一定の引張応力を保って加えたところ、時間とともにひずみが増加した。この時間依存の変形はどれか。",
+      "choices": [
+        "クリープ",
+        "応力緩和",
+        "疲労限度",
+        "再結晶"
+      ],
+      "correctIndex": 0,
+      "explanation": "一定応力のもとで時間とともに変形が進む現象をクリープという。一方、ひずみを一定に保ち、必要な応力が時間とともに低下する現象は応力緩和である。",
+      "distractorRationales": [
+        "一定応力下での時間依存ひずみを表す。",
+        "ひずみ一定下で応力が低下する別の試験条件。",
+        "繰返し荷重に対する応力の限度で、定常応力下の変形名ではない。",
+        "結晶組織の変化であり、設問の測定だけからその発生は断定できない。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Engineering Viscoelasticity",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/visco.pdf"
+        }
+      ]
+    },
+    "reason": "温度や素材を問わず高温金属だけに限定しない、クリープと緩和の独自比較。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Phenomenological AspectsのCreepとStress relaxationで、応力一定・ひずみ一定の試験条件を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000145",
+    "domain": "工学",
+    "subdomain": "材料工学",
+    "content": {
+      "question": "滑らかな球形の粒子を考える。半径を元の1/10にしたとき、1個の粒子の表面積Sと体積Vの比S/Vは元の何倍になるか。",
+      "choices": [
+        "1/10倍",
+        "1倍",
+        "10倍",
+        "100倍"
+      ],
+      "correctIndex": 2,
+      "explanation": "球ではS＝4πr²、V＝4πr³/3なのでS/V＝3/r。半径が1/10になると表面積対体積比は10倍になる。表面積そのものが10倍になるという意味ではない。",
+      "distractorRationales": [
+        "比は半径に反比例する。",
+        "面積と体積では寸法への依存の次数が異なる。",
+        "3/rより、半径を1/10にすると比は10倍。",
+        "半径の二乗ではなく逆数に比例する。"
+      ],
+      "sources": [
+        {
+          "title": "National Nanotechnology Coordination Office — What Is So Special about Nano?",
+          "url": "https://www.nano.gov/about-nanotechnology/what-is-so-special-about-nano/"
+        }
+      ]
+    },
+    "reason": "サイズ効果という広すぎる語の当てはめを、形状を指定した表面積対体積比へ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Scale at which surface behavior plays a larger roleの面積対体積比の説明を確認。球の公式から比を独立導出し、掲載例の立方体データは転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・技術団体・公的機関の該当本文を照合。設問・四肢・説明は独自作成し、資料の図表・データ・演習を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
