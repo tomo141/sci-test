@@ -1,0 +1,1059 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000423",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "DNAの半保存的複製で、一つの二本鎖DNAを一回複製した直後の二つの娘DNAは、どのような鎖の組み合わせになるか。",
+      "choices": [
+        "一方は親鎖二本、他方は新合成鎖二本",
+        "どちらも親鎖一本と新合成鎖一本",
+        "どちらも新合成鎖二本で、親鎖は失われる",
+        "各鎖の中で親由来と新合成の短い断片が交互に混じる"
+      ],
+      "correctIndex": 1,
+      "explanation": "親DNAの各鎖を鋳型として相補的な鎖が合成されるため、それぞれの娘DNAは親鎖一本と新しい鎖一本を持つ。これは一回の複製直後の鎖の由来についての説明である。",
+      "distractorRationales": [
+        "保存的複製モデルの組み合わせ。",
+        "半保存的複製モデルの組み合わせ。",
+        "親鎖がそれぞれ保持されることと合わない。",
+        "分散的複製モデルの説明。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Basics of DNA Replication",
+          "url": "https://openstax.org/books/biology-2e/pages/14-3-basics-of-dna-replication"
+        }
+      ]
+    },
+    "reason": "旧肢と誤答解説で保存的/分散的の説明が対応していなかった点を訂正し、一回の複製と指定。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§14.3の保存的・半保存的・分散的モデルの本文を照合。図の転載や実験結果の再利用はしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000416",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "通常の真核細胞で、核にあるタンパク質コード遺伝子からタンパク質が作られる経路として正しいのはどれか。",
+      "choices": [
+        "核内で翻訳し、細胞質でDNAへ転写する",
+        "核内のDNAをそのままリボソームが翻訳する",
+        "核内でRNAを転写し、加工・輸送されたmRNAを細胞質側のリボソームが翻訳する",
+        "すべての転写と翻訳が核内で同時に進む"
+      ],
+      "correctIndex": 2,
+      "explanation": "核にある遺伝子の転写と、細胞質側での翻訳は区画が分かれる。小胞体に結合したリボソームも細胞質側で翻訳する。ミトコンドリアなど独自の遺伝系はこの設問の対象に含めていない。",
+      "distractorRationales": [
+        "転写と翻訳の向き・場所を取り違えている。",
+        "リボソームが読み取る鋳型はmRNA。",
+        "通常の核遺伝子の発現経路。",
+        "核遺伝子の転写と翻訳を同一区画としている。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Transcription and Translation Lesson Plan",
+          "url": "https://www.genome.gov/about-genomics/teaching-tools/Transcription-Translation"
+        },
+        {
+          "title": "OpenStax — Microbiology, §11.4 Protein Synthesis",
+          "url": "https://openstax.org/books/microbiology/pages/11-4-protein-synthesis-translation"
+        }
+      ]
+    },
+    "reason": "真核細胞の全遺伝系へ一律に断定する旧問を、核のタンパク質コード遺伝子に限定。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Definitionsの核から細胞質へのmRNA輸送、OpenStax §11.4の細胞質・粗面小胞体のリボソームを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000426",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "ほぼ同じゲノムを持つヒトの異なる種類の体細胞で、作られるRNAやタンパク質の種類・量が異なる主な理由はどれか。",
+      "choices": [
+        "分化すると、使わない遺伝子がすべてDNAから削除されるから",
+        "全遺伝子が全細胞で常に同じ最大速度で転写されるから",
+        "各細胞で遺伝暗号が必ず別の対応表に変わるから",
+        "遺伝子発現が細胞の種類や状態に応じて調節されるから"
+      ],
+      "correctIndex": 3,
+      "explanation": "どの遺伝子を、いつ、どこで、どれだけ発現させるかは調節される。同じDNA配列を持っていても、発現するRNAやタンパク質の組み合わせは同じとは限らない。",
+      "distractorRationales": [
+        "通常の細胞分化を全不要遺伝子の削除で説明することはできない。",
+        "実際には発現量が調節される。",
+        "細胞の種類による発現差の通常の説明ではない。",
+        "異なる細胞の機能を支える発現調節の説明。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Gene Expression",
+          "url": "https://www.genome.gov/genetics-glossary/Gene-Expression"
+        }
+      ]
+    },
+    "reason": "「最も一般的」など尺度不明の断定を避け、同じゲノムでも発現が異なる理由へ具体化。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Gene Expressionの細胞種・条件による発現と量の調節を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000142",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "標準遺伝暗号で、翻訳の読み枠に沿ってmRNAを3塩基ずつ区切り、アミノ酸または翻訳終結を指定する単位はどれか。",
+      "choices": [
+        "コドン",
+        "アンチコドン",
+        "イントロン",
+        "プロモーター"
+      ],
+      "correctIndex": 0,
+      "explanation": "コドンは翻訳の情報の単位。標準遺伝暗号にはアミノ酸を指定するもののほか、終結を指定する終止コドンもある。すべてのコドンがアミノ酸一個を意味するわけではない。",
+      "distractorRationales": [
+        "mRNAの指定された3塩基の情報単位。",
+        "tRNA側でコドンと対応する配列。",
+        "RNAのスプライシングで除かれる介在配列。",
+        "転写の開始・調節に関わるDNA領域。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Codon",
+          "url": "https://www.genome.gov/genetics-glossary/Codon"
+        }
+      ]
+    },
+    "reason": "旧「3塩基は一つのアミノ酸」という終止コドンを除外した定義を訂正。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Codonの3塩基とアミノ酸/終結の定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000168",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "真核生物の細胞質で、通常の開始コドンAUGから翻訳を始めるとき、開始tRNAが最初に運ぶアミノ酸はどれか。",
+      "choices": [
+        "バリン",
+        "メチオニン",
+        "フェニルアラニン",
+        "グリシン"
+      ],
+      "correctIndex": 1,
+      "explanation": "通常の真核生物の細胞質の翻訳では、開始tRNAがメチオニンを運ぶ。大腸菌の開始時に使われるN-ホルミルメチオニンとは区別する。開始後の加工でN末端残基が除かれる場合もある。",
+      "distractorRationales": [
+        "標準遺伝暗号の伸長時にはGUU・GUC・GUA・GUGがバリンを指定する。",
+        "真核生物の細胞質における通常の開始アミノ酸。",
+        "標準遺伝暗号ではUUU・UUCがフェニルアラニンを指定する。",
+        "標準遺伝暗号ではGGU・GGC・GGA・GGGがグリシンを指定する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §11.4 Protein Synthesis",
+          "url": "https://openstax.org/books/microbiology/pages/11-4-protein-synthesis-translation"
+        },
+        {
+          "title": "NCBI — The Genetic Codes, Standard Code (table 1)",
+          "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi"
+        }
+      ]
+    },
+    "reason": "AUGを例外のない普遍的な開始コドンとする断定や、古細菌までfMetとする「原核生物では」の一般化を除去。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§11.4の細菌のfMet-tRNAと真核生物のMet-tRNAiによる翻訳開始を照合。 NCBIのStandard CodeのAAs/Base1/2/3表で誤答肢のコドン対応を照合し、DNA表記TをRNA表記Uへ読み替えた。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000035",
+    "domain": "生物",
+    "subdomain": "微生物・ウイルス・バイオテク",
+    "content": {
+      "question": "通常のPCRの伸長段階で、プライマーを起点に鋳型に相補的なDNA鎖を合成する酵素はどれか。",
+      "choices": [
+        "DNAリガーゼ",
+        "プロテアーゼ",
+        "DNAポリメラーゼ",
+        "アミラーゼ"
+      ],
+      "correctIndex": 2,
+      "explanation": "PCRではDNAポリメラーゼがプライマーの末端から新しいDNAを合成する。温度を繰り返し変える一般的なPCRでは、耐熱性の酵素が使われる。",
+      "distractorRationales": [
+        "DNAの切れ目をつなぐ反応を担い、指定した伸長を行う酵素ではない。",
+        "タンパク質を分解する酵素。",
+        "鋳型に従ってDNAを伸長する酵素。",
+        "デンプンなどを分解する酵素。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Polymerase Chain Reaction (PCR) Fact Sheet",
+          "url": "https://www.genome.gov/about-genomics/fact-sheets/Polymerase-Chain-Reaction-Fact-Sheet"
+        },
+        {
+          "title": "NHGRI — Polymerase Chain Reaction PCR",
+          "url": "https://www.genome.gov/genetics-glossary/Polymerase-Chain-Reaction-PCR"
+        }
+      ]
+    },
+    "reason": "RNAポリメラーゼとの区別を明示し、PCR名称だけの旧問も同一の基礎問題族へまとめた。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI PCR Fact SheetのHow does PCR work?と用語集のプライマー・反復DNA合成を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000034"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000170",
+    "domain": "生物",
+    "subdomain": "微生物・ウイルス・バイオテク",
+    "content": {
+      "question": "一般的なPCRの変性段階で、加熱する主な目的はどれか。",
+      "choices": [
+        "プライマーを鋳型DNAに結合させる",
+        "DNA鎖を新たに伸長する",
+        "増幅産物をゲルで分離する",
+        "二本鎖DNAを一本鎖に分けて鋳型を利用可能にする"
+      ],
+      "correctIndex": 3,
+      "explanation": "変性ではDNAの二本鎖を解離させる。その後のプライマーの結合、DNAポリメラーゼによる伸長とは役割が異なる。具体的な温度条件は試料や酵素に応じて設定する。",
+      "distractorRationales": [
+        "アニーリングの目的。",
+        "伸長段階の目的。",
+        "温度サイクルとは別の分析操作。",
+        "変性段階の主な目的。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Polymerase Chain Reaction (PCR) Fact Sheet",
+          "url": "https://www.genome.gov/about-genomics/fact-sheets/Polymerase-Chain-Reaction-Fact-Sheet"
+        }
+      ]
+    },
+    "reason": "温度やサイクル数をすべてのPCRに一律適用する旧説明を外し、段階の役割を問う。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI PCR Fact Sheetの加熱による二本鎖DNAの解離と、その後の合成を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000441"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000148",
+    "domain": "生物",
+    "subdomain": "微生物・ウイルス・バイオテク",
+    "content": {
+      "question": "遺伝子工学で使うII型制限酵素の代表的な働きはどれか。",
+      "choices": [
+        "特定のDNA配列を認識し、その内部または近傍の決まった位置でDNAを切る",
+        "切れたDNA末端を共有結合でつなぐ",
+        "mRNAに従ってアミノ酸をつなぐ",
+        "デンプンを糖へ分解する"
+      ],
+      "correctIndex": 0,
+      "explanation": "II型制限酵素はDNAの配列を認識して切断に使われる。認識配列の内部で切るものだけでなく、IIS型のように離れた位置で切るものもある。",
+      "distractorRationales": [
+        "II型制限酵素の代表的な働き。",
+        "DNAリガーゼの働き。",
+        "リボソームによる翻訳の説明。",
+        "アミラーゼなどの働き。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Restriction Enzyme",
+          "url": "https://www.genome.gov/genetics-glossary/Restriction-Enzyme"
+        },
+        {
+          "title": "New England Biolabs — Type II Restriction Enzymes",
+          "url": "https://www.neb.com/en-us/tools-and-resources/feature-articles/everything-you-ever-wanted-to-know-about-type-ii-restriction-enzymes"
+        }
+      ]
+    },
+    "reason": "全制限酵素の切断位置を一律とせずII型へ限定し、IIS型の認識部位外切断を排除しない。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRIの配列認識・切断の定義と、NEBのType IIP/Type IISにおける切断位置を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000149",
+    "domain": "生物",
+    "subdomain": "生化学・代謝",
+    "content": {
+      "question": "十分なSDSによる変性とジスルフィド結合の還元を行う通常のSDS-PAGEで、タンパク質の移動度が主に反映するのはどれか。",
+      "choices": [
+        "未変性状態の酵素活性",
+        "ポリペプチドの分子量",
+        "元の立体構造だけ",
+        "元の等電点だけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "SDS処理により電荷と質量の比が近づき、ゲル内の移動度から見かけの分子量を推定する。移動度に影響する例外もあるため、常に真の分子量を誤差なく測れるわけではない。",
+      "distractorRationales": [
+        "変性条件では元の活性を測定していない。",
+        "通常のSDS-PAGEで主に分離に反映される性質。",
+        "変性・還元で元の高次構造の影響を小さくする。",
+        "未変性時の電荷だけで分離する方式ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Bio-Rad — Criterion Precast Gels Instruction Manual, §3.1",
+          "url": "https://www.bio-rad.com/webroot/web/pdf/lsr/literature/Bulletin_4110001E.pdf"
+        }
+      ]
+    },
+    "reason": "名称を設問に書いた略称当てから、測定する性質と条件へ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "メーカー資料§3.1の還元・SDSによる変性と、移動度が主に分子量に依存する説明を索引本文で照合。試薬量や操作手順は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000150",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "DNAの塩基配列そのものを変えずにクロマチンの状態を変え、遺伝子発現の調節に関わる修飾の例はどれか。",
+      "choices": [
+        "遺伝子の一部の欠失",
+        "DNA塩基の置換変異",
+        "ヒストンのアセチル化",
+        "染色体の一部の逆位"
+      ],
+      "correctIndex": 2,
+      "explanation": "ヒストンへのアセチル基の付加は、DNAの塩基配列を変えずにクロマチンの状態へ影響する。ヒストン修飾はタンパク質の翻訳後修飾でもあるため、その二つを互いに排他的な選択肢にはできない。",
+      "distractorRationales": [
+        "DNA配列の一部を失う変化。",
+        "DNA配列そのものが変わる。",
+        "DNA配列の置換を伴わないヒストン修飾。",
+        "DNA領域の向きが変わる構造変異。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Epigenetics",
+          "url": "https://www.genome.gov/genetics-glossary/Epigenetics"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Eukaryotic Epigenetic Gene Regulation",
+          "url": "https://openstax.org/books/biology-2e/pages/16-3-eukaryotic-epigenetic-gene-regulation"
+        }
+      ]
+    },
+    "reason": "旧問のエピジェネティック修飾と翻訳後修飾が両方正しい問題を、具体的な修飾と配列変異の比較へ改訂。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI EpigeneticsとOpenStax §16.3のヒストンへのアセチル基付加・クロマチンへの影響を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000095",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "哺乳類のプロモーターのCpGアイランドで、シトシンへの付加が転写抑制と関連することの多い化学基はどれか。",
+      "choices": [
+        "アセチル基",
+        "ユビキチン",
+        "リン酸基",
+        "メチル基"
+      ],
+      "correctIndex": 3,
+      "explanation": "CpGのシトシンへのメチル基付加はDNAメチル化の一例で、プロモーターのCpGアイランドでは転写抑制と関連することが多い。ただしDNAメチル化の効果は場所や状態によって異なる。",
+      "distractorRationales": [
+        "この設問のシトシンのDNA修飾ではない。",
+        "タンパク質であり、指定したDNAメチル化の基ではない。",
+        "DNA骨格などに関係するが、指定した修飾ではない。",
+        "指定されたDNAメチル化で付加される基。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Eukaryotic Epigenetic Gene Regulation",
+          "url": "https://openstax.org/books/biology-2e/pages/16-3-eukaryotic-epigenetic-gene-regulation"
+        }
+      ]
+    },
+    "reason": "全DNAメチル化が転写を抑制するという一般化をプロモーターCpGへ限定。旧同義問題を統合。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§16.3のCpGシトシンへのメチル基付加と遺伝子抑制、その他の調節効果もあるという本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000443"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000153",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "翻訳中のリボソームに保護されたmRNA断片をシーケンスし、リボソームの占有をゲノム全体で調べる手法はどれか。",
+      "choices": [
+        "リボソームプロファイリング",
+        "ChIP-seq",
+        "ATAC-seq",
+        "DNAのサンガーシーケンス"
+      ],
+      "correctIndex": 0,
+      "explanation": "リボソームプロファイリングは保護されたmRNA断片を読み取る。mRNA一分子あたりの相対的な翻訳効率を推定するには、mRNA量の測定との比較も必要で、断片数だけを効率そのものとはしない。",
+      "distractorRationales": [
+        "リボソーム保護断片を用いる手法。",
+        "主に特定タンパク質と結びついたDNAを調べる。",
+        "主にクロマチンのアクセスしやすさを調べる。",
+        "指定したリボソーム保護断片を用いる網羅的手法ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Ingolia et al. (2009) — Genome-wide analysis in vivo of translation with nucleotide resolution using ribosome profiling",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19213877/"
+        },
+        {
+          "title": "Evolution at two levels of gene expression in yeast — original research",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3941106/"
+        }
+      ]
+    },
+    "reason": "リボソーム保護断片の量を直接「翻訳効率」としていた旧表現を修正。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Ingolia原論文のAbstractと、後続原論文ResultsのmRNA/Riboの測定・比による相対翻訳効率の説明を索引本文で照合。図・データは転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000086",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "DNAシーケンサーがDNA断片から読み取った、一続きの塩基配列データを一般に何というか。",
+      "choices": [
+        "イントロン",
+        "リード",
+        "プロモーター",
+        "エクソン"
+      ],
+      "correctIndex": 1,
+      "explanation": "リードはシーケンスで得られる塩基の読み取り列。読み取り誤りや不確かな塩基を含むことがあり、必ず遺伝子やエクソン全体と一致するわけではない。",
+      "distractorRationales": [
+        "転写産物の加工で除かれる配列領域の名称。",
+        "一続きのシーケンス読み取りデータ。",
+        "転写開始・調節に関わる領域の名称。",
+        "スプライシング後のRNAに残る領域の名称。"
+      ],
+      "sources": [
+        {
+          "title": "Illumina — NGS terminology: Sequencing reads and Quality score",
+          "url": "https://www.illumina.com/science/technology/next-generation-sequencing/beginners/tutorials/glossary.html"
+        }
+      ]
+    },
+    "reason": "「読み取り単位」の曖昧さを、出力された塩基配列データへ具体化。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "開発元のSequencing readsとQuality scoreの用語定義を照合。paired-endの二方向を一つの読み取りと決めつけない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000152",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "交配集団で量的形質の測定値と遺伝マーカーの遺伝子型を対応づけ、その形質に関係する染色体領域を探す解析はどれか。",
+      "choices": [
+        "PCR",
+        "Western blot",
+        "QTL解析",
+        "Northern blot"
+      ],
+      "correctIndex": 2,
+      "explanation": "QTL解析は量的形質の変異と遺伝的な領域との関係を統計的に調べる。関連領域が見つかっても、その中の原因遺伝子や原因変異が一つに特定されたとは限らない。",
+      "distractorRationales": [
+        "DNAを増幅する手法。",
+        "特定のタンパク質を検出する手法。",
+        "量的形質と遺伝的領域の関係を調べる解析。",
+        "特定のRNAを検出する手法。"
+      ],
+      "sources": [
+        {
+          "title": "Miles & Wayne (2008) — Quantitative Trait Locus (QTL) Analysis",
+          "url": "https://www.nature.com/scitable/topicpage/quantitative-trait-locus-qtl-analysis-53904/"
+        },
+        {
+          "title": "Haley & Knott (1992) — A simple regression method for mapping quantitative trait loci in line crosses using flanking markers",
+          "url": "https://www.nature.com/articles/hdy1992131"
+        }
+      ]
+    },
+    "reason": "一般の形質関連解析と量的形質のQTL解析を混同しない条件を追加。統計的関連を原因変異の確定としない。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "著者の教材の形質・マーカーの対応と領域の解像度、原論文Abstractの交配集団におけるQTL推定を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000155",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "近接しているクロマチンを連結する操作と大量シーケンスを組み合わせ、DNA領域間の接触頻度の地図を作る手法はどれか。",
+      "choices": [
+        "RNA-seq",
+        "ChIP-seq",
+        "サンガーシーケンス",
+        "Hi-C"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hi-Cはゲノムの空間的な近接を調べる。通常の集団測定の接触頻度から、全細胞のDNA領域間距離や一つの立体構造を直接・一意に決められるわけではない。",
+      "distractorRationales": [
+        "主に転写産物を調べる手法。",
+        "主に特定タンパク質と結びついたDNAを調べる。",
+        "DNAの塩基配列を読む手法で、指定した接触地図の取得法ではない。",
+        "近接に基づく連結とシーケンスを用いる手法。"
+      ],
+      "sources": [
+        {
+          "title": "Lieberman-Aiden et al. (2009) — Comprehensive mapping of long-range interactions reveals folding principles of the human genome",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19815776/"
+        }
+      ]
+    },
+    "reason": "3D構造という名称だけでなく、実際に得る近接の情報を明示。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文Abstractのproximity-based ligation、並列シーケンスとspatial proximity mapsを照合。構造の直接撮影とは解釈しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000156",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "細胞を区別して転写産物をシーケンスし、細胞ごとの遺伝子発現の違いを調べる手法はどれか。",
+      "choices": [
+        "scRNA-seq",
+        "細胞を混ぜて行うbulk RNA-seq",
+        "SDS-PAGE",
+        "染色体の核型分析"
+      ],
+      "correctIndex": 0,
+      "explanation": "単一細胞RNA-seq（scRNA-seq）は細胞ごとの転写産物を調べる。検出できなかった遺伝子が必ず全く発現していないとは限らず、検出効率や測定深度の影響も受ける。",
+      "distractorRationales": [
+        "細胞を区別した転写産物の解析。",
+        "細胞を混ぜると、通常は各細胞の発現をそのまま区別できない。",
+        "タンパク質の電気泳動。",
+        "染色体の数や形を調べる解析。"
+      ],
+      "sources": [
+        {
+          "title": "Tang et al. (2009) — mRNA-Seq whole-transcriptome analysis of a single cell",
+          "url": "https://www.nature.com/articles/nmeth.1315"
+        }
+      ]
+    },
+    "reason": "名称当てを測定対象へ具体化し、測定されないことと生物学的な不存在を混同しない。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文Abstractの単一細胞の遺伝子発現プロファイリングと検出感度の記述を照合。本文の購読部分を読了したとは扱わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000157",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "単一細胞データの統合法Harmonyの2019年原論文で、主成分分析の後に補正する主要な対象はどれか。",
+      "choices": [
+        "各遺伝子の生のRNAカウント行列そのもの",
+        "細胞の低次元空間における座標",
+        "シーケンスされた各塩基の品質スコア",
+        "参照ゲノムの塩基配列"
+      ],
+      "correctIndex": 1,
+      "explanation": "Harmonyは低次元表現上の座標を調整し、データセット間の差を考慮した共通の表現を作る。生物学的な差とバッチが重なることもあり、どのデータでも重要な差が必ず保たれるという保証ではない。",
+      "distractorRationales": [
+        "原論文の中心的な補正対象は、生カウント行列そのものではない。",
+        "原論文のアルゴリズムが調整する表現。",
+        "読み取った塩基の品質スコアを修正する手法ではない。",
+        "参照ゲノムの塩基を修正する手法ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Korsunsky et al. (2019) — Fast, sensitive and accurate integration of single-cell data with Harmony",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31740819/"
+        }
+      ]
+    },
+    "reason": "単純なカウント正規化との混同や、生物学的クラスターを常に保つとの断定を除去。原論文の方式へ限定。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文AbstractとFigure 1の説明文で、共有埋め込み、PCA後の座標、反復補正の記述を照合。図そのものは使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000158",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "Tn5トランスポザーゼでアクセスしやすいクロマチンへシーケンス用アダプターを挿入し、その領域を調べる手法はどれか。",
+      "choices": [
+        "ChIP-seq",
+        "通常のDNAサンガーシーケンス",
+        "ATAC-seq",
+        "Northern blot"
+      ],
+      "correctIndex": 2,
+      "explanation": "ATAC-seqはクロマチンのアクセスしやすさを調べる。対象は転写開始点の近くに限らず、アクセス可能な遠位調節領域なども含まれる。アクセシビリティだけで転写量を直接測る手法ではない。",
+      "distractorRationales": [
+        "特定タンパク質との結合を免疫沈降で調べる手法。",
+        "指定したクロマチンへの転位反応を用いる手法ではない。",
+        "アクセス可能なクロマチンへの転位反応を利用する。",
+        "膜上で特定RNAを検出する手法。"
+      ],
+      "sources": [
+        {
+          "title": "Buenrostro et al. (2013) — Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24097267/"
+        },
+        {
+          "title": "Buenrostro et al. — author manuscript",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/3959825/"
+        }
+      ]
+    },
+    "reason": "旧設問の「転写開始領域付近」への過度な限定を撤廃。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文Abstractのopen chromatinと、著者原稿の索引にあるTn5・アダプター挿入の記述を照合。試料調製や配列の操作手順を転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000433",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "DNA二本鎖切断を相同組換えで修復する際に、修復の情報を得るために利用するものはどれか。",
+      "choices": [
+        "無関係なタンパク質の立体構造",
+        "切断場所と相同性のない任意のRNA",
+        "リボソームのアミノ酸配列",
+        "相同な塩基配列を持つDNA"
+      ],
+      "correctIndex": 3,
+      "explanation": "相同組換え修復では、相同性のあるDNAとの塩基対形成を利用する。切断末端の処理と、相同DNAへの鎖侵入は別の段階で、DNAを単に削るだけで修復するという意味ではない。",
+      "distractorRationales": [
+        "DNA塩基配列の修復の鋳型ではない。",
+        "相同なDNA情報を利用する経路の説明ではない。",
+        "タンパク質の配列をDNA修復の鋳型にしない。",
+        "相同性を利用して修復情報を得る。"
+      ],
+      "sources": [
+        {
+          "title": "Alberts et al. — Molecular Biology of the Cell, General Recombination",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26898/"
+        }
+      ]
+    },
+    "reason": "旧「相同鎖を侵食」を、末端処理と相同DNAへの鎖侵入の違いが分かる説明へ訂正。無条件の完全修復を保証しない。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "著者の教材のSummaryにある二本鎖切断・単鎖末端・相同DNAとの対合・修復を索引本文で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000093",
+    "domain": "生物",
+    "subdomain": "微生物・ウイルス・バイオテク",
+    "content": {
+      "question": "RNAを鋳型にしてDNAを合成する反応はどれか。",
+      "choices": [
+        "逆転写",
+        "DNAを鋳型とするRNA転写",
+        "mRNAの翻訳",
+        "タンパク質のリン酸化"
+      ],
+      "correctIndex": 0,
+      "explanation": "RNA依存のDNA合成を逆転写という。レトロウイルスなどに見られるが、RNAをゲノムに持つウイルスがすべて逆転写を行うわけではない。",
+      "distractorRationales": [
+        "RNAからDNAを合成する反応。",
+        "指定した反応とは鋳型と生成物が逆。",
+        "RNAの情報に従うポリペプチド合成。",
+        "タンパク質へのリン酸基付加。"
+      ],
+      "sources": [
+        {
+          "title": "NLM / MeSH — Reverse Transcription",
+          "url": "https://www.ncbi.nlm.nih.gov/mesh/68048348"
+        },
+        {
+          "title": "NHGRI — Retrovirus",
+          "url": "https://www.genome.gov/genetics-glossary/Retrovirus"
+        }
+      ]
+    },
+    "reason": "逆転写酵素もDNAポリメラーゼの一種であるため両者を排他的にした旧肢を廃止。RNAウイルス全般への一般化も除去。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NLM MeSHのRNAを鋳型とするDNA生合成という定義を照合。 NHGRI RetrovirusのRNAゲノムからDNAへの変換も照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000100",
+    "domain": "生物",
+    "subdomain": "微生物・ウイルス・バイオテク",
+    "content": {
+      "question": "標準的なCRISPR-Cas9ゲノム編集で、標的DNAに相補的な配列を持ち、Cas9を標的へ導くために設計するRNAはどれか。",
+      "choices": [
+        "tRNA",
+        "ガイドRNA",
+        "rRNA",
+        "Cas9タンパク質を作るmRNA"
+      ],
+      "correctIndex": 1,
+      "explanation": "ガイドRNAの標的に対応する部分がDNAと対合する。標的選択には隣接するPAMやCas9の性質も関わり、ガイドRNAの配列だけで特異性や切断効率が完全に決まるわけではない。",
+      "distractorRationales": [
+        "翻訳でアミノ酸を運ぶ役割のRNA。",
+        "Cas9を標的DNAへ導くRNA。",
+        "リボソームの構造・触媒を担うRNA。",
+        "Cas9を合成する情報であり、標的DNAとの対合を担うガイドRNAとは役割が違う。"
+      ],
+      "sources": [
+        {
+          "title": "The Nobel Prize in Chemistry 2020 — Scientific Background",
+          "url": "https://www.nobelprize.org/uploads/2020/10/advanced-chemistryprize2020.pdf"
+        }
+      ]
+    },
+    "reason": "標的特異性をRNAだけが決めるという旧解釈を避け、配列の相補性を担うRNAを問う。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "科学的背景の索引掲載部分にあるcrRNA/tracrRNAの融合、標的を変えるsgRNA、隣接PAMの条件を照合。PDF全体の読了とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000094",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "分化した体細胞を初期化し、多能性を持つ状態へ誘導した細胞を何というか。",
+      "choices": [
+        "胚から直接分離したES細胞",
+        "成熟赤血球",
+        "iPS細胞",
+        "血小板"
+      ],
+      "correctIndex": 2,
+      "explanation": "iPS細胞は体細胞を再プログラムして得る人工多能性幹細胞。胚から分離するES細胞とは作製経路が違う。多能性を、胎盤なども含むすべてへ発生できる全能性と同一には扱わない。",
+      "distractorRationales": [
+        "多能性は持つが、指定した体細胞からの誘導とは作製経路が異なる。",
+        "指定した多能性幹細胞ではない。",
+        "体細胞を初期化して誘導する多能性幹細胞。",
+        "指定した多能性幹細胞ではない。"
+      ],
+      "sources": [
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2012 — Scientific background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2012/advanced-information/"
+        }
+      ]
+    },
+    "reason": "旧「胚・成体組織から誘導」というES/iPSの混同を、体細胞の再プログラムへ訂正。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "科学的背景の成熟細胞の再プログラム・iPSとESの由来、およびIntroductionのpluripotent/totipotentの区別を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "分子機構・測定手法の事実を公的研究機関、手法の原論文、開発元資料、著者の教材で照合。設問・肢・説明を独自に作成し、論文の文章・演習問題・図表は転載していない。"
+    }
+  }
+]
