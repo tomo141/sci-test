@@ -1,0 +1,462 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000079",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "教師あり学習で、各入力に対応して用意する「予測したい正解の値や分類」を一般に何と呼ぶか。",
+      "choices": [
+        "ハイパーパラメーター",
+        "ラベル（目的変数）",
+        "ミニバッチ",
+        "学習率"
+      ],
+      "correctIndex": 1,
+      "explanation": "ラベルは入力に対応する目標の情報。分類ではカテゴリ、回帰では数値などになる。学習率などの学習手続きの設定値とは区別する。",
+      "distractorRationales": [
+        "学習手続きやモデルの構成に関する設定値。",
+        "入力に対して予測したい目標の情報。",
+        "まとめて処理する訓練標本の一部。",
+        "パラメーターを更新する歩幅を調整する設定。"
+      ],
+      "sources": [
+        {
+          "title": "Cornell CS4780 — Lecture 1: Supervised Learning",
+          "url": "https://www.cs.cornell.edu/courses/cs4780/2017sp/lectures/lecturenote01_MLsetup.html"
+        }
+      ]
+    },
+    "reason": "ポートやフォントなど無関係な誤答を、学習で使う別の概念へ改訂。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "入力xとラベルyの組、および分類・回帰を含むラベル空間の例を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000184",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "損失L(x)＝x²を、勾配降下法 xの次の値＝x−ηL′(x) で減らす。学習率η＝1.2、初期値x≠0とし、実数で厳密に計算すると更新はどうなるか。",
+      "choices": [
+        "符号が毎回変わり、絶対値は小さくなる",
+        "符号が毎回変わり、絶対値は大きくなる",
+        "符号は変わらず、絶対値は小さくなる",
+        "符号は変わらず、絶対値は大きくなる"
+      ],
+      "correctIndex": 1,
+      "explanation": "L′(x)＝2xなので、次の値はx−1.2×2x＝−1.4x。符号が反転し、絶対値が1.4倍ずつ増える。凸な損失でも、学習率が大きすぎるとこのように最小値へ収束しない。",
+      "distractorRationales": [
+        "倍率の絶対値は1.4で、1より大きい。",
+        "倍率−1.4から、符号の反転と絶対値の増加が分かる。",
+        "倍率は負で、絶対値も1より大きい。",
+        "絶対値は増えるが、符号も反転する。"
+      ],
+      "sources": [
+        {
+          "title": "Google Machine Learning Crash Course — Linear regression: Hyperparameters",
+          "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/hyperparameters"
+        }
+      ]
+    },
+    "reason": "「大きすぎる」を具体的な関数と更新式で示し、過学習との混同を避ける。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "学習率が負の勾配方向への更新量を決め、過大だと収束しない説明を確認。設問の二次関数とηは独自に定義し、−1.4の反復を導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000280",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "訓練標本の偶然の細部や雑音にまでモデルを合わせ、同じ分布から得る未知データへの予測性能が悪くなる現象を何というか。",
+      "choices": [
+        "次元削減",
+        "勾配消失",
+        "過学習（オーバーフィッティング）",
+        "転移学習"
+      ],
+      "correctIndex": 2,
+      "explanation": "過学習は、訓練標本への適合に偏って汎化が悪くなる現象。訓練誤差だけでは判定できず、適切に分けた検証データなどを見る。未知データの分布そのものが変わる問題とは区別している。",
+      "distractorRationales": [
+        "特徴の次元を減らす処理の名称。",
+        "学習に使う勾配が小さくなる問題。",
+        "訓練標本への過度な適合で汎化が悪くなる現象。",
+        "別の課題などで得たモデルや表現を利用する方法。"
+      ],
+      "sources": [
+        {
+          "title": "Google Machine Learning Crash Course — Overfitting",
+          "url": "https://developers.google.com/machine-learning/crash-course/overfitting/overfitting"
+        }
+      ]
+    },
+    "reason": "セキュリティへの誤分類を訂正し、単なる分布変化との区別を明記。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "訓練集合の細部への適合と未知データへの性能低下、訓練・検証の誤差曲線の比較を確認。分布が変わらない条件を設問に追加。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000289",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "Transformerの自己注意で、ある位置の一つの注意ヘッドは、基本的にどのように出力を作るか。",
+      "choices": [
+        "入力から得たqueryとkeyで重みを求め、参照が許された位置のvalueの重み付き和を作る",
+        "入力の内容によらない固定重みだけで、全位置のvalueを足す",
+        "valueのノルムが最大の位置を必ず一つだけ選び、そのまま返す",
+        "最も近い二つの位置だけを、学習した重みに関係なく平均する"
+      ],
+      "correctIndex": 0,
+      "explanation": "自己注意では同じ系列の表現からquery・key・valueを作り、関連度から得た重みでvalueを集約する。自己回帰型のマスクなどがあれば参照できない位置もある。全ての位置を必ず同じ条件で参照するわけではない。",
+      "distractorRationales": [
+        "入力に応じた関連度とvalueの集約を表す。",
+        "注意の重みは通常、入力のqueryとkeyに依存する。",
+        "一般に一つだけを選ぶ操作ではなく重み付き和。",
+        "位置を隣接二つだけに固定する定義ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Vaswani et al. — Attention Is All You Need",
+          "url": "https://arxiv.org/html/1706.03762v7"
+        }
+      ]
+    },
+    "reason": "計算理論への誤分類を訂正し、常に全位置を参照するという旧説明をマスクの条件で修正。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文§3.2のquery・keyとのcompatibilityによるvalueの重み付き和、§3.2.3の自己注意とマスクの説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000299",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "実現可能な二値分類のPAC学習で、十分な独立同分布の訓練標本から「確率1−δ以上で真の誤り率がε以下」という保証を考える。適切な解釈はどれか。",
+      "choices": [
+        "全ての将来の入力で、一度も誤らないことを保証する",
+        "訓練データ上の誤り率だけがε以下なら十分という意味である",
+        "入力の分布がどのように変わっても、同じモデルが同じ精度を保つ",
+        "訓練標本の抽出などについて高確率で、元の分布に対する誤り率の小さいモデルを得る"
+      ],
+      "correctIndex": 3,
+      "explanation": "δは学習の結果として悪いモデルを得る確率側の許容値で、εは得たモデルの分布上の誤り率側の許容値。個々の将来標本で必ず正解する保証ではない。必要な標本数と、計算時間の効率の条件は区別して定義する必要がある。",
+      "distractorRationales": [
+        "εが正なら個々の誤りを許す。",
+        "真の誤り率は未知の新しい標本を生む分布上の量。",
+        "学習時の設定と違う分布への無条件の保証ではない。",
+        "標本抽出等の確率と、分布上の誤り率を区別した解釈。"
+      ],
+      "sources": [
+        {
+          "title": "Cornell CS6781 — Lecture 3: The PAC Model",
+          "url": "https://www.cs.cornell.edu/courses/cs6781/2020sp/lectures/03-pac1.pdf"
+        }
+      ]
+    },
+    "reason": "標本数と計算時間が混同され、答えが問題文と同義だった旧問を、保証の意味を問う形へ改訂。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§1のIIDなラベル付き標本、true errorとempirical error、Definition 1のPAC保証を確認。標本数を多項式時間と呼ぶ旧説明を採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-ml-preprocessing-leakage",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "モデルを訓練・評価に分けて検証するとき、特徴量の平均と標準偏差による標準化を行う。評価データからの情報の混入を避ける基本的な手順はどれか。",
+      "choices": [
+        "分割前の全データで平均・標準偏差を求め、両方を変換する",
+        "訓練側だけで平均・標準偏差を求め、その変換を評価側にも適用する",
+        "評価側で求めた平均・標準偏差を、訓練側にも適用する",
+        "訓練側だけを標準化し、評価側は元の単位のまま予測させる"
+      ],
+      "correctIndex": 1,
+      "explanation": "前処理のパラメーターも訓練側だけで学習する。評価側には、その訓練側で得た変換を使う。目的変数を見ていなくても、全データから平均などを求めることは評価側の情報を学習へ持ち込むことになる。",
+      "distractorRationales": [
+        "評価側の値が前処理の学習に入る。",
+        "評価側を学習に使わず、同じ変換を適用できる。",
+        "評価側の情報で訓練データの表現を決めてしまう。",
+        "訓練時と予測時の特徴量の尺度が一致しない。"
+      ],
+      "sources": [
+        {
+          "title": "scikit-learn — Common pitfalls and recommended practices",
+          "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+        }
+      ]
+    },
+    "reason": "新規。ラベルを使わない前処理でも起こる情報混入を問う。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Inconsistent preprocessingとData leakageの、fitは訓練側のみ、両側に同じtransformを適用する説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-ml-roc-axes",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "二値分類で、陽性判定のしきい値を動かして描く標準的なROC曲線は、何を横軸と縦軸に取るか。",
+      "choices": [
+        "横軸：再現率、縦軸：適合率",
+        "横軸：偽陰性率、縦軸：適合率",
+        "横軸：偽陽性率、縦軸：真陽性率",
+        "横軸：正解率、縦軸：損失"
+      ],
+      "correctIndex": 2,
+      "explanation": "ROCは偽陽性率を横軸、真陽性率を縦軸に取り、しきい値による変化を示す。真陽性率は再現率とも呼ばれる。再現率と適合率を使う曲線はPR曲線で、ROCとは別。",
+      "distractorRationales": [
+        "PR曲線の軸。",
+        "標準的なROCの軸ではない。",
+        "ROCの標準的な横軸と縦軸。",
+        "正解率と損失の関係の図で、ROCではない。"
+      ],
+      "sources": [
+        {
+          "title": "Google Machine Learning Crash Course — Classification: ROC and AUC",
+          "url": "https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc"
+        }
+      ]
+    },
+    "reason": "新規。ROCとPR、および一つのしきい値の評価を区別する。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "ROC sectionと図の軸説明のTPR over FPR、各しきい値における点の定義を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-ml-precision-recall-counts",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "二値分類の評価集合に、実際の陽性が30件ある。モデルが陽性と予測した24件のうち、実際に陽性だったのは18件だった。適合率と再現率はそれぞれいくつか。",
+      "choices": [
+        "適合率75％、再現率60％",
+        "適合率60％、再現率75％",
+        "適合率80％、再現率60％",
+        "適合率75％、再現率80％"
+      ],
+      "correctIndex": 0,
+      "explanation": "適合率は陽性と予測した中で正しかった割合なので18/24＝75％。再現率は実際の陽性のうち検出した割合なので18/30＝60％。偽陽性は6件、偽陰性は12件になる。",
+      "distractorRationales": [
+        "予測陽性と実際の陽性をそれぞれ分母にした値。",
+        "二つの分母を入れ替えている。",
+        "24/30は適合率ではない。",
+        "24/30は再現率ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Google Machine Learning Crash Course — Classification: Accuracy, recall, precision, and related metrics",
+          "url": "https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall"
+        }
+      ]
+    },
+    "reason": "新規。適合率と再現率の分母の違いを確認する。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Precision＝TP/(TP＋FP)、Recall＝TP/(TP＋FN)の定義を確認。教材の演習と異なる件数・設問を独立作成して計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-ml-lasso-l1-penalty",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "回帰係数をwⱼ、正則化の強さをα＞0とする。切片を除く係数へ課す、LassoのL1ペナルティに対応する式はどれか。",
+      "choices": [
+        "αΣⱼwⱼ²",
+        "α maxⱼ|wⱼ|",
+        "α×0でない係数の個数",
+        "αΣⱼ|wⱼ|"
+      ],
+      "correctIndex": 3,
+      "explanation": "L1ペナルティは係数の絶対値の和。Lassoでは二乗誤差にこれを加えて最小化する。二乗の和を用いるL2ペナルティとは異なり、係数がちょうど0になる疎な解を得やすい。",
+      "distractorRationales": [
+        "L2ペナルティに対応する。",
+        "最大絶対値によるL∞型のペナルティ。",
+        "0でない係数の個数によるL0型のペナルティ。",
+        "係数の絶対値の和によるL1ペナルティ。"
+      ],
+      "sources": [
+        {
+          "title": "scikit-learn — Lasso",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html"
+        }
+      ]
+    },
+    "reason": "新規。異なる正則化の定義を同じ係数と記法で比較する。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Lasso公式APIの目的関数のalpha×||w||₁とL1正則化の説明を確認。切片を対象から除く。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-ml-grouped-validation",
+    "domain": "情報・計算機科学",
+    "subdomain": "AI・機械学習",
+    "content": {
+      "question": "複数人から一人当たり何度も測定したデータがあり、まだ学習に含まれていない人への予測性能を評価したい。訓練・評価の分け方で優先すべき条件はどれか。",
+      "choices": [
+        "同じ人の測定が訓練側と評価側の両方に入るよう、各人のデータを半分ずつにする",
+        "人をグループとして分け、同じ人が訓練側と評価側へまたがらないようにする",
+        "全測定を訓練に使い、同じ全測定で評価する",
+        "各人の名前だけを削除し、測定を区別なくランダムに分ける"
+      ],
+      "correctIndex": 1,
+      "explanation": "同じ人の測定には固有の特徴や相関があり得る。未知の人への汎化を測るなら、人単位で分離するGroupKFoldなどを使う。名前を消すだけでは、測定値に含まれる個人固有の特徴は取り除けない。",
+      "distractorRationales": [
+        "既知の人の情報が評価側へまたがり、新しい人への性能とずれる。",
+        "評価したい未知の人への汎化に対応した分離。",
+        "同じデータへの適合しか評価できない。",
+        "同じ人の特徴が測定値に残り得る。"
+      ],
+      "sources": [
+        {
+          "title": "scikit-learn — Cross-validation: evaluating estimator performance",
+          "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+        }
+      ]
+    },
+    "reason": "新規。測定行の無作為分割と、評価したい対象単位での分離を区別する。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "GroupKFoldの同一グループを訓練・評価へまたがらせない規則と、複数測定のある被験者の例を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原論文、大学講義、開発者・提供者の公式教材の取得した本文を照合。設問・選択肢・説明は独自作成し、原資料の文章・演習・図表・データを転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
