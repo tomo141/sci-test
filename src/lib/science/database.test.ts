@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -35,6 +35,28 @@ beforeAll(async () => {
 afterAll(async () => { await db?.close(); });
 
 describe.sequential("atomic issuance and answers", () => {
+  it("keeps quality triage private, idempotent, and independent of answer keys",async()=>{
+    const qualityAdmin="10000000-0000-4000-8000-000000000009";
+    await db.query("insert into auth.users(id) values($1)",[qualityAdmin]);
+    const job=(await db.query<{id:string}>("insert into science_jobs(kind,state) values('quality-test','running') returning id")).rows[0].id;
+    const signal=[{revisionId:revision,code:"rare_distractor",priority:3,evidence:{sampleCount:100,counts:[0,100,0,0]}}];
+    await db.query("select science_store_quality_signals($1,$2,$3,'2026-09-14','2026-08-14')",[job,signal,[revision]]);
+    const id=(await db.query<{id:string}>("select id from science_quality_signals where revision_id=$1",[revision])).rows[0].id;
+    await expect(db.query("select science_review_quality_signal($1,$2,'reviewed evidence',false)",[id,other])).rejects.toThrow("forbidden");
+    await db.query("insert into science_admins(user_id,reason) values($1,'test reviewer') on conflict do nothing",[qualityAdmin]);
+    await db.query("select science_review_quality_signal($1,$2,'source checked and no correction needed',false)",[id,qualityAdmin]);
+    await db.query("select science_store_quality_signals($1,$2,$3,'2026-09-15','2026-08-15')",[job,signal,[revision]]);
+    expect((await db.query<{state:string}>("select state from science_quality_signals where id=$1",[id])).rows[0].state).toBe("acknowledged");
+    await db.query("select science_store_quality_signals($1,'[]',$2,'2026-09-14','2026-08-14')",[job,[revision]]);
+    expect((await db.query<{state:string}>("select state from science_quality_signals where id=$1",[id])).rows[0].state).toBe("acknowledged");
+    await db.query("select science_store_quality_signals($1,'[]',$2,'2026-09-16','2026-08-16')",[job,[revision]]);
+    expect((await db.query<{state:string}>("select state from science_quality_signals where id=$1",[id])).rows[0].state).toBe("resolved");
+    await db.query("select science_store_quality_signals($1,$2,$3,'2026-09-17','2026-08-17')",[job,signal,[revision]]);
+    expect((await db.query<{state:string}>("select state from science_quality_signals where id=$1",[id])).rows[0].state).toBe("open");
+    const privacy=(await db.query<{signals:boolean;responses:boolean}>("select has_table_privilege('anon','science_quality_signals','SELECT') signals,has_table_privilege('authenticated','science_quality_responses','SELECT') responses")).rows[0];
+    expect(privacy).toEqual({signals:false,responses:false});
+    expect((await db.query<{key:number}>("select (content->>'correctIndex')::int key from science_items where id=$1",[revision])).rows[0].key).toBe(1);
+  });
   it("refuses direct browser reads of answer keys and direct RPC execution", async () => {
     const rows = await db.query<{ table_allowed: boolean; rpc_allowed: boolean }>(`select
       has_table_privilege('authenticated','science_issued','SELECT') as table_allowed,

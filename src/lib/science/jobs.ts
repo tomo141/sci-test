@@ -7,6 +7,7 @@ import { currentEstimate } from "./current";
 import type { Item,Attempt } from "./types";
 import { refreshCorrectedAttempt } from "./corrections";
 import { runCalibration } from "./calibration-job";
+import { runQualityWatch } from "./quality-job";
 
 async function weeklySet(db:ReturnType<typeof service>,date=new Date()){
   const week=periodBounds("week",date);
@@ -35,6 +36,7 @@ export async function runDailyJobs(){
     const corrections=checked(await db.from("science_attempts").select("*").eq("needs_recalculation",true).order("completed_at").limit(20)) as Attempt[];
     for(const attempt of corrections)await refreshCorrectedAttempt(db,attempt);
     summary.correctedResults=corrections.length;
+    summary.quality=await runQualityWatch(db,jobId);
     summary.weekly={current:await weeklySet(db),next:await weeklySet(db,new Date(Date.now()+7*86400000))};
     const queue=checked(await db.from("science_outbox").select("id,user_id,kind,payload,attempts").eq("state","pending").in("kind",["attempt_completed","submission_status","result_correction"]).lte("available_at",new Date().toISOString()).order("available_at").limit(20));
     const users=new Set<string>();

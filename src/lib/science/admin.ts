@@ -8,24 +8,27 @@ export type AdminData={
   feedback:{id:string;category:string;body:string;evidence:string;created_at:string;revision_id:string;science_items:{family_id:string;domain:string;content:Content}}[];
   jobs:{id:string;kind:string;state:string;summary:Record<string,unknown>;started_at:string;finished_at:string|null}[];
   corrections:{id:string;mode:string;reason:string;created_by:string|null;canApprove:boolean;source:{family_id:string;domain:string;content:Content};replacement:{content:Content}}[];
+  quality:{id:string;revision_id:string;code:string;priority:number;state:string;evidence:Record<string,unknown>;last_observed_at:string;review_note:string|null;science_items:{family_id:string;domain:string;content:Content}}[];
   metrics:{label:string;value:number}[];
   experiment:{id:string;from:string;to:string;rows:ExperimentRow[]};
 };
 export async function adminData(ctx:Context):Promise<AdminData>{
   const userId=await requireAdmin(ctx);
   const config=await releaseConfig(ctx.db),to=new Date().toISOString(),from=new Date(Date.now()-28*86400000).toISOString();
-  const [drafts,feedback,jobs,metrics,experiment,corrections]=await Promise.all([
+  const [drafts,feedback,jobs,metrics,experiment,corrections,quality]=await Promise.all([
     ctx.db.from("science_submission_drafts").select("*").in("state",["submitted","lab"]).order("created_at").limit(50),
     ctx.db.from("science_feedback").select("id,category,body,evidence,created_at,revision_id,science_items!inner(family_id,domain,content)").eq("state","pending").order("created_at").limit(50),
     ctx.db.from("science_jobs").select("id,kind,state,summary,started_at,finished_at").order("started_at",{ascending:false}).limit(20),
     ctx.db.rpc("science_admin_metrics"),
     ctx.db.rpc("science_experiment_results",{p_from:from,p_to:to,p_experiment:config.experiment}),
-    ctx.db.from("science_correction_proposals").select("id,mode,reason,created_by,source:science_items!science_correction_proposals_source_revision_fkey(family_id,domain,content),replacement:science_items!science_correction_proposals_replacement_revision_fkey(content)").eq("state","pending").order("created_at").limit(30)
+    ctx.db.from("science_correction_proposals").select("id,mode,reason,created_by,source:science_items!science_correction_proposals_source_revision_fkey(family_id,domain,content),replacement:science_items!science_correction_proposals_replacement_revision_fkey(content)").eq("state","pending").order("created_at").limit(30),
+    ctx.db.from("science_quality_signals").select("id,revision_id,code,priority,state,evidence,last_observed_at,review_note,science_items!inner(family_id,domain,content)").in("state",["open","acknowledged"]).order("priority").order("last_observed_at",{ascending:false}).limit(50)
   ]);
   const pending=checked(drafts) as AdminData["submissions"],reports=checked(feedback) as unknown as AdminData["feedback"];
   const pendingCorrections=checked(corrections) as unknown as AdminData["corrections"];
+  const qualitySignals=checked(quality) as unknown as AdminData["quality"];
   // Viewing answer keys marks the family seen before returning them to the reviewer.
-  const families=[...new Set([...pending.map(d=>`community:${d.id}`),...reports.map(f=>f.science_items.family_id),...pendingCorrections.map(c=>c.source.family_id)])];
+  const families=[...new Set([...pending.map(d=>`community:${d.id}`),...reports.map(f=>f.science_items.family_id),...pendingCorrections.map(c=>c.source.family_id),...qualitySignals.map(q=>q.science_items.family_id)])];
   if(families.length)checked(await ctx.db.from("science_exposures").upsert(families.map(family_id=>({visitor_id:ctx.visitor.id,user_id:userId,family_id,reason:"reviewer"})),{onConflict:"visitor_id,family_id",ignoreDuplicates:true}).select("family_id"));
-  return {observedAt:new Date().toISOString(),submissions:pending,feedback:reports,corrections:pendingCorrections.map(c=>({...c,canApprove:c.created_by!==userId})),jobs:checked(jobs),metrics:checked(metrics) as AdminData["metrics"],experiment:{id:config.experiment,from,to,rows:checked(experiment) as ExperimentRow[]}};
+  return {observedAt:new Date().toISOString(),submissions:pending,feedback:reports,quality:qualitySignals,corrections:pendingCorrections.map(c=>({...c,canApprove:c.created_by!==userId})),jobs:checked(jobs),metrics:checked(metrics) as AdminData["metrics"],experiment:{id:config.experiment,from,to,rows:checked(experiment) as ExperimentRow[]}};
 }
