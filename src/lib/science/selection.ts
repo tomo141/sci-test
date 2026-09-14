@@ -2,7 +2,7 @@ import type { ScienceDomain } from "@/src/lib/data/taxonomy";
 import { expectedScoreVarianceReduction, posterior, type Parameters, type Response } from "./model";
 import type { ExamDefinition } from "./definition";
 
-export type Candidate = Parameters & { revisionId: string; familyId: string; domain: ScienceDomain; authorId: string | null; focus: boolean; anchor: boolean; exposures: number };
+export type Candidate = Parameters & { revisionId: string; familyId: string; domain: ScienceDomain; authorId: string | null; focus: boolean; anchor: boolean; exposures: number; trustWeight?:number };
 
 export function selectCandidate(candidates: Candidate[], answers: Response[], exam: ExamDefinition, random = Math.random) {
   const counts = new Map<string, number>();

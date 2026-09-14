@@ -1,0 +1,40 @@
+begin;
+create table science_calibration_candidates(
+  id uuid primary key default gen_random_uuid(),revision_id uuid not null references science_items(id),release_id uuid not null references science_releases(id),
+  data_version text not null,observed_from timestamptz,observed_to timestamptz not null,fit jsonb not null,
+  state text not null check(state in ('collecting','rejected','qualified','applied')),created_at timestamptz not null default now(),unique(revision_id,release_id,data_version)
+);
+alter table science_calibration_candidates enable row level security;
+revoke all on science_calibration_candidates from public,anon,authenticated;
+grant all on science_calibration_candidates to service_role;
+create function science_apply_calibration(p_parent uuid,p_candidates uuid[],p_job uuid)
+returns uuid language plpgsql set search_path=public as $$
+declare r uuid;parent science_releases;fit_candidate science_calibration_candidates;
+begin
+  perform pg_advisory_xact_lock(hashtextextended('science-active-release',0));
+  select * into parent from science_releases where id=p_parent and state='active';
+  if not found or cardinality(p_candidates)<1 then raise exception 'stale_calibration'; end if;
+  if not exists(select 1 from science_jobs where id=p_job and state='running') then raise exception 'job_required'; end if;
+  if not coalesce((select (value->>'automaticCalibration')::boolean from science_config where key='release'),false) then raise exception 'automatic_calibration_disabled'; end if;
+  if (select count(*) from science_calibration_candidates where id=any(p_candidates) and release_id=p_parent and state='qualified' and (fit->>'eligible')::boolean)=cardinality(p_candidates) is not true then raise exception 'validation_required'; end if;
+  insert into science_releases(name,model_version,settings,validation)
+    values('Difficulty calibration '||current_date,parent.model_version,parent.settings||jsonb_build_object('parentRelease',p_parent),jsonb_build_object('automaticBUpdate','passed','jobId',p_job,'candidates',p_candidates)) returning id into r;
+  insert into science_release_items(release_id,revision_id,a,b,c,focus,anchor,parameter_evidence)
+    select r,revision_id,a,b,c,focus,anchor,parameter_evidence from science_release_items where release_id=p_parent;
+  for fit_candidate in select * from science_calibration_candidates where id=any(p_candidates) loop
+    if not exists(select 1 from science_release_items where release_id=r and revision_id=fit_candidate.revision_id and not anchor and abs(b-(fit_candidate.fit->>'b')::float8)<=.500001 and a=(fit_candidate.fit->>'a')::float8 and science_release_items.c=(fit_candidate.fit->>'c')::float8) then raise exception 'parameter_guard_failed'; end if;
+    update science_release_items set b=(fit_candidate.fit->>'b')::float8,focus=false,parameter_evidence=fit_candidate.fit||jsonb_build_object('candidateId',fit_candidate.id) where release_id=r and revision_id=fit_candidate.revision_id;
+  end loop;
+  -- Move the freed focus slots to questions with the least accumulated evidence in each domain.
+  with slots as (select q.domain,count(*) n from science_calibration_candidates c join science_items q on q.id=c.revision_id where c.id=any(p_candidates) group by q.domain),
+  ranked as (select ri.revision_id,row_number() over(partition by q.domain order by coalesce((ri.parameter_evidence->>'count')::int,0),q.id) rank,s.n
+    from science_release_items ri join science_items q on q.id=ri.revision_id join slots s on s.domain=q.domain
+    where ri.release_id=r and not ri.anchor and not ri.focus and ri.revision_id not in (select revision_id from science_calibration_candidates where id=any(p_candidates)))
+  update science_release_items set focus=true where release_id=r and revision_id in (select revision_id from ranked where rank<=n);
+  perform science_activate_release(r,null,'Held-out difficulty prediction, coverage and score-change guards passed');
+  update science_calibration_candidates set state='applied' where id=any(p_candidates);
+  return r;
+end $$;
+revoke all on function science_apply_calibration(uuid,uuid[],uuid) from public,anon,authenticated;
+grant execute on function science_apply_calibration(uuid,uuid[],uuid) to service_role;
+commit;

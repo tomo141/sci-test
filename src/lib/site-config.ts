@@ -7,9 +7,4 @@ export const siteConfig = {
     contactEmail: "tomoyoshi@rikei-talk.com",
     lastUpdated: "2026年6月28日"
   },
-  eventLinks: {
-    onlineBar: "{全分野科学検定Barオンライン_URL}",
-    bar: "{全分野科学検定Bar_URL}",
-    lab: "https://community.camp-fire.jp/projects/view/269163"
-  }
 };

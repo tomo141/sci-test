@@ -78,7 +78,7 @@ create table public.science_attempts (
 create index science_attempts_owner on public.science_attempts(user_id,started_at desc);
 create index science_attempts_visitor on public.science_attempts(visitor_id,started_at desc);
 create unique index science_active_visitor on public.science_attempts(visitor_id) where state='active';
-create unique index science_active_user on public.science_attempts(user_id) where state='active' and user_id is not null;
+create index science_active_user on public.science_attempts(user_id) where state='active' and user_id is not null;
 create table public.science_issued (
   attempt_id uuid not null references public.science_attempts(id), ordinal int not null check(ordinal>=0),
   revision_id uuid not null references public.science_items(id), family_id text not null,
@@ -193,6 +193,10 @@ declare v science_visitors; a science_attempts; kind text; needs_account boolean
 begin
   select * into v from science_visitors where id=p_visitor for update;
   if not found or (v.user_id is not null and v.user_id is distinct from p_user) then raise exception 'not_found' using errcode='P0002'; end if;
+  if p_user is not null then
+    perform pg_advisory_xact_lock(hashtextextended('start:'||p_user,0));
+    if exists(select 1 from science_attempts where user_id=p_user and state='active') then raise exception 'active_attempt' using errcode='40001'; end if;
+  end if;
   kind:=p_definition->>'kind';
   needs_account:=case v.route_group when 'A' then kind='domain' when 'B' then kind='full' else kind in ('full','domain') end;
   if needs_account and (p_user is null or not exists(select 1 from science_entitlements where user_id=p_user)) then raise exception 'registration_required'; end if;
@@ -217,7 +221,7 @@ begin
   select * into issued from science_issued where attempt_id=p_attempt and ordinal=p_ordinal;
   if found then return issued; end if;
   if a.state<>'active' or a.ordinal<>p_ordinal then raise exception 'stale_attempt' using errcode='40001'; end if;
-  if a.kind='weekly' and not exists(select 1 from science_weekly_sets where id=a.week_id and now()<ends_at and now()>=starts_at) then raise exception 'week_closed'; end if;
+  if a.kind='weekly' and exists(select 1 from science_weekly_sets where id=a.week_id and now()>=ends_at) then update science_attempts set competitive=false where id=a.id; end if;
   select * into q from science_items where id=p_revision;
   if not found or not q.rights_checked or q.status not in ('published','lab') or (q.expires_at is not null and q.expires_at<=now()) then raise exception 'item_unavailable'; end if;
   if a.kind<>'lab' and (q.status<>'published' or not q.quality_passed) then raise exception 'item_unavailable'; end if;
@@ -254,7 +258,7 @@ begin
   end if;
   if a.state<>'active' or a.ordinal<>p_ordinal then raise exception 'stale_attempt' using errcode='40001'; end if;
   if p_selected is null or p_selected not between 0 and 3 then raise exception 'invalid_choice'; end if;
-  if a.kind='weekly' and not exists(select 1 from science_weekly_sets where id=a.week_id and now()<ends_at) then raise exception 'week_closed'; end if;
+  if a.kind='weekly' and exists(select 1 from science_weekly_sets where id=a.week_id and now()>=ends_at) then update science_attempts set competitive=false where id=a.id; end if;
   select * into issued from science_issued where attempt_id=p_attempt and ordinal=p_ordinal and token=p_token;
   if not found then raise exception 'not_issued' using errcode='P0002'; end if;
   correct := (issued.choice_order->>p_selected)::int=(issued.snapshot->'content'->>'correctIndex')::int;
@@ -284,10 +288,7 @@ begin
   if found and original.id<>v.id then
     insert into science_events(dedupe_key,event_name,visitor_id,user_id,payload) values('merge:'||v.id,'assignment_merged',v.id,p_user,jsonb_build_object('originalGroup',v.route_group,'canonicalGroup',original.route_group)) on conflict do nothing;
   end if;
-  -- Existing active attempt on another device remains available; this visitor's attempt is safely retained as abandoned.
-  if exists(select 1 from science_attempts where user_id=p_user and state='active' and visitor_id<>p_visitor) then
-    update science_attempts set state='abandoned' where visitor_id=p_visitor and user_id is null and state='active';
-  end if;
+  -- Both devices' active records remain resumable; new starts are serialized per user.
   update science_visitors set user_id=p_user,verified_at=coalesce(verified_at,now()),route_group=coalesce(original.route_group,route_group),full_length=coalesce(original.full_length,full_length) where id=p_visitor;
   update science_attempts set user_id=p_user where visitor_id=p_visitor and user_id is null;
   update science_exposures set user_id=p_user where visitor_id=p_visitor and user_id is null;

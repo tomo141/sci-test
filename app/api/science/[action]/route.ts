@@ -2,8 +2,9 @@ import { NextRequest } from "next/server";
 import { z } from "zod";
 import { domains } from "@/src/lib/data/taxonomy";
 import { answerExam, examState, ownedAttempt, publicAttempt, reviewAttempt, startExam } from "@/src/lib/science/engine";
-import { checked, context, endpoint, rateLimit, requireUser, ScienceError } from "@/src/lib/science/server";
+import { checked, context, endpoint, rateLimit, releaseConfig, requireUser, ScienceError } from "@/src/lib/science/server";
 import { accountData } from "@/src/lib/science/account";
+import { definition,requiresAccount } from "@/src/lib/science/definition";
 
 const id = z.string().uuid();
 const attemptInput = z.object({ attemptId: id }).strict();
@@ -11,11 +12,26 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ action: string }> }) {
   return endpoint(request, async () => {
-    const action = (await params).action;
+    const action = z.enum(["plan","start","state","result","answer","review","abandon","share","feedback","bookmark","event","account","profile","preferences","review_collection","mark_review"]).parse((await params).action);
     const raw = await request.text();
     if (raw.length > 32_768) throw new ScienceError("入力が長すぎます。", 413);
-    const body = JSON.parse(raw);
-    const ctx = await context(true, action === "start" ? body.refShare : undefined);
+    const body = z.record(z.unknown()).parse(JSON.parse(raw));
+    const ctx = await context(true, (action === "start" || action === "plan") && typeof body.refShare === "string" ? body.refShare : undefined);
+    if(action==="review_collection"){
+      const userId=requireUser(ctx),p=z.object({mode:z.enum(["mistakes","bookmarks"]),page:z.number().int().min(0).max(10000)}).strict().parse(body);
+      await rateLimit(ctx,"review_collection",60);
+      return {rows:checked(await ctx.db.rpc("science_review_collection",{p_user:userId,p_mode:p.mode,p_page:p.page}))};
+    }
+    if(action==="mark_review"){
+      const userId=requireUser(ctx),p=z.object({revisionId:id,remembered:z.boolean(),operationId:id}).strict().parse(body);
+      await rateLimit(ctx,"mark_review",60);
+      checked(await ctx.db.rpc("science_mark_review",{p_user:userId,p_revision:p.revisionId,p_remembered:p.remembered,p_operation:p.operationId}));return {saved:true};
+    }
+    if(action === "plan"){
+      const input=z.object({kind:z.enum(["trial","full","domain","weekly","lab"]),domain:z.enum(domains).optional(),refShare:id.optional()}).strict().parse(body);
+      const config=await releaseConfig(ctx.db);
+      return {definition:definition(input.kind,input.domain,ctx.visitor.full_length),registrationRequired:!ctx.userId&&requiresAccount(ctx.visitor.route_group,input.kind),newAttempts:config.newAttempts};
+    }
     if(action === "account") {
       await rateLimit(ctx,"account",30);
       return accountData(ctx,z.object({page:z.number().int().min(0).max(10000).default(0)}).strict().parse(body).page);
@@ -41,7 +57,12 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       await rateLimit(ctx, "state", 120);
       return examState(ctx, attemptInput.parse(body).attemptId);
     }
-    if (action === "result") return { attempt: publicAttempt(await ownedAttempt(ctx, attemptInput.parse(body).attemptId)), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId };
+    if (action === "result") {
+      const attempt=await ownedAttempt(ctx,attemptInput.parse(body).attemptId);
+      const share=await ctx.db.from("science_shares").select("id,enabled,nickname").eq("attempt_id",attempt.id).maybeSingle();
+      if(share.error)checked(share);
+      return {attempt:publicAttempt(attempt),question:null,group:ctx.visitor.route_group,signedIn:!!ctx.userId,share:share.data};
+    }
     if (action === "answer") {
       return answerExam(ctx, z.object({ attemptId: id, ordinal: z.number().int().min(0).max(99), token: id, operationId: id, selectedIndex: z.number().int().min(0).max(3) }).strict().parse(body));
     }

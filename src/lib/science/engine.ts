@@ -5,15 +5,10 @@ import { MODEL_VERSION, scoreResponses, type Response } from "./model";
 import { hasCapacity, selectCandidate, type Candidate } from "./selection";
 import { checked, rateLimit, releaseConfig, ScienceError, type Context } from "./server";
 import type { Answer, Attempt, AttemptResult, ExamState, Issued, Item, PublicAttempt, PublicQuestion } from "./types";
-
-export async function readAll<T>(query: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: { code?: string; message?: string } | null }>): Promise<T[]> {
-  const records: T[] = [];
-  for (let offset = 0; ; offset += 500) {
-    const page = checked(await query(offset, offset + 499));
-    records.push(...page);
-    if (page.length < 500) return records;
-  }
-}
+import { readAll } from "./queries";
+import { authorWeights } from "./community";
+import { laboratoryChoice } from "./trust";
+export { readAll } from "./queries";
 
 export async function ownedAttempt(ctx: Context, id: string) {
   const result = await ctx.db.from("science_attempts").select("*").eq("id", id).maybeSingle();
@@ -52,7 +47,9 @@ async function candidateBank(ctx: Context, release: string | null, kind: ExamKin
   const seen = await unseenFamilies(ctx);
   if (kind === "lab") {
     const items = await readAll<Item>((from, to) => ctx.db.from("science_items").select("*").in("status", ["lab", "published"]).eq("rights_checked", true).not("author_id", "is", null).order("id").range(from, to));
-    return items.filter((q) => !seen.has(q.family_id) && q.author_id !== ctx.userId && (!q.expires_at || new Date(q.expires_at) > new Date())).map((q) => ({ revisionId: q.id, familyId: q.family_id, domain: q.domain, a: 1, b: 0, c: .25, authorId: q.author_id, focus: true, anchor: false, exposures: 0 }));
+    const candidates=items.filter((q) => !seen.has(q.family_id) && q.author_id !== ctx.userId && (!q.expires_at || new Date(q.expires_at) > new Date())).map((q) => ({ revisionId: q.id, familyId: q.family_id, domain: q.domain, a: 1, b: 0, c: .25, authorId: q.author_id, focus: true, anchor: false, exposures: 0 }));
+    const weights=await authorWeights(ctx,candidates);
+    return candidates.map((q,i)=>({...q,trustWeight:weights[i]}));
   }
   if (!release) throw new ScienceError("問題バンクを準備しています。", 503, "bank_unavailable");
   const rows = await readAll<BankRow>((from, to) => ctx.db.from("science_release_items").select("*,science_items!inner(*)").eq("release_id", release).order("revision_id").range(from, to));
@@ -82,11 +79,12 @@ export async function examState(ctx: Context, id: string): Promise<ExamState> {
     let revisionId: string, predicted = .5, probability = 1, reason = "fixed-weekly-set-v1", candidateCount = 1;
     if (a.kind === "weekly") {
       const weekly = checked<{ revision_ids: string[]; ends_at: string }>(await ctx.db.from("science_weekly_sets").select("revision_ids,ends_at").eq("id", a.week_id).single());
-      if (new Date(weekly.ends_at) <= new Date()) throw new ScienceError("この週の受付は終了しました。", 409, "week_closed");
       revisionId = weekly.revision_ids[a.ordinal];
     } else {
       const candidates = await candidateBank(ctx, a.release_id, a.kind);
-      const next = selectCandidate(candidates, records.responses, a.definition, () => randomInt(2 ** 24) / 2 ** 24);
+      const random=()=>randomInt(2 ** 24)/2 ** 24;
+      const lab=a.kind==="lab"?laboratoryChoice(candidates.map(c=>({...c,trustWeight:c.trustWeight??1})),random):null;
+      const next = a.kind==="lab"?(lab?{candidate:lab.candidate,predicted:.625,selectionProbability:lab.probability,reason:"lab-trust+25pct-uniform-v1",candidateCount:candidates.length}:null):selectCandidate(candidates, records.responses, a.definition, random);
       if (!next) throw new ScienceError("この条件で出せる未見問題が不足しています。回答済みの内容は保存されています。", 409, "bank_exhausted");
       revisionId = next.candidate.revisionId; predicted = next.predicted; probability = next.selectionProbability; reason = next.reason; candidateCount = next.candidateCount;
     }
@@ -109,6 +107,7 @@ export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDo
   let releaseId: string | null = null, week: string | null = null;
   if (kind === "weekly") {
     week = periodBounds("week").key;
+    exam.week=week;exam.label=`${week}週の10問`;
     const set = await ctx.db.from("science_weekly_sets").select("id").eq("id", week).maybeSingle();
     if (set.error) checked(set);
     if (!set.data) throw new ScienceError("今週の問題は準備中です。", 409, "weekly_pending");

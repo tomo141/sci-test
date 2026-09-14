@@ -26,8 +26,8 @@ begin
 end $$;
 revoke all on function public.handle_new_user() from public,anon,authenticated;
 
-insert into science_profiles(user_id,nickname)
-  select id,coalesce(nullif(left(nickname,30),''),'科学好き') from profiles on conflict(user_id) do nothing;
+insert into science_profiles(user_id,nickname,created_at)
+  select id,coalesce(nullif(left(nickname,30),''),'科学好き'),created_at from profiles on conflict(user_id) do nothing;
 insert into science_entitlements(user_id,acquired_at,source)
   select user_id,training_unlocked_at,'legacy_training_right' from marketing_consents where training_unlocked_at is not null
   on conflict(user_id) do nothing;

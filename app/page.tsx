@@ -1,113 +1,21 @@
 import Image from "next/image";
-import { Trophy } from "lucide-react";
+import Link from "next/link";
 import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
-import { StatusBadge } from "@/components/ui/StatusBadge";
-import { domains } from "@/src/lib/data/taxonomy";
-import { getPublicLeaderboard } from "@/src/lib/public/leaderboard";
-import { LocalScoreSummary } from "@/components/profile/LocalScoreSummary";
 import { DomainIcon } from "@/components/ui/DomainIcon";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "全分野科学検定 β版",
-  description: "数学・物理・化学から人文社会科学まで、10の科学分野であなたの科学力を可視化します。",
-  alternates: {
-    canonical: "/"
-  },
-  openGraph: {
-    title: "全分野科学検定 β版",
-    description: "10の科学分野であなたの科学力を可視化する腕試し検定。",
-    url: "/"
-  }
-};
-
-export default async function HomePage() {
-  const top3 = await getPublicLeaderboard(3);
-
-  return (
-    <>
-      <SiteHeaderWithAuth />
-      <main>
-        <section className="overflow-hidden bg-[radial-gradient(circle_at_82%_18%,rgba(68,132,255,0.14),transparent_32%),linear-gradient(180deg,#fff_0%,#f7faff_100%)] py-10 md:py-16">
-          <div className="page-container grid max-w-full items-center gap-8 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
-            <div className="min-w-0 max-w-full">
-              <p className="mb-4 text-lg font-black text-[var(--color-primary-900)]">科学が好きなすべての人へ</p>
-              <h1 className="text-4xl font-black leading-tight md:text-6xl">
-                あなたの<span className="text-[var(--color-primary-700)]">科学力</span>を、<br />
-                すべての分野で<span className="text-[var(--color-primary-700)]">可視化</span>する。
-              </h1>
-              <p className="mt-6 max-w-xl text-base font-bold leading-8 text-[var(--color-ink-soft)]">
-                10の科学分野で、あなたの強みと伸ばすと面白い領域を診断。学びやキャリア、チームでの挑戦に役立てよう。
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <AppButton href="/exam" className="text-base">今すぐ腕試しを始める</AppButton>
-              </div>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <StatusBadge>ログインなしで受験開始</StatusBadge>
-                <StatusBadge>10の科学分野</StatusBadge>
-              </div>
-            </div>
-            <div className="relative aspect-[16/9] min-h-[280px] w-full max-w-full overflow-hidden">
-              <Image
-                src="/images/hero-main.jpg"
-                alt="りけとくおが10の科学分野を冒険するイラスト"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="rounded-[32px] object-contain object-center"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="page-container mt-10">
-          <h2 className="mb-5 text-2xl font-black">10の科学分野</h2>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
-            {domains.map((domain) => (
-              <AppCard key={domain} className="grid min-h-28 place-items-center text-center">
-                <DomainIcon domain={domain} />
-                <p className="mt-2 text-sm font-black">{domain}</p>
-              </AppCard>
-            ))}
-          </div>
-        </section>
-
-        <section className="page-container mt-8 grid gap-6 lg:grid-cols-2">
-          <AppCard>
-            <div className="mb-5 flex items-center justify-between">
-              <h2 className="flex items-center gap-2 text-xl font-black"><Trophy className="text-[var(--color-accent-yellow-600)]" />ランキング TOP3</h2>
-              <AppButton href="/ranking" variant="ghost">もっと見る</AppButton>
-            </div>
-            <div className="grid gap-4">
-              {top3.length ? (
-                top3.map((row, index) => (
-                  <div key={`${row.rank}-${row.nickname}`} className="flex items-center justify-between rounded-2xl border border-[var(--color-border)] p-3">
-                    <div className="flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-accent-yellow-100)] font-black text-[var(--color-warning-700)]">{row.rank || index + 1}</span>
-                      <p className="font-black">{row.nickname}</p>
-                    </div>
-                    <p className="text-2xl font-black text-[var(--color-primary-700)]">{row.score}</p>
-                  </div>
-                ))
-              ) : (
-                <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-primary-50)] p-4">
-                  <p className="font-black">ランキングはまだ集計前です</p>
-                  <p className="mt-2 text-sm leading-7 text-[var(--color-ink-soft)]">受験結果が保存されると、公開用ニックネームとスコアだけが表示されます。</p>
-                </div>
-              )}
-            </div>
-          </AppCard>
-          <AppCard>
-            <h2 className="mb-5 text-xl font-black">あなたの科学スコア</h2>
-            <LocalScoreSummary />
-            <p className="mt-5 leading-7 text-[var(--color-ink-soft)]">分野別のバランスから、得意分野と次に伸ばす領域を見つけられます。</p>
-          </AppCard>
-        </section>
-      </main>
-      <SiteFooter />
-    </>
-  );
-}
+import { domains } from "@/src/lib/data/taxonomy";
+export const metadata={title:"全分野科学検定",description:"あなたの科学は、どこまで広い？20問の腕試しから、10分野の科学マップへ。制作：理系とーく 川村智祥。"};
+export default function HomePage(){return <><SiteHeaderWithAuth/><main>
+  <section className="bg-[radial-gradient(circle_at_80%_20%,#dcecff,transparent_45%),linear-gradient(180deg,#fff,#f4f8ff)] py-12 md:py-20"><div className="page-container grid items-center gap-8 md:grid-cols-2"><div><p className="text-sm font-black tracking-widest text-[var(--color-primary-700)]">科学が好き。その先へ。</p><h1 className="mt-5 text-4xl font-black leading-snug md:text-6xl">あなたの科学は、<br/>どこまで<span className="text-[var(--color-primary-700)]">広い？</span></h1><p className="mt-6 max-w-xl leading-8">専門の外にも、知っている自分がいる。<br/>数学から人文社会科学まで、10分野を旅する20問。あなたの科学マップを見つけよう。</p><AppButton href="/exam?kind=trial" className="mt-8 px-8 text-lg">20問で腕試しする</AppButton><p className="mt-4 text-sm text-[var(--color-muted)]">無料・登録なしで開始・時間制限なし</p><p className="mt-7 text-xs font-bold">制作「理系とーく 川村智祥」</p></div><div className="relative aspect-[16/10]"><Image src="/images/hero-main.jpg" alt="10の科学分野をめぐる、りけとくおの冒険" fill priority sizes="(max-width:768px) 100vw,50vw" className="rounded-3xl object-contain"/></div></div></section>
+  <section className="page-container py-12"><h2 className="text-2xl font-black">広さも、深さも。次の一問へ。</h2><div className="mt-6 grid gap-5 md:grid-cols-3">{[
+    {label:"腕試し20問",body:"10分野を2問ずつ。得意と好奇心の入口を見つける、最初の科学マップ。",href:"/exam?kind=trial",cta:"腕試しへ"},
+    {label:"本試験",body:"各分野を同じ数ずつ測ります。あなたに合う問題で、実力をもう少し詳しく。",href:"/exam?kind=full",cta:"本試験の案内へ"},
+    {label:"この分野をもう20問",body:"得意分野を掘り下げる？ 意外な分野を開く？ 気になる科学を選ぼう。",href:"/exam?kind=domain",cta:"分野を選ぶ"}
+  ].map(c=><AppCard key={c.label}><h3 className="text-xl font-black">{c.label}</h3><p className="mt-4 min-h-24 leading-8">{c.body}</p><AppButton href={c.href} variant="secondary" className="mt-5">{c.cta}</AppButton></AppCard>)}</div>
+    <p className="mt-5 text-sm leading-7 text-[var(--color-muted)]">初期は知識の4択問題です。実験・論述・研究遂行を含む科学の力すべてを測るものではありません。測定値には推定の幅を示します。</p>
+  </section>
+  <section className="page-container grid gap-6 md:grid-cols-2"><AppCard className="bg-[var(--color-primary-50)]"><p className="text-sm font-bold">毎週月曜、同じ問題で。</p><h2 className="mt-3 text-3xl font-black">今週の10問</h2><p className="mt-4 leading-8">友だちも、専門家も、みんな同じ10問。初回の正答数で週替わりランキングに参加できます。</p><div className="mt-6 flex flex-wrap gap-3"><AppButton href="/exam?kind=weekly">今週の10問に挑む</AppButton><AppButton href="/ranking" variant="ghost">ランキング</AppButton></div></AppCard><AppCard><p className="text-sm font-bold">解く人も、つくる人も、研究仲間。</p><h2 className="mt-3 text-3xl font-black">みんなの出題ラボ</h2><p className="mt-4 leading-8">とっておきの科学を問題に。みんなの問いを解いて、気づきを返して、良問を一緒に育てる場所。</p><AppButton href="/lab" className="mt-6" variant="secondary">出題ラボをのぞく</AppButton></AppCard></section>
+  <section className="page-container py-12"><h2 className="text-2xl font-black">10の科学分野</h2><div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-5">{domains.map(domain=><Link key={domain} href={`/exam?kind=domain&domain=${encodeURIComponent(domain)}`} className="rounded-2xl border bg-white p-5 text-center hover:border-[var(--color-primary-700)]"><DomainIcon domain={domain}/><p className="mt-3 text-sm font-bold">{domain}</p></Link>)}</div><p className="mt-5 text-sm leading-7">分野別・小分野別の長い本試験は、検証済みの問題と回答データが揃った範囲から公開します。<Link href="/signup?next=%2Fmypage" className="underline">登録後の配信設定</Link>から、新しい分野の公開案内を選べます。</p></section>
+</main><SiteFooter/></>;}

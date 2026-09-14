@@ -1,4 +1,4 @@
-import { createHash, randomBytes, randomInt } from "node:crypto";
+import { createHash,createHmac, randomBytes, randomInt } from "node:crypto";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import { createServerSupabaseClient, createServiceRoleClient } from "@/src/lib/supabase/server";
@@ -18,6 +18,8 @@ export function checked<T>(response: { data: T | null; error: { code?: string; m
     if (response.error?.code === "40001" || message === "already_seen") throw new ScienceError("進捗が更新されています。再読み込みして続けてください。", 409, "conflict");
     if (response.error?.code === "P0002") throw new ScienceError("受験が見つかりません。", 404, "not_found");
     if (message === "week_closed") throw new ScienceError("この週の受付は終了しました。今週の10問へお進みください。", 409, "week_closed");
+    if (message === "independent_review_required") throw new ScienceError("作者・報告者とは別の管理者が確認してください。",403,"independent_review_required");
+    if (message === "submission_not_open") throw new ScienceError("投稿受付の条件を確認中です。下書きは保存されています。",409,"submission_not_open");
     throw new ScienceError("データを保存・取得できませんでした。時間を置いて再試行してください。", 503, "database_error");
   }
   return response.data as NonNullable<T>;
@@ -30,6 +32,7 @@ export async function context(create = false, refShare?: string): Promise<Contex
   const db = service();
   const auth = await createServerSupabaseClient();
   const userResponse = await auth?.auth.getUser();
+  if(userResponse?.error && (userResponse.error.name==="AuthRetryableFetchError"||(userResponse.error.status??0)>=500))throw new ScienceError("ログイン状態を確認できません。通信の回復後に再試行してください。",503,"auth_unavailable");
   const user = userResponse?.data.user;
   const userId = user?.email_confirmed_at ? user.id : null;
   const jar = await cookies();
@@ -62,7 +65,6 @@ export async function context(create = false, refShare?: string): Promise<Contex
     }
     visitor = checked(await db.from("science_visitors").insert({ token_hash: tokenHash, route_group: canonical?.route_group ?? ["A", "B", "C", "D"][randomInt(4)], full_length: canonical?.full_length ?? config.fullLength, experiment: canonical?.experiment ?? config.experiment, ref_share: attribution }).select("*").single()) as Visitor;
     jar.set(cookieName, token, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", path: "/", maxAge: 365 * 24 * 3600 });
-    checked(await db.from("science_events").insert({ dedupe_key: `assigned:${visitor.id}`, event_name: "experiment_assigned", visitor_id: visitor.id, payload: { group: visitor.route_group, experiment: visitor.experiment } }).select("id").single());
   }
   if (userId && !visitor.user_id) {
     if (!create) return { db, visitor, userId, tokenHash };
@@ -101,6 +103,10 @@ export async function endpoint(request: NextRequest, fn: () => Promise<unknown>)
       const origin = request.headers.get("origin");
       if (!origin || origin !== new URL(request.url).origin) throw new ScienceError("画面を再読み込みして操作してください。", 403, "origin_required");
       if (Number(request.headers.get("content-length")) > 32_768) throw new ScienceError("入力が長すぎます。", 413);
+      const ip=(request.headers.get("x-vercel-forwarded-for")??request.headers.get("x-forwarded-for")??"unknown").split(",")[0].trim();
+      const digest=createHmac("sha256",process.env.SUPABASE_SERVICE_ROLE_KEY??"local-unconfigured").update(ip).digest("hex");
+      const allowed=checked(await service().rpc("science_rate_limit",{p_key:`request:${digest}`,p_seconds:60,p_limit:240}));
+      if(!allowed)throw new ScienceError("操作が集中しています。少し待ってからお試しください。",429,"rate_limited");
     }
     return NextResponse.json(await fn(), { headers: { "Cache-Control": "private, no-store" } });
   } catch (error) {

@@ -8,7 +8,7 @@ const nav: [string, string][] = [
   ["トップ", "/"],
   ["検定について", "/about"],
   ["受験する", "/exam"],
-  ["トレーニング", "/training"],
+  ["出題ラボ", "/lab"],
   ["ランキング", "/ranking"],
   ["マイページ", "/mypage"],
   ["ヘルプ", "/help"]

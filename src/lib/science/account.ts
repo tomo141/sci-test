@@ -1,7 +1,8 @@
-import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
-import { scoreResponses, type Response } from "./model";
-import { checked, type Context } from "./server";
+import { type ScienceDomain } from "@/src/lib/data/taxonomy";
+import { scoreResponses } from "./model";
+import { checked, ScienceError, type Context } from "./server";
 import { publicAttempt } from "./engine";
+import { currentEstimate } from "./current";
 import type { Attempt, AttemptResult } from "./types";
 
 export type ScienceProfile = { public_id: string; nickname: string; bio: string; interests: ScienceDomain[]; is_public: boolean; ranking_opt_in: boolean };
@@ -19,13 +20,9 @@ export async function accountData(ctx: Context, page: number): Promise<AccountDa
   const historyQuery=ctx.db.from("science_attempts").select("*",{count:"exact"});
   const historyPromise=scoped(historyQuery).order("started_at",{ascending:false}).order("id").range(page*20,page*20+19);
   const bestPromise=ctx.db.from("science_personal_bests").select("id,kind,domain,total,result").eq("owner_key",ctx.userId?`user:${ctx.userId}`:`visitor:${ctx.visitor.id}`);
-  const currentPromises=domains.map(async(domain)=>{
-    const query=ctx.db.from("science_responses").select("domain,a,b,c,is_correct,answered_at").eq("domain",domain).eq("eligible",true);
-    const records=checked(await scoped(query).order("answered_at",{ascending:false}).order("attempt_id").order("ordinal",{ascending:false}).limit(100)) as {domain:ScienceDomain;a:number;b:number;c:number;is_correct:boolean;answered_at:string}[];
-    return records.reverse().map((r):Response=>({...r,correct:r.is_correct,eligible:true,answeredAt:r.answered_at}));
-  });
-  const [historyResponse,bestResponse,fields]=await Promise.all([historyPromise,bestPromise,Promise.all(currentPromises)]);
+  const [historyResponse,bestResponse,current]=await Promise.all([historyPromise,bestPromise,currentEstimate(ctx.db,ctx.userId?{userId:ctx.userId}:{visitorId:ctx.visitor.id})]);
   const history=checked(historyResponse) as Attempt[];
+  if(historyResponse.count===null)throw new ScienceError("履歴件数を取得できませんでした。",503);
   let profile:ScienceProfile|null=null,preferences:Preferences={science:false,weekly:false,domain_opening:false};
   let badges:AccountData["badges"]=[],legacy:AccountData["legacy"]=[],legacyTotal=0;
   if(ctx.userId){
@@ -40,7 +37,9 @@ export async function accountData(ctx: Context, page: number): Promise<AccountDa
     ]);
     profile=checked(p) as ScienceProfile;
     preferences={...preferences,...Object.fromEntries(checked(c).map((r)=>[r.topic,r.enabled]))};
-    badges=checked(b);legacy=checked(l);legacyTotal=l.count??0;
+    badges=checked(b);legacy=checked(l);
+    if(l.count===null)throw new ScienceError("旧版の履歴件数を取得できませんでした。",503);
+    legacyTotal=l.count;
   }
-  return {signedIn:!!ctx.userId,profile,preferences,current:scoreResponses(fields.flat(),true),history:history.map(publicAttempt),historyTotal:historyResponse.count??0,page,bests:checked(bestResponse) as AccountData["bests"],badges,legacy,legacyTotal};
+  return {signedIn:!!ctx.userId,profile,preferences,current,history:history.map(publicAttempt),historyTotal:historyResponse.count,page,bests:checked(bestResponse) as AccountData["bests"],badges,legacy,legacyTotal};
 }

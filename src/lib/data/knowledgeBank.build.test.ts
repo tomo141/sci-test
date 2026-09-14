@@ -28,7 +28,7 @@ function applyCalibratedLevels(questions: BankQuestion[], levels: Record<string,
 }
 
 describe("knowledge bank build", () => {
-  it("writes questions-knowledge.json for DB import", () => {
+  it("validates the generated knowledge bank", () => {
     const levels = loadCalibratedLevels();
     const combined = applyCalibratedLevels(
       [
@@ -43,8 +43,10 @@ describe("knowledge bank build", () => {
       levels
     );
     const outDir = join(process.cwd(), "supabase/seed/generated");
-    mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, "questions-knowledge.json"), `${JSON.stringify(combined, null, 2)}\n`);
+    if (process.env.SCIENCE_BUILD_QUESTION_BANK === "1") {
+      mkdirSync(outDir, { recursive: true });
+      writeFileSync(join(outDir, "questions-knowledge.json"), `${JSON.stringify(combined, null, 2)}\n`);
+    }
     expect(combined).toHaveLength(1361);
     for (const question of combined) {
       expect(question.difficulty_initial % 50).toBe(0);

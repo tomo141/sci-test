@@ -3,7 +3,7 @@ create view public.science_personal_bests with(security_invoker=true) as
   select * from (
     select id,kind,domain,total,model_version,started_at,result,
       case when user_id is not null then 'user:'||user_id else 'visitor:'||visitor_id end as owner_key,
-      row_number() over(partition by coalesce(user_id,visitor_id),kind,coalesce(domain,''),total,model_version
+      row_number() over(partition by case when user_id is not null then 'user:'||user_id else 'visitor:'||visitor_id end,kind,coalesce(domain,''),total,model_version
         order by coalesce((result->>'total')::numeric,(result->'domains'->domain->>'score')::numeric) desc nulls last,completed_at,id) as best_order
     from science_attempts where state='completed' and kind in ('trial','full','domain')
   ) ranked where best_order=1;

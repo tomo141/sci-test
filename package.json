@@ -13,7 +13,7 @@
     "questions:plan": "node scripts/pipeline/plan-subdomain-batch.mjs",
     "questions:validate": "node scripts/pipeline/validate-batch.mjs",
     "questions:merge": "node scripts/pipeline/merge-batch.mjs",
-    "questions:build": "vitest run src/lib/data/knowledgeBank.build.test.ts",
+    "questions:build": "SCIENCE_BUILD_QUESTION_BANK=1 vitest run src/lib/data/knowledgeBank.build.test.ts",
     "questions:audit": "node scripts/audit-choice-plausibility.mjs",
     "questions:calibrate": "node scripts/calibrate-question-levels.mjs",
     "questions:distribution": "node scripts/report-question-level-distribution.mjs",

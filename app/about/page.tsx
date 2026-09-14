@@ -1,68 +1,13 @@
-import { BarChart3, BookOpenCheck, Medal, Sparkles } from "lucide-react";
+import Link from "next/link";
 import { SiteHeaderWithAuth } from "@/components/layout/SiteHeaderWithAuth";
 import { SiteFooter } from "@/components/layout/SiteFooter";
-import { AppButton } from "@/components/ui/AppButton";
 import { AppCard } from "@/components/ui/AppCard";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "検定について",
-  description: "全分野科学検定 β版の診断内容、スコアの位置づけ、ランキングやトレーニング機能について紹介します。",
-  alternates: {
-    canonical: "/about"
-  },
-  openGraph: {
-    title: "検定について | 全分野科学検定 β版",
-    description: "科学力を学びの地図として可視化する検定サービスです。",
-    url: "/about"
-  }
-};
-
-const points = [
-  [BookOpenCheck, "10分野を横断して診断", "数学・物理・化学から人文社会科学まで、幅広い科学リテラシーを腕試しできます。"],
-  [BarChart3, "スコアは成長の目安", "結果は独自基準による推定値です。強みや次に伸ばす領域を見つけるために使います。"],
-  [Medal, "ランキングと称号", "保存した結果は公開用ニックネームでランキングに参加できます。個人情報は表示されません。"],
-  [Sparkles, "β版として改善中", "問題の品質、難度推定、トレーニング機能を回答データに基づいて継続的に改善します。"]
-];
-
-export default function AboutPage() {
-  return (
-    <>
-      <SiteHeaderWithAuth />
-      <main className="page-container py-10">
-        <section className="grid gap-6 lg:grid-cols-[1fr_360px] lg:items-start">
-          <div>
-            <p className="font-black text-[var(--color-primary-700)]">検定について</p>
-            <h1 className="mt-3 text-4xl font-black md:text-5xl">科学力を、学びの地図にする。</h1>
-            <p className="mt-5 max-w-3xl leading-8 text-[var(--color-ink-soft)]">
-              全分野科学検定 β版は、科学に関する問題への回答から、現在の理解度や分野ごとの傾向を可視化するサービスです。
-              学位・資格・採用・進学を証明するものではなく、学びを楽しく続けるための診断とトレーニングを提供します。
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <AppButton href="/exam">腕試しを始める</AppButton>
-            </div>
-          </div>
-          <AppCard>
-            <h2 className="text-xl font-black">表示されるもの</h2>
-            <ul className="mt-4 grid gap-3 text-sm font-bold leading-7 text-[var(--color-ink-soft)]">
-              <li>総合スコアと推定レンジ</li>
-              <li>分野別バランス</li>
-              <li>正答率と診断精度</li>
-              <li>復習リストとトレーニング導線</li>
-            </ul>
-          </AppCard>
-        </section>
-        <section className="mt-8 grid gap-4 md:grid-cols-2">
-          {points.map(([Icon, title, text]) => (
-            <AppCard key={title as string}>
-              <Icon className="text-[var(--color-primary-700)]" />
-              <h2 className="mt-4 text-xl font-black">{title as string}</h2>
-              <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">{text as string}</p>
-            </AppCard>
-          ))}
-        </section>
-      </main>
-      <SiteFooter />
-    </>
-  );
-}
+export const metadata={title:"検定について"};
+export default function AboutPage(){return <><SiteHeaderWithAuth/><main className="page-container max-w-4xl py-10"><h1 className="text-3xl font-black">科学の広さを、楽しむ検定。</h1><p className="mt-6 leading-8">全分野科学検定は、専門の外にも好奇心を広げるための検定です。10分野の知識に触れ、結果を共有し、次の学びへ。問題そのものも、みんなの回答と改善報告で育てていきます。</p><div className="mt-8 grid gap-5">{[
+  ["何を測る？","初期は知識の4択問題です。実験技能、論述、研究の遂行などは測定範囲に含みません。数学・物理・化学・生物・地学・工学・農学・情報・計算機科学・医歯薬学・人文社会科学を扱います。"],
+  ["総合スコアと分野スコア","分野ごとの参考スコアは0〜100、総合は10分野を同じ重みで足した0〜1000です。未測定の分野を0点に置き換えません。難しい問題を含む受験同士を比べるため、正答数とは別に推定します。"],
+  ["あなたに合わせた一問","正答率を必ず半分にするのではなく、実力を見分ける情報が増える問題を選びます。問題の検証に必要な出題枠と、10分野を同じ数ずつ測る条件も組み合わせます。"],
+  ["記録・現在の推定・自己ベスト","受験ごとの結果は測定時の版と一緒に保存します。現在の推定は、各分野の直近100問までを使い、30問前の回答の重みを半分にします。未校正の参考値として推定の幅と回答数を併記します。自己ベストは同じ種類・問題数・計算方法の記録から表示します。"],
+  ["みんなで良問をつくる","誰でも下書きを作り、受付開始後は投稿規約に同意して審査を依頼できます。出典・権利・正解を確認した問題は、みんなの出題ラボで検証。信頼スコアは独立した品質確認を主な根拠にし、初投稿にも出題機会を残します。"],
+  ["旧版を受けた方へ","同じメールアドレスの確認コードでログインしてください。アカウントと取得済みの利用権を引き継ぎます。旧版の結果は旧版の尺度として保存し、新版と混ぜません。旧版の途中受験は新版へ変換せず、保存済みの回答を保持します。"]
+].map(([title,body])=><AppCard key={title}><h2 className="text-xl font-black">{title}</h2><p className="mt-4 leading-8">{body}</p></AppCard>)}</div><p className="mt-8 leading-8">制作「理系とーく 川村智祥」 · <Link href="/lab" className="underline">みんなの出題ラボへ</Link></p></main><SiteFooter/></>;}

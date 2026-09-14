@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -104,5 +104,74 @@ describe.sequential("atomic issuance and answers", () => {
     expect(best.rows[0].score).toBe(900);
     await db.query("update science_profiles set ranking_opt_in=false where user_id=$1",[other]);
     expect((await db.query("select * from science_rankings('full','2026-09-13T15:00:00Z','2026-09-14T15:00:00Z',50,'science-3pl-reference-v1',null)")).rows).toHaveLength(1);
+  });
+  it("requires publication consent, independent adoption, and a new revision for corrections",async()=>{
+    const draftId="70000000-0000-4000-8000-000000000001";
+    const content={question:"1 + 1 = ?",choices:["1","2","3","4"],correctIndex:1,explanation:"One and one make two.",distractorRationales:["too small","correct","too large","too large"],sources:[{title:"Test source",url:"https://example.invalid"}]};
+    await db.query("insert into science_submission_drafts(id,author_id,domain,subdomain,content,revision) values($1,$2,'数学','数と代数',$3,1)",[draftId,uid,content]);
+    const sql="select science_submit_draft($1,$2,1,$3,'license-test',$4) id";
+    const args=[draftId,uid,`community:${draftId}`,{rights:true,adultOrGuardianConsent:true}];
+    await expect(db.query(sql,args)).rejects.toThrow("submission_not_open");
+    await db.query("update science_config set value=value||'{\"labSubmissions\":true,\"licenseVersion\":\"license-test\"}' where key='release'");
+    await expect(db.query(sql,[...args.slice(0,3),{rights:false,adultOrGuardianConsent:true}])).rejects.toThrow("representations_required");
+    const q=(await db.query<{id:string}>(sql,args)).rows[0].id;
+    await expect(db.query(sql,args)).rejects.toThrow("stale_draft");
+    expect((await db.query<{n:number}>("select count(*)::int n from science_license_acceptances where revision_id=$1",[q])).rows[0].n).toBe(1);
+    await expect(db.query("update science_items set content=$2 where id=$1",[q,{...content,correctIndex:3}])).rejects.toThrow("create_a_new_revision");
+    await db.query("insert into science_admins(user_id,reason) values($1,'test fixture'),($2,'test fixture')",[uid,other]);
+    const checks={rights:true,source:true,uniqueAnswer:true,explanation:true};
+    await expect(db.query("select science_review_submission($1,$2,'adopted','independent check',$3)",[draftId,uid,checks])).rejects.toThrow("independent_review_required");
+    await db.query("select science_review_submission($1,$2,'lab','reviewed for lab',$3)",[draftId,other,checks]);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_trust_evidence")).rows[0].n).toBe(0);
+    await db.query("select science_review_submission($1,$2,'adopted','source checked independently',$3)",[draftId,other,checks]);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_trust_evidence where user_id=$1 and role='author'",[uid])).rows[0].n).toBe(1);
+  });
+  it("never exposes unfinished answer keys through the review collection",async()=>{
+    expect((await db.query("select * from science_review_collection($1,'mistakes',0)",[uid])).rows).toHaveLength(0);
+    await expect(db.query("select science_mark_review($1,$2,true,gen_random_uuid())",[other,revision])).rejects.toThrow("not_found");
+  });
+  it("holds a single job lease and rejects unaudited automatic publication",async()=>{
+    const first=(await db.query<{id:string}>("select science_begin_job('daily') id")).rows[0].id;
+    expect(first).toBeTruthy();expect((await db.query<{id:string|null}>("select science_begin_job('daily') id")).rows[0].id).toBeNull();
+    await db.query("select science_end_job($1,'completed','{}')",[first]);
+    expect((await db.query<{id:string}>("select science_begin_job('daily') id")).rows[0].id).not.toBe(first);
+    await expect(db.query("select science_activate_release($1,null,'automatic attempt')",[release])).rejects.toThrow("automatic_validation_required");
+    await expect(db.query("insert into science_items(family_id,domain,subdomain,content) values('invalid','数学','数と代数','{}')")).rejects.toThrow();
+  });
+  it("measures consent at day seven while keeping later withdrawals visible",async()=>{
+    for(const [index,group,revokedAt] of [[3,'A',8],[4,'B',1]] as const){
+      const userId=`10000000-0000-4000-8000-00000000000${index}`,vId=`20000000-0000-4000-8000-00000000000${index}`,aId=`30000000-0000-4000-8000-00000000000${index}`;
+      await db.query("insert into auth.users(id,email,email_confirmed_at) values($1,$2,now()-interval '9 days')",[userId,`fixture${index}@example.invalid`]);
+      await db.query("insert into science_visitors(id,token_hash,route_group,experiment,user_id) values($1,$2,$3,'funnel-test',$4)",[vId,String(index).repeat(64),group,userId]);
+      await db.query("insert into science_profiles(user_id,created_at) values($1,now()-interval '9 days')",[userId]);
+      await db.query("insert into science_attempts(id,visitor_id,user_id,definition,model_version,kind,total,state,started_at) values($1,$2,$3,'{}','science-3pl-reference-v1','trial',20,'abandoned',now()-interval '10 days')",[aId,vId,userId]);
+      await db.query("insert into science_events(dedupe_key,event_name,visitor_id,user_id,attempt_id,payload,created_at) values($1,'attempt_started',$2,$3,$4,$5,now()-interval '10 days')",[`started:${aId}`,vId,userId,aId,{group}]);
+      await db.query("insert into science_events(dedupe_key,event_name,user_id,created_at) values($1,'email_verified',$2,now()-interval '9 days')",[`verified:${userId}`,userId]);
+      await db.query("insert into science_events(dedupe_key,event_name,user_id,payload,created_at) values($1,'mail_consent_granted',$2,'{\"topic\":\"science\"}',now()-interval '9 days'),($3,'mail_consent_revoked',$2,'{\"topic\":\"science\"}',now()-make_interval(days=>$4))",[`grant:${userId}`,userId,`revoke:${userId}`,revokedAt]);
+    }
+    const rows=(await db.query<{route_group:string;mature_starters:number;registrations_7d:number;withdrawn:number}>("select * from science_experiment_results(now()-interval '28 days',now(),'funnel-test')")).rows;
+    expect(Number(rows[0].mature_starters)).toBe(1);expect(Number(rows[0].registrations_7d)).toBe(0);expect(Number(rows[1].registrations_7d)).toBe(1);expect(Number(rows[1].withdrawn)).toBe(1);
+    expect(Number(rows[2].mature_starters)).toBe(0);
+  });
+  it("publishes a calibrated successor atomically while freezing the previous bank and anchors",async()=>{
+    const parent=(await db.query<{id:string}>("insert into science_releases(name,model_version) values('Calibration test bank','science-3pl-reference-v1') returning id")).rows[0].id;
+    await db.query(`with fields(d) as (values('数学'),('物理'),('化学'),('生物'),('地学'),('工学'),('農学'),('情報・計算機科学'),('医歯薬学'),('人文社会科学'))
+      insert into science_items(family_id,domain,subdomain,content,status,quality_passed,rights_checked)
+      select 'calibration-fixture:'||d||':'||n,d,'fixture','{"question":"Fixture question","choices":["A","B","C","D"],"correctIndex":0,"explanation":"Fixture explanation"}','published',true,true from fields cross join generate_series(1,100) n`);
+    await db.query("insert into science_release_items(release_id,revision_id,b,focus,anchor) select $1,id,0,(split_part(family_id,':',3)::int between 21 and 40),(split_part(family_id,':',3)::int<=20) from science_items where family_id like 'calibration-fixture:%'",[parent]);
+    await db.query("select science_activate_release($1,$2,'Verified test fixture capacity')",[parent,other]);
+    const item=(await db.query<{id:string}>("select id from science_items where family_id='calibration-fixture:数学:21'")).rows[0].id;
+    await expect(db.query("update science_release_items set b=.3 where release_id=$1 and revision_id=$2",[parent,item])).rejects.toThrow("release_is_frozen");
+    const candidate=(await db.query<{id:string}>("insert into science_calibration_candidates(revision_id,release_id,data_version,observed_to,fit,state) values($1,$2,'synthetic-fixture',now(),$3,'qualified') returning id",[item,parent,{b:.3,a:1,c:.25,oldB:0,eligible:true,count:200,sourceOwnerCount:250}])).rows[0].id;
+    const job=(await db.query<{id:string}>("select science_begin_job('calibration-test') id")).rows[0].id;
+    await expect(db.query("select science_apply_calibration($1,$2,$3)",[parent,[candidate],job])).rejects.toThrow("automatic_calibration_disabled");
+    await db.query("update science_config set value=value||'{\"automaticCalibration\":true}' where key='release'");
+    const next=(await db.query<{id:string}>("select science_apply_calibration($1,$2,$3) id",[parent,[candidate],job])).rows[0].id;
+    expect(next).not.toBe(parent);
+    expect((await db.query<{b:number}>("select b from science_release_items where release_id=$1 and revision_id=$2",[parent,item])).rows[0].b).toBe(0);
+    expect((await db.query<{b:number}>("select b from science_release_items where release_id=$1 and revision_id=$2",[next,item])).rows[0].b).toBe(.3);
+    expect((await db.query<{n:number}>("select count(*)::int n from science_release_items where release_id=$1 and anchor and b<>0",[next])).rows[0].n).toBe(0);
+    expect((await db.query<{state:string}>("select state from science_releases where id=$1",[parent])).rows[0].state).toBe("retired");
+    expect((await db.query<{state:string}>("select state from science_calibration_candidates where id=$1",[candidate])).rows[0].state).toBe("applied");
   });
 });

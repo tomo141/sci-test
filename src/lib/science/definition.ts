@@ -3,7 +3,7 @@ import { domains, isScienceDomain, type ScienceDomain } from "@/src/lib/data/tax
 export const EXPERIMENT_VERSION = "entry-route-v1";
 export type RouteGroup = "A" | "B" | "C" | "D";
 export type ExamKind = "trial" | "full" | "domain" | "weekly" | "lab";
-export type ExamDefinition = { version: string; kind: ExamKind; label: string; count: number; domain: ScienceDomain | null; quotas: Partial<Record<ScienceDomain, number>>; formal: boolean; immediateExplanation: boolean };
+export type ExamDefinition = { version: string; kind: ExamKind; label: string; count: number; domain: ScienceDomain | null; quotas: Partial<Record<ScienceDomain, number>>; formal: boolean; immediateExplanation: boolean; week?:string };
 
 export function definition(kind: ExamKind, domain?: string | null, fullLength: 50 | 100 = 50): ExamDefinition {
   if (kind === "domain" && !isScienceDomain(domain)) throw new Error("分野を選択してください。");
