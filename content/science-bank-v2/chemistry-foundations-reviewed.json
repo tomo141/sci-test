@@ -1,0 +1,1222 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000052",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "元素記号Auが表す元素はどれか。",
+      "choices": [
+        "銀",
+        "銅",
+        "金",
+        "白金"
+      ],
+      "correctIndex": 2,
+      "explanation": "Auは金の元素記号。銀はAg、銅はCu、白金はPt。",
+      "distractorRationales": [
+        "銀はAg。",
+        "銅はCu。",
+        "金の記号。",
+        "白金はPt。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC — Periodic Table of the Elements, 4 May 2022",
+          "url": "https://iupac.org/wp-content/uploads/2022/07/IUPAC_Periodic_Table-04May22_CRA.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "周期表の原子番号79 Au gold、47 Ag silver、29 Cu copper、78 Pt platinumの対応を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000036"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000024",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "元素記号Agが表す元素はどれか。",
+      "choices": [
+        "金",
+        "銀",
+        "アルゴン",
+        "アルミニウム"
+      ],
+      "correctIndex": 1,
+      "explanation": "Agは銀。金のAu、アルゴンのAr、アルミニウムのAlとは別の記号。",
+      "distractorRationales": [
+        "金はAu。",
+        "銀の元素記号。",
+        "アルゴンはAr。",
+        "アルミニウムはAl。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC — Periodic Table of the Elements, 4 May 2022",
+          "url": "https://iupac.org/wp-content/uploads/2022/07/IUPAC_Periodic_Table-04May22_CRA.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Ag、Au、Ar、Alの記号と元素名をIUPAC周期表で照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000023",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "元素記号Wが表す元素はどれか。",
+      "choices": [
+        "チタン",
+        "タリウム",
+        "タンタル",
+        "タングステン"
+      ],
+      "correctIndex": 3,
+      "explanation": "Wは原子番号74のタングステン。元素記号が日本語や英語の名称の頭文字と一致するとは限らない。",
+      "distractorRationales": [
+        "チタンはTi。",
+        "タリウムはTl。",
+        "タンタルはTa。",
+        "Wに対応する元素。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC — Periodic Table of the Elements, 4 May 2022",
+          "url": "https://iupac.org/wp-content/uploads/2022/07/IUPAC_Periodic_Table-04May22_CRA.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "原子番号74 W tungstenと、Ti titanium、Tl thallium、Ta tantalumを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000028",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "ヘリウムやネオンが属する第18族の元素の総称はどれか。",
+      "choices": [
+        "ハロゲン",
+        "アルカリ金属",
+        "貴ガス（希ガス）",
+        "アルカリ土類金属"
+      ],
+      "correctIndex": 2,
+      "explanation": "第18族は貴ガス（希ガス）と呼ばれる。名称は族の分類であり、どの条件でも化合物を作らないという意味ではない。",
+      "distractorRationales": [
+        "第17族の総称。",
+        "水素を除く第1族の金属。",
+        "ヘリウム・ネオンなどが属する族。",
+        "カルシウムなど第2族の元素の分類。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, The Periodic Table",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-5-the-periodic-table"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.5のnoble gases（group 18）とhalogens（group 17）、アルカリ金属の対応を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000028",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "次のうち、アルカリ金属に分類される元素はどれか。",
+      "choices": [
+        "ナトリウム",
+        "カルシウム",
+        "アルミニウム",
+        "塩素"
+      ],
+      "correctIndex": 0,
+      "explanation": "ナトリウムはアルカリ金属。周期表の第1族でも、水素はアルカリ金属には含めない。",
+      "distractorRationales": [
+        "アルカリ金属に属する。",
+        "第2族の金属。",
+        "第13族の金属。",
+        "第17族のハロゲン。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, The Periodic Table",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-5-the-periodic-table"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.5のLi・Na・Kの分類と、水素が特別な非金属であることを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000029",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "元素記号と元素名の組として正しいものはどれか。",
+      "choices": [
+        "Fe：フッ素",
+        "K：クリプトン",
+        "Cu：カルシウム",
+        "Na：ナトリウム"
+      ],
+      "correctIndex": 3,
+      "explanation": "Naがナトリウムを表す。Feは鉄、Kはカリウム、Cuは銅であり、似た頭文字で取り違えない。",
+      "distractorRationales": [
+        "フッ素はF。Feは鉄。",
+        "クリプトンはKr。Kはカリウム。",
+        "カルシウムはCa。Cuは銅。",
+        "正しい対応。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC — Periodic Table of the Elements, 4 May 2022",
+          "url": "https://iupac.org/wp-content/uploads/2022/07/IUPAC_Periodic_Table-04May22_CRA.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "IUPAC周期表のNa/Fe/F/K/Kr/Cu/Caの記号と名称を全肢について照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000023",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "通常の原子で、陽子を含み、原子の質量の大部分が集中する中心部はどれか。",
+      "choices": [
+        "電子殻",
+        "原子核",
+        "価電子帯",
+        "分子軌道"
+      ],
+      "correctIndex": 1,
+      "explanation": "原子核には陽子があり、多くの核は中性子も含む。水素¹Hの原子核は陽子1個で、中性子を含まない。",
+      "distractorRationales": [
+        "原子核の外側の電子状態を整理する概念。",
+        "正電荷を持ち、原子の質量の大部分が集中する部分。",
+        "固体の電子のエネルギー帯に関する概念。",
+        "分子全体に広がる電子の状態を表す概念。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Atomic Structure and Symbolism",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.3の原子核・電子・質量の所在を照合。すべての原子核が中性子を含むという旧文の一般化を避ける。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000072",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "陽子数が同じで、中性子数が異なる原子同士は何と呼ばれるか。",
+      "choices": [
+        "同位体",
+        "同素体",
+        "構造異性体",
+        "幾何異性体"
+      ],
+      "correctIndex": 0,
+      "explanation": "同位体は原子番号、すなわち陽子数が同じで質量数が異なる。原子番号が同じなので同じ元素に属する。",
+      "distractorRationales": [
+        "陽子数が同じで中性子数が違う原子。",
+        "同じ元素からなる単体の構造の違い。",
+        "同じ分子式で原子の結合のつながり方が異なる化合物。",
+        "原子の空間配置に関する異性体の分類。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Atomic Structure and Symbolism",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.3の原子番号・質量数・同位体を確認。旧正解番号が同系物を指す誤りと、O₂/O₃を結晶構造の違いとする説明を修正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000058",
+    "domain": "化学",
+    "subdomain": "元素・周期表・原子",
+    "content": {
+      "question": "炭素¹²Cの質量数Aと原子番号Zの組はどれか。",
+      "choices": [
+        "A=6、Z=12",
+        "A=12、Z=12",
+        "A=12、Z=6",
+        "A=6、Z=6"
+      ],
+      "correctIndex": 2,
+      "explanation": "炭素の原子番号は6。左上の12は陽子数と中性子数の和である質量数で、¹²Cの中性子数は6。",
+      "distractorRationales": [
+        "質量数と原子番号を逆にしている。",
+        "Z=12は炭素ではない。",
+        "指定された核種の正しいAとZ。",
+        "¹²Cの質量数は12。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Atomic Structure and Symbolism",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.3のZ、A、核種記号と炭素の陽子数6を照合。旧誤答説明の「最も軽い炭素同位体は¹¹C」は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000037"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000051",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "水分子の化学式はどれか。",
+      "choices": [
+        "CO₂",
+        "H₂O",
+        "H₂O₂",
+        "O₂"
+      ],
+      "correctIndex": 1,
+      "explanation": "水分子は水素原子2個と酸素原子1個からなるH₂O。H₂O₂は過酸化水素であり、組成が異なる。",
+      "distractorRationales": [
+        "二酸化炭素。",
+        "水分子の化学式。",
+        "過酸化水素。",
+        "酸素分子。"
+      ],
+      "sources": [
+        {
+          "title": "NIST Chemistry WebBook — Water",
+          "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=1EBF"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "NISTのWaterのFormula H₂Oを照合。単なる表記違いの旧設問4件を同じ問題族として扱う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000053",
+      "10000000-0000-4000-8005-000000000020",
+      "10000000-0000-4000-8006-000000000021"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000021",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "通常の酸素ガスを構成する酸素分子の化学式はどれか。",
+      "choices": [
+        "O₂",
+        "O₃",
+        "CO₂",
+        "H₂"
+      ],
+      "correctIndex": 0,
+      "explanation": "通常の酸素ガスの主な分子はO₂。O₃は同じ元素の別の単体であるオゾン。",
+      "distractorRationales": [
+        "酸素原子2個からなる酸素分子。",
+        "オゾン。",
+        "二酸化炭素で、炭素も含む。",
+        "水素分子。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Chemical Formulas",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-4-chemical-formulas"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.4の酸素・水素・窒素が通常は二原子分子として存在する説明を照合。呼吸条件の曖昧な比較を化学式の問題へ限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000057",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "食塩の主成分である塩化ナトリウムの組成式はどれか。",
+      "choices": [
+        "NaOH",
+        "Na₂SO₄",
+        "NaCl",
+        "Na₂CO₃"
+      ],
+      "correctIndex": 2,
+      "explanation": "塩化ナトリウムはNa⁺とCl⁻が1：1に対応するイオン結晶。独立したNaCl分子の集まりとしてではなく、組成式で表す。",
+      "distractorRationales": [
+        "水酸化ナトリウム。",
+        "硫酸ナトリウム。",
+        "塩化ナトリウムの組成式。",
+        "炭酸ナトリウム。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Ionic and Molecular Compounds",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-6-ionic-and-molecular-compounds"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.6のNa⁺:Cl⁻=1:1と、イオン結晶の組成式と分子式の区別を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000022",
+      "10000000-0000-4000-8005-000000000022"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000021",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "重曹と呼ばれる炭酸水素ナトリウムの組成式はどれか。",
+      "choices": [
+        "Na₂CO₃",
+        "NaHCO₃",
+        "NaCl",
+        "Ca(OH)₂"
+      ],
+      "correctIndex": 1,
+      "explanation": "重曹はNaHCO₃。炭酸ナトリウムNa₂CO₃や、水酸化カルシウムCa(OH)₂とは別の化合物。",
+      "distractorRationales": [
+        "炭酸ナトリウム。",
+        "炭酸水素ナトリウム。",
+        "塩化ナトリウム。",
+        "水酸化カルシウム。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Chemical Nomenclature",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-7-chemical-nomenclature"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.7の表2.6と日常名の表でNaHCO₃、sodium bicarbonate、baking sodaの対応を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000022",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "化学式CO₂で表される物質はどれか。",
+      "choices": [
+        "一酸化炭素",
+        "酸素",
+        "炭酸",
+        "二酸化炭素"
+      ],
+      "correctIndex": 3,
+      "explanation": "CO₂は炭素原子1個と酸素原子2個からなる二酸化炭素。炭酸H₂CO₃とは異なる。",
+      "distractorRationales": [
+        "一酸化炭素はCO。",
+        "酸素分子はO₂。",
+        "炭酸はH₂CO₃。",
+        "CO₂の物質名。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Chemical Nomenclature",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-7-chemical-nomenclature"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.7のCOとCO₂の命名、およびH₂CO₃の酸の命名を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000021",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "硫酸を表す化学式はどれか。",
+      "choices": [
+        "H₂SO₄",
+        "HNO₃",
+        "HCl",
+        "NaOH"
+      ],
+      "correctIndex": 0,
+      "explanation": "硫酸はH₂SO₄。HNO₃は硝酸、HClは塩化水素、NaOHは水酸化ナトリウムを表す。",
+      "distractorRationales": [
+        "硫酸の化学式。",
+        "硝酸。",
+        "塩化水素で、水溶液は塩酸。",
+        "水酸化ナトリウム。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Chemical Nomenclature",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-7-chemical-nomenclature"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.7表2.13のsulfuric acid H₂SO₄と各化合物の命名を照合。塩化水素とその水溶液の名称を区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000025",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "物質量のSI基本単位はどれか。",
+      "choices": [
+        "kg",
+        "K",
+        "mol",
+        "m³"
+      ],
+      "correctIndex": 2,
+      "explanation": "物質量は、指定した原子・分子・イオンなどの数に対応する量で、単位はモルmol。質量や体積とは区別する。",
+      "distractorRationales": [
+        "質量のSI基本単位。",
+        "熱力学温度のSI基本単位。",
+        "物質量のSI基本単位。",
+        "体積のSI組立単位。"
+      ],
+      "sources": [
+        {
+          "title": "BIPM — The International System of Units, 9th edition, version 4.01 (2026)",
+          "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.3.1 The mole、PDF p.20の物質量の単位と指定粒子の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000025"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000067",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "指定した粒子の数Nと物質量nをN=N_A nで結ぶアボガドロ定数N_Aの正確な値はどれか。",
+      "choices": [
+        "6.02214076×10²³ mol⁻¹",
+        "6.02214076×10⁻²³ mol⁻¹",
+        "6.02214076×10²³ mol",
+        "8.314462618 J·mol⁻¹·K⁻¹"
+      ],
+      "correctIndex": 0,
+      "explanation": "現在のSIではN_A=6.02214076×10²³ mol⁻¹が定義による正確値。粒子の種類を指定すると、1 molはその粒子6.02214076×10²³個に対応する。",
+      "distractorRationales": [
+        "指定した定数の正確値と単位。",
+        "指数の符号が逆。",
+        "定数の単位はmolの逆数。",
+        "気体定数に近い数値と単位で、N_Aではない。"
+      ],
+      "sources": [
+        {
+          "title": "BIPM — The International System of Units, 9th edition, version 4.01 (2026)",
+          "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.3.1 The moleと表のAvogadro constantの定義値を照合。旧正解番号と解説が気体定数を指していた問題を修正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000027",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "CH₄で表される炭化水素はどれか。",
+      "choices": [
+        "エタン",
+        "プロパン",
+        "ブタン",
+        "メタン"
+      ],
+      "correctIndex": 3,
+      "explanation": "CH₄はメタン。炭素原子1個に水素原子4個が結合している。",
+      "distractorRationales": [
+        "エタンはC₂H₆。",
+        "プロパンはC₃H₈。",
+        "ブタンはC₄H₁₀。",
+        "CH₄の名称。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Chemical Formulas",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-4-chemical-formulas"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.4冒頭のmethane CH₄の分子式と構造式を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000023",
+    "domain": "化学",
+    "subdomain": "有機化学",
+    "content": {
+      "question": "エタノールCH₃CH₂OHのアルコールとしての性質に対応する官能基はどれか。",
+      "choices": [
+        "カルボキシ基−COOH",
+        "ヒドロキシ基−OH",
+        "アルデヒド基−CHO",
+        "アミノ基−NH₂"
+      ],
+      "correctIndex": 1,
+      "explanation": "エタノールは炭素に結び付いたヒドロキシ基−OHをもつアルコール。−COOHなど、酸素を含む別の官能基と区別する。",
+      "distractorRationales": [
+        "カルボン酸の官能基。",
+        "エタノールにある官能基。",
+        "アルデヒドの官能基。",
+        "アミンに現れる官能基。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Alcohols and Ethers",
+          "url": "https://openstax.org/books/chemistry-2e/pages/20-2-alcohols-and-ethers"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§20.2のalcoholとhydroxyl group、エタノールの構造を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000026",
+    "domain": "化学",
+    "subdomain": "化学結合・結晶・固体",
+    "content": {
+      "question": "塩化ナトリウムの結晶で、Na⁺とCl⁻の間の静電引力を中心に説明する結合の分類はどれか。",
+      "choices": [
+        "金属結合",
+        "水素結合",
+        "イオン結合",
+        "共有結合"
+      ],
+      "correctIndex": 2,
+      "explanation": "陽イオンと陰イオンの静電的な引力がイオン結合の基本的な説明。結晶全体では、各イオンが周囲の多数のイオンと相互作用する。",
+      "distractorRationales": [
+        "金属中の非局在化した電子などによる結合の記述。",
+        "水素が関与する別の種類の相互作用。",
+        "NaCl結晶の標準的な結合の分類。",
+        "電子対の共有を中心とする結合の記述。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Ionic and Molecular Compounds",
+          "url": "https://openstax.org/books/chemistry-2e/pages/2-6-ionic-and-molecular-compounds"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.6のionic bondsとNaClを照合。1対の分子だけで結晶ができるという説明を避ける。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000062",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "液体の蒸発と沸騰について正しい説明はどれか。",
+      "choices": [
+        "蒸発は沸点より低い温度でも表面で起こり、沸騰では内部にも蒸気の気泡が生じる",
+        "蒸発は固体から直接気体への変化をいう",
+        "沸騰は液体表面だけで起こる気化で、内部に気泡はできない",
+        "蒸発も沸騰も、圧力によらず必ず100℃で始まる"
+      ],
+      "correctIndex": 0,
+      "explanation": "蒸発は液面からの気化。沸騰は内部の蒸気泡を伴い、沸点は外圧などの条件に依存する。100℃はあらゆる液体・圧力に共通する値ではない。",
+      "distractorRationales": [
+        "両者の違いを表す。",
+        "固体から直接気体への変化は昇華。",
+        "内部の蒸気泡を伴う点が沸騰の特徴。",
+        "物質や圧力によって沸点は異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Phase Transitions",
+          "url": "https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§10.3の気化とBoiling Pointsを確認。旧正解番号が「同じ現象の別名」を指し、旧肢説明も混乱していたため全肢を書き直した。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000023",
+    "domain": "化学",
+    "subdomain": "物質・化学式・量",
+    "content": {
+      "question": "固体が液体を経ずに直接気体へ変わる相変化はどれか。",
+      "choices": [
+        "融解",
+        "凝固",
+        "凝縮",
+        "昇華"
+      ],
+      "correctIndex": 3,
+      "explanation": "固体から気体への直接の相変化を昇華という。常圧付近のドライアイスが気体になる過程が代表例。",
+      "distractorRationales": [
+        "固体から液体への変化。",
+        "液体から固体への変化。",
+        "気体から液体への変化。",
+        "固体から気体への直接の変化。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Phase Transitions",
+          "url": "https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§10.3 Sublimation and Depositionとドライアイスの例を確認。逆方向の変化とは方向を区別する。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000026",
+    "domain": "化学",
+    "subdomain": "化学結合・結晶・固体",
+    "content": {
+      "question": "基底状態の水素分子H₂を、1s原子軌道から作る結合性・反結合性分子軌道で記述する。結合性に2電子、反結合性に0電子を置くと、結合次数はいくらか。",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1,
+      "explanation": "この分子軌道の記述では結合次数=(結合性電子数−反結合性電子数)/2。(2−0)/2=1となる。",
+      "distractorRationales": [
+        "結合性と反結合性が相殺した場合の値。",
+        "指定された電子配置から得られる値。",
+        "電子数の差を2で割る操作が必要。",
+        "この電子数では得られない値。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Molecular Orbital Theory",
+          "url": "https://openstax.org/books/chemistry-2e/pages/8-4-molecular-orbital-theory"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§8.4の結合次数の式とH₂の配置を照合。旧問の「分子軌道が完全に占拠」という条件不足を電子数で特定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000027"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000063",
+    "domain": "化学",
+    "subdomain": "化学結合・結晶・固体",
+    "content": {
+      "question": "通常のダイヤモンド結晶の炭素原子の結び付きとして適切なのはどれか。",
+      "choices": [
+        "独立したC₂分子が分子間力だけで並ぶ",
+        "C⁴⁺とC⁴⁻だけからなるイオン格子",
+        "各炭素が周囲の4個の炭素と結び付く共有結合の網目",
+        "炭素原子が結合せずに詰まっている"
+      ],
+      "correctIndex": 2,
+      "explanation": "ダイヤモンドでは炭素同士の共有結合が三次元に広がり、各炭素の近傍は四面体状になる。分子が弱い力だけで集まった結晶とは異なる。",
+      "distractorRationales": [
+        "通常のダイヤモンドの構造ではない。",
+        "異符号の炭素イオンだけからなる結晶ではない。",
+        "ダイヤモンドの共有結合ネットワーク。",
+        "炭素同士に強い共有結合がある。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, The Solid State of Matter",
+          "url": "https://openstax.org/books/chemistry-2e/pages/10-5-the-solid-state-of-matter"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§10.5 Covalent Network SolidsとFigure 10.41の四配位ネットワークを照合。全条件での絶縁性・融点を断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000033"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000073",
+    "domain": "化学",
+    "subdomain": "化学結合・結晶・固体",
+    "content": {
+      "question": "VSEPRモデルで、孤立したNH₃分子の原子の配置を表す分子形はどれか。",
+      "choices": [
+        "直線形",
+        "平面三角形",
+        "正四面体形",
+        "三角錐形"
+      ],
+      "correctIndex": 3,
+      "explanation": "窒素のまわりには3本の結合と1組の孤立電子対がある。電子対の配置と原子だけの配置を区別すると、分子形は三角錐になる。",
+      "distractorRationales": [
+        "3個のHはNを通る一直線に並ばない。",
+        "NH₃の原子は同一平面に並ばない。",
+        "電子対領域の配置は四面体型だが、分子形とは区別する。",
+        "孤立電子対を原子の位置に数えない場合の形。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Molecular Structure and Polarity",
+          "url": "https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.6のammonia、electron-pair geometryとtrigonal pyramidal molecular structureを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000053",
+    "domain": "化学",
+    "subdomain": "化学結合・結晶・固体",
+    "content": {
+      "question": "メタンCH₄の理想的な正四面体構造で、H−C−H結合角に最も近い値はどれか。",
+      "choices": [
+        "90°",
+        "109.5°",
+        "120°",
+        "180°"
+      ],
+      "correctIndex": 1,
+      "explanation": "正四面体の中心から2つの頂点への方向のなす角はarccos(−1/3)≈109.47°。実際のすべてのsp³原子まわりで同じ角度になる、という主張ではない。",
+      "distractorRationales": [
+        "正方形平面や正八面体の一部の角に対応。",
+        "理想的な正四面体角。",
+        "平面三角形の角に対応。",
+        "直線形に対応。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Chemistry 2e, Molecular Structure and Polarity",
+          "url": "https://openstax.org/books/chemistry-2e/pages/7-6-molecular-structure-and-polarity"
+        }
+      ]
+    },
+    "reason": "旧設問・正解番号・全肢の理由を確認し、小分野、適用条件、化学量の定義を修正。新版は独自に記述した。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実際の受験回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.6のCH₄の正四面体形と109.5°を確認。ベクトルの内積からcos θ=−1/3も検算し、配座と結合角の用語を整理。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "物質名・定義・物理化学法則の事実を一次資料や教材で照合し、設問・全選択肢・解説を独自に作成。演習問題・図表・固有の説明文を転載していない。"
+    }
+  }
+]
