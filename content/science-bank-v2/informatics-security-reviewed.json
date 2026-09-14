@@ -1,0 +1,486 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000118",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "証明書の検証などを適切に行ったHTTPS通信で、TLSが主に保護するものはどれか。",
+      "choices": [
+        "Webページに書かれた科学的主張の正しさ",
+        "ブラウザーと接続先の間を流れるデータの機密性と完全性",
+        "ダウンロードした全ファイルが無害であること",
+        "接続先の運営者が個人情報を一切保存しないこと"
+      ],
+      "correctIndex": 1,
+      "explanation": "TLSは通信相手の認証や、通信路を流れるデータの盗聴・改ざんへの保護を担う。HTTPSであっても、サイトの説明の正しさや配布ファイルの安全性、運営者のデータ利用方針まで保証されるわけではない。",
+      "distractorRationales": [
+        "内容の事実確認はTLSの機能ではない。",
+        "通信路上の機密性と完全性はTLSの目的。",
+        "暗号化されて届くファイル自体が有害な場合もある。",
+        "サーバーが受信後にどう保存するかは別。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446.html"
+        },
+        {
+          "title": "RFC 9110 — HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+        }
+      ]
+    },
+    "reason": "旧SSLという呼称をTLSへ改め、通信路と内容の安全性を区別。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 8446 §1の認証・機密性・完全性、RFC 9110のhttps URIの意味を照合。HTTPSをコンテンツや事業者への包括的な信用保証としない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000266"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000286",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "暗号学的ハッシュ関数の「衝突耐性」は、どの作業が計算上困難であるという性質か。",
+      "choices": [
+        "同じ入力から毎回同じ出力を計算すること",
+        "与えられたハッシュ値になる入力を一つ探すこと",
+        "異なる二つの入力で、同じハッシュ値になる組を探すこと",
+        "与えられた一つの入力と同じハッシュ値になる別の入力を探すこと"
+      ],
+      "correctIndex": 2,
+      "explanation": "衝突耐性では、攻撃者が両方の入力を選べても同じ出力になる組を見つけにくいことを要求する。衝突が数学的に存在しないという意味ではない。ハッシュ値から入力を探す原像耐性や、指定された入力に対する第二原像耐性とは区別する。",
+      "distractorRationales": [
+        "決定的なハッシュ関数の通常の計算であり、困難にする対象ではない。",
+        "原像耐性の対象。",
+        "両方を自由に選んだ衝突の探索が対象。",
+        "第二原像耐性の対象。"
+      ],
+      "sources": [
+        {
+          "title": "NIST CSRC — Collision resistance",
+          "url": "https://csrc.nist.gov/glossary/term/collision_resistance"
+        },
+        {
+          "title": "NIST SP 800-63B-4 — Glossary: hash function",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
+        }
+      ]
+    },
+    "reason": "旧問の衝突が起きないという断定を修正し、三つの探索課題を区別。 同じ衝突耐性を問う旧6/113も統合し、出力長の可変な関数を除外する前提なしの固定長断定は採用しない。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CSRCのcomputationally infeasibleの定義と、SP 800-63B-4の用語集にある三つのハッシュ性質を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000113"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000296",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "公開鍵暗号で、送信者が受信者だけに読んでもらう暗号文を作る。暗号化と復号に使う鍵の基本的な組合せはどれか。",
+      "choices": [
+        "受信者の公開鍵で暗号化し、受信者の秘密鍵で復号する",
+        "送信者の公開鍵で暗号化し、受信者の秘密鍵で復号する",
+        "受信者の秘密鍵で暗号化し、受信者の公開鍵で復号する",
+        "送信者の秘密鍵で暗号化し、送信者の公開鍵で復号する"
+      ],
+      "correctIndex": 0,
+      "explanation": "受信者の正しい公開鍵を使って暗号化し、それに対応する秘密鍵で復号する。公開鍵が本当に受信者のものかの確認も必要。デジタル署名の生成・検証は、秘密を受信者だけに届ける暗号化とは別の目的である。",
+      "distractorRationales": [
+        "受信者に対応する暗号化用の鍵の組。",
+        "異なる人の鍵の組では、通常は対応した復号ができない。",
+        "公開される鍵で読める形は、受信者だけに内容を隠す方式ではない。",
+        "署名との混同であり、受信者だけに読む権限を与える組ではない。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 8017 — PKCS #1: RSA Cryptography Specifications Version 2.2",
+          "url": "https://www.rfc-editor.org/rfc/rfc8017.html"
+        }
+      ]
+    },
+    "reason": "公開鍵暗号を秘密鍵で暗号化することと取り違えない。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 8017 §5.1の公開鍵による暗号化と対応する秘密鍵による復号、§5.2の署名プリミティブとの区別を確認。裸のRSA演算を安全な通信方式として推奨していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000107"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000271",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "AESなどの共通鍵暗号で、一つのデータを暗号化し、元へ復号する際の鍵の関係はどれか。",
+      "choices": [
+        "暗号化鍵だけを公開し、対応する別の秘密鍵で復号する",
+        "暗号化鍵を捨て、鍵を使わずに復号する",
+        "全利用者が同じ公開された固定鍵を使う",
+        "暗号化と復号に対応する同じ秘密鍵を使う"
+      ],
+      "correctIndex": 3,
+      "explanation": "共通鍵暗号では、暗号化と復号に同じ秘密鍵を使う。通信相手との鍵の共有や管理が必要になる。「共通」は世界中の利用者で一つの鍵を使うという意味ではない。",
+      "distractorRationales": [
+        "公開鍵暗号の鍵の関係。",
+        "鍵なしで復号する方式ではない。",
+        "鍵の秘密を守る必要があり、全員共通の公開鍵ではない。",
+        "共通鍵暗号の基本的な鍵の関係。"
+      ],
+      "sources": [
+        {
+          "title": "NIST CSRC — Symmetric Cryptography",
+          "url": "https://csrc.nist.gov/glossary/term/Symmetric_Cryptography"
+        }
+      ]
+    },
+    "reason": "公開鍵暗号と区別し、同じ鍵という語の範囲を明示。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CSRCの取得した定義で同じ秘密鍵を操作と逆操作に使い、AES暗号化・復号を例とすることを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000261",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "英大文字26字を、全て同じ数だけ循環してずらすシーザー暗号を考える。ずらさない場合も許す。この方式の鍵探索が容易な理由はどれか。",
+      "choices": [
+        "文章が長くなるほど、必ず鍵の候補が増えるから",
+        "異なるずらし方が高々26通りしかないから",
+        "各文字ごとに独立な鍵を生成するから",
+        "復号には大きな整数の素因数分解が不要だから"
+      ],
+      "correctIndex": 1,
+      "explanation": "循環する26字では、ずらし量が26違えば同じ変換になる。したがって鍵の候補は0〜25の26通りだけで、全候補を試すことが容易。素因数分解を使わない暗号が全て弱いという意味ではない。",
+      "distractorRationales": [
+        "同じずらし量を使うという条件では、長さで候補は増えない。",
+        "異なる変換の候補が極めて少ない。",
+        "一つのずらし量を全字に使うという条件に反する。",
+        "素因数分解を使わないこと自体は安全性の不足を意味しない。"
+      ],
+      "sources": [
+        {
+          "title": "Harvard CS50x 2025 — Caesar",
+          "url": "https://cs50.harvard.edu/x/2025/psets/2/caesar/"
+        }
+      ]
+    },
+    "reason": "暗号の歴史上の固定シフト値の暗記ではなく、明示した鍵空間の性質を問う。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CS50の26字で循環するずらしの定義を確認。設問の0を許す条件で剰余類が26通りになることを独立に導出。教材の例文・課題・コードは転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000277",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "SQLのWHERE条件へ、利用者が入力した検索値を渡す。SQLインジェクションを防ぐ基本的な実装はどれか。",
+      "choices": [
+        "入力値をSQL文字列へそのまま連結する",
+        "HTML用にエスケープしてからSQLへ連結する",
+        "SQLの構造と入力値を分け、値をパラメーターとしてバインドする",
+        "入力値をBase64に変換し、復元してからSQLへ連結する"
+      ],
+      "correctIndex": 2,
+      "explanation": "パラメーター化したクエリでは、値をSQL命令の構造から分離して渡す。テーブル名や列名など、値用のパラメーターにできない部分には、コードで固定する、許可した候補に対応付けるなどの別の設計が必要になる。",
+      "distractorRationales": [
+        "入力が命令の構造に入り込む危険がある。",
+        "HTMLの規則とSQLの規則は違う。",
+        "値をデータとして扱わせる基本的な方法。",
+        "復元して連結すれば、命令の構造へ入り込む問題が残る。"
+      ],
+      "sources": [
+        {
+          "title": "OWASP — SQL Injection Prevention Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+        }
+      ]
+    },
+    "reason": "パラメーター化が識別子にもそのまま使えるという誤解を防ぐ。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Defense Option 1のvariable bindingとcode/dataの分離、Option 3のテーブル名・列名・順序の扱いを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000193"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000181",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "二つの異なる大きな素数pとqから作るRSAを考える。公開鍵のn＝pqと公開指数eが分かっているとき、nを効率よく素因数分解できれば何ができるか。",
+      "choices": [
+        "秘密指数dを計算し、対応する秘密鍵を得られる",
+        "任意のハッシュ関数の衝突を一回で必ず見つけられる",
+        "異なる人のRSA公開鍵も全て同じ秘密鍵になる",
+        "RSA以外の全ての暗号も同じ計算だけで復号できる"
+      ],
+      "correctIndex": 0,
+      "explanation": "pとqが得られれば、λ(n)＝lcm(p−1,q−1)を求め、eの逆元として秘密指数dを計算できる。これは素因数分解から秘密鍵を得る関係であり、あらゆるRSAへの攻撃が素因数分解と同一という断定ではない。",
+      "distractorRationales": [
+        "有効な公開指数eにはλ(n)に関する逆元があり、dを得られる。",
+        "一般のハッシュ関数の衝突探索が直ちに解けるわけではない。",
+        "別の鍵の法nや指数は別の値。",
+        "暗号方式ごとの数学的な前提は異なる。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 8017 — PKCS #1: RSA Cryptography Specifications Version 2.2",
+          "url": "https://www.rfc-editor.org/rfc/rfc8017.html"
+        }
+      ]
+    },
+    "reason": "数学的関係を明示し、RSAを破ることと素因数分解の無条件な同値とはしない。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 8017 §3.1と§3.2の素因数、λ(n)、GCD(e,λ(n))＝1、ed≡1 mod λ(n)を確認。この式から二素数の場合を導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-mfa-distinct-factors",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "異なる種類の認証要素を組み合わせた二要素認証の例はどれか。",
+      "choices": [
+        "パスワードと、別の暗記したPIN",
+        "パスワードと、秘密の質問への暗記した答え",
+        "長いパスワードと、それを二回入力する確認欄",
+        "パスワードと、所持する専用認証器が生成するワンタイムコード"
+      ],
+      "correctIndex": 3,
+      "explanation": "パスワードは知識要素、専用認証器によるコードは認証器の所持を確かめる要素として使う。知っている情報を二つに増やすだけでは異なる要素にならない。二要素であることだけで、全方式がフィッシング耐性を持つとは限らない。",
+      "distractorRationales": [
+        "どちらも知識要素。",
+        "どちらも知識要素。",
+        "同じ要素を繰り返しているだけ。",
+        "知識と所持の異なる要素を組み合わせる。"
+      ],
+      "sources": [
+        {
+          "title": "NIST SP 800-63B-4 — Authentication and Authenticator Management",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
+        }
+      ]
+    },
+    "reason": "新規。二回の入力と異なる認証要素を区別する。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§2.2の異なる二要素、物理的認証器とパスワードの組合せ、用語集の知識・所持・生体の三種類を確認。旧版やパブリックコメントを現行仕様には使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-password-salt-precomputation",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "パスワード保存で、利用者ごとに異なるランダムなソルトをパスワード用ハッシュ処理に加える主な効果はどれか。",
+      "choices": [
+        "弱いパスワードへの総当たりを数学的に不可能にする",
+        "一度作った候補のハッシュ一覧を、多数の利用者へそのまま使い回しにくくする",
+        "パスワードを平文で保存しても秘密にする",
+        "ソルト自体を共通の復号鍵として、元のパスワードへ戻せるようにする"
+      ],
+      "correctIndex": 1,
+      "explanation": "異なるソルトを含めて計算するため、候補の計算結果の使い回しや事前計算を難しくする。ソルトはハッシュと一緒に保存できる。適切な計算コストを持つパスワード用ハッシュを使う必要があり、弱いパスワードの推測自体を不可能にはしない。",
+      "distractorRationales": [
+        "各利用者への候補の試行はなお可能。",
+        "ソルトごとの計算を必要にし、事前計算の再利用を抑える。",
+        "平文を秘匿する仕組みではない。",
+        "ソルトはハッシュを復号する鍵ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OWASP — Password Storage Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+        },
+        {
+          "title": "NIST SP 800-63B-4 — Password Verifiers",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
+        }
+      ]
+    },
+    "reason": "新規。ソルトと秘密のpepper・暗号鍵を混同せず、絶対的な推測不能を主張しない。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "OWASP Saltingの固有ソルト・事前計算への効果と、NIST §3.1.1.2のpassword・salt・cost factorを入力とする保存方式を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-base64-not-confidentiality",
+    "domain": "情報・計算機科学",
+    "subdomain": "セキュリティ・暗号",
+    "content": {
+      "question": "平文の内容をBase64へ変換するだけでは、その内容の秘密を守れない。主な理由はどれか。",
+      "choices": [
+        "Base64は情報を全て失う不可逆な変換だから",
+        "Base64は文字列の長さを必ず短くするから",
+        "秘密鍵を必要とせず、公開された変換規則で元へ戻せるから",
+        "Base64の復元には受信者固有の秘密鍵が必要だから"
+      ],
+      "correctIndex": 2,
+      "explanation": "Base64はバイナリなどを文字で表すための符号化。見た目が読みにくくなっても、秘密鍵なしで復元できるため、単独では機密性を提供しない。暗号化したデータをBase64で表現する使い方とは区別する。",
+      "distractorRationales": [
+        "Base64は情報を失うハッシュではない。",
+        "長さの短縮を目的とした圧縮ではない。",
+        "秘密の情報なしで復元できる符号化だから。",
+        "Base64の復元に秘密鍵は不要。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 4648 — The Base16, Base32, and Base64 Data Encodings",
+          "url": "https://www.rfc-editor.org/rfc/rfc4648.html"
+        }
+      ]
+    },
+    "reason": "新規。符号化・圧縮・暗号化を区別する。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 4648 §12のbase encodingが視覚的には情報を隠すように見えても計算上の機密性を提供しないという説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格、NIST・OWASPの資料、大学教材の取得した本文または索引を照合。設問・選択肢・説明は独自作成し、文章・演習・コードを転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
