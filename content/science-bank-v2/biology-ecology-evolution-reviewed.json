@@ -1,0 +1,1065 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000402",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "Whittakerが1969年に示した五界説で、原核生物をまとめた界の名称はどれか。",
+      "choices": [
+        "モネラ界",
+        "原生生物界",
+        "菌界",
+        "動物界"
+      ],
+      "correctIndex": 0,
+      "explanation": "この歴史的な分類では、モネラ・原生生物・菌・植物・動物の五つの界を区別した。ここでは五界説での呼称を問い、現在の細菌と古細菌の区別などをそのまま表す分類とはしていない。",
+      "distractorRationales": [
+        "五界説で原核生物をまとめた界。",
+        "この体系では真核生物側の界。",
+        "この体系では菌類を独立させた真核生物側の界。",
+        "この体系では動物をまとめた真核生物側の界。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §1.2 A Systematic Approach",
+          "url": "https://openstax.org/books/microbiology/pages/1-2-a-systematic-approach"
+        },
+        {
+          "title": "Whittaker (1969) — New concepts of kingdoms or organisms",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/5762760/"
+        }
+      ]
+    },
+    "reason": "架空のViraliaという界を誤答肢にした旧問を、歴史的分類の名称の比較へ変更。ウイルス分類全体を否定する旧説明を除去。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "OpenStax §1.2のWhittakerの五界とMonera/他四界の区分を本文で照合。原論文はPubMedの著者・年・書誌を確認し、全文読了とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000176"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000173",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "通常のXX/XY型の遺伝を考える。X染色体の偽常染色体領域外にある対立遺伝子aについて、父がXᵃY、母がXᴬXᴬなら、父のaを受け取るのはどの子か。新規変異や染色体の数の変化は考えない。",
+      "choices": [
+        "XYの子だけ",
+        "XXの子だけ",
+        "XXとXYの子の両方",
+        "どちらの子も受け取らない"
+      ],
+      "correctIndex": 1,
+      "explanation": "父は通常、XXの子へX染色体を、XYの子へY染色体を渡す。そのため父のX上のaはXXの子が受け取る。この遺伝子型の伝わり方から、すべての保因者が必ず無症状などと表現型まで断定することはできない。",
+      "distractorRationales": [
+        "XYの子が父から受け取るのは通常Y染色体。",
+        "父のX染色体を受け取る子。",
+        "父のXがXYの子にも伝わるとしている。",
+        "父のXはXXの子へ伝わる。"
+      ],
+      "sources": [
+        {
+          "title": "NCI Dictionary — X-linked recessive inheritance",
+          "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/x-linked-recessive-inheritance"
+        },
+        {
+          "title": "MedlinePlus — Sex-linked recessive",
+          "url": "https://medlineplus.gov/ency/article/002051.htm"
+        }
+      ]
+    },
+    "reason": "旧保因者の女性は必ず無症状という一般化を避け、染色体と対立遺伝子の伝わり方を問う。同じ核心の旧性連鎖問題を統合。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "父のXが息子へ伝わらず娘へ伝わる通常の遺伝と、保因者の表現型の記述を照合。偽常染色体領域・新規変異などを設問の対象外にする。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000419",
+      "10000000-0000-4000-8007-000000000421"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000147",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "二倍体集団の一つの常染色体座位にAとaがあり、その頻度をpとq（0＜p,q＜1、p＋q＝1）とする。ハーディー・ワインベルグ平衡で、AA・Aa・aaの頻度は順にどれか。",
+      "choices": [
+        "p・pq・q",
+        "p²・pq・q²",
+        "p²・2pq・q²",
+        "2p・pq・2q"
+      ],
+      "correctIndex": 2,
+      "explanation": "平衡での遺伝子型頻度はp²、2pq、q²。ヘテロ接合体にはAとaを父母から受け取る二通りがある。モデルでは無作為な配偶子の結合、雌雄で等しい対立遺伝子頻度、選択・突然変異・移住・浮動の影響がないことなどを仮定する。",
+      "distractorRationales": [
+        "対立遺伝子頻度と遺伝子型頻度を混同している。",
+        "ヘテロ接合体を作る二通りの結合の一方が欠けている。",
+        "指定した平衡の遺伝子型頻度。",
+        "遺伝子型頻度の式ではなく、一般に合計も1にならない。"
+      ],
+      "sources": [
+        {
+          "title": "Scitable — The Hardy-Weinberg Principle",
+          "url": "https://www.nature.com/scitable/knowledge/library/the-hardy-weinberg-principle-13235724/"
+        }
+      ]
+    },
+    "reason": "対立遺伝子頻度が不変というだけでHW平衡とする旧問を、二倍体・一座位の具体的な遺伝子型頻度へ変更。連鎖平衡との混同を除去。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "The Hardy-Weinberg EquilibriumのAA/Aa/aaの式と、その後のモデルの仮定を照合。p²＋2pq＋q²＝(p＋q)²＝1も独立に確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000039",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "1859年に『種の起源』を出版し、自然選択による進化を論じたのは誰か。",
+      "choices": [
+        "アルフレッド・ラッセル・ウォレス",
+        "カール・リンネ",
+        "グレゴール・メンデル",
+        "チャールズ・ダーウィン"
+      ],
+      "correctIndex": 3,
+      "explanation": "『種の起源』の著者はダーウィン。ウォレスも自然選択を独立に着想した重要な研究者であり、自然選択という考えをダーウィンだけの業績とはしない。",
+      "distractorRationales": [
+        "自然選択を独立に着想したが、この本の著者ではない。",
+        "分類・命名の体系を整えた研究者。",
+        "遺伝の規則に関するエンドウの研究で知られる。",
+        "指定した本の著者。"
+      ],
+      "sources": [
+        {
+          "title": "The Linnean Society — Charles Darwin (1809–82)",
+          "url": "https://www.linnean.org/the-society/history-of-science/charles-darwin"
+        },
+        {
+          "title": "Natural History Museum — Who was Alfred Russel Wallace?",
+          "url": "https://www.nhm.ac.uk/discover/who-was-alfred-russel-wallace.html"
+        }
+      ]
+    },
+    "reason": "自然選択に関わる人物というだけではWallaceも該当するため、著書と年を指定して問う。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "所蔵機関による1859年の著書の説明と、博物館のWallaceの独立した着想・翌年のDarwinの著書についての記述を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000085",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "ある形質について、自然選択による進化的な変化が起こる基盤として適切な組み合わせはどれか。",
+      "choices": [
+        "個体間の遺伝する違いと、その違いに関連する生存・繁殖成功の差",
+        "全個体が遺伝的に同じで、生存・繁殖成功も同じ",
+        "獲得した変化が遺伝せず、次世代の構成とも関係しない",
+        "交配が無作為であることだけ"
+      ],
+      "correctIndex": 0,
+      "explanation": "遺伝する変異があり、その変異に応じて次世代へ残す寄与が異なると、集団内の形質や対立遺伝子の頻度は変わり得る。環境が永遠に不変であることや、個体数が一定であることは必須条件ではない。",
+      "distractorRationales": [
+        "変異・遺伝性・繁殖成功との関係を含む。",
+        "選択で構成が変わるための遺伝する差を欠く。",
+        "遺伝する形質の頻度の変化につながる条件を欠く。",
+        "無作為交配だけでは選択による変化を説明できない。"
+      ],
+      "sources": [
+        {
+          "title": "Andrews (2010) — Natural Selection, Genetic Drift, and Gene Flow Do Not Act in Isolation in Natural Populations",
+          "url": "https://www.nature.com/scitable/knowledge/library/natural-selection-genetic-drift-and-gene-flow-15186648/"
+        }
+      ]
+    },
+    "reason": "自然選択一般と遺伝的な進化応答を区別し、問う対象を形質の進化的な変化へ明示。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Natural selectionの節の変異、遺伝性、適応度の差という三条件を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000414",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "森林で、枯れた植物の有機物を分解する分解者として、栄養の循環を支える代表的な生物群はどれか。",
+      "choices": [
+        "生きた植物を食べる草食哺乳類",
+        "腐生性の菌類や細菌",
+        "光合成で炭素を固定する植物だけ",
+        "草食動物を捕らえる肉食鳥類"
+      ],
+      "correctIndex": 1,
+      "explanation": "腐生性の菌類や細菌は、有機物を分解する分解者として働く。全ての菌類や細菌が同じ生活様式という意味ではなく、分解者も他の生物が作った有機物を利用する従属栄養生物である。",
+      "distractorRationales": [
+        "主に生きた植物を摂食する消費者で、指定した分解者の代表例ではない。",
+        "枯死有機物の分解を担う代表的な微生物群。",
+        "炭素固定を行う生産者の働きで、指定した分解者ではない。",
+        "捕食を行う消費者で、指定した分解者の代表例ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Ecology of Fungi",
+          "url": "https://openstax.org/books/biology-2e/pages/24-3-ecology-of-fungi"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Characteristics of Fungi",
+          "url": "https://openstax.org/books/biology-2e/pages/24-1-characteristics-of-fungi"
+        }
+      ]
+    },
+    "reason": "枯れ葉から土壌有機物への変化と完全な無機化を混同せず、分解者を従属栄養の消費者と排他的な分類にしない。旧同義問題を統合。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "菌類と細菌が主要な分解者として有機物を分解し、栄養循環に関わる本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000141"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000424",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "連続時間のロジスティック成長 dN/dt＝rN(1−N/K) で、rとKが正の定数なら、個体数の増加速度dN/dtが最大になるNはどれか。",
+      "choices": [
+        "0",
+        "K/4",
+        "K/2",
+        "K"
+      ],
+      "correctIndex": 2,
+      "explanation": "このモデルの増加速度はNについて上に凸の放物線で、N＝K/2で最大値rK/4をとる。一個体あたりの増加率r(1−N/K)とは異なる量である。自然の個体群が常にこの式に従うとは限らない。",
+      "distractorRationales": [
+        "N＝0では増加速度は0。",
+        "増加速度は3rK/16で、最大値rK/4より小さい。",
+        "このモデルで増加速度が最大となる個体数。",
+        "N＝Kでは増加速度は0。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Environmental Limits to Population Growth",
+          "url": "https://openstax.org/books/biology-2e/pages/45-3-environmental-limits-to-population-growth"
+        }
+      ]
+    },
+    "reason": "増加率と個体数全体の増加速度を区別し、r・Kの符号と固定条件を明示。モデル名だけの旧問を同じ問題族へ統合。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Carrying Capacity and the Logistic Modelの方程式を照合。f′(N)＝r(1−2N/K)、f″(N)＝−2r/K<0を独立に確認。索引で重複した式の文字列は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000169"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000434",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "一定の環境の閉じた系で、同じ制限資源を同じ仕方で利用する二種には安定した長期共存が成立しない、という生態学の基本的な原理はどれか。",
+      "choices": [
+        "競争を通じた資源分割",
+        "相利共生",
+        "遷移",
+        "競争排除の原理"
+      ],
+      "correctIndex": 3,
+      "explanation": "競争排除の原理は、生態的な要求が重なる種の共存の制約を表す。自然界では環境変動、空間の違い、移入、資源利用の違いなどを考える必要があり、同じ場所に複数種がいれば必ず矛盾するという意味ではない。",
+      "distractorRationales": [
+        "異なる資源利用への分化で共存を可能にする方向の概念。",
+        "双方が利益を得る相互作用で、この競争による制約の名称ではない。",
+        "時間とともに群集構成が変わる過程の名称。",
+        "指定した競争による共存の制約を表す原理。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Community Ecology",
+          "url": "https://openstax.org/books/biology-2e/pages/45-6-community-ecology"
+        }
+      ]
+    },
+    "reason": "環境・空間・移入を無視した無条件の共存否定を避ける。名称だけを問う旧同義問題を統合。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Competitive Exclusion Principleの資源・ニッチと競争排除の説明を照合。単純モデルの基本的な予測として条件を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000145"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000099",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "ヒトなどの哺乳類の発生で、内胚葉に由来する組織の代表例はどれか。",
+      "choices": [
+        "小腸の内腔を覆う上皮",
+        "皮膚の表皮",
+        "中枢神経系のニューロン",
+        "骨格筋"
+      ],
+      "correctIndex": 0,
+      "explanation": "小腸の内腔を覆う上皮は内胚葉由来。消化管の筋層などは由来が異なるので、消化管という器官全体を一つの胚葉由来とすることはできない。",
+      "distractorRationales": [
+        "内胚葉由来の代表例。",
+        "主に外胚葉由来。",
+        "主に外胚葉由来。",
+        "主に中胚葉由来。"
+      ],
+      "sources": [
+        {
+          "title": "Gilbert — Developmental Biology, Endoderm",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10107/"
+        },
+        {
+          "title": "OpenStax — Concepts of Biology, §18.2 Development and Organogenesis",
+          "url": "https://openstax.org/books/concepts-biology/pages/18-2-development-and-organogenesis"
+        }
+      ]
+    },
+    "reason": "消化管全体や口・肛門側の例外を含む曖昧な肢から、小腸の上皮へ限定。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "The Digestive Tube and Its Derivativesの消化管内面と筋の異なる由来、および三胚葉の分化の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000082",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "体の前後軸に沿った領域の性質を調節するHox遺伝子群がコードする代表的な産物はどれか。",
+      "choices": [
+        "リボソームを構成するRNA",
+        "他の遺伝子の発現を制御する転写因子",
+        "翻訳時にアミノ酸を運ぶtRNA",
+        "DNA合成を触媒するDNAポリメラーゼ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hox遺伝子は転写因子をコードし、前後軸に沿う領域や体節の性質の違いに関わる。ホメオボックスを持つ遺伝子の全てがHox遺伝子ではなく、体軸形成の全過程をHoxだけが担うわけでもない。",
+      "distractorRationales": [
+        "Hox遺伝子はリボソームRNA遺伝子ではない。",
+        "Hoxの産物は転写因子として発生の調節に関わる。",
+        "Hox遺伝子はtRNA遺伝子ではない。",
+        "Hoxの主要な産物はDNA合成酵素ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Alberts et al. — Homeotic Selector Genes and the Patterning of the Anteroposterior Axis",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26913/"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Features of the Animal Kingdom",
+          "url": "https://openstax.org/books/biology-2e/pages/27-1-features-of-the-animal-kingdom"
+        }
+      ]
+    },
+    "reason": "「体軸形成に関与」だけで他の遺伝子群を排除していた旧問を、Hoxの領域の性質指定へ具体化。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "The HOX Code Specifies Anterior-Posterior Differencesと、他のホメオボックス遺伝子との区別、Hoxによる転写調節を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000444",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "複数の局所群集が個体の移動でつながるメタコミュニティで、移入が局所の種の維持を助ける仕組みとして適切なのはどれか。",
+      "choices": [
+        "個体が移入すると、局所の資源制限は必ずなくなる",
+        "移入が一度起これば、その後は種間競争がなくなる",
+        "別の場所から個体が補われ、その場所だけでは維持しにくい生息が続く場合がある",
+        "移入元と移入先の繁殖成功の差が、移入そのものによって必ず消える"
+      ],
+      "correctIndex": 2,
+      "explanation": "他の群集からの供給は局所の生息を維持することがある。ただし移動が増えれば多様性も常に増えるわけではない。MouquetとLoreauのモデルでも、局所多様性が中間の移動率で最大となるなど、効果は尺度と条件に依存する。",
+      "distractorRationales": [
+        "移入は資源の制限を必ず解消するわけではない。",
+        "移入しても競争は起こり得る。",
+        "局所群集をつなぐ移動による維持の仕組み。",
+        "個体の移動だけで、場所ごとの環境や繁殖成功の差が必ずなくなるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "Mouquet & Loreau (2003) — Community Patterns in Source-Sink Metacommunities",
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/378857"
+        }
+      ]
+    },
+    "reason": "多様性への効果が常に正や負という旧肢を避け、移入による維持と条件依存を明確化。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "原論文Abstractの移動により局所多様性を維持するsource-sinkモデル、中間移動率のα多様性最大と尺度による違いを照合。本文全文の読了ではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000406",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "異なる年代の地層に含まれる化石の形態や出現を比較することで、直接調べられる対象として適切なのはどれか。",
+      "choices": [
+        "現在の全個体の完全な遺伝子型",
+        "一個体が得た能力が必ず子へ遺伝すること",
+        "全ての地層が同時にできたこと",
+        "過去の生物の形や生物群の構成が時代とともにどう変わったか"
+      ],
+      "correctIndex": 3,
+      "explanation": "化石記録は過去にどのような生物がいたか、その形や分布がどう変化したかの証拠になる。ただし保存の偏りや記録の欠落があり、過去の全生物を完全に記録しているわけではない。",
+      "distractorRationales": [
+        "化石の形態比較から現在の全個体の遺伝子型は得られない。",
+        "獲得形質の無条件な遺伝を示すものではない。",
+        "年代の違う地層を比較する設定と合わない。",
+        "化石記録を用いて調べることができる歴史的な変化。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Understanding Evolution",
+          "url": "https://openstax.org/books/biology-2e/pages/18-1-understanding-evolution"
+        }
+      ]
+    },
+    "reason": "化石が必ず環境変化や全ての遺伝情報を直接示すとはせず、形態と生物群の歴史へ絞る。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Fossilsの化石記録と形態の時間的な変化についての本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000031",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "次のうち、哺乳類に分類される動物はどれか。",
+      "choices": [
+        "コウモリ",
+        "ペンギン",
+        "ウミガメ",
+        "サメ"
+      ],
+      "correctIndex": 0,
+      "explanation": "コウモリは翼を持つ哺乳類。空を飛ぶという共通点だけで鳥類に分類することはできない。ペンギンは鳥類、ウミガメは爬虫類、サメは軟骨魚類である。",
+      "distractorRationales": [
+        "哺乳類に分類される。",
+        "鳥類に分類される。",
+        "爬虫類に分類される。",
+        "軟骨魚類に分類される。"
+      ],
+      "sources": [
+        {
+          "title": "U.S. National Park Service — All About Bats",
+          "url": "https://www.nps.gov/subjects/bats/all-about-bats.htm"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Determining Evolutionary Relationships",
+          "url": "https://openstax.org/books/biology-2e/pages/20-2-determining-evolutionary-relationships"
+        }
+      ]
+    },
+    "reason": "同じ定型句を繰り返す旧誤答解説を、それぞれの分類へ置き換えた。",
+    "parameters": {
+      "b": -1.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NPSのコウモリを哺乳類とする本文、系統関係と形態の類似を区別する教材を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000097",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "亜属などの中間階級を含めず、界から種までの基本的な分類階級を考えると、種のすぐ上に当たるのはどれか。",
+      "choices": [
+        "科",
+        "属",
+        "目",
+        "綱"
+      ],
+      "correctIndex": 1,
+      "explanation": "この基本的な並びでは、科の下が属、属の下が種となる。実際の分類では亜属などの追加の階級も使われるため、ここでは挙げた基本階級だけで比較する。",
+      "distractorRationales": [
+        "この並びでは属の上。",
+        "この並びで種のすぐ上。",
+        "この並びでは科の上。",
+        "この並びでは目の上。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Organizing Life on Earth",
+          "url": "https://openstax.org/books/biology-2e/pages/20-1-organizing-life-on-earth"
+        }
+      ]
+    },
+    "reason": "亜属などの中間階級を無視して「直上」と断定しないよう、比較する階級を限定。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Organizing Life on Earthの基本分類階級phylum/class/order/family/genus/speciesの順序を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000084",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "異なる二種の生物の相互作用で、双方が利益を受ける関係を表すのはどれか。",
+      "choices": [
+        "寄生",
+        "競争",
+        "相利共生",
+        "片利共生"
+      ],
+      "correctIndex": 2,
+      "explanation": "相利共生は双方が利益を受ける関係。関係の効果は環境や状態で変わり得るため、ある組み合わせが常に同じ利益を受けると決めつけるのではなく、ここでは相互作用の型を問う。",
+      "distractorRationales": [
+        "典型的には寄生者が利益を得て、宿主が不利益を受ける。",
+        "典型的には共通の資源をめぐり双方に負の影響がある。",
+        "双方が利益を受ける型。",
+        "一方が利益を受け、他方への影響がおおむね中立な型。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Community Ecology",
+          "url": "https://openstax.org/books/biology-2e/pages/45-6-community-ecology"
+        }
+      ]
+    },
+    "reason": "片方が利益を得るだけでは寄生と片利共生を区別できないため、相手への影響も誤答解説に示す。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Mutualism/Commensalism/Parasitismと競争の定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000174",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "生態系で一次生産を担う独立栄養生物に共通する特徴はどれか。",
+      "choices": [
+        "すべて他の動物を食べて炭素を得る",
+        "すべて光だけをエネルギー源にする",
+        "すべて植物に分類される",
+        "無機炭素を材料に、自分の有機物を合成できる"
+      ],
+      "correctIndex": 3,
+      "explanation": "独立栄養生物はCO₂などの無機炭素を利用する。エネルギー源には光のほか無機化合物の化学反応もあり、一次生産者を光合成する植物だけに限定できない。",
+      "distractorRationales": [
+        "他の生物の有機物を炭素源とする従属栄養の説明。",
+        "化学独立栄養生物を除外してしまう。",
+        "藻類や独立栄養性の細菌・古細菌などを除外してしまう。",
+        "独立栄養生物の炭素利用の特徴。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Energy Flow through Ecosystems",
+          "url": "https://openstax.org/books/biology-2e/pages/46-2-energy-flow-through-ecosystems"
+        }
+      ]
+    },
+    "reason": "生産者の全てが太陽光と水を使うという誤った一般化を訂正し、炭素源とエネルギー源を分離。同義の旧問題を統合。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "How Organisms Acquire Energy in a Food Webの無機炭素、光独立栄養と化学独立栄養の区別を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000413"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000035",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "植物や動物の種を属名と種小名で表す二名法を体系的に用い、1753年の『植物の種』などを出版した人物は誰か。",
+      "choices": [
+        "カール・リンネ",
+        "チャールズ・ダーウィン",
+        "グレゴール・メンデル",
+        "ロベルト・コッホ"
+      ],
+      "correctIndex": 0,
+      "explanation": "リンネは二名法を体系的に用い、現代の命名の基礎となる著作を残した。以前の研究者の試みがなかったという意味で、二つの語を使う方法を一人で初めて発明したとはしない。",
+      "distractorRationales": [
+        "指定した著書と命名体系に対応する人物。",
+        "自然選択による進化と『種の起源』で知られる。",
+        "エンドウの遺伝研究で知られる。",
+        "細菌学の研究で知られ、この著書の著者ではない。"
+      ],
+      "sources": [
+        {
+          "title": "The Linnean Society — His career and legacy",
+          "url": "https://www.linnean.org/learning/who-was-linnaeus/career-and-legacy"
+        }
+      ]
+    },
+    "reason": "二名法を唯一人が最初に発明したと断定せず、体系化と具体的な著作へ結び付ける。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Legacyの二名法と、1753年Species plantarum・1758年Systema naturaeの命名上の位置付けを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000037",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "生態学で、同じ時期に同じ地域に暮らす同種の個体の集まりを表す基本的な単位はどれか。",
+      "choices": [
+        "群集",
+        "個体群",
+        "生態系",
+        "バイオーム"
+      ],
+      "correctIndex": 1,
+      "explanation": "個体群は同種の個体の集まりを扱う単位。群集は複数種の集まり、生態系は生物と非生物的環境との関係も含む。個体群を扱うときは対象となる場所と時期を明確にする。",
+      "distractorRationales": [
+        "複数種の個体群を含む集まり。",
+        "指定した同種の個体の集まり。",
+        "非生物的な環境も含む単位。",
+        "気候や優占する生物群などで区分する、より広い生物群系。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, The Scope of Ecology",
+          "url": "https://openstax.org/books/biology-2e/pages/44-1-the-scope-of-ecology"
+        }
+      ]
+    },
+    "reason": "場所に加えて時期も指定し、個体群と群集・生態系の定義を別々に説明。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "同地域・同時期・同種のpopulationの定義と、community/ecosystemの説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000405",
+    "domain": "生物",
+    "subdomain": "生態・分類",
+    "content": {
+      "question": "草を食べるウサギと、そのウサギを食べるキツネという単純な食物連鎖を考える。草を食べる段階のウサギは、どの栄養段階に当たるか。",
+      "choices": [
+        "一次生産者",
+        "二次消費者",
+        "一次消費者",
+        "三次消費者"
+      ],
+      "correctIndex": 2,
+      "explanation": "一次生産者の草を直接食べるウサギは一次消費者。この単純な連鎖でウサギを食べるキツネは二次消費者になる。一般の食物網で種の栄養段階が常に一つに固定されるという意味ではない。",
+      "distractorRationales": [
+        "この設定では草に当たる。",
+        "この設定ではウサギを食べるキツネに当たる。",
+        "草を直接食べるウサギの段階。",
+        "この連鎖には示されていない、二次消費者を食べる段階。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Ecology of Ecosystems",
+          "url": "https://openstax.org/books/biology-2e/pages/46-1-ecology-of-ecosystems"
+        }
+      ]
+    },
+    "reason": "生産者の定義を問う別問とは分け、指定した連鎖の中での栄養段階を問う。",
+    "parameters": {
+      "b": -1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Food Chains and Food Websの一次生産者・一次/二次/三次消費者の定義を照合。例は独自に設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000415",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "自然選択と遺伝的浮動の違いを表す説明はどれか。",
+      "choices": [
+        "自然選択は偶然の標本抽出だけ、遺伝的浮動は繁殖成功の系統的な差で起こる",
+        "自然選択も遺伝的浮動も、有利な対立遺伝子を必ず固定する",
+        "遺伝的浮動は無限大の集団で最も強くなる",
+        "自然選択は遺伝する違いに伴う繁殖成功の差、遺伝的浮動は有限集団での偶然の伝達に関わる"
+      ],
+      "correctIndex": 3,
+      "explanation": "自然選択は適応度の差に関わり、浮動は次世代へ伝わる対立遺伝子の偶然の偏りに関わる。同じ集団で両方が同時に働くことがあり、浮動は一般に有効集団サイズが小さいほど強くなる。",
+      "distractorRationales": [
+        "二つの過程の特徴を逆にしている。",
+        "浮動は有利な変異の増加を保証せず、選択も必ず固定を保証するわけではない。",
+        "浮動は有限集団での確率的な偏りに由来する。",
+        "二つの過程の基本的な違い。"
+      ],
+      "sources": [
+        {
+          "title": "Andrews (2010) — Natural Selection, Genetic Drift, and Gene Flow Do Not Act in Isolation in Natural Populations",
+          "url": "https://www.nature.com/scitable/knowledge/library/natural-selection-genetic-drift-and-gene-flow-15186648/"
+        },
+        {
+          "title": "Scitable — Genetic Drift and Effective Population Size",
+          "url": "https://www.nature.com/scitable/topicpage/genetic-drift-and-effective-population-size-772523/"
+        }
+      ]
+    },
+    "reason": "壊れた肢、突然変異は必ず選択より前という説明、浮動を常に適応的とする説明を除去。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "著者教材の自然選択と浮動が同時に働く説明、有限集団・有効集団サイズと偶然の頻度変化を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000435",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "分子系統解析で、対象の内群より外側で分岐したと考えられる外群を含める主な目的はどれか。",
+      "choices": [
+        "系統樹の根の位置を推定する手がかりにする",
+        "全ての系統の分子進化速度を等しくする",
+        "全遺伝子の発現量を同じ尺度で測る",
+        "最も進化が進んだ現生種を決める"
+      ],
+      "correctIndex": 0,
+      "explanation": "適切な外群は、対象の系統樹に根を置く手がかりとなる。外群が遠すぎる場合などは推定が不安定になり得るため、外群を入れれば根が必ず正しく決まるわけではない。外群の現生種を内群の直接の祖先とはしない。",
+      "distractorRationales": [
+        "外群を用いた根付けの主な目的。",
+        "外群の追加で各系統の進化速度が等しくなるわけではない。",
+        "系統樹の根付けは発現量測定ではない。",
+        "系統解析は現生種を進歩の順番に並べる方法ではない。"
+      ],
+      "sources": [
+        {
+          "title": "EMBL-EBI Training — Phylogenetics: Root",
+          "url": "https://www.ebi.ac.uk/training/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/aspects-of-phylogenies/root/"
+        }
+      ]
+    },
+    "reason": "外群があれば根を確定できると断定せず、推定の手がかりとしての役割を明示。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Where to root a tree?の外群による根の推定と、遠すぎる外群の限界を本文で照合。図は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000445",
+    "domain": "生物",
+    "subdomain": "進化・発生",
+    "content": {
+      "question": "集団遺伝学で、正の選択と純化選択を対比した説明として適切なのはどれか。",
+      "choices": [
+        "正の選択は有害変異を増やし、純化選択は有利な変異を除く",
+        "正の選択は有利な変異の増加、純化選択は有害変異の除去に注目した呼び分け",
+        "どちらも対立遺伝子の頻度に影響しない",
+        "純化選択とは、集団サイズの小ささによる偶然の固定だけを指す"
+      ],
+      "correctIndex": 1,
+      "explanation": "どちらも適応度の差に関わる自然選択を扱うが、正の選択では有利な変異の増加、純化選択では有害な変異の減少に注目する。非同義置換の単純な件数が同義置換より多いだけで、正の選択と判定できるわけではない。",
+      "distractorRationales": [
+        "注目する変化の方向を逆にしている。",
+        "二つの用語の基本的な対比。",
+        "選択は頻度の変化に関わる。",
+        "遺伝的浮動と純化選択を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "Scitable — Negative Selection",
+          "url": "https://www.nature.com/scitable/topicpage/negative-selection-1136/"
+        }
+      ]
+    },
+    "reason": "正の選択を非同義/同義置換の単純な件数比較とした誤りを除き、定義の対比へ戻す。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "索引掲載本文の有利な変異の増加と有害な変異の除去、negative/purifying selectionの用語を照合。直接openは転送エラーであり全文取得済みとはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "生態・進化・分類・発生の事実を原論文、公的機関、所蔵機関の記録、著者の教材で照合。設問・肢・説明を独自に作成し、資料の文章・演習問題・図表は転載していない。"
+    }
+  }
+]
