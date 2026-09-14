@@ -9,6 +9,7 @@ import type { Content, ExamState, PublicAttempt } from "@/src/lib/science/types"
 import { ResultVersionHistory } from "./ResultVersionHistory";
 import type { RevisionUpdate } from "@/src/lib/science/corrections";
 import { ResultSummary } from "./ResultSummary";
+import { shareCopy } from "@/src/lib/science/share-copy";
 
 type Review = { attempt: PublicAttempt; rows: { ordinal: number; revisionId: string; domain: string; content: Content; selectedIndex: number; correct: boolean; creditName?:string; update?:RevisionUpdate|null }[] };
 
@@ -46,11 +47,11 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
     } catch(e) {setError((e as Error).message);} finally {setBusy(false);}
   }
   async function share() {
-    if (!sharePath) return;
+    if (!sharePath||!state?.attempt.result) return;
     const url=new URL(sharePath,window.location.origin).href;
     void scienceApi("event",{attemptId,name:"share_button_clicked",operationId:crypto.randomUUID()}).catch(() => {});
     try {
-      if(navigator.share) await navigator.share({title:"全分野科学検定",text:`${nickname}の科学マップ。あなたも挑戦してみよう！`,url});
+      if(navigator.share) await navigator.share({title:"全分野科学検定",text:shareCopy(state.attempt.result,nickname).text,url});
       else {await navigator.clipboard.writeText(url);setNote("共有URLをコピーしました。");}
     } catch(e) {if((e as Error).name!=="AbortError")setNote(`このURLをコピーできます：${url}`);}
   }
@@ -58,13 +59,14 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
   const result=state.attempt.result;
   if(!result)return <main className="page-container max-w-4xl py-10"><AppCard><h1 className="text-2xl font-black">この受験は完了していません</h1><p className="mt-4">{state.attempt.ordinal}問の回答が保存されています。</p><AppButton href={state.attempt.state==="abandoned"?"/mypage":`/exam?attempt=${attemptId}`} className="mt-5">{state.attempt.state==="abandoned"?"マイページへ":"受験を再開する"}</AppButton></AppCard></main>;
   const next=nextKind(state.group,result.definition.kind);
+  const copy=shareCopy(result,nickname);
   return <main className="page-container max-w-4xl py-8">
     <ResultSummary result={result}/>
     {(!!result.corrections?.count||!!result.identityAdjustments?.excludedCount)&&<ResultVersionHistory attemptId={attemptId}/>}
     {result.definition.kind==="weekly"&&!state.attempt.competitive&&<p className="mt-3 rounded-xl bg-amber-50 p-4 text-sm leading-7">参考参加の記録です。締切後の完了、再挑戦、作問・事前閲覧がある記録は競争順位へ加えません。</p>}
     <AppCard className="mt-6"><h2 className="text-2xl font-black">この結果を、科学好きな人へ</h2><p className="mt-3 leading-7">ニックネームとこの受験結果だけを公開します。メールアドレスや個別の回答、問題の正解は公開しません。あとで公開を取り消せます。</p>
       <label className="mt-4 block text-sm font-bold">公開するニックネーム<input value={nickname} onChange={(e)=>setNickname(e.target.value)} maxLength={30} className="mt-2 block min-h-12 w-full rounded-xl border p-3"/></label>
-      <div className="mt-5 rounded-xl bg-[var(--color-primary-50)] p-5"><p className="text-sm">公開内容のプレビュー</p><p className="mt-2 text-xl font-black">{nickname}さん · {result.definition.label}</p><p className="mt-2">{result.total!==null?`総合 ${result.total}/1,000点（参考スコア）`:`${result.correctCount}/${result.answerCount}問 正解`}</p><p className="mt-2 text-sm">10分野の科学マップ · 制作「理系とーく 川村智祥」</p></div>
+      <div className="mt-5 rounded-xl bg-[var(--color-primary-50)] p-5"><p className="text-sm">公開内容のプレビュー</p><p className="mt-2 text-xl font-black">{nickname}さん · {result.definition.label}</p><p className="mt-2">{copy.metric}</p><p className="mt-2 text-sm">{copy.subtitle} · 制作「理系とーく 川村智祥」</p></div>
       <div className="mt-4 flex flex-wrap gap-3"><AppButton disabled={busy||!nickname.trim()} onClick={()=>void publish(true)}>{sharePath?"公開内容を更新":"この内容で共有ページを作る"}</AppButton>{sharePath&&<><AppButton onClick={()=>void share()} variant="secondary">SNSへ共有・URLをコピー</AppButton><AppButton href={sharePath} variant="ghost">公開ページを見る</AppButton><AppButton disabled={busy} onClick={()=>void publish(false)} variant="ghost">公開を取り消す</AppButton></>}</div>
       <p role="status" className="mt-3 text-sm">{note}</p>
     </AppCard>

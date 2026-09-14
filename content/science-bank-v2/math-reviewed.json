@@ -1,0 +1,47 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000002",
+    "domain": "数学",
+    "subdomain": "数と代数",
+    "reason": "1を含めない条件と、異なる正の約数がちょうど2個であることを明示した。",
+    "content": {
+      "question": "1より大きい自然数のうち、正の約数が1と自分自身の2個だけである数を何という？",
+      "choices": ["素数", "偶数", "平方数", "有理数"],
+      "correctIndex": 0,
+      "explanation": "素数は、異なる正の約数をちょうど2個もつ自然数です。2、3、5、7などが該当します。1の正の約数は1個なので、素数に含めません。",
+      "distractorRationales": ["素数の定義に一致します。", "偶数は2で割り切れる整数です。4や6も偶数なので、この条件を満たす数の名称にはなりません。", "平方数は整数を2乗して得られる数です。1、4、9などがあり、素数の定義とは異なります。", "有理数は整数の比で表せる数です。素数も有理数ですが、約数が2個という特徴を表す名称ではありません。"],
+      "sources": [{"title": "OpenStax, Contemporary Mathematics, 3.1 Prime and Composite Numbers", "url": "https://openstax.org/books/contemporary-mathematics/pages/3-1-prime-and-composite-numbers"}]
+    },
+    "review": {"status": "content_checked", "reviewer": "Astra", "observedAt": "2026-09-14", "sourceLocation": "Prime and Composite Numbers：異なる約数が2個、1は素数でも合成数でもないという説明を確認。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "pending"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000004",
+    "domain": "数学",
+    "subdomain": "確率・統計",
+    "reason": "中央の値という説明を奇数個の場合に限定し、偶数個の場合の通常の定義も解説に加えた。",
+    "content": {
+      "question": "奇数個の数値データを小さい順に並べたとき、ちょうど中央にある値を表す代表値の名称はどれ？",
+      "choices": ["平均値", "中央値", "最頻値", "分散"],
+      "correctIndex": 1,
+      "explanation": "中央値は、データを順に並べたときの中央を表す代表値です。奇数個なら中央の1個、偶数個の数値データなら通常は中央の2個の算術平均を用います。",
+      "distractorRationales": ["算術平均は値の合計をデータ数で割った値であり、中央の位置だけでは決まりません。", "奇数個のデータで中央の位置にある値を指す名称は中央値です。", "最頻値は最も多く現れる値です。中央の値と一致するとは限りません。", "分散は平均からの偏差の2乗に基づく、ばらつきの尺度です。中央の値を表しません。"],
+      "sources": [{"title": "OpenStax, Contemporary Mathematics, 8.3 Mean, Median and Mode", "url": "https://openstax.org/books/contemporary-mathematics/pages/8-3-mean-median-and-mode"}]
+    },
+    "review": {"status": "content_checked", "reviewer": "Astra", "observedAt": "2026-09-14", "sourceLocation": "中央値の定義とExample 8.18の偶数個のデータで中央2値の平均を用いる手順を確認。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "pending"}
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000105",
+    "domain": "数学",
+    "subdomain": "解析・微分積分",
+    "reason": "微分可能性だけで元の関数を級数表示できるという説明を修正し、導関数から係数を作る定義と収束条件を区別した。",
+    "content": {
+      "question": "関数のある点での各階の導関数から、係数を f⁽ⁿ⁾(a)/n! として作る冪級数を何という？",
+      "choices": ["テイラー級数", "フーリエ級数", "等比級数", "調和級数"],
+      "correctIndex": 0,
+      "explanation": "この係数を用いた Σ f⁽ⁿ⁾(a)(x−a)ⁿ/n! がテイラー級数です。有限の部分和はテイラー多項式です。各階の導関数が存在しても、級数が元の関数に一致するとは限らず、余剰項が0に近づくことなどの確認が必要です。",
+      "distractorRationales": ["点aでの導関数を用いて係数を定める冪級数がテイラー級数です。", "フーリエ級数は三角関数などの周波数成分による展開です。設問の係数の定義とは異なります。", "等比級数は各項が一定の比で変化する級数です。テイラー級数の一部が等比級数になる場合もありますが、一般の名称ではありません。", "通常、調和級数は1+1/2+1/3+…を指します。任意の関数の導関数から作る級数の名称ではありません。"],
+      "sources": [{"title": "OpenStax, Calculus Volume 2, 6.3 Taylor and Maclaurin Series", "url": "https://openstax.org/books/calculus-volume-2/pages/6-3-taylor-and-maclaurin-series"}]
+    },
+    "review": {"status": "content_checked", "reviewer": "Astra", "observedAt": "2026-09-14", "sourceLocation": "Taylor's Theorem with RemainderおよびConvergence of Taylor Series：係数、有限多項式、余剰項→0と関数への収束の条件を確認。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "pending"}
+  }
+]

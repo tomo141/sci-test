@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql", "0018_science_quality_watch.sql", "0019_science_identity_exposure.sql", "0020_science_license_versions.sql", "0021_science_auth_boundary.sql", "0022_science_consent_export.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -35,6 +35,23 @@ beforeAll(async () => {
 afterAll(async () => { await db?.close(); });
 
 describe.sequential("atomic issuance and answers", () => {
+  it("performs verified claiming and consent with service privileges while Auth remains private",async()=>{
+    const owner="10000000-0000-4000-8000-000000000031",unverified="10000000-0000-4000-8000-000000000032",v="20000000-0000-4000-8000-000000000031";
+    await db.query("insert into auth.users(id,email,email_confirmed_at) values($1,'service-role@example.invalid',now()),($2,'unverified@example.invalid',null)",[owner,unverified]);
+    await db.query("insert into science_visitors(id,token_hash,route_group) values($1,$2,'A')",[v,'ef'.repeat(32)]);
+    await db.exec("set role service_role");
+    try{
+      await expect(db.query("select * from auth.users")).rejects.toThrow(/permission denied/);
+      await expect(db.query("select science_claim_visitor($1,$2,$3)",[v,'ef'.repeat(32),unverified])).rejects.toThrow("email_unverified");
+      await db.query("select science_claim_visitor($1,$2,$3)",[v,'ef'.repeat(32),owner]);
+      await db.query("select science_update_consents($1,$2,gen_random_uuid())",[owner,{weekly:true}]);
+      expect((await db.query<{enabled:boolean}>("select enabled from science_consents where user_id=$1 and topic='weekly'",[owner])).rows[0].enabled).toBe(true);
+    }finally{await db.exec("reset role");}
+    await db.exec("set role authenticated");
+    try{await expect(db.query("select science_private.email_verified($1)",[owner])).rejects.toThrow(/permission denied/);}
+    finally{await db.exec("reset role");}
+  });
+
   it("keeps quality triage private, idempotent, and independent of answer keys",async()=>{
     const qualityAdmin="10000000-0000-4000-8000-000000000009";
     await db.query("insert into auth.users(id) values($1)",[qualityAdmin]);
@@ -132,9 +149,12 @@ describe.sequential("atomic issuance and answers", () => {
     const content={question:"1 + 1 = ?",choices:["1","2","3","4"],correctIndex:1,explanation:"One and one make two.",distractorRationales:["too small","correct","too large","too large"],sources:[{title:"Test source",url:"https://example.invalid"}]};
     await db.query("insert into science_submission_drafts(id,author_id,domain,subdomain,content,revision) values($1,$2,'数学','数と代数',$3,1)",[draftId,uid,content]);
     const sql="select science_submit_draft($1,$2,1,$3,'license-test',$4) id";
-    const args=[draftId,uid,`community:${draftId}`,{rights:true,adultOrGuardianConsent:true}];
+    const args=[draftId,uid,`community:${draftId}`,{rights:true,adultOrGuardianConsent:true,licenseHash:'a'.repeat(64)}];
     await expect(db.query(sql,args)).rejects.toThrow("submission_not_open");
     await db.query("update science_config set value=value||'{\"labSubmissions\":true,\"licenseVersion\":\"license-test\"}' where key='release'");
+    await db.query("insert into science_license_versions(version,operator_name,terms,sha256,published_at,active,operator_approved_at,legal_review_ref) values('license-test','Test fixture operator','{}',$1,now(),true,now(),'Fixture only: not a real legal review')",['a'.repeat(64)]);
+    await expect(db.query(sql,[...args.slice(0,3),{rights:true,adultOrGuardianConsent:true,licenseHash:'b'.repeat(64)}])).rejects.toThrow("terms_changed");
+    await expect(db.query("update science_license_versions set terms='{\"changed\":true}' where version='license-test'")).rejects.toThrow("published_license_is_immutable");
     await expect(db.query(sql,[...args.slice(0,3),{rights:false,adultOrGuardianConsent:true}])).rejects.toThrow("representations_required");
     const q=(await db.query<{id:string}>(sql,args)).rows[0].id;
     await expect(db.query(sql,args)).rejects.toThrow("stale_draft");
@@ -258,5 +278,33 @@ describe.sequential("verified identity exposure",()=>{
     expect((await db.query<{route_group:string}>("select route_group from science_visitors where id=$1",[v2])).rows[0].route_group).toBe("A");
     await db.query("select science_claim_visitor($1,$2,$3)",[v2,"d".repeat(64),owner]);
     expect((await db.query<{n:number}>("select count(*)::int n from science_response_exclusions where attempt_id=$1",[a2])).rows[0].n).toBe(2);
+  });
+});
+
+
+describe("current mail export",()=>{
+  it("paginates beyond 1000, excludes withdrawals and unverified addresses, and requires an admin",async()=>{
+    await db.exec("begin");
+    try{
+      await db.exec("update science_consents set enabled=false");
+      await db.exec(`insert into auth.users(id,email,email_confirmed_at)
+        select ('90000000-0000-4000-8000-'||lpad(n::text,12,'0'))::uuid,'export'||n||'@example.invalid',case when n<1003 then now() end from generate_series(1,1003) n;
+        insert into science_profiles(user_id) select id from auth.users where id::text like '90000000-%';
+        insert into science_consents(user_id,topic,enabled,version) select id,'science',email<>'export1002@example.invalid','export-test' from auth.users where id::text like '90000000-%';`);
+      await db.exec("set role service_role");
+      await db.exec("savepoint refused_export");
+      await expect(db.query("select * from science_consent_export_page($1)",["10000000-0000-4000-8000-000000000031"])).rejects.toThrow("forbidden");
+      await db.exec("rollback to refused_export");
+      const first=(await db.query<{user_id:string;topic:string;email:string}>("select * from science_consent_export_page($1)",[uid])).rows;
+      expect(first).toHaveLength(1000);
+      const cursor=first.at(-1)!;
+      const second=(await db.query<{user_id:string;email:string}>("select * from science_consent_export_page($1,$2,$3)",[uid,cursor.user_id,cursor.topic])).rows;
+      expect(second).toHaveLength(1);expect(second[0].email).toBe("export1001@example.invalid");
+      expect(new Set([...first,...second].map(r=>r.user_id)).size).toBe(1001);
+      await db.exec("reset role;set role authenticated");
+      await db.exec("savepoint browser_export");
+      await expect(db.query("select * from science_consent_export_page($1)",[uid])).rejects.toThrow(/permission denied/);
+      await db.exec("rollback to browser_export");
+    }finally{await db.exec("rollback;reset role");}
   });
 });

@@ -15,6 +15,8 @@ export function service() {
 export function checked<T>(response: { data: T | null; error: { code?: string; message?: string } | null }): NonNullable<T> {
   if (response.error || response.data === null) {
     const message = response.error?.message;
+    if(message==="terms_changed")throw new ScienceError("投稿条件が更新されています。一覧を開き直し、全文を確認してから投稿してください。",409,"terms_changed");
+    if(message==="item_unavailable")throw new ScienceError("この問題は確認のため出題を止めています。保存済みの進捗から、時間を置いて再試行してください。",409,"item_unavailable");
     if (response.error?.code === "40001" || message === "already_seen") throw new ScienceError("進捗が更新されています。再読み込みして続けてください。", 409, "conflict");
     if (response.error?.code === "P0002") throw new ScienceError("受験が見つかりません。", 404, "not_found");
     if (message === "week_closed") throw new ScienceError("この週の受付は終了しました。今週の10問へお進みください。", 409, "week_closed");

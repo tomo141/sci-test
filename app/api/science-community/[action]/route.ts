@@ -12,11 +12,11 @@ export async function POST(request:NextRequest,{params}:{params:Promise<{action:
     if(action==="list"){z.object({}).strict().parse(body);return communityData(ctx);}
     if(action==="save")return saveDraft(ctx,draftInput.parse(body));
     const userId=requireUser(ctx);
-    const input=z.object({id:z.string().uuid(),revision:z.number().int().min(1),licenseVersion:z.string().min(1).max(100),rights:z.literal(true),adultOrGuardianConsent:z.literal(true)}).strict().parse(body);
+    const input=z.object({id:z.string().uuid(),revision:z.number().int().min(1),licenseVersion:z.string().min(1).max(100),licenseHash:z.string().regex(/^[a-f0-9]{64}$/),rights:z.literal(true),adultOrGuardianConsent:z.literal(true)}).strict().parse(body);
     const draft=checked<{content:unknown}>(await ctx.db.from("science_submission_drafts").select("content").eq("id",input.id).eq("author_id",userId).single());
     questionContent.parse(draft.content);
     await rateLimit(ctx,"submit",5,3600);
-    const revisionId=checked(await ctx.db.rpc("science_submit_draft",{p_draft:input.id,p_user:userId,p_revision:input.revision,p_family:`community:${input.id}`,p_license:input.licenseVersion,p_representations:{rights:input.rights,adultOrGuardianConsent:input.adultOrGuardianConsent}}));
+    const revisionId=checked(await ctx.db.rpc("science_submit_draft",{p_draft:input.id,p_user:userId,p_revision:input.revision,p_family:`community:${input.id}`,p_license:input.licenseVersion,p_representations:{rights:input.rights,adultOrGuardianConsent:input.adultOrGuardianConsent,licenseHash:input.licenseHash}}));
     return {saved:true,revisionId};
   });
 }

@@ -5,6 +5,6 @@ export const siteConfig = {
     businessName: "理系とーく",
     representativeName: "川村智祥",
     contactEmail: "tomoyoshi@rikei-talk.com",
-    lastUpdated: "2026年6月28日"
+    lastUpdated: "2026年9月14日"
   },
 };

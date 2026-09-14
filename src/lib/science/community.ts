@@ -5,6 +5,7 @@ import { readAll } from "./queries";
 import { trustExposureWeight, trustScore, type QualityEvidence } from "./trust";
 import type { Content } from "./types";
 import type { ScienceResult } from "./model";
+import { publishedLicense } from "./licenses";
 
 export const questionContent = z.object({
   question:z.string().trim().min(8).max(2000),
@@ -38,9 +39,10 @@ export async function authorWeights(ctx:Context,candidates:{authorId:string|null
 }
 export async function communityData(ctx:Context){
   const config=await releaseConfig(ctx.db);
+  const license=config.labSubmissions&&config.licenseVersion?await publishedLicense(ctx.db,config.licenseVersion):null;
   const count=await ctx.db.from("science_items").select("id",{count:"exact",head:true}).in("status",["lab","published"]).not("author_id","is",null).eq("rights_checked",true);
   if(count.error||count.count===null)throw new ScienceError("ラボの状況を取得できませんでした。",503);
-  const base={signedIn:!!ctx.userId,open:config.labSubmissions,licenseVersion:config.licenseVersion,questionCount:count.count,drafts:[] as Draft[],trust:[] as {domain:ScienceDomain;score:ReturnType<typeof trustScore>}[]};
+  const base={signedIn:!!ctx.userId,open:!!license?.active,licenseVersion:license?.version??null,licenseHash:license?.sha256??null,licenseSummary:license?.terms.summary??null,questionCount:count.count,drafts:[] as Draft[],trust:[] as {domain:ScienceDomain;score:ReturnType<typeof trustScore>}[]};
   if(!ctx.userId)return base;
   const [drafts,inputs]=await Promise.all([
     ctx.db.from("science_submission_drafts").select("id,revision,domain,subdomain,content,state,review_note,revision_id,updated_at,author_credit,ai_assisted").eq("author_id",ctx.userId).order("updated_at",{ascending:false}).limit(100),
