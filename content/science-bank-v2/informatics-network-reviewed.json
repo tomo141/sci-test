@@ -1,0 +1,586 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000265",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "IPパケットのヘッダーで、IPによる配送先を示す宛先欄に入るものはどれか。",
+      "choices": [
+        "宛先ポート番号",
+        "宛先のIPアドレス",
+        "宛先ページのURL",
+        "宛先アプリのプロセスID"
+      ],
+      "correctIndex": 1,
+      "explanation": "宛先IPアドレスは、ネットワークをまたぐパケットの配送に使う。ポート番号はTCPやUDPなどの層で使う。IPアドレスは機器ごとに永久固定の番号とは限らず、一つの機器が複数持つこともある。",
+      "distractorRationales": [
+        "TCPやUDPのヘッダーの情報で、IPの宛先欄ではない。",
+        "IPパケットの配送先を表す。",
+        "URL全体をIPの宛先欄には入れない。",
+        "OS内部のプロセス識別子で、IPの配送先ではない。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 791 — Internet Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc791.html"
+        },
+        {
+          "title": "RFC 4291 — IPv6 Addressing Architecture",
+          "url": "https://www.rfc-editor.org/rfc/rfc4291.html"
+        }
+      ]
+    },
+    "reason": "機器を永久に一意識別する番号という説明を避け、旧同義問を統合。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 791 §3.1のDestination Addressと§2.2の配送処理、RFC 4291 §2のインターフェースへのアドレス指定を確認。旧classful分類を現行の制約には使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8002-000000000080"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000275",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "TCPが、確立した接続のアプリケーションに提供する通信の基本的な性質はどれか。",
+      "choices": [
+        "送信したメッセージの境界を保つが、順序は保証しない",
+        "バイト列の順序を保つが、紛失した部分を再送しない",
+        "順序を保った信頼性のあるバイトストリームを提供する",
+        "受信内容が相手のデータベースへ保存されたことを保証する"
+      ],
+      "correctIndex": 2,
+      "explanation": "TCPはシーケンス番号などを使い、紛失したデータを再送して、順序を保ったバイト列を届ける。アプリケーションのメッセージ境界や業務処理の完了を保証するものではない。なお、HTTP/3はTCPではなくQUICを利用する。",
+      "distractorRationales": [
+        "TCPはアプリケーションのメッセージ境界を保持しない。",
+        "TCPはデータの紛失を検出して再送する。",
+        "TCPが提供する基本の通信サービス。",
+        "TCPでの受信とアプリケーションの保存完了は別。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 9293 — Transmission Control Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc9293.html"
+        },
+        {
+          "title": "RFC 9114 — HTTP/3",
+          "url": "https://www.rfc-editor.org/rfc/rfc9114.html"
+        }
+      ]
+    },
+    "reason": "旧説明のHTTPは必ずTCPという一般化を訂正。重複を一つの問題族へ統合。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 9293 §2.2のreliable, in-order byte-stream、再送と順序制御、RFC 9114 §1.2のQUICへの対応を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000086",
+      "10000000-0000-4000-8005-000000000188",
+      "10000000-0000-4000-8006-000000000104",
+      "10000000-0000-4000-8004-000000000180"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000109",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "インターネットで、ホスト名に対応するIPアドレスなどの情報を、レコードとして問い合わせる仕組みはどれか。",
+      "choices": [
+        "DHCP",
+        "NTP",
+        "ARP",
+        "DNS"
+      ],
+      "correctIndex": 3,
+      "explanation": "DNSはドメイン名に関連する情報を分散して管理する。IPアドレスを示すレコードのほか、メールの配送先なども扱う。一つのホスト名に複数のIPアドレスが対応することもある。",
+      "distractorRationales": [
+        "ネットワーク設定の配布などを行う。",
+        "時刻の同期を行う。",
+        "IPv4の同一リンクでIPアドレスに対応するリンク層アドレスを調べる。",
+        "名前に関連するレコードを問い合わせる。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 1034 — Domain Names — Concepts and Facilities",
+          "url": "https://www.rfc-editor.org/rfc/rfc1034.html"
+        }
+      ]
+    },
+    "reason": "DNSを必ず一対一のIP変換だけとする理解を避ける。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 1034 §3.2.2のA・MXなどのレコード型、§5.2.1のホスト名から一つ以上のアドレスへの対応を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000077",
+      "10000000-0000-4000-8007-000000000281"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000114",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "IPのルーティング機能をOSI参照モデルの役割に対応づけると、主にどの層に当たるか。",
+      "choices": [
+        "第2層：データリンク層",
+        "第3層：ネットワーク層",
+        "第4層：トランスポート層",
+        "第7層：アプリケーション層"
+      ],
+      "correctIndex": 1,
+      "explanation": "異なるネットワークをまたぐ配送と経路選択は、ネットワーク層に対応する役割。TCP/IPのプロトコル群とOSIの七つの層は、同じモデルそのものではない。",
+      "distractorRationales": [
+        "一つのリンク内でのフレームの転送などを扱う。",
+        "ネットワークをまたぐ経路選択に対応する。",
+        "TCPなどの端点間の通信機能に対応する。",
+        "利用するアプリケーションの通信機能に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "Cisco — TCP/IP Overview",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13769-5.html"
+        }
+      ]
+    },
+    "reason": "参照モデルへの対応として問い、同義の旧問を統合。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "CiscoのIPがOSI第3層でのルーティングを扱う説明を確認。旧資料のclassfulアドレス等を現行要件として流用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000263"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000285",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "BGPの中心的な役割として適切なのはどれか。",
+      "choices": [
+        "自律システム間で到達可能な経路を交換し、方針に従って選択できるようにする",
+        "同じLAN内で、IPv4アドレスに対応するMACアドレスを調べる",
+        "ホスト名を受け取り、対応するアドレスのレコードを返す",
+        "端末にIPアドレスやDNSサーバーなどの設定を配布する"
+      ],
+      "correctIndex": 0,
+      "explanation": "BGPは自律システム間でネットワークの到達可能性やAS経路などを交換する。運用上の方針を反映でき、単純に物理距離や中継数が最小の経路だけを選ぶ仕組みではない。",
+      "distractorRationales": [
+        "AS間の到達可能性と方針を扱う。",
+        "ARPの役割に当たる。",
+        "DNSの役割に当たる。",
+        "DHCPの役割に当たる。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 4271 — A Border Gateway Protocol 4",
+          "url": "https://www.rfc-editor.org/rfc/rfc4271.html"
+        }
+      ]
+    },
+    "reason": "BGPを距離だけの最短経路選択としない。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 4271 §1でinter-Autonomous System、到達可能性・AS経路の交換とpolicy decisionsを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000186",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "値を読み書きする分散サービスで、サーバー群の間に通信できない分断が続き得るとする。CAP定理が同時には保証できないとする組合せはどれか。",
+      "choices": [
+        "データの暗号化と、認証した利用者へのアクセス許可",
+        "複数のコピーの保持と、各サーバーのログ保存",
+        "線形化可能な一貫性と、障害のない各サーバーへの全要求の完了",
+        "圧縮した保存と、読み出し時の復元"
+      ],
+      "correctIndex": 2,
+      "explanation": "分断した両側で要求を完了させ続けると、片側の更新をもう片側が知れず、線形化可能な読み書きを保証できない。一貫性を守るため応答を待つ選択もある。「どんな三つの機能でも二つは自由に選べる」という意味ではない。",
+      "distractorRationales": [
+        "CAPの一貫性と可用性の対立を表していない。",
+        "複製とログがあることだけで線形化可能性や要求の完了は保証されない。",
+        "分断を許す条件で両立を保証できない性質。",
+        "CAPの対象となる読み書きの保証とは別。"
+      ],
+      "sources": [
+        {
+          "title": "Gilbert & Lynch — Perspectives on the CAP Theorem",
+          "url": "https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer2.pdf"
+        }
+      ]
+    },
+    "reason": "分断条件と一貫性の意味を明記し、任意の二つを選ぶという旧説明を修正。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "著者による解説§2のatomic read/write、可用性、通信分断と定理を確認。2002年の原論文そのものと誤記しない。単にエラーを返すことを読み書き要求の完了に含めない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000091",
+      "10000000-0000-4000-8005-000000000189"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000073",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "Webで使うGET・POSTなどの要求メソッドや応答の意味を定めるプロトコルはどれか。",
+      "choices": [
+        "SMTP",
+        "HTTP",
+        "SSH",
+        "NTP"
+      ],
+      "correctIndex": 1,
+      "explanation": "HTTPはWebの要求と応答の意味を定める。SMTPはメールの転送、SSHは安全なリモート接続、NTPは時刻同期に使われる。",
+      "distractorRationales": [
+        "メールを転送するためのプロトコル。",
+        "GETやPOSTなどのメソッドと応答を定める。",
+        "安全なリモート接続などに使う。",
+        "時刻の同期に使う。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 9110 — HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+        }
+      ]
+    },
+    "reason": "略称だけの暗記から具体的な役割の識別へ改訂。",
+    "parameters": {
+      "b": -0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 9110 §9のメソッドの定義を確認。HTTPの版や下位のトランスポートに依存しない意味を問う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-ipv6-address-width",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "IPv6アドレス一つの長さは何ビットか。",
+      "choices": [
+        "32ビット",
+        "48ビット",
+        "64ビット",
+        "128ビット"
+      ],
+      "correctIndex": 3,
+      "explanation": "IPv6アドレスは128ビット。IPv4の32ビットより長い。IPv6のインターフェース識別子など一部分の長さと、アドレス全体の長さは区別する。",
+      "distractorRationales": [
+        "IPv4アドレスの長さ。",
+        "一般的な48ビットMACアドレスの長さと混同している。",
+        "IPv6アドレス全体の長さではない。",
+        "IPv6アドレス全体の長さ。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 4291 — IPv6 Addressing Architecture",
+          "url": "https://www.rfc-editor.org/rfc/rfc4291.html"
+        }
+      ]
+    },
+    "reason": "新規。IPアドレスの用途とは別に表現長を問う。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 4291 §2冒頭の128-bit identifiersを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-ipv4-cidr-block-size",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "IPv4のアドレスブロック /24 に含まれるアドレスの総数はいくつか。ネットワーク用などの予約アドレスも含めて数える。",
+      "choices": [
+        "24個",
+        "254個",
+        "256個",
+        "1024個"
+      ],
+      "correctIndex": 2,
+      "explanation": "IPv4は32ビットで、/24では先頭24ビットが共通。残る8ビットに2⁸＝256通りある。通常のホストへ割り当てられる数と、ブロック全体の数を区別する。",
+      "distractorRationales": [
+        "プレフィックス長を個数と取り違えている。",
+        "通常のサブネットで二つを除いたホスト数で、ここでは総数を問う。",
+        "32−24＝8ビットの全組合せの数。",
+        "可変部分が10ビットの場合の総数。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 4632 — Classless Inter-domain Routing",
+          "url": "https://www.rfc-editor.org/rfc/rfc4632.html"
+        }
+      ]
+    },
+    "reason": "新規。総数とホスト用アドレス数を明示して複数解を防ぐ。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 4632 §3.1の32ビットのプレフィックス表記と/24＝256の表を確認し、2^(32−24)を独立計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-dns-ttl-freshness",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "DNSレコードのTTLが通常指定するものはどれか。",
+      "choices": [
+        "キャッシュしたレコードを新鮮な情報として使える時間の目安（秒）",
+        "そのドメイン名の登録契約が終了する日時",
+        "全世界のDNSサーバーの更新が同時に完了する時刻",
+        "IPパケットが通過できるルーターの最大数"
+      ],
+      "correctIndex": 0,
+      "explanation": "DNSのTTLはレコードのキャッシュの新鮮さを扱う秒数。全世界への反映完了を約束しない。障害時に期限切れ情報を条件付きで使うserve-staleの仕様もあるため、期限後に必ず全キャッシュから消えるとは限らない。",
+      "distractorRationales": [
+        "DNSレコードのキャッシュの新鮮さに関する指定。",
+        "ドメインの登録契約の期限ではない。",
+        "分散したキャッシュの同時更新を指定しない。",
+        "IPヘッダー側のTTLと混同している。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 1034 — Domain Names — Concepts and Facilities",
+          "url": "https://www.rfc-editor.org/rfc/rfc1034.html"
+        },
+        {
+          "title": "RFC 8767 — Serving Stale Data to Improve DNS Resiliency",
+          "url": "https://www.rfc-editor.org/rfc/rfc8767.html"
+        }
+      ]
+    },
+    "reason": "新規。TTLによる通常の鮮度とserve-staleの例外を区別する。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 1034 §3.2.1のTTLの秒数とキャッシュ、RFC 8767のAbstractと§1の期限切れデータの利用条件を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-http-idempotent-effect",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "HTTPでPUTなどを「冪等なメソッド」と呼ぶとき、同じ要求を繰り返した場合に、仕様上同じであるとするものはどれか。",
+      "choices": [
+        "各応答の本文と時刻の全ビット",
+        "アクセスログに追加される行数",
+        "通信に要する時間と再送回数",
+        "一回だけ実行した場合と比べた、要求の意図するサーバーへの効果"
+      ],
+      "correctIndex": 3,
+      "explanation": "冪等性は、同一の要求を複数回行ったときの意図した効果が一回と同じになる性質。応答は変わることがあり、要求ごとのログや改訂履歴などの副作用まで一回分に限定する保証ではない。",
+      "distractorRationales": [
+        "応答の完全な一致を要求しない。",
+        "要求ごとに記録してよい。",
+        "通信時間や再送回数の一定性ではない。",
+        "仕様でいう冪等性の比較対象。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 9110 — HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+        }
+      ]
+    },
+    "reason": "新規。応答の一致やあらゆる副作用の不在という誤解を問う。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 9110 §9.2.2でintended effect、各要求のログ等の許容、応答が異なり得る説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "info-http-304-cached-representation",
+    "domain": "情報・計算機科学",
+    "subdomain": "ネットワーク・分散システム",
+    "content": {
+      "question": "キャッシュを持つクライアントの条件付きGETに、サーバーが304 Not Modifiedを返した。基本的に何を示すか。",
+      "choices": [
+        "資源が見つからず、保存済みの表現を削除すべきである",
+        "条件に基づき保存済みの表現を再利用でき、表現全体の再送は不要である",
+        "資源が別URLへ移動し、そのURLへ必ず恒久転送する",
+        "新しい表現全体が304応答の本文に入っている"
+      ],
+      "correctIndex": 1,
+      "explanation": "304は条件付きGETなどで、保存済みの表現を利用できることを伝える。応答には表現全体の本文を含めない。キャッシュのメタデータは、返されたヘッダーに応じて更新され得る。",
+      "distractorRationales": [
+        "404などの意味と混同している。",
+        "条件付き要求に対し、保存済み表現の再利用を認める応答。",
+        "301などのリダイレクトの意味と混同している。",
+        "304は表現全体の本文を持たない。"
+      ],
+      "sources": [
+        {
+          "title": "RFC 9110 — HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+        }
+      ]
+    },
+    "reason": "新規。HTTPの一般的な役割とは別に条件付き取得の意味を問う。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "RFC 9110 §15.4.5の条件付きGET/HEADと保存済み表現、§6.4.1の304に応答内容がない規定を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "通信規格・公式資料・定理を証明した著者の解説を照合。設問・選択肢・説明は独自作成し、文章・図表・演習を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
