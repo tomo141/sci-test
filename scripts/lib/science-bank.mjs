@@ -8,6 +8,7 @@ export const digest=value=>createHash('sha256').update(JSON.stringify(canonical(
 const stem=value=>value.normalize('NFKC').toLowerCase().replace(/\s+/gu,'').replace(/[?？。、「」『』]/gu,'');
 const allStems=row=>[row.question_text,...(row.previous_question_texts??[])].map(stem);
 const uuid=z.string().uuid();
+const initialFocusPerDomain=20;
 const patchSchema=z.object({
   legacyId:uuid.optional(),familyKey:z.string().regex(/^[a-z0-9][a-z0-9:_-]{2,120}$/).optional(),
   equivalentLegacyIds:z.array(uuid).default([]),version:z.number().int().positive().default(1),
@@ -22,6 +23,32 @@ function revisionId(family,version){
   const bytes=createHash('sha1').update(namespace).update(`${family}:${version}`).digest().subarray(0,16);
   bytes[6]=(bytes[6]&15)|0x50;bytes[8]=(bytes[8]&63)|0x80;
   const h=bytes.toString('hex');return `${h.slice(0,8)}-${h.slice(8,12)}-${h.slice(12,16)}-${h.slice(16,20)}-${h.slice(20)}`;
+}
+
+function initializeFocus(candidates){
+  for(const row of candidates){
+    if(row.parameters.focus&&(row.use!=='formal'||row.parameters.anchor))throw new Error(`Focus must be a non-anchor formal question: ${row.family_id}`);
+  }
+  for(const domain of domains){
+    const pool=candidates.filter(q=>q.domain===domain&&q.use==='formal'&&!q.parameters.anchor);
+    const chosen=pool.filter(q=>q.parameters.focus),manual=new Set(chosen);
+    if(chosen.length>initialFocusPerDomain)throw new Error(`Too many initial focus questions: ${domain}`);
+    const gap=(q,rows)=>rows.length?Math.min(...rows.map(r=>Math.abs(q.parameters.b-r.parameters.b))):-Math.abs(q.parameters.b);
+    while(chosen.length<Math.min(initialFocusPerDomain,pool.length)){
+      const remaining=pool.filter(q=>!chosen.includes(q));
+      remaining.sort((a,b)=>{
+        const localA=chosen.filter(q=>q.subdomain===a.subdomain),localB=chosen.filter(q=>q.subdomain===b.subdomain);
+        return localA.length-localB.length
+          ||(localB.length?gap(b,localB):0)-(localA.length?gap(a,localA):0)
+          ||gap(b,chosen)-gap(a,chosen)||a.family_id.localeCompare(b.family_id,'en');
+      });
+      chosen.push(remaining[0]);
+    }
+    for(const row of chosen){
+      row.parameters.focus=true;
+      row.parameter_evidence.focusCampaign={version:'initial-coverage-v1',targetPerDomain:initialFocusPerDomain,selection:manual.has(row)?'reviewer':'subdomain-and-initial-difficulty'};
+    }
+  }
 }
 
 /** Prepare an immutable candidate. This function never connects to a service or publishes questions. */
@@ -60,9 +87,11 @@ export function prepareBank(legacy,patches){
       review_evidence:{...q.review,reason:q.reason,contentSha256},quality_passed:true,rights_checked:true});
   }
   candidates.sort((a,b)=>a.family_id.localeCompare(b.family_id,'en'));
+  // This initializes a candidate only. Published campaigns remain frozen in their release.
+  initializeFocus(candidates);
   const capacities=domains.map(domain=>{
     const rows=candidates.filter(q=>q.domain===domain),formal=rows.filter(q=>q.use==='formal');
-    return {domain,formal:formal.length,weeklyReserve:rows.filter(q=>q.use==='weekly-reserve').length,subdomains:[...new Set(formal.map(q=>q.subdomain))].sort(),distinctInitialDifficulties:new Set(formal.map(q=>q.parameters.b)).size,
+    return {domain,formal:formal.length,weeklyReserve:rows.filter(q=>q.use==='weekly-reserve').length,focus:formal.filter(q=>q.parameters.focus).length,anchors:formal.filter(q=>q.parameters.anchor).length,subdomains:[...new Set(formal.map(q=>q.subdomain))].sort(),distinctInitialDifficulties:new Set(formal.map(q=>q.parameters.b)).size,
       requiredForTwoMaxLengthJourneys:64,canSupplyTwoMaxLengthJourneys:formal.length>=64};
   });
   const blockers=capacities.flatMap(c=>[...(c.formal<100?[{domain:c.domain,reason:'formal_bank_below_100',available:c.formal,required:100}]:[]),...(c.weeklyReserve<2?[{domain:c.domain,reason:'current_and_next_week_not_reserved',available:c.weeklyReserve,required:2}]:[])]);

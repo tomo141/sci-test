@@ -12,7 +12,7 @@
       "sources": [{"title": "MIT OpenCourseWare — 18.305 Lecture 2, equations (2.7)–(2.9)", "url": "https://ocw.mit.edu/courses/18-305-advanced-analytic-methods-in-science-and-engineering-fall-2004/09cfb5e3efabe59c46bfebfcfaecf743_second1.pdf"}]
     },
     "reason": "関係のない分野の方程式名を並べた旧選択肢から、関係式そのものと符号を問う内容へ改訂。",
-    "parameters": {"b": 0.9, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 0.9, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "Lecture 2の式(2.7)〜(2.9)を照合。虚軸方向の差商を独立に計算し、誤答肢をf(z)=zで検算。必要条件のみを扱う。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   },
   {
@@ -28,7 +28,7 @@
       "sources": [{"title": "Wolfram MathWorld — Parabolic Partial Differential Equation", "url": "https://mathworld.wolfram.com/ParabolicPartialDifferentialEquation.html"}, {"title": "Wolfram MathWorld — Heat Conduction Equation", "url": "https://mathworld.wolfram.com/HeatConductionEquation.html"}]
     },
     "reason": "方程式と係数の条件を明示し、存在しない分類を誤答肢に使わない。",
-    "parameters": {"b": 1.1, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 1.1, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "放物型の2階主要部の判別条件と熱方程式の例、Heat Conduction Equationの式(2)を照合。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   },
   {
@@ -44,7 +44,7 @@
       "sources": [{"title": "Wolfram MathWorld — Prime Number Theorem", "url": "https://mathworld.wolfram.com/PrimeNumberTheorem.html"}]
     },
     "reason": "π(x)、対数の底、漸近記号の意味を明記。",
-    "parameters": {"b": 0.7, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 0.7, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "式(3)のπ(n)∼n/ln nと式(11)の比の極限を照合。誤答肢との増加速度を独立に比較。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   },
   {
@@ -60,7 +60,7 @@
       "sources": [{"title": "Wolfram MathWorld — Complete Graph", "url": "https://mathworld.wolfram.com/CompleteGraph.html"}]
     },
     "reason": "有向・無向とループの扱いを明記し、特定のnで正解と一致する旧誤答肢2nを差し替え。",
-    "parameters": {"b": 0.1, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 0.1, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "完全グラフの定義と無向の場合の二項係数n choose 2を照合。n≥3で各誤答値が正解と一致しないことを検算。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   },
   {
@@ -76,7 +76,7 @@
       "sources": [{"title": "Wolfram MathWorld — Complex Differentiable", "url": "https://mathworld.wolfram.com/ComplexDifferentiable.html"}]
     },
     "reason": "確率・統計という旧分類を修正し、複素差商から独立に検算。",
-    "parameters": {"b": 0.4, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 0.4, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "冒頭の複素差商による定義と、近づく方向によらない極限という条件を照合。差商の整理と極限は独立に計算。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   },
   {
@@ -92,7 +92,7 @@
       "sources": [{"title": "Wolfram MathWorld — Riemannian Metric", "url": "https://mathworld.wolfram.com/RiemannianMetric.html"}, {"title": "Wolfram MathWorld — Riemannian Manifold", "url": "https://mathworld.wolfram.com/RiemannianManifold.html"}]
     },
     "reason": "旧設問は位相多様体の条件しか述べておらず、リーマン多様体と特定できなかった。必要な計量構造を問う形へ改訂。",
-    "parameters": {"b": 1.2, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 1.2, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "Riemannian Metricの各接空間の内積と、Riemannian Manifoldの計量付き多様体という定義を照合。滑らかさ・正定値性を明記。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   },
   {
@@ -124,7 +124,7 @@
       "sources": [{"title": "Netlib — Templates for the Solution of Linear Systems: The Gauss-Seidel Method", "url": "https://www.netlib.org/linalg/html_templates/node14.html"}]
     },
     "reason": "無関係な法則名の旧誤答肢を実在する線形方程式の解法へ差し替え、更新規則を問う。",
-    "parameters": {"b": 0.8, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 0.8, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "The Gauss-Seidel Method冒頭の逐次更新・既更新値の即時利用と、ヤコビ法との対比を照合。一般の行列での収束保証は主張しない。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   },
   {
@@ -140,7 +140,7 @@
       "sources": [{"title": "NIST/SEMATECH e-Handbook — 1.3.6.6.1 Normal Distribution", "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3661.htm"}]
     },
     "reason": "平均と分散だけから正規分布を示唆する旧文面を修正し、密度から一意に答えられる形に変更。",
-    "parameters": {"b": 0.2, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": true, "anchor": false},
+    "parameters": {"b": 0.2, "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。", "focus": false, "anchor": false},
     "review": {"status": "content_checked", "reviewer": "Astra（内容・出典照合）", "observedAt": "2026-09-14", "sourceLocation": "Probability Density Functionの標準化μ=0・σ=1と標準正規密度、Common Statisticsの平均・標準偏差を照合。", "sourceChecked": true, "uniqueAnswerChecked": true, "distractorRationalesChecked": true, "releaseApproval": "approved", "rightsBasis": "数学的な定義・定理を参照し、設問と各肢の説明を独自に記述。参考文献の演習問題・図表・固有の説明文を転載していない。"}
   }
 ]

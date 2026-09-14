@@ -204,10 +204,23 @@ describe.sequential("atomic issuance and answers", () => {
     await db.query("select science_activate_release($1,$2,'Verified test fixture capacity')",[parent,other]);
     const item=(await db.query<{id:string}>("select id from science_items where family_id='calibration-fixture:数学:21'")).rows[0].id;
     await expect(db.query("update science_release_items set b=.3 where release_id=$1 and revision_id=$2",[parent,item])).rejects.toThrow("release_is_frozen");
-    const candidate=(await db.query<{id:string}>("insert into science_calibration_candidates(revision_id,release_id,data_version,observed_to,fit,state) values($1,$2,'synthetic-fixture',now(),$3,'qualified') returning id",[item,parent,{b:.3,a:1,c:.25,oldB:0,eligible:true,count:200,sourceOwnerCount:250}])).rows[0].id;
+    const epoch=(await db.query<{epoch:number}>("select science_correction_epoch() epoch")).rows[0].epoch;
+    const fit={b:.3,a:1,c:.25,oldB:0,eligible:true,count:200,sourceOwnerCount:250,correctionEpoch:epoch};
+    const candidate=(await db.query<{id:string}>("insert into science_calibration_candidates(revision_id,release_id,data_version,observed_to,fit,state) values($1,$2,'synthetic-fixture',now(),$3,'qualified') returning id",[item,parent,fit])).rows[0].id;
     const job=(await db.query<{id:string}>("select science_begin_job('calibration-test') id")).rows[0].id;
     await expect(db.query("select science_apply_calibration($1,$2,$3)",[parent,[candidate],job])).rejects.toThrow("automatic_calibration_disabled");
     await db.query("update science_config set value=value||'{\"automaticCalibration\":true}' where key='release'");
+    const duplicate=(await db.query<{id:string}>("insert into science_calibration_candidates(revision_id,release_id,data_version,observed_to,fit,state) values($1,$2,'another-fit-same-question',now(),$3,'qualified') returning id",[item,parent,fit])).rows[0].id;
+    await expect(db.query("select science_apply_calibration($1,$2,$3)",[parent,[candidate,duplicate],job])).rejects.toThrow("validation_required");
+    await db.query("update science_calibration_candidates set fit=$2 where id=$1",[candidate,{...fit,correctionEpoch:epoch-1}]);
+    await expect(db.query("select science_apply_calibration($1,$2,$3)",[parent,[candidate],job])).rejects.toThrow("validation_required");
+    await db.query("update science_calibration_candidates set fit=$2 where id=$1",[candidate,{...fit,oldB:.1}]);
+    await expect(db.query("select science_apply_calibration($1,$2,$3)",[parent,[candidate],job])).rejects.toThrow("parameter_guard_failed");
+    const nonFocus=(await db.query<{id:string}>("select id from science_items where family_id='calibration-fixture:数学:41'")).rows[0].id;
+    await db.query("update science_calibration_candidates set revision_id=$2,fit=$3 where id=$1",[candidate,nonFocus,fit]);
+    await expect(db.query("select science_apply_calibration($1,$2,$3)",[parent,[candidate],job])).rejects.toThrow("parameter_guard_failed");
+    await db.query("update science_calibration_candidates set revision_id=$2 where id=$1",[candidate,item]);
+    expect((await db.query<{state:string}>("select state from science_releases where id=$1",[parent])).rows[0].state).toBe("active");
     const next=(await db.query<{id:string}>("select science_apply_calibration($1,$2,$3) id",[parent,[candidate],job])).rows[0].id;
     expect(next).not.toBe(parent);
     expect((await db.query<{b:number}>("select b from science_release_items where release_id=$1 and revision_id=$2",[parent,item])).rows[0].b).toBe(0);
@@ -215,6 +228,10 @@ describe.sequential("atomic issuance and answers", () => {
     expect((await db.query<{n:number}>("select count(*)::int n from science_release_items where release_id=$1 and anchor and b<>0",[next])).rows[0].n).toBe(0);
     expect((await db.query<{state:string}>("select state from science_releases where id=$1",[parent])).rows[0].state).toBe("retired");
     expect((await db.query<{state:string}>("select state from science_calibration_candidates where id=$1",[candidate])).rows[0].state).toBe("applied");
+    const focusCounts=(await db.query<{domain:string;n:number}>("select q.domain,count(*)::int n from science_release_items ri join science_items q on q.id=ri.revision_id where ri.release_id=$1 and ri.focus group by q.domain",[next])).rows;
+    expect(focusCounts).toHaveLength(10);expect(focusCounts.every(row=>row.n===20)).toBe(true);
+    const replacements=(await db.query<{domain:string}>("select q.domain from science_release_items ri join science_items q on q.id=ri.revision_id join science_release_items old on old.revision_id=ri.revision_id and old.release_id=$2 where ri.release_id=$1 and ri.focus and not old.focus",[next,parent])).rows;
+    expect(replacements).toEqual([{domain:"数学"}]);
   });
   it("preserves original answers and result versions while withdrawing a defective item for everyone",async()=>{
     const original={question:"A correction fixture question?",choices:["One","Two","Three","Four"],correctIndex:1,explanation:"The original explanation."};

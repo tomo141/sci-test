@@ -72,3 +72,13 @@
 `798b114a325299e4849aa6686f098be6cb768198` を改装ブランチへpush済み。[VercelのデプロイCDWxjJcVLnMZXiY4Q8AWrv6aCVyt](https://vercel.com/rikei-talk/sci-test/CDWxjJcVLnMZXiY4Q8AWrv6aCVyt) はReady、ビルド47秒。[プレビュー](https://sci-test-6iasesuqi-rikei-talk.vercel.app/) の版で、腕試し画面のURL・「20問の腕試し」の見出し・参加条件と、検証用DB未接続の準備中表示を実ブラウザで確認した。受験を開始できたという検証ではない。本番は以前のmainのままで、SQL適用・本番への昇格・Cron設定は未実行。
 
 22:57 JSTの読み取りでも台帳・主要4テーブルはPGRST205、件数は未取得のNULL。初回SQLの適用を確認できていない。読み取りには実行権限の検証やメール受信試験を含めていない。
+
+## 346e591のプレビューと重点群の追加修正
+
+物理58問を含む `346e5910dd2996bb680bc2eeb196850fb63ab4e1` もGitHubへpushし、[Vercelのug7mh529AHWKmcFBH5UzMy3do9rW](https://vercel.com/rikei-talk/sci-test/ug7mh529AHWKmcFBH5UzMy3do9rW) はReady、ビルド42秒。[該当プレビュー](https://sci-test-9oivbco5n-rikei-talk.vercel.app/) の生成を確認した。本番反映ではない。
+
+0027は校正の対象を現在の重点・未固定問題に限定し、元の難度と訂正の版を照合。同じ問題への複数推定の同時適用を拒否し、重点枠を同じ大分野の出題可能な問題へ移す。初回SQLを変更していない。
+
+- 現行後続ファイル：`followup-schema-0020-0027.sql`、SHA-256 `d1fc70803eb28b3ca4e4d01aaa824f65e56ce7ebad489682ef70edb4792359ff`。
+- 現行切替ファイル：`security-cutover-after-0027.sql`、SHA-256 `f21c8b96fefd21a8ea58f84c92d61637652e04a9f1cf7db7718b641fd2886ba8`。
+- 23:18 JSTのローカル復元リハーサルで移行ハッシュ24件・旧17テーブル全行一致を確認。0027も本番未実行。

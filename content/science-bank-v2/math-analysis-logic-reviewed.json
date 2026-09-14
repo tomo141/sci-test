@@ -33,7 +33,7 @@
     "parameters": {
       "b": 0.1,
       "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     },
     "review": {
@@ -125,7 +125,7 @@
     "parameters": {
       "b": 0.2,
       "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     },
     "review": {
@@ -171,7 +171,7 @@
     "parameters": {
       "b": 0,
       "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     },
     "review": {
@@ -221,7 +221,7 @@
     "parameters": {
       "b": 0.2,
       "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     },
     "review": {
@@ -313,7 +313,7 @@
     "parameters": {
       "b": 0,
       "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     },
     "review": {
@@ -451,7 +451,7 @@
     "parameters": {
       "b": 0.4,
       "basis": "対象概念と前提知識から置いた初期仮定。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     },
     "review": {

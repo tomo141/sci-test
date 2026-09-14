@@ -41,7 +41,7 @@
     "parameters": {
       "b": 1.0,
       "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     }
   },
@@ -90,7 +90,7 @@
     "parameters": {
       "b": 0.6,
       "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     }
   },
@@ -140,7 +140,7 @@
     "parameters": {
       "b": 0.3,
       "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     }
   },
@@ -186,7 +186,7 @@
     "parameters": {
       "b": 1.8,
       "basis": "Astraによる、基礎的な定義から専門的な定理までの内容に基づく初期の仮置き。実回答による校正値ではない。",
-      "focus": true,
+      "focus": false,
       "anchor": false
     }
   }
