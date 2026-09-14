@@ -1,0 +1,557 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000209",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "水平な単純支持梁の両端をピンとローラーで支える。中央に鉛直下向き800 Nの集中荷重だけが働き、自重は無視できる。静止しているとき、各支点の鉛直反力はいくらか。",
+      "choices": [
+        "それぞれ上向き200 N",
+        "それぞれ上向き400 N",
+        "それぞれ上向き800 N",
+        "それぞれ下向き400 N"
+      ],
+      "correctIndex": 1,
+      "explanation": "全体の鉛直方向の釣合いから反力の合計は800 N。荷重が中央なので各支点の反力は等しく、上向き400 Nずつになる。",
+      "distractorRationales": [
+        "合計400 Nでは荷重と釣り合わない。",
+        "合計800 Nとなり、モーメントも釣り合う。",
+        "反力の合計が荷重の2倍になる。",
+        "荷重と同じ下向きでは釣り合わない。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Shear and Bending Moment Diagrams",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/statics.pdf"
+        }
+      ]
+    },
+    "reason": "支持条件・自重・力の方向を明記し、単純支持梁を両端固定や両端ピンと混同しない。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "支点反力を梁全体の力・モーメントの釣合いから求める手順を確認。設問の中央800 N荷重は独立計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000218",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "水平な片持ち梁の長さをLとする。自由端に梁と垂直な集中荷重Pだけが働き、自重は無視する。固定端断面の曲げモーメントの大きさはいくらか。",
+      "choices": [
+        "PL/4",
+        "PL/2",
+        "PL",
+        "PL/8"
+      ],
+      "correctIndex": 2,
+      "explanation": "固定端まわりの外力のモーメントはP×L。その釣合いに必要な固定端モーメントの大きさはPLである。符号規約による正負ではなく大きさを問う。",
+      "distractorRationales": [
+        "単純支持梁の中央集中荷重の最大値との混同。",
+        "自由端荷重の腕はLでありL/2ではない。",
+        "荷重と固定端までの垂直距離の積。",
+        "集中荷重を分布荷重の別条件と混同している。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Shear and Bending Moment Diagrams",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/statics.pdf"
+        }
+      ]
+    },
+    "reason": "旧正解番号PL/2が解説PLと不一致だったため訂正。荷重方向と大きさの定義を追加。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "端部集中荷重の片持ち梁に対する固定端反力MR＝PLとM(x)＝PL−Pxを確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000089",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "スパンLの水平な単純支持梁に、中央の鉛直下向き集中荷重Pだけを加える。自重を無視すると、最大曲げモーメントの大きさはどれか。",
+      "choices": [
+        "PL/8",
+        "PL/2",
+        "PL",
+        "PL/4"
+      ],
+      "correctIndex": 3,
+      "explanation": "各支点反力はP/2。中央断面での曲げモーメントは(P/2)×(L/2)＝PL/4となる。等分布荷重を同じ総荷重Pで表したときのPL/8とは区別する。",
+      "distractorRationales": [
+        "同じ総荷重が全長に一様分布する別条件の最大値。",
+        "反力がP/2であることを落としている。",
+        "自由端荷重の片持ち梁とは支持条件が違う。",
+        "片側の支点反力と中央までの距離の積。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Shear and Bending Moment Diagrams",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/statics.pdf"
+        }
+      ]
+    },
+    "reason": "誤答解説に正解と記載された旧矛盾を除去し、同義の旧問を統合。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "全体の支点反力と切断した梁のモーメントの釣合いを確認し、中央集中荷重へ適用して導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000246"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000229",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "横幅200 mm、縦高さ300 mmの長方形断面について、断面の図心を通る水平軸まわりの断面二次モーメントIはいくらか。",
+      "choices": [
+        "4.5×10⁶ mm⁴",
+        "4.5×10⁸ mm⁴",
+        "2.0×10⁸ mm⁴",
+        "1.8×10⁹ mm⁴"
+      ],
+      "correctIndex": 1,
+      "explanation": "図心を通る水平軸ではI＝bh³/12。b＝200、h＝300をmm単位で代入すると200×300³/12＝4.5×10⁸ mm⁴。軸の向きや位置を変えると別の値になる。",
+      "distractorRationales": [
+        "正しい値より100倍小さい。",
+        "指定した図心水平軸に対する値。",
+        "図心を通る鉛直軸のhb³/12に対応する。",
+        "底辺に沿う水平軸のbh³/3に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "Engineering Statics — Moment of Inertia of Common Shapes",
+          "url": "https://engineeringstatics.org/centroids-moi-tables-3.html"
+        }
+      ]
+    },
+    "reason": "旧問は軸未指定で、どの四肢にも正しい図心水平軸の値がなかったため訂正。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "長方形の図心水平軸bh³/12、図心鉛直軸hb³/12、底辺軸bh³/3を照合し、旧数値を再計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000214",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "一様な断面積200 mm²の棒に軸方向の引張力Fを加え、平均引張応力が100 MPaとなった。Fはいくらか。",
+      "choices": [
+        "2 kN",
+        "200 kN",
+        "20 kN",
+        "0.02 kN"
+      ],
+      "correctIndex": 2,
+      "explanation": "平均応力はσ＝F/A。1 MPa＝1 N/mm²なので、F＝100×200＝20,000 N＝20 kN。",
+      "distractorRationales": [
+        "必要な値の1/10。",
+        "必要な値の10倍。",
+        "応力と断面積を掛けて力へ戻した値。",
+        "必要な値の1/1,000で、NとkNの換算が合わない。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Introduction to Elastic Response",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e8b60e8a1efb6e7275372cc77f23ae9b_MIT3_11F99_elas_1.pdf"
+        }
+      ]
+    },
+    "reason": "制御分野への誤分類と、誤答の桁差の不正確な説明を訂正。",
+    "parameters": {
+      "b": 0,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "引張応力＝力/断面積の定義を照合。設問の単位換算と数値を独立に計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000224",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "初期長さ1 m、ヤング率200 GPaの一様な棒に、一軸の引張応力100 MPaを加える。線形弾性・微小変形を仮定すると、棒の伸びはいくらか。",
+      "choices": [
+        "0.05 mm",
+        "0.5 mm",
+        "5 mm",
+        "50 mm"
+      ],
+      "correctIndex": 1,
+      "explanation": "ひずみε＝σ/E＝100 MPa/200,000 MPa＝0.0005。伸びはεL＝0.0005 m＝0.5 mmである。応力が与えられているので、この計算に断面直径は不要。",
+      "distractorRationales": [
+        "正しい伸びの1/10。",
+        "応力とヤング率からひずみを求めた値。",
+        "正しい伸びの10倍。",
+        "正しい伸びの100倍。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Introduction to Elastic Response",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e8b60e8a1efb6e7275372cc77f23ae9b_MIT3_11F99_elas_1.pdf"
+        }
+      ]
+    },
+    "reason": "旧正解50 mmを0.5 mmへ訂正し、不要な直径と制御分野への誤分類を除去。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "σ＝Eε、ε＝δ/L、微小変形の条件を確認。設問の値を代入し0.5 mmを再計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000129",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "均質な線形弾性材料の細長い梁で、Euler–Bernoulli梁理論の曲げ剛性をEIと表す。ヤング率Eと掛け合わせるIはどれか。",
+      "choices": [
+        "断面積",
+        "断面の周長",
+        "質量慣性モーメント",
+        "曲げ軸に対する断面二次モーメント"
+      ],
+      "correctIndex": 3,
+      "explanation": "Iは断面の面積要素に軸からの距離の二乗を掛けて積分した幾何量である。曲率と曲げモーメントの関係にEIが現れる。質量の分布から定まる質量慣性モーメントとは別。",
+      "distractorRationales": [
+        "軸方向の剛性EAには現れるが、曲げのIではない。",
+        "周長は軸からの距離の二乗で重み付けした面積積分ではない。",
+        "回転運動に関わる質量の二次モーメントで、面積のIと単位も違う。",
+        "指定した曲げ軸に対する面積の二次モーメント。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Stresses in Beams",
+          "url": "https://ocw.mit.edu/courses/3-91-mechanical-behavior-of-plastics-spring-2007/19f0e5ed0cd050837baa34bff76ad347_13_bstress.pdf"
+        }
+      ]
+    },
+    "reason": "無関係な比熱等の誤答を断面の幾何量・質量慣性へ置換し、材料物性EとIを区別。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "線形弾性の仮定、I＝∫y²dA、曲率＝M/(EI)の式を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000075",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "線形弾性範囲で荷重を受ける部材の穴や切り欠きの周辺に、離れた部分より大きい局所応力が生じる現象はどれか。",
+      "choices": [
+        "応力集中",
+        "加工硬化",
+        "クリープ",
+        "再結晶"
+      ],
+      "correctIndex": 0,
+      "explanation": "形状の不連続により応力分布が偏り、局所応力が増えることを応力集中という。塑性変形を必要とせず、弾性範囲でも生じる。倍率は形状・荷重条件と基準応力の定義による。",
+      "distractorRationales": [
+        "穴や切り欠きによる局所的な応力増大。",
+        "塑性加工に伴う強度変化で、弾性応力分布の偏りとは別。",
+        "持続荷重下での時間に依存する変形。",
+        "加工された組織に新たな結晶粒が生じる現象。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Closed-Form Solutions",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/airy.pdf"
+        }
+      ]
+    },
+    "reason": "名応力という誤記を除去し、局所応力と基準応力を区別。特定の係数を全形状へ一般化しない。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "円孔を持つ弾性板のKirsch解で孔縁の応力が遠方の値を超えること、応力集中係数と影響範囲を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000230",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "平面応力状態でσₓ＝50 MPa、σᵧ＝10 MPa、τₓᵧ＝20 MPaとする。xy面内の二つの主応力はどれか。",
+      "choices": [
+        "50±10 MPa",
+        "30±20 MPa",
+        "30±20√2 MPa",
+        "60±20√2 MPa"
+      ],
+      "correctIndex": 2,
+      "explanation": "面内主応力は(σₓ＋σᵧ)/2 ± √{((σₓ−σᵧ)/2)²＋τₓᵧ²}。中心は30 MPa、半径は√(20²＋20²)＝20√2 MPa。三次元の残りの主応力は0である。",
+      "distractorRationales": [
+        "法線応力を単に加減した値。",
+        "法線応力差による半径の成分が欠ける。",
+        "平均と、せん断を含むMohrの円の半径を用いた値。",
+        "中心の平均を取らず、和を使っている。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Tensor Transformations",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/trans.pdf"
+        }
+      ]
+    },
+    "reason": "二つの面内主応力と三次元の全主応力を区別し、無関係な等価応力式の旧解説を除去。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "式(11)の面内主応力とMohrの円の中心・半径を確認。設問の50・10・20 MPaは独自に設定して計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000240",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "同じ一軸引張降伏応力Yで校正した、等方材料のvon MisesとTrescaの降伏条件を考える。純せん断で降伏が始まるせん断応力の大きさは、それぞれどれか。",
+      "choices": [
+        "Mises：Y/2、Tresca：Y/√3",
+        "Mises：Y/√3、Tresca：Y/2",
+        "Mises：Y、Tresca：Y",
+        "Mises：Y/3、Tresca：Y/2"
+      ],
+      "correctIndex": 1,
+      "explanation": "純せん断の主応力はτ、0、−τ。Misesの等価応力は√3|τ|、Trescaでは最大主応力差が2|τ|となる。同じYで判定するとTrescaが小さいせん断応力で降伏を予測し、この条件ではより保守的。",
+      "distractorRationales": [
+        "二つの基準を逆にしている。",
+        "両者を同じ一軸降伏応力へ校正した結果。",
+        "一軸引張と純せん断を区別していない。",
+        "Misesの係数は3でなく√3。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Yield and Plastic Flow",
+          "url": "https://web.mit.edu/course/3/3.11/www/modules/yield.pdf"
+        }
+      ]
+    },
+    "reason": "Tresca応力の定義が曖昧で保守性が逆だった旧問を、校正と応力状態を固定した比較へ改訂。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Misesの主応力表示、一軸校正、純せん断のk＝Y/√3とTrescaのY/2の比較を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000250",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "線形弾性破壊力学が適用できる小規模降伏・平面ひずみ条件で、モードIのき裂に単調な荷重を加える。応力拡大係数KⅠと破壊靱性KⅠCを使う臨界条件はどれか。",
+      "choices": [
+        "KⅠ＝0",
+        "KⅠはき裂長さによらず一定",
+        "KⅠCは外力の大きさそのものに等しい",
+        "KⅠ＝KⅠC"
+      ],
+      "correctIndex": 3,
+      "explanation": "KⅠは荷重・き裂の寸法・形状に依存する応力場の指標。所定の条件で材料の臨界値KⅠCに達すると、不安定なき裂進展を生じる基準となる。大きな塑性変形がある場合まで、この条件だけをそのまま使うとはしない。",
+      "distractorRationales": [
+        "開口モードの負荷を加えた臨界値を0とする基準ではない。",
+        "KⅠはき裂寸法や形状の影響を受ける。",
+        "外力とは単位も異なり、材料の臨界的な応力拡大係数を表す。",
+        "適用条件の下で応力拡大係数が臨界値に達する基準。"
+      ],
+      "sources": [
+        {
+          "title": "David Roylance — Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf"
+        }
+      ]
+    },
+    "reason": "無条件のき裂進展開始という旧表現を、小規模降伏・平面ひずみの臨界条件へ限定。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "KⅠの荷重・幾何依存、臨界値KⅠCでの急速な進展、塑性域と平面ひずみ条件の必要性を照合。Gとの換算式や表の数値は設問に用いない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000239",
+    "domain": "工学",
+    "subdomain": "構造・材料力学",
+    "content": {
+      "question": "断面とヤング率Eが一定の、真っすぐな細長い柱を両端ピンで支持し、中心軸に圧縮荷重を加える。弾性Euler座屈を仮定して長さLだけを2倍にすると、最小座屈荷重はどうなるか。",
+      "choices": [
+        "1/4になる",
+        "1/2になる",
+        "2倍になる",
+        "4倍になる"
+      ],
+      "correctIndex": 0,
+      "explanation": "両端ピン柱の最小Euler座屈荷重はπ²EI/L²。Eと曲げ方向のIが同じなら、長さを2倍にすると分母が4倍になり、荷重は1/4になる。短柱の塑性降伏や偏心荷重とは条件が違う。",
+      "distractorRationales": [
+        "長さの二乗に反比例する式に対応する。",
+        "長さへの一乗の反比例と混同している。",
+        "長いほど荷重が増すという方向が逆。",
+        "長さの二乗に比例すると取り違えている。"
+      ],
+      "sources": [
+        {
+          "title": "MIT Unified Engineering — Materials and Structures handout",
+          "url": "https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/1f1b4e82bae2ff8ce609bc96fe20eedb_sprh04.pdf"
+        }
+      ]
+    },
+    "reason": "旧正解がL²に比例となっていた誤りを訂正し、柱と荷重の適用条件を明示。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Elastic buckling of columnsの完全な両端ピン柱のPE＝π²EI/L²、境界条件とモードの説明を確認。独自に長さの比を導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・原著者の力学教材の取得した該当本文を照合。設問・選択肢・説明は独自作成し、資料の演習や図表を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
