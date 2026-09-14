@@ -6,9 +6,11 @@ import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { nextKind } from "@/src/lib/science/definition";
 import { RequestError, scienceApi } from "@/src/lib/science/client";
 import type { Content, ExamState, PublicAttempt } from "@/src/lib/science/types";
+import { ResultVersionHistory } from "./ResultVersionHistory";
+import type { RevisionUpdate } from "@/src/lib/science/corrections";
 import { ResultSummary } from "./ResultSummary";
 
-type Review = { attempt: PublicAttempt; rows: { ordinal: number; revisionId: string; domain: string; content: Content; selectedIndex: number; correct: boolean }[] };
+type Review = { attempt: PublicAttempt; rows: { ordinal: number; revisionId: string; domain: string; content: Content; selectedIndex: number; correct: boolean; creditName?:string; update?:RevisionUpdate|null }[] };
 
 export function ResultClient({ attemptId }: { attemptId: string }) {
   const [state,setState] = useState<ExamState | null>(null);
@@ -58,6 +60,7 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
   const next=nextKind(state.group,result.definition.kind);
   return <main className="page-container max-w-4xl py-8">
     <ResultSummary result={result}/>
+    {!!result.corrections?.count&&<ResultVersionHistory attemptId={attemptId}/>}
     {result.definition.kind==="weekly"&&!state.attempt.competitive&&<p className="mt-3 rounded-xl bg-amber-50 p-4 text-sm leading-7">参考参加の記録です。締切後の完了、再挑戦、作問・事前閲覧がある記録は競争順位へ加えません。</p>}
     <AppCard className="mt-6"><h2 className="text-2xl font-black">この結果を、科学好きな人へ</h2><p className="mt-3 leading-7">ニックネームとこの受験結果だけを公開します。メールアドレスや個別の回答、問題の正解は公開しません。あとで公開を取り消せます。</p>
       <label className="mt-4 block text-sm font-bold">公開するニックネーム<input value={nickname} onChange={(e)=>setNickname(e.target.value)} maxLength={30} className="mt-2 block min-h-12 w-full rounded-xl border p-3"/></label>
@@ -71,7 +74,9 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
       {!state.signedIn&&<p className="mt-4 text-sm leading-7">受験の種類によって無料登録をご案内します。メールの確認コードで登録すると、履歴を別の端末でも見られます。</p>}
     </AppCard>
     <AppCard className="mt-6"><h2 className="text-2xl font-black">解説・出典を読む</h2><p className="mt-3">間違えた問題や気になる問題を、少しずつ復習できます。</p><AppButton variant="secondary" className="mt-4" onClick={async()=>{try{setReview(await scienceApi<Review>("review",{attemptId}));setError("");}catch(e){setError((e as Error).message);}}}>解説を開く</AppButton>
-      {review&&review.rows.slice(reviewPage*10,reviewPage*10+10).map((row)=><section key={row.ordinal} className="mt-6 border-t pt-5"><p className="text-sm font-bold">第{row.ordinal+1}問 · {row.domain} · {row.correct?"正解":"不正解"}</p><h3 className="mt-2 whitespace-pre-wrap font-bold leading-8">{row.content.question}</h3><p className="mt-3">あなたの回答：{row.content.choices[row.selectedIndex]}</p><p className="mt-2 font-bold">正解：{row.content.choices[row.content.correctIndex]}</p><p className="mt-3 whitespace-pre-wrap leading-8">{row.content.explanation}</p>
+      {review&&review.rows.slice(reviewPage*10,reviewPage*10+10).map((row)=><section key={row.ordinal} className="mt-6 border-t pt-5"><p className="text-sm font-bold">第{row.ordinal+1}問 · {row.domain} · {row.update?.excluded?"採点対象外":row.correct?"正解":"不正解"}</p>{row.update&&<p className="mt-3 rounded-xl bg-amber-50 p-4 text-sm whitespace-pre-wrap">訂正：{row.update.reason}<br/>以下は受験当時の記録です。現在の問題と解説は下に表示します。</p>}<h3 className="mt-2 whitespace-pre-wrap font-bold leading-8">{row.content.question}</h3><p className="mt-3">あなたの回答：{row.content.choices[row.selectedIndex]}</p><p className="mt-2 font-bold">{row.update?"受験時の正解キー":"正解"}：{row.content.choices[row.content.correctIndex]}</p><p className="mt-3 whitespace-pre-wrap leading-8">{row.content.explanation}</p>
+        {row.creditName&&<p className="mt-3 text-xs">作問：{row.creditName}</p>}
+        {row.update&&<div className="mt-5 rounded-xl border p-4"><h4 className="font-bold">訂正後の問題・解説</h4><p className="mt-3 whitespace-pre-wrap leading-8">{row.update.content.question}</p><ol className="mt-3 list-decimal pl-6">{row.update.content.choices.map((c,i)=><li key={i}>{c}{i===row.update!.content.correctIndex&&"（正解）"}</li>)}</ol><p className="mt-3 whitespace-pre-wrap leading-8">{row.update.content.explanation}</p>{row.update.content.sources.map((s,i)=><p key={i} className="mt-2 text-sm">{s.url&&/^https?:\/\//.test(s.url)?<a href={s.url} rel="noreferrer" target="_blank" className="underline">{s.title}</a>:s.title}</p>)}</div>}
         <ul className="mt-3 list-inside list-disc text-sm">{row.content.sources.map((s,i)=><li key={i}>{s.url&&/^https?:\/\//.test(s.url)?<a href={s.url} target="_blank" rel="noreferrer" className="underline">{s.title}</a>:s.title}</li>)}</ul>
         <div className="mt-3 flex flex-wrap gap-2"><AppButton variant="ghost" onClick={async()=>{try{await scienceApi("bookmark",{attemptId,revisionId:row.revisionId,enabled:true});setNote("復習用に保存しました。");}catch(e){const issue=e as RequestError;setError(issue.code==="registration_required"?"ブックマークは無料登録後に利用できます。":issue.message);}}}>復習用に保存</AppButton><AppButton variant="ghost" onClick={()=>setReportOrdinal(row.ordinal)}>問題の改善を提案</AppButton></div>
         {reportOrdinal===row.ordinal&&<form className="mt-4 grid gap-3 rounded-xl border p-4" onSubmit={async(e)=>{e.preventDefault();const form=new FormData(e.currentTarget);try{await scienceApi("feedback",{attemptId,ordinal:row.ordinal,category:form.get("category"),body:form.get("body"),evidence:form.get("evidence")});setNote("改善提案を保存しました。ありがとうございます。");setReportOrdinal(null);}catch(issue){setError((issue as Error).message);}}}><label>気づいたこと<select name="category" className="mt-2 block w-full rounded border p-3">{[["answer","正解が違う"],["ambiguous","複数の答えに解釈できる"],["explanation","解説について"],["source","出典について"],["rights","権利について"],["typo","誤字・表記"],["good","良い問題だった"]].map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label><label>具体的な内容<textarea name="body" maxLength={2000} className="mt-2 block min-h-24 w-full rounded border p-3"/></label><label>根拠・出典（任意）<textarea name="evidence" maxLength={2000} className="mt-2 block w-full rounded border p-3"/></label><AppButton type="submit">提案を送信する</AppButton></form>}

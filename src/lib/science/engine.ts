@@ -1,7 +1,8 @@
 import { randomInt } from "node:crypto";
+import { correctionState, correctedResult, refreshCorrectedAttempt } from "./corrections";
 import type { ScienceDomain } from "@/src/lib/data/taxonomy";
 import { definition, periodBounds, requiresAccount, type ExamKind } from "./definition";
-import { MODEL_VERSION, scoreResponses, type Response } from "./model";
+import { MODEL_VERSION, type Response } from "./model";
 import { hasCapacity, selectCandidate, type Candidate } from "./selection";
 import { checked, rateLimit, releaseConfig, ScienceError, type Context } from "./server";
 import type { Answer, Attempt, AttemptResult, ExamState, Issued, Item, PublicAttempt, PublicQuestion } from "./types";
@@ -15,7 +16,7 @@ export async function ownedAttempt(ctx: Context, id: string) {
   if (result.error) checked(result);
   const a = result.data as Attempt | null;
   if (!a || (a.user_id ? a.user_id !== ctx.userId : a.visitor_id !== ctx.visitor.id)) throw new ScienceError("受験が見つかりません。開始した端末・アカウントを確認してください。", 404, "not_found");
-  return a;
+  return refreshCorrectedAttempt(ctx.db, a);
 }
 
 export async function attemptRecords(ctx: Context, id: string) {
@@ -25,12 +26,13 @@ export async function attemptRecords(ctx: Context, id: string) {
   ]);
   const issued = checked(issuedResponse) as Issued[];
   const answers = checked(answerResponse) as Answer[];
+  const corrections = await correctionState(ctx.db, issued.map(q => q.revision_id));
   const responses: Response[] = answers.map((answer) => {
     const question = issued.find((q) => q.ordinal === answer.ordinal);
     if (!question) throw new ScienceError("保存記録を確認する必要があります。", 503, "inconsistent_record");
-    return { ...question.snapshot, correct: answer.is_correct, eligible: question.eligible, answeredAt: answer.answered_at };
+    return { ...question.snapshot, correct: answer.is_correct, eligible: question.eligible && !corrections.updates.get(question.revision_id)?.excluded, answeredAt: answer.answered_at };
   });
-  return { issued, answers, responses };
+  return { issued, answers, responses, corrections };
 }
 
 async function unseenFamilies(ctx: Context) {
@@ -60,7 +62,12 @@ export function publicAttempt(a: Attempt): PublicAttempt {
   return { id: a.id, definition: a.definition, ordinal: a.ordinal, state: a.state, competitive: a.competitive, completed_at: a.completed_at, result: a.result };
 }
 function publicQuestion(q: Issued): PublicQuestion {
-  return { ordinal: q.ordinal, token: q.token, domain: q.snapshot.domain, subdomain: q.snapshot.subdomain, question: q.snapshot.content.question, choices: q.choice_order.map((i) => q.snapshot.content.choices[i]) };
+  return { ordinal: q.ordinal, token: q.token, domain: q.snapshot.domain, subdomain: q.snapshot.subdomain, question: q.snapshot.content.question, choices: q.choice_order.map((i) => q.snapshot.content.choices[i]),creditName:q.snapshot.creditName,aiAssisted:q.snapshot.aiAssisted };
+}
+async function displayQuestion(ctx: Context, q: Issued): Promise<PublicQuestion> {
+  const corrections = await correctionState(ctx.db, [q.revision_id]);
+  if (corrections.updates.get(q.revision_id)?.excluded) return { ordinal:q.ordinal, token:q.token, domain:q.snapshot.domain, subdomain:q.snapshot.subdomain, question:"この問題は運営が取り下げました。採点には含めません。", choices:[], withdrawn:true };
+  return publicQuestion(q);
 }
 function choiceOrder() {
   const values = [0, 1, 2, 3];
@@ -91,7 +98,7 @@ export async function examState(ctx: Context, id: string): Promise<ExamState> {
     issued = checked(await ctx.db.rpc("science_issue", { p_attempt: a.id, p_visitor: ctx.visitor.id, p_user: ctx.userId, p_ordinal: a.ordinal, p_revision: revisionId, p_order: choiceOrder(), p_predicted: predicted, p_probability: probability, p_reason: reason, p_candidates: candidateCount })) as Issued;
     a = await ownedAttempt(ctx, id);
   }
-  return { attempt: publicAttempt(a), question: publicQuestion(issued), group: ctx.visitor.route_group, signedIn: !!ctx.userId };
+  return { attempt: publicAttempt(a), question: await displayQuestion(ctx, issued), group: ctx.visitor.route_group, signedIn: !!ctx.userId };
 }
 
 export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDomain) {
@@ -133,8 +140,7 @@ export async function answerExam(ctx: Context, input: { attemptId: string; ordin
   const previous = records.answers.find((r) => r.operation_id === input.operationId);
   if (!previous && a.ordinal + 1 === a.total && a.ordinal === input.ordinal) {
     const correct = issued.choice_order[input.selectedIndex] === issued.snapshot.content.correctIndex;
-    const responses = [...records.responses, { ...issued.snapshot, correct, eligible: issued.eligible }];
-    result = { ...scoreResponses(responses), answerCount: a.total, correctCount: records.answers.filter((r) => r.is_correct).length + Number(correct), definition: a.definition };
+    result = correctedResult(a, records.issued, [...records.answers, { attempt_id:a.id, ordinal:input.ordinal, operation_id:input.operationId, selected_index:input.selectedIndex, is_correct:correct, answered_at:new Date().toISOString() }], records.corrections);
   }
   const committed = checked(await ctx.db.rpc("science_commit_answer", { p_attempt: a.id, p_visitor: ctx.visitor.id, p_user: ctx.userId, p_ordinal: input.ordinal, p_token: input.token, p_operation: input.operationId, p_selected: input.selectedIndex, p_result: result })) as Attempt;
   // Answer commitment is reported independently of issuing the next question, so a later outage
@@ -146,9 +152,9 @@ export async function answerExam(ctx: Context, input: { attemptId: string; ordin
 export async function reviewAttempt(ctx: Context, id: string) {
   const a = await ownedAttempt(ctx, id);
   if (a.state !== "completed" && a.kind !== "lab") throw new ScienceError("解説は受験完了後に確認できます。", 403, "review_locked");
-  const { issued, answers } = await attemptRecords(ctx, id);
+  const { issued, answers, corrections } = await attemptRecords(ctx, id);
   return { attempt: publicAttempt(a), rows: answers.map((answer) => {
     const q = issued.find((r) => r.ordinal === answer.ordinal)!;
-    return { ordinal: answer.ordinal, revisionId: q.revision_id, domain: q.snapshot.domain, content: q.snapshot.content, selectedIndex: q.choice_order[answer.selected_index], correct: answer.is_correct };
+    return { ordinal: answer.ordinal, revisionId: q.revision_id, domain: q.snapshot.domain, content: q.snapshot.content, selectedIndex: q.choice_order[answer.selected_index], correct: answer.is_correct, creditName:q.snapshot.creditName, update:corrections.updates.get(q.revision_id)??null };
   }) };
 }

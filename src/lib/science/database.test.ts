@@ -21,7 +21,7 @@ beforeAll(async () => {
     create schema auth;
     create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,raw_user_meta_data jsonb default '{}');
     create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;`);
-  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql"]) {
+  for (const name of ["0001_initial_schema.sql", "0002_service_role_grants.sql", "0003_authenticated_grants_and_marketing_rls.sql", "0004_exam_modes_and_score_kinds.sql", "0005_subdomain_exam.sql", "0006_science_overhaul.sql", "0007_legacy_security_and_identity.sql", "0008_science_account_operations.sql", "0009_science_results_and_badges.sql", "0010_science_rankings.sql", "0011_science_community.sql", "0012_science_admin_metrics.sql", "0013_science_review_collection.sql", "0014_science_release_operations.sql", "0015_science_experiment_analysis.sql", "0016_science_calibration_candidates.sql", "0017_science_corrections.sql"]) {
     // PGlite uses the built-in gen_random_uuid; the pgcrypto extension is deployment-specific.
     await db.exec(readFileSync(resolve("supabase/migrations", name), "utf8").replace("create extension if not exists pgcrypto;", ""));
   }
@@ -173,5 +173,31 @@ describe.sequential("atomic issuance and answers", () => {
     expect((await db.query<{n:number}>("select count(*)::int n from science_release_items where release_id=$1 and anchor and b<>0",[next])).rows[0].n).toBe(0);
     expect((await db.query<{state:string}>("select state from science_releases where id=$1",[parent])).rows[0].state).toBe("retired");
     expect((await db.query<{state:string}>("select state from science_calibration_candidates where id=$1",[candidate])).rows[0].state).toBe("applied");
+  });
+  it("preserves original answers and result versions while withdrawing a defective item for everyone",async()=>{
+    const original={question:"A correction fixture question?",choices:["One","Two","Three","Four"],correctIndex:1,explanation:"The original explanation."};
+    const item=(await db.query<{id:string}>("insert into science_items(family_id,domain,subdomain,content,status,rights_checked,quality_passed) values('correction-fixture','数学','数と代数',$1,'published',true,true) returning id",[original])).rows[0].id;
+    const a=(await db.query<{id:string}>("insert into science_attempts(visitor_id,user_id,definition,model_version,kind,total,state,ordinal,completed_at,result) values($1,$2,'{}','science-3pl-reference-v1','full',50,'completed',50,now(),'{\"total\":700}') returning id",[visitor,uid])).rows[0].id;
+    await db.query("insert into science_issued(attempt_id,ordinal,revision_id,family_id,choice_order,snapshot,predicted,selection_probability,selection_reason,candidate_count,eligible) values($1,0,$2,'correction-fixture','[0,1,2,3]',$3,.6,1,'fixture',1,true)",[a,item,{content:original,domain:'数学',subdomain:'数と代数',a:1,b:0,c:.25}]);
+    await db.query("insert into science_answers(attempt_id,ordinal,operation_id,selected_index,is_correct) values($1,0,gen_random_uuid(),1,true)",[a]);
+    const correction={...original,correctIndex:2,explanation:"Corrected explanation with a checked source."};
+    await expect(db.query("select science_propose_correction($1,$2,$3,'explanation','The correct answer was wrong')",[item,uid,correction])).rejects.toThrow("scoring_change_requires_exclusion");
+    const proposal=(await db.query<{id:string}>("select science_propose_correction($1,$2,$3,'exclude','The correct answer was wrong') id",[item,uid,correction])).rows[0].id;
+    const checks={rights:true,source:true,uniqueAnswer:true,explanation:true};
+    await expect(db.query("select science_approve_correction($1,$2,$3)",[proposal,uid,checks])).rejects.toThrow("independent_review_required");
+    await expect(db.query("select science_approve_correction($1,$2,'{}')",[proposal,other])).rejects.toThrow("review_required");
+    await db.query("select science_approve_correction($1,$2,$3)",[proposal,other,checks]);
+    expect((await db.query<{eligible:boolean}>("select eligible from science_responses where attempt_id=$1",[a])).rows[0].eligible).toBe(false);
+    expect((await db.query<{eligible:boolean}>("select eligible from science_issued where attempt_id=$1",[a])).rows[0].eligible).toBe(true);
+    expect((await db.query<{content:unknown}>("select snapshot->'content' content from science_issued where attempt_id=$1",[a])).rows[0].content).toEqual(original);
+    expect((await db.query<{needs_recalculation:boolean}>("select needs_recalculation from science_attempts where id=$1",[a])).rows[0].needs_recalculation).toBe(true);
+    const next={total:680,originalAnswerCount:50,answerCount:49,correctionEpoch:1,version:'science-3pl-reference-v1'};
+    expect((await db.query<{ok:boolean}>("select science_store_corrected_result($1,$2,1,0) ok",[a,next])).rows[0].ok).toBe(false);
+    expect((await db.query<{ok:boolean}>("select science_store_corrected_result($1,$2,1,1) ok",[a,next])).rows[0].ok).toBe(true);
+    expect((await db.query<{ok:boolean}>("select science_store_corrected_result($1,$2,1,1) ok",[a,next])).rows[0].ok).toBe(false);
+    const history=(await db.query<{score:number}>("select (result->>'total')::int score from science_result_revisions where attempt_id=$1 order by revision",[a])).rows;
+    expect(history.map(h=>h.score)).toEqual([700,680]);
+    expect((await db.query<{ok:boolean}>("select science_store_current($1,'{\"version\":\"current\"}',now(),0) ok",[uid])).rows[0].ok).toBe(false);
+    expect((await db.query<{allowed:boolean}>("select has_table_privilege('authenticated','science_result_revisions','SELECT') allowed")).rows[0].allowed).toBe(false);
   });
 });

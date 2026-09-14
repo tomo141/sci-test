@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { checked, service } from "./server";
-import type { AttemptResult } from "./types";
+import { refreshCorrectedAttempt } from "./corrections";
+import type { Attempt, AttemptResult } from "./types";
 import type { ScienceProfile } from "./account";
 
 export type SharedResult = { id: string; nickname: string; result: AttemptResult; completedAt: string; competitive: boolean };
@@ -10,10 +11,11 @@ export async function getSharedResult(id: string): Promise<SharedResult | null> 
   const link = await db.from("science_shares").select("id,nickname,attempt_id").eq("id", id).eq("enabled", true).maybeSingle();
   if (link.error) checked(link);
   if (!link.data) return null;
-  const attempt = await db.from("science_attempts").select("result,completed_at,competitive").eq("id", link.data.attempt_id).eq("state", "completed").maybeSingle();
+  const attempt = await db.from("science_attempts").select("*").eq("id", link.data.attempt_id).eq("state", "completed").maybeSingle();
   if (attempt.error) checked(attempt);
   if (!attempt.data?.result) return null;
-  return { id: link.data.id, nickname: link.data.nickname, result: attempt.data.result as AttemptResult, completedAt: attempt.data.completed_at, competitive: attempt.data.competitive };
+  const current = await refreshCorrectedAttempt(db, attempt.data as Attempt);
+  return { id: link.data.id, nickname: link.data.nickname, result: current.result!, completedAt: current.completed_at!, competitive: current.competitive };
 }
 
 export async function getPublicProfile(id: string) {

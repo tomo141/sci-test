@@ -9,7 +9,7 @@ import type { CommunityData, Draft } from "@/src/lib/science/community";
 
 const states:Record<string,string>={draft:"下書き",submitted:"確認待ち",changes_requested:"修正のお願い",lab:"ラボで出題中",adopted:"正式問題に採用",rejected:"見送り"};
 const inputClass="mt-2 block min-h-12 w-full rounded-xl border border-[var(--color-border-strong)] bg-white p-3 font-normal";
-function emptyDraft():Draft{return {id:crypto.randomUUID(),revision:0,domain:"数学",subdomain:"数と代数",content:{question:"",choices:["","","",""],correctIndex:0,explanation:"",distractorRationales:["","","",""],sources:[{title:"",url:""}]},state:"draft",review_note:null,revision_id:null,updated_at:new Date().toISOString()};}
+function emptyDraft():Draft{return {id:crypto.randomUUID(),revision:0,domain:"数学",subdomain:"数と代数",content:{question:"",choices:["","","",""],correctIndex:0,explanation:"",distractorRationales:["","","",""],sources:[{title:"",url:""}]},state:"draft",review_note:null,revision_id:null,updated_at:new Date().toISOString(),author_credit:"",ai_assisted:false};}
 
 export function LabClient(){
   const [data,setData]=useState<CommunityData|null>(null),[draft,setDraft]=useState<Draft|null>(null);
@@ -23,7 +23,7 @@ export function LabClient(){
   async function save(submit=false){
     if(!draft)return;setBusy(true);setError("");setNote("");
     try{
-      const saved=await scienceApi<{id:string;revision:number}>("save",{id:draft.id,revision:draft.revision,domain:draft.domain,subdomain:draft.subdomain,content:draft.content},"science-community");
+      const saved=await scienceApi<{id:string;revision:number}>("save",{id:draft.id,revision:draft.revision,domain:draft.domain,subdomain:draft.subdomain,content:draft.content,creditName:draft.author_credit,aiAssisted:draft.ai_assisted},"science-community");
       setDraft({...draft,revision:saved.revision});
       if(submit){await scienceApi("submit",{id:saved.id,revision:saved.revision,licenseVersion:data?.licenseVersion,rights,adultOrGuardianConsent:guardian},"science-community");setDraft(null);setNote("投稿しました。運営の確認後にラボへ登場します。");}
       else setNote("下書きを保存しました。");
@@ -43,6 +43,7 @@ export function LabClient(){
     {draft&&<AppCard className="mt-8"><div className="flex items-center justify-between gap-4"><h2 className="text-2xl font-black">{states[draft.state]} · あなたの科学の問い</h2><button onClick={()=>setDraft(null)} className="shrink-0 underline">閉じる</button></div>
       {draft.review_note&&<p className="mt-4 rounded-xl bg-amber-50 p-4 whitespace-pre-wrap">運営から：{draft.review_note}</p>}
       <fieldset disabled={!editable||busy} className="mt-6 grid gap-5">
+        <label className="font-bold">表示する作者名（空欄は匿名）<input value={draft.author_credit} maxLength={30} className={inputClass} onChange={e=>setDraft({...draft,author_credit:e.target.value})}/></label><label className="flex gap-3"><input type="checkbox" checked={draft.ai_assisted} onChange={e=>setDraft({...draft,ai_assisted:e.target.checked})}/>作問にAIの補助を使用しました</label>
         <div className="grid gap-5 sm:grid-cols-2"><label className="font-bold">大分野<select value={draft.domain} className={inputClass} onChange={e=>{const domain=e.target.value as ScienceDomain;setDraft({...draft,domain,subdomain:subdomainsByDomain[domain][0]});}}>{domains.map(d=><option key={d}>{d}</option>)}</select></label><label className="font-bold">小分野<select value={draft.subdomain} className={inputClass} onChange={e=>setDraft({...draft,subdomain:e.target.value})}>{subdomainsByDomain[draft.domain].map(d=><option key={d}>{d}</option>)}</select></label></div>
         <label className="font-bold">問題文<textarea value={draft.content.question} maxLength={2000} rows={4} className={inputClass} onChange={e=>changeContent({question:e.target.value})}/></label>
         <div><p className="font-bold">4つの選択肢と、それぞれの根拠</p><p className="mt-1 text-sm leading-7">正解はひとつ。誤った選択肢がなぜ違うのかも書くと、良い問題になります。</p><div className="mt-3 grid gap-4 sm:grid-cols-2">{draft.content.choices.map((choice,i)=><div key={i} className="rounded-xl border p-4"><label className="flex items-center gap-2 text-sm font-bold"><input type="radio" name="correct" checked={draft.content.correctIndex===i} onChange={()=>changeContent({correctIndex:i})}/>選択肢{i+1}を正解にする</label><label className="mt-3 block text-sm">選択肢{i+1}<input value={choice} maxLength={500} className={inputClass} onChange={e=>changeContent({choices:draft.content.choices.map((c,j)=>j===i?e.target.value:c)})}/></label><label className="mt-3 block text-sm">正しい・誤っている根拠<textarea rows={2} value={draft.content.distractorRationales[i]} maxLength={1000} className={inputClass} onChange={e=>changeContent({distractorRationales:draft.content.distractorRationales.map((c,j)=>j===i?e.target.value:c)})}/></label></div>)}</div></div>

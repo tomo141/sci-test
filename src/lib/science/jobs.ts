@@ -4,7 +4,8 @@ import { checked,service } from "./server";
 import { readAll } from "./queries";
 import { periodBounds } from "./definition";
 import { currentEstimate } from "./current";
-import type { Item } from "./types";
+import type { Item,Attempt } from "./types";
+import { refreshCorrectedAttempt } from "./corrections";
 import { runCalibration } from "./calibration-job";
 
 async function weeklySet(db:ReturnType<typeof service>,date=new Date()){
@@ -31,8 +32,11 @@ export async function runDailyJobs(){
   const jobId=lease.data as string;
   const summary:Record<string,unknown>={observedAt:new Date().toISOString(),processed:0,mail:"not_processed_by_this_job"};
   try{
+    const corrections=checked(await db.from("science_attempts").select("*").eq("needs_recalculation",true).order("completed_at").limit(20)) as Attempt[];
+    for(const attempt of corrections)await refreshCorrectedAttempt(db,attempt);
+    summary.correctedResults=corrections.length;
     summary.weekly={current:await weeklySet(db),next:await weeklySet(db,new Date(Date.now()+7*86400000))};
-    const queue=checked(await db.from("science_outbox").select("id,user_id,kind,payload,attempts").eq("state","pending").in("kind",["attempt_completed","submission_status"]).lte("available_at",new Date().toISOString()).order("available_at").limit(20));
+    const queue=checked(await db.from("science_outbox").select("id,user_id,kind,payload,attempts").eq("state","pending").in("kind",["attempt_completed","submission_status","result_correction"]).lte("available_at",new Date().toISOString()).order("available_at").limit(20));
     const users=new Set<string>();
     for(const message of queue){
       if(message.user_id){
@@ -40,7 +44,7 @@ export async function runDailyJobs(){
           await currentEstimate(db,{userId:message.user_id});
           const badges=await db.rpc("science_award_badges",{p_user:message.user_id});if(badges.error)checked(badges);users.add(message.user_id);
         }
-        if(message.kind==="submission_status")checked(await db.from("science_notifications").upsert({user_id:message.user_id,source_id:message.id,kind:message.kind,payload:message.payload},{onConflict:"source_id",ignoreDuplicates:true}).select("id"));
+        if(message.kind!=="attempt_completed")checked(await db.from("science_notifications").upsert({user_id:message.user_id,source_id:message.id,kind:message.kind,payload:message.payload},{onConflict:"source_id",ignoreDuplicates:true}).select("id"));
       }
       checked(await db.from("science_outbox").update({state:"accepted",attempts:message.attempts+1,error_code:null,processed_at:new Date().toISOString()}).eq("id",message.id).eq("state","pending").select("id"));
       summary.processed=Number(summary.processed)+1;

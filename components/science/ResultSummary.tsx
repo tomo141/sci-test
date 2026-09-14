@@ -8,6 +8,7 @@ export function ResultSummary({ result, nickname }: { result: AttemptResult; nic
   return <AppCard>
     <p className="text-sm font-bold text-[var(--color-primary-700)]">{nickname ? `${nickname}さんの` : "今回の"}{result.definition.label}</p>
     <h1 className="mt-3 text-3xl font-black">{result.definition.formal ? "あなたの科学マップ" : `${result.correctCount} / ${result.answerCount}問 正解`}</h1>
+    {!!result.corrections?.count && <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm leading-7">問題の訂正を反映した成績です。{result.corrections.excludedCount ? `${result.originalAnswerCount}問中${result.corrections.excludedCount}問を全員の採点から除外しています。` : "解説を更新しています。"}元の受験記録は保存しています。</p>}
     {result.total !== null && <p className="mt-6"><strong className="text-5xl font-black tabular-nums">{result.total}</strong><span className="ml-2">/ 1,000点</span></p>}
     {result.definition.formal ? <>
       <p className="mt-3 text-sm text-[var(--color-muted)]">参考スコア · {result.answerCount}問完了{result.total !== null && ` · 総合の参考幅 ${result.low}–${result.high}点`}</p>

@@ -1,6 +1,10 @@
 begin;
 alter table science_submission_drafts add column revision int not null default 0;
 alter table science_submission_drafts add column parent_revision_id uuid references science_items(id);
+alter table science_submission_drafts add column author_credit text not null default '' check(length(author_credit)<=30);
+alter table science_submission_drafts add column ai_assisted boolean not null default false;
+alter table science_items add column credit_name text not null default '' check(length(credit_name)<=30);
+alter table science_items add column ai_assisted boolean not null default false;
 create table science_license_acceptances (
   id uuid primary key default gen_random_uuid(), user_id uuid not null references auth.users(id),
   draft_id uuid not null references science_submission_drafts(id), license_version text not null,
@@ -29,8 +33,8 @@ begin
   if not coalesce((p_representations->>'rights')::boolean,false) or not coalesce((p_representations->>'adultOrGuardianConsent')::boolean,false) then raise exception 'representations_required'; end if;
   perform pg_advisory_xact_lock(hashtextextended('family:'||p_family,0));
   select coalesce(max(version),0)+1 into next_version from science_items where family_id=p_family;
-  insert into science_items(family_id,version,author_id,domain,subdomain,content,status,license_version)
-    values(p_family,next_version,p_user,d.domain,d.subdomain,d.content,'submitted',p_license) returning id into q;
+  insert into science_items(family_id,version,author_id,domain,subdomain,content,status,license_version,credit_name,ai_assisted)
+    values(p_family,next_version,p_user,d.domain,d.subdomain,d.content,'submitted',p_license,d.author_credit,d.ai_assisted) returning id into q;
   update science_submission_drafts set state='submitted',revision=revision+1,revision_id=q,license_version=p_license,license_accepted_at=now(),updated_at=now() where id=d.id;
   insert into science_license_acceptances(user_id,draft_id,revision_id,license_version,representations) values(p_user,d.id,q,p_license,p_representations);
   insert into science_exposures(visitor_id,family_id,user_id,reason)

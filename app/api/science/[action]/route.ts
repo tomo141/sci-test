@@ -5,6 +5,7 @@ import { answerExam, examState, ownedAttempt, publicAttempt, reviewAttempt, star
 import { checked, context, endpoint, rateLimit, releaseConfig, requireUser, ScienceError } from "@/src/lib/science/server";
 import { accountData } from "@/src/lib/science/account";
 import { definition,requiresAccount } from "@/src/lib/science/definition";
+import { correctionState } from "@/src/lib/science/corrections";
 
 const id = z.string().uuid();
 const attemptInput = z.object({ attemptId: id }).strict();
@@ -12,7 +13,7 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ action: string }> }) {
   return endpoint(request, async () => {
-    const action = z.enum(["plan","start","state","result","answer","review","abandon","share","feedback","bookmark","event","account","profile","preferences","review_collection","mark_review"]).parse((await params).action);
+    const action = z.enum(["plan","start","state","result","answer","review","result_history","abandon","share","feedback","bookmark","event","account","profile","preferences","review_collection","mark_review"]).parse((await params).action);
     const raw = await request.text();
     if (raw.length > 32_768) throw new ScienceError("入力が長すぎます。", 413);
     const body = z.record(z.unknown()).parse(JSON.parse(raw));
@@ -20,7 +21,9 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     if(action==="review_collection"){
       const userId=requireUser(ctx),p=z.object({mode:z.enum(["mistakes","bookmarks"]),page:z.number().int().min(0).max(10000)}).strict().parse(body);
       await rateLimit(ctx,"review_collection",60);
-      return {rows:checked(await ctx.db.rpc("science_review_collection",{p_user:userId,p_mode:p.mode,p_page:p.page}))};
+      const rows=checked(await ctx.db.rpc("science_review_collection",{p_user:userId,p_mode:p.mode,p_page:p.page})) as {revision_id:string;content:unknown}[];
+      const changes=await correctionState(ctx.db,rows.map(r=>r.revision_id));
+      return {rows:rows.map(r=>({...r,content:changes.updates.get(r.revision_id)?.content??r.content,correction:changes.updates.get(r.revision_id)?.reason??null}))};
     }
     if(action==="mark_review"){
       const userId=requireUser(ctx),p=z.object({revisionId:id,remembered:z.boolean(),operationId:id}).strict().parse(body);
@@ -67,6 +70,10 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       return answerExam(ctx, z.object({ attemptId: id, ordinal: z.number().int().min(0).max(99), token: id, operationId: id, selectedIndex: z.number().int().min(0).max(3) }).strict().parse(body));
     }
     if (action === "review") return reviewAttempt(ctx, attemptInput.parse(body).attemptId);
+    if (action === "result_history") {
+      const a=await ownedAttempt(ctx,attemptInput.parse(body).attemptId);
+      return {rows:checked(await ctx.db.from("science_result_revisions").select("revision,result,created_at").eq("attempt_id",a.id).order("revision",{ascending:false}))};
+    }
     if (action === "abandon") {
       const a = await ownedAttempt(ctx, attemptInput.parse(body).attemptId);
       if (a.state !== "active") throw new ScienceError("この受験はすでに終了しています。", 409);

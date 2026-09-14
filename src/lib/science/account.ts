@@ -2,6 +2,7 @@ import { type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { scoreResponses } from "./model";
 import { checked, ScienceError, type Context } from "./server";
 import { publicAttempt } from "./engine";
+import { refreshCorrectedAttempt } from "./corrections";
 import { currentEstimate } from "./current";
 import type { Attempt, AttemptResult } from "./types";
 
@@ -19,9 +20,11 @@ export async function accountData(ctx: Context, page: number): Promise<AccountDa
   const scoped = <T extends {eq:(key:string,value:string)=>T}>(query:T) => ctx.userId ? query.eq("user_id",ctx.userId) : query.eq("visitor_id",ctx.visitor.id);
   const historyQuery=ctx.db.from("science_attempts").select("*",{count:"exact"});
   const historyPromise=scoped(historyQuery).order("started_at",{ascending:false}).order("id").range(page*20,page*20+19);
-  const bestPromise=ctx.db.from("science_personal_bests").select("id,kind,domain,total,result").eq("owner_key",ctx.userId?`user:${ctx.userId}`:`visitor:${ctx.visitor.id}`);
-  const [historyResponse,bestResponse,current]=await Promise.all([historyPromise,bestPromise,currentEstimate(ctx.db,ctx.userId?{userId:ctx.userId}:{visitorId:ctx.visitor.id})]);
-  const history=checked(historyResponse) as Attempt[];
+  const bestQuery=ctx.db.from("science_personal_bests").select("id,kind,domain,total,result").eq("owner_key",ctx.userId?`user:${ctx.userId}`:`visitor:${ctx.visitor.id}`);
+  const historyResponse=await historyPromise;
+  const history:Attempt[]=[];
+  for(const attempt of checked(historyResponse) as Attempt[])history.push(await refreshCorrectedAttempt(ctx.db,attempt));
+  const [bestResponse,current]=await Promise.all([bestQuery,currentEstimate(ctx.db,ctx.userId?{userId:ctx.userId}:{visitorId:ctx.visitor.id})]);
   if(historyResponse.count===null)throw new ScienceError("履歴件数を取得できませんでした。",503);
   let profile:ScienceProfile|null=null,preferences:Preferences={science:false,weekly:false,domain_opening:false};
   let badges:AccountData["badges"]=[],legacy:AccountData["legacy"]=[],legacyTotal=0;

@@ -72,7 +72,7 @@ create table public.science_attempts (
   state text not null default 'active' check(state in ('active','completed','abandoned')),
   ordinal int not null default 0 check(ordinal>=0 and ordinal<=total),
   competitive boolean not null default true, started_at timestamptz not null default now(), completed_at timestamptz,
-  result jsonb, result_revision int not null default 1,
+  result jsonb, result_revision int not null default 1, needs_recalculation boolean not null default false,
   check(state<>'completed' or (ordinal=total and result is not null and completed_at is not null))
 );
 create index science_attempts_owner on public.science_attempts(user_id,started_at desc);
@@ -223,8 +223,8 @@ begin
   if a.state<>'active' or a.ordinal<>p_ordinal then raise exception 'stale_attempt' using errcode='40001'; end if;
   if a.kind='weekly' and exists(select 1 from science_weekly_sets where id=a.week_id and now()>=ends_at) then update science_attempts set competitive=false where id=a.id; end if;
   select * into q from science_items where id=p_revision;
-  if not found or not q.rights_checked or q.status not in ('published','lab') or (q.expires_at is not null and q.expires_at<=now()) then raise exception 'item_unavailable'; end if;
-  if a.kind<>'lab' and (q.status<>'published' or not q.quality_passed) then raise exception 'item_unavailable'; end if;
+  if not found or not q.rights_checked or (q.status not in ('published','lab') and not (a.kind='weekly' and exists(select 1 from science_revision_updates where source_revision=q.id))) or (q.expires_at is not null and q.expires_at<=now()) then raise exception 'item_unavailable'; end if;
+  if a.kind not in ('lab','weekly') and (q.status<>'published' or not q.quality_passed) then raise exception 'item_unavailable'; end if;
   if a.kind='lab' and q.author_id is null then raise exception 'not_a_submission'; end if;
   if a.kind='weekly' then
     if not exists(select 1 from science_weekly_sets w where w.id=a.week_id and w.revision_ids[p_ordinal+1]=p_revision) then raise exception 'wrong_weekly_item'; end if;
@@ -239,7 +239,7 @@ begin
   eligible := a.kind in ('trial','full','domain') and not known;
   if a.kind='weekly' and known then update science_attempts set competitive=false where id=a.id; end if;
   insert into science_issued(attempt_id,ordinal,revision_id,family_id,choice_order,snapshot,predicted,selection_probability,selection_reason,candidate_count,eligible,exclusion_reason)
-  values(p_attempt,p_ordinal,q.id,q.family_id,p_order,jsonb_build_object('content',q.content,'domain',q.domain,'subdomain',q.subdomain,'a',coalesce(params.a,1),'b',coalesce(params.b,0),'c',coalesce(params.c,.25),'authorId',q.author_id),p_predicted,p_probability,p_reason,p_candidates,eligible,
+  values(p_attempt,p_ordinal,q.id,q.family_id,p_order,jsonb_build_object('content',q.content,'domain',q.domain,'subdomain',q.subdomain,'a',coalesce(params.a,1),'b',coalesce(params.b,0),'c',coalesce(params.c,.25),'authorId',q.author_id,'creditName',q.credit_name,'aiAssisted',q.ai_assisted),p_predicted,p_probability,p_reason,p_candidates,eligible,
     case when known then 'previously_seen_or_author' when not eligible then a.kind else null end) returning * into issued;
   insert into science_exposures(visitor_id,family_id,user_id,first_attempt_id,reason) values(p_visitor,q.family_id,p_user,p_attempt,a.kind) on conflict(visitor_id,family_id) do nothing;
   return issued;
@@ -249,6 +249,7 @@ create function public.science_commit_answer(p_attempt uuid,p_visitor uuid,p_use
 returns public.science_attempts language plpgsql set search_path=public as $$
 declare a science_attempts; issued science_issued; previous science_answers; correct boolean;
 begin
+  perform 1 from science_config where key='correction_epoch' for share;
   select * into a from science_attempts where id=p_attempt for update;
   if not found or not science_owns(p_attempt,p_visitor,p_user) then raise exception 'not_found' using errcode='P0002'; end if;
   select * into previous from science_answers where attempt_id=p_attempt and operation_id=p_operation;
@@ -262,7 +263,8 @@ begin
   select * into issued from science_issued where attempt_id=p_attempt and ordinal=p_ordinal and token=p_token;
   if not found then raise exception 'not_issued' using errcode='P0002'; end if;
   correct := (issued.choice_order->>p_selected)::int=(issued.snapshot->'content'->>'correctIndex')::int;
-  if p_ordinal+1=a.total and (p_result is null or (p_result->>'answerCount')::int<>a.total or p_result->>'version'<>a.model_version) then raise exception 'result_required'; end if;
+  if p_ordinal+1=a.total and (p_result is null or coalesce((p_result->>'originalAnswerCount')::int,(p_result->>'answerCount')::int)<>a.total or p_result->>'version'<>a.model_version) then raise exception 'result_required'; end if;
+  if p_ordinal+1=a.total and coalesce((p_result->>'correctionEpoch')::int,0)<>science_correction_epoch() then raise exception 'result_recalculation_required' using errcode='40001'; end if;
   insert into science_answers(attempt_id,ordinal,operation_id,selected_index,is_correct) values(p_attempt,p_ordinal,p_operation,p_selected,correct);
   update science_attempts set ordinal=p_ordinal+1,
     state=case when p_ordinal+1=total then 'completed' else 'active' end,

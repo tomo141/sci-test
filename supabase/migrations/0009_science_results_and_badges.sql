@@ -5,7 +5,7 @@ create view public.science_personal_bests with(security_invoker=true) as
       case when user_id is not null then 'user:'||user_id else 'visitor:'||visitor_id end as owner_key,
       row_number() over(partition by case when user_id is not null then 'user:'||user_id else 'visitor:'||visitor_id end,kind,coalesce(domain,''),total,model_version
         order by coalesce((result->>'total')::numeric,(result->'domains'->domain->>'score')::numeric) desc nulls last,completed_at,id) as best_order
-    from science_attempts where state='completed' and kind in ('trial','full','domain')
+    from science_attempts where state='completed' and not needs_recalculation and kind in ('trial','full','domain')
   ) ranked where best_order=1;
 revoke all on table public.science_personal_bests from public,anon,authenticated;
 grant select on table public.science_personal_bests to service_role;

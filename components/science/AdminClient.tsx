@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useCallback,useEffect,useState } from "react";
 import { AppButton } from "@/components/ui/AppButton";
+import { CorrectionEditor } from "./CorrectionEditor";
 import { ExperimentTable } from "./ExperimentTable";
 import { AppCard } from "@/components/ui/AppCard";
 import { scienceApi, type RequestError } from "@/src/lib/science/client";
@@ -30,6 +31,7 @@ function Feedback({report,reload}:{report:AdminData["feedback"][number];reload:(
     <p className="mt-3 text-xs leading-6">単なる勘違いや不採用だけでは信頼スコアを下げません。問題の保留は過去の回答・結果を書き換えません。</p>
     {error&&<p role="alert" className="mt-3 text-red-700">{error}</p>}
     <AppButton className="mt-4" disabled={busy||reason.trim().length<5} onClick={async()=>{setBusy(true);setError("");try{await scienceApi("feedback",{id:report.id,state,quality,hold,reason},"science-admin");await reload();}catch(e){setError((e as RequestError).message);}finally{setBusy(false);}}}>判断を記録</AppButton>
+    <CorrectionEditor revisionId={report.revision_id} original={report.science_items.content} reload={reload}/>
   </AppCard>;
 }
 export function AdminClient(){
@@ -42,7 +44,14 @@ export function AdminClient(){
       <ExperimentTable experiment={data.experiment}/>
       <h2 className="mt-10 text-2xl font-black">投稿の審査</h2><p className="mt-3 text-sm leading-7">古い順に最大50件。ここで答えを確認した問題は、あなたの新しい実力測定には出題されません。</p><div className="mt-5 grid gap-5">{data.submissions.map(d=><Submission key={d.id+":"+d.state} draft={d} reload={load}/>)}{!data.submissions.length&&<p>確認待ちの投稿はありません。</p>}</div>
       <h2 className="mt-10 text-2xl font-black">改善報告</h2><div className="mt-5 grid gap-5">{data.feedback.map(f=><Feedback key={f.id} report={f} reload={load}/>)}{!data.feedback.length&&<p>確認待ちの改善報告はありません。</p>}</div>
+      <h2 className="mt-10 text-2xl font-black">修正版の確認</h2><div className="mt-5 grid gap-5">{data.corrections.map(c=><CorrectionApproval key={c.id} correction={c} reload={load}/>)}{!data.corrections.length&&<p>確認待ちの修正版はありません。</p>}</div>
       <h2 className="mt-10 text-2xl font-black">自動処理の実行履歴</h2><AppButton className="mt-4" variant="secondary" onClick={async()=>{try{await scienceApi("run_jobs",{},"science-admin");await load();}catch(e){setError((e as RequestError).message);}}}>未処理分を実行・再試行</AppButton><div className="mt-5 grid gap-3">{data.jobs.map(j=><AppCard key={j.id}><p className="font-bold">{j.kind} · {j.state}</p><p className="mt-2 text-xs">開始 {j.started_at} / 完了 {j.finished_at??"未完了"}</p><pre className="mt-3 overflow-auto whitespace-pre-wrap text-xs">{JSON.stringify(j.summary,null,2)}</pre></AppCard>)}{!data.jobs.length&&<p>実行記録はまだありません。</p>}</div>
     </>}
   </main>;
+}
+function CorrectionApproval({correction:c,reload}:{correction:AdminData["corrections"][number];reload:()=>Promise<void>}){
+  const [checked,setChecked]=useState(false),[busy,setBusy]=useState(false),[error,setError]=useState("");
+  return <AppCard><h3 className="font-bold">{c.source.domain} · {c.mode==="exclude"?"全員の旧問題を採点から除外":"解説・出典の更新"}</h3><p className="mt-4 whitespace-pre-wrap">{c.reason}</p><details className="mt-4"><summary>修正前の問題</summary><Question content={c.source.content}/></details><h4 className="mt-5 font-bold">修正版</h4><Question content={c.replacement.content}/>
+    {c.canApprove?<><label className="mt-5 flex gap-3"><input type="checkbox" checked={checked} onChange={e=>setChecked(e.target.checked)}/><span>出典・権利、正解の一意性、解説と選択肢の根拠を独立して確認しました。</span></label><AppButton className="mt-4" disabled={!checked||busy} onClick={async()=>{setBusy(true);setError("");try{await scienceApi("approve_correction",{id:c.id,checks:{rights:true,source:true,uniqueAnswer:true,explanation:true}},"science-admin");await reload();}catch(e){setError((e as Error).message);}finally{setBusy(false);}}}>訂正を確定して、成績の再計算へ</AppButton></>:<p className="mt-5 text-sm">あなたが用意した修正版です。別の管理者による確認を待っています。</p>}{error&&<p role="alert" className="mt-4 text-red-700">{error}</p>}
+  </AppCard>;
 }
