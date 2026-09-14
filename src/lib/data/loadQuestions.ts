@@ -1,12 +1,15 @@
 import { unstable_cache } from "next/cache";
 import { mapDbQuestionRow, type DbQuestionRow } from "./mapDbQuestion";
-import { questions as staticPublishedQuestions, type Question } from "./questions";
+import type { Question } from "./questions";
 import { createServiceRoleClient } from "@/src/lib/supabase/server";
 
-async function loadPublishedQuestionsFromDb() {
+export async function loadPublishedQuestionsFromDb(): Promise<Question[]> {
   const supabase = createServiceRoleClient();
-  if (!supabase) return [];
+  if (!supabase) throw new Error("Question bank is not configured");
 
+  const questions: Question[] = [];
+  const pageSize = 500;
+  for (let offset = 0; ; offset += pageSize) {
   const { data, error } = await supabase
     .from("questions")
     .select(
@@ -46,18 +49,18 @@ async function loadPublishedQuestionsFromDb() {
     `
     )
     .eq("status", "published")
-    .order("id", { ascending: true });
+    .order("id", { ascending: true })
+    .range(offset, offset + pageSize - 1);
 
-  if (error || !data?.length) return [];
-  return data.map((row) => mapDbQuestionRow(row as DbQuestionRow));
+    if (error || !data) throw new Error("Question bank could not be read");
+    questions.push(...data.map((row) => mapDbQuestionRow(row as DbQuestionRow)));
+    if (data.length < pageSize) break;
+  }
+  return questions;
 }
 
 const loadPublishedQuestionsCached = unstable_cache(
-  async () => {
-    const fromDb = await loadPublishedQuestionsFromDb();
-    if (fromDb.length) return fromDb;
-    return staticPublishedQuestions;
-  },
+  loadPublishedQuestionsFromDb,
   ["published-questions"],
   { revalidate: 60 }
 );

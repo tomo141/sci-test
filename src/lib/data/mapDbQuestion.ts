@@ -66,7 +66,8 @@ const COGNITIVE_TYPES = new Set<CognitiveType>([
 function parseEvidenceMemo(raw: string | null | undefined): EvidenceMemo {
   if (!raw) return {};
   try {
-    return JSON.parse(raw) as EvidenceMemo;
+    const value: unknown = JSON.parse(raw);
+    return value && typeof value === "object" && !Array.isArray(value) ? value as EvidenceMemo : {};
   } catch {
     return { detailed_explanation: raw };
   }
@@ -119,15 +120,21 @@ export function mapDbQuestionRow(row: DbQuestionRow): Question {
     : row.question_statistics;
   const evidence = parseEvidenceMemo(source?.evidence_memo);
   const choices = [...(row.question_choices ?? [])].sort((a, b) => a.choice_index - b.choice_index);
+  if (choices.length !== 4 || choices.some((choice, index) => choice.choice_index !== index || !choice.choice_text?.trim()) || choices.filter((choice) => choice.is_correct).length !== 1) {
+    throw new Error(`Question ${row.id} must have four indexed choices and exactly one correct answer`);
+  }
   const correctIndex = choices.findIndex((choice) => choice.is_correct);
-  const difficulty = evidence.difficulty_continuous ?? row.difficulty_internal ?? row.difficulty_initial;
+  const difficulty = row.difficulty_internal ?? evidence.difficulty_continuous ?? row.difficulty_initial;
+  if (!Number.isFinite(difficulty) || !Number.isFinite(row.discrimination) || row.discrimination <= 0) {
+    throw new Error(`Question ${row.id} has invalid measurement parameters`);
+  }
 
   return {
     id: row.id,
     title: row.title,
     question: row.question_text,
     choices: choices.map((choice) => choice.choice_text),
-    correctIndex: correctIndex >= 0 ? correctIndex : 0,
+    correctIndex,
     shortExplanation: evidence.short_explanation ?? "",
     detailedExplanation: evidence.detailed_explanation ?? evidence.short_explanation ?? "",
     domain: row.domain as ScienceDomain,

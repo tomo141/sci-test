@@ -1,12 +1,12 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { getAppUrl } from "@/src/lib/env";
+import { safeAuthRedirect } from "@/src/lib/security/redirect";
 
 export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get("code");
-  const nextParam = requestUrl.searchParams.get("next") || "/mypage";
-  const next = nextParam.startsWith("/") ? nextParam : "/mypage";
+  const next = safeAuthRedirect(requestUrl.searchParams.get("next"), getAppUrl());
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
