@@ -1,0 +1,370 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000055",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "GPSの衛星位置と衛星側の時計補正が既知として、受信機の3次元位置を一時刻の擬似距離から求める。通常、少なくとも4衛星の観測を使う主な理由はどれか。",
+      "choices": [
+        "位置3成分と受信機の速さを、必ず4つの未知量として求めるから",
+        "位置3成分に加えて、衛星の時計と同期していない受信機の時計のずれも未知量だから",
+        "位置3成分とは別に、地球の半径を毎回推定しなければならないから",
+        "4番目の観測式は常に余分で、誤差を平均するためだけに使うから"
+      ],
+      "correctIndex": 1,
+      "explanation": "擬似距離には幾何学的距離だけでなく受信機時計のずれが含まれる。未知量x・y・z・時計のずれに対して観測式が必要となる。衛星が4つ見えれば配置や誤差を問わず高精度という意味ではない。",
+      "distractorRationales": [
+        "この擬似距離による位置推定では、追加の未知量は受信機時計のずれ。",
+        "受信機時計を含めた4未知量を推定する。",
+        "地球の半径を受信機が未知パラメーターとして推定するためではない。",
+        "時計のずれも未知なら、4番目は単なる余分な観測ではない。"
+      ],
+      "sources": [
+        {
+          "title": "ESA Navipedia — Code Based Positioning (SPS)",
+          "url": "https://gssc.esa.int/navipedia/index.php/Code_Based_Positioning_(SPS)"
+        }
+      ]
+    },
+    "reason": "人工衛星という名称のみの旧問を、擬似距離と時計のずれの役割へ改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭の少なくとも4衛星と、式右辺の4未知量x,y,z,δtを確認。補助条件なしの単一時刻のコード測位へ限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000057",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "通常のステップインデックス型ガラス光ファイバーで、コア内に光を導くためのコアとクラッドの屈折率の関係はどれか。",
+      "choices": [
+        "コアの屈折率をクラッドより低くする",
+        "両者の屈折率を完全に同じにする",
+        "コアの屈折率をクラッドより高くする",
+        "屈折率の関係は光の導波に関わらない"
+      ],
+      "correctIndex": 2,
+      "explanation": "コアの屈折率を周囲のクラッドより高くすることで、適切な角度の光をコア内に導く全反射を利用できる。全ての光が無条件・無損失に伝わるという意味ではない。",
+      "distractorRationales": [
+        "通常の全反射による導波の関係と逆。",
+        "屈折率差による閉じ込めを作れない。",
+        "コア側を高屈折率にする。",
+        "屈折率差は導波の基本的な条件。"
+      ],
+      "sources": [
+        {
+          "title": "Corning — Optical Fiber Glossary of Terms",
+          "url": "https://www.corning.com/optical-communications/worldwide/en/home/products/fiber/optical-fiber-resource-center/glossary-of-terms.html"
+        }
+      ]
+    },
+    "reason": "光という名称のみの旧問を、導波を可能にする材料構成へ改訂。特殊な別方式のファイバーへ一般化しない。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Total Internal Reflectionのコアとクラッドの屈折率差を照合。角度の基準が明記されない原文の大小関係は流用せず、設問では屈折率関係を問う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000131",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "帯域幅B＝2 MHzの帯域制限されたAWGN通信路を考える。受信信号電力と帯域内雑音電力の比S/Nが15であるとき、シャノンの通信容量C＝B log₂(1＋S/N)はいくらか。S/NはdB値ではなく電力比とする。",
+      "choices": [
+        "4 Mbit/s",
+        "約7.81 Mbit/s",
+        "30 Mbit/s",
+        "8 Mbit/s"
+      ],
+      "correctIndex": 3,
+      "explanation": "log₂(1＋15)＝log₂16＝4なので、C＝2×4＝8 Mbit/s。この容量は理想的な符号化を考える理論上の限界で、実機の通信速度を保証する値ではない。",
+      "distractorRationales": [
+        "log₂16を2と取り違えている。",
+        "log₂15として1を加えていない。",
+        "対数を使わず帯域幅にS/Nを掛けている。",
+        "log₂16＝4を2 MHzへ掛け、8 Mbit/sとなる。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 6.451 — Principles of Digital Communication II, Lecture Notes",
+          "url": "https://ocw.mit.edu/courses/6-451-principles-of-digital-communication-ii-spring-2005/bb895c1dee9ce0b39d6846e0aa984981_MIT6_451S05_FullLecNotes.pdf"
+        }
+      ]
+    },
+    "reason": "式の条件とSNRの定義がない旧問を改訂し、理論容量と実装速度を区別。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭と3章のAWGN通信路のC＝W log₂(1＋SNR)、容量未満で高い信頼性を達成できる定理の説明を照合。数値は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000143",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "横1600×縦1200画素の画像を、1画素につきR・G・Bを各8ビットで保存する。圧縮・ヘッダー・行の余白がない画素データだけの大きさは何バイトか。1バイト＝8ビットとする。",
+      "choices": [
+        "1,920,000バイト",
+        "5,760,000バイト",
+        "46,080,000バイト",
+        "7,680,000バイト"
+      ],
+      "correctIndex": 1,
+      "explanation": "1画素は3色×8ビット＝3バイト。1600×1200×3＝5,760,000バイトとなる。画素数・色のビット数・ファイルの付加情報は別々に扱う。",
+      "distractorRationales": [
+        "1画素を1バイトとして色の数を落としている。",
+        "1,920,000画素×3バイトで計算できる。",
+        "求めたビット数をバイトへ換算していない。",
+        "指定されていない4番目の成分を加えている。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — Working with Image Types in MATLAB",
+          "url": "https://www.mathworks.com/help/matlab/creating_plots/image-types.html"
+        }
+      ]
+    },
+    "reason": "画素数とdpiを一括りにした旧問を、画素数・色深度・データ量の違いへ改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Truecolor Imagesの各画素のRGB三成分と各8ビットの例を確認。全画像形式が24ビット固定とはせず、設問で保存条件を限定。数値は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000142",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "受信電力Pが基準電力P₀の100分の1である。10 log₁₀(P/P₀)で表す、基準に対する電力比のdB値はどれか。",
+      "choices": [
+        "−20 dB",
+        "−40 dB",
+        "＋20 dB",
+        "−2 dB"
+      ],
+      "correctIndex": 0,
+      "explanation": "電力比はP/P₀＝0.01＝10⁻²なので10 log₁₀0.01＝−20 dB。振幅比に使う20 log₁₀と、電力比の10 log₁₀を混同しない。",
+      "distractorRationales": [
+        "10×(−2)で−20となる。",
+        "電力比に振幅比の係数20を使っている。",
+        "基準より小さい電力なので符号は負。",
+        "常用対数の値に係数10を掛けていない。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — pow2db",
+          "url": "https://www.mathworks.com/help/signal/ref/pow2db.html"
+        }
+      ]
+    },
+    "reason": "音圧と音の強さを混同する旧説明を、電力比の定義が明示された通信の例へ改訂。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Descriptionの電力をdBへ変換する10 log10(y)を照合。基準電力との無次元比を使って独自計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000211",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "無線通信で、同じ送信信号が反射などによる複数の経路を通り、異なる遅延で受信される。遅延したシンボルが後続シンボルと時間的に重なるときに生じる問題はどれか。",
+      "choices": [
+        "標本化による周波数の折り返しが必ず発生する",
+        "送信機の量子化誤差だけが増える",
+        "符号間干渉によってシンボルを判別しにくくなる",
+        "各経路は遅延によらず、常に一つの振幅倍率へまとめられる"
+      ],
+      "correctIndex": 2,
+      "explanation": "マルチパスによる時間方向の広がりでシンボルが重なると、符号間干渉（ISI）が生じる。等化器は通信路によるひずみを補って判別を改善するために用いられる。単なる一様な減衰とは異なる。",
+      "distractorRationales": [
+        "標本化の折り返しと、伝搬経路の時間的な広がりは別の現象。",
+        "伝搬で生じる干渉は送信機の量子化設定による誤差とは別。",
+        "遅延した波形が別のシンボルへ影響する。",
+        "シンボルが時間的に重なる効果を単なる振幅倍率では表せない。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — Equalization",
+          "url": "https://www.mathworks.com/help/comm/ug/equalization.html"
+        }
+      ]
+    },
+    "reason": "旧Wi-Fi問題の正解番号の不一致を修正する改訂として、壁材ごとの一律の減衰断定から複数経路の影響へ絞った。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭の異なる経路による遅延波、時間の重なりによるISI、等化器の役割を確認。ソフトの模擬データやコードは流用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-qpsk-bits-per-symbol",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "4種類の位相を用いるQPSKで、各シンボルへ固定長のビット列を一対一に割り当てる。符号化やパイロット等の付加分を除くと、1シンボルに対応するビット数はいくつか。",
+      "choices": [
+        "1ビット",
+        "2ビット",
+        "4ビット",
+        "8ビット"
+      ],
+      "correctIndex": 1,
+      "explanation": "4状態を区別する固定長のビット列はlog₂4＝2ビット。シンボル数とビット数は同じではなく、通信路符号化などを含む実際の情報速度とも区別する。",
+      "distractorRationales": [
+        "2状態を表すビット数。",
+        "00・01・10・11の4通りを表せる。",
+        "4ビットは16状態を表せる。",
+        "8ビットは256状態を表せる。"
+      ],
+      "sources": [
+        {
+          "title": "MathWorks — Phase Modulation",
+          "url": "https://www.mathworks.com/help/comm/ug/phase-modulation.html"
+        }
+      ]
+    },
+    "reason": "変調の状態数とビット数の関係を問う独自設問。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "QPSK節の2ビットを4位相へ対応させる定義を確認。特定の位相割当や図は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "eng-sampling-cosine-alias",
+    "domain": "工学",
+    "subdomain": "情報通信工学",
+    "content": {
+      "question": "信号x(t)＝cos(2π×8000t)を、毎秒10000回、時刻t＝n/10000（nは整数）で標本化する。同じ標本値を与えるcos(2πft)の周波数fを0〜5000 Hzの範囲から選ぶと、どれか。",
+      "choices": [
+        "1000 Hz",
+        "4000 Hz",
+        "5000 Hz",
+        "2000 Hz"
+      ],
+      "correctIndex": 3,
+      "explanation": "cos(2π×0.8n)＝cos(2πn−2π×0.2n)＝cos(2π×0.2n)。したがって2000 Hzの信号と区別できない。これは標本化による折り返しで、元信号の周波数そのものが変わったわけではない。",
+      "distractorRationales": [
+        "標本値は1000 Hzの列には一致しない。",
+        "4000 Hzの列では一致しない。",
+        "5000 Hzなら標本は1と−1の交互になり、異なる。",
+        "整数nで余弦の周期性から一致する。"
+      ],
+      "sources": [
+        {
+          "title": "MIT 6.003 — Lecture 21: Sampling",
+          "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/12e6e5d7567fca2e993ef8563fef5a60_MIT6_003F11_lec21.pdf"
+        }
+      ]
+    },
+    "reason": "標本化周波数と元の信号周波数を区別する独自設問。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Aliasing節の周波数の折り返しを確認。講義の周波数例は転載せず、8000/10000の余弦の標本列を独立に導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "宇宙機関の技術資料、メーカーの技術説明、大学講義で該当の原理・式を確認。問題と解説は独自表現で、掲載例題・図表・コード・製品値は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
