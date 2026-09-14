@@ -35,6 +35,15 @@ beforeAll(async () => {
 afterAll(async () => { await db?.close(); });
 
 describe.sequential("atomic issuance and answers", () => {
+  it("preserves scientific letter case while rejecting duplicate or non-text choices in SQL",async()=>{
+    const base={question:"Which genotype has two A alleles?",choices:["AA","Aa","aa","A"],correctIndex:0,explanation:"AA denotes two A alleles."};
+    const valid=async(content:unknown)=>(await db.query<{valid:boolean}>("select science_valid_content($1) valid",[content])).rows[0].valid;
+    expect(await valid(base)).toBe(true);
+    expect(await valid({...base,choices:["Co","CO","C","O"]})).toBe(true);
+    for(const choices of [["A","A","B","C"],["A","Ａ","B","C"],[" A ","A","B","C"],[1,"2","3","4"],"not an array",null]){
+      expect(await valid({...base,choices})).toBe(false);
+    }
+  });
   it("performs verified claiming and consent with service privileges while Auth remains private",async()=>{
     const owner="10000000-0000-4000-8000-000000000031",unverified="10000000-0000-4000-8000-000000000032",v="20000000-0000-4000-8000-000000000031";
     await db.query("insert into auth.users(id,email,email_confirmed_at) values($1,'service-role@example.invalid',now()),($2,'unverified@example.invalid',null)",[owner,unverified]);

@@ -28,6 +28,13 @@ test('includes archived and previous wording when rebuilding exposure families',
   const history=[{...legacy[0],previous_question_texts:['Before the rewrite']},...legacy.slice(1),archived];
   assert.deepEqual(prepareBank(history,[patch]).candidates[0].legacy_ids,[...ids,archived.id]);
 });
+test('keeps case-sensitive scientific stems as distinct exposure families',()=>{
+  const originals=[{id:ids[0],question_text:'Which trait is associated with allele A?'},{id:ids[1],question_text:'Which trait is associated with allele a?'}];
+  const patches=originals.map(row=>({...patch,legacyId:row.id,equivalentLegacyIds:[],content:{...patch.content,question:row.question_text}}));
+  const result=prepareBank(originals,patches);
+  assert.equal(result.candidates.length,2);
+  assert.deepEqual(result.candidates.map(q=>q.legacy_ids),[[ids[0]],[ids[1]]]);
+});
 test('starts a reproducible campaign across small fields and difficulty while preserving the source',()=>{
   const questions=subdomainsByDomain.数学.flatMap((subdomain,i)=>[-2,-1,0,1,2].map((b,j)=>({...patch,legacyId:undefined,equivalentLegacyIds:[],familyKey:`fixture:${i}:${j}`,subdomain,parameters:{b,basis:'Initial test judgement, never calibrated'},content:{...patch.content,question:`Fixture ${i}, ${j}?`}})));
   const before=JSON.stringify(questions),a=prepareBank([],questions),b=prepareBank([],questions.toReversed());

@@ -1,0 +1,1116 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000161",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "一般的な原核細胞と真核細胞の構造を比べた説明として正しいのはどれか。",
+      "choices": [
+        "原核細胞だけがDNAを持つ",
+        "原核細胞には核膜で囲まれた核がない",
+        "植物の細胞は原核細胞である",
+        "原核細胞にはリボソームがない"
+      ],
+      "correctIndex": 1,
+      "explanation": "細菌や古細菌の染色体は、真核細胞のように核膜に包まれた核の中にはない。原核細胞にもDNAとリボソームはあり、植物は真核生物に含まれる。",
+      "distractorRationales": [
+        "真核細胞もDNAを持つ。",
+        "原核細胞の基本的な構造上の特徴。",
+        "植物は真核生物である。",
+        "原核細胞もリボソームでタンパク質を合成する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Prokaryotic Cells",
+          "url": "https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells"
+        }
+      ]
+    },
+    "reason": "核膜と細胞壁を混同する選択肢・一律のリボソームサイズの余談を除去。同じ区別の別IDを統合。",
+    "parameters": {
+      "b": -1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§4.2の原核細胞の核膜・核様体とリボソームの記述を照合。分化した無核細胞などの例外を無視した「全細胞」の断定は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000401"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000138",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "ヒトの皮膚の線維芽細胞で、遺伝情報の大部分を担う染色体が収められている構造はどれか。",
+      "choices": [
+        "リボソーム",
+        "リソソーム",
+        "核",
+        "ゴルジ体"
+      ],
+      "correctIndex": 2,
+      "explanation": "核染色体は核膜に囲まれた核に収められる。動物細胞のDNAがすべて核内にあるわけではなく、ミトコンドリアにも固有のDNAがある。",
+      "distractorRationales": [
+        "タンパク質合成に関わる構造である。",
+        "主に細胞内の分解に関わる。",
+        "核染色体を含む構造。",
+        "タンパク質などの加工・仕分けに関わる。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Nucleus",
+          "url": "https://www.genome.gov/genetics-glossary/Nucleus"
+        },
+        {
+          "title": "NHGRI — Mitochondria",
+          "url": "https://www.genome.gov/genetics-glossary/Mitochondria"
+        }
+      ]
+    },
+    "reason": "細胞種を指定せず「DNAが主に含まれる」としていた旧問を、有核細胞の具体例へ限定。設問に答えの「核」を含めない。",
+    "parameters": {
+      "b": -1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Nucleusの定義とMitochondriaの固有染色体の記述を照合。核外DNAを除外しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000034",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "緑色植物の葉肉細胞で、光合成が行われる細胞小器官はどれか。",
+      "choices": [
+        "ミトコンドリア",
+        "核",
+        "ゴルジ体",
+        "葉緑体"
+      ],
+      "correctIndex": 3,
+      "explanation": "葉緑体では光のエネルギーを利用する反応と炭素固定が行われる。植物のすべての細胞が葉緑体を持つ、という意味ではない。",
+      "distractorRationales": [
+        "主に細胞呼吸などに関わる小器官。",
+        "核染色体を含む構造。",
+        "物質の加工・仕分けに関わる小器官。",
+        "葉肉細胞の光合成の場。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Eukaryotic Cells",
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells"
+        }
+      ]
+    },
+    "reason": "植物細胞一般という条件を葉肉細胞へ具体化。機能当ての重複3件を同一族に統合。",
+    "parameters": {
+      "b": -1.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§4.3の葉緑体と光合成の説明・植物細胞の構造の本文を照合。図版は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000162",
+      "10000000-0000-4000-8007-000000000407"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000040",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "酸素を使う呼吸を行う動物細胞で、酸化的リン酸化によるATP合成の場となる小器官はどれか。",
+      "choices": [
+        "ミトコンドリア",
+        "ゴルジ体",
+        "中心体",
+        "リソソーム"
+      ],
+      "correctIndex": 0,
+      "explanation": "ミトコンドリアは呼吸によって得られるエネルギーをATP合成に利用する。エネルギーを無から作るのではなく、化学エネルギーを変換している。",
+      "distractorRationales": [
+        "酸化的リン酸化が行われる小器官。",
+        "物質の加工・仕分けに関わる。",
+        "微小管の形成に関わる構造。",
+        "細胞内の分解に関わる。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Mitochondria",
+          "url": "https://www.genome.gov/genetics-glossary/Mitochondria"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Oxidative Phosphorylation",
+          "url": "https://openstax.org/books/biology-2e/pages/7-4-oxidative-phosphorylation"
+        }
+      ]
+    },
+    "reason": "「エネルギー産生」の曖昧さを減らし、酸素を用いる呼吸とATP合成へ限定。機能が同じ旧問を統合。",
+    "parameters": {
+      "b": -1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI MitochondriaのATPへの変換と、OpenStax §7.4のミトコンドリア内膜における酸化的リン酸化の本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000177",
+      "10000000-0000-4000-8007-000000000408"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000031",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "mRNAの情報に従ってアミノ酸をつなぎ、タンパク質を合成する構造はどれか。",
+      "choices": [
+        "リソソーム",
+        "リボソーム",
+        "中心体",
+        "ゴルジ体"
+      ],
+      "correctIndex": 1,
+      "explanation": "リボソームはRNAとタンパク質からなり、mRNAを読み取る翻訳を担う。膜で囲まれた小器官ではない。",
+      "distractorRationales": [
+        "主に細胞内の分解に関わる。",
+        "翻訳を行う構造。",
+        "主に微小管の形成に関わる。",
+        "合成されたタンパク質などの加工・仕分けに関わる。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Ribosome",
+          "url": "https://www.genome.gov/genetics-glossary/Ribosome"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Eukaryotic Cells",
+          "url": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells"
+        }
+      ]
+    },
+    "reason": "設問を翻訳の役割へ明確化し、内容のない定型解説を置換。タンパク質合成を問う別IDを統合。",
+    "parameters": {
+      "b": -1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Ribosomeの組成と翻訳の定義、OpenStax §4.3のリボソーム構造を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000076",
+      "10000000-0000-4000-8006-000000000180",
+      "10000000-0000-4000-8007-000000000411"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000087",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "細胞膜のリン脂質二重層で、親水性の頭部は主にどちらへ向いているか。",
+      "choices": [
+        "二重層の中央で疎水性の尾部とだけ接する",
+        "細胞外側の水相にだけ向く",
+        "細胞内側と細胞外側の水相に向く",
+        "二重層の中央で頭部同士だけが接する"
+      ],
+      "correctIndex": 2,
+      "explanation": "二重層の両表面には親水性頭部があり、それぞれ細胞内外の水相に接する。疎水性の尾部は膜の内部で向き合う。",
+      "distractorRationales": [
+        "頭部と尾部の位置が逆である。",
+        "細胞内側の表面にも親水性頭部がある。",
+        "二重層の配置に対応する。",
+        "膜内部で向き合うのは主に疎水性の尾部。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Components and Structure",
+          "url": "https://openstax.org/books/biology-2e/pages/5-1-components-and-structure"
+        }
+      ]
+    },
+    "reason": "膜の内側という語の曖昧さを避け、水相と二重層中央を区別した。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§5.1 Phospholipidsの内外の水相・頭部・尾部の配置を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000090",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "増殖する真核細胞の通常の細胞周期で、核DNAを次の分裂に備えて複製する期はどれか。",
+      "choices": [
+        "G₀期",
+        "G₁期",
+        "M期",
+        "S期"
+      ],
+      "correctIndex": 3,
+      "explanation": "S期に核DNAの複製が行われる。G₁期はS期の前、G₂期はS期の後にあり、M期には複製済みの染色体を分配する。",
+      "distractorRationales": [
+        "細胞周期から離れた状態を指す。",
+        "核DNA複製前の段階。",
+        "主に染色体の分配と細胞分裂が進む段階。",
+        "DNA合成の段階。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Cell Cycle",
+          "url": "https://www.genome.gov/genetics-glossary/Cell-Cycle"
+        }
+      ]
+    },
+    "reason": "修復合成や細胞小器官DNAまで一律にS期とする解釈を避け、通常周期の核DNA複製に限定。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Cell CycleのG₁→S→G₂→MとS期のDNA複製の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000165"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000039",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "典型的な有糸分裂で、染色体が赤道面に整列し、姉妹染色分体がまだ分離していない時期はどれか。",
+      "choices": [
+        "中期",
+        "後期",
+        "終期",
+        "細胞質分裂の完了後"
+      ],
+      "correctIndex": 0,
+      "explanation": "中期には複製済みの染色体が赤道面に並ぶ。その後の後期に姉妹染色分体が分離し、両極へ移動する。",
+      "distractorRationales": [
+        "整列し、姉妹染色分体がまだ結びついている段階。",
+        "姉妹染色分体が分離する段階。",
+        "染色体が両極に達し、核が再形成される段階。",
+        "指定された有糸分裂中の状態ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, The Cell Cycle",
+          "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle"
+        }
+      ]
+    },
+    "reason": "有糸分裂と、整列している時点の状態を明示した。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§10.2のMetaphase、Anaphase、Telophaseの本文を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000432",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "通常のG₁→S→G₂→Mという細胞周期で、G₁期の位置と活動の説明として適切なのはどれか。",
+      "choices": [
+        "S期の後で、姉妹染色分体を分離する",
+        "S期の前で、成長しDNA複製に必要な準備を進める",
+        "M期の後で、核DNAを必ず複製済みの状態に保つ",
+        "核DNAの複製を行うS期と同じ期である"
+      ],
+      "correctIndex": 1,
+      "explanation": "G₁期は分裂後から次のS期までの段階。細胞は代謝や物質合成を行い、増殖条件が整えばDNA複製へ進む。すべての細胞が必ず次のS期へ進むわけではない。",
+      "distractorRationales": [
+        "S期前という位置にも、G₁期の活動にも合わない。",
+        "G₁期の位置と代表的な活動。",
+        "通常は次のS期で核DNAを複製する。",
+        "G₁期とS期は区別される。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, The Cell Cycle",
+          "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle"
+        }
+      ]
+    },
+    "reason": "代謝活性の亢進が全細胞で成り立つかの曖昧さを避け、S期に先立つ成長・準備へ具体化。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§10.2 G₁ PhaseとG₀の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000430",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "通常のミトコンドリアを囲む膜の構造はどれか。",
+      "choices": [
+        "膜がない",
+        "一枚の膜だけがある",
+        "外膜と内膜がある",
+        "独立した四枚の膜がある"
+      ],
+      "correctIndex": 2,
+      "explanation": "ミトコンドリアは外膜と内膜を持つ。ここでいう二重膜は、脂質二重層からなる膜が二枚あるという意味で、脂質二重層一枚と同じ意味ではない。",
+      "distractorRationales": [
+        "ミトコンドリアは膜を持つ。",
+        "外膜と内膜の区別を欠く。",
+        "通常のミトコンドリアの構造。",
+        "四枚で囲まれる構造ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Mitochondria",
+          "url": "https://www.genome.gov/genetics-glossary/Mitochondria"
+        }
+      ]
+    },
+    "reason": "旧選択肢の不自然な小器官名を除き、二重膜と脂質二重層の混同を解く設問にした。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Mitochondriaのtwo different membranesの説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000078",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "真核細胞の細胞骨格で、微小フィラメント（微小糸）を構成する主要なタンパク質はどれか。",
+      "choices": [
+        "チューブリン",
+        "ヘモグロビン",
+        "コラーゲン",
+        "アクチン"
+      ],
+      "correctIndex": 3,
+      "explanation": "微小フィラメントはアクチンの重合体で、細胞の形や運動などに関わる。チューブリンが構成する微小管とは区別する。",
+      "distractorRationales": [
+        "微小管の主要な構成タンパク質。",
+        "主に血液中で酸素を運ぶタンパク質。",
+        "主に細胞外マトリックスの構造に関わるタンパク質。",
+        "微小フィラメントの主要な構成タンパク質。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, The Cytoskeleton",
+          "url": "https://openstax.org/books/biology-2e/pages/4-5-the-cytoskeleton"
+        }
+      ]
+    },
+    "reason": "細胞骨格一般から微小フィラメントへ限定し、もっともらしいチューブリンとの区別を問う。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§4.5 MicrofilamentsのactinとMicrotubulesの区別を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000139",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "水は通すが溶質は通さない膜を隔てて、水が水ポテンシャルの差に従い正味に移動する現象を何というか。",
+      "choices": [
+        "浸透",
+        "能動輸送",
+        "エンドサイトーシス",
+        "エキソサイトーシス"
+      ],
+      "correctIndex": 0,
+      "explanation": "この現象は浸透。温度と圧力が等しい希薄溶液なら、水は溶質粒子の濃度が低い側から高い側へ正味に移動する。圧力差もある場合は、その影響も考える。",
+      "distractorRationales": [
+        "選択的に透過する膜を介した水の正味の移動。",
+        "別のエネルギー源と共役して物質を逆勾配に運ぶ輸送。",
+        "膜で包んで物質を取り込む過程。",
+        "小胞が細胞膜と融合し内容物を外へ出す過程。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Passive Transport",
+          "url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport"
+        }
+      ]
+    },
+    "reason": "旧解説の水の移動方向が逆だった点を訂正。「浸透」と上位概念の「拡散」が同時に正解となる肢を解消。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§5.2 OsmosisとMechanismの半透膜・溶質濃度差・静水圧による釣り合いを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000422",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "膜輸送体によるイオンの能動輸送を、受動輸送と区別する説明はどれか。",
+      "choices": [
+        "イオンが電気化学勾配に従うだけで移動する",
+        "別のエネルギー源と共役し、対象イオンを電気化学勾配に逆らって運ぶ",
+        "水分子だけが膜を通る",
+        "すべてのイオンが常に同じ向きへ拡散する"
+      ],
+      "correctIndex": 1,
+      "explanation": "能動輸送は対象物質の逆勾配輸送をエネルギー供給と結びつける。ATP分解に直接共役する一次能動輸送と、別のイオンの勾配を利用する二次能動輸送がある。",
+      "distractorRationales": [
+        "受動輸送の駆動力である。",
+        "イオンの能動輸送を特徴づける。",
+        "イオンの能動輸送の説明ではない。",
+        "イオンの種類と勾配によって向きは変わる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Active Transport",
+          "url": "https://openstax.org/books/biology-2e/pages/5-3-active-transport"
+        }
+      ]
+    },
+    "reason": "電位差を無視する濃度勾配だけの定義を修正し、すべての輸送体がATPを直接使うという誤解を避けた。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§5.3 Electrochemical Gradientと一次・二次能動輸送の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000032",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "通常のDNA二重らせんのWatson–Crick型塩基対で、アデニン（A）と対になる塩基はどれか。",
+      "choices": [
+        "シトシン",
+        "グアニン",
+        "チミン",
+        "ウラシル"
+      ],
+      "correctIndex": 2,
+      "explanation": "DNAの標準的な塩基対はA–TとG–C。したがってAの相手はチミン（T）である。",
+      "distractorRationales": [
+        "標準的にはグアニンと対になる。",
+        "標準的にはシトシンと対になる。",
+        "アデニンと標準的な塩基対を作る。",
+        "RNAの標準的なAの相手である。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Base Pair",
+          "url": "https://www.genome.gov/genetics-glossary/Base-Pair"
+        },
+        {
+          "title": "NHGRI — Uracil",
+          "url": "https://www.genome.gov/genetics-glossary/Uracil"
+        }
+      ]
+    },
+    "reason": "非標準塩基対の例外と混同しないよう、通常のWatson–Crick型へ限定。A–T/G–Cを問う旧問題を統合。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Base PairとUracilの標準的な塩基対の定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000164"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000036",
+    "domain": "生物",
+    "subdomain": "分子生物学",
+    "content": {
+      "question": "通常のRNAで、アデニン（A）とWatson–Crick型の塩基対を作り、DNAの標準4塩基ではチミンに置き換わる塩基はどれか。",
+      "choices": [
+        "シトシン",
+        "チミン",
+        "グアニン",
+        "ウラシル"
+      ],
+      "correctIndex": 3,
+      "explanation": "RNAの標準4塩基はA・U・G・Cで、AはU（ウラシル）と対になる。DNAの標準4塩基ではUの代わりにTを用いる。修飾塩基や異常な取り込みの有無を問う設問ではない。",
+      "distractorRationales": [
+        "標準的にはGと対になる。",
+        "通常のDNAでAと対になる塩基。",
+        "標準的にはCと対になる。",
+        "RNAの標準的なAの相手。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Uracil",
+          "url": "https://www.genome.gov/genetics-glossary/Uracil"
+        }
+      ]
+    },
+    "reason": "DNA/RNAでTとUが違うという同一知識を問う別IDを統合。修飾RNAやDNA損傷による例外まで否定しない。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI UracilのRNAの4塩基、Aとの対合、DNAでのTとの置換関係を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8003-000000000032"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000033",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "染色体数の異常がないヒトの二倍体細胞の核には、通常、染色体が何本あるか。",
+      "choices": [
+        "46本",
+        "23本",
+        "44本",
+        "48本"
+      ],
+      "correctIndex": 0,
+      "explanation": "通常の二倍体核には23対、計46本の染色体がある。正常な配偶子は23本で、成熟赤血球のように核を失った細胞はこの設問の対象ではない。",
+      "distractorRationales": [
+        "23対の染色体に対応する。",
+        "通常の配偶子の染色体数。",
+        "通常の常染色体だけを数えた本数。",
+        "通常のヒトの二倍体核の数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Meiosis",
+          "url": "https://www.genome.gov/genetics-glossary/Meiosis"
+        },
+        {
+          "title": "NHGRI — 1955: 46 Human Chromosomes",
+          "url": "https://www.genome.gov/25520285/online-education-kit-1955-a-46-human-chromosomes"
+        }
+      ]
+    },
+    "reason": "体細胞を無条件で46本とする旧問を、異常のない二倍体の核へ限定。",
+    "parameters": {
+      "b": -1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Meiosisの46本/23本の説明と正常核型の観測史の記述を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000412",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "対立遺伝子の関係を表す「顕性（優性）・潜性（劣性）」から、それだけで判断できるのはどれか。",
+      "choices": [
+        "どちらが生存に有利か",
+        "指定した形質がヘテロ接合体でどう現れるか",
+        "どちらの対立遺伝子が集団で多いか",
+        "どちらのDNA配列が長いか"
+      ],
+      "correctIndex": 1,
+      "explanation": "顕性・潜性は、ある形質について対立遺伝子を組み合わせたときの表現型の関係を表す。潜性だから有害、顕性だから集団に多い、という意味ではない。",
+      "distractorRationales": [
+        "適応度の有利・不利を直接示す用語ではない。",
+        "指定した形質の表現型の関係を表す。",
+        "集団内の頻度とは別の概念。",
+        "配列の長さとは別の概念。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Dominant",
+          "url": "https://www.genome.gov/genetics-glossary/Dominant"
+        },
+        {
+          "title": "NHGRI — Recessive Traits Alleles",
+          "url": "https://www.genome.gov/genetics-glossary/Recessive-Traits-Alleles"
+        }
+      ]
+    },
+    "reason": "「発現の優劣」という旧解説を表現型の関係へ修正。肯定形の問いにして用語から判断できる範囲を明示。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRIの顕性・潜性の定義と、顕性変異も良性/有害の両方があり得る説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000140",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "一つの遺伝子座の対立遺伝子A・aについて、AAとAaが同じ形質を示し、aaだけが異なる形質を示す。この形質に関する関係はどれか。",
+      "choices": [
+        "aがAに対して完全顕性である",
+        "Aとaが必ず同じ頻度で集団に存在する",
+        "Aがaに対して完全顕性である",
+        "Aとaは異なる遺伝子座にある"
+      ],
+      "correctIndex": 2,
+      "explanation": "ヘテロ接合体AaがAAと同じ表現型を示すので、この形質ではAがaに対して完全顕性（完全優性）である。すべての形質がこの関係に従うわけではない。",
+      "distractorRationales": [
+        "指定された表現型の関係と逆。",
+        "表現型の関係から集団頻度は決まらない。",
+        "指定された完全顕性の関係。",
+        "設問では同じ遺伝子座の対立遺伝子である。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Dominant",
+          "url": "https://www.genome.gov/genetics-glossary/Dominant"
+        },
+        {
+          "title": "OpenStax — Biology 2e, Laws of Inheritance",
+          "url": "https://openstax.org/books/biology-2e/pages/12-3-laws-of-inheritance"
+        }
+      ]
+    },
+    "reason": "「現れやすい」という頻度との混同を避け、3遺伝子型の表現型を明示。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Dominantのヘテロ接合体の説明、OpenStax §12.3の顕性の範囲を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000163",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "二倍体のAa個体について、メンデルの分離の法則が表す基本的な関係はどれか。",
+      "choices": [
+        "Aとaは融合して一つの中間的な対立遺伝子になる",
+        "各配偶子が必ずAとaの両方を受け取る",
+        "異なる遺伝子座は、連鎖に関係なく常に独立に遺伝する",
+        "配偶子形成時にAとaが分かれ、各配偶子はどちらか一方を受け取る"
+      ],
+      "correctIndex": 3,
+      "explanation": "分離の法則は、一つの遺伝子座の対立遺伝子が配偶子へ分かれることを表す。異なる遺伝子座の独立性とは区別され、連鎖がある遺伝子座まで常に独立とはいえない。",
+      "distractorRationales": [
+        "対立遺伝子が混ざって消えるという法則ではない。",
+        "通常の半数体配偶子では一方を受け取る。",
+        "独立の法則との混同に加え、連鎖を無視している。",
+        "分離の法則の基本的な内容。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, Laws of Inheritance",
+          "url": "https://openstax.org/books/biology-2e/pages/12-3-laws-of-inheritance"
+        }
+      ]
+    },
+    "reason": "条件つきで成立する3:1という正しい肢が定義の肢と競合する旧構成を解消。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§12.3 Equal Segregation of Allelesと連鎖の説明を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000077"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000033",
+    "domain": "生物",
+    "subdomain": "遺伝学・ゲノム",
+    "content": {
+      "question": "エンドウの交配実験を行い、形質が世代を越えて伝わる規則を報告した人物は誰か。",
+      "choices": [
+        "グレゴール・メンデル",
+        "マイケル・ファラデー",
+        "アルベルト・アインシュタイン",
+        "ニールス・ボーア"
+      ],
+      "correctIndex": 0,
+      "explanation": "メンデルはエンドウの交配と子孫の観察から、遺伝する要因が離散的に伝わる規則を示した。現在知られる遺伝現象のすべてを、この単純なモデルだけで説明できるわけではない。",
+      "distractorRationales": [
+        "エンドウの交配実験を行った人物。",
+        "主に電磁気学などで知られる人物。",
+        "相対性理論などで知られる人物。",
+        "原子構造の理論などで知られる人物。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — 1865: Mendel’s Peas",
+          "url": "https://www.genome.gov/25520230/online-education-kit-1865-mendels-peas"
+        }
+      ]
+    },
+    "reason": "「遺伝の法則の基礎」という広い人物当てを、実験対象と報告内容へ具体化。",
+    "parameters": {
+      "b": -1.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRIのエンドウ交配実験と形質の離散的な伝達の記述を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000144",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "二倍体（2n）の細胞が通常の減数分裂を完了すると、生じる半数体の娘核の染色体数は、複製前の親核と比べてどうなるか。",
+      "choices": [
+        "2倍になる",
+        "半分になる",
+        "同じになる",
+        "4倍になる"
+      ],
+      "correctIndex": 1,
+      "explanation": "減数分裂では、DNA複製の後に二回の分裂を経て2nからnへ染色体セット数が減る。DNA量と染色体数、分裂途中と完了後を区別する必要がある。",
+      "distractorRationales": [
+        "受精時のセット数の増加などとの混同。",
+        "2nからnへの変化。",
+        "通常の有糸分裂との混同。",
+        "四つの娘核が生じることと、一核あたりの数を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Meiosis",
+          "url": "https://www.genome.gov/genetics-glossary/Meiosis"
+        }
+      ]
+    },
+    "reason": "親核の比較時点を明示し、旧誤答解説の「分裂途中に染色体数が4倍」を削除。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRI Meiosisの二倍体から半数体への二回の分裂の定義を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000167",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "典型的な減数第一分裂の後期に分離するものと、有糸分裂の後期に分離するものの組み合わせはどれか。",
+      "choices": [
+        "前者も後者も相同染色体の対",
+        "前者も後者も姉妹染色分体",
+        "前者は相同染色体の対、後者は姉妹染色分体",
+        "前者は姉妹染色分体、後者は相同染色体の対"
+      ],
+      "correctIndex": 2,
+      "explanation": "減数第一分裂では相同染色体が別々の極へ分かれ、姉妹染色分体はつながったまま。一方、通常の有糸分裂の後期には姉妹染色分体が分かれる。",
+      "distractorRationales": [
+        "有糸分裂で分かれる対象が異なる。",
+        "減数第一分裂で分かれる対象が異なる。",
+        "二つの分裂の違いを正しく示す。",
+        "前者と後者が逆。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, The Process of Meiosis",
+          "url": "https://openstax.org/books/biology-2e/pages/11-1-the-process-of-meiosis"
+        }
+      ]
+    },
+    "reason": "複数の正しい一般論が混在した旧肢を分離対象の比較に統一。旧「これは逆です」と本文が一致しない誤答解説も撤廃。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§11.1の減数第一分裂と有糸分裂の比較、相同染色体と姉妹染色分体の分離を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000420",
+    "domain": "生物",
+    "subdomain": "細胞生物学",
+    "content": {
+      "question": "半数体（n）の真核細胞が、染色体の不分離などを起こさずに通常の有糸分裂を完了した。各娘核の染色体セット数はどうなるか。",
+      "choices": [
+        "必ず二倍体（2n）になる",
+        "減数分裂と同じく半分になる",
+        "染色体セットをすべて失う",
+        "半数体（n）のままである"
+      ],
+      "correctIndex": 3,
+      "explanation": "通常の有糸分裂は染色体セット数を保つ。半数体からは半数体、二倍体からは二倍体の娘核ができるため、有糸分裂なら必ず二倍体になるわけではない。",
+      "distractorRationales": [
+        "有糸分裂自体がセット数を倍増させるわけではない。",
+        "有糸分裂はセット数を半減させない。",
+        "染色体を両娘核へ分配する。",
+        "通常の有糸分裂は親核のセット数を保つ。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Biology 2e, The Process of Meiosis",
+          "url": "https://openstax.org/books/biology-2e/pages/11-1-the-process-of-meiosis"
+        }
+      ]
+    },
+    "reason": "旧正解肢が有糸分裂の娘細胞を無条件で二倍体としていた誤りを、半数体の明示例で訂正。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§11.1のmitosisで親核と娘核のploidyが等しいこと、および半数体の植物配偶体でも有糸分裂する記述を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "細胞構造・遺伝の基本的事実を公的研究機関の用語集と著者の教材で照合。設問・選択肢・解説は独自に記述し、資料の演習問題・図表・固有の説明文を転載していない。"
+    }
+  }
+]
