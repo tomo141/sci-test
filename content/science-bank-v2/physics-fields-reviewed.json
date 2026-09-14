@@ -1,0 +1,833 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000031",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "標準模型で、クォークの強い相互作用を媒介するゲージ粒子はどれか。",
+      "choices": [
+        "光子",
+        "グルーオン",
+        "Wボソン",
+        "Zボソン"
+      ],
+      "correctIndex": 1,
+      "explanation": "量子色力学（QCD）ではグルーオンが強い相互作用を媒介する。光子は電磁相互作用、W・Zボソンは弱い相互作用の媒介粒子。",
+      "distractorRationales": [
+        "電磁相互作用を媒介する。",
+        "QCDのゲージ粒子。",
+        "弱い相互作用を媒介する。",
+        "弱い相互作用を媒介する。"
+      ],
+      "sources": [
+        {
+          "title": "CERN — The Standard Model",
+          "url": "https://home.cern/science/physics/standard-model/"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Forces and carrier particlesのgluon・photon・W/Zの対応を照合。「色荷そのものを媒介する」とは書かない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000039",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "自由な中性子nのβ⁻崩壊で、陽子pとともに放出される粒子の組はどれか。",
+      "choices": [
+        "電子e⁻と電子ニュートリノν_e",
+        "陽電子e⁺と電子ニュートリノν_e",
+        "電子e⁻と電子反ニュートリノν̄_e",
+        "陽電子e⁺と電子反ニュートリノν̄_e"
+      ],
+      "correctIndex": 2,
+      "explanation": "基本的な崩壊過程はn→p+e⁻+ν̄_e。電荷は0=(+e)+(−e)+0となり、電子型レプトン数も保存する。",
+      "distractorRationales": [
+        "電子型レプトン数が合わない。",
+        "電荷も粒子の組もβ⁻崩壊に合わない。",
+        "β⁻崩壊の電子と反ニュートリノの組。",
+        "陽電子を出す組では電荷が合わない。"
+      ],
+      "sources": [
+        {
+          "title": "U.S. Department of Energy — DOE Explains...Beta Decay",
+          "url": "https://www.energy.gov/science/doe-explainsbeta-decay"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "冒頭のneutron→proton, electron, antineutrinoを照合し、電荷とレプトン数を検算。放射補正による追加光子まで排他的に否定する設問ではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000047",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "3+1次元の相対論的量子場理論で、通常の実スカラー場をボース交換関係で量子化する。この場の1粒子励起のスピンと統計はどれか。",
+      "choices": [
+        "スピン0・ボース統計",
+        "スピン0・フェルミ統計",
+        "スピン1/2・フェルミ統計",
+        "スピン1・ボース統計"
+      ],
+      "correctIndex": 0,
+      "explanation": "物理的な実スカラー場の励起はスピン0のボソン。ここではゴースト場などの補助的な場を扱っていない。",
+      "distractorRationales": [
+        "実スカラー場の通常の粒子の性質。",
+        "指定したボース交換関係と一致しない。",
+        "通常のスピノル場に対応する性質。",
+        "ベクトル粒子のスピンで、スカラーではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Quantum Field Theory, Free Fields",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S2.html"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.3の1粒子状態の回転変換とスピン0、および生成演算子同士の交換関係とボース統計を照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000127",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "D_μ=∂_μ+iqA_μと定義する。U(1)ゲージ変換A_μ→A_μ+∂_μχ、ψ→exp(−iqχ)ψの下で、共変微分D_μψはどう変換するか。qは一定、χは時空の滑らかな関数とする。",
+      "choices": [
+        "exp(+iqχ)D_μψ",
+        "exp(−iqχ)D_μψ",
+        "D_μψのまま完全に不変",
+        "すべてのχで0になる"
+      ],
+      "correctIndex": 1,
+      "explanation": "変換後の∂_μψから出る−iq(∂_μχ)ψと、A_μの変化による項が相殺する。その結果、D_μψはψと同じ位相因子を持つ。",
+      "distractorRationales": [
+        "ψと逆の位相因子になっている。",
+        "共変微分がψと同じように変換する。",
+        "一般のχでは位相が付くため、そのまま不変ではない。",
+        "ゲージ変換によって一般の状態の微分が0になるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Quantum Field Theory, Quantum Electrodynamics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S6.html"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.8,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§6.3.1式6.560–6.561を照合。結合定数の記号をqに替え、積の微分で余分な項の相殺を独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000129",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "結合定数gのエネルギースケールμへの依存を考える。β(g)=μ dg/dμという規約では、β(g)が表すのはどれか。",
+      "choices": [
+        "温度に対するエントロピーの変化率",
+        "時間に対する粒子数の変化率",
+        "エネルギースケールの対数に対するgの変化率",
+        "空間座標に対する波動関数の勾配"
+      ],
+      "correctIndex": 2,
+      "explanation": "μ dg/dμ=dg/d ln μ。β関数は繰り込み群における結合定数の流れを記述する。長さのスケールで定義する場合には符号の規約に注意する。",
+      "distractorRationales": [
+        "熱力学的な応答関数ではない。",
+        "時間発展の方程式ではない。",
+        "微分の連鎖律と、指定したβ関数の定義に一致する。",
+        "空間勾配ではなく、結合定数のスケール依存を表す。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Gauge Theory, Yang-Mills Theory",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/gaugetheory/2ym.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.6,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2.4のrunning couplingと印刷p.63のβ(g)=μ dg/dμを照合。エネルギーと長さの規約を混同せず、対数微分を独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000132",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "AdS/CFT対応として提案されている関係を述べたものはどれか。",
+      "choices": [
+        "2次元Ising模型の高温側と低温側を結ぶ双対関係",
+        "位置表示と運動量表示をフーリエ変換で結ぶ関係",
+        "熱力学ポテンシャルの自然変数をルジャンドル変換で替える関係",
+        "反ド・ジッター空間側の重力を含む理論と、境界側の共形場理論の双対関係"
+      ],
+      "correctIndex": 3,
+      "explanation": "AdS/CFTは、特定の反ド・ジッター空間上の弦理論・重力側の記述と、境界の共形場理論を結ぶ双対性の提案。任意の重力理論について証明済みだという主張ではない。",
+      "distractorRationales": [
+        "Ising模型の高温・低温双対性は別の対応。",
+        "量子状態の表示の変換で、AdSと境界CFTの双対性ではない。",
+        "熱力学ポテンシャルの変換であり、この対応ではない。",
+        "AdS側と境界CFT側を結ぶ対応の内容。"
+      ],
+      "sources": [
+        {
+          "title": "Juan Maldacena — The Large N Limit of Superconformal Field Theories and Supergravity",
+          "url": "https://arxiv.org/abs/hep-th/9711200"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "原論文のabstractでAdS上のM/string theoryと共形場理論のdualityをconjectureとして提示していることを照合。架空の定理名を誤答肢にしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000133",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "素粒子論で提案されている超対称性（SUSY）が結び付ける、基本的な粒子の分類はどれか。",
+      "choices": [
+        "ボソンとフェルミオン",
+        "陽子と中性子だけ",
+        "正電荷と負電荷だけ",
+        "物質と反物質だけ"
+      ],
+      "correctIndex": 0,
+      "explanation": "超対称性はボソンとフェルミオンを結ぶ対称性。標準的な超対称拡張では超対称パートナーのスピンが1/2異なる。ここでの設問は理論の内容を問う。",
+      "distractorRationales": [
+        "整数スピンと半整数スピンの粒子を結ぶ対称性。",
+        "陽子と中性子を結ぶ分類だけでは超対称性にならない。",
+        "電荷の符号を反転するだけの変換ではない。",
+        "粒子と反粒子の対応だけを表すものではない。"
+      ],
+      "sources": [
+        {
+          "title": "CERN — Supersymmetry",
+          "url": "https://home.cern/science/physics/supersymmetry/"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "boson–fermionの対応とspinがhalf a unit異なるpartnerの説明を照合。発見済みという断定を加えない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000360",
+    "domain": "物理",
+    "subdomain": "物理の基礎・法則",
+    "content": {
+      "question": "電気素量をe>0とする。陽子・中性子・電子の電荷を、この順に正しく並べたものはどれか。",
+      "choices": [
+        "+e、0、−e",
+        "−e、0、+e",
+        "+e、+e、−e",
+        "0、0、0"
+      ],
+      "correctIndex": 0,
+      "explanation": "陽子は+e、中性子は0、電子は−e。陽子と中性子はクォークからなる複合粒子であり、三者をまとめて素粒子とは呼ばない。",
+      "distractorRationales": [
+        "それぞれの正しい電荷。",
+        "陽子と電子の符号が逆。",
+        "中性子の全電荷は0。",
+        "陽子と電子は電荷を持つ。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Introduction and Electrostatics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/em/el1.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.1の電子・陽子・中性子の電荷、およびquarkに関する注記を照合。旧問の「原子を構成する素粒子」を訂正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000370",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "標準模型におけるクォークとレプトンの違いとして正しいものはどれか。",
+      "choices": [
+        "レプトンだけが電荷を持つ",
+        "クォークは色荷を持ち、レプトンは色荷を持たない",
+        "クォークだけが半整数スピンを持つ",
+        "両者の違いは質量の大小だけで決まる"
+      ],
+      "correctIndex": 1,
+      "explanation": "クォークはQCDの色荷を持ち、レプトンは色荷を持たない。電荷の有無だけや質量の大小だけで分類することはできない。",
+      "distractorRationales": [
+        "クォークも電荷を持つ。",
+        "強い相互作用に関する分類の違い。",
+        "通常のクォークもレプトンもスピン1/2のフェルミオン。",
+        "質量順だけの分類ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, Quarks",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/11-3-quarks"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§11.3のquark colorと強い相互作用、CERN標準模型のquark/leptonの区分を照合。色を可視光の色とは説明しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000390",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "標準模型で、第1世代と第3世代のレプトンを順に示す組はどれか。反粒子は省略する。",
+      "choices": [
+        "第1世代（u,d）、第3世代（t,b）",
+        "第1世代（e,ν_e）、第3世代（μ,ν_μ）",
+        "第1世代（e,ν_e）、第3世代（τ,ν_τ）",
+        "第1世代（光子,Z）、第3世代（W,グルーオン）"
+      ],
+      "correctIndex": 2,
+      "explanation": "レプトンの3世代は（e,ν_e）、（μ,ν_μ）、（τ,ν_τ）。ここでは第1と第3だけを問う。ν_eなどは弱い相互作用でのフレーバーを表す。",
+      "distractorRationales": [
+        "クォークの世代を示している。",
+        "後半は第2世代。",
+        "第1世代と第3世代のレプトン。",
+        "ゲージ粒子をレプトンの世代に分類している。"
+      ],
+      "sources": [
+        {
+          "title": "CERN — The Standard Model",
+          "url": "https://home.cern/science/physics/standard-model/"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "標準模型の3世代と各lepton pairを照合。旧問の第1・第3という問いと3世代すべてを答える不一致を訂正。ニュートリノ質量の大小は断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000400",
+    "domain": "物理",
+    "subdomain": "素粒子・場の理論",
+    "content": {
+      "question": "中性K中間子でCP対称性の破れを示した古典的な観測はどれか。",
+      "choices": [
+        "K_Lの一部が2個のパイ中間子へ崩壊する",
+        "K_LとK_Sの寿命が異なるという事実だけ",
+        "電子の電荷が負である",
+        "光子の静止質量が0である"
+      ],
+      "correctIndex": 0,
+      "explanation": "長寿命の中性K中間子K_Lから、CP保存なら許されないはずの2パイ中間子への崩壊が観測された。寿命が異なることだけではCP破れの証拠にならない。",
+      "distractorRationales": [
+        "CP対称性の破れを示した観測。",
+        "CPを保存する場合でも寿命の異なる状態はあり得る。",
+        "電荷の符号だけはCP破れを示さない。",
+        "光子の質量に関する性質はこの観測ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Brookhaven National Laboratory — 1980 Nobel Prize in Physics",
+          "url": "https://www.bnl.gov/bnlweb/history/nobel/1980.php"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "long-lived neutral kaonからtwo pionsへの希な崩壊という記載を照合。旧回答の「寿命・崩壊モードの違い」という曖昧な条件を特定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000134",
+    "domain": "物理",
+    "subdomain": "量子力学",
+    "content": {
+      "question": "有限次元の二体系ABが純粋状態|ψ⟩にある。ρ_A=Tr_B|ψ⟩⟨ψ|とすると、AとBのエンタングルメント・エントロピー（自然対数を用いた無次元量）はどれか。",
+      "choices": [
+        "−Tr(ρ_A ln ρ_A)",
+        "Tr(ρ_A)だけ",
+        "全体系の−Tr(ρ_AB ln ρ_AB)だけ",
+        "ρ_Aの任意の1つの対角成分だけ"
+      ],
+      "correctIndex": 0,
+      "explanation": "純粋な二体系では、部分系のvon Neumannエントロピーがエンタングルメントを測る。全体系ABは純粋なのでそのエントロピーは0でも、部分系のエントロピーは正になり得る。0 ln 0は0とする。",
+      "distractorRationales": [
+        "純粋な二体系の標準的なエンタングルメント・エントロピー。",
+        "密度行列のトレースは常に1で、量子もつれを区別できない。",
+        "純粋な全体系では0になり、部分系間のもつれを測れない。",
+        "基底の選び方にも依存し、一般の量子もつれの尺度ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Kitaev and Preskill — Topological Entanglement Entropy",
+          "url": "https://preskill.caltech.edu/pubs/preskill-2006-topological.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.6,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "原論文p.1の純粋な二体系とreduced density operatorのvon Neumann entropyの定義を照合。一般の混合二体系へ同じ意味を拡張しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000399",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "時間反転対称性を保つ2次元Z₂トポロジカル絶縁体の、非相互作用での境界を考える。特徴的なギャップレス境界状態はどれか。",
+      "choices": [
+        "反対方向に進む時間反転対のヘリカルな状態",
+        "一方向だけに進む単独のカイラルな状態",
+        "境界には状態がなく、バルク全体が金属になる",
+        "境界のすべての電子状態が必ず静止する"
+      ],
+      "correctIndex": 0,
+      "explanation": "量子スピンホール型の境界では、反対方向へ進む状態が時間反転の対をなす。単方向のカイラルな状態との混同を避ける。相互作用や対称性を破る摂動まで無条件に同じ性質とはいえない。",
+      "distractorRationales": [
+        "時間反転対称な2次元トポロジカル絶縁体の境界の特徴。",
+        "単方向のカイラル状態をヘリカル状態と混同している。",
+        "バルクはギャップを持ち、境界に状態が現れる。",
+        "電流を運ぶ伝播する境界状態を考えている。"
+      ],
+      "sources": [
+        {
+          "title": "Dai et al. — Helical edge and surface states in HgTe quantum wells and bulk insulators",
+          "url": "https://arxiv.org/abs/0705.1516"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.7,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "原論文abstractのbulk gap・time reversal・helical edge stateの対応を照合。旧問のカイラルとの混同を修正。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000131"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000037",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "通常のBCS理論で、超伝導状態を説明する電子2個の相関した対を何というか。",
+      "choices": [
+        "クーパー対",
+        "電子と正孔の励起子",
+        "格子振動の量子であるフォノン",
+        "電荷密度振動の量子であるプラズモン"
+      ],
+      "correctIndex": 0,
+      "explanation": "BCS理論ではクーパー対の形成と、多数の対にわたる量子的な秩序によって通常の超伝導を記述する。電子と正孔の対とは区別する。",
+      "distractorRationales": [
+        "BCS理論に登場する電子対。",
+        "電子と正孔からなる励起で、問う電子2個の対ではない。",
+        "格子振動の量子であり、電子対そのものではない。",
+        "電荷密度の集団振動の量子であり、電子対ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, Superconductivity",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/9-8-superconductivity"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§9.8のBCS theoryとCooper pairsを照合。すべての超伝導物質が単純な通常BCSで説明済みという断定はしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000359",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "通常の固体金属で、弱い電場をかけたときの電流を主に担うものはどれか。",
+      "choices": [
+        "試料中を移動する原子核",
+        "伝導電子の集団的なドリフト",
+        "真空を伝わる光子だけ",
+        "結晶全体の一方向の並進運動"
+      ],
+      "correctIndex": 1,
+      "explanation": "金属では伝導電子の分布が電場に応答し、平均的なドリフトが電流を作る。原子核が試料中を流れるイオン伝導とは異なる。",
+      "distractorRationales": [
+        "通常の固体金属の導電の主役ではない。",
+        "電場への電子の応答が電流になる。",
+        "電荷の流れを光子だけが担うわけではない。",
+        "試料全体が動かなくても電流は流れる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, Model of Conduction in Metals",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/9-2-model-of-conduction-in-metals"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§9.2のfree electrons・drift velocity・current densityを照合。水銀などの例外がある「金属は常温ですべて固体」という旧説明を削除。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000379",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "真性半導体のバンド構造で、価電子帯の上端E_Vと伝導帯の下端E_Cの間に禁制帯がある。バンドギャップE_gを表す式はどれか。",
+      "choices": [
+        "E_g = E_C − E_V",
+        "E_g = E_V − E_C",
+        "E_g = E_C + E_V が基準によらず成立する",
+        "E_g = 0 がすべての真性半導体で成立する"
+      ],
+      "correctIndex": 0,
+      "explanation": "禁制帯の幅はE_C−E_V>0。エネルギーの基準を同じだけずらしても差は変わらない。",
+      "distractorRationales": [
+        "価電子帯上端から伝導帯下端までのエネルギー差。",
+        "符号が逆で負になる。",
+        "和はエネルギーの基準に依存し、禁制帯幅ではない。",
+        "問う半導体では有限の禁制帯がある。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, Semiconductors and Doping",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§9.6のvalence bandとconduction band間のenergy gapを照合し、エネルギー原点の変更に対する差の不変性を検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000046",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "ドルーデ模型で、電子の数密度n、電荷の大きさe、質量m、運動量緩和時間τを使う。磁場なしの定常直流電気伝導率σはどれか。",
+      "choices": [
+        "ne²τ/m",
+        "ne²/(mτ)",
+        "m/(ne²τ)",
+        "neτ/m"
+      ],
+      "correctIndex": 0,
+      "explanation": "定常状態では−eE−mv_d/τ=0。電流密度j=−ne v_dを使うとj=(ne²τ/m)Eとなるため、σ=ne²τ/m。電気抵抗率は1/σ。",
+      "distractorRationales": [
+        "ドルーデ模型の直流伝導率。",
+        "緩和時間への依存が逆。",
+        "電気抵抗率に対応する式。",
+        "電荷eが1つ不足している。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electromagnetism in Matter",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/em/el6.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.6.1式7.46–7.48と直流極限σ_DC=nq²τ/mを照合。旧解説の「抵抗の逆数」を抵抗率の逆数へ訂正し、定常運動から独立に導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000040",
+    "domain": "物理",
+    "subdomain": "物性・固体物理",
+    "content": {
+      "question": "ランダウのフェルミ液体理論が成立する低温の電子系で、フェルミ面付近の低エネルギー励起を記述する基本的な考え方はどれか。",
+      "choices": [
+        "相互作用の効果を伴う、長寿命のフェルミ準粒子で記述する",
+        "電子間相互作用が厳密に0であると結論する",
+        "電子をすべて格子振動のフォノンに置き換える",
+        "フェルミ面付近ほど励起が必ず瞬時に消滅するとする"
+      ],
+      "correctIndex": 0,
+      "explanation": "フェルミ液体では、電子が周囲との相互作用を伴った準粒子として振る舞う。フェルミ面へ近づくと崩壊の位相空間が小さくなり、低エネルギー励起を長寿命の準粒子として扱える。",
+      "distractorRationales": [
+        "フェルミ液体理論の準粒子描像。",
+        "有効質量や準粒子間相互作用などに相互作用の効果が残る。",
+        "フォノンは別の集団励起。",
+        "理論が成立する領域では、むしろフェルミ面近傍で長寿命になる。"
+      ],
+      "sources": [
+        {
+          "title": "Steven H. Simon — Lecture Notes for Quantum Matter",
+          "url": "https://www-thphys.physics.ox.ac.uk/people/SteveSimon/QCM2023/QuantumMatter.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問の曖昧な条件・分類・全肢の説明を見直し、独立に検算できる式や定義へ修正。理論的な提案と確立した観測を区別。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な専門知識と式の理解から置く初期仮定。実際の受験回答による難度推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§9.2印刷pp.139–141のdressed quasiparticlesと寿命の議論を照合。非フェルミ液体やすべての電子系への無条件な一般化はしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公開された一次資料・教材で法則と定義を照合し、設問・全選択肢・解説を独自に記述。文献の練習問題・図表・固有の表現の転載ではない。"
+    }
+  }
+]

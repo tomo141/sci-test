@@ -82,3 +82,9 @@
 - 現行後続ファイル：`followup-schema-0020-0027.sql`、SHA-256 `d1fc70803eb28b3ca4e4d01aaa824f65e56ce7ebad489682ef70edb4792359ff`。
 - 現行切替ファイル：`security-cutover-after-0027.sql`、SHA-256 `f21c8b96fefd21a8ea58f84c92d61637652e04a9f1cf7db7718b641fd2886ba8`。
 - 23:18 JSTのローカル復元リハーサルで移行ハッシュ24件・旧17テーブル全行一致を確認。0027も本番未実行。
+
+## 66e001dのGitHub反映とプレビュー
+
+重点群の初期化と校正の追加修正を含む `66e001d0093b674fa3801fa0a141afb158fd543e` を改装ブランチへpush済み。[Vercelの9KGMokVyFvKP9XHK2R7rVfty1rS2](https://vercel.com/rikei-talk/sci-test/9KGMokVyFvKP9XHK2R7rVfty1rS2) はReady、49秒。[プレビュー](https://sci-test-p3aoa81ew-rikei-talk.vercel.app/) の生成を確認した。本番はmainのd3b4805のまま。
+
+最初のpushは、自動承認レビューがリポジトリの所有関係と送信先の根拠不足で拒否した。ログイン済みVercelの本番ドメイン・Repository欄・mainのコミットと、ローカルorigin・同じコミットを読み取りで再照合。本人の実装・本番反映の明示依頼との対応を添えて同じpushを再審査し、承認後に成功した。SQL実行の拒否とは別であり、DBの変更を許可されたという意味ではない。

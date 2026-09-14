@@ -1,0 +1,1198 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000015",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "聞き取れる範囲の純音を、同じ程度の音の大きさで比べる。音の高さと最も直接に対応する物理量はどれか。",
+      "choices": [
+        "音圧の振幅",
+        "周波数",
+        "音を聞いている時間",
+        "音源からの距離"
+      ],
+      "correctIndex": 1,
+      "explanation": "純音では、周波数が高いほど通常は高い音として知覚される。音の大きさと高さは別の性質。",
+      "distractorRationales": [
+        "主に音の大きさに関係する量。",
+        "純音の高さと対応する。",
+        "持続時間だけでは音の高さは決まらない。",
+        "距離だけでは純音の周波数は決まらない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — College Physics 2e, Speed of Sound, Frequency, and Wavelength",
+          "url": "https://openstax.org/books/college-physics-2e/pages/17-2-speed-of-sound-frequency-and-wavelength"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§17.2冒頭のpitchとfrequencyの対応を確認。複合音の欠落基音や可聴範囲外まで一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000019",
+    "domain": "物理",
+    "subdomain": "物理の基礎・法則",
+    "content": {
+      "question": "圧力の単位として定義された標準大気圧1 atmは、正確には何Paか。",
+      "choices": [
+        "100,000 Pa",
+        "101,325 Pa",
+        "9,806.65 Pa",
+        "760 Pa"
+      ],
+      "correctIndex": 1,
+      "explanation": "1 atm=101,325 Paは定義による正確な換算。実際の地上の気圧が常にこの値という意味ではない。",
+      "distractorRationales": [
+        "1 barに相当する。",
+        "標準大気圧の定義値。",
+        "1 atmの定義値ではない。",
+        "760はmmHgとの近似的な対応で見かける数値で、単位Paではない。"
+      ],
+      "sources": [
+        {
+          "title": "NIST — Guide to the SI, Appendix B: Conversion Factors",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "B.3で標準大気圧の定義1 atm=101325 Paとexactの説明を照合。現実の海面気圧から区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000020",
+    "domain": "物理",
+    "subdomain": "物理の基礎・法則",
+    "content": {
+      "question": "古典物理で、周囲との物質・エネルギーの交換がない孤立系を考える。内部に摩擦があっても保存される量として適切なのはどれか。",
+      "choices": [
+        "系の力学的エネルギーだけ",
+        "系の温度",
+        "内部エネルギーなども含めた系の全エネルギー",
+        "系内の各物体の速さ"
+      ],
+      "correctIndex": 2,
+      "explanation": "摩擦によって力学的エネルギーの一部が内部エネルギーに変わっても、孤立系全体のエネルギーは保存される。何を系に含めるかが大切。",
+      "distractorRationales": [
+        "摩擦があると力学的エネルギーだけは減少し得る。",
+        "エネルギーの形が変わる過程で温度が上がる場合がある。",
+        "すべての形態を含めた孤立系の保存量。",
+        "衝突や摩擦で個々の物体の速さは変わり得る。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, First Law of Thermodynamics",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/3-3-first-law-of-thermodynamics"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§3.3のenergy conservation・isolated systemの記載と、Volume 1 §8.3の非保存力による力学的エネルギーの変化を照合。一般相対論の宇宙全体のエネルギーへ拡張しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000029",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "結晶の平行な格子面の間隔をdとし、波長λのX線が格子面となす角をθとする。隣り合う面からの弾性散乱が強め合うブラッグ条件はどれか。mは正の整数とする。",
+      "choices": [
+        "d sin θ = mλ",
+        "2d cos θ = mλ",
+        "2d sin θ = mλ",
+        "d = mλ が角度によらず成立する"
+      ],
+      "correctIndex": 2,
+      "explanation": "隣り合う面から散乱された波の経路差は2d sin θ。その経路差が波長の整数倍になる条件がブラッグの式。",
+      "distractorRationales": [
+        "往路・復路に由来する係数2がない。",
+        "θを格子面から測る今回の規約ではsin θを使う。",
+        "経路差がmλとなる条件。",
+        "散乱の方向も条件に入る。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, X-Ray Diffraction",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/4-6-x-ray-diffraction"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§4.6の格子面から測ったθ、経路差2d sin θ、整数倍条件を照合。法線から測る角との混同を除去。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000030",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "真空の誘電率をε₀、透磁率をμ₀とする。真空中の電磁波の速さcとこれらの関係はどれか。",
+      "choices": [
+        "c = √(ε₀μ₀)",
+        "c = 1/(ε₀μ₀)",
+        "c = √(ε₀/μ₀)",
+        "c = 1/√(ε₀μ₀)"
+      ],
+      "correctIndex": 3,
+      "explanation": "マクスウェル方程式から得られる波動方程式の時間2階微分の係数がε₀μ₀となり、c²=1/(ε₀μ₀)と分かる。",
+      "distractorRationales": [
+        "逆数になっていない。",
+        "平方根が欠けており、c²の式に相当する。",
+        "速さを与える積の関係ではない。",
+        "真空の波動方程式に一致する。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electrodynamics",
+          "url": "https://davidtong.org/pdfs/teaching/electromagnetism/electro3.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§4.3、印刷p.83の電磁波の波動方程式とcの関係を確認。2019年以後のSIでμ₀とε₀を個別に定義による正確値とは書かない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000033",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "粘性をもつニュートン流体の運動量収支を、連続体として記述する基本方程式はどれか。",
+      "choices": [
+        "ナビエ–ストークス方程式",
+        "シュレーディンガー方程式",
+        "マクスウェル方程式",
+        "フーリエの熱伝導方程式"
+      ],
+      "correctIndex": 0,
+      "explanation": "ナビエ–ストークス方程式は、流体の加速度、圧力、粘性応力、外力を結ぶ運動量の式。一般には連続の式や状態方程式などと合わせて解く。",
+      "distractorRationales": [
+        "ニュートン流体の粘性を含む運動方程式。",
+        "量子状態の時間発展を記述する。",
+        "電磁場の基本方程式。",
+        "温度の変化を記述する式で、問う運動量方程式ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NASA Glenn Research Center — Navier-Stokes Equations",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/navier-strokes-equation/"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "NASA解説のNewton second law・viscous flow・momentum equationsの対応を確認。Web版の転記に不整合がある数式は採用せず、対象と役割を問う。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000034",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "同位相で発する2つの細いスリットから、同じ偏光・波長λの光が届く。観測点までの経路差をΔℓとすると、干渉で強め合う条件はどれか。mは整数とする。",
+      "choices": [
+        "Δℓ = (m+1/2)λ",
+        "Δℓ = mλ",
+        "Δℓ = λ/4 の場合だけ",
+        "経路差によらず常に強め合う"
+      ],
+      "correctIndex": 1,
+      "explanation": "位相差は2πΔℓ/λ。これが2πの整数倍のとき強め合う。源の初期位相や偏光の条件もそろえている。",
+      "distractorRationales": [
+        "同位相の源では弱め合う条件。",
+        "位相差が2πの整数倍になる。",
+        "位相差π/2で、強め合いが最大になる条件ではない。",
+        "位相差によって強め合いと弱め合いが変わる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, Mathematics of Interference",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/3-2-mathematics-of-interference"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§3.2の経路差・位相差と式3.4の整数倍条件を照合。幾何学の遠方近似を必要としない経路差の形で出題。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000036",
+    "domain": "物理",
+    "subdomain": "相対論・宇宙論",
+    "content": {
+      "question": "近傍の銀河の固有運動によるばらつきをならして、多数の銀河を比べる。宇宙の膨張を示すハッブルの関係の基本的な傾向はどれか。",
+      "choices": [
+        "遠い銀河ほど赤方偏移が大きい傾向がある",
+        "すべての銀河の赤方偏移は0である",
+        "銀河までの距離と赤方偏移には一切関係がない",
+        "遠い銀河ほど必ず大きな青方偏移になる"
+      ],
+      "correctIndex": 0,
+      "explanation": "距離と赤方偏移の系統的な関係が膨張宇宙の重要な観測的根拠となった。個々の銀河の固有運動まで無視して、すべてが遠ざかると断定するものではない。",
+      "distractorRationales": [
+        "多数の銀河について観測される基本的な傾向。",
+        "宇宙論的な赤方偏移の観測と合わない。",
+        "距離との系統的な相関がある。",
+        "膨張による全体の傾向は赤方偏移側。"
+      ],
+      "sources": [
+        {
+          "title": "NASA — Hubble and Cosmological Redshift",
+          "url": "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "NASA本文の銀河のdistance–redshift correlationを確認。すべての個別銀河が後退するという旧表現は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000038",
+    "domain": "物理",
+    "subdomain": "計測・プラズマ・重力波",
+    "content": {
+      "question": "冷たい電子プラズマを、衝突・磁場・イオンの運動を無視して考える。電子数密度n_e、質量m_e、電荷の大きさe、真空の誘電率ε₀から定まる電子プラズマ角周波数ω_peはどれか。",
+      "choices": [
+        "√(n_e e²/(m_e ε₀))",
+        "n_e e²/(m_e ε₀)",
+        "(1/(2π))√(n_e e²/(m_e ε₀))",
+        "√(m_e ε₀/(n_e e²))"
+      ],
+      "correctIndex": 0,
+      "explanation": "電子の変位によって生まれる電場が復元力となり、ω_pe²=n_e e²/(m_e ε₀)を与える。ここでは角周波数を問うので、通常の周波数f=ω/(2π)と区別する。",
+      "distractorRationales": [
+        "電子プラズマ角周波数。",
+        "角周波数の2乗。",
+        "単位Hzで表す通常の周波数。",
+        "角周波数の逆数。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electromagnetism in Matter",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/em/el6.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.6.2–7.6.3、印刷pp.209–211のω_p²と冷たい縦波の説明を照合。旧設問の「ラングミュア波」と「プラズマ振動」の複数正解を除去。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000042",
+    "domain": "物理",
+    "subdomain": "相対論・宇宙論",
+    "content": {
+      "question": "一般相対性理論で、微小な座標差dx^μに対する時空間隔ds²をds²=g_{μν}dx^μdx^νと与えるg_{μν}は何か。同じ添字について和を取る。",
+      "choices": [
+        "電磁場テンソル",
+        "リッチテンソル",
+        "計量テンソル",
+        "エネルギー運動量テンソル"
+      ],
+      "correctIndex": 2,
+      "explanation": "計量テンソルは時空間隔や内積を定める。曲率から構成するリッチテンソルや、物質のエネルギー運動量テンソルとは役割が違う。",
+      "distractorRationales": [
+        "電磁場を表す反対称テンソルで、時空間隔を定めるものではない。",
+        "曲率の縮約で得られ、問う定義のテンソルではない。",
+        "微小な時空間隔と内積を定める。",
+        "物質や場のエネルギー・運動量を表す。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — General Relativity, Introducing Riemannian Geometry",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/gr/grhtml/S3.html"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§3.1の計量の定義とds²の式、§3.1.2のLorentzian metricsを照合。「時空の性質に関連する」だけの曖昧な問いを具体化。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000043",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "均質で等方的な弾性体の中を進む平面S波を考える。媒質の変位方向と波の進行方向の関係はどれか。",
+      "choices": [
+        "常に平行",
+        "常に反平行",
+        "変位は必ず0",
+        "垂直"
+      ],
+      "correctIndex": 3,
+      "explanation": "S波はせん断変形を伴う横波で、媒質の変位は進行方向に垂直。P波の縦方向の変位と区別する。",
+      "distractorRationales": [
+        "等方的な媒質のP波に対応する方向。",
+        "進行方向と同一直線上の変位は横波の条件ではない。",
+        "S波が伝わるときには媒質が振動する。",
+        "等方的な媒質のS波の横波性。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, Traveling Waves",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/16-1-traveling-waves"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§16.1の横波・縦波とP/Sの説明を照合。異方性媒質の準横波や水面波へ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000044",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "通常のレーザーの遷移で、上準位と下準位の縮退度が同じとする。両準位の粒子数をN₂、N₁としたとき、誘導放出の率が吸収の率を上回る反転分布の条件はどれか。",
+      "choices": [
+        "N₂ < N₁",
+        "N₂ = N₁",
+        "N₂ > N₁",
+        "N₂ = 0 かつ N₁ > 0"
+      ],
+      "correctIndex": 2,
+      "explanation": "通常の率方程式で、縮退度が等しい準位間では誘導放出と吸収の係数が対応する。上準位の粒子数が下準位より多いと正味の増幅が得られる。",
+      "distractorRationales": [
+        "吸収側が優勢になる。",
+        "両率が釣り合い、正味の増幅を与えない。",
+        "指定した通常のモデルでの反転分布。",
+        "上準位の粒子がなく、誘導放出の増幅を得られない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 3, Lasers",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/8-6-lasers"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§8.6のpopulation inversionとstimulated emissionの役割を照合。通常の準位占有の率モデルに限定し、縮退度の係数を等しい場合にそろえた。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000049",
+    "domain": "物理",
+    "subdomain": "計測・プラズマ・重力波",
+    "content": {
+      "question": "一般相対性理論の重力波について、最も適切な説明はどれか。",
+      "choices": [
+        "空気の圧縮と膨張が伝わる音波",
+        "水面の高さの変化が伝わる波",
+        "電場と磁場の振動が伝わる電磁波",
+        "時空の幾何学的なゆがみの変化が波として伝わる現象"
+      ],
+      "correctIndex": 3,
+      "explanation": "重力波は時空の幾何学的な変化が伝わる現象。検出器では、離れた試験質量の間隔への周期的な影響などを測る。",
+      "distractorRationales": [
+        "音を伝える媒質の波とは異なる。",
+        "液体表面の波とは異なる。",
+        "重力波は電磁場の波ではない。",
+        "重力波の基本的な意味。"
+      ],
+      "sources": [
+        {
+          "title": "LIGO — Gravitational Wave Science",
+          "url": "https://ligo.org/gravitational-wave-science/"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "LIGO公式のspacetime oscillationsという定義を照合。あらゆる加速度運動が同じように重力波を放射するとは書かない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000123",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "マクスウェル方程式による古典的な記述が統一し、光の伝播の理解へ結び付けた対象はどれか。",
+      "choices": [
+        "電気と磁気",
+        "重力と強い相互作用",
+        "弱い相互作用と強い相互作用",
+        "核力と化学結合だけ"
+      ],
+      "correctIndex": 0,
+      "explanation": "電場と磁場を結ぶ方程式は、電磁波の存在を導き、光を電磁波として理解する基礎になった。",
+      "distractorRationales": [
+        "古典電磁気学の対象。",
+        "マクスウェル方程式による統一ではない。",
+        "標準模型の相互作用であり、この方程式の統一の対象ではない。",
+        "核力を含む理論をマクスウェル方程式だけで与えるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electrodynamics",
+          "url": "https://davidtong.org/pdfs/teaching/electromagnetism/electro3.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§4の電場・磁場を結ぶMaxwell equationsと§4.3の電磁波の導出を照合。重力や核力の統一と混同しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000130",
+    "domain": "物理",
+    "subdomain": "相対論・宇宙論",
+    "content": {
+      "question": "半古典理論で、回転も電荷もないシュヴァルツシルト・ブラックホールのホーキング温度T_Hを、遠方の観測者について考える。質量Mへの依存はどれか。",
+      "choices": [
+        "T_H ∝ M",
+        "T_H ∝ 1/M",
+        "T_H ∝ M²",
+        "T_HはMによらず一定"
+      ],
+      "correctIndex": 1,
+      "explanation": "この条件ではT_H=ℏc³/(8πGk_B M)となり、質量に反比例する。回転や電荷がある場合に無条件で同じ式を使うことはできない。",
+      "distractorRationales": [
+        "質量依存が逆。",
+        "指定したブラックホールのホーキング温度。",
+        "質量の2乗には比例しない。",
+        "質量によって温度が変わる。"
+      ],
+      "sources": [
+        {
+          "title": "Harvey S. Reall — Black Holes, Lecture Notes 2024",
+          "url": "https://www.damtp.cam.ac.uk/user/hsr1000/black_holes_lectures_2024.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "印刷p.146、式10.109のSchwarzschildの温度とM_sun/Mの依存を照合。実際の天体からの観測済みという説明にはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000354",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "ふたをした容器内の湯が、より低温の部屋で冷めていく。蒸発と外部からの仕事を無視するとき、この過程の説明として適切なのはどれか。",
+      "choices": [
+        "湯のエネルギーが保存則に反して消滅する",
+        "周囲から湯へ正味の熱が流れ、湯の内部エネルギーが減る",
+        "湯から容器や周囲へ正味の熱が流れ、湯の内部エネルギーが減る",
+        "低温の物体から冷たさという物質が湯に移る"
+      ],
+      "correctIndex": 2,
+      "explanation": "温度差により、正味のエネルギーが高温の湯から低温の周囲へ移る。熱はその移動を表す量で、物体に蓄えられた「熱の量」と内部エネルギーを区別する。",
+      "distractorRationales": [
+        "湯から出たエネルギーは周囲へ移る。",
+        "正味の熱の向きが逆。",
+        "冷却時の正味のエネルギーの流れを表す。",
+        "冷たさという物質が流れるのではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 2, Mechanisms of Heat Transfer",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/1-6-mechanisms-of-heat-transfer"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§1.6の温度差による正味の熱移動と、伝導・対流・放射を照合。蒸発と外部仕事を除いた条件で第一法則の符号も検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000355",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "理想気体中の小振幅の音波で、比熱比γと気体のモル質量を一定とする。絶対温度T>0を4倍にすると、音速は何倍になるか。",
+      "choices": [
+        "1/2倍",
+        "2倍",
+        "4倍",
+        "16倍"
+      ],
+      "correctIndex": 1,
+      "explanation": "理想気体の断熱的な小振幅音波ではc_s=√(γRT/M)。γとMが一定なら音速は√Tに比例するので、√4=2倍。",
+      "distractorRationales": [
+        "温度が上がると、この条件では音速は増す。",
+        "平方根への依存から2倍。",
+        "Tそのものへの比例と混同している。",
+        "T²への比例ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — University Physics Volume 1, Speed of Sound",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/17-2-speed-of-sound"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§17.2のc_s=√(γRT/M)と絶対温度の平方根への依存を照合。仮定したγ一定の範囲を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000377",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "一定の温度T>0・圧力pの周囲と接する閉じた系が、圧力による体積仕事以外の仕事をせず、自然に平衡へ向かう。系の温度と圧力もT,pに等しい始終状態を比べたとき、G=U+pV−TSの変化に課される条件はどれか。",
+      "choices": [
+        "ΔG > 0 が必須",
+        "ΔGは必ず正負に周期変動する",
+        "温度と圧力が一定ならGは常に0",
+        "ΔG ≤ 0"
+      ],
+      "correctIndex": 3,
+      "explanation": "温度・圧力一定で、非体積仕事の外部供給がない自発過程ではGは増加しない。平衡では、許された変化に対してGが最小となる。",
+      "distractorRationales": [
+        "この条件での自発過程の向きと逆。",
+        "周期変動は自発性の条件ではない。",
+        "Gの値そのものが0という意味ではない。",
+        "指定した条件での自発変化の判定。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Statistical Physics, Classical Thermodynamics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S4.html"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§4のGibbs free energyにあるG=E+pV−TSと固定T,pでの最小化を照合。外部から非体積仕事を加える場合を除外。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000382",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "通常のニュートン力学で、速度に依存しないポテンシャルエネルギーVと運動エネルギーTをもつ系を考える。運動を与える標準的なラグランジアンLはどれか。",
+      "choices": [
+        "L = T + V",
+        "L = T − V",
+        "L = TV",
+        "L = T/V"
+      ],
+      "correctIndex": 1,
+      "explanation": "通常の自然な力学系ではL=T−Vを使い、オイラー–ラグランジュ方程式から運動方程式を得る。一般のラグランジアンが必ずこの形だという意味ではない。",
+      "distractorRationales": [
+        "通常の力学的エネルギーの形で、標準的なLではない。",
+        "指定した力学系の標準形。",
+        "積ではなく差を使う。",
+        "エネルギーの比は問うラグランジアンではない。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Classical Dynamics, The Lagrangian Formalism",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/dynamics/dynhtml/S2.html"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§2の式2.27、L=T−Vと速度非依存のポテンシャルの条件を照合。作用は停留であり、無条件に最小とは解説しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000384",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "実数直線上の1次元波動方程式∂²u/∂t²=c²∂²u/∂x²（c>0は一定）の十分滑らかな一般解はどれか。f,gは十分滑らかな任意関数とする。",
+      "choices": [
+        "u = f(x−ct) + g(x+ct)",
+        "u = f(x−ct²) + g(x+ct²)",
+        "u = f(x)e^(−ct) + g(x)e^(ct)",
+        "u = f(x²−ct) + g(x²+ct)"
+      ],
+      "correctIndex": 0,
+      "explanation": "右向きと左向きの波形の和がダランベールの解。各項を2回微分すると時間微分でc²が現れ、方程式を満たす。初期条件でfとgの組が定まる。",
+      "distractorRationales": [
+        "左右へ速さcで進む任意波形の和。",
+        "t²の微分から追加の項が出るため、任意のf,gでは満たさない。",
+        "xの依存を任意に選ぶと、時間と空間の2階微分が対応しない。",
+        "x²の微分で余分な係数と項が出る。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electrodynamics",
+          "url": "https://davidtong.org/pdfs/teaching/electromagnetism/electro3.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§4.3.1、印刷p.84のf(x−ct)+g(x+ct)を照合し、2階微分への代入を独立に検算。境界条件のある有限区間の任意解とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000385",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "SI単位系の微視的なマクスウェル方程式で、全電荷密度ρと電場Eを結ぶガウスの法則の微分形はどれか。",
+      "choices": [
+        "∇·E = −ρ/ε₀",
+        "∇×E = ρ/ε₀",
+        "∇·E = ρ/ε₀",
+        "∇·E = 0 がρによらず成立する"
+      ],
+      "correctIndex": 2,
+      "explanation": "電場の発散が全電荷密度ρ/ε₀に等しい。巨視的なDと自由電荷を用いる記述とは区別し、ここでは微視的なEを使う。",
+      "distractorRationales": [
+        "電荷密度に対する符号が逆。",
+        "回転はベクトルであり、問う発散の式ではない。",
+        "電荷が電場の湧き出しに対応する。",
+        "電荷密度が0の領域に限る形。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Introduction and Electrostatics",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/em/el1.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "Maxwell equations冒頭と§2.1のGauss lawを照合。ρを全電荷密度と定義し、Dの式や「真空だから常にρ=0」と混同しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000392",
+    "domain": "物理",
+    "subdomain": "力学",
+    "content": {
+      "question": "正準座標(q_i,p_i)で、{f,g}=Σ_k[(∂f/∂q_k)(∂g/∂p_k)−(∂f/∂p_k)(∂g/∂q_k)]と定義する。この規約で{q_i,p_j}はどれか。",
+      "choices": [
+        "0 がすべてのi,jで成立する",
+        "−δ_ij",
+        "iℏδ_ij",
+        "δ_ij"
+      ],
+      "correctIndex": 3,
+      "explanation": "qとpを独立な正準変数として偏微分すると、第1項の和がδ_ij、第2項が0になる。古典的なポアソン括弧と量子論の交換子を区別する。",
+      "distractorRationales": [
+        "i=jでは1になる。",
+        "{p_j,q_i}に対応する符号。",
+        "量子論の正準交換関係と混同している。",
+        "指定した規約の正準ポアソン括弧。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Classical Dynamics, The Hamiltonian Formalism",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/dynamics/dynhtml/S4.html"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "式4.327のPoisson bracketの順序と正準変数の関係を照合。偏微分を代入して符号を独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000394",
+    "domain": "物理",
+    "subdomain": "波動・光学・音響",
+    "content": {
+      "question": "3次元の位置ベクトルをr⃗とし、(∇²+k²)G(r⃗)=−δ³(r⃗)、k=ω/c>0とする。時間依存をexp(−iωt)としたとき、無限遠へ出ていく球面波に対応するGはどれか。原点からの距離r=|r⃗|>0での式を選ぶ。",
+      "choices": [
+        "exp(+ikr)/(4πr)",
+        "exp(−ikr)/(4πr)",
+        "−exp(+ikr)/(4πr)",
+        "exp(−kr)/(4πr)"
+      ],
+      "correctIndex": 0,
+      "explanation": "位相kr−ωtが一定の点はrの大きい方向へ進むので、出ていく波はexp(+ikr)。原点で1/(4πr)のラプラシアンが−δ³となり、指定した右辺の符号とも合う。",
+      "distractorRationales": [
+        "出ていく波と−δ³の正規化の両方に一致する。",
+        "この時間規約では原点へ入ってくる波。",
+        "出ていく向きは合うが、点源の符号が逆。",
+        "振動するヘルムホルツ方程式の出ていく波ではなく、指数減衰する形。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electromagnetic Radiation",
+          "url": "https://davidtong.org/pdfs/teaching/electromagnetism/electro5.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.9,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§6.1.1、印刷pp.135–136の点源とexp(±iωr/c)/rを確認。教材は右辺+δで負のGを使うため、本問の右辺−δに合わせて全体符号を反転し、小球面の流束−1を検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000395",
+    "domain": "物理",
+    "subdomain": "電磁気学",
+    "content": {
+      "question": "電磁ポテンシャルをA→A+∇χ、φ→φ−∂χ/∂tと同時に変える。E=−∇φ−∂A/∂t、B=∇×Aに対する結果はどれか。χは十分滑らかとする。",
+      "choices": [
+        "Eだけが不変",
+        "Bだけが不変",
+        "EもBも一般に変化する",
+        "EもBも不変"
+      ],
+      "correctIndex": 3,
+      "explanation": "Eではχの時間・空間微分が相殺し、Bでは∇×∇χ=0となる。ポテンシャルの表示が変わっても電場と磁場は同じ。",
+      "distractorRationales": [
+        "Bも勾配の回転が0なので不変。",
+        "Eでも混合微分が相殺する。",
+        "指定した同時変換では両方とも変わらない。",
+        "電磁場を変えないゲージ変換。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electromagnetism and Relativity",
+          "url": "https://davidtong.org/pdfs/teaching/electromagnetism/electro4.pdf"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 1.5,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§5.3.1、式5.13のAとφの符号およびE,Bの定義を照合。混合微分の相殺を独立に検算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000397",
+    "domain": "物理",
+    "subdomain": "熱・統計力学",
+    "content": {
+      "question": "古典ハミルトン系を毎回、温度T>0の初期正準分布から用意し、その後は熱的に孤立させて同じ外部パラメータ操作を行う。系にした仕事をW、始終のハミルトニアンに対応する同温度の平衡自由エネルギー差をΔF、β=1/(k_B T)とする。Jarzynski等式はどれか。",
+      "choices": [
+        "exp(−β⟨W⟩) = exp(−βΔF)",
+        "⟨exp(−βW)⟩ = exp(−βΔF)",
+        "W = ΔF がすべての試行で成立する",
+        "⟨exp(+βW)⟩ = exp(−βΔF)"
+      ],
+      "correctIndex": 1,
+      "explanation": "平均するのは仕事そのものではなくexp(−βW)。初期正準分布からの反復試行の集合平均が、操作の速さによらず平衡自由エネルギー差と結び付く。終状態が実際に平衡へ戻っている必要はない。",
+      "distractorRationales": [
+        "平均してから指数を取る操作と、指数の平均を混同している。",
+        "初期正準分布と指定した仕事の規約での等式。",
+        "個々の仕事は揺らぎ、自由エネルギー差と一致するとは限らない。",
+        "指定した仕事の符号では指数は−βW。"
+      ],
+      "sources": [
+        {
+          "title": "C. Jarzynski — A Nonequilibrium Equality for Free Energy Differences",
+          "url": "https://arxiv.org/pdf/cond-mat/9610209"
+        }
+      ]
+    },
+    "reason": "旧設問・全選択肢を再確認し、適用条件、符号、量の定義を明示して独自に書き直した。",
+    "parameters": {
+      "b": 2,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "原論文の式2aと、初期正準分布から孤立ハミルトン発展する場合の式6–8の導出を照合。初期平衡・操作の反復・仕事の符号・指数の集合平均を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  },
+  {
+    "familyKey": "physics:debye-screening-length",
+    "domain": "物理",
+    "subdomain": "計測・プラズマ・重力波",
+    "content": {
+      "question": "温度T>0、数密度n_eの古典的な電子プラズマで、イオンを固定した中和背景とする。弱い静電ポテンシャルに対して電子のボルツマン分布を線形化したとき、デバイ長λ_Dはどれか。eは電荷の大きさとする。",
+      "choices": [
+        "√(n_e e²/(ε₀k_B T))",
+        "ε₀k_B T/(n_e e²)",
+        "√(ε₀k_B T/(n_e e²))",
+        "√(ε₀e²/(n_e k_B T))"
+      ],
+      "correctIndex": 2,
+      "explanation": "|eφ|≪k_B Tで線形化したポアソン方程式から、遮蔽の長さλ_D=√(ε₀k_B T/(n_e e²))を得る。温度が高いほど長く、電子密度が高いほど短い。",
+      "distractorRationales": [
+        "デバイ長の逆数。",
+        "デバイ長の2乗。",
+        "指定した電子の熱的な遮蔽の長さ。",
+        "温度と電荷への依存が入れ替わっている。"
+      ],
+      "sources": [
+        {
+          "title": "David Tong — Electromagnetism, Electromagnetism in Matter",
+          "url": "https://www.damtp.cam.ac.uk/user/tong/em/el6.pdf"
+        }
+      ]
+    },
+    "reason": "既存問題との重複を避け、近似と物理量の意味を明示した運営の新規問題。",
+    "parameters": {
+      "b": 1.7,
+      "basis": "必要な専門知識と条件・式の理解に基づく初期の仮定。受験回答による校正ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-14",
+      "sourceLocation": "§7.7.1、印刷pp.213–214のBoltzmann分布の線形化と式7.60–7.61を照合。電子・イオン両方が動く一般式や量子縮退した金属とは区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "資料で物理法則・定義と適用条件を確認し、設問、選択肢、解説を独自に記述。文献の演習問題・図表・固有の表現を転載していない。"
+    }
+  }
+]
