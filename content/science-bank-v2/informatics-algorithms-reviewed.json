@@ -1,0 +1,662 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000116",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "同じ大きさの要素を連続した領域に置く配列を考える。メモリアクセスとアドレス計算を定数時間とするモデルで、添字を指定した一要素へのアクセス時間は、要素数nに対してどの増え方か。",
+      "choices": [
+        "Θ(log n)",
+        "Θ(n)",
+        "Θ(1)",
+        "Θ(n²)"
+      ],
+      "correctIndex": 2,
+      "explanation": "先頭位置と要素サイズが分かれば、添字から目的の位置を直接計算できる。この条件では一要素へのアクセスは定数時間。配列の途中への挿入で後続要素をずらす処理とは区別する。",
+      "distractorRationales": [
+        "探索範囲を繰り返し半分にする処理は不要。",
+        "先頭から全て順にたどる必要はない。",
+        "必要な計算とアクセスの数がnによらない。",
+        "二重の反復処理は不要。"
+      ],
+      "sources": [
+        {
+          "title": "NIST DADS — array",
+          "url": "https://xlinux.nist.gov/dads/HTML/array.html"
+        }
+      ]
+    },
+    "reason": "抽象的な配列と実装・計算モデルを明示。静的配列だけの制約を全配列へ一般化しない。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "DADSの整数添字によるランダムアクセスの定義を確認。設問で連続領域・一定要素長・計算モデルを追加し、base＋index×sizeから定数時間を導出。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000252"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000102",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "スタックにA、B、Cの順にpushし、その後にpopを3回行う。取り出される順はどれか。",
+      "choices": [
+        "A、B、C",
+        "C、B、A",
+        "B、C、A",
+        "C、A、B"
+      ],
+      "correctIndex": 1,
+      "explanation": "スタックは後入れ先出し（LIFO）。最後に追加したCから、B、Aの順に取り出す。先入れ先出しのキューならA、B、Cになる。",
+      "distractorRationales": [
+        "キューの先入れ先出しに当たる。",
+        "スタックの後入れ先出しの順。",
+        "Bより後に追加したCが先になる。",
+        "Cの次はBであり、Aではない。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Bags, Queues, and Stacks",
+          "url": "https://algs4.cs.princeton.edu/13stacks/"
+        }
+      ]
+    },
+    "reason": "データ構造の操作で知識を確認し、誤分類された旧同義問を統合。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Pushdown stackのLIFOの定義を確認し、教材にない三要素の操作列を独立作成。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000254"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000108",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "各ノードで「左部分木の全キー＜ノードのキー＜右部分木の全キー」を満たす二分探索木がある。キーを小さい順に列挙する再帰的な訪問順はどれか。",
+      "choices": [
+        "根→左部分木→右部分木",
+        "左部分木→右部分木→根",
+        "根→右部分木→左部分木",
+        "左部分木→根→右部分木"
+      ],
+      "correctIndex": 3,
+      "explanation": "左の小さいキーを列挙し、根を出力してから右の大きいキーを列挙する中順走査で昇順になる。探索木の大小関係を満たさない一般の二分木では、同じ走査だけで昇順になるとは限らない。",
+      "distractorRationales": [
+        "根を左側の小さいキーより先に出してしまう。",
+        "根を右側の大きいキーより後に出してしまう。",
+        "大きい側を小さい側より先に出してしまう。",
+        "探索木の大小関係と一致する。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Binary Search Trees",
+          "url": "https://algs4.cs.princeton.edu/32bst/"
+        }
+      ]
+    },
+    "reason": "単なる走査名の暗記から、大小関係との対応へ改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "二分探索木の定義とRange searchのinorder traversalによる昇順列挙を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000111",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "隣接した逆順の要素を交換しながら走査を繰り返す標準的なバブルソートを考える。n個の異なる要素に対する最悪時の比較・交換回数の増え方はどれか。",
+      "choices": [
+        "Θ(n)",
+        "Θ(n log n)",
+        "Θ(n²)",
+        "Θ(log n)"
+      ],
+      "correctIndex": 2,
+      "explanation": "逆順の入力では、順序が逆の要素対がn(n−1)/2組ある。隣接交換一回で直せる逆転は一つなので、二乗に比例する回数が必要。早期終了を入れた実装の最良時の回数とは区別する。",
+      "distractorRationales": [
+        "早期終了つきの整列済み入力などの最良時と混同している。",
+        "バブルソートの逆順入力では二乗回の交換が必要。",
+        "最悪時は二乗に比例して増える。",
+        "全要素を扱うソートの最悪時として小さすぎる。"
+      ],
+      "sources": [
+        {
+          "title": "NIST DADS — bubble sort",
+          "url": "https://xlinux.nist.gov/dads/HTML/bubblesort.html"
+        }
+      ]
+    },
+    "reason": "Oによる複数の上界の重複を避ける。最良・最悪と早期終了の条件を区別。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "隣接比較交換と二乗の計算量の定義を確認。逆順の反転数n(n−1)/2で下界も独立導出し、Θで増え方を指定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000088",
+      "10000000-0000-4000-8007-000000000269"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000089",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "ハッシュテーブルで、異なる二つのキーが同じバケット番号に対応した。この現象を何というか。",
+      "choices": [
+        "衝突",
+        "デッドロック",
+        "オーバーフロー",
+        "ページフォルト"
+      ],
+      "correctIndex": 0,
+      "explanation": "異なるキーが同じ保存先候補に割り当てられることを衝突という。同じバケットでもキーそのものを比較するなど、衝突を解決する仕組みを使って両方を扱える。",
+      "distractorRationales": [
+        "異なるキーが同じ保存先候補に対応する現象。",
+        "処理が互いに資源を待ち、進めなくなること。",
+        "数値表現の範囲や容量の超過で、ここでは指定されていない。",
+        "仮想記憶の例外で、ハッシュの保存先の一致ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Hash Tables",
+          "url": "https://algs4.cs.princeton.edu/34hash/"
+        }
+      ]
+    },
+    "reason": "衝突を即座のデータ喪失や計算不能とする誤解を避ける。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "冒頭のhashingとcollision resolution、およびseparate chainingで同じバケットのキーを扱う説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000272",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "配列の中央の要素と比較し、候補を左右どちらかへ半減する標準的な二分探索を行う。正しく探索するために必要な配列の状態はどれか。",
+      "choices": [
+        "全ての値が異なり、順序は任意である",
+        "使う比較規則に従って、配列全体が整列している",
+        "要素数が偶数である",
+        "要素が整数で、全て正である"
+      ],
+      "correctIndex": 1,
+      "explanation": "整列した順序があるから、比較結果に応じて一方の半分を候補から外せる。重複や要素数の奇偶は本質的な条件ではない。探索全体を対数時間で実行するには、添字で定数時間アクセスできる配列などを使う。",
+      "distractorRationales": [
+        "相異なるだけで未整列なら、半分を除外できない。",
+        "比較と同じ規則での整列が半減を正当化する。",
+        "奇数でも中央と探索範囲を定められる。",
+        "負数や文字列などでも整列と比較ができれば探索できる。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Elementary Symbol Tables",
+          "url": "https://algs4.cs.princeton.edu/31elementary/"
+        }
+      ]
+    },
+    "reason": "旧問の「全要素が一意でない」という曖昧な否定と、答えのない条件を改訂。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Binary search in an ordered arrayの整列・中央比較・範囲更新を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000105",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "n個の相異なるキーを、各分割で一様ランダムにピボットを選ぶ標準的なクイックソートで並べ替える。比較回数の期待値の増え方はどれか。",
+      "choices": [
+        "Θ(n²)",
+        "Θ(log n)",
+        "Θ(n)",
+        "Θ(n log n)"
+      ],
+      "correctIndex": 3,
+      "explanation": "無作為なピボット選択に関する比較回数の期待値はn log nに比例する。毎回ちょうど半分に分かれることを仮定しているわけではない。極端に偏った分割が続けば最悪時は二乗になる。",
+      "distractorRationales": [
+        "最悪時の増え方で、指定した期待値ではない。",
+        "入力全体を分割する比較だけでも線形の仕事がある。",
+        "全体の期待比較回数としては小さすぎる。",
+        "ランダム選択での期待比較回数の増え方。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Quicksort",
+          "url": "https://algs4.cs.princeton.edu/23quicksort/"
+        }
+      ]
+    },
+    "reason": "平均を毎回均等な分割と同一視した旧説明を修正し、期待値の確率モデルを明示。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "無作為シャッフルとランダムなピボットの対応、相異なるキーで平均約2n ln nの比較、最悪約n²/2の記述を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000178",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "チェイン法のハッシュテーブルで、n個のキーがM個のバケットに一様に分散すると仮定する。n/Mを定数以下に保ち、ハッシュとキー比較が定数時間なら、一件の探索の期待時間はどれか。",
+      "choices": [
+        "Θ(1)",
+        "Θ(log n)",
+        "Θ(n)",
+        "Θ(n²)"
+      ],
+      "correctIndex": 0,
+      "explanation": "一つのバケットに入るキー数の期待値はn/M。これを定数以下に保てば、指定バケット内の探索も期待定数時間になる。全キーが一つに偏るなどの最悪時の定数時間は保証しない。",
+      "distractorRationales": [
+        "一定の負荷率と一様分散の仮定の下での増え方。",
+        "平衡木の探索などと混同している。",
+        "一つのバケットへ集中する最悪時などの増え方。",
+        "指定した探索に二重の全走査は不要。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Hash Tables",
+          "url": "https://algs4.cs.princeton.edu/34hash/"
+        }
+      ]
+    },
+    "reason": "「良いハッシュ関数」だけで無条件に平均O(1)とせず、容量と入力操作の条件を示す。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Assumption Jとseparate chainingのn/Mに依存する探索の説明を確認。定数負荷率とキー操作のコストを設問に明記。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000273"
+    ]
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000282",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "初期容量1の空の動的配列へ末尾追加をn回行い、満杯なら容量を2倍にして全要素をコピーする。一要素のコピーを定数時間とすると、追加一回当たりの償却時間はどれか。",
+      "choices": [
+        "Θ(log n)",
+        "Θ(n)",
+        "Θ(1)",
+        "Θ(n²)"
+      ],
+      "correctIndex": 2,
+      "explanation": "n回の追加までの再確保でコピーする総数は1＋2＋4＋…となり、nの定数倍以内。通常の追加も含め全体がΘ(n)なので、一回当たりの償却時間はΘ(1)。再確保する一回だけを見ればΘ(n)かかることがある。",
+      "distractorRationales": [
+        "倍増回数と、追加一回当たりの仕事量を混同している。",
+        "大きな再確保を伴う一回のコストで、償却ではない。",
+        "多数の追加全体のコストを追加数で割った増え方。",
+        "追加n回全体でも二乗のコピーは不要。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Bags, Queues, and Stacks",
+          "url": "https://algs4.cs.princeton.edu/13stacks/"
+        }
+      ]
+    },
+    "reason": "償却と最悪を比較軸から混ぜず、容量戦略とコピーコストを固定。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Array resizing stackの満杯時の倍増を確認。追加のみ・初期容量1でコピー総数の等比級数を独立に評価。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000190",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "最短距離を確定した頂点を再び処理しない標準的なDijkstra法を使う。任意の有向グラフで正しい最短距離を保証する代表的な十分条件はどれか。",
+      "choices": [
+        "有向閉路がないことだけ",
+        "全ての辺の重みが0以上であること",
+        "負の重みの閉路がないことだけ",
+        "各頂点から出る辺が2本以下であることだけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "非負の辺なら、未確定の頂点を経由して確定済みの距離を後から小さくすることがない。負の辺を含む場合、負閉路がなくても、確定した頂点を再処理しない方式では誤る例がある。",
+      "distractorRationales": [
+        "非巡回でも負の辺によって確定後により短い経路が見つかり得る。",
+        "この方式の距離確定を正当化する十分条件。",
+        "負閉路がないだけではDijkstra法の距離確定を正当化しない。",
+        "出次数が少なくても負の辺による反例が作れる。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Shortest Paths",
+          "url": "https://algs4.cs.princeton.edu/44sp/"
+        }
+      ]
+    },
+    "reason": "問題文中に答えをそのまま書いた旧問を改訂。負閉路なしと全辺非負を区別。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Dijkstra法の非負重みの保証と、非巡回グラフや負辺を扱う別のアルゴリズムを確認。標準的な確定方式へ限定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000115",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "同じ部分問題が繰り返し現れる計算で、動的計画法が重複計算を減らす基本的な方法はどれか。",
+      "choices": [
+        "部分問題の答えを毎回破棄して、最初から計算し直す",
+        "必ず一回の乱数抽選だけで最適解を選ぶ",
+        "その場で最も良い一手だけを選び、他の部分問題は扱わない",
+        "部分問題の解を記録し、依存関係に沿って再利用する"
+      ],
+      "correctIndex": 3,
+      "explanation": "部分問題の答えをメモ化する、または表を適切な順に埋めることで、同じ計算の繰り返しを避ける。必要な部分問題の数や一件の処理量によって計算量が決まり、必ず入力長の多項式時間になるとは限らない。",
+      "distractorRationales": [
+        "重複計算を減らせない。",
+        "動的計画法の基本的な方法ではない。",
+        "貪欲法との混同で、部分問題の解の再利用ではない。",
+        "重複部分問題の答えを再利用する。"
+      ],
+      "sources": [
+        {
+          "title": "Jeff Erickson — Algorithms, Chapter 3: Dynamic Programming",
+          "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf"
+        }
+      ]
+    },
+    "reason": "動的計画法が常に指数時間を入力長の多項式時間へ変えるという旧一般化を除去。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§3.1のメモ化・表を下から埋める導出と、章内の部分問題の特定・保存・依存順を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000120",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "重みのないグラフで、始点から辺数の少ない順に頂点を処理する標準的な幅優先探索（BFS）を実装する。未処理頂点をどのデータ構造で管理するか。",
+      "choices": [
+        "後入れ先出しのスタック",
+        "先入れ先出しのキュー",
+        "キー順の二分探索木",
+        "常にランダムな要素を取り出す集合"
+      ],
+      "correctIndex": 1,
+      "explanation": "先に発見した近い頂点から処理するため、先入れ先出しのキューを使う。発見時に訪問済みを記録すると同じ頂点の重複登録を避けられる。この探索で求まるのは最小の辺数で、一般の重み付き最短距離とは別。",
+      "distractorRationales": [
+        "深さ優先の処理順になりやすく、指定した層の順序を保てない。",
+        "発見順に処理し、始点からの層の順序を保つ。",
+        "頂点のキー順は、始点からの辺数順とは限らない。",
+        "距離の層の順序を保証しない。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Undirected Graphs",
+          "url": "https://algs4.cs.princeton.edu/41graph/"
+        }
+      ]
+    },
+    "reason": "距離の意味と訪問済み管理を明示し、他分野の用語を誤答にする形を改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Breadth-first searchで層を辺数順に探索し、発見済み未処理の頂点をキューに保持する説明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000292",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "距離が非負・対称で三角不等式を満たす完全グラフ上の巡回セールスマン問題で、Christofides法の「3/2近似保証」は何を意味するか。",
+      "choices": [
+        "得られる巡回路は、常に最適な巡回路と一致する",
+        "得られる巡回路長は、必ず最適値のちょうど1.5倍になる",
+        "得られる巡回路長は、最適値の1.5倍を超えない",
+        "最適解が得られる確率が、全入力で必ず2/3になる"
+      ],
+      "correctIndex": 2,
+      "explanation": "この条件の下では、得られる巡回路のコストは最適値より小さくならず、最適値の1.5倍以内に収まる。これは各入力への品質の上界であり、平均的な精度や最適解に一致する確率ではない。一般の非対称な距離へそのまま適用できない。",
+      "distractorRationales": [
+        "最適解との一致を常に保証するものではない。",
+        "より短い巡回路や最適解が得られる場合もある。",
+        "近似比が最適値に対する上限を与える。",
+        "成功確率ではなく、出力する巡回路のコストの保証。"
+      ],
+      "sources": [
+        {
+          "title": "CMU 15-451/651 — Approximation Algorithms, §5.1",
+          "url": "https://www.cs.cmu.edu/~15451-f17/lectures/lec24-approx.pdf"
+        }
+      ]
+    },
+    "reason": "一般のTSPすべてに成り立つかのような旧説明を訂正。確率・平均・正確解と近似比を区別。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§5の対称・三角不等式の設定、§5.1のChristofides法とMST・最小重み完全マッチングによる3/2上界の証明を確認。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000187",
+    "domain": "情報・計算機科学",
+    "subdomain": "アルゴリズム・データ構造",
+    "content": {
+      "question": "標準的なマージソートで配列をほぼ半分に分け、それぞれを整列してから線形時間で併合する。n個の要素に対する最悪時間の増え方はどれか。",
+      "choices": [
+        "Θ(n log n)",
+        "Θ(n²)",
+        "Θ(n)",
+        "Θ(2ⁿ)"
+      ],
+      "correctIndex": 0,
+      "explanation": "分割の段数は対数的で、各段で行う併合の仕事量の合計は線形。したがって最悪時間はΘ(n log n)。標準的な配列版では併合のために線形量の補助領域も使う。",
+      "distractorRationales": [
+        "段数と各段の仕事量から得られる増え方。",
+        "各段で全組合せを比較するわけではない。",
+        "標準的な方式の最悪時には対数個の段を処理する。",
+        "全順列などを列挙していない。"
+      ],
+      "sources": [
+        {
+          "title": "Sedgewick & Wayne — Mergesort",
+          "url": "https://algs4.cs.princeton.edu/22mergesort/"
+        }
+      ]
+    },
+    "reason": "ソート名の曖昧な比較を避け、具体的な方式と最悪時へ限定。クイックソートの問題族には統合しない。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識と条件理解から設定した初期の仮難度。実回答による推定ではない。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Top-down mergesortの二分・併合、比較回数の上下界と線形量の補助配列を確認。最良時を改善する変種と最悪時を区別。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "NISTの定義・著者が公開する大学教材の本文を照合。設問・選択肢・説明は独自作成し、教材の文章・演習・コード・図表は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000177"
+    ]
+  }
+]
