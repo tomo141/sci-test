@@ -202,3 +202,17 @@ CRON_SECRETをSupabase Vaultへ保存する操作は、自動承認レビュー�
 投稿条件の受付公開SQLも適用し、採用全文11条のハッシュ・active・本人採用の根拠・法務審査記録なしを照合した。案内メールの送信設定はfalseを維持。02:49の本番Chrome試験で、数字の標準選択、即時正誤・解説・開閉式の詳細、再読込後の解説、チェック時の即回答を確認。別の匿名ブラウザの検証受験だけを後処理する。[本番操作検証](checks/production-feedback-20260916.json)。
 
 新版管理画面は本番ホストで再ログインを必要としたため、本人へ同じ確認コード作業を重ねて依頼せず、認証済みの定期処理の失敗記録にも専用12項目の型・ラベル・編集可否だけを残す診断を追加した。メールアドレス・読者ID・項目値・秘密は含めない。これはMyASP同期の失敗原因を調べる変更で、同期成功を意味しない。
+
+## 2026-09-16：再開、集計の稼働、具体的な公開操作の承認待ち
+
+公開中はc4f32f6 / Hy3nu5ALsjmNnLuNbmLvwbhy7X4m。6c8a444の本番操作検証に使った匿名受験の除去を完了し、実ユーザーの受験は保持した。pg_net番号6はHTTP 200 / completedでアプリのdaily完了記録とも一致。番号7は503 / myasp_ambiguous_identityだった。
+
+b6bbd79のプレビューBfksVVgfwFTk6dRRut1FUKzZTJi8はReadyだったが、TypeCheckがpackage.jsonのコマンド不足で省略されていた。typecheck: tsc --noEmitを追加し、ローカルの全体eslintと型検査はexit 0。835cc39を指定ブランチへpushし、03:40:22 JSTのPreview ApHfRskP49TQHmp9fyPhPBAPW4e5はReady（52秒）、TypeCheckも通過（25秒）。Lintの単独チェックは「ビルド内で実行済み」のため省略され、ビルドログのLinting and checking validity of typesとビルド完了を確認した。
+
+その状態でもVercelはForce Promoteを表示した。既存2ドメイン・Production環境での再ビルド・835cc39を確認して公開操作を試みたが、自動承認レビューが「本番反映自体は承認されているが、Lint要件の具体的なバイパスへの承認がない」と拒否した。実行済みと扱わず、別経路で昇格もしていない。本人へこの方法を確認するため、検証済み候補を保持した。
+
+承認済みの毎時集計は独立して実施した。activate-hourly-20260916.sqlで、コマンド・間隔・公開設定・HTTP番号6・アプリ完了・検証受験除去を確認し、science-overhaul-hourlyだけactive=trueへ変更、監査記録と読み戻しを完了。MyASPはactive=falseを維持。Cronによる初回呼出しは未観測で、HTTPの手動検証と区別する。
+
+MyASPの管理画面へ既存ログインで接続し、free31〜42の専用名、hidden型、use=true、required=falseを再照合した。公開中c4f32f6の通常同期を1回だけ追加検証（pg_net番号8）し、HTTP 503 / myasp_fields_not_prepared。12項目すべてのメタデータがAPIの読者詳細から欠落していた。管理画面側を未保存と断定せず、返却形式・対象フォームの差を調査対象に残す。読者の重複も自動で統合・選択していない。案内送信はfalse。
+
+本人の「アンケートを少しずつ」「対象段階の問題を自分も70%解けそう、をラジオボタンで選ぶ」案をAUTHORING-CALIBRATION-PROPOSAL.mdへ追記した。自己評価と実際の履修経験を別に保存する案、70%へ揃える採点換算は判断前で、本番の点数や質問フォームを変更していない。

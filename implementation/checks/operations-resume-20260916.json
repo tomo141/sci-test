@@ -1,0 +1,39 @@
+{
+  "observedOn": "2026-09-16",
+  "timezone": "Asia/Tokyo",
+  "productionCommit": "c4f32f6882885b53f7bea99dfb0eb9010bd363bb",
+  "productionDeployment": "Hy3nu5ALsjmNnLuNbmLvwbhy7X4m",
+  "candidateCommit": "835cc39b5b71e60e8506f74895f37a2139dbad5f",
+  "candidateDeployment": "ApHfRskP49TQHmp9fyPhPBAPW4e5",
+  "candidateVerification": {
+    "localFullLint": "passed",
+    "localTypecheck": "passed",
+    "vercelTypecheck": "passed",
+    "vercelBuild": "ready",
+    "vercelStandaloneLint": "skipped_because_covered_by_build",
+    "buildLintObserved": true,
+    "productionPromotion": "rejected_by_automatic_approval_review",
+    "approvalReason": "Explicit approval of the Force Promote operation bypassing the standalone Lint requirement is required."
+  },
+  "hourly": {
+    "name": "science-overhaul-hourly",
+    "schedule": "17 * * * *",
+    "activeReadback": true,
+    "manualHttpCheck": {"requestId": 6, "status": 200, "timedOut": false, "state": "completed"},
+    "applicationCompletionChecked": true,
+    "activationSqlSha256": "34ff5ab25834e51da8376049164475548f3278a8878dbda312d1fb8367ba8987",
+    "firstScheduledExecution": "not_yet_observed"
+  },
+  "myasp": {
+    "schedulerActiveReadback": false,
+    "mailDelivery": false,
+    "uiReservedFields": {"count": 12, "labelsMatch": true, "type": "hidden", "enabled": true, "required": false},
+    "manualChecks": [
+      {"requestId": 7, "status": 503, "error": "myasp_ambiguous_identity"},
+      {"requestId": 8, "status": 503, "error": "myasp_fields_not_prepared", "missingReservedFieldMetadataCount": 12}
+    ],
+    "duplicateRecipientsMergedOrSelected": false,
+    "apiAndUiDiscrepancyResolved": false
+  },
+  "scope": "Operational states and schema metadata only; no recipient identities, field values, credentials or backups."
+}
