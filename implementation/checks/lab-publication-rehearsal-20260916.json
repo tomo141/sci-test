@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-09-15T17:31:30.191Z",
+  "state": "passed",
+  "scope": "Isolated PGlite with a synthetic operator account; no production write or mail",
+  "operationSha256": "db12472b1715f399a31e368e026b67a4d98e77fa7cc50a04c550746fa285cb01",
+  "termsSha256": "22a954969bd98877d5c4f16723d7f30d0d438c3526cbb705c86f5f4dc41f1292",
+  "publicationBasis": "operator_acceptance",
+  "externalReviewRecorded": false,
+  "submissionsOpen": true,
+  "marketingDelivery": false,
+  "repeatedExecution": "rejected"
+}

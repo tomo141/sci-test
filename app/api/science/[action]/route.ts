@@ -58,7 +58,8 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     }
     if (action === "state") {
       await rateLimit(ctx, "state", 120);
-      return examState(ctx, attemptInput.parse(body).attemptId);
+      const input = z.object({ attemptId: id, feedbackOrdinal: z.number().int().min(0).max(99).optional() }).strict().parse(body);
+      return examState(ctx, input.attemptId, input.feedbackOrdinal);
     }
     if (action === "result") {
       const attempt=await ownedAttempt(ctx,attemptInput.parse(body).attemptId);

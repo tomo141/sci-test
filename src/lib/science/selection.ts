@@ -2,18 +2,21 @@ import type { ScienceDomain } from "@/src/lib/data/taxonomy";
 import { expectedScoreVarianceReduction, posterior, type Parameters, type Response } from "./model";
 import type { ExamDefinition } from "./definition";
 
-export type Candidate = Parameters & { revisionId: string; familyId: string; domain: ScienceDomain; authorId: string | null; focus: boolean; anchor: boolean; exposures: number; trustWeight?:number };
+export type Candidate = Parameters & { revisionId: string; familyId: string; domain: ScienceDomain; authorId: string | null; focus: boolean; anchor: boolean; exposures: number; trustWeight?:number; seenCount?: number };
 
-export function selectCandidate(candidates: Candidate[], answers: Response[], exam: ExamDefinition, random = Math.random) {
+export function selectCandidate(candidates: Candidate[], answers: Response[], exam: ExamDefinition, random = Math.random, history: Response[] = []) {
   const counts = new Map<string, number>();
   answers.forEach((r) => counts.set(r.domain, (counts.get(r.domain) ?? 0) + 1));
   const quotas = Object.entries(exam.quotas) as [ScienceDomain, number][];
   const remaining = quotas.filter(([d, n]) => (counts.get(d) ?? 0) < n);
   const minRatio = remaining.length ? Math.min(...remaining.map(([d, n]) => (counts.get(d) ?? 0) / n)) : 0;
   const allowed = new Set(remaining.filter(([d, n]) => (counts.get(d) ?? 0) / n === minRatio).map(([d]) => d));
+  const available = candidates.filter(c => !quotas.length || allowed.has(c.domain));
+  const leastSeen = Math.min(...available.map(c => c.seenCount ?? 0));
+  const abilityAnswers = exam.kind === "trial" ? [...history, ...answers] : answers;
   const distributions = new Map<ScienceDomain, ReturnType<typeof posterior>>();
-  const scored = candidates.filter((c) => !quotas.length || allowed.has(c.domain)).map((candidate) => {
-    if (!distributions.has(candidate.domain)) distributions.set(candidate.domain, posterior(answers.filter((a) => a.domain === candidate.domain)));
+  const scored = available.filter(c => (c.seenCount ?? 0) === leastSeen).map((candidate) => {
+    if (!distributions.has(candidate.domain)) distributions.set(candidate.domain, posterior(abilityAnswers.filter((a) => a.domain === candidate.domain)));
     const metrics = expectedScoreVarianceReduction(distributions.get(candidate.domain)!, candidate);
     return { candidate, ...metrics };
   }).sort((a, b) => b.gain - a.gain || a.candidate.revisionId.localeCompare(b.candidate.revisionId));
@@ -27,7 +30,7 @@ export function selectCandidate(candidates: Candidate[], answers: Response[], ex
   let roll = Math.min(1 - Number.EPSILON, Math.max(0, random()));
   let index = weights.length - 1;
   for (let i = 0; i < weights.length; i++) { roll -= weights[i]; if (roll < 0) { index = i; break; } }
-  return { ...scored[index], selectionProbability: weights[index], reason: "posterior-variance+balanced-quota+focus-exploration-v1", candidateCount: scored.length };
+  return { ...scored[index], selectionProbability: weights[index], reason: `${leastSeen > 0 ? "repeat-fallback-v1:" : ""}posterior-variance+balanced-quota+focus-exploration:${exam.kind === "trial" ? "history-equal-v1" : "attempt-only-v1"}`, candidateCount: scored.length };
 }
 
 export function hasCapacity(candidates: Candidate[], exam: ExamDefinition) {

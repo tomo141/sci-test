@@ -41,7 +41,9 @@ export type MyaspConnectionCheck = {
   syncEnabled: boolean;
   deliveryEnabled: boolean;
   errorCode?: string;
+  fields?: MyaspFieldCheck[];
 };
+export type MyaspFieldCheck = { key: string; label: string | null; type: string | null; editable: boolean; ready: boolean };
 
 // A successful transport handshake alone does not prove access to the intended scenario.
 // This read never requests subscriber counts, addresses, or writes.
@@ -53,6 +55,22 @@ export async function verifyMyaspScenario(call: MyaspCall, config: MyaspConfigur
     pagination: z.object({ has_more: z.boolean() }) }).safeParse(result);
   if (!parsed.success || parsed.data.pagination.has_more || parsed.data.scenarios.length !== 1 ||
       parsed.data.scenarios[0].scenario_id !== config.scenario) throw new Error("myasp_scenario_not_verified");
+}
+
+// Inspect only the 12 reserved field definitions. Values, addresses and subscriber IDs never leave the server.
+export async function inspectMyaspFields(call: MyaspCall, config: MyaspConfiguration): Promise<MyaspFieldCheck[]> {
+  const result = myaspData(await call("search_subscribers", { scenario_id: config.scenario, status: "active", limit: 1, page: 1 }));
+  const parsed = z.object({ subscribers: z.array(z.unknown()) }).safeParse(result);
+  if (!parsed.success) throw new Error("myasp_invalid_response");
+  const first = parsed.data.subscribers[0];
+  if (!first) return [];
+  const found = subscriber(first, config.scenario);
+  const detail = subscriber(await call("get_subscriber_details", { subscriber_id: found.subscriber_id }), config.scenario, found.email);
+  return (Object.keys(MYASP_FIELDS) as (keyof typeof MYASP_FIELDS)[]).map(key => {
+    const field = detail.free_fields?.find(f => f.field_key === MYASP_FIELDS[key]);
+    return { key: MYASP_FIELDS[key], label: field?.field_label?.slice(0, 100) ?? null, type: field?.field_type.slice(0, 40) ?? null,
+      editable: field?.editable === true, ready: field?.editable === true && field.field_type === "hidden" && field.field_label === MYASP_FIELD_LABELS[key] };
+  });
 }
 
 // The official gateway can wrap JSON in `result`. Do not accept prose, warnings, or partial saves as success.

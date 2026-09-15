@@ -35,6 +35,16 @@ beforeAll(async () => {
 afterAll(async () => { await db?.close(); });
 
 describe.sequential("atomic issuance and answers", () => {
+  it("records operator-adopted terms separately from external legal review and freezes published terms", async () => {
+    const insert = "insert into science_license_versions(version,operator_name,terms,sha256,published_at,operator_approved_at,publication_basis,operator_approval_ref,legal_review_ref) values($1,'Test fixture operator','{}',$2,now(),$3,$4,$5,$6)";
+    await expect(db.query(insert, ['approval-missing', 'b'.repeat(64), null, 'operator_acceptance', 'Explicit fixture approval', null])).rejects.toThrow(/check constraint/);
+    await expect(db.query(insert, ['approval-reference-missing', 'b'.repeat(64), new Date(), 'operator_acceptance', null, null])).rejects.toThrow(/check constraint/);
+    await expect(db.query(insert, ['legal-review-missing', 'b'.repeat(64), new Date(), 'external_review', 'Operator approval is not legal review', null])).rejects.toThrow(/check constraint/);
+    await db.query(insert, ['operator-approved-fixture', 'b'.repeat(64), new Date(), 'operator_acceptance', 'Explicit fixture approval', null]);
+    const row = (await db.query("select publication_basis,legal_review_ref from science_license_versions where version='operator-approved-fixture'")).rows[0];
+    expect(row).toEqual({ publication_basis: 'operator_acceptance', legal_review_ref: null });
+    await expect(db.query("update science_license_versions set terms='{\"expanded\":true}' where version='operator-approved-fixture'")).rejects.toThrow('published_license_is_immutable');
+  });
   it("preserves scientific letter case while rejecting duplicate or non-text choices in SQL",async()=>{
     const base={question:"Which genotype has two A alleles?",choices:["AA","Aa","aa","A"],correctIndex:0,explanation:"AA denotes two A alleles."};
     const valid=async(content:unknown)=>(await db.query<{valid:boolean}>("select science_valid_content($1) valid",[content])).rows[0].valid;

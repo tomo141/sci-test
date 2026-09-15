@@ -6,6 +6,11 @@ begin;
 create extension if not exists pg_cron;
 create extension if not exists pg_net with schema extensions;
 
+-- Hosted pg_net is owned by supabase_admin: postgres cannot revoke its PUBLIC ACL.
+-- Before activation, verify-science-job-boundary.mjs must prove the transport,
+-- Vault and Cron schemas are excluded from the Data API. Also reject login roles
+-- and accessible RPC bridges below. Never treat a no-op REVOKE as protection.
+
 do $preflight$
 begin
   if (select count(*) from vault.decrypted_secrets
@@ -13,10 +18,21 @@ begin
     raise exception 'science_cron_secret_not_configured';
   end if;
   if has_table_privilege('anon','vault.decrypted_secrets','SELECT')
-     or has_table_privilege('authenticated','vault.decrypted_secrets','SELECT')
-     or has_table_privilege('anon','net.http_request_queue','SELECT')
-     or has_table_privilege('authenticated','net.http_request_queue','SELECT') then
+     or has_table_privilege('authenticated','vault.decrypted_secrets','SELECT') then
     raise exception 'science_cron_secret_storage_permissions_require_review';
+  end if;
+  if exists(select 1 from pg_roles where rolname in ('anon','authenticated') and rolcanlogin) then
+    raise exception 'science_client_database_login_must_be_disabled';
+  end if;
+  if exists (
+    select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace
+    where n.nspname in ('public','graphql_public') and p.prokind='f'
+      and (has_function_privilege('anon',p.oid,'EXECUTE')
+        or has_function_privilege('authenticated',p.oid,'EXECUTE'))
+      and (p.prosrc ~* '(net|vault)[[:space:]]*\.'
+        or (p.prosecdef and p.prosrc ~* 'execute[[:space:]]'))
+  ) then
+    raise exception 'science_public_rpc_boundary_requires_review';
   end if;
   if exists(select 1 from cron.job where jobname in ('science-overhaul-hourly','science-overhaul-myasp')) then
     raise exception 'science_cron_jobs_already_exist_read_before_reapplying';

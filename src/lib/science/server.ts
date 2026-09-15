@@ -38,7 +38,7 @@ export function checked<T>(response: { data: T | null; error: { code?: string; m
   return response.data as NonNullable<T>;
 }
 
-export type Context = { db: ReturnType<typeof service>; visitor: Visitor; userId: string | null; tokenHash: string };
+export type Context = { db: ReturnType<typeof service>; visitor: Visitor; userId: string | null; tokenHash: string; verifiedEmail?: string | null };
 const cookieName = "science-visitor-v2";
 
 export async function context(create = false, refShare?: string): Promise<Context> {
@@ -80,11 +80,11 @@ export async function context(create = false, refShare?: string): Promise<Contex
     jar.set(cookieName, token, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", path: "/", maxAge: 365 * 24 * 3600 });
   }
   if (userId && !visitor.user_id) {
-    if (!create) return { db, visitor, userId, tokenHash };
+    if (!create) return { db, visitor, userId, tokenHash, verifiedEmail: userId ? user?.email : null };
     checked(await db.rpc("science_claim_visitor", { p_visitor: visitor.id, p_hash: tokenHash, p_user: userId }));
     visitor = checked(await db.from("science_visitors").select("*").eq("id", visitor.id).single()) as Visitor;
   }
-  return { db, visitor, userId, tokenHash };
+  return { db, visitor, userId, tokenHash, verifiedEmail: userId ? user?.email : null };
 }
 
 export async function releaseConfig(db = service()): Promise<ReleaseConfig> {

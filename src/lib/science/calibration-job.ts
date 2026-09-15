@@ -10,13 +10,13 @@ export async function runCalibration(db:ReturnType<typeof service>,jobId:string)
   const release=await db.from("science_releases").select("id").eq("state","active").maybeSingle();
   if(release.error)checked(release);if(!release.data)return {state:"no_active_bank"};
   const from=new Date(Date.now()-90*86400000).toISOString(),to=new Date().toISOString();
-  const count=await db.from("science_responses").select("revision_id",{count:"exact",head:true}).eq("eligible",true).eq("model_version",MODEL_VERSION).gte("answered_at",from).lt("answered_at",to);
+  const count=await db.from("science_calibration_responses").select("revision_id",{count:"exact",head:true}).eq("eligible",true).eq("model_version",MODEL_VERSION).gte("answered_at",from).lt("answered_at",to);
   if(count.error)checked(count);if(count.count===null)throw new Error("calibration_count_unavailable");
   if(count.count<1000)return {state:"collecting",eligibleResponses:count.count,from,to};
   if(count.count>20000)return {state:"batch_processing_required",eligibleResponses:count.count,from,to};
   const correctionEpoch=checked<number>(await db.rpc("science_correction_epoch"));
   const [raw,bank,config]=await Promise.all([
-    readAll<Row>((a,b)=>db.from("science_responses").select("user_id,visitor_id,family_id,revision_id,domain,a,b,c,is_correct,answered_at").eq("eligible",true).eq("model_version",MODEL_VERSION).gte("answered_at",from).lt("answered_at",to).order("answered_at").order("attempt_id").order("ordinal").range(a,b)),
+    readAll<Row>((a,b)=>db.from("science_calibration_responses").select("user_id,visitor_id,family_id,revision_id,domain,a,b,c,is_correct,answered_at").eq("eligible",true).eq("model_version",MODEL_VERSION).gte("answered_at",from).lt("answered_at",to).order("answered_at").order("attempt_id").order("ordinal").range(a,b)),
     readAll<CalibrationItem>((a,b)=>db.from("science_release_items").select("revision_id,a,b,c,anchor,focus,parameter_evidence,science_items!inner(domain,status,quality_passed,rights_checked,expires_at)").eq("release_id",release.data!.id).order("revision_id").range(a,b).returns<CalibrationItem[]>()),
     releaseConfig(db)
   ]);

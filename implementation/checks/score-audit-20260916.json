@@ -1,0 +1,321 @@
+{
+  "generatedAt": "2026-09-15T17:03:12.592Z",
+  "sourceHash": "2eeea5d1019dc84b192629c01734020f48cd72115ee022e774355eea17e8a354",
+  "model": "science-3pl-reference-v1",
+  "gridUpper": 5,
+  "absoluteTotalCeiling": 980,
+  "parametersAreProvisional": true,
+  "participantsAreSimulated": true,
+  "extreme": [
+    {
+      "count": 20,
+      "pattern": "wrong",
+      "min": 278,
+      "max": 306,
+      "runs": [
+        {
+          "total": 278,
+          "width": 184,
+          "domainWidth": 56.8,
+          "actualCorrect": 0
+        },
+        {
+          "total": 281,
+          "width": 188,
+          "domainWidth": 57.4,
+          "actualCorrect": 0
+        },
+        {
+          "total": 283,
+          "width": 188,
+          "domainWidth": 57.7,
+          "actualCorrect": 0
+        },
+        {
+          "total": 288,
+          "width": 190,
+          "domainWidth": 58.1,
+          "actualCorrect": 0
+        },
+        {
+          "total": 306,
+          "width": 196,
+          "domainWidth": 59.6,
+          "actualCorrect": 0
+        }
+      ]
+    },
+    {
+      "count": 20,
+      "pattern": "correct",
+      "min": 619,
+      "max": 624,
+      "runs": [
+        {
+          "total": 619,
+          "width": 238,
+          "domainWidth": 73.9,
+          "actualCorrect": 20
+        },
+        {
+          "total": 621,
+          "width": 240,
+          "domainWidth": 74.1,
+          "actualCorrect": 20
+        },
+        {
+          "total": 619,
+          "width": 238,
+          "domainWidth": 73.9,
+          "actualCorrect": 20
+        },
+        {
+          "total": 624,
+          "width": 240,
+          "domainWidth": 74.1,
+          "actualCorrect": 20
+        },
+        {
+          "total": 620,
+          "width": 242,
+          "domainWidth": 74,
+          "actualCorrect": 20
+        }
+      ]
+    },
+    {
+      "count": 50,
+      "pattern": "wrong",
+      "min": 170,
+      "max": 188,
+      "runs": [
+        {
+          "total": 175,
+          "width": 122,
+          "domainWidth": 37.8,
+          "actualCorrect": 0
+        },
+        {
+          "total": 170,
+          "width": 122,
+          "domainWidth": 37.5,
+          "actualCorrect": 0
+        },
+        {
+          "total": 178,
+          "width": 126,
+          "domainWidth": 38.6,
+          "actualCorrect": 0
+        },
+        {
+          "total": 188,
+          "width": 132,
+          "domainWidth": 39.9,
+          "actualCorrect": 0
+        },
+        {
+          "total": 176,
+          "width": 126,
+          "domainWidth": 37.9,
+          "actualCorrect": 0
+        }
+      ]
+    },
+    {
+      "count": 50,
+      "pattern": "correct",
+      "min": 735,
+      "max": 741,
+      "runs": [
+        {
+          "total": 739,
+          "width": 180,
+          "domainWidth": 55.8,
+          "actualCorrect": 50
+        },
+        {
+          "total": 740,
+          "width": 180,
+          "domainWidth": 55.3,
+          "actualCorrect": 50
+        },
+        {
+          "total": 738,
+          "width": 180,
+          "domainWidth": 56,
+          "actualCorrect": 50
+        },
+        {
+          "total": 735,
+          "width": 182,
+          "domainWidth": 56.1,
+          "actualCorrect": 50
+        },
+        {
+          "total": 741,
+          "width": 180,
+          "domainWidth": 55.5,
+          "actualCorrect": 50
+        }
+      ]
+    },
+    {
+      "count": 100,
+      "pattern": "wrong",
+      "min": 118,
+      "max": 123,
+      "runs": [
+        {
+          "total": 119,
+          "width": 86,
+          "domainWidth": 26.8,
+          "actualCorrect": 0
+        },
+        {
+          "total": 119,
+          "width": 86,
+          "domainWidth": 26.5,
+          "actualCorrect": 0
+        },
+        {
+          "total": 118,
+          "width": 86,
+          "domainWidth": 26.5,
+          "actualCorrect": 0
+        },
+        {
+          "total": 123,
+          "width": 90,
+          "domainWidth": 27.4,
+          "actualCorrect": 0
+        },
+        {
+          "total": 119,
+          "width": 86,
+          "domainWidth": 26.5,
+          "actualCorrect": 0
+        }
+      ]
+    },
+    {
+      "count": 100,
+      "pattern": "correct",
+      "min": 837,
+      "max": 844,
+      "runs": [
+        {
+          "total": 838,
+          "width": 120,
+          "domainWidth": 36.9,
+          "actualCorrect": 100
+        },
+        {
+          "total": 837,
+          "width": 120,
+          "domainWidth": 37,
+          "actualCorrect": 100
+        },
+        {
+          "total": 844,
+          "width": 116,
+          "domainWidth": 35.8,
+          "actualCorrect": 100
+        },
+        {
+          "total": 839,
+          "width": 120,
+          "domainWidth": 37.1,
+          "actualCorrect": 100
+        },
+        {
+          "total": 840,
+          "width": 116,
+          "domainWidth": 36.3,
+          "actualCorrect": 100
+        }
+      ]
+    }
+  ],
+  "simulations": [
+    {
+      "count": 50,
+      "theta": -2,
+      "truth": 190.7112853063542,
+      "mean": 337.1666666666667,
+      "bias": 146.4553813603125,
+      "rmse": 148.56194314701455,
+      "meanIntervalWidth": 177.16666666666666,
+      "meanDomainIntervalWidth": 55.09166666666666
+    },
+    {
+      "count": 50,
+      "theta": 0,
+      "truth": 500,
+      "mean": 508.4166666666667,
+      "bias": 8.416666666666686,
+      "rmse": 24.20915804676679,
+      "meanIntervalWidth": 195.33333333333334,
+      "meanDomainIntervalWidth": 61.50833333333335
+    },
+    {
+      "count": 50,
+      "theta": 2,
+      "truth": 809.2887146936458,
+      "mean": 670.0833333333334,
+      "bias": -139.20538136031246,
+      "rmse": 141.95967005418214,
+      "meanIntervalWidth": 187.33333333333334,
+      "meanDomainIntervalWidth": 58.44166666666667
+    },
+    {
+      "count": 50,
+      "theta": 3,
+      "truth": 907.9501445087888,
+      "mean": 709.3333333333334,
+      "bias": -198.61681117545538,
+      "rmse": 199.38370019569987,
+      "meanIntervalWidth": 184,
+      "meanDomainIntervalWidth": 57.074999999999996
+    },
+    {
+      "count": 100,
+      "theta": -2,
+      "truth": 190.7112853063542,
+      "mean": 277.5833333333333,
+      "bias": 86.87204802697912,
+      "rmse": 89.25522832841405,
+      "meanIntervalWidth": 140,
+      "meanDomainIntervalWidth": 43.80833333333334
+    },
+    {
+      "count": 100,
+      "theta": 0,
+      "truth": 500,
+      "mean": 497.4166666666667,
+      "bias": -2.5833333333333144,
+      "rmse": 28.79380720455934,
+      "meanIntervalWidth": 156.5,
+      "meanDomainIntervalWidth": 49.96666666666666
+    },
+    {
+      "count": 100,
+      "theta": 2,
+      "truth": 809.2887146936458,
+      "mean": 715.25,
+      "bias": -94.03871469364583,
+      "rmse": 96.71591058989685,
+      "meanIntervalWidth": 144.16666666666666,
+      "meanDomainIntervalWidth": 45.13333333333333
+    },
+    {
+      "count": 100,
+      "theta": 3,
+      "truth": 907.9501445087888,
+      "mean": 787.6666666666666,
+      "bias": -120.28347784212212,
+      "rmse": 121.4790953100649,
+      "meanIntervalWidth": 131,
+      "meanDomainIntervalWidth": 40.47500000000001
+    }
+  ]
+}

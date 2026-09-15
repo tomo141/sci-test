@@ -9,6 +9,7 @@ import type { Answer, Attempt, AttemptResult, ExamState, Issued, Item, PublicAtt
 import { readAll } from "./queries";
 import { authorWeights } from "./community";
 import { laboratoryChoice } from "./trust";
+import { answerExplanation } from "./answer-feedback";
 export { readAll } from "./queries";
 
 export async function ownedAttempt(ctx: Context, id: string) {
@@ -35,27 +36,32 @@ export async function attemptRecords(ctx: Context, id: string) {
   return { issued, answers, responses, corrections };
 }
 
-async function unseenFamilies(ctx: Context) {
-  const seen = await readAll<{ family_id: string }>((from, to) => {
-    let query = ctx.db.from("science_exposures").select("family_id");
+async function exposureHistory(ctx: Context) {
+  const seen = await readAll<{ family_id: string; presentation_count: number }>((from, to) => ctx.db.rpc("science_exposure_history", { p_visitor: ctx.visitor.id, p_user: ctx.userId }).order("family_id").range(from, to));
+  return new Map(seen.map(s => [s.family_id, s.presentation_count]));
+}
+
+async function previousTrialEvidence(ctx: Context, attemptId: string) {
+  const rows = await readAll<{ domain: ScienceDomain; a: number; b: number; c: number; is_correct: boolean; answered_at: string }>((from, to) => {
+    let query = ctx.db.from("science_responses").select("domain,a,b,c,is_correct,answered_at").eq("eligible", true).eq("model_version", MODEL_VERSION).neq("attempt_id", attemptId);
     query = ctx.userId ? query.or(`visitor_id.eq.${ctx.visitor.id},user_id.eq.${ctx.userId}`) : query.eq("visitor_id", ctx.visitor.id);
-    return query.order("family_id").range(from, to);
+    return query.order("answered_at").order("attempt_id").order("ordinal").range(from, to);
   });
-  return new Set(seen.map((s) => s.family_id));
+  return rows.map((row): Response => ({ ...row, correct: row.is_correct, eligible: true, answeredAt: row.answered_at }));
 }
 
 type BankRow = { release_id: string; revision_id: string; a: number; b: number; c: number; focus: boolean; anchor: boolean; science_items: Item };
-async function candidateBank(ctx: Context, release: string | null, kind: ExamKind): Promise<Candidate[]> {
-  const seen = await unseenFamilies(ctx);
+async function candidateBank(ctx: Context, release: string | null, kind: ExamKind, currentFamilies = new Set<string>()): Promise<Candidate[]> {
+  const seen = await exposureHistory(ctx);
   if (kind === "lab") {
     const items = await readAll<Item>((from, to) => ctx.db.from("science_items").select("*").in("status", ["lab", "published"]).eq("rights_checked", true).not("author_id", "is", null).order("id").range(from, to));
-    const candidates=items.filter((q) => !seen.has(q.family_id) && q.author_id !== ctx.userId && (!q.expires_at || new Date(q.expires_at) > new Date())).map((q) => ({ revisionId: q.id, familyId: q.family_id, domain: q.domain, a: 1, b: 0, c: .25, authorId: q.author_id, focus: true, anchor: false, exposures: 0 }));
+    const candidates=items.filter((q) => !currentFamilies.has(q.family_id) && q.author_id !== ctx.userId && (!q.expires_at || new Date(q.expires_at) > new Date())).map((q) => ({ revisionId: q.id, familyId: q.family_id, domain: q.domain, a: 1, b: 0, c: .25, authorId: q.author_id, focus: true, anchor: false, exposures: 0, seenCount: seen.get(q.family_id) ?? 0 }));
     const weights=await authorWeights(ctx,candidates);
     return candidates.map((q,i)=>({...q,trustWeight:weights[i]}));
   }
   if (!release) throw new ScienceError("問題バンクを準備しています。", 503, "bank_unavailable");
   const rows = await readAll<BankRow>((from, to) => ctx.db.from("science_release_items").select("*,science_items!inner(*)").eq("release_id", release).order("revision_id").range(from, to));
-  return rows.filter(({ science_items: q }) => q.status === "published" && q.quality_passed && q.rights_checked && !seen.has(q.family_id) && (!q.author_id || q.author_id !== ctx.userId) && (!q.expires_at || new Date(q.expires_at) > new Date())).map((r) => ({ revisionId: r.revision_id, familyId: r.science_items.family_id, domain: r.science_items.domain, a: r.a, b: r.b, c: r.c, authorId: r.science_items.author_id, focus: r.focus, anchor: r.anchor, exposures: 0 }));
+  return rows.filter(({ science_items: q }) => q.status === "published" && q.quality_passed && q.rights_checked && !currentFamilies.has(q.family_id) && (!q.author_id || q.author_id !== ctx.userId) && (!q.expires_at || new Date(q.expires_at) > new Date())).map((r) => ({ revisionId: r.revision_id, familyId: r.science_items.family_id, domain: r.science_items.domain, a: r.a, b: r.b, c: r.c, authorId: r.science_items.author_id, focus: r.focus, anchor: r.anchor, exposures: 0, seenCount: seen.get(r.science_items.family_id) ?? 0 }));
 }
 
 export function publicAttempt(a: Attempt): PublicAttempt {
@@ -77,8 +83,16 @@ function choiceOrder() {
   return values;
 }
 
-export async function examState(ctx: Context, id: string): Promise<ExamState> {
+export async function examState(ctx: Context, id: string, feedbackOrdinal?: number): Promise<ExamState> {
   let a = await ownedAttempt(ctx, id);
+  if (feedbackOrdinal !== undefined) {
+    const records = await attemptRecords(ctx, id);
+    const answer = records.answers.find(r => r.ordinal === feedbackOrdinal);
+    const issued = records.issued.find(q => q.ordinal === feedbackOrdinal);
+    if (!answer || !issued || answer.selected_index === null) throw new ScienceError("保存済みの回答が見つかりません。", 404, "answer_not_found");
+    return { attempt: publicAttempt(a), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId,
+      explanation: answerExplanation(issued, answer.selected_index, records.corrections.updates.get(issued.revision_id)) };
+  }
   if (a.state !== "active") return { attempt: publicAttempt(a), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId };
   const existing = await ctx.db.from("science_issued").select("*").eq("attempt_id", id).eq("ordinal", a.ordinal).maybeSingle();
   if (existing.error) checked(existing);
@@ -90,11 +104,16 @@ export async function examState(ctx: Context, id: string): Promise<ExamState> {
       const weekly = checked<{ revision_ids: string[]; ends_at: string }>(await ctx.db.from("science_weekly_sets").select("revision_ids,ends_at").eq("id", a.week_id).single());
       revisionId = weekly.revision_ids[a.ordinal];
     } else {
-      const candidates = await candidateBank(ctx, a.release_id, a.kind);
+      const [candidates, history] = await Promise.all([
+        candidateBank(ctx, a.release_id, a.kind, new Set(records.issued.map(q => q.family_id))),
+        a.kind === "trial" ? previousTrialEvidence(ctx, a.id) : Promise.resolve([] as Response[])
+      ]);
       const random=()=>randomInt(2 ** 24)/2 ** 24;
-      const lab=a.kind==="lab"?laboratoryChoice(candidates.map(c=>({...c,trustWeight:c.trustWeight??1})),random):null;
-      const next = a.kind==="lab"?(lab?{candidate:lab.candidate,predicted:.625,selectionProbability:lab.probability,reason:"lab-trust+25pct-uniform-v1",candidateCount:candidates.length}:null):selectCandidate(candidates, records.responses, a.definition, random);
-      if (!next) throw new ScienceError("この条件で出せる未見問題が不足しています。回答済みの内容は保存されています。", 409, "bank_exhausted");
+      const leastSeen = Math.min(...candidates.map(c => c.seenCount ?? 0));
+      const labCandidates = candidates.filter(c => (c.seenCount ?? 0) === leastSeen);
+      const lab=a.kind==="lab"?laboratoryChoice(labCandidates.map(c=>({...c,trustWeight:c.trustWeight??1})),random):null;
+      const next = a.kind==="lab"?(lab?{candidate:lab.candidate,predicted:.625,selectionProbability:lab.probability,reason:`${leastSeen > 0 ? "repeat-fallback-v1:" : ""}lab-trust+25pct-uniform-v1`,candidateCount:labCandidates.length}:null):selectCandidate(candidates, records.responses, a.definition, random, history);
+      if (!next) throw new ScienceError("この条件で出せる問題が不足しています。回答済みの内容は保存されています。", 409, "bank_exhausted");
       revisionId = next.candidate.revisionId; predicted = next.predicted; probability = next.selectionProbability; reason = next.reason; candidateCount = next.candidateCount;
     }
     try {
@@ -131,7 +150,7 @@ export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDo
       if (release.error) checked(release);
       releaseId = release.data?.id ?? null;
     }
-    if (!hasCapacity(await candidateBank(ctx, releaseId, kind), exam)) throw new ScienceError(kind === "lab" ? "新しい投稿問題を準備しています。みんなの作問をお待ちください。" : "この受験に必要な未見問題がまだ揃っていません。別の分野や今週の10問をお楽しみください。", 409, "bank_exhausted");
+    if (!hasCapacity(await candidateBank(ctx, releaseId, kind), exam)) throw new ScienceError(kind === "lab" ? "投稿問題を準備しています。みんなの作問をお待ちください。" : "この受験に必要な問題がまだ揃っていません。別の分野や今週の10問をお楽しみください。", 409, "bank_exhausted");
   }
   const a = checked(await ctx.db.rpc("science_create_attempt", { p_visitor: ctx.visitor.id, p_user: ctx.userId, p_definition: exam, p_release: releaseId, p_model: MODEL_VERSION, p_week: week })) as Attempt;
   return examState(ctx, a.id);
@@ -153,7 +172,7 @@ export async function answerExam(ctx: Context, input: { attemptId: string; ordin
   // Answer commitment is reported independently of issuing the next question, so a later outage
   // cannot make the browser treat an already committed response as unsaved.
   return { attempt: publicAttempt(committed), savedOrdinal: input.ordinal, group: ctx.visitor.route_group, signedIn: !!ctx.userId,
-    ...(a.kind === "lab" && input.selectedIndex!==null ? { explanation: { correctIndex: issued.choice_order.indexOf(issued.snapshot.content.correctIndex), selectedIndex: input.selectedIndex, content: issued.snapshot.content, revisionId: issued.revision_id } } : {}) };
+    ...(input.selectedIndex !== null ? { explanation: answerExplanation(issued, input.selectedIndex, records.corrections.updates.get(issued.revision_id)) } : {}) };
 }
 
 export async function reviewAttempt(ctx: Context, id: string) {

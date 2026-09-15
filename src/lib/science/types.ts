@@ -12,4 +12,5 @@ export type Answer = { attempt_id: string; ordinal: number; operation_id: string
 export type ReleaseConfig = { newAttempts: boolean; fullLength: 50 | 100; experiment: string; labSubmissions: boolean; licenseVersion: string | null; mailDelivery: boolean; myaspSync?:boolean; automaticCalibration?:boolean };
 export type PublicAttempt = Pick<Attempt, "id" | "definition" | "ordinal" | "state" | "competitive" | "completed_at" | "result">;
 export type PublicQuestion = { ordinal: number; token: string; domain: string; subdomain: string; question: string; choices: string[]; creditName?:string; aiAssisted?:boolean; withdrawn?:boolean };
-export type ExamState = { attempt: PublicAttempt; question: PublicQuestion | null; group: RouteGroup; signedIn: boolean; explanation?: { correctIndex: number; selectedIndex: number; content: Content; revisionId: string } };
+export type AnswerExplanation = { ordinal: number; correct: boolean | null; selectedAnswer: string; correctAnswer: string; content: Content; revisionId: string; correctionNote?: string };
+export type ExamState = { attempt: PublicAttempt; question: PublicQuestion | null; group: RouteGroup; signedIn: boolean; explanation?: AnswerExplanation };

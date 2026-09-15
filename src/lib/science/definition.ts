@@ -3,16 +3,18 @@ import { domains, isScienceDomain, type ScienceDomain } from "@/src/lib/data/tax
 export const EXPERIMENT_VERSION = "entry-route-v1";
 export type RouteGroup = "A" | "B" | "C" | "D";
 export type ExamKind = "trial" | "full" | "domain" | "weekly" | "lab";
-export type ExamDefinition = { version: string; kind: ExamKind; label: string; count: number; domain: ScienceDomain | null; quotas: Partial<Record<ScienceDomain, number>>; formal: boolean; immediateExplanation: boolean; week?:string };
+export type ExamDefinition = { version: string; kind: ExamKind; label: string; count: number; domain: ScienceDomain | null; quotas: Partial<Record<ScienceDomain, number>>; formal: boolean; immediateExplanation: boolean; week?:string; selectionHistory?: "all-eligible-equal" | "attempt-only"; repeatPolicy?: "unseen-first-then-least-seen" };
 
 export function definition(kind: ExamKind, domain?: string | null, fullLength: 50 | 100 = 50): ExamDefinition {
   if (kind === "domain" && !isScienceDomain(domain)) throw new Error("分野を選択してください。");
   const count = kind === "trial" || kind === "domain" ? 20 : kind === "full" ? fullLength : 10;
-  return { version: "exam-v2", kind, count,
+  return { version: "exam-v3-immediate-feedback", kind, count,
     label: { trial: "20問の腕試し", full: `総合本試験 ${fullLength}問`, domain: `${domain}をもう20問`, weekly: "今週の10問", lab: "みんなの出題ラボ" }[kind],
     domain: kind === "domain" ? domain as ScienceDomain : null,
     quotas: kind === "domain" ? { [domain!]: count } : kind === "lab" ? {} : Object.fromEntries(domains.map((d) => [d, count / domains.length])),
-    formal: ["trial", "full", "domain"].includes(kind), immediateExplanation: kind === "lab" };
+    formal: ["trial", "full", "domain"].includes(kind), immediateExplanation: true,
+    selectionHistory: kind === "weekly" ? undefined : kind === "trial" ? "all-eligible-equal" : "attempt-only",
+    repeatPolicy: kind === "weekly" ? undefined : "unseen-first-then-least-seen" };
 }
 
 export function requiresAccount(group: RouteGroup, kind: ExamKind) {

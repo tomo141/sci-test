@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { MYASP_FIELDS, MYASP_FIELD_LABELS, emailHash, findMyaspSubscriber, mayResumeMyasp, myaspConfiguration, myaspData, myaspFreeFields, subscriber, updateMyaspFields, verifyMyaspScenario, type MyaspConfiguration, type MyaspSnapshot } from "./myasp";
+import { MYASP_FIELDS, MYASP_FIELD_LABELS, emailHash, findMyaspSubscriber, inspectMyaspFields, mayResumeMyasp, myaspConfiguration, myaspData, myaspFreeFields, subscriber, updateMyaspFields, verifyMyaspScenario, type MyaspConfiguration, type MyaspSnapshot } from "./myasp";
 
 const config: MyaspConfiguration = { endpoint: "https://ai.myasp.jp/test", server: "https://email.rikei-talk.com", apiKey: "test-only".repeat(4), scenario: "wTYCnyFi", origin: "https://science.example.invalid" };
 const snapshot: MyaspSnapshot = { userId: "10000000-0000-4000-8000-000000000001", email: "reader@example.invalid", emailHash: emailHash("reader@example.invalid"),
@@ -9,6 +9,18 @@ const snapshot: MyaspSnapshot = { userId: "10000000-0000-4000-8000-000000000001"
 const remote = { subscriber_id: "test-reader", scenario_id: config.scenario, email: snapshot.email!, status: "active", free_fields:
   (Object.keys(MYASP_FIELDS) as (keyof typeof MYASP_FIELDS)[]).map(k => ({ field_key: MYASP_FIELDS[k], field_label: MYASP_FIELD_LABELS[k], field_type: "hidden", editable: true, value: "" })) };
 describe("MyASP synchronization contract (synthetic data, no live mail)", () => {
+  it("returns reserved field metadata without subscriber identity or stored values", async () => {
+    const details = { ...remote, free_fields: [...remote.free_fields.map(f => ({ ...f, value: "private-field-value" })),
+      { field_key: "free1", field_label: "unrelated-private-label", field_type: "text", editable: true, value: "private-field-value" }] };
+    const call = vi.fn().mockResolvedValueOnce({ subscribers: [remote], pagination: { has_more: true } }).mockResolvedValueOnce(details);
+    const result = await inspectMyaspFields(call, config);
+    expect(result).toHaveLength(12);
+    expect(result.every(f => f.ready)).toBe(true);
+    expect(JSON.stringify(result)).not.toMatch(/reader@example|test-reader|private-field-value|unrelated-private-label/);
+    expect(call.mock.calls.map(c => c[0])).toEqual(["search_subscribers", "get_subscriber_details"]);
+    const wrong = vi.fn().mockResolvedValueOnce({ subscribers: [remote] }).mockResolvedValueOnce({ ...details, scenario_id: "other" });
+    await expect(inspectMyaspFields(wrong, config)).rejects.toThrow("myasp_identity_mismatch");
+  });
   it("verifies only the exact scenario without requesting reader data or accepting incomplete results", async () => {
     const call = vi.fn().mockResolvedValue({ scenarios: [{ scenario_id: config.scenario }], pagination: { has_more: false } });
     await expect(verifyMyaspScenario(call, config)).resolves.toBeUndefined();

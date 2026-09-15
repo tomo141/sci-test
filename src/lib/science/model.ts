@@ -13,6 +13,8 @@ const grid = Array.from({ length: 81 }, (_, i) => -5 + i / 8);
 // until item calibration and the measurement range have been independently validated.
 const referenceDifficulty = [-2, -1, 0, 1, 2];
 const logistic = (x: number) => 1 / (1 + Math.exp(-x));
+export const SCORE_RANGE = { domainMin: 1, domainMax: 99, totalMin: 10, totalMax: 990 } as const;
+const domainScore = (value: number) => Math.max(SCORE_RANGE.domainMin, Math.min(SCORE_RANGE.domainMax, value));
 
 export function probability(theta: number, item: Parameters) {
   return item.c + (1 - item.c) * logistic(item.a * (theta - item.b));
@@ -59,9 +61,9 @@ export function summarizeDomain(responses: Response[], current = false): DomainR
   const distribution = posterior(records, current);
   const mean = distribution.theta.reduce((sum, theta, i) => sum + referenceScore(theta) * distribution.mass[i], 0);
   const variance = distribution.theta.reduce((sum, theta, i) => sum + (referenceScore(theta) - mean) ** 2 * distribution.mass[i], 0);
-  return { score: records.length ? Math.round(mean) : null, mean, variance,
-    low: records.length ? Math.floor(quantile(distribution, 0.025)) : null,
-    high: records.length ? Math.ceil(quantile(distribution, 0.975)) : null,
+  return { score: records.length ? domainScore(Math.round(mean)) : null, mean, variance,
+    low: records.length ? domainScore(Math.floor(quantile(distribution, 0.025))) : null,
+    high: records.length ? domainScore(Math.ceil(quantile(distribution, 0.975))) : null,
     count: records.length,
     weight: records.reduce((sum, _, i) => sum + (current ? 2 ** (-(records.length - 1 - i) / 30) : 1), 0),
     lastAnsweredAt: records.at(-1)?.answeredAt ?? null };
@@ -73,8 +75,8 @@ export function scoreResponses(responses: Response[], current = false): ScienceR
   const total = complete ? domains.reduce((sum, domain) => sum + fields[domain].score!, 0) : null;
   const deviation = Math.sqrt(domains.reduce((sum, domain) => sum + fields[domain].variance, 0));
   return { version: current ? CURRENT_VERSION : MODEL_VERSION, status: "reference", domains: fields,
-    total, low: total === null ? null : Math.max(0, Math.floor(total - 1.96 * deviation)),
-    high: total === null ? null : Math.min(1000, Math.ceil(total + 1.96 * deviation)),
+    total, low: total === null ? null : Math.max(SCORE_RANGE.totalMin, Math.floor(total - 1.96 * deviation)),
+    high: total === null ? null : Math.min(SCORE_RANGE.totalMax, Math.ceil(total + 1.96 * deviation)),
     eligibleCount: domains.reduce((sum, domain) => sum + fields[domain].count, 0) };
 }
 

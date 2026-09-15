@@ -70,6 +70,8 @@ test("connected trial preserves progress and supports publishing and withdrawing
     }
     await page.getByRole("radio").first().check();
     await page.getByRole("button", { name: "この回答を確定する" }).click();
+    await expect(page.getByText(`第${ordinal+1}問の答え`, { exact: true })).toBeVisible();
+    await page.getByRole("button", { name: ordinal === 19 ? "結果を見る" : "次の問題へ", exact: true }).click();
   }
   await expect(page.getByRole("heading", { name: "あなたの科学マップ" })).toBeVisible();
   await page.getByLabel("公開するニックネーム").fill("独立検証の受験者");
