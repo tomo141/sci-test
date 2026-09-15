@@ -1,0 +1,468 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000096",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "主な犯罪の成立要件や、それに対して科す刑罰を定める日本の基本的な法律はどれか。",
+      "choices": [
+        "民法",
+        "刑事訴訟法",
+        "刑法",
+        "民事訴訟法"
+      ],
+      "correctIndex": 2,
+      "explanation": "刑法は犯罪と刑罰の内容を定める実体法である。捜査・公訴・裁判などの手続を定める刑事訴訟法とは区別する。",
+      "distractorRationales": [
+        "私人間の権利義務を扱う基本法。",
+        "主として刑事手続を定める法律。",
+        "犯罪の成立要件と刑罰を定める。",
+        "民事の裁判手続を定める法律。"
+      ],
+      "sources": [
+        {
+          "title": "法務省 — 刑事局・刑法と刑事訴訟法",
+          "url": "https://www.moj.go.jp/KIDS/info/keizikyoku/"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "法務省自身の刑法と刑事訴訟法の説明本文。検索に混ざる外国刑法の和訳を日本法の根拠にしない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000093",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "所有・契約・家族など、私人間の権利義務を広く規律する基本法はどれか。",
+      "choices": [
+        "刑法",
+        "刑事訴訟法",
+        "行政事件訴訟法",
+        "民法"
+      ],
+      "correctIndex": 3,
+      "explanation": "民法は私法の一般法として、私人間の関係に関する基本的なルールを扱う。特別な分野には特別法も存在する。",
+      "distractorRationales": [
+        "犯罪と刑罰の実体的な規定。",
+        "刑事事件の手続に関する規定。",
+        "行政事件の裁判手続に関する規定。",
+        "私法の基本的な権利義務を扱う。"
+      ],
+      "sources": [
+        {
+          "title": "法務省 — 私法分野教育検討部会資料",
+          "url": "https://www.moj.go.jp/content/000004338.pdf"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "検索取得本文2ページ相当の、民法を私法の一般法とし取引・家族等を扱う段落。旧成年年齢の記述は採用しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000231",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "日本国憲法39条の遡及処罰の禁止に照らし、行為をした時には適法だった行為を、後からできた処罰規定だけを根拠に刑事処罰することはどう扱われるか。",
+      "choices": [
+        "認められない",
+        "行政機関が必要と考えれば常に認められる",
+        "世論の賛成が多ければ当然に認められる",
+        "後の規定であれば無条件に認められる"
+      ],
+      "correctIndex": 0,
+      "explanation": "39条は、実行時に適法だった行為について刑事責任を問うことを禁じる。設問は刑罰法規を不利益に遡及適用する場面を問う。",
+      "distractorRationales": [
+        "実行時に適法な行為の遡及処罰を禁じる。",
+        "行政上の判断で憲法の禁止を外せない。",
+        "世論の賛否は条文の例外ではない。",
+        "法律の成立が後というだけで遡及処罰はできない。"
+      ],
+      "sources": [
+        {
+          "title": "衆議院 — 日本国憲法39条",
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/shiryo/dl-constitution.htm"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "第39条L303–305。単に「後法は全て遡及できない」と広げず、刑事処罰の不利益な遡及に限定。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000003",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "日本国憲法25条1項の、健康で文化的な最低限度の生活を営む権利は一般に何と呼ばれるか。",
+      "choices": [
+        "思想・良心の自由",
+        "生存権",
+        "職業選択の自由",
+        "表現の自由"
+      ],
+      "correctIndex": 1,
+      "explanation": "25条1項は生存権に関する規定である。具体的な給付額や、個別の給付請求が当然に成立する条件をこの一問で定めるものではない。",
+      "distractorRationales": [
+        "19条の規定に関わる。",
+        "25条1項に対応する。",
+        "22条の規定に関わる。",
+        "21条の規定に関わる。"
+      ],
+      "sources": [
+        {
+          "title": "衆議院 — 日本国憲法25条",
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/shiryo/dl-constitution.htm"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "L228–232の見出し・本文。権利の内容と政策・個別請求の成立を混同しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000020",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "民法522条が定める契約成立の一般原則として、正しいものはどれか（法令に特別の定めがある場合を除く）。",
+      "choices": [
+        "全ての契約に公正証書が必要である",
+        "全ての契約に役所への登録が必要である",
+        "申込みに対する承諾で成立し、書面などの方式は一般に必須ではない",
+        "当事者の意思が一致しなくても、片方が書面を作れば成立する"
+      ],
+      "correctIndex": 2,
+      "explanation": "522条は申込みと承諾による成立を定め、特別の定めがなければ書面その他の方式を要求しない。方式が必要な契約等の例外は区別する。",
+      "distractorRationales": [
+        "公正証書は一般的な成立要件ではない。",
+        "登録を一般的な成立要件とはしない。",
+        "522条1・2項の一般原則に対応する。",
+        "一方的な書面作成だけでは意思の合致にならない。"
+      ],
+      "sources": [
+        {
+          "title": "e-Gov — 民法522条",
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "2026-09-15にe-Gov公開法令API /api/1/lawdata/129AC0000000089 のArticle Num=522から1・2項本文を取得し照合。検索に混ざった改正前の条文と区別。法令全文を読了したとは扱わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000016",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "民法709条の不法行為責任が定める法的効果は、基本的にどれか。",
+      "choices": [
+        "国に対する罰金の支払い",
+        "直ちに拘禁刑を科すこと",
+        "公民権を一律に失わせること",
+        "権利・利益の侵害によって生じた損害の賠償"
+      ],
+      "correctIndex": 3,
+      "explanation": "709条は、故意・過失による他人の権利または法律上保護される利益の侵害について、損害賠償責任を定める。民事責任と刑罰は区別され、同じ行為で両方が問題となることもある。",
+      "distractorRationales": [
+        "罰金は刑罰で、709条の賠償ではない。",
+        "刑事上の処罰を定める条文ではない。",
+        "公民権の一律喪失を定めない。",
+        "損害を賠償する民事上の責任。"
+      ],
+      "sources": [
+        {
+          "title": "e-Gov — 民法709条",
+          "url": "https://laws.e-gov.go.jp/law/129AC0000000089"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "2026-09-15にe-Gov公開法令API /api/1/lawdata/129AC0000000089 のArticle Num=709から本文を取得し照合。具体的な請求の可否は問わず、条文が定める効果を問う。法令全文を読了したとは扱わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000015",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "行政法学でいう「法律の優位の原則」を最も直接に表すのはどれか。",
+      "choices": [
+        "行政活動は法律に反して行われてはならない",
+        "行政機関の判断は常に法律より優先する",
+        "法律が存在すれば裁判所はその法律を使えない",
+        "全ての行政上の細部を憲法本文だけで決める"
+      ],
+      "correctIndex": 0,
+      "explanation": "法律の優位は、行政活動が法律に違反してはならないという要請である。一定の行政活動に法律上の根拠を求める法律の留保とは区別する。",
+      "distractorRationales": [
+        "行政が法律に従うという消極的な要請。",
+        "法律による拘束を逆転させている。",
+        "法律の裁判への適用を禁じる原則ではない。",
+        "憲法本文だけで全行政を定める原則ではない。"
+      ],
+      "sources": [
+        {
+          "title": "熊本県立大学公開論文 — 行政立法と「依法行政」原則",
+          "url": "https://pu-kumamoto.repo.nii.ac.jp/record/2000471/files/220208_ueharai.pdf"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000031"
+    ],
+    "parameters": {
+      "b": 0.7,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の脚注42。日本の法律による行政の原理を整理し、法律の優位・留保を区別する箇所。構成要素の数を二つに固定した旧問は廃止。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000007",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "ケルゼンの純粋法学で、法秩序の妥当性を説明するために前提とされる規範はどれか。",
+      "choices": [
+        "承認の規則",
+        "根本規範（グルントノルム）",
+        "自然法則",
+        "一般意思"
+      ],
+      "correctIndex": 1,
+      "explanation": "グルントノルムは、法秩序の妥当性を説明する際に前提とされる根本規範である。国会などが制定した特定の条文そのものを指す名称ではない。",
+      "distractorRationales": [
+        "ハートの法理論に関わる別の概念。",
+        "Grundnormの名称に対応する。",
+        "自然科学での記述的な法則とは異なる。",
+        "ルソーに関わる政治哲学の概念。"
+      ],
+      "sources": [
+        {
+          "title": "Cambridge — The Drive towards Substance in Kelsen’s Pure Theory of Law",
+          "url": "https://www.cambridge.org/core/books/hans-kelsen-on-constitutional-democracy/drive-towards-substance-in-kelsens-pure-theory-of-law/593367EB78A764E202A3150F8D98FE2F"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000041"
+    ],
+    "parameters": {
+      "b": 1.1,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "研究章の検索取得本文が引用・検討するPure Theory §29の根本規範。UC Pressの原著説明も照合。ケルゼン本人の別PDFは本文を取得できておらず、読了扱いにしない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000026",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "トマス・アクィナスの『神学大全』の自然法論で、人間がなすべき善を捉えるうえで中心となる働きはどれか。",
+      "choices": [
+        "国王の命令を無条件に記憶すること",
+        "その時代の成文法の番号だけを暗記すること",
+        "実践理性によって善として捉えること",
+        "物体の落下速度を測定すること"
+      ],
+      "correctIndex": 2,
+      "explanation": "アクィナスの自然法論では、実践理性による善の認識が基本原理に関わる。ここでの自然法は物理学の自然法則と同じ意味ではない。",
+      "distractorRationales": [
+        "命令の存在だけで自然法を定義していない。",
+        "成文法の条番号だけを根拠としない。",
+        "原典I-II第94問第2項の説明に対応する。",
+        "人間の行為規範と物理法則を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "Thomas Aquinas — Summa Theologiae, I–II, Question 94",
+          "url": "https://www.newadvent.org/summa/2094.htm"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "原典英訳Article 2、L40–41。自然法学説全般を一括りにせず、アクィナスの主張に限定して改訂。"
+    }
+  },
+  {
+    "familyKey": "humanities-law-presumption-innocence",
+    "domain": "人文社会科学",
+    "subdomain": "法学",
+    "content": {
+      "question": "市民的及び政治的権利に関する国際規約14条2項の「無罪の推定」に合うのはどれか。",
+      "choices": [
+        "逮捕された時点で有罪とみなす",
+        "報道の件数だけで有罪とみなす",
+        "被告人自身が無実を証明するまで有罪とみなす",
+        "法律に基づき有罪とされるまでは無罪と推定される"
+      ],
+      "correctIndex": 3,
+      "explanation": "同項は、刑事上の罪に問われる人について、法律に基づいて有罪とされるまでは無罪と推定される権利を定める。",
+      "distractorRationales": [
+        "逮捕だけを有罪判定とはしない。",
+        "報道の量は法に基づく有罪判定ではない。",
+        "推定の向きを逆にしている。",
+        "規約14条2項に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "外務省 — 市民的及び政治的権利に関する国際規約（B規約）",
+          "url": "https://www.mofa.go.jp/mofaj/gaiko/kiyaku/2c_004.html"
+        }
+      ]
+    },
+    "reason": "法分野・規定・学説の範囲を明示し、刑事と民事、実体法と手続法を区別して改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "法律と学説の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "取得した条文・機関の説明・原典・研究論文で照合した独自問題。試験問題・事例・長い引用は転載しない。独立した法律専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の第14条2項。外国の個別事件の報告書を条文そのものと取り違えない。"
+    }
+  }
+]

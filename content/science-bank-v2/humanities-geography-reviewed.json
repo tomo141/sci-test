@@ -1,0 +1,468 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000098",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "人口12万人、面積300 km²の地域について、面積1 km²当たりの人口密度はいくらか。",
+      "choices": [
+        "40人/km²",
+        "400人/km²",
+        "4,000人/km²",
+        "36,000,000人/km²"
+      ],
+      "correctIndex": 1,
+      "explanation": "人口密度は人口を面積で割る。120,000÷300＝400人/km²であり、地域内の各地点に均等に400人ずつ住むという意味ではない。",
+      "distractorRationales": [
+        "人口をさらに10分の1にした値。",
+        "人口を面積で割った値。",
+        "正しい値の10倍。",
+        "人口と面積を掛けており、単位も人口密度にならない。"
+      ],
+      "sources": [
+        {
+          "title": "総務省統計局 — 令和2年国勢調査・用語の解説",
+          "url": "https://www.stat.go.jp/data/kokusei/2020/kekka/pdf/02-02.pdf"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "人口密度の定義と人口／面積の式（印刷頁354）を取得。数値例は独自に作成し、実在地域の人口値とはしない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000096",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "縮尺1:25,000の地図上で6 cmの距離は、その縮尺を適用した地上の水平距離でいくらか。",
+      "choices": [
+        "150 m",
+        "15 km",
+        "1.5 km",
+        "150 km"
+      ],
+      "correctIndex": 2,
+      "explanation": "6 cm×25,000＝150,000 cm＝1,500 m＝1.5 km。地図上の距離と地上の距離は、同じ単位にそろえて換算する。",
+      "distractorRationales": [
+        "cmからmへの換算で10分の1になっている。",
+        "正しい水平距離の10倍。",
+        "縮尺と単位換算の両方が一致する。",
+        "正しい水平距離の100倍。"
+      ],
+      "sources": [
+        {
+          "title": "国土地理院 — 距離と縮尺",
+          "url": "https://www.gsi.go.jp/KIDS/KIDS04.html"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の縮尺と地図上の長さの関係。掲載された例題の数値は使わず、6 cmの独自問にした。標高差を含む歩行距離は問わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000235",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "バージェスの同心円地帯モデルでは、都市の土地利用の配置をどのように表すか。",
+      "choices": [
+        "交通軸に沿って扇形の区域が伸びる",
+        "複数の独立した核の周りに区域が生じる",
+        "区域の位置を無作為に配置する",
+        "中心部を囲んで環状の区域が重なる"
+      ],
+      "correctIndex": 3,
+      "explanation": "同心円地帯モデルは、都市中心部から外側へ環状の地帯が展開するモデルである。現実の全都市がこの通りに成長するという普遍的な法則ではない。",
+      "distractorRationales": [
+        "扇形モデルの特徴に近い。",
+        "多核心モデルの特徴に近い。",
+        "無作為な配置を仮定するモデルではない。",
+        "中心を共有する環状の地帯という特徴に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Introduction to Sociology 2e, 20.2 Urbanization",
+          "url": "https://openstax.org/books/introduction-sociology-2e/pages/20-2-urbanization"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "Burgess 1925のconcentric circular areasの説明本文。図と細部の地帯番号は転載せず、モデルの配置の違いを問う。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000247",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "古典的な人口転換モデルで、出生率が高いまま死亡率が先に低下する段階では、人口の自然増加率は一般にどうなるか。",
+      "choices": [
+        "出生率と死亡率の差が広がり、大きくなる",
+        "出生率と死亡率の差が必ずゼロになる",
+        "死亡率の低下だけで負になる",
+        "移住者数と同じ値に固定される"
+      ],
+      "correctIndex": 0,
+      "explanation": "自然増加率は出生率と死亡率の差である。高い出生率に対して死亡率が低下すると差が広がる。これはモデル内の関係で、全社会が同じ時期・経路をたどるという断定ではない。",
+      "distractorRationales": [
+        "同じ人口・期間を基準にした率の差が広がる。",
+        "出生率が高く死亡率が低いので差はゼロではない。",
+        "死亡率の低下は、それだけでは自然減少を意味しない。",
+        "自然増減と移住による社会増減は別の成分。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Introduction to Sociology 3e, 20.1 Demography and Population",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/20-1-demography-and-population"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "人口転換モデルStage 2の出生率と死亡率の関係を取得。古い国別段階分類や将来推計値は採用しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000002",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "本州・北海道・九州・四国をそれぞれ一つの島として比べたとき、面積が最も大きいのはどれか。",
+      "choices": [
+        "北海道",
+        "本州",
+        "四国",
+        "九州"
+      ],
+      "correctIndex": 1,
+      "explanation": "4島の面積の大小関係は、本州、北海道、九州、四国の順である。地方区分や周辺の島々を含む行政区域の面積とは区別する。",
+      "distractorRationales": [
+        "4島の中では2番目に大きい。",
+        "4島の中で最大。",
+        "4島の中では最も小さい。",
+        "4島の中では3番目に大きい。"
+      ],
+      "sources": [
+        {
+          "title": "国土地理院 — 島の面積・面積の大きい順トップ20",
+          "url": "https://www.gsi.go.jp/common/000218164.pdf"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000007"
+    ],
+    "parameters": {
+      "b": -1.1,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "島別面積表の1〜4位を取得。測量年に依存する面積の小数値は出題せず、北海道地方全体を一島とする旧説明を削除。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000014",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "四国の瀬戸内側が太平洋側に比べて少雨となる要因として、気象庁の説明に合うものはどれか。",
+      "choices": [
+        "瀬戸内側だけ一年中赤道低圧帯に入る",
+        "四国山地が太平洋側の湿った空気を瀬戸内側へ常に集中させる",
+        "季節によって中国山地や四国山地が湿った空気の流入を妨げる",
+        "瀬戸内海では海水が全く蒸発しない"
+      ],
+      "correctIndex": 2,
+      "explanation": "暖候期には南からの湿った空気が四国山地の太平洋側で雨を降らせやすく、瀬戸内側は山地の影響で少雨になる。寒候期には中国山地も北からの流入を妨げる。少雨傾向は、大雨が起こらないという意味ではない。",
+      "distractorRationales": [
+        "この地域の位置と気候の説明に合わない。",
+        "山地による降水の南北差を逆にしている。",
+        "季節的な風向と山地の配置に対応する。",
+        "蒸発がないという前提が誤り。"
+      ],
+      "sources": [
+        {
+          "title": "気象庁 — 太平洋側の多雨と瀬戸内側の少雨",
+          "url": "https://www.data.jma.go.jp/cpd/j_climate/shikoku/climate_shikoku_sub1.html"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000019"
+    ],
+    "parameters": {
+      "b": -0.1,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "暖候期の四国山地、寒候期の中国山地を説明する本文を取得。旧問の一律700〜1,200 mmという断定は除去。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000018",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "ライン川の水が河口域を通じて最終的に流れ込む海はどれか。",
+      "choices": [
+        "黒海",
+        "地中海",
+        "バルト海",
+        "北海"
+      ],
+      "correctIndex": 3,
+      "explanation": "ライン川はオランダの河口域を経て北海へ流れる。河川の本流が通る国と、支流を含む流域に属する国は同じ範囲とは限らない。",
+      "distractorRationales": [
+        "ライン川の流出先ではない。",
+        "ライン川の流出先ではない。",
+        "ライン川の流出先ではない。",
+        "国際ライン保護委員会の河口域の説明に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "国際ライン保護委員会 — Rhine-Maas estuary",
+          "url": "https://www.iksr.org/en/topics/rhine/sub-basins/delta-rhine/estuary/"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "河口域からNorth Seaへ流れる経路の本文を取得。旧問の国名一覧・イタリアは流域外という断定を採用せず、流出先に改訂。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000029",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "クリスタラーに由来する中心地理論で、ある商業・サービス活動が成り立つために必要な最低限の需要規模に対応する概念はどれか。",
+      "choices": [
+        "需要の閾値（threshold）",
+        "財の到達範囲（range）",
+        "人口の自然増加率",
+        "都市の昼夜間人口比率"
+      ],
+      "correctIndex": 0,
+      "explanation": "閾値は活動を支えるために必要な最低限の市場・需要の規模を表す。一方、財の到達範囲は、その財・サービスを得るために移動する範囲などに関わる。両者の違いが中心地の階層を考える基礎となる。",
+      "distractorRationales": [
+        "サービス成立に必要な最低需要という意味。",
+        "主に供給・購買が及ぶ空間的な範囲を表す。",
+        "出生と死亡による人口変化の指標。",
+        "昼間人口と夜間人口の比で、最低需要そのものではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota公開研究論文 — 中心地理論のthresholdとrange",
+          "url": "https://ageconsearch.umn.edu/record/132294/files/04-2-4.pdf"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": 1,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のcentral place theory・threshold・range・hierarchical spatial structureの段落。PDF直接表示は403であり、全文読了扱いにはしない。"
+    }
+  },
+  {
+    "familyKey": "humanities-geography-period-fertility",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "ある年の「期間合計特殊出生率」の説明として正しいものはどれか。",
+      "choices": [
+        "その年の出生数を総人口で割った値",
+        "その年の各年齢の出生率を合計した、仮想的な生涯出生数に相当する指標",
+        "同じ世代の全女性を生涯追跡して実際の出生数を数え終えた値",
+        "全世帯の子どもの数を単純平均した値"
+      ],
+      "correctIndex": 1,
+      "explanation": "期間合計特殊出生率は、その年の女性の年齢別出生率を合計する。その率が生涯続くと仮定した指標であり、同じ世代を追ったコーホート合計特殊出生率とは区別する。",
+      "distractorRationales": [
+        "粗出生率に関わる計算で、年齢別出生率の合計ではない。",
+        "一つの期間の年齢別出生率を合計する指標。",
+        "同一世代の生涯にわたる実績はコーホートの考え方。",
+        "世帯数を分母にする指標ではない。"
+      ],
+      "sources": [
+        {
+          "title": "厚生労働省 — 合計特殊出生率について",
+          "url": "https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/geppo/nengai11/sankou01.html"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "定義部L37〜46の期間とコーホートの違いを照合。2011年の数値や推計は使わず、指標の定義を問う。"
+    }
+  },
+  {
+    "familyKey": "humanities-geography-net-migration",
+    "domain": "人文社会科学",
+    "subdomain": "地理学・人口学",
+    "content": {
+      "question": "ある県の1年間の都道府県間転入者が750人、転出者が500人だった。都道府県間の移動による転入超過数はいくらか。",
+      "choices": [
+        "1,250人",
+        "−250人",
+        "250人",
+        "500人"
+      ],
+      "correctIndex": 2,
+      "explanation": "転入超過数は転入者数から転出者数を引いた750−500＝250人。出生・死亡や国際移動は別なので、この値だけで県全体の人口増減は決まらない。",
+      "distractorRationales": [
+        "転入と転出を加えた移動総数。",
+        "引き算の向きが逆。",
+        "転入から転出を引いた値。",
+        "転出者数そのもので、差ではない。"
+      ],
+      "sources": [
+        {
+          "title": "総務省統計局 — 人口推計・用語の解説",
+          "url": "https://www.stat.go.jp/data/jinsui/7.html"
+        }
+      ]
+    },
+    "reason": "地理の用語・モデルの条件・人口指標を区別し、旧問の誤分類・一律の断定・曖昧な肢を改訂。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "計算・指標・空間モデルの基礎概念から置いた仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学教材・研究論文で照合し、問題と解説を独自に記述。図表・試験問題の転載ではなく、独立専門家の査読ではない。",
+      "sourceLocation": "L94〜101の自然動態・社会動態・都道府県間転入超過の式を照合。独自の架空数値で、自然増減と混同しない。"
+    }
+  }
+]
