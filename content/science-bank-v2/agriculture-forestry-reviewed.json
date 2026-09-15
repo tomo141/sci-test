@@ -1,0 +1,374 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000480",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "間伐後、残存木1本当たりの材積成長が大きくなった。この結果だけから、林分全体の材積成長について何が言えるか。",
+      "choices": [
+        "必ず大きくなり、1本当たりの成長と同じ比率で増える",
+        "必ず小さくなり、残存本数と同じ比率で減る",
+        "本数の減少もあるため、1本当たりの増加だけでは判断できない",
+        "間伐前後で必ず等しくなる"
+      ],
+      "correctIndex": 2,
+      "explanation": "密度を下げると残存木が使える空間や資源が増え、生長が促され得る。一本当たりの成長の増加と、林分全体の材積成長の増加は同じではない。",
+      "distractorRationales": [
+        "本数が減る効果を考慮していない。",
+        "1本当たりの成長が増える効果を考慮していない。",
+        "平均成長と本数の両方が林分全体の成長に関わる。",
+        "全体の成長が不変になる保証はない。"
+      ],
+      "sources": [
+        {
+          "title": "US Forest Service — Growth and yield considerations and implications for alternative density management objectives and approaches",
+          "url": "https://research.fs.usda.gov/treesearch/45521"
+        }
+      ]
+    },
+    "reason": "水産・土壌への誤分類を解消し、残存木と林分全体の生長を区別。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000459",
+      "10000000-0000-4000-8003-000000000069"
+    ],
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Marshall (2013)の取得抄録。間伐による残存木の資源利用・平均成長と、林分全体の成長の違いを照合。間伐効果を全条件で保証しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000489",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "ある林分の生立木だけを調べ、炭素貯留量が10年間で80 tC/haから95 tC/haへ変わった。土壌・枯死木・伐採搬出などは測っていない。このデータだけから言えるのはどれか。",
+      "choices": [
+        "森林全体の大気からの正味炭素吸収が年1.5 tC/haと確定した",
+        "生立木の炭素貯留量の変化は年平均1.5 tC/haだった",
+        "生立木の炭素貯留量の変化は年平均15 tC/haだった",
+        "生立木の炭素貯留量の変化は年平均95 tC/haだった"
+      ],
+      "correctIndex": 1,
+      "explanation": "測定した生立木の貯留量の年平均変化は(95−80)÷10＝1.5 tC/ha。未測定のプールや移出入があるため、この数値だけで森林全体と大気との正味交換量は確定しない。",
+      "distractorRationales": [
+        "測定範囲を森林全体へ広げて解釈している。",
+        "対象を生立木に限り、期間で割った変化量を示している。",
+        "10年間の総変化を1年当たりと取り違えている。",
+        "終点の貯留量を変化率と取り違えている。"
+      ],
+      "sources": [
+        {
+          "title": "US Forest Service — Forest Carbon Cycle, Resource Update FS-382",
+          "url": "https://www.fs.usda.gov/nrs/pubs/ru/ru_fs382.pdf"
+        }
+      ]
+    },
+    "reason": "単一の管理策が常に炭素を増やすという問いを、測定範囲と貯留・変化率の区別へ改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "取得されたCarbon Pools本文。生体・枯死物・土壌等のプールと、プール間・大気との移動を照合。実測値を転載せず対象と期間を限定した独自計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000499",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "森林を観測するGEDIなどのLiDARと、地上部バイオマスの推定の関係として適切なのはどれか。",
+      "choices": [
+        "林冠高さなどの構造情報から、校正式を使って地上部バイオマスを推定する",
+        "林冠の標高が分かれば、地表の標高を使わず樹高が確定する",
+        "林冠高さが同じなら、森林の種類によらずバイオマスも同じと定義する",
+        "地上部バイオマスの推定値には、土壌有機炭素の全量も含まれる"
+      ],
+      "correctIndex": 0,
+      "explanation": "LiDARの反射信号から林冠高さや鉛直構造を求め、それらを校正式へ入力して地上部バイオマスを推定する。直接の構造測定と、モデルによる量の推定は区別する。",
+      "distractorRationales": [
+        "構造情報とバイオマス推定の関係が合う。",
+        "樹高は地表を基準にした高さで、標高そのものではない。",
+        "高さだけで森林の種類によらず一意に決まる定義ではない。",
+        "地上部バイオマスと土壌炭素は別のプール。"
+      ],
+      "sources": [
+        {
+          "title": "GEDI / University of Maryland — Products Overview",
+          "url": "https://gedi.umd.edu/dataproducts/products/"
+        }
+      ]
+    },
+    "reason": "水産への誤分類と無関係な誤答を修正し、測定・地形・推定・炭素プールを区別。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L88–98のL2林冠高さ・構造とL4地上部バイオマスの校正式を照合。図・実データは使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000161",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "森林の更新で、苗畑で育てた苗木を現地へ植えて次の世代を育てる方法は、どの分類に当たるか。",
+      "choices": [
+        "天然に散布された種子による更新",
+        "切株からの萌芽による更新",
+        "伐採前から育っていた稚樹を利用する更新",
+        "植栽による人工更新"
+      ],
+      "correctIndex": 3,
+      "explanation": "人が苗木を植える方法は人工更新に分類される。天然下種、萌芽、既存の稚樹の利用とは、次世代の成立過程が異なる。",
+      "distractorRationales": [
+        "自然に落ちた種子からの成立であり、苗木の植栽とは異なる。",
+        "残った切株などから芽が伸びる方法。",
+        "既に現地にいる次世代の個体を使う方法。",
+        "人が用意した苗木を植える人工更新。"
+      ],
+      "sources": [
+        {
+          "title": "US Forest Service — Silvicultural Practices and Management of Habitats",
+          "url": "https://research.fs.usda.gov/download/treesearch/34026.pdf"
+        }
+      ]
+    },
+    "reason": "無関係な処理法を森林の更新方法へ置き換え、比較軸を揃えた。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "取得されたREGENERATION TREATMENTSとArtificial Regeneration本文。苗木・挿し木の植栽と播種の分類を照合。原教材の演習・図は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000169",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "牧区を順番に使う輪換放牧で、使った牧区に休牧期間を設ける主な目的はどれか。",
+      "choices": [
+        "牧草が葉などを再生する時間を確保する",
+        "家畜の頭数を記録しなくても過放牧を防ぐ",
+        "季節による成長速度の差をなくす",
+        "草種による食べられやすさの差をなくす"
+      ],
+      "correctIndex": 0,
+      "explanation": "休牧は、採食された牧草が再生する時間を確保するために行う。必要な期間は気象・草種・利用程度に左右され、牧区を回すだけで過放牧が防げるわけではない。",
+      "distractorRationales": [
+        "牧草の回復のための時間を確保する。",
+        "輪換しても頭数や草の状態を把握する必要がある。",
+        "季節に伴う成長速度の差そのものをなくす操作ではない。",
+        "家畜の選択採食をなくす操作ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — Managing established horse pastures",
+          "url": "https://extension.umn.edu/agriculture/animals-and-livestock/horse/managing-established-horse-pastures"
+        }
+      ]
+    },
+    "reason": "『永続放牧』など曖昧な誤答を除き、休牧の目的に限定。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Quick facts、Divide up your space、Rotational grazingの取得本文。休牧と再生の原理に限り、一律の高さ・日数を処方しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-forest-basal-area",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "胸高直径が全て20 cmの木が1 haに400本ある。幹の断面を円とすると、この林分の胸高断面積合計は約何m²/haか。π＝3.14とする。",
+      "choices": [
+        "0.0314",
+        "1.26",
+        "12.6",
+        "50.2"
+      ],
+      "correctIndex": 2,
+      "explanation": "半径0.10 mの断面積は3.14×0.10²＝0.0314 m²。400本分で12.56 m²/ha、選択肢では約12.6となる。",
+      "distractorRationales": [
+        "1本だけの断面積。",
+        "正しい値の約10分の1で、本数や換算が合わない。",
+        "半径で円の面積を求め、400本分を足している。",
+        "直径0.20 mを半径として計算している。"
+      ],
+      "sources": [
+        {
+          "title": "Oregon State University — Measuring your trees",
+          "url": "https://extension.oregonstate.edu/catalog/em-9058-measuring-your-trees"
+        }
+      ]
+    },
+    "reason": "単木の直径と単位面積の林分密度を結ぶ独自計算。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Basal area L62–64の幹の円形断面積と合計を照合。海外の胸高測定高を日本の統一基準とせず、例題の寸法を独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-coppice-asexual-regeneration",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "萌芽更新では、伐採後に残った切株などから伸びる芽を利用する。この再生産を、種子からの更新と比べた特徴はどれか。",
+      "choices": [
+        "受粉・受精を経て新個体を作る有性生殖が基本",
+        "残った個体の組織から再生する無性生殖が基本",
+        "別の樹種からの受粉だけを必要とする",
+        "新しい根ができるため必ず遺伝的に異なる個体になる"
+      ],
+      "correctIndex": 1,
+      "explanation": "切株などの生きた組織から芽が伸びるので、萌芽による更新は無性生殖を利用する。萌芽する能力は樹種や個体の状態によって異なる。",
+      "distractorRationales": [
+        "種子を経る有性生殖と混同している。",
+        "既存個体の組織を利用する無性生殖。",
+        "異種の受粉を必要とする仕組みではない。",
+        "根や芽の形成だけで必ず別の遺伝子型になるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "FAO AGROVOC — Coppice system",
+          "url": "https://agrovoc.review.fao.org/browse/agrovoc/en/page/c_1871"
+        }
+      ]
+    },
+    "reason": "種子由来と栄養繁殖由来の更新を区別する独自問題。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Definition L91–93の切株由来の萌芽による無性生殖を照合。全樹種が萌芽するとは記述しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-silvopasture-integrated-management",
+    "domain": "農学",
+    "subdomain": "林学・草地・生態",
+    "content": {
+      "question": "農林複合経営の方式の一つであるシルボパスチャーの説明として適切なのはどれか。",
+      "choices": [
+        "樹木と作物を組み合わせ、家畜を必ず排除する",
+        "森林へ家畜を放せば、樹木や牧草の管理は不要になる",
+        "耕地の周囲に防風樹を植えることだけを指す",
+        "同じ土地の樹木・牧草・家畜を計画的に組み合わせて管理する"
+      ],
+      "correctIndex": 3,
+      "explanation": "シルボパスチャーは樹木、飼料となる植生、家畜を同じ土地で計画的に組み合わせる方式。森林へ家畜を入れるだけとは区別される。",
+      "distractorRationales": [
+        "林業と耕作の組合せとは異なり、家畜も構成要素。",
+        "光・樹木・牧草・放牧の管理を必要とする。",
+        "防風林だけを指す用語ではない。",
+        "三つの構成要素を計画的に管理する。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — Silvopasture",
+          "url": "https://extension.umn.edu/agriculture/farm-operations-and-systems/agroforestry/silvopasture"
+        }
+      ]
+    },
+    "reason": "複合的な土地利用と放置放牧・他の農林複合を区別する独自問題。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・前提・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L242–244の樹木・牧草・家畜を計画的に組み合わせる定義を照合。森林へ放置するだけではない。土地規制・税・投資の勧告は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料の取得箇所で原理を照合。設問・選択肢・解説・計算条件は独自に作成。図・調査数値・作業手順は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]

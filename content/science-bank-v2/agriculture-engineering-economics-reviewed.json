@@ -1,0 +1,377 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000171",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "点滴灌漑（ドリップ灌漑）の給水方式として適切なのはどれか。",
+      "choices": [
+        "スプリンクラーで作物の上から面状に散水する",
+        "畦で区切った区画全体へ水を張る",
+        "地下水位を上げることで根域へ水を供給する",
+        "エミッターから根域付近へ少量ずつ局所的に給水する"
+      ],
+      "correctIndex": 3,
+      "explanation": "点滴灌漑は配管のエミッターを通じて根域付近へ局所的に給水する。水の損失を抑えやすいが、実際の効率は設計や管理による。",
+      "distractorRationales": [
+        "散水灌漑の方式。",
+        "地表全体へ水を広げる方式。",
+        "地下水位を利用する方式で、点滴のエミッター給水とは異なる。",
+        "点滴灌漑の基本的な給水方式。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Chapter 6: Drip Irrigation",
+          "url": "https://www.fao.org/4/s8684e/s8684e07.htm"
+        }
+      ]
+    },
+    "reason": "旧3IDを統合。根拠のない効率2〜3倍の数値と一律の利点を除き方式を問う。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000200",
+      "10000000-0000-4000-8007-000000000476"
+    ],
+    "parameters": {
+      "b": -0.4,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§6.1のエミッターからの局所給水を取得本文で照合。一律の流量・頻度・効率倍率は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000185",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "乾燥地で、塩分を含む浅い地下水から根域へ水が毛管上昇し、地表から蒸発している。排水が不十分な場合、塩類集積を説明する仕組みとして適切なのはどれか。",
+      "choices": [
+        "蒸発とともに塩類も同じ割合で気体になって失われる",
+        "上昇する水が塩を運び、水の蒸発後に塩が残る",
+        "毛管上昇そのものが水中のイオンを全て分解する",
+        "排水が悪いほど塩が必ず根域外へ洗い流される"
+      ],
+      "correctIndex": 1,
+      "explanation": "毛管上昇する地下水が塩を運び、水が蒸発しても非揮発性の塩は残る。塩の収支には灌漑水・地下水・排水・溶脱が関わり、灌漑量だけでは判断できない。",
+      "distractorRationales": [
+        "非揮発性の塩は水と同じようには蒸発しない。",
+        "水の移動と蒸発による塩の蓄積を述べている。",
+        "毛管上昇はイオンの分解反応ではない。",
+        "塩の溶脱には十分な下方への排水が必要。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Water Quality for Agriculture, Salinity",
+          "url": "https://www.fao.org/4/t0234e/T0234E03.htm"
+        }
+      ]
+    },
+    "reason": "過剰灌漑だけで塩類化を断定する旧条件を、塩の供給源・蒸発・排水へ具体化。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000475"
+    ],
+    "parameters": {
+      "b": 0.1,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L8–9、§2.4.1 L20–23の排水、毛管上昇、根域への塩供給、溶脱を照合。灌漑量だけで集積の方向を断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000165",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "土層を大きく反転させ、表面の作物残渣を土中へすき込む耕起作業機はどれか。",
+      "choices": [
+        "チゼルプラウ",
+        "鎮圧ローラ",
+        "モールドボードプラウ",
+        "コンバイン"
+      ],
+      "correctIndex": 2,
+      "explanation": "モールドボードプラウは土を切り、反転させる耕起作業機。チゼルプラウの主な作用である土の破砕・膨軟、ローラの鎮圧、コンバインの収穫と区別する。",
+      "distractorRationales": [
+        "主に土を破砕・緩めるが、モールドボードのような大きな反転を主としない。",
+        "主に土を押さえて鎮圧する。",
+        "土を反転させる代表的な耕起作業機。",
+        "主に収穫・脱穀などに使う機械。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota Extension — Tillage Implements",
+          "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/tillage-implements-purpose-and-ideal-use"
+        }
+      ]
+    },
+    "reason": "牽引する作業機なら複数あり得るため、反転耕へ限定し実在の農機で比較。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "HistoryとMoldboard plowの取得本文で土の反転を照合。全耕起が同じ強度という一般化や利用の推奨は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000162",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "農産物の競争市場を、右下がりの需要曲線と右上がりの供給曲線で表す。需要は変わらず、不作で各価格に対する供給量だけが減った。新しい均衡の価格と取引量は通常どう変わるか。",
+      "choices": [
+        "価格が上がり、取引量が減る",
+        "価格が上がり、取引量が増える",
+        "価格が下がり、取引量が減る",
+        "価格が下がり、取引量が増える"
+      ],
+      "correctIndex": 0,
+      "explanation": "供給曲線が左へ移り、変わらない需要曲線との交点は価格上昇・取引量減少の方向へ動く。需要も同時に変わる場合はこの条件と異なる。",
+      "distractorRationales": [
+        "供給だけが減る単純モデルの均衡変化。",
+        "供給減少で取引量が増える方向ではない。",
+        "価格の変化が逆。",
+        "供給が増えた場合に対応する方向。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Principles of Economics 2e §3.3 — Changes in Equilibrium Price and Quantity",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/3-3-changes-in-equilibrium-price-and-quantity-the-four-step-process"
+        }
+      ]
+    },
+    "reason": "価格形成という用語当てを、需要を固定した供給変化のモデルへ改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L31–36の曲線のシフトと新均衡の比較手順を照合。著者のサケ漁例・数値・図は転載せず、不作で供給のみが減る単純モデルを独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000163",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "湛水した水田の嫌気的な土壌で、有機物の分解に伴って生成され、落水によって酸素が入りやすくなると生成が抑えられる代表的な温室効果ガスはどれか。",
+      "choices": [
+        "二酸化炭素（CO₂）",
+        "一酸化二窒素（N₂O）",
+        "メタン（CH₄）",
+        "オゾン（O₃）"
+      ],
+      "correctIndex": 2,
+      "explanation": "水田の嫌気条件はメタンの生成に関わる微生物の活動を支える。酸素が供給されるとその生成は抑えられる。ここではメタンの生成を扱っており、全温室効果ガスの合計変化を断定していない。",
+      "distractorRationales": [
+        "土壌呼吸などでも生じるが、問われた嫌気的生成の代表はメタン。",
+        "窒素循環に伴って生じる別のガスで、メタン生成の説明には当たらない。",
+        "水田の嫌気条件下で生成される代表的なガス。",
+        "水田土壌のこの分解過程を代表するガスではない。"
+      ],
+      "sources": [
+        {
+          "title": "農研機構 — 水田の水管理によるメタン削減（中干し期間の延長）",
+          "url": "https://www.naro.go.jp/smart-nogyo/midori/catalog/catalog_02.html"
+        }
+      ]
+    },
+    "reason": "希ガスなどの無関係な誤答を除き、嫌気条件と生成の関係へ限定。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "技術の概要の嫌気条件下の生成と落水による酸素供給を照合。削減率の実測値・具体的な中干し日数は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000166",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "肥料AとBを比べる圃場試験で、4ブロックそれぞれに2区画を作り、ブロックごとに独立にランダム化してA・Bを1区画ずつに割り付けた。施肥は区画単位で行い、各区画10株を測定した。肥料Aを割り付けた実験単位の数はいくつか。",
+      "choices": [
+        "40",
+        "4",
+        "8",
+        "80"
+      ],
+      "correctIndex": 1,
+      "explanation": "処理を割り付ける単位は株ではなく区画である。Aの区画は4つ。区画内の10株はその実験単位からの複数測定であり、独立な処理の反復を40へ増やすものではない。",
+      "distractorRationales": [
+        "A区画の測定株数と実験単位数を混同している。",
+        "各ブロック1区画で、4区画。",
+        "AとBを合わせた全区画数。",
+        "全測定株数で、Aの実験単位数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Penn State STAT 502 — Randomization Design Part I",
+          "url": "https://online.stat.psu.edu/stat502/Lesson07"
+        }
+      ]
+    },
+    "reason": "分析法の用語当てを、疑似反復を避けるための割付単位の理解へ改訂。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引から取得したExperimental Designの『処理を受ける単位』の定義を照合。直接openは未取得。区画・植物数は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000487",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "水不足などによる生育・蒸発散の制限がない標準条件を考える。基準蒸発散量ETo＝4.0 mm/日、作物係数Kc＝1.2なら、単一作物係数法による作物蒸発散量ETcはいくらか。",
+      "choices": [
+        "3.33 mm/日",
+        "4.0 mm/日",
+        "5.2 mm/日",
+        "4.8 mm/日"
+      ],
+      "correctIndex": 3,
+      "explanation": "ETc＝Kc×ETo＝1.2×4.0＝4.8 mm/日。これは標準条件の作物蒸発散量であり、降雨・土壌水分・損失を含めて決まる灌漑量そのものではない。",
+      "distractorRationales": [
+        "EToをKcで割っている。",
+        "作物係数を反映していない。",
+        "係数をEToへ足しており、式と単位が合わない。",
+        "作物係数を基準蒸発散量に掛ける。"
+      ],
+      "sources": [
+        {
+          "title": "FAO Irrigation and Drainage Paper 56 — Chapter 5: Introduction to Crop Evapotranspiration",
+          "url": "https://www.fao.org/4/x0490e/x0490e0a.htm"
+        }
+      ]
+    },
+    "reason": "食品への誤分類を解消。FAO基準蒸発散と個別作物・標準条件を区別。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L11–13、L27–38のETo・ETcと式56、L51の標準条件を照合。必要灌漑量や任意の水ストレス下の実蒸発散量とは同一視しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-effective-field-capacity",
+    "domain": "農学",
+    "subdomain": "農業工学・経済・農村計画",
+    "content": {
+      "question": "作業幅2.0 m、作業中の走行速度5.0 km/時の農機を使う。旋回や重複などを含めた圃場作業効率が80％なら、実効作業量は何ha/時か。1 ha＝10,000 m²とする。",
+      "choices": [
+        "0.80 ha/時",
+        "1.00 ha/時",
+        "8.00 ha/時",
+        "1.25 ha/時"
+      ],
+      "correctIndex": 0,
+      "explanation": "理論上の面積は2.0×5,000＝10,000 m²/時＝1.00 ha/時。これに0.80を掛けて0.80 ha/時となる。",
+      "distractorRationales": [
+        "理論値に圃場作業効率を掛けている。",
+        "旋回等の損失を反映していない。",
+        "面積の単位換算が10倍ずれている。",
+        "効率で割ってしまい、理論値より大きくなっている。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Estimating the Field Capacity of Farm Machines (A3-24)",
+          "url": "https://www.extension.iastate.edu/agdm/crops/pdf/a3-24.pdf"
+        }
+      ]
+    },
+    "reason": "幅・速度・効率・面積単位をつなぐ独自計算。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・前提理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PDF p.4のL189–218と式1・3・4（L197–240）を照合。幅×速度をSI単位からha/hへ独自に換算。機種別の表・効率の実測値は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・FAOの公開資料の取得範囲で原理を照合。設問・四択・説明・計算値は独自作成。例題・図・栽培処方・試験の実測値は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
