@@ -1,0 +1,462 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000220",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "公衆衛生サーベイランスの中心的な特徴はどれか。",
+      "choices": [
+        "一度だけ参加者へ質問して終了すること",
+        "健康情報を継続的・系統的に収集、分析、解釈し、対策に使う人へ伝えること",
+        "個人の治療効果だけを比較する無作為化試験を行うこと",
+        "病気の位置を一枚の地図に描くことだけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "サーベイランスは継続した情報の収集から対策への活用までを含む。地図による表示は分析・伝達の方法の一つで、定義全体ではない。",
+      "distractorRationales": [
+        "単発の調査と継続した監視は区別する。",
+        "収集・分析・解釈・伝達と活用を含む。",
+        "介入を割り付ける試験とは別。",
+        "地図を作る行為だけでは全体を表さない。"
+      ],
+      "sources": [
+        {
+          "title": "CDC — Lexicon, Definitions, and Conceptual Framework for Public Health Surveillance",
+          "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/su6103a3.htm"
+        }
+      ]
+    },
+    "reason": "地図表示をサーベイランスそのものとした旧問を訂正。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Principles of Public Health Surveillanceのongoing/systematicと6過程。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000225",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "ベルモント・レポート（1979年）が整理した、研究参加へのインフォームド・コンセントの三要素はどれか。",
+      "choices": [
+        "署名・押印・書類の保管",
+        "研究費・症例数・発表先",
+        "情報の提供・理解・自発性",
+        "診断名・治療成績・追跡期間"
+      ],
+      "correctIndex": 2,
+      "explanation": "同レポートは情報、理解、自発性を三要素として整理する。署名があることだけで、十分理解した自由な参加が保証されるわけではない。",
+      "distractorRationales": [
+        "書類の手続きだけでは同意の実質を表せない。",
+        "研究計画の条件であり三要素ではない。",
+        "原文のinformation、comprehension、voluntarinessに対応する。",
+        "研究の内容になり得るが三要素ではない。"
+      ],
+      "sources": [
+        {
+          "title": "HHS — The Belmont Report (1979)",
+          "url": "https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/read-the-belmont-report/index.html"
+        }
+      ]
+    },
+    "reason": "単語だけの旧問を、倫理原典の同意の内容へ変更。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Part C.1 L181–193の三要素と情報・理解。現行日本法の要件一覧としては提示しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000219",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "死後硬直に関わる筋分子の変化として適切なのはどれか。",
+      "choices": [
+        "ATP不足で、ミオシンがアクチンから離れにくくなる",
+        "ATPが増え続け、アクチンとミオシンの結合が全て解ける",
+        "アクチンのフィラメント自体が能動的に短縮する",
+        "神経からの刺激が永久に増え続ける"
+      ],
+      "correctIndex": 0,
+      "explanation": "ATPはミオシンをアクチンから離すために必要。死後のATP不足が架橋の解離を妨げ、硬直に関わる。硬直だけから一律の経過時間を決める問題ではない。",
+      "distractorRationales": [
+        "ATPの役割と死後変化の関係を表す。",
+        "ATPの枯渇とは逆の想定。",
+        "フィラメントの滑りとフィラメント自体の短縮は別。",
+        "持続的な神経刺激が主因という説明ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, §10.3 Muscle Fiber Contraction",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+        }
+      ]
+    },
+    "reason": "光合成等の無関係な肢を廃止し、筋の機序へ改訂。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のATP bindingによる解離とrigor mortis。死後時間の固定値・捜査手順は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-public-health-incidence-rate",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "追跡中の新規発症が12件、発症前に観察された時間の合計が600人年だった。罹患率を1,000人年あたりで示すといくらか。",
+      "choices": [
+        "2件",
+        "12件",
+        "50件",
+        "20件"
+      ],
+      "correctIndex": 3,
+      "explanation": "12/600＝0.02件/人年なので、1,000人年あたり20件。分母は人数だけでなく観察時間を含む。",
+      "distractorRationales": [
+        "1,000倍への換算で桁が一つ小さい。",
+        "件数を標準化せずそのまま示している。",
+        "600/12という逆数との混同。",
+        "12/600×1,000の結果。"
+      ],
+      "sources": [
+        {
+          "title": "CDC — Principles of Epidemiology, Lesson 3 Section 2",
+          "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html"
+        }
+      ]
+    },
+    "reason": "独自の計算問題。人時間を求めるために危険率一定という不要な前提を置かない。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "L74–87の人時間分母の定義。人数・人年・結果は独自設定。率を確率と同じにはしない。"
+    }
+  },
+  {
+    "familyKey": "medical-public-health-point-prevalence",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "ある日に地域の2,400人を調べ、120人が対象疾患を持っていた。この日の有病割合はいくらか。",
+      "choices": [
+        "5％",
+        "0.05％",
+        "20％",
+        "120％"
+      ],
+      "correctIndex": 0,
+      "explanation": "その日に疾患を持つ人を同じ日の人口で割る。120/2,400＝0.05＝5％。新規発症者だけを数える罹患の指標とは別。",
+      "distractorRationales": [
+        "分子・分母と％への換算が正しい。",
+        "小数と百分率の換算が違う。",
+        "2,400/120の逆数を％としている。",
+        "人数をそのまま百分率にしている。"
+      ],
+      "sources": [
+        {
+          "title": "CDC — Principles of Epidemiology, Lesson 3 Section 2",
+          "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html"
+        }
+      ]
+    },
+    "reason": "独自問。同一時点の分子・分母を明記。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Prevalenceの定義と検索索引のpoint prevalence。元の例題の人数・時点を使用せず独立計算。"
+    }
+  },
+  {
+    "familyKey": "medical-public-health-risk-ratio",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "同じ1年間、開始時に未発症のA群200人中30人、B群300人中15人が発症した。追跡漏れはない。A群のB群に対するリスク比はいくらか。",
+      "choices": [
+        "0.33",
+        "2.0",
+        "3.0",
+        "0.10"
+      ],
+      "correctIndex": 2,
+      "explanation": "A群は30/200＝0.15、B群は15/300＝0.05。比は0.15/0.05＝3。これだけでA群の特徴が原因だったとは断定できない。",
+      "distractorRationales": [
+        "比較する方向が逆。",
+        "発症人数の比だけを計算している。",
+        "各群のリスクを計算してから割った値。",
+        "リスク差であり、リスク比ではない。"
+      ],
+      "sources": [
+        {
+          "title": "CDC — Principles of Epidemiology, Lesson 3 Section 5",
+          "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section5.html"
+        }
+      ]
+    },
+    "reason": "独自計算。人数比、リスク比、リスク差、因果を区別。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "L43–56のリスクの比の定義。人数・期間は独自設定。"
+    }
+  },
+  {
+    "familyKey": "medical-public-health-random-allocation",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "参加者を介入群と対照群へ無作為に割り付ける主な目的はどれか。",
+      "choices": [
+        "研究者が効果の出そうな人だけを介入群に選ぶ",
+        "割り付けに研究者の予想や参加者の特徴が偏って入り込むのを抑える",
+        "参加者全員が同じ結果になるようにする",
+        "母集団からの無作為抽出を行ったことにする"
+      ],
+      "correctIndex": 1,
+      "explanation": "無作為割り付けは、介入の選び方による偏りを抑える。個々の試験で全ての背景が完全一致する保証でも、母集団からの無作為抽出と同じ操作でもない。",
+      "distractorRationales": [
+        "選択による偏りを生む方法。",
+        "割り付けに関係するバイアスを抑える目的。",
+        "個人の結果を同一にする操作ではない。",
+        "抽出と介入への割り付けは別。"
+      ],
+      "sources": [
+        {
+          "title": "NCI — Clinical Trial Randomization",
+          "url": "https://www.cancer.gov/clinical-trial-randomization-infographic"
+        }
+      ]
+    },
+    "reason": "独自問。ランダム化を全条件の完全一致や標本抽出と同一視しない。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "取得された本文のchanceによるassignmentとhuman choicesによるbias。画像は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-public-health-assessor-blinding",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "試験で、結果の評価者が参加者の介入群・対照群の区別を知らずに判定することを、何というか。",
+      "choices": [
+        "層別無作為化",
+        "中間解析",
+        "割付比の変更",
+        "評価者の盲検化"
+      ],
+      "correctIndex": 3,
+      "explanation": "評価者の盲検化は、どちらの介入だったかという知識が判定へ入り込むのを抑える工夫。参加者や施術者まで盲検化されたとは限らない。",
+      "distractorRationales": [
+        "背景などで層を作って割り付ける方法。",
+        "試験の途中でデータを解析すること。",
+        "各群へ割り付ける比率を変えること。",
+        "指定された評価者への情報制限。"
+      ],
+      "sources": [
+        {
+          "title": "NCI — Dictionary of Cancer Terms, blinded study",
+          "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/blinded-study"
+        }
+      ]
+    },
+    "reason": "独自問。「二重盲検」という語だけで対象者を曖昧にせず、評価者を指定。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "blinded studyの定義。補助的にClinicalTrials.gov公開プロトコルのassessor blindingの説明を確認。"
+    }
+  },
+  {
+    "familyKey": "medical-public-health-lead-time",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "検診で診断日だけが早まり、死亡時点は変わらないのに、診断後の生存期間が長く見える。これは何の例か。",
+      "choices": [
+        "リードタイム・バイアス",
+        "追跡脱落による選択バイアス",
+        "思い出しバイアス",
+        "測定単位の換算誤り"
+      ],
+      "correctIndex": 0,
+      "explanation": "診断を早めると、死亡時点が変わらなくても診断から死亡までの長さは増える。これだけでは寿命を延ばした証拠にならない。",
+      "distractorRationales": [
+        "診断の起点が前へ動いたことによる見かけの改善。",
+        "追跡漏れの条件は与えられていない。",
+        "過去の記憶を比較する状況ではない。",
+        "起点が変わる問題であり、単位の違いではない。"
+      ],
+      "sources": [
+        {
+          "title": "NCI — What Cancer Screening Statistics Really Tell Us",
+          "url": "https://www.cancer.gov/about-cancer/screening/research/what-screening-statistics-mean"
+        }
+      ]
+    },
+    "reason": "独自問。診断後生存と寿命・死亡減少を区別。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Lead-Time Biasの定義。原図・年齢・実測効果を転載しない。"
+    }
+  },
+  {
+    "familyKey": "medical-public-health-belmont-justice",
+    "domain": "医歯薬学",
+    "subdomain": "公衆衛生・法医・倫理",
+    "content": {
+      "question": "ベルモント・レポートで、研究の利益と負担を誰が受けるか、研究対象者を公正に選ぶか、を問う原則はどれか。",
+      "choices": [
+        "善行（beneficence）",
+        "人格の尊重（respect for persons）",
+        "正義（justice）",
+        "守秘（confidentiality）"
+      ],
+      "correctIndex": 2,
+      "explanation": "正義は研究の利益・負担の公正な配分や対象者選択に関わる。レポートの三原則の残りは人格の尊重と善行。",
+      "distractorRationales": [
+        "危害を減らし利益を増す観点を中心とする。",
+        "自己決定などの尊重を中心とする。",
+        "公正な配分と選択に対応する。",
+        "情報保護に関わるが、この三原則で問われた名前ではない。"
+      ],
+      "sources": [
+        {
+          "title": "HHS — The Belmont Report (1979)",
+          "url": "https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/read-the-belmont-report/index.html"
+        }
+      ]
+    },
+    "reason": "独自問。現在の具体的法的義務と、1979年原典の倫理原則を区別。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "原理・比較・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Part B.3 L165–174とPart C.3 L219–221のfairness・利益負担・subject selection。"
+    }
+  }
+]

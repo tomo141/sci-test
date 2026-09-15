@@ -1,0 +1,462 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000089",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "赤血球の寿命に大きな変化がない場合、HbA1cの読み方として最も適切なのはどれか。",
+      "choices": [
+        "採血した瞬間の血糖だけを示す",
+        "数か月の血糖状態を反映し、比較的最近の血糖の影響が大きい",
+        "過去一年の血糖の最大値だけを示す",
+        "過去三か月の血糖を全時点で同じ重みで正確に平均する"
+      ],
+      "correctIndex": 1,
+      "explanation": "HbA1cはおおむね過去2〜3か月の血糖状態を反映し、直近の期間の影響が比較的大きい。赤血球寿命などの条件が変わると解釈にも影響する。",
+      "distractorRationales": [
+        "一時点の血糖値とは異なる。",
+        "長期の状態と最近の影響を区別している。",
+        "最大値を記録する検査ではない。",
+        "単純な等重みの算術平均そのものではない。"
+      ],
+      "sources": [
+        {
+          "title": "NIDDK — The A1C Test & Diabetes",
+          "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test"
+        }
+      ]
+    },
+    "reason": "無関係な単位だけを並べた旧問を、期間と限界の理解へ改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のpast 3 months・赤血球寿命と、取得本文L238のpast 30 daysの大きな影響。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000212",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "パーキンソン病の運動症状と関係が深い、ドーパミン産生ニューロンの減少が見られる部位はどれか。",
+      "choices": [
+        "青斑核",
+        "海馬",
+        "中脳の黒質",
+        "小脳皮質"
+      ],
+      "correctIndex": 2,
+      "explanation": "黒質のドーパミン産生ニューロンの障害は、パーキンソン病の運動症状と関係する。病変が黒質だけに限られるという意味ではない。",
+      "distractorRationales": [
+        "主にノルアドレナリン系で知られる部位。",
+        "記憶などに関わる部位だが、指定された系の主要部位ではない。",
+        "指定されたドーパミン系の部位。",
+        "運動調節に関わるが、問われた黒質の系とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "NINDS — Parkinson's Disease",
+          "url": "https://www.ninds.nih.gov/current-research/focus-disorders/parkinsons-disease-research/parkinsons-disease-challenges-progress-and-promise"
+        }
+      ]
+    },
+    "reason": "旧問の部位をより明確にし、臨床の薬剤推奨は含めない。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のPD and the brain、substantia nigraとdopamine。神経細胞減少の固定割合は不使用。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000222",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "緑内障の評価などで、視線を固定したときに見える範囲や感度の低下を調べる検査はどれか。",
+      "choices": [
+        "視野検査",
+        "視力検査",
+        "眼圧検査",
+        "眼軸長検査"
+      ],
+      "correctIndex": 0,
+      "explanation": "視野検査は見える範囲や場所ごとの感度を評価する。視力や眼圧などを測る検査とは役割が異なり、緑内障の評価では複数の情報を合わせる。",
+      "distractorRationales": [
+        "指定された見え方を評価する検査。",
+        "物の細部を見分ける能力を主に測る。",
+        "眼内の圧力を測る。",
+        "眼球の前後方向の長さを測る。"
+      ],
+      "sources": [
+        {
+          "title": "NEI — Get a Dilated Eye Exam",
+          "url": "https://www.nei.nih.gov/eye-health-information/healthy-vision/finding-eye-doctor/get-dilated-eye-exam"
+        }
+      ]
+    },
+    "reason": "無関係な臓器の検査を並べた旧問から、眼科検査同士の比較へ変更。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のWhat happensのvisual field・acuity・tonometryの区別。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000048",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "2型糖尿病の基本的な病態として適切な組合せはどれか。",
+      "choices": [
+        "インスリンの作用増強と、必要量を上回る分泌",
+        "インスリンへの反応低下だけで、分泌は常に十分",
+        "インスリン分泌低下だけで、作用は常に正常",
+        "インスリンへの反応低下と、必要に見合う分泌の不足"
+      ],
+      "correctIndex": 3,
+      "explanation": "2型糖尿病ではインスリン抵抗性と分泌の不足が関わる。初期に分泌量が多くても、増えた必要量に見合わない場合がある。",
+      "distractorRationales": [
+        "高血糖につながる基本病態の方向と異なる。",
+        "必要量に対する分泌の不足も関わる。",
+        "作用への抵抗性も関わる。",
+        "作用と分泌の両面を表す。"
+      ],
+      "sources": [
+        {
+          "title": "NIDDK — The Course of Type 2 Diabetes and Complication Onset in Youth Today",
+          "url": "https://www.niddk.nih.gov/news/archive/2013/course-type-2-diabetes-complication-onset-youth"
+        }
+      ]
+    },
+    "reason": "旧説明のβ細胞の「疲弊」だけという機序の単純化を除く。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "NIDDKの研究説明の冒頭、insulinへの反応低下・初期代償・必要量に分泌が追いつかない説明。研究の投薬や結果は転載しない。"
+    }
+  },
+  {
+    "familyKey": "medical-clinical-serum",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "血液を凝固させた後、血餅を除いて得られる液体成分を何というか。",
+      "choices": [
+        "全血",
+        "血漿",
+        "血清",
+        "血球"
+      ],
+      "correctIndex": 2,
+      "explanation": "凝固後に血餅を除いた液体は血清。血漿にはフィブリノゲンが含まれるが、血清では凝固の過程でその多くが除かれている。",
+      "distractorRationales": [
+        "血球や液体を合わせた血液。",
+        "凝固前の液体成分であり、フィブリノゲンを含む。",
+        "指定された液体成分。",
+        "赤血球や白血球などの細胞成分。"
+      ],
+      "sources": [
+        {
+          "title": "NCI SEER — Glossary, Blood",
+          "url": "https://seer.cancer.gov/seertools/glossary/view/54ac2835e4b0d965833ce0f4/"
+        }
+      ]
+    },
+    "reason": "検体の定義を問う独自問。具体的採血・処理手順は含めない。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引の完全凝固後の液体と、fibrinogenを除いたplasmaという基礎説明。"
+    }
+  },
+  {
+    "familyKey": "medical-clinical-fev1",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "スパイロメトリーで測るFEV1（一秒量）はどれか。",
+      "choices": [
+        "最大に吸った後、努力して吐き始めた最初の1秒間に出た空気の体積",
+        "1分間の呼吸回数",
+        "最大に吐いた後も肺内に残る空気の体積",
+        "1分間に体内へ取り込まれた酸素の体積"
+      ],
+      "correctIndex": 0,
+      "explanation": "FEV1は努力呼出の最初の1秒間の体積。最後まで吐いた全量であるFVCや、残気量とは別。",
+      "distractorRationales": [
+        "一秒量の定義。",
+        "回数の指標で、体積ではない。",
+        "残気量の説明。",
+        "酸素摂取量であり、呼出した空気量ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NHLBI — Study funded by NIH supports optimal threshold for diagnosing COPD",
+          "url": "https://www.nhlbi.nih.gov/news/2019/study-funded-nih-supports-optimal-threshold-diagnosing-copd"
+        }
+      ]
+    },
+    "reason": "独自問。単位と測定対象をそろえて理解する。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "研究紹介のspirometry段落、FEV1とFVCの定義。閾値の推奨や固定診断は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-clinical-metabolic-acidosis",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "単一の酸塩基異常を考える。一次性の変化が血中重炭酸イオンの減少で、血液pHを下げる方向に働く状態はどれか。",
+      "choices": [
+        "呼吸性アシドーシス",
+        "代謝性アルカローシス",
+        "呼吸性アルカローシス",
+        "代謝性アシドーシス"
+      ],
+      "correctIndex": 3,
+      "explanation": "重炭酸イオンの一次性の減少などによる酸性化は代謝性アシドーシス。呼吸性ではCO₂の変化が一次性で、代償変化とは区別する。",
+      "distractorRationales": [
+        "一次性のCO₂増加による酸性化。",
+        "設問とはpHへの作用方向が逆。",
+        "一次性のCO₂減少によるアルカリ化。",
+        "重炭酸の減少を伴う一次性の代謝性変化。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Fundamentals of Nursing, §20.2 Acid-Base Balances",
+          "url": "https://openstax.org/books/fundamentals-nursing/pages/20-2-acid-base-balances"
+        }
+      ]
+    },
+    "reason": "独自問。一次性の変化と代償を区別し、実患者の診断は扱わない。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のmetabolic acidosisのbicarbonate lossと呼吸性代償の区別。治療・補液は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-clinical-spo2",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "一般的なパルスオキシメータのSpO₂表示が推定するものはどれか。",
+      "choices": [
+        "動脈血のヘモグロビン濃度",
+        "動脈血のヘモグロビンの酸素飽和度",
+        "動脈血の酸素分圧そのもの",
+        "1分間に心臓から出る血液量"
+      ],
+      "correctIndex": 1,
+      "explanation": "SpO₂はヘモグロビンの酸素飽和度の推定値。ヘモグロビンの量や酸素分圧、心拍出量を直接測る値ではない。",
+      "distractorRationales": [
+        "血液中のヘモグロビン量とは別。",
+        "指定された測定の対象。",
+        "分圧と飽和度は同じ物理量ではない。",
+        "心拍出量の説明。"
+      ],
+      "sources": [
+        {
+          "title": "WHO — Oxygen, pulse oximeter",
+          "url": "https://www.who.int/news-room/questions-and-answers/item/oxygen"
+        }
+      ]
+    },
+    "reason": "独自問。表示値と別の酸素指標の混同を問う。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のpercentage of oxygenated haemoglobin (SpO2)の説明。精度を一律保証する表現や投与指示は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-clinical-ecg-p-wave",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "通常の洞調律の心電図で、P波が主に表す電気的な変化はどれか。",
+      "choices": [
+        "心房の脱分極",
+        "心室の脱分極",
+        "心室の再分極",
+        "心房の再分極"
+      ],
+      "correctIndex": 0,
+      "explanation": "P波は心房の脱分極を表す。QRS群は主に心室の脱分極、T波は主に心室の再分極に対応する。",
+      "distractorRationales": [
+        "P波に対応する。",
+        "主にQRS群に対応する。",
+        "主にT波に対応する。",
+        "通常はQRS群に重なり、独立したP波ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Pharmacology for Nurses, §16.3 Electrical Impulses",
+          "url": "https://openstax.org/books/pharmacology/pages/16-3-conduction-of-electrical-impulses"
+        }
+      ]
+    },
+    "reason": "独自問。電気現象を問う。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のWaveformsでP・QRS・Tの対応を照合。波形と機械的な収縮を同一視しない。"
+    }
+  },
+  {
+    "familyKey": "medical-clinical-positive-predictive-value",
+    "domain": "医歯薬学",
+    "subdomain": "臨床各科・診断",
+    "content": {
+      "question": "ある集団1,000人中、対象疾患のある100人の90％と、ない900人の20％が検査陽性になった。陽性者のうち疾患のある人の割合は約いくらか。",
+      "choices": [
+        "10％",
+        "90％",
+        "33％",
+        "80％"
+      ],
+      "correctIndex": 2,
+      "explanation": "真陽性は90人、偽陽性は180人。陽性者270人のうち90人が疾患ありなので、陽性的中率は90/270＝約33％。",
+      "distractorRationales": [
+        "検査前の有病割合。",
+        "疾患のある人を分母にした感度。",
+        "全陽性者を分母にした割合。",
+        "疾患のない人を分母にした特異度。"
+      ],
+      "sources": [
+        {
+          "title": "CDC — Principles of Epidemiology, Glossary",
+          "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/glossary.html"
+        }
+      ]
+    },
+    "reason": "独自の計算問題。原資料の例題・実際の検査精度は使用しない。",
+    "parameters": {
+      "b": 1,
+      "basis": "定義・機序・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の取得本文・検索索引で基礎事実を照合し、設問・四択・説明・計算値を独自作成。図表・症例・処置の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "predictive value positive・sensitivity・specificityの定義のみ。人数は独自設定し、90/(90+180)を検算。"
+    }
+  }
+]

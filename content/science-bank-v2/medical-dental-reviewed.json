@@ -1,0 +1,466 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000083",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "健康な歯の歯冠で、象牙質の外側を覆う最も硬い組織はどれか。",
+      "choices": [
+        "象牙質",
+        "歯髄",
+        "エナメル質",
+        "歯肉"
+      ],
+      "correctIndex": 2,
+      "explanation": "歯冠の表面はエナメル質に覆われる。歯根表面のセメント質とは区別する。",
+      "distractorRationales": [
+        "エナメル質の内側にある硬組織。",
+        "血管・神経を含む軟組織。",
+        "歯冠の表面を覆う硬組織。",
+        "歯の周囲の軟組織。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, §23.3 Teeth",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-3-the-mouth-pharynx-and-esophagus"
+        }
+      ]
+    },
+    "reason": "歯の表面全体という旧表現を歯冠に限定。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§23.3 L95–97の歯冠・歯根・硬組織。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000086",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "歯の周囲の「歯ぐき」を表す解剖学的な用語はどれか。",
+      "choices": [
+        "歯髄",
+        "歯肉",
+        "歯根膜",
+        "象牙質"
+      ],
+      "correctIndex": 1,
+      "explanation": "歯ぐきは歯肉という。歯の内部にある歯髄や、歯を支える歯根膜とは別。",
+      "distractorRationales": [
+        "歯の内部の軟組織。",
+        "歯ぐきに対応する。",
+        "歯と歯槽の間で支持に関わる結合組織。",
+        "歯を構成する硬組織。"
+      ],
+      "sources": [
+        {
+          "title": "ADA MouthHealthy — Tooth",
+          "url": "https://www.mouthhealthy.org/all-topics-a-z/tooth"
+        }
+      ]
+    },
+    "reason": "旧用語問を歯周の構造同士で比較できる肢へ修正。週替わり用。",
+    "parameters": {
+      "b": -1.2,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のGums (also called gingiva)という用語対応。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000209",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "う蝕で歯のミネラルが失われる過程に、直接関わるものはどれか。",
+      "choices": [
+        "口腔内の細菌が糖などを利用して作る酸",
+        "唾液による酸の中和",
+        "歯の表面へのミネラルの再沈着",
+        "歯の表面からのプラークの除去"
+      ],
+      "correctIndex": 0,
+      "explanation": "細菌が糖などから作る酸は、歯の脱灰に関わる。再石灰化との収支も重要で、特定の一菌種だけで全てを説明する病気ではない。",
+      "distractorRationales": [
+        "脱灰につながる作用。",
+        "酸の影響を抑える方向の作用。",
+        "失われたミネラルを補う方向の作用。",
+        "酸を作る細菌の集団を減らす方向の作用。"
+      ],
+      "sources": [
+        {
+          "title": "NIDCR — The Tooth Decay Process",
+          "url": "https://www.nidcr.nih.gov/health-info/tooth-decay/more-info/tooth-decay-process"
+        }
+      ]
+    },
+    "reason": "単一の原因菌の暗記から、脱灰・再石灰化の機序へ改訂。歯磨きで全て予防できるとの断定は残さない。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "取得本文の糖・デンプンからの酸、ミネラル喪失と回復（L72–87・103–104）。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000042"
+    ]
+  },
+  {
+    "familyKey": "medical-dental-pulp",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "歯の内部で、血管や神経を含む軟らかい結合組織はどれか。",
+      "choices": [
+        "エナメル質",
+        "セメント質",
+        "象牙質",
+        "歯髄"
+      ],
+      "correctIndex": 3,
+      "explanation": "歯髄は歯の内部にあり、血管や神経を含む軟組織。外側の硬組織とは区別する。",
+      "distractorRationales": [
+        "歯冠を覆う硬組織。",
+        "歯根を覆う硬組織。",
+        "歯髄の外側を囲む硬組織。",
+        "指定された内部の軟組織。"
+      ],
+      "sources": [
+        {
+          "title": "ADA MouthHealthy — Tooth",
+          "url": "https://www.mouthhealthy.org/all-topics-a-z/tooth"
+        }
+      ]
+    },
+    "reason": "独自の構造識別問題。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のPulp Chamberとfour dental tissuesの説明。"
+    }
+  },
+  {
+    "familyKey": "medical-dental-periodontal-ligament",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "歯の歯根と歯槽骨の間で、歯の支持に関わる線維性の結合組織はどれか。",
+      "choices": [
+        "歯根膜",
+        "エナメル質",
+        "歯髄",
+        "歯肉"
+      ],
+      "correctIndex": 0,
+      "explanation": "歯根膜は歯と歯槽骨の間で支持に関わる結合組織。歯の内部や表面の組織とは位置・働きが異なる。",
+      "distractorRationales": [
+        "歯の支持に関わる組織。",
+        "歯冠表面の硬組織。",
+        "歯の内部の軟組織。",
+        "歯の周囲を覆う軟組織だが、指定した間隙の組織ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, §23.3 Teeth",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-3-the-mouth-pharynx-and-esophagus"
+        }
+      ]
+    },
+    "reason": "独自問。歯肉と歯根膜を区別。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§23.3 L95のperiodontal ligamentによる支持。"
+    }
+  },
+  {
+    "familyKey": "medical-dental-periodontitis-bone",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "歯肉の炎症に加え、歯を支える歯槽骨などの破壊が進む病態はどれか。",
+      "choices": [
+        "エナメル質だけの初期う蝕",
+        "歯髄の炎症だけ",
+        "歯周炎",
+        "歯の摩耗だけ"
+      ],
+      "correctIndex": 2,
+      "explanation": "歯周炎では歯を支える組織が破壊される。歯槽骨の喪失は歯肉だけに限局する炎症と区別する要素。",
+      "distractorRationales": [
+        "歯冠の脱灰と支持組織の破壊は別。",
+        "歯の内部の炎症に対象が限られる。",
+        "歯の支持組織に及ぶ炎症・破壊に対応する。",
+        "機械的な摩耗だけでは指定された病態を表さない。"
+      ],
+      "sources": [
+        {
+          "title": "NIDCR — Periodontal (Gum) Disease",
+          "url": "https://www.nidcr.nih.gov/health-info/gum-disease"
+        }
+      ]
+    },
+    "reason": "独自問。病名の識別であり、この設問だけで本人の診断はしない。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "Overviewと診察表L90の支持骨の破壊。"
+    }
+  },
+  {
+    "familyKey": "medical-dental-fluoride-remineralization",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "歯の表面にあるフッ化物の、初期う蝕を抑える作用として適切なのはどれか。",
+      "choices": [
+        "プラークを機械的に除去する",
+        "脱灰を抑え、再石灰化を助ける",
+        "奥歯の溝を樹脂で覆う",
+        "歯石を器械で取り除く"
+      ],
+      "correctIndex": 1,
+      "explanation": "フッ化物はミネラルの喪失を抑え、初期の脱灰部分の回復を助ける。既にできた大きな穴がそのまま元通りになるという意味ではない。",
+      "distractorRationales": [
+        "歯磨きなどによる機械的な清掃の説明。",
+        "歯の表面のミネラル収支を改善する作用。",
+        "シーラントによる物理的な被覆の説明。",
+        "歯石除去の処置であり、フッ化物の化学的作用ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NIDCR — The Tooth Decay Process",
+          "url": "https://www.nidcr.nih.gov/health-info/tooth-decay/more-info/tooth-decay-process"
+        }
+      ]
+    },
+    "reason": "独自問。化学種をフッ化物と表記し、用量を推奨しない。",
+    "parameters": {
+      "b": 0,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L73–87の初期脱灰・フッ化物・失ったミネラルの回復。小児用量や水道政策は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-dental-calculus",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "歯石（calculus）の成り立ちとして適切なのはどれか。",
+      "choices": [
+        "茶やコーヒー由来の色素だけが付着したもの",
+        "唾液腺の中でできた石が歯へ移動したもの",
+        "歯の溝を覆うために置かれた歯科材料",
+        "プラークがミネラルを取り込み、硬くなったもの"
+      ],
+      "correctIndex": 3,
+      "explanation": "歯石はプラークの石灰化によって生じる。柔らかいプラークと、硬く沈着した歯石は同じ状態ではない。",
+      "distractorRationales": [
+        "外来性の着色だけで歯石を定義しない。",
+        "唾石という別のものとの混同。",
+        "治療や予防の材料とは異なり、プラークから生じる。",
+        "プラークの石灰化という成り立ちに合う。"
+      ],
+      "sources": [
+        {
+          "title": "NIDCR — Ask the Expert: Do I Really Need to Floss?",
+          "url": "https://www.nidcr.nih.gov/health-info/gum-disease/ask-the-expert"
+        }
+      ]
+    },
+    "reason": "独自問。歯石と唾石、プラークを区別。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L32–34のplaqueのcalcificationとcalculus。"
+    }
+  },
+  {
+    "familyKey": "medical-dental-sealant",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "奥歯の溝に用いる予防的なシーラントの、主な働きはどれか。",
+      "choices": [
+        "溝を覆って、食べ物や細菌が入り込むのを防ぐ",
+        "フッ化物によって脱灰を抑え、再石灰化を助ける",
+        "プラークをブラシで機械的に除去する",
+        "歯石を専用の器械で除去する"
+      ],
+      "correctIndex": 0,
+      "explanation": "シーラントは噛む面の溝を覆う材料で、食べ物や細菌が入り込むのを防ぐ障壁になる。",
+      "distractorRationales": [
+        "表面を覆う予防的な働き。",
+        "フッ化物の化学的作用であり、シーラントの主な物理的作用とは異なる。",
+        "ブラッシングの説明。",
+        "歯石除去の処置の説明。"
+      ],
+      "sources": [
+        {
+          "title": "NIDCR — The Tooth Decay Process",
+          "url": "https://www.nidcr.nih.gov/health-info/tooth-decay/more-info/tooth-decay-process"
+        }
+      ]
+    },
+    "reason": "独自問。装置の名称と機能を対応させる。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L128–129の溝と物理的な障壁の説明のみ。適応年齢や処置の指示は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-dental-odontoblast",
+    "domain": "医歯薬学",
+    "subdomain": "歯学",
+    "content": {
+      "question": "象牙質の有機基質を作る細胞はどれか。",
+      "choices": [
+        "エナメル芽細胞",
+        "象牙芽細胞",
+        "破骨細胞",
+        "セメント芽細胞"
+      ],
+      "correctIndex": 1,
+      "explanation": "象牙芽細胞は歯髄の周辺に並び、象牙質の有機基質を分泌する。",
+      "distractorRationales": [
+        "エナメル質の形成に関わる。",
+        "象牙質の基質を作る。",
+        "骨などの吸収に関わる。",
+        "セメント質の形成に関わる。"
+      ],
+      "sources": [
+        {
+          "title": "Ultrastructural patterns of human dentinal tubules, odontoblasts processes and nerve fibres — 原論文抄録",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16546231/"
+        }
+      ]
+    },
+    "reason": "独自問。歯の硬組織を作る細胞と吸収する細胞を比較。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "歯の構造と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・学会・大学の教材と原論文の抄録の取得範囲を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "原論文Abstract L234の歯髄周辺のodontoblastsと有機基質の分泌。図・方法・実測割合は転載しない。"
+    }
+  }
+]
