@@ -1,0 +1,558 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000066",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "二つの親系統P₁とP₂を交配して得た雑種第一代を表す記号はどれか。",
+      "choices": [
+        "BC₁",
+        "F₂",
+        "F₁",
+        "DH"
+      ],
+      "correctIndex": 2,
+      "explanation": "F₁は親同士の交配から得た第一代を指す。F₂はその次の世代、BC₁は最初の戻し交配世代、DHは倍加半数体を表す。",
+      "distractorRationales": [
+        "BC₁は一方の親への戻し交配で得る第一世代。",
+        "F₂は雑種第二代。",
+        "F₁は雑種第一代。",
+        "DHは倍加半数体で、交雑第一代の記号ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Crop Genetics, Chapter 7: Inbreeding and Heterosis",
+          "url": "https://iastate.pressbooks.pub/cropgenetics/chapter/inbreeding-and-heterosis-2/"
+        }
+      ]
+    },
+    "reason": "pH・ATPなど分野外の肢を、育種で使う世代・材料の記号に改めた。",
+    "parameters": {
+      "b": -1.4,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引で取得したHeterosis節のF₁と後続F₂、BackcrossingのBC₁の記述を確認。本文の直接openは取得できず、未取得部分は読了扱いにしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000186",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "同じ条件で測った親系統の平均収量が4 t/haと6 t/ha、そのF₁が6 t/haだった。両親の平均を基準とする雑種強勢率は何％か。",
+      "choices": [
+        "0％",
+        "20％",
+        "50％",
+        "120％"
+      ],
+      "correctIndex": 1,
+      "explanation": "両親平均は5 t/ha。両親平均を基準にした増加率は(6−5)/5×100＝20％。優良親6 t/haを基準にした値なら0％だが、今回の基準とは異なる。",
+      "distractorRationales": [
+        "優良親との比較では0％だが、問われているのは両親平均との比較。",
+        "両親平均5からの増加1を5で割った20％。",
+        "低い方の親4からの増加率であり、指定した基準と異なる。",
+        "F₁が両親平均の120％であることと、増加率20％を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Crop Genetics, Chapter 7: Inbreeding and Heterosis",
+          "url": "https://iastate.pressbooks.pub/cropgenetics/chapter/inbreeding-and-heterosis-2/"
+        }
+      ]
+    },
+    "reason": "『異なる系統なら最大』という断定を外し、雑種強勢の比較基準を明示した計算に改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000486",
+      "10000000-0000-4000-8005-000000000169"
+    ],
+    "parameters": {
+      "b": 0.3,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引に取得されたmid-parent / high-parent heterosisの区別と(F₁−MP)/MPを照合。数値は独自に設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000464",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "二倍体植物のある遺伝子座で、初めの集団の80％がヘテロ接合体だった。全個体が自殖し、各個体の子孫への寄与が等しく、選択・突然変異・確率的変動を無視する。3世代後のヘテロ接合体の割合は何％か。",
+      "choices": [
+        "40％",
+        "20％",
+        "10％",
+        "0％"
+      ],
+      "correctIndex": 2,
+      "explanation": "自殖ではホモ接合体からヘテロ接合体は生じず、ヘテロ接合体の子の半数がヘテロ接合体になる。したがって各世代で半減し、80×(1/2)³＝10％。",
+      "distractorRationales": [
+        "自殖1世代後の値。",
+        "自殖2世代後の値。",
+        "半減を3回適用すると10％。",
+        "有限世代で必ず全個体がホモ接合になるとはいえない。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Crop Genetics, Chapter 7: Inbreeding and Heterosis",
+          "url": "https://iastate.pressbooks.pub/cropgenetics/chapter/inbreeding-and-heterosis-2/"
+        }
+      ]
+    },
+    "reason": "誤分類を育種へ戻し、自殖による固定を確率として問う。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引のInbreeding via Self-Pollinationでヘテロ接合割合が毎世代半減することを確認。表のp=q=.05という誤記や、単回自殖でF=1とする記述は採用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-backcross-recurrent-ancestry",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "二つの系統のF₁を反復親Rへ戻し交配し、得られた子をさらにRへ交配する操作を計3回行ってBC₃を得た。選抜を行わないとき、Rに由来する核ゲノムの割合の期待値はどれか。",
+      "choices": [
+        "75％",
+        "87.5％",
+        "93.75％",
+        "100％"
+      ],
+      "correctIndex": 2,
+      "explanation": "F₁のR由来割合は1/2。戻し交配ごとにR以外の由来割合が半減するため、BC₃では1−(1/2)⁴＝15/16＝93.75％。個体ごとの実現値や選抜した領域の割合が必ずこの値になるわけではない。",
+      "distractorRationales": [
+        "BC₁での期待値。",
+        "BC₂での期待値。",
+        "F₁から3回の戻し交配で15/16となる。",
+        "有限回の戻し交配だけで供与親の由来が全て消えるとは限らない。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Molecular Plant Breeding, Chapter 6: Marker Assisted Backcrossing",
+          "url": "https://iastate.pressbooks.pub/molecularplantbreeding/chapter/marker-assisted-backcrossing/"
+        }
+      ]
+    },
+    "reason": "戻し交配での期待ゲノム割合を、世代数と条件を指定して問う独自問題。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L87–93のE_t≈1−(1/2)^(t+1)とtが戻し交配世代であることを照合。選抜による偏りを含む実個体の固定比率とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-doubled-haploid-homozygosity",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "二倍体作物の一つの正常な半数体配偶子に由来する核の染色体一式を倍加し、変異を無視して倍加半数体を得た。この個体の核遺伝子座について期待される状態はどれか。",
+      "choices": [
+        "F₁と同じヘテロ接合状態を保つ",
+        "同じ遺伝子座の2コピーはホモ接合になる",
+        "相同染色体の一方を全て失って半数体のままになる",
+        "異なる配偶子に由来する全ての倍加半数体が同じ遺伝子型になる"
+      ],
+      "correctIndex": 1,
+      "explanation": "同じ配偶子由来の染色体を複製するので、対応する核遺伝子座の2コピーが同じとなる。一方、異なる配偶子から得た系統同士は遺伝的に異なり得る。",
+      "distractorRationales": [
+        "ヘテロ接合のF₁にあった二つの対立遺伝子をそのまま維持する方法ではない。",
+        "一つの半数体ゲノムを倍加するため、対応する遺伝子座がホモ接合になる。",
+        "倍加によって二組になる。",
+        "配偶子間の分離・組換えに由来する違いは残り得る。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Crop Improvement, Chapter 6: Breeding Methods",
+          "url": "https://iastate.pressbooks.pub/cropimprovement/chapter/breeding-methods/"
+        }
+      ]
+    },
+    "reason": "DHの系統内の均一性と、異なる系統間の多様性を区別する独自問題。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L159–166のDHの由来と一世代でのホモ接合化を確認。倍加処理の実験手順や収量向上を保証するものではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-marker-background-selection",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "マーカーを使う戻し交配で、目的の対立遺伝子を持つ個体の中から、目的領域以外のゲノムが反復親に近い個体を選ぶ。この背景選抜の主な目的はどれか。",
+      "choices": [
+        "目的領域以外でも供与親由来の割合を高める",
+        "目的遺伝子の有無だけを判定する",
+        "目的領域以外で反復親の遺伝的背景の回復を速める",
+        "選抜候補を全て同じ配偶子由来にする"
+      ],
+      "correctIndex": 2,
+      "explanation": "背景選抜ではゲノム全体のマーカーで反復親に近い個体を選び、供与親由来の不要な領域を減らす。目的遺伝子そのものを追跡する前景選抜とは役割が異なる。",
+      "distractorRationales": [
+        "背景選抜の目的と逆で、目的領域以外の供与親の寄与を減らす。",
+        "それは前景選抜の主な役割。",
+        "反復親に近い背景を早く回復させる。",
+        "マーカーによる選抜は、配偶子の由来を一つにそろえる操作ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Molecular Plant Breeding, Chapter 6: Marker Assisted Backcrossing",
+          "url": "https://iastate.pressbooks.pub/molecularplantbreeding/chapter/marker-assisted-backcrossing/"
+        }
+      ]
+    },
+    "reason": "前景・背景・系統固定の目的を区別する独自問題。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L199–211のBackground Selectionと、L116–119のForeground Selectionを対照。本文中の個別の成功年数・固定達成率は一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-linked-marker-recombination",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "目的遺伝子座G/gとマーカー座M/mについて、F₁はGM/gm（GとMが同じ染色体上）の配置で、両座間の組換え率は10％である。このF₁をgm/gmの親へ戻し交配する。Mを受け継いだ子のうち、Gも受け継いだ子の割合の期待値はどれか。分離の偏り・選択・測定誤差はないとする。",
+      "choices": [
+        "10％",
+        "45％",
+        "50％",
+        "90％"
+      ],
+      "correctIndex": 3,
+      "explanation": "F₁の配偶子はGMとgmが各45％、GmとgMが各5％。Mを持つ子はGM由来45％とgM由来5％の計50％なので、その中でGも持つ割合は45/50＝90％。連鎖マーカーが陽性でも目的対立遺伝子の保持を必ず保証できない。",
+      "distractorRationales": [
+        "Mを受け継いだ子の中でGを持たない側の割合。",
+        "全ての子を分母にしたGM由来の割合であり、条件付き割合ではない。",
+        "全ての子のうちMを持つ割合であり、その中でGも持つ割合ではない。",
+        "Mを持つ子の中で、Gも持つ割合は45/50＝90％。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Molecular Plant Breeding, Chapter 6: Marker Assisted Backcrossing",
+          "url": "https://iastate.pressbooks.pub/molecularplantbreeding/chapter/marker-assisted-backcrossing/"
+        }
+      ]
+    },
+    "reason": "連鎖マーカーで選抜した集団を分母とする条件付き確率と、全後代の割合を区別する独自問題。",
+    "parameters": {
+      "b": 1.4,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L153–179の連鎖マーカーと目的遺伝子の組換えによる誤選抜を照合。組換え率10％・独自の記号から4配偶子の割合と条件付き確率を導出。原表・数値は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "ゲノミック選抜の基本的な考え方として、最も適切なのはどれか。",
+      "choices": [
+        "収量と最も強く関連した1マーカーだけを全作物に共通して使う",
+        "ゲノム全体のマーカーと表現型の学習データから遺伝的価値を予測し、候補の選抜に使う",
+        "DNA配列を読めば、表現型データなしで全環境の収量が一意に決まる",
+        "全ての原因遺伝子の機能を実験で確定するまで、予測を行わない"
+      ],
+      "correctIndex": 1,
+      "explanation": "多くのマーカーを同時に使い、表現型との関係を学習して遺伝的価値を予測する。全ての原因遺伝子を特定することは前提ではなく、未知の集団や環境への予測精度の検証が必要になる。",
+      "distractorRationales": [
+        "1マーカーだけの利用をゲノミック選抜の基本とするのは不適切。",
+        "全ゲノムの情報を表現型記録と組み合わせて予測する。",
+        "DNA配列だけから環境の影響まで一意に決まるわけではない。",
+        "全原因遺伝子の機能確定を待たず、統計的予測により選抜できる。"
+      ],
+      "sources": [
+        {
+          "title": "Meuwissen, Hayes & Goddard (2001) — Prediction of total genetic value using genome-wide dense marker maps（Wageningen University研究記録）",
+          "url": "https://research.wur.nl/en/publications/prediction-of-total-genetic-value-using-genome-wide-dense-marker-/"
+        }
+      ]
+    },
+    "reason": "病害虫に誤分類されたGS問題を育種へ戻し、種子袋の色などの肢を全ゲノム予測の基本原理へ改訂。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "WUR掲載の2001年原論文抄録L17–20で、多数マーカーハプロタイプ効果の同時推定・表現型記録・未観測後代の遺伝的価値予測を確認。論文のシミュレーション精度を作物全般の実測性能とはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    },
+    "legacyId": "10000000-0000-4000-8007-000000000494"
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000173",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "多数の作物系統を使ったゲノムワイド関連解析（GWAS）で、あるSNPと収量の関連が検出された。その結果だけからいえることはどれか。",
+      "choices": [
+        "そのSNP自体が収量差の原因だと確定した",
+        "そのSNPを変えれば全環境で同じ収量増加が得られる",
+        "関連がある領域の手がかりになるが、原因変異の特定には追加検証が必要",
+        "関連があれば近くの他の変異は収量に関与しない"
+      ],
+      "correctIndex": 2,
+      "explanation": "統計的関連は原因変異を探す手がかりになる。ただし関連したマーカー自体が原因とは限らず、近くの原因変異との連鎖によって検出される場合もある。",
+      "distractorRationales": [
+        "関連と因果を同一視している。",
+        "効果の因果性や環境をまたぐ大きさは、この結果だけでは保証されない。",
+        "原因変異を特定するための追加の検証が必要。",
+        "近傍の原因変異と相関してマーカーが検出される場合もある。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Genome-Wide Association Studies Fact Sheet",
+          "url": "https://www.genome.gov/about-genomics/fact-sheets/Genome-Wide-Association-Studies-Fact-Sheet"
+        }
+      ]
+    },
+    "reason": "旧問の『QTLより高解像度』という無条件の比較と分野外の肢を除き、関連と因果を区別した。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NHGRIのWhat is a genome-wide association study?で、関連した変異自体は直接の原因とは限らないことを確認。人の疾患の具体例を作物の実験結果として転用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-selection-response-narrow-heritability",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "他殖性作物のある量的形質で、個体選抜にR＝h²Sの近似が適用できるとする。狭義の遺伝率h²＝0.4、元の平均100、選んだ両親群の平均110なら、次世代の平均の予測値はどれか。",
+      "choices": [
+        "104",
+        "110",
+        "140",
+        "44"
+      ],
+      "correctIndex": 0,
+      "explanation": "選抜差Sは110−100＝10。予測される応答Rは0.4×10＝4なので、次世代の平均は100＋4＝104となる。元の平均そのものに遺伝率を掛ける計算ではない。",
+      "distractorRationales": [
+        "選抜差10に遺伝率0.4を掛けた4を元の平均へ加える。",
+        "選抜した親群の平均であり、h²＝1と同じ応答を仮定している。",
+        "元の平均100の40％を加えており、選抜差を使っていない。",
+        "選択親の平均110に0.4を掛けた値で、応答と基準の定義が違う。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Crop Genetics, Chapter 8: Inheritance of Quantitative Traits",
+          "url": "https://iastate.pressbooks.pub/cropgenetics/chapter/inheritance-of-quantitative-traits-2/"
+        }
+      ]
+    },
+    "reason": "遺伝率を『形質値の何割が遺伝するか』と読む誤りを避ける独自計算問題。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L525–541の狭義遺伝率、選抜差、応答R＝h²Sを確認。近似が成立する他殖の条件を指定し、自殖系統のあらゆる育種法へ無条件に適用しない。数値は独自。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-genotype-environment-crossover",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "反復試験から、環境Xの平均収量は系統Aが7、Bが5、環境YではAが4、Bが6と推定された。この順位の逆転が表すものはどれか。ここでは推定の標本誤差を無視する。",
+      "choices": [
+        "環境が変わっても系統差が一定であること",
+        "遺伝子型と環境の交互作用のうち、順位が変わる型",
+        "環境の主効果だけで全てを説明できること",
+        "どちらかの系統に突然変異が起きたことの証明"
+      ],
+      "correctIndex": 1,
+      "explanation": "系統間の差は環境XでA−B＝2、環境YでA−B＝−2。環境によって系統の相対的な成績が逆転する、交差型の遺伝子型×環境交互作用を表す。",
+      "distractorRationales": [
+        "差の符号が変わっており、一定ではない。",
+        "環境間で系統の順位が逆転する型の交互作用。",
+        "全系統に共通する環境の効果だけでは順位逆転を説明できない。",
+        "環境応答の違いだけでも起こり、新たな突然変異を証明しない。"
+      ],
+      "sources": [
+        {
+          "title": "Iowa State University — Crop Improvement, Chapter 4: Refresher on Population and Quantitative Genetics",
+          "url": "https://iastate.pressbooks.pub/cropimprovement/chapter/refresher-on-population-and-quantitative-genetics/"
+        }
+      ]
+    },
+    "reason": "複数環境での系統評価の意味を、単一環境の優劣と区別する独自問題。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Crossover Interaction節L419–421で環境による順位変化を確認。表現型の数値は独自に設定し、本文の図・病害の実験例は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000174",
+    "domain": "農学",
+    "subdomain": "育種・分子育種",
+    "content": {
+      "question": "六倍体パンコムギのA・B・Dサブゲノムにある対応するホメオログ遺伝子について、発現の特徴として適切なのはどれか。",
+      "choices": [
+        "対応するコピーの発現量は、どの組織でも同じ比率に固定される",
+        "一つのコピーの発現量が低ければ、そのDNA配列は必ず欠失している",
+        "対応するコピー間の発現の偏りは、組織などによって変わり得る",
+        "B・Dサブゲノムの遺伝子は全て発現せず、Aだけが働く"
+      ],
+      "correctIndex": 2,
+      "explanation": "パンコムギでは対応するホメオログの発現が均等でない場合があり、その偏りは組織などで変わる。発現量の違いをDNAコピーの存在・欠失と同一視しない。",
+      "distractorRationales": [
+        "組織によって発現の偏りが変わる場合がある。",
+        "低い発現量だけではDNA配列の欠失を確定できない。",
+        "対応するコピーでも発現量の配分は組織などに依存し得る。",
+        "B・D由来のホメオログも発現し得る。"
+      ],
+      "sources": [
+        {
+          "title": "Ramírez-González et al. (2018) — The transcriptional landscape of polyploid wheat（John Innes Centre研究記録）",
+          "url": "https://www.jic.ac.uk/research-impact/publications/the-transcriptional-landscape-of-polyploid-wheat/"
+        }
+      ]
+    },
+    "reason": "分野名を当てる曖昧な設問と選択肢に対応しない解説を、発現と遺伝子の存在を区別する問いへ改訂。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "必要な知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "John Innes Centre掲載の2018年原論文抄録L15で、六倍体パンコムギのホメオログ発現が組織間で偏りを変えることを確認。割合の数値や個別遺伝子のデータは問題に転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材と研究機関の公開資料で原理を照合。設問・四択・数値・解説は独自に構成し、原文・図版・実験データ・練習問題を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
