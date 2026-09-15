@@ -172,3 +172,11 @@ Vercelの[公式の段階的な本番公開方法](https://vercel.com/docs/deplo
 MyASPの初回2通は停止状態で保存し、送信元・件名・本文を照合。原稿と実設定の区別は[案内原稿](MYASP-MAIL-DRAFTS.md)に記録。Resendは送信ドメインを登録し、Xserverへのログインを本人へ依頼した。[DNS・SMTP準備](RESEND-AUTH-SETUP.md)。
 
 18:59 JSTにMyASP接続確認を含む関連15テスト・型検査・対象lintが通過。19:02 JSTまでに本番用ビルドも通過。定期処理用のCRON_SECRETは256ビットの暗号学的乱数を生成し、Vercel Production専用Secretへ保存・表示確認した。ジョブのスケジュール・MyASP実通信・メール送信は未実施。新しい環境変数を使用するには再デプロイが必要。
+
+`8bc5b1d85cf651f4095957c30a4c573070a0b274` の15ファイルを検査し、秘密パターン・バックアップ・会員情報を含まないことを確認して同じ改装ブランチへpushした。[Preview 71X8txjcR5ig3bWuKPdHxNHKGynu](https://vercel.com/rikei-talk/sci-test/71X8txjcR5ig3bWuKPdHxNHKGynu)はReady・46秒。
+
+同じソースと更新後のProduction設定で、19:11 JSTの[候補BsQmFtZtv4T3fWndZSuTCmCrKfLT](https://vercel.com/rikei-talk/sci-test/BsQmFtZtv4T3fWndZSuTCmCrKfLT)を作成し、ReadyとStaged Domainsを確認した。ドメイン自動割当は作成中だけ無効にし、その後有効へ復元・再読取した。main追跡も保持。公開中は引き続き旧mainのd3b4805 / CXBffiiPrXk9fqwTHeQAK6vYpbKS。
+
+[新候補](https://sci-test-b6b1cdyer-rikei-talk.vercel.app/)でトップと腕試しの実際の「公開準備中」を確認した。ジョブAPIの無認証表示をブラウザで確認しようとしたが、ナビゲーションがERR_BLOCKED_BY_CLIENTで開けず、HTTP 401の実確認には数えていない。MyASPの接続チェックは管理者ログイン後の実行待ち。
+
+CRON_SECRETをSupabase Vaultへ保存する操作は、自動承認レビューが「Vercel設定の承認はVault保存・定期処理の認証方式には及ばない」と拒否。保存前のフォームをキャンセルし、別経路で実行していない。[毎時の集計・毎分の同期の設定案](operations/README.md)と停止状態で作成するSQLを用意し、Vault保存・設定・公開と実接続確認後の稼働を本人へ確認中。スケジュール・Vault保存とも未実行。
