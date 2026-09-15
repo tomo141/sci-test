@@ -1,0 +1,466 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000046",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "標的抗原を認識した細胞傷害性T細胞（CTL）が、標的細胞にアポトーシスを誘導する代表的な分子の組合せはどれか。",
+      "choices": [
+        "IgAと分泌成分",
+        "パーフォリンとグランザイム",
+        "C3bとC4b",
+        "ヒスタミンとIgE"
+      ],
+      "correctIndex": 1,
+      "explanation": "CTLはパーフォリンとグランザイムを利用して標的細胞のアポトーシスを誘導する。このほかFasを介する経路もある。",
+      "distractorRationales": [
+        "主に粘膜の液性防御に関わる組合せ。",
+        "CTLの細胞傷害顆粒に関わる代表的な分子。",
+        "補体のオプソニンとして働く分子。",
+        "即時型のアレルギー反応などに関わる分子。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 18.3 T Lymphocytes and Cellular Immunity",
+          "url": "https://openstax.org/books/microbiology/pages/18-3-t-lymphocytes-and-cellular-immunity"
+        }
+      ]
+    },
+    "reason": "旧2IDを統合。生物のMHC抗原供給源問題とは別の、実行機序を問う。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000125"
+    ],
+    "parameters": {
+      "b": 0.5,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§18.3 Cytotoxic T Cells L117〜120の分子とアポトーシス。原図のナイーブ細胞活性化の単純化は使わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000205",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "ヒトB細胞のIgEへのクラススイッチを、CD40からの刺激などと協調して促す代表的なサイトカインはどれか。",
+      "choices": [
+        "IFN-γ",
+        "IL-12",
+        "IL-4",
+        "IL-17"
+      ],
+      "correctIndex": 2,
+      "explanation": "IL-4はIgE産生への切替を促すシグナルの一つ。細胞間の協調刺激も必要で、IL-4だけが唯一の調節因子という意味ではない。",
+      "distractorRationales": [
+        "この選択肢中でIgEスイッチを代表的に促す因子ではない。",
+        "主に1型の免疫応答の誘導などに関わる。",
+        "CD40刺激などと協調してIgE産生を促す。",
+        "主に炎症・好中球の動員などに関わる。"
+      ],
+      "sources": [
+        {
+          "title": "Zhang K, Clark EA, Saxon A. (1991) — CD40 stimulation and IL-4-dependent IgE production in human B cells",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/1706382/"
+        }
+      ]
+    },
+    "reason": "無関係なホルモンの誤答肢をサイトカイン同士の比較へ変更。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "ヒトB細胞の原著要旨を検索索引で照合。マウスIgG1の結果をヒトへそのまま一般化しない。OpenStax §19.1 L47でIL-13も関与することを確認。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000060",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "Toll様受容体（TLR）による自然免疫の認識を適切に表すのはどれか。",
+      "choices": [
+        "各リンパ球でV(D)J再構成した受容体だけを使う",
+        "MHCに提示されたペプチドをTCRとして認識する",
+        "分泌抗体の可変領域を作り替えて抗原に合わせる",
+        "微生物に共通する分子パターンなどを認識する"
+      ],
+      "correctIndex": 3,
+      "explanation": "TLRはパターン認識受容体の一群で、特定の分子パターンに応答する。自然免疫を『何にも特異性がない』と説明するのは不正確。",
+      "distractorRationales": [
+        "BCR・TCRの多様性を作る仕組みと混同している。",
+        "T細胞受容体による認識の説明。",
+        "抗体の仕組みで、TLRの認識ではない。",
+        "TLRによるパターン認識の説明。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 17.4 Pathogen Recognition and Phagocytosis",
+          "url": "https://openstax.org/books/microbiology/pages/17-4-pathogen-recognition-and-phagocytosis"
+        }
+      ]
+    },
+    "reason": "非特異的・記憶なしという絶対表現を除き、受容体の機序で区別。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§17.4 L50、57〜59のPAMPとPRR/TLRを照合。自然免疫には一切記憶様変化がないという旧断定は使わない。"
+    }
+  },
+  {
+    "familyKey": "medical-immunology-secretory-iga",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "唾液や腸管の粘液などの分泌液で、粘膜表面の防御を主に担う分泌型抗体のクラスはどれか。",
+      "choices": [
+        "IgA",
+        "IgG",
+        "IgD",
+        "IgM"
+      ],
+      "correctIndex": 0,
+      "explanation": "分泌型IgAは粘膜の分泌液に多く、病原体が粘膜へ付着・侵入するのを妨げる。血清で最多の抗体クラスとは異なる。",
+      "distractorRationales": [
+        "粘膜分泌液に多い抗体クラス。",
+        "血清で多いが、問われた分泌型の主役ではない。",
+        "主にB細胞表面で受容体として働く。",
+        "分泌液にもあり得るが、主に問われたクラスはIgA。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 18.1 Overview of Specific Adaptive Immunity",
+          "url": "https://openstax.org/books/microbiology/pages/18-1-overview-of-specific-adaptive-immunity"
+        }
+      ]
+    },
+    "reason": "新規。血清中と粘膜分泌液中を分ける。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§18.1 L93〜94の分泌型IgA。二量体を連結するのが分泌成分だけという原文の説明は不使用。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "familyKey": "medical-immunology-placental-igg",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "正常な胎盤を介して母体から胎児へ移行し、受動免疫を主に与える抗体クラスはどれか。",
+      "choices": [
+        "IgM",
+        "IgG",
+        "IgA",
+        "IgD"
+      ],
+      "correctIndex": 1,
+      "explanation": "母体のIgGが胎盤を介して胎児へ移行する。母乳などの分泌液に含まれるIgAとは移行経路が異なる。",
+      "distractorRationales": [
+        "通常、胎盤を通じて移行する主なクラスではない。",
+        "胎盤を介した抗体移行を主に担う。",
+        "主に粘膜分泌液や母乳で働く。",
+        "主にB細胞表面の受容体として働く。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 18.1 Overview of Specific Adaptive Immunity",
+          "url": "https://openstax.org/books/microbiology/pages/18-1-overview-of-specific-adaptive-immunity"
+        }
+      ]
+    },
+    "reason": "新規。分泌液からの移行と胎盤からの移行を区別。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§18.1 L90および§18.5 L37のIgG胎盤移行。全分子について絶対に例外なしとはしない。"
+    }
+  },
+  {
+    "familyKey": "medical-immunology-passive-immunity",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "体外で作られた抗体を受け取ることで得られる受動免疫の特徴として、最も適切なのはどれか。",
+      "choices": [
+        "受け手のB細胞の増殖を経て防御が始まり、免疫記憶を残す",
+        "抗体による防御は速く得られ、その移入だけで長期の免疫記憶を残す",
+        "抗体による防御は速く得られるが、抗体の消失とともに弱まる",
+        "受け手の新たな抗体産生を促すため、防御開始には誘導期間が必要"
+      ],
+      "correctIndex": 2,
+      "explanation": "既成の抗体を利用するので、防御を速く得られる。一方、抗体は分解されるため、移入そのものが永続的な免疫記憶を作るわけではない。",
+      "distractorRationales": [
+        "本人の免疫細胞を活性化する能動免疫の説明。",
+        "抗体の移入だけで受け手の抗原特異的な長期記憶が作られるわけではない。",
+        "受動的な抗体防御の時間的な特徴。",
+        "すでに作られた抗体が働くため、本人の新たな抗体産生を待つ必要はない。"
+      ],
+      "sources": [
+        {
+          "title": "CDC Pink Book — Chapter 1, Principles of Vaccination: Passive Immunity",
+          "url": "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-1-principles-of-vaccination.html"
+        }
+      ]
+    },
+    "reason": "新規。既存の能動免疫・記憶の設問と区別。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "CDC Pink Book Passive Immunityの即時性と一時性を検索索引で照合。特定の病気への投与判断や製品を案内しない。"
+    }
+  },
+  {
+    "familyKey": "medical-immunology-c3b-opsonization",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "病原体の表面に結合した補体C3bの主要な役割はどれか。",
+      "choices": [
+        "肥満細胞を直接脱顆粒させるアナフィラトキシンとして働く",
+        "膜侵襲複合体の主要な孔形成サブユニットとして働く",
+        "好中球への主要な走化性シグナルとして働く",
+        "食細胞が病原体を取り込みやすくする"
+      ],
+      "correctIndex": 3,
+      "explanation": "C3bは病原体表面を標識し、食作用を助けるオプソニン。C3a・C5aや膜侵襲複合体とは主な役割が異なる。",
+      "distractorRationales": [
+        "主にC3aやC5aの説明。",
+        "主にC9などの終末補体成分の役割で、C3bの役割ではない。",
+        "主にC5aの説明。",
+        "補体によるオプソニン化。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 17.2 Chemical Defenses",
+          "url": "https://openstax.org/books/microbiology/pages/17-2-chemical-defenses"
+        }
+      ]
+    },
+    "reason": "新規。補体の各断片の役割を区別。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§17.2 L104、表17.5 L160〜162のC3b/C4b、C5a、アナフィラトキシンを照合。"
+    }
+  },
+  {
+    "familyKey": "medical-immunology-thymic-negative-selection",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "胸腺で、自己抗原に強く反応する未熟T細胞をアポトーシスによって除去する過程はどれか。",
+      "choices": [
+        "負の選択",
+        "正の選択",
+        "抗体の親和性成熟",
+        "クラススイッチ組換え"
+      ],
+      "correctIndex": 0,
+      "explanation": "負の選択は自己反応性T細胞を減らす中枢性免疫寛容の一部。全ての自己反応性細胞が除去されるわけではなく、末梢での制御も必要。",
+      "distractorRationales": [
+        "強い自己反応性を持つ細胞の除去。",
+        "自己MHCを適切に認識できる細胞を残す側の過程。",
+        "主にB細胞の抗体反応に関わる過程。",
+        "B細胞の抗体クラスを変える過程。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 18.3 T Lymphocytes and Cellular Immunity",
+          "url": "https://openstax.org/books/microbiology/pages/18-3-t-lymphocytes-and-cellular-immunity"
+        }
+      ]
+    },
+    "reason": "新規。正の選択と負の選択を区別。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§18.3 L39〜40の自己反応性細胞の除去と末梢寛容。TCRを持たない細胞の死を負の選択としたL37は採用しない。"
+    }
+  },
+  {
+    "familyKey": "medical-immunology-ige-mast-cell",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "すでに感作された人のI型過敏反応で、抗原が肥満細胞表面のIgEを架橋した直後に起こる代表的な反応はどれか。",
+      "choices": [
+        "免疫複合体の血管壁への沈着が中心となる",
+        "肥満細胞が脱顆粒し、ヒスタミンなどを放出する",
+        "抗原特異的T細胞による遅延型反応が中心となる",
+        "IgGやIgMが細胞表面抗原に結合して標的細胞を障害する"
+      ],
+      "correctIndex": 1,
+      "explanation": "肥満細胞の表面に結合したIgEが抗原で架橋されると、細胞が活性化して脱顆粒する。I型過敏反応の重要な仕組み。",
+      "distractorRationales": [
+        "III型過敏反応の代表的な機序。",
+        "即時型反応を起こすメディエーターの放出。",
+        "IV型過敏反応の代表的な機序。",
+        "II型過敏反応の代表的な機序。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 19.1 Hypersensitivities",
+          "url": "https://openstax.org/books/microbiology/pages/19-1-hypersensitivities"
+        }
+      ]
+    },
+    "reason": "新規。クラススイッチの誘導と、感作後の実行段階を区別。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§19.1 L39、47〜49のIgE・感作・肥満細胞。診断や緊急対応の手順は扱わない。"
+    }
+  },
+  {
+    "familyKey": "medical-immunology-regulatory-t-cells",
+    "domain": "医歯薬学",
+    "subdomain": "免疫学",
+    "content": {
+      "question": "FOXP3の働きと結び付く制御性T細胞（Treg）の主要な役割はどれか。",
+      "choices": [
+        "免疫グロブリンを大量に分泌する",
+        "感染細胞へのパーフォリン等による細胞傷害を主に担う",
+        "過剰な免疫反応や自己への攻撃を抑える",
+        "抗原の取り込みと未感作T細胞への抗原提示を主に担う"
+      ],
+      "correctIndex": 2,
+      "explanation": "制御性T細胞は他の免疫細胞の応答を抑え、自己免疫の防止や免疫反応の制御に関わる。FOXP3はその機能を支える転写因子。",
+      "distractorRationales": [
+        "主に形質細胞の役割。",
+        "主に細胞傷害性T細胞などの役割。",
+        "Tregによる免疫制御の代表的な役割。",
+        "主に樹状細胞などの抗原提示細胞の役割。"
+      ],
+      "sources": [
+        {
+          "title": "NIH MedlinePlus Genetics — FOXP3 gene",
+          "url": "https://medlineplus.gov/download/genetics/gene/foxp3.pdf"
+        }
+      ]
+    },
+    "reason": "新規。細胞傷害性T細胞や抗体産生細胞との役割を区別。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "免疫の機序と分子・細胞の役割に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "MedlinePlus FOXP3 PDF p0 Normal Functionの転写因子・Treg・自己攻撃の防止を取得本文で照合。"
+    }
+  }
+]

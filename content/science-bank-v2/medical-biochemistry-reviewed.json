@@ -1,0 +1,469 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000136",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "レニン−アンジオテンシン系で、ACEがアンジオテンシンIから直接生成するペプチドはどれか。",
+      "choices": [
+        "アンジオテンシンII",
+        "アンジオテンシノーゲン",
+        "アルドステロン",
+        "ブラジキニン"
+      ],
+      "correctIndex": 0,
+      "explanation": "ACEはアンジオテンシンIを切断してアンジオテンシンIIにする。レニンがアンジオテンシノーゲンからアンジオテンシンIを生じさせる段階とは別。",
+      "distractorRationales": [
+        "ACEによる変換産物。",
+        "レニンが作用する上流の前駆体。",
+        "副腎皮質のステロイドで、ペプチドではない。",
+        "ACEはその分解にも関わるが、Iから生成するものではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 25.10 The Urinary System and Homeostasis",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-10-the-urinary-system-and-homeostasis"
+        }
+      ]
+    },
+    "reason": "旧2IDを統合。治療薬の第一選択や用量から、分子反応の理解へ焦点を変更。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000054"
+    ],
+    "parameters": {
+      "b": 0.2,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§25.10のレニン→I→ACE→IIの記述を検索索引で照合。ACEの作用とレニン分泌の阻害を同一視しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000146",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "フィラデルフィア染色体に関係するBCR::ABL1融合タンパク質が持つ、がん化に関わる酵素活性はどれか。",
+      "choices": [
+        "DNAメチルトランスフェラーゼ活性",
+        "チロシンキナーゼ活性",
+        "セリンプロテアーゼ活性",
+        "リボヌクレアーゼ活性"
+      ],
+      "correctIndex": 1,
+      "explanation": "BCR::ABL1はチロシンキナーゼ活性を持つ融合タンパク質。異常なシグナル伝達が細胞増殖などに関わる。",
+      "distractorRationales": [
+        "DNAへのメチル基転移が問われた融合タンパク質の主な活性ではない。",
+        "タンパク質のチロシン残基のリン酸化に関わる。",
+        "ペプチド結合を切る酵素として分類するものではない。",
+        "RNAを切断する酵素として分類するものではない。"
+      ],
+      "sources": [
+        {
+          "title": "NCI — Childhood Cancer Genomics (PDQ), BCR::ABL1",
+          "url": "https://www.cancer.gov/types/childhood-cancers/pediatric-genomics-hp-pdq"
+        }
+      ]
+    },
+    "reason": "イマチニブを現在も一律の第一選択とする旧問を廃止し、安定した分子機序を問う。同じBCR::ABL1・イマチニブ知識に触れる旧2問も既出管理に関連付け、旧回答を新しい校正値には流用しない。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8006-000000000051",
+      "10000000-0000-4000-8007-000000000150"
+    ],
+    "parameters": {
+      "b": 0.7,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "NCI PDQのBCR::ABL1融合のtyrosine kinase activityを検索索引で確認。NCI用語辞典で融合の由来も確認。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000224",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "既知の一塩基変異を識別するアレル特異的PCR（ARMS）の基本的な工夫はどれか。",
+      "choices": [
+        "PCR産物を制限酵素で切り、断片長の違いを比べる",
+        "染色体上の相補配列に蛍光プローブを結合させて観察する",
+        "プライマーの3′末端の適合性で伸長しやすさを変える",
+        "mRNAを逆転写してcDNAを増幅し、発現量を比べる"
+      ],
+      "correctIndex": 2,
+      "explanation": "アレル特異的PCRは、プライマー末端と標的配列の適合性による伸長の差を利用する。識別性能はプライマー設計や反応条件の検証を要する。",
+      "distractorRationales": [
+        "PCR-RFLPの基本的な方法。ARMSの末端識別とは異なる。",
+        "FISHの基本的な方法。ARMSの伸長による識別ではない。",
+        "標的アレルとの3′末端の適合性を利用する。",
+        "逆転写を経た発現量測定の説明で、ARMSのアレル識別原理ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Thermo Fisher Scientific — Detection of SNPs by fast, simple, and economical PCR",
+          "url": "https://www.thermofisher.com/TFS-Assets/BID/Technical-Notes/snp-detection-arms-pcr-tech-note.pdf"
+        }
+      ]
+    },
+    "reason": "比重計などの無関係な選択肢から、PCRの分子識別の仕組みへ改訂。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "技術資料PDF p1〜2のARMS末端適合と特異性。配列・酵素量・温度サイクル・実験結果は転載しない。"
+    }
+  },
+  {
+    "familyKey": "medical-biochemistry-phenylalanine-hydroxylase",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "ヒトのフェニルアラニン水酸化酵素（PAH）が触媒する反応の生成物はどれか。",
+      "choices": [
+        "トリプトファン",
+        "グリシン",
+        "メチオニン",
+        "チロシン"
+      ],
+      "correctIndex": 3,
+      "explanation": "PAHはフェニルアラニンをチロシンへ変換する。テトラヒドロビオプテリン（BH4）などが反応に必要。",
+      "distractorRationales": [
+        "別の芳香族アミノ酸で、この反応の生成物ではない。",
+        "PAHの直接の生成物ではない。",
+        "硫黄を含む別のアミノ酸。",
+        "フェニルアラニンの水酸化で生じる。"
+      ],
+      "sources": [
+        {
+          "title": "NIH MedlinePlus Genetics — PAH gene",
+          "url": "https://medlineplus.gov/genetics/gene/pah/"
+        }
+      ]
+    },
+    "reason": "新規。病気の診断ではなく、ヒトのアミノ酸代謝反応を確認。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "MedlinePlus PAHのNormal Functionを検索索引で照合。本文URLの直接取得は失敗し、その先の記述を確認済みとは扱わない。"
+    }
+  },
+  {
+    "familyKey": "medical-biochemistry-g6pd-nadph",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "成熟赤血球の酸化ストレス防御で重要な、G6PD反応により還元されて供給される補酵素はどれか。",
+      "choices": [
+        "NADPH",
+        "NADH",
+        "FADH₂",
+        "コエンザイムA"
+      ],
+      "correctIndex": 0,
+      "explanation": "グルコース6リン酸脱水素酵素（G6PD）はNADP⁺を還元してNADPHを生じる。NADPHは赤血球の酸化ストレスへの防御を支える。",
+      "distractorRationales": [
+        "G6PD反応が供給する還元型補酵素。",
+        "NADP⁺とNAD⁺を区別する必要がある。",
+        "G6PDの電子受容体はFADではない。",
+        "アシル基の運搬などに関わる補酵素。"
+      ],
+      "sources": [
+        {
+          "title": "NIH MedlinePlus Genetics — G6PD gene",
+          "url": "https://medlineplus.gov/genetics/gene/g6pd/"
+        }
+      ]
+    },
+    "reason": "新規。エネルギー産生用NADHとの役割の混同を確認。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "MedlinePlus G6PDのNormal Function L49〜50のNADPHと赤血球の酸化防御。薬・食品の回避リストは不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-biochemistry-collagen-vitamin-c",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "ヒトのコラーゲン生合成で、プロリン残基の水酸化を支えるビタミンはどれか。",
+      "choices": [
+        "ビタミンA",
+        "ビタミンC",
+        "ビタミンD",
+        "ビタミンK"
+      ],
+      "correctIndex": 1,
+      "explanation": "アスコルビン酸（ビタミンC）はコラーゲンのプロリン水酸化を支える。これはタンパク質の翻訳後修飾に関わる過程。",
+      "distractorRationales": [
+        "問われた水酸化を支えるビタミンではない。",
+        "プロリン水酸化に必要な酵素反応を支える。",
+        "主にカルシウム・リンの調節などに関わる。",
+        "凝固関連タンパク質などのカルボキシル化に関わる。"
+      ],
+      "sources": [
+        {
+          "title": "Booth BA, Uitto J. (1981) — Collagen biosynthesis by human skin fibroblasts. III",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/6266492/"
+        }
+      ]
+    },
+    "reason": "新規。サプリメントの摂取量や治療効果へ拡張しない。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "Booth・Uitto 1981の原著要旨L224〜225のアスコルビン酸とproline hydroxylationを照合。NIH ODSのコラーゲン生合成への必要性も確認。"
+    }
+  },
+  {
+    "familyKey": "medical-biochemistry-bilirubin-glucuronidation",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "ヒトの肝臓でUGT1A1がビリルビンに結合させる物質はどれか。",
+      "choices": [
+        "硫酸",
+        "アセチル基",
+        "グルクロン酸",
+        "メチル基"
+      ],
+      "correctIndex": 2,
+      "explanation": "UGT1A1はビリルビンのグルクロン酸抱合を担う。他の抱合反応の名称と区別する。",
+      "distractorRationales": [
+        "硫酸抱合とは別の反応。",
+        "アセチル化とは別の反応。",
+        "UGT1A1が担う抱合に使われる。",
+        "メチル化とは別の反応。"
+      ],
+      "sources": [
+        {
+          "title": "NIH MedlinePlus Genetics — UGT1A1 gene",
+          "url": "https://medlineplus.gov/genetics/gene/ugt1a1/"
+        }
+      ]
+    },
+    "reason": "新規。肝機能検査の数値や診断基準を問わず、抱合の化学反応を確認。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "MedlinePlus UGT1A1 Normal Functionのglucuronic acidとbilirubinを検索索引で照合。直接取得は失敗。"
+    }
+  },
+  {
+    "familyKey": "medical-biochemistry-urea-nitrogen",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "ヒトの肝細胞で尿素回路が処理する、タンパク質代謝由来の余分な元素は主にどれか。",
+      "choices": [
+        "炭素",
+        "酸素",
+        "水素",
+        "窒素"
+      ],
+      "correctIndex": 3,
+      "explanation": "尿素回路は余分な窒素を尿素へまとめ、腎臓から排出できる形にする。アンモニアの蓄積を防ぐ上で重要。",
+      "distractorRationales": [
+        "尿素にも含まれるが、炭素排出の主経路を問うものではない。",
+        "尿素にも含まれるが、回路の中心的な処理対象ではない。",
+        "尿素にも含まれるが、回路の中心的な処理対象ではない。",
+        "アミノ酸に由来する窒素を処理する。"
+      ],
+      "sources": [
+        {
+          "title": "NIH MedlinePlus Genetics — CPS1 gene",
+          "url": "https://medlineplus.gov/genetics/gene/cps1/"
+        }
+      ]
+    },
+    "reason": "新規。肝臓での窒素処理と腎臓からの排泄を区別。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "MedlinePlus CPS1 Normal Function L47〜48のexcess nitrogen→urea。酵素変異数や発症率は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-biochemistry-mitochondrial-heteroplasmy",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "同一の細胞内に、配列の異なるミトコンドリアDNAが混在する状態を何というか。",
+      "choices": [
+        "ヘテロプラスミー",
+        "核遺伝子のヘテロ接合",
+        "ゲノムインプリンティング",
+        "一親性ダイソミー"
+      ],
+      "correctIndex": 0,
+      "explanation": "ヘテロプラスミーは複数の型のmtDNAが混在する状態。核の相同染色体上で二つのアレルが異なるヘテロ接合とは区別する。",
+      "distractorRationales": [
+        "ミトコンドリアDNAの複数型の混在。",
+        "核遺伝子の対立遺伝子の組合せのこと。",
+        "親由来による遺伝子発現の違い。",
+        "相同染色体の両方が一方の親に由来すること。"
+      ],
+      "sources": [
+        {
+          "title": "NHGRI — Researchers examine disease-causing mutations in mitochondrial genomes",
+          "url": "https://www.genome.gov/27558842/researchers-examine-diseasecausing-mutations-in-mitochondrial-genomes"
+        }
+      ]
+    },
+    "reason": "新規。配列の混在と、その人の発症の有無を同一視しない。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "NHGRIの用語説明L19を使用。記事の一律60％閾値の仮説や有病率を一般則として採用しない。"
+    }
+  },
+  {
+    "familyKey": "medical-biochemistry-cftr-channel",
+    "domain": "医歯薬学",
+    "subdomain": "生化学・分子医学",
+    "content": {
+      "question": "ヒトのCFTRタンパク質の代表的な分子機能はどれか。",
+      "choices": [
+        "上皮細胞膜でNa⁺とK⁺を交換するポンプとして働く",
+        "上皮細胞膜で塩化物イオンなどを通すチャネルとして働く",
+        "細胞膜のチロシンキナーゼ型受容体として働く",
+        "細胞膜のアクアポリンとして水を通す"
+      ],
+      "correctIndex": 1,
+      "explanation": "CFTRは上皮細胞膜の陰イオンチャネルで、塩化物イオンの移動などを担う。その機能は粘液や体液の性質に関わる。",
+      "distractorRationales": [
+        "Na⁺/K⁺-ATPaseの役割で、CFTRの輸送対象ではない。",
+        "CFTRの膜チャネルとしての機能。",
+        "CFTRはチロシンキナーゼ型受容体ではない。",
+        "CFTRと水チャネルのアクアポリンは別のタンパク質。"
+      ],
+      "sources": [
+        {
+          "title": "NIH MedlinePlus Genetics — CFTR gene, Normal Function",
+          "url": "https://medlineplus.gov/download/genetics/gene/cftr.pdf"
+        }
+      ]
+    },
+    "reason": "新規。変異ごとの症状・治療選択へ一般化しない。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "分子機能と機序の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "MedlinePlus CFTR PDFのNormal FunctionとCystic fibrosis Causesの検索索引で塩化物チャネルを確認。遺伝子HTMLの直接取得は失敗。"
+    }
+  }
+]

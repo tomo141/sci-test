@@ -461,6 +461,9 @@
   },
   {
     "familyKey": "medical-pharmacology-prodrug",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000140"
+    ],
     "domain": "医歯薬学",
     "subdomain": "薬学・薬理",
     "content": {
