@@ -1,0 +1,475 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000057",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "肺サーファクタントが肺胞を安定させる主要な作用はどれか。",
+      "choices": [
+        "肺胞の気液界面の表面張力を下げる",
+        "肺胞の気液界面の表面張力を上げる",
+        "血液中の酸素を直接ヘモグロビンへ結合させる",
+        "肺胞壁を線維化して伸びにくくする"
+      ],
+      "correctIndex": 0,
+      "explanation": "サーファクタントは気液界面の表面張力を下げ、肺胞がつぶれにくくなるように働く。II型肺胞上皮細胞が産生する。",
+      "distractorRationales": [
+        "主要な表面活性作用。",
+        "収縮する方向の力を強めてしまう。",
+        "ヘモグロビンへの酸素結合を直接担う物質ではない。",
+        "線維化による硬化はサーファクタントの作用ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 22.3 The Process of Breathing",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-3-the-process-of-breathing"
+        }
+      ]
+    },
+    "reason": "旧2IDを統合。単純な球のラプラス式を肺胞全体へそのまま適用する説明を除く。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000108"
+    ],
+    "parameters": {
+      "b": -0.2,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§22.3 L64の表面張力低下。サーファクタント関連タンパク質の免疫機能まで否定しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000053",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "単純化した糸球体のモデルで、毛細血管の静水圧60 mmHg、ボウマン嚢腔の静水圧20 mmHg、血漿の膠質浸透圧25 mmHgとする。嚢腔の膠質浸透圧を0とすると、毛細血管から嚢腔へ向かう正味の濾過圧はどれか。",
+      "choices": [
+        "5 mmHg",
+        "15 mmHg",
+        "35 mmHg",
+        "65 mmHg"
+      ],
+      "correctIndex": 1,
+      "explanation": "正味の濾過圧は60−20−25=15 mmHg。これは圧力であり、単位時間の濾液量であるGFRそのものではない。",
+      "distractorRationales": [
+        "与えられた圧の差し引きになっていない。",
+        "嚢腔の静水圧と血漿の膠質浸透圧が濾過に逆らう。",
+        "嚢腔の静水圧を差し引いていない。",
+        "嚢腔の静水圧を誤って加えている。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 25.5 Physiology of Urine Formation",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-5-physiology-of-urine-formation"
+        }
+      ]
+    },
+    "reason": "旧2IDを統合。原尿の濃度と1日尿タンパク量の混同、腎血流増加でGFRが必ず増す説明を除去。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000113"
+    ],
+    "parameters": {
+      "b": 0.6,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§25.5 NFPの式L78〜82を照合し独自の圧で計算。資料L94の全身平均動脈圧を糸球体圧へ代入する説明は不使用。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000082",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "血圧表示で用いられるmmHgは、どの量を表す単位か。",
+      "choices": [
+        "1分間の心拍数",
+        "血液の流量",
+        "圧力",
+        "血液中の物質量濃度"
+      ],
+      "correctIndex": 2,
+      "explanation": "mmHgは水銀柱ミリメートルに由来する圧力の単位。心拍数や流量とは異なる。",
+      "distractorRationales": [
+        "通常は回/分などで表す。",
+        "通常はmL/分などで表す。",
+        "血圧は血液が壁へ及ぼす圧力。",
+        "通常はmmol/Lなどで表す。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 20.2 Blood Flow, Blood Pressure, and Resistance",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-2-blood-flow-blood-pressure-and-resistance"
+        }
+      ]
+    },
+    "reason": "旧問の単位羅列を測定量の区別へ改訂。",
+    "parameters": {
+      "b": -1,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§20.2 Blood Pressure L34のmmHgを確認。疾患の診断閾値や『正常血圧』の一律数値は使用しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000142",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "血液脳関門で、脳毛細血管の細胞と細胞の間を通る物質移動を直接制限する主要な構造はどれか。",
+      "choices": [
+        "軸索を包む髄鞘",
+        "くも膜下腔を満たす脳脊髄液",
+        "脳室の脈絡叢だけにある上皮",
+        "毛細血管内皮細胞間のタイトジャンクション"
+      ],
+      "correctIndex": 3,
+      "explanation": "血液脳関門では内皮細胞間の緊密結合が細胞間経路を制限する。周皮細胞やアストロサイトなども関門の維持に関わる。",
+      "distractorRationales": [
+        "神経線維の伝導に関わる構造。",
+        "髄液は内皮細胞間を封鎖する構造ではない。",
+        "脈絡叢の血液髄液関門と区別する。",
+        "脳毛細血管の細胞間経路を制限する構造。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, 26.1 Anatomy of the Nervous System",
+          "url": "https://openstax.org/books/microbiology/pages/26-1-anatomy-of-the-nervous-system"
+        }
+      ]
+    },
+    "reason": "主語を細胞間経路へ限定し、血液脳関門と血液髄液関門の混同を避ける。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§26.1 The Blood-Brain Barrier L51の内皮緊密結合。関門の構成要素全体を単一細胞へ還元しない。"
+    }
+  },
+  {
+    "familyKey": "medical-physiology-fick-output",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "定常状態で、全身の酸素消費量が360 mL O₂/分、動脈血と混合静脈血の酸素含量の差が60 mL O₂/L血液である。Fickの原理から求まる心拍出量はどれか。",
+      "choices": [
+        "0.167 L/分",
+        "3.6 L/分",
+        "6.0 L/分",
+        "21.6 L/分"
+      ],
+      "correctIndex": 2,
+      "explanation": "酸素消費量=心拍出量×動静脈酸素含量差なので、360÷60=6.0 L/分。酸素分圧の差をこの式へ直接入れることはできない。",
+      "distractorRationales": [
+        "分母と分子が逆。",
+        "含量差60で割った値ではない。",
+        "酸素の定常収支から得られる。",
+        "含量差を掛ける関係ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Richard E. Klabunde — CV Physiology, Measurement of Cardiac Output",
+          "url": "https://cvphysiology.com/cardiac-function/cf021"
+        }
+      ]
+    },
+    "reason": "新規。分圧・含量・酸素飽和度の同一視を避けて収支を確認。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "著者自身のCV Physiology L34〜37にあるFick法。原資料の250 mL/分の例題を使わず、360と60を独自設定。"
+    }
+  },
+  {
+    "familyKey": "medical-physiology-alveolar-ventilation",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "1回換気量450 mL、1回あたりの死腔量150 mL、呼吸数14回/分とする。死腔に入る分を除いてガス交換部へ届く新鮮な空気の量を計算すると、肺胞換気量はどれか。",
+      "choices": [
+        "2.1 L/分",
+        "4.2 L/分",
+        "6.3 L/分",
+        "8.4 L/分"
+      ],
+      "correctIndex": 1,
+      "explanation": "肺胞換気量=(450−150)×14=4200 mL/分=4.2 L/分。分時換気量450×14とは区別する。",
+      "distractorRationales": [
+        "死腔換気量150×14。",
+        "死腔分を除いた1回量に呼吸数を掛ける。",
+        "死腔を含む分時換気量。",
+        "死腔量を足してしまった計算。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 22.3 The Process of Breathing",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-3-the-process-of-breathing"
+        }
+      ]
+    },
+    "reason": "新規。酸素消費量や肺活量と換気量を混同しない。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§22.3 L93〜94の死腔の定義。独自に設定した体積・呼吸数の収支で計算する。"
+    }
+  },
+  {
+    "familyKey": "medical-physiology-bohr-effect",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "温度・2,3-BPG濃度などを一定とし、血液のpHだけが低下した。Bohr効果による、酸素解離曲線（横軸：酸素分圧、縦軸：ヘモグロビン酸素飽和度）の変化はどれか。",
+      "choices": [
+        "左方へ移動し、酸素親和性が高まる",
+        "右方へ移動し、酸素親和性が高まる",
+        "左方へ移動し、酸素親和性が下がる",
+        "右方へ移動し、酸素親和性が下がる"
+      ],
+      "correctIndex": 3,
+      "explanation": "pH低下でヘモグロビンが酸素を放しやすくなり、曲線は右へ移動する。同じ酸素分圧に対する飽和度は低くなる。",
+      "distractorRationales": [
+        "pH上昇側の変化。",
+        "右方移動は親和性低下に対応する。",
+        "親和性は下がるが移動方向が逆。",
+        "Bohr効果の方向を正しく表す。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 22.5 Transport of Gases",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-5-transport-of-gases"
+        }
+      ]
+    },
+    "reason": "新規。生物のヘモグロビン可逆結合問題から一段進み、条件による親和性変化を扱う。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§22.5 L57のpHと酸素解離。Haldane効果のCO₂運搬とは別の現象として扱う。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000123",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "正常な腎臓の集合管で、抗利尿ホルモン（ADH）の刺激が水の回収を増やす仕組みとして適切なのはどれか。",
+      "choices": [
+        "管腔側の膜へ水チャネルを増やし、水透過性を高める",
+        "管腔側の水チャネルを減らし、水透過性を下げる",
+        "ATP依存性の水ポンプで、浸透圧勾配に逆らって水を運ぶ",
+        "集合管の水透過性を変えず、糸球体濾過量だけを増やす"
+      ],
+      "correctIndex": 0,
+      "explanation": "ADHは集合管の主細胞の管腔側膜へのアクアポリンの挿入を促し、水の再吸収を増やす。髄質の浸透圧勾配も水の移動を支える。",
+      "distractorRationales": [
+        "水を通す膜タンパク質を増やす仕組み。",
+        "水回収を増やす作用と逆。",
+        "水は浸透圧勾配に沿って移動し、ATP駆動の水ポンプで汲み上げられるのではない。",
+        "集合管上皮の水透過性を高める作用を無視している。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 25.6 Tubular Reabsorption",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-6-tubular-reabsorption"
+        }
+      ]
+    },
+    "reason": "薬学の誤分類を生理学へ変更。作用先と膜の仕組みを具体化。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§25.6のCollecting DuctsにあるADHとapical aquaporinの記述を検索索引で照合。投与手順は扱わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000052",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "通常の副交感神経活動による代表的な反応として適切なのはどれか。",
+      "choices": [
+        "心拍数が増加する",
+        "腸管の蠕動が促進される",
+        "消化管への血流が減る",
+        "エクリン汗腺の発汗が増える"
+      ],
+      "correctIndex": 1,
+      "explanation": "副交感神経は消化活動を支え、腸管の蠕動を促す方向に働く。局所の腸管神経系なども運動を調節している。",
+      "distractorRationales": [
+        "主に交感神経刺激でみられる方向。",
+        "内容物を送る運動を促す。",
+        "交感神経活動による消化活動の抑制でみられる方向。",
+        "エクリン汗腺は主に交感神経の支配を受ける。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Fundamentals of Nursing, 27.1 Gastrointestinal Tract Structures and Functions",
+          "url": "https://openstax.org/books/fundamentals-nursing/pages/27-1-gastrointestinal-tract-structures-and-functions"
+        },
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 15.1 Divisions of the Autonomic Nervous System",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-1-divisions-of-the-autonomic-nervous-system"
+        }
+      ]
+    },
+    "reason": "旧2IDを統合。消化管の反応へ絞り、交感神経の全作用を一括した旧説明を除く。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000119"
+    ],
+    "parameters": {
+      "b": -0.3,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§27.1 Parasympathetic Nervous System L77〜78の蠕動促進と§15.1 L61の交感神経の心拍・消化管血流・発汗を照合。全ての括約筋が同じ支配とはしない。"
+    }
+  },
+  {
+    "familyKey": "medical-physiology-hpa-feedback",
+    "domain": "医歯薬学",
+    "subdomain": "生理学",
+    "content": {
+      "question": "正常な視床下部−下垂体−副腎皮質系で、コルチゾール上昇による負のフィードバックは、上流のCRH・ACTH分泌をどちらへ調節するか。",
+      "choices": [
+        "CRHとACTHをともに増やす",
+        "CRHを増やしACTHを減らす",
+        "CRHとACTHをともに抑える",
+        "CRHを減らしACTHを増やす"
+      ],
+      "correctIndex": 2,
+      "explanation": "コルチゾールは視床下部と下垂体へ戻り、CRH・ACTHの分泌を抑える方向に働く。分泌には日内変動やストレス入力も加わる。",
+      "distractorRationales": [
+        "負のフィードバックの向きが逆。",
+        "CRHへの作用が逆。",
+        "上流の刺激を抑える調節。",
+        "ACTHへの作用が逆。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Introduction to Behavioral Neuroscience, 12.2 Neural Mechanisms and Circuitry of the Stress Response",
+          "url": "https://openstax.org/books/introduction-behavioral-neuroscience/pages/12-2-neural-mechanisms-and-circuitry-of-the-stress-response"
+        }
+      ]
+    },
+    "reason": "新規。病気の診断でなく、正常系の調節方向を確認。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "概念・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§12.2 Feedback mechanisms L60、66、70。Cushing症候群を全て下垂体腺腫とする資料L67の説明は不使用。"
+    }
+  }
+]

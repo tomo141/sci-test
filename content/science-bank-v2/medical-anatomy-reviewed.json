@@ -1,0 +1,465 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000056",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "通常の成人の人体で、最も長い骨はどれか。",
+      "choices": [
+        "上腕骨",
+        "脛骨",
+        "大腿骨",
+        "腓骨"
+      ],
+      "correctIndex": 2,
+      "explanation": "大腿骨は大腿部を構成する骨で、人体で最も長い。骨の長さには個人差がある。",
+      "distractorRationales": [
+        "上腕の骨。",
+        "下腿内側の主要な骨。",
+        "大腿部にある人体最長の骨。",
+        "下腿外側の細い骨。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology, 8.4 Bones of the Lower Limb",
+          "url": "https://openstax.org/books/anatomy-and-physiology/pages/8-4-bones-of-the-lower-limb"
+        }
+      ]
+    },
+    "reason": "旧2IDを統合し、生理学に分類された重複も解剖学へ整理。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000102"
+    ],
+    "parameters": {
+      "b": -1,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§8.4 FemurとTibiaの記述。旧版の一律45〜50 cmや最も丈夫という付加断定は採用しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000201",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "通常の出生後のヒトの循環で、左心室から直接血液が送り出される大血管はどれか。",
+      "choices": [
+        "上大静脈",
+        "肺静脈",
+        "肺動脈幹",
+        "大動脈"
+      ],
+      "correctIndex": 3,
+      "explanation": "左心室から大動脈弁を通って大動脈へ血液が送られる。右心室からは肺動脈幹へ送られる。",
+      "distractorRationales": [
+        "上半身から右心房へ戻る血管。",
+        "肺から左心房へ戻る血管。",
+        "右心室から血液を受ける。",
+        "左心室から体循環へ向かう出口。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 19.1 Heart Anatomy",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+        }
+      ]
+    },
+    "reason": "定型の誤答説明を各血管の接続先へ改訂。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§19.1 Left Ventricle L152の大動脈への駆出を照合。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-median-plane",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "解剖学的正位の体を、正中線を通って左右の部分に分ける面はどれか。",
+      "choices": [
+        "前額面",
+        "正中矢状面",
+        "横断面",
+        "傍矢状面"
+      ],
+      "correctIndex": 1,
+      "explanation": "正中矢状面は体の中央を通り、左右に分ける。前額面は前後、横断面は上下を分ける。",
+      "distractorRationales": [
+        "前と後ろに分ける面。",
+        "正中を通って右と左に分ける面。",
+        "上と下に分ける面。",
+        "矢状面だが、正中から左右にずれた面。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 1.6 Anatomical Terminology",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-6-anatomical-terminology"
+        }
+      ]
+    },
+    "reason": "新規。単なる矢状面と正中矢状面を区別。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§1.6 Body Planes L68〜70。図や原資料の例題は使わない。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-radius-position",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "手掌を前へ向けた解剖学的正位で、前腕の橈骨は尺骨に対してどちら側にあるか。",
+      "choices": [
+        "内側（小指側）",
+        "後側（手背側）",
+        "外側（母指側）",
+        "前側（手掌側）"
+      ],
+      "correctIndex": 2,
+      "explanation": "解剖学的正位では橈骨が母指側、尺骨が小指側にある。前腕を回内すると両骨の位置関係は変化する。",
+      "distractorRationales": [
+        "尺骨の側。",
+        "前後関係として分類する組合せではない。",
+        "解剖学的正位での橈骨の位置。",
+        "手掌が向く方向と骨の内外を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 8.2 Bones of the Upper Limb",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-2-bones-of-the-upper-limb"
+        }
+      ]
+    },
+    "reason": "新規。手の向きを明記し、回内位との曖昧さを避ける。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§8.2 Ulna L41、Radius L48の内側・外側と母指側を照合。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-hepatic-portal",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "小腸の毛細血管で吸収された水溶性の栄養素を含む血液が、心臓へ戻る前に肝類洞へ向かう際に通る血管系はどれか。",
+      "choices": [
+        "肝門脈系",
+        "肝静脈系",
+        "肺静脈系",
+        "冠静脈系"
+      ],
+      "correctIndex": 0,
+      "explanation": "小腸などの毛細血管からの血液は肝門脈を経て肝類洞へ流れる。肝静脈は肝臓から下大静脈へ戻す側の血管。",
+      "distractorRationales": [
+        "消化管から肝臓の毛細血管系へつなぐ。",
+        "肝臓から出ていく側。",
+        "肺から左心房へ流れる系。",
+        "心筋からの血液を戻す系。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology, 20.5 Circulatory Pathways",
+          "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-5-circulatory-pathways"
+        }
+      ]
+    },
+    "reason": "新規。門脈と肝静脈、血中吸収とリンパ吸収を区別。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§20.5 Hepatic Portal System L381〜382。脂質のリンパ輸送まで全て門脈へ流れるとはしない。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-kidney-retroperitoneal",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "成人の腎臓は通常、腹膜との関係でどの位置にあるか。",
+      "choices": [
+        "臓側腹膜の内側で腸間膜に吊られる",
+        "壁側腹膜より後ろの後腹膜腔にある",
+        "胸膜腔内で肺の下にある",
+        "腹壁の皮下組織内にある"
+      ],
+      "correctIndex": 1,
+      "explanation": "腎臓は後腹膜臓器で、壁側腹膜と後腹壁の間に位置する。脂肪や筋膜などに保護されている。",
+      "distractorRationales": [
+        "腎臓は通常、腸間膜に吊られる腹膜内臓器ではない。",
+        "腎臓の通常の位置。",
+        "腎臓は胸膜腔内の臓器ではない。",
+        "皮下組織より深部にある。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology, 25.3 Gross Anatomy of the Kidney",
+          "url": "https://openstax.org/books/anatomy-and-physiology/pages/25-3-gross-anatomy-of-the-kidney"
+        }
+      ]
+    },
+    "reason": "新規。腹膜の『内側』という日常表現で位置を取り違えないようにする。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§25.3 External Anatomy L32、38。血流比率など別の数値は使わない。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-subarachnoid",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "正常な脳の表面付近で、くも膜と軟膜の間にあって脳脊髄液が循環する空間はどれか。",
+      "choices": [
+        "硬膜外腔",
+        "硬膜下腔",
+        "くも膜下腔",
+        "静脈洞の内腔"
+      ],
+      "correctIndex": 2,
+      "explanation": "くも膜下腔には脳脊髄液が循環する。硬膜下の潜在的な間隙や、静脈血の流れる静脈洞とは異なる。",
+      "distractorRationales": [
+        "硬膜の外側で、指定された二つの膜の間ではない。",
+        "硬膜とくも膜の間に対応する。",
+        "くも膜と軟膜の間の空間。",
+        "血液が流れる空間。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology, 13.3 Circulation and the Central Nervous System",
+          "url": "https://openstax.org/books/anatomy-and-physiology/pages/13-3-circulation-and-the-central-nervous-system"
+        }
+      ]
+    },
+    "reason": "新規。髄膜の位置関係を問う。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§13.3 Arachnoid Mater L62〜63のCSFとくも膜下腔。採取・処置の手順は扱わない。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-mitral-valve",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "通常のヒトの心臓で、左心房と左心室の間にある弁はどれか。",
+      "choices": [
+        "三尖弁",
+        "大動脈弁",
+        "肺動脈弁",
+        "僧帽弁"
+      ],
+      "correctIndex": 3,
+      "explanation": "僧帽弁は左房室弁。三尖弁は右心房と右心室の間、大動脈弁と肺動脈弁は心室の出口にある。",
+      "distractorRationales": [
+        "右心房と右心室の間。",
+        "左心室と大動脈の間。",
+        "右心室と肺動脈幹の間。",
+        "左心房と左心室の間。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, 19.1 Heart Anatomy",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+        }
+      ]
+    },
+    "reason": "新規。心腔数と大血管だけに偏らず弁の配置を確認。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§19.1 Heart Valve Structure and Function L159〜160の弁の位置。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-thoracic-duct",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "典型的な人体のリンパの流れで、胸管からのリンパが静脈へ戻る場所はどれか。",
+      "choices": [
+        "左鎖骨下静脈付近",
+        "右鎖骨下静脈付近",
+        "下大静脈の腎静脈合流部付近",
+        "肺静脈の左心房流入部付近"
+      ],
+      "correctIndex": 0,
+      "explanation": "胸管は主に下半身と左上半身からのリンパを集め、左鎖骨下静脈付近の静脈系へ戻す。右上半身は主に右リンパ本幹の領域。",
+      "distractorRationales": [
+        "胸管の典型的な流入側。",
+        "主に右上半身のリンパが戻る側。",
+        "胸管の通常の終末部ではない。",
+        "リンパの通常の静脈流入部ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology, 21.1 Anatomy of the Lymphatic and Immune Systems",
+          "url": "https://openstax.org/books/anatomy-and-physiology/pages/21-1-anatomy-of-the-lymphatic-and-immune-systems"
+        }
+      ]
+    },
+    "reason": "新規。左右対称と誤解されがちなリンパ還流を扱う。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§21.1 Larger Lymphatic Vessels, Trunks, and Ducts L57〜60。個体ごとの合流形態の変異を排除しない表現。"
+    }
+  },
+  {
+    "familyKey": "medical-anatomy-lung-lobes",
+    "domain": "医歯薬学",
+    "subdomain": "解剖学",
+    "content": {
+      "question": "典型的な成人の肺の肺葉数として正しい組合せはどれか。",
+      "choices": [
+        "右2葉・左2葉",
+        "右3葉・左2葉",
+        "右2葉・左3葉",
+        "右3葉・左3葉"
+      ],
+      "correctIndex": 1,
+      "explanation": "右肺は上葉・中葉・下葉の3葉、左肺は上葉・下葉の2葉。肺葉と、その下位の気管支肺区域は区別する。",
+      "distractorRationales": [
+        "右肺には通常、中葉がある。",
+        "通常の右肺と左肺の肺葉数。",
+        "左右が逆。",
+        "左肺に独立した中葉はない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology, 22.2 The Lungs",
+          "url": "https://openstax.org/books/anatomy-and-physiology/pages/22-2-the-lungs"
+        }
+      ]
+    },
+    "reason": "新規。左右差と肺葉・肺区域の区別を明記。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "概念・解剖学的配置に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・公的機関などの公開資料の取得範囲で科学的事実を照合。設問・四択・説明は独自作成。原資料の設問・図表・症例・実測値を転載していない。独立専門家の査読ではない。",
+      "sourceLocation": "§22.2 L36の右3葉・左2葉。肺区域数の個体差や手術後を問うものではない。"
+    }
+  }
+]
