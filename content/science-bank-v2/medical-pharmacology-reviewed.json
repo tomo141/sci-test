@@ -1,0 +1,561 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000090",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "薬物の吸収・分布・代謝・排泄と、それに伴う体内濃度の時間変化を主に扱う分野はどれか。",
+      "choices": [
+        "薬力学",
+        "薬物動態学",
+        "疫学",
+        "病理学"
+      ],
+      "correctIndex": 1,
+      "explanation": "薬物動態学（PK）は体内での薬物の移動と消失を扱う。薬力学（PD）は薬物濃度と生体反応などを扱う。",
+      "distractorRationales": [
+        "生体への作用を扱うPD。",
+        "ADMEと濃度の時間変化を扱うPK。",
+        "集団での疾病の分布や要因を扱う。",
+        "病気に伴う形態・機能の変化を扱う。"
+      ],
+      "sources": [
+        {
+          "title": "University of Iowa — Ronald A. Herman, Introduction to Applied Pharmacokinetics",
+          "url": "https://rherman.pharmacy.uiowa.edu/lib/PdfDocs/CPK/Intro%20to%20Pharmacokinetics%20Slides.pdf"
+        }
+      ]
+    },
+    "reason": "旧問の定型的な誤答説明を具体化し、PKとPDの混同を確認する。",
+    "parameters": {
+      "b": -1,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "スライド6〜9（PDF p5〜8）のPK、ADME、PDの定義。用語の対比だけを使用。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000058",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "ある経口薬が腸壁や肝臓で代謝され、未変化体として全身循環へ到達する割合が減った。この全身循環に入る前の代謝を何というか。",
+      "choices": [
+        "腸肝循環",
+        "糸球体濾過",
+        "初回通過代謝",
+        "血漿タンパク質結合"
+      ],
+      "correctIndex": 2,
+      "explanation": "初回通過代謝は全身循環に到達する前に起きる代謝。経口薬の利用能には、この代謝以外に不完全な吸収なども関わる。",
+      "distractorRationales": [
+        "胆汁排泄後に再吸収される循環。",
+        "血液から腎の濾液へ物質が移る過程。",
+        "腸壁・肝臓などでの全身循環前の代謝。",
+        "タンパク質との結合であり、それ自体は代謝ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPHAR Pharmacology Education Project — Drug metabolism",
+          "url": "https://pharmacologyeducation.org/drug-metabolism/"
+        }
+      ]
+    },
+    "reason": "初回通過効果を全経口薬に共通する唯一の主因と断定した旧説明を修正。肝臓だけに限定しない。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Drug metabolismの初回通過と肝・小腸の説明。旧大学URLは直接取得失敗、同内容の検索索引と現行IUPHARページを照合。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000208",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "追加の吸収・投与がなく、薬物濃度が半減期8時間の単一指数関数に従って減少する。24時間後の濃度は開始時の何％か。",
+      "choices": [
+        "6.25％",
+        "12.5％",
+        "25％",
+        "33.3％"
+      ],
+      "correctIndex": 1,
+      "explanation": "24時間は3半減期なので、残る割合は(1/2)³=1/8=12.5％。この問いでは半減期が一定のモデルを仮定している。",
+      "distractorRationales": [
+        "4半減期後の割合。",
+        "3回半分になった割合。",
+        "2半減期後の割合。",
+        "半減期の回数で単純に割る計算は使えない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Iowa — Ronald A. Herman, Introduction to Applied Pharmacokinetics",
+          "url": "https://rherman.pharmacy.uiowa.edu/lib/PdfDocs/CPK/Intro%20to%20Pharmacokinetics%20Slides.pdf"
+        }
+      ]
+    },
+    "reason": "旧解説のクリアランス＝消失速度、利用能＝吸収率という不正確な同一視を除去。一定半減期の適用条件を明記。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PDF p12の半減期の定義を使用。時間の数値は独自設定。p20の「5半減期で厳密に定常」という表現は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "medical-pharmacology-apparent-volume",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "体内に残る薬物量が140 mg、同じ時点の血漿濃度が2 mg/Lである。薬物量を血漿濃度で割って定義する見かけの分布容積はどれか。",
+      "choices": [
+        "2 L",
+        "14 L",
+        "70 L",
+        "280 L"
+      ],
+      "correctIndex": 2,
+      "explanation": "Vd=140÷2=70 L。これは薬物量と血漿濃度を結ぶ見かけの容積であり、実際の血液量や体液量とは限らない。",
+      "distractorRationales": [
+        "濃度の数値をそのまま容積にできない。",
+        "140÷2は14ではない。",
+        "量を濃度で割ると単位はL。",
+        "量と濃度を掛ける計算ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Iowa — Ronald A. Herman, Introduction to Applied Pharmacokinetics",
+          "url": "https://rherman.pharmacy.uiowa.edu/lib/PdfDocs/CPK/Intro%20to%20Pharmacokinetics%20Slides.pdf"
+        }
+      ]
+    },
+    "reason": "新規。見かけの容積を身体の実容積と誤解しない説明にする。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PDF p15の量と濃度を結ぶ見かけの分布容積の定義。独自数値の単位計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "medical-pharmacology-clearance-rate",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "血漿濃度に対する全身クリアランスが3 L/hで一定の薬物について、血漿濃度が4 mg/Lの瞬間の体内からの消失速度はどれか。",
+      "choices": [
+        "0.75 mg/h",
+        "1.33 mg/h",
+        "7 mg/h",
+        "12 mg/h"
+      ],
+      "correctIndex": 3,
+      "explanation": "消失速度=クリアランス×血漿濃度=3×4=12 mg/h。クリアランス自体の単位はL/hで、消失する質量の速度とは区別する。",
+      "distractorRationales": [
+        "濃度でクリアランスを割った値。",
+        "濃度をクリアランスで割った値。",
+        "異なる単位の量を加算できない。",
+        "L/hとmg/Lの積なのでmg/hになる。"
+      ],
+      "sources": [
+        {
+          "title": "University of Iowa — Ronald A. Herman, Introduction to Applied Pharmacokinetics",
+          "url": "https://rherman.pharmacy.uiowa.edu/lib/PdfDocs/CPK/Intro%20to%20Pharmacokinetics%20Slides.pdf"
+        }
+      ]
+    },
+    "reason": "新規。代謝を含む消失と尿中排泄を同一視せず、次元から理解を確認。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "PDF p17のクリアランス＝消失速度／濃度と単位。独自数値で逆算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "medical-pharmacology-absolute-bioavailability",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "線形薬物動態で、同じ薬物のクリアランスは投与経路によらず等しいとする。経口200 mgでAUC₀–∞が12 mg·h/L、静脈内100 mgで10 mg·h/Lだった。絶対的バイオアベイラビリティFはどれか。",
+      "choices": [
+        "0.30",
+        "0.60",
+        "1.20",
+        "2.40"
+      ],
+      "correctIndex": 1,
+      "explanation": "投与量で補正してF=(12/200)/(10/100)=0.60。AUCをそのまま比較すると投与量の違いを無視してしまう。",
+      "distractorRationales": [
+        "投与量比を二重に補正している。",
+        "投与量で規格化した経口と静注のAUCの比。",
+        "AUCの比だけを取り、投与量を補正していない。",
+        "投与量の補正方向が逆。"
+      ],
+      "sources": [
+        {
+          "title": "FDA — Vorapaxar clinical pharmacology review, Absolute bioavailability",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2014/204886Orig1s000ClinPharmR.pdf"
+        }
+      ]
+    },
+    "reason": "新規。絶対利用能の割合を問う。吸収速度をFだけで表現する誤りを避ける。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "FDA審査資料のAbsolute bioavailabilityにあるdose-normalized oral/IV AUCの定義を検索索引で確認。原試験の数値は不使用、架空の単純な線形モデルを独自計算。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "medical-pharmacology-potency-efficacy",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "同じ受容体を介する同一の実験系で、薬物AとBの最大反応は等しい。最大反応の50％を生じる濃度EC50はAが0.1 μmol/L、Bが1 μmol/Lである。適切な比較はどれか。",
+      "choices": [
+        "AはBより効力が高く、この実験での最大反応は同じ",
+        "BはAより効力が高く、この実験での最大反応は同じ",
+        "AはBより効力が高く、最大反応も必ず大きい",
+        "AとBの効力は同じで、Bの最大反応が大きい"
+      ],
+      "correctIndex": 0,
+      "explanation": "同じ反応をより低濃度で生じるAの効力（potency）が高い。最大反応の大きさ（Emax）とは別の比較であり、この情報だけで臨床上の優劣は決められない。",
+      "distractorRationales": [
+        "低いEC50と同じEmaxを正しく区別している。",
+        "低い濃度で反応するのはA。",
+        "問題の条件では最大反応が等しい。",
+        "EC50もEmaxも与えられた条件と合わない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPHAR Pharmacology Education Project — Pharmacodynamics",
+          "url": "https://pharmacologyeducation.org/pharmacodynamics/"
+        }
+      ]
+    },
+    "reason": "新規。高効力＝大きな最大効果という誤解を検出。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Pharmacodynamics L47、54、109〜115のEC50・効力・最大反応。原図は不使用、濃度は独自設定。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "medical-pharmacology-competitive-antagonist",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "平衡状態で、作動薬と同じ結合部位を競い合う可逆的競合拮抗薬だけを加えた。作動薬濃度を十分に高められ、他の条件が同じなら、作動薬の濃度反応曲線はどう変わるか。",
+      "choices": [
+        "EC50が低下し、最大反応は変わらない",
+        "EC50は変わらず、最大反応だけ低下する",
+        "EC50が上昇し、最大反応は変わらない",
+        "EC50が上昇し、最大反応も必ず上昇する"
+      ],
+      "correctIndex": 2,
+      "explanation": "単純な可逆的競合では、同じ反応により高い作動薬濃度が必要になる。一方、十分な作動薬で拮抗を乗り越えられるため最大反応は保たれる。",
+      "distractorRationales": [
+        "曲線の移動方向が逆。",
+        "乗り越えられる競合という条件に合わない。",
+        "右方移動と最大反応の保持を表す。",
+        "競合によって最大反応が増えるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPHAR Pharmacology Education Project — Pharmacodynamics",
+          "url": "https://pharmacologyeducation.org/pharmacodynamics/"
+        }
+      ]
+    },
+    "reason": "新規。生物分野の酵素阻害問題と区別し、受容体・実験平衡・濃度反応を問う。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Pharmacodynamics L55〜56の可逆的競合。一般の不可逆・非競合の曲線や臨床投与には拡張しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "medical-pharmacology-partial-agonist",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "同じ受容体を介する同じ実験系で、薬物Xは単独で受容体を活性化するが、十分な受容体占有を得ても完全作動薬より低い最大反応しか生じない。この実験系でXを何と呼ぶか。",
+      "choices": [
+        "中性拮抗薬",
+        "逆作動薬",
+        "完全作動薬",
+        "部分作動薬"
+      ],
+      "correctIndex": 3,
+      "explanation": "部分作動薬は、その実験系で完全作動薬より低い最大反応を示す。分類は受容体数や応答の測定系にも依存する。",
+      "distractorRationales": [
+        "それ自体で受容体を活性化するという条件と合わない。",
+        "構成的な受容体活性を低下させる作用を指す。",
+        "完全作動薬より最大反応が低いという条件と合わない。",
+        "この系における部分作動薬の定義。"
+      ],
+      "sources": [
+        {
+          "title": "IUPHAR Pharmacology Education Project — Pharmacodynamics",
+          "url": "https://pharmacologyeducation.org/pharmacodynamics/"
+        }
+      ]
+    },
+    "reason": "新規。同じ薬が全測定系で必ず部分作動薬になるという断定を避ける。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Pharmacodynamics L109と受容体・系への依存を照合。低濃度というだけで部分作動薬としない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000054",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "受容体上で、内在性作動薬の結合部位とは別の部位に結合し、その作動薬による反応を変える分子の作用を何というか。",
+      "choices": [
+        "アロステリック調節",
+        "同一部位での競合",
+        "受容体の新規合成",
+        "リガンドの細胞外分解"
+      ],
+      "correctIndex": 0,
+      "explanation": "アロステリック調節では別の結合部位を介して受容体の応答を変える。作用は増強にも抑制にもなり得る。",
+      "distractorRationales": [
+        "異なる部位の間での調節を表す。",
+        "ここでは同一部位を奪い合っていない。",
+        "新規合成ではなく既存の受容体への結合。",
+        "リガンドを分解する反応ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — Allosteric site",
+          "url": "https://goldbook.iupac.org/terms/view/14107"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な「活性部位」を内在性作動薬の結合部位へ変更。不可逆拮抗を全て共有結合とする旧説明も除去。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IUPAC Gold Book allosteric siteの内在性作動薬の部位と異なる結合部位の定義。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "medical-pharmacology-prodrug",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "投与された化合物が体内で化学変換され、目的の薬理作用を担う活性体になるように設計されている。この投与化合物を何というか。",
+      "choices": [
+        "ジェネリック医薬品",
+        "プロドラッグ",
+        "プラセボ",
+        "賦形剤"
+      ],
+      "correctIndex": 1,
+      "explanation": "プロドラッグは生体内での変換を利用して活性体を生じる。投与前の活性が弱い場合もあり、変換前後の活性を区別する。",
+      "distractorRationales": [
+        "先発品との関係に基づく分類で、この変換機構の名称ではない。",
+        "体内での変換を利用する薬物の設計。",
+        "有効な薬物作用のない対照などに使うもの。",
+        "製剤の形や量を整える補助成分。"
+      ],
+      "sources": [
+        {
+          "title": "IUPAC Gold Book — Prodrug",
+          "url": "https://goldbook.iupac.org/terms/view/13943"
+        },
+        {
+          "title": "IUPHAR Pharmacology Education Project — Drug metabolism",
+          "url": "https://pharmacologyeducation.org/drug-metabolism/"
+        }
+      ]
+    },
+    "reason": "新規。代謝は必ず不活化という誤解を避ける。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IUPAC prodrugの定義とIUPHAR Drug metabolismの代謝活性化。特定の薬の投与・代謝能判定は扱わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000044",
+    "domain": "医歯薬学",
+    "subdomain": "薬学・薬理",
+    "content": {
+      "question": "アスピリンが血小板のトロンボキサン産生を抑える主要な分子機序はどれか。",
+      "choices": [
+        "COXをアセチル化して不可逆的に阻害する",
+        "ACEを可逆的に阻害する",
+        "HMG-CoA還元酵素を競合的に阻害する",
+        "ヒスタミンH1受容体を遮断する"
+      ],
+      "correctIndex": 0,
+      "explanation": "アスピリンは血小板のシクロオキシゲナーゼをアセチル化し、トロンボキサン産生を抑える。ここでは分子機序を問う。",
+      "distractorRationales": [
+        "アスピリンによる血小板COX阻害の仕組み。",
+        "アンジオテンシン変換の標的で、問われたCOX経路ではない。",
+        "コレステロール合成に関わる酵素。",
+        "ヒスタミンの受容体で、COXを阻害する説明ではない。"
+      ],
+      "sources": [
+        {
+          "title": "IUPHAR/BPS Guide to PHARMACOLOGY — Aspirin, mechanism of action",
+          "url": "https://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=4139&tab=clinical"
+        }
+      ]
+    },
+    "reason": "旧2IDを統合。作用機序と治療選択を分け、COX-2の全活性が完全停止するという広い断定を避ける。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・条件理解・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "IUPHAR/BPS AspirinのMechanism of actionにある血小板COXの不可逆的アセチル化を検索索引で確認。用量・適応・併用の推奨は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・学会・規制機関の公開資料で基礎原理を照合し、設問・四択・説明・計算値を独自作成。原資料の症例、図表、実測値、用量の指示は転載していない。独立専門家の査読ではない。"
+    },
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000046"
+    ]
+  }
+]
