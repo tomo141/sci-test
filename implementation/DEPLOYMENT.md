@@ -149,3 +149,26 @@
 17:42 JST、復旧用バックアップの隔離複製に、本番と同じ固定SQL0004〜0028、0029だけの差分、0007の順で適用した。26件の台帳ハッシュ、旧17テーブルの元の列・全行一致、4会員・4同意の継承、旧権限閉鎖、実際の1,020問と週替わり2週の構築が通過。同じ0029差分の再実行を拒否することも確認した。新しい[固定SQL](sql-release/README.md)を保存し、従来の固定SQLは変更していない。17:44 JSTに最終の対象11テスト・型検査・変更範囲lintが通過。pnpmの起動で応答がない3プロセスを終了し、インストール済みの同じ検証コマンドを直接実行した。
 
 [接続条件](MAIL-DELIVERY.md)。本番アプリはまだ旧版。0007、接続・実受信と受験の一巡、アプリ切替、ジョブ有効化が残る。
+
+## 2026-09-15：追加SQL0029と本番候補ビルド
+
+`2fa8dbd0bdfd19cf8851956f1215a50e2d50882e` を承認済みの同じ改装ブランチへpushした。差分28ファイルの秘密パターンと対象パスを検査し、バックアップ・会員情報・認証情報は含めていない。
+
+- 0029だけの固定SQLをGitHubの当該コミットから読み、17,699文字・FNV-1a `48e62580` を照合。Supabaseエディターの全選択・コピーによる全文一致を確認して実行した。17:55 JSTのREST読取で25件の適用ハッシュが一致し、未適用は0007のみ。新版41テーブルのRLSが有効、ブラウザから読み取れるscienceテーブル・ビューおよび実行できるscience/public・science_private関数はいずれも0。
+- 17:55の旧データ照合は旧17テーブルの元の列・全行が一致。17:56の問題バンク照合も1,020問の本文・審査根拠・パラメーターが一致した。MyASP同期、受験・配信・投稿の公開ゲートはfalse。
+- [Preview 7g16raHxDAiyN1sNFDwbyFFqEX2y](https://vercel.com/rikei-talk/sci-test/7g16raHxDAiyN1sNFDwbyFFqEX2y) はReady・58秒。更新したMyASP/Resendの説明をプライバシーページで確認。
+- ドメイン自動割当を一時的に無効化し、同じソースをProduction環境で再ビルド。[候補9NmgC92pMneabgTmoC4eW5cDkBWz](https://vercel.com/rikei-talk/sci-test/9NmgC92pMneabgTmoC4eW5cDkBWz) はReady・1分6秒、Staged Domainsのみ。18:07 JSTまでに自動割当を元の有効状態へ戻し、main追跡とともに読み戻した。
+- Vercelの公開中Deploymentは `CXBffiiPrXk9fqwTHeQAK6vYpbKS`、旧mainの `d3b4805` と再確認。[候補画面](https://sci-test-9znwwyriv-rikei-talk.vercel.app/)ではトップと腕試しの実際の公開準備中表示を確認。受験の完走・メール受信の試験とは区別する。
+- 18:14 JST、`initialize-science-weeks.mjs` の読み取り準備後に、承認済み予備問題から9/14週・9/21週の各10問を保存し、全ID・開始終了日時を読み戻した。20問は互いに重複せず、正式試験の問題との重複も0。公開ゲートは変更していない。手動初期化であり、定期ジョブが接続済みという意味ではない。
+
+Vercelの[公式の段階的な本番公開方法](https://vercel.com/docs/deployments/promoting-a-deployment)と管理画面の「Custom domains won't be assigned」を確認して操作した。別の本番ブランチへ変更したり、公開中の旧版をこの作業で差し替えたりしていない。
+
+## 2026-09-15：メール接続設定の保存
+
+本人からResendログイン完了と、MyASP専用キーの発行・Vercelへの保存の明示承認を受領した。18:43:54 JSTにMyASPで「全分野科学検定・本番同期」を発行。Vercel Production専用のSecretにSCIENCE_MYASP_API_KEY、Configに接続URL・サーバーURL・検定シナリオID・公開オリジンの4項目を保存し、表示を読み戻した。既存キーや他シナリオの配信設定は変更していない。
+
+転記時に一度、ブラウザの自動承認レビューが審査モデルの容量不足で失敗。保存先のProduction・Secretと未入力状態を読み戻して同じ操作を再試行し、成功を確認した。現在の未解決な承認拒否ではない。キー本文はツール出力・Gitに残していない。
+
+MyASPの初回2通は停止状態で保存し、送信元・件名・本文を照合。原稿と実設定の区別は[案内原稿](MYASP-MAIL-DRAFTS.md)に記録。Resendは送信ドメインを登録し、Xserverへのログインを本人へ依頼した。[DNS・SMTP準備](RESEND-AUTH-SETUP.md)。
+
+18:59 JSTにMyASP接続確認を含む関連15テスト・型検査・対象lintが通過。19:02 JSTまでに本番用ビルドも通過。定期処理用のCRON_SECRETは256ビットの暗号学的乱数を生成し、Vercel Production専用Secretへ保存・表示確認した。ジョブのスケジュール・MyASP実通信・メール送信は未実施。新しい環境変数を使用するには再デプロイが必要。

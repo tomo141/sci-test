@@ -7,6 +7,7 @@ import { ExperimentTable } from "./ExperimentTable";
 import { AppCard } from "@/components/ui/AppCard";
 import { scienceApi, type RequestError } from "@/src/lib/science/client";
 import type { AdminData } from "@/src/lib/science/admin";
+import type { MyaspConnectionCheck } from "@/src/lib/science/myasp";
 import type { Content } from "@/src/lib/science/types";
 const field="mt-2 block min-h-12 w-full rounded-xl border p-3";
 function Question({content}:{content:Content}){return <div className="mt-4 text-sm leading-7"><p className="whitespace-pre-wrap font-bold">{content.question}</p><ol className="mt-3 list-decimal pl-6">{content.choices.map((c,i)=><li key={i}>{c}{i===content.correctIndex?"（正解）":""}<p className="text-[var(--color-muted)]">{content.distractorRationales?.[i]}</p></li>)}</ol><p className="mt-3 whitespace-pre-wrap">{content.explanation}</p>{content.sources?.map((s,i)=><p key={i}>{s.url&&/^https?:\/\//.test(s.url)?<a href={s.url} target="_blank" rel="noreferrer" className="underline">{s.title}</a>:s.title}</p>)}</div>;}
@@ -42,6 +43,7 @@ export function AdminClient(){
     {error&&<AppCard className="mt-5"><p role="alert">{error}</p><div className="mt-4 flex gap-3"><AppButton onClick={()=>void load()}>再読み込み</AppButton><AppButton href="/login?next=%2Fadmin" variant="secondary">ログイン</AppButton></div></AppCard>}
     {data&&<><p className="mt-4 text-sm">実DBの全期間の件数。取得時刻 {new Date(data.observedAt).toLocaleString("ja-JP")}</p><div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{data.metrics.map(m=><AppCard key={m.label}><h2 className="text-sm">{m.label}</h2><p className="mt-3 text-3xl font-black">{m.value}</p></AppCard>)}</div>
       <ExperimentTable experiment={data.experiment}/>
+      <MailConnection/>
       <h2 className="mt-10 text-2xl font-black">自動で見つかった確認候補</h2><p className="mt-3 text-sm leading-7">出題された人のデータ内での傾向です。集団全体の正答率や、誤問の確定ではありません。期限を過ぎた問題は出題対象から外れます。その他の候補は根拠を確認して判断します。</p><div className="mt-5 grid gap-5">{data.quality.map(q=><QualityCard key={q.id} signal={q} reload={load}/>)}{!data.quality.length&&<p>未解決の確認候補はありません。検知を実行した時刻と件数は下の実行履歴で確認できます。</p>}</div>
       <h2 className="mt-10 text-2xl font-black">投稿の審査</h2><p className="mt-3 text-sm leading-7">古い順に最大50件。ここで答えを確認した問題は、あなたの新しい実力測定には出題されません。</p><div className="mt-5 grid gap-5">{data.submissions.map(d=><Submission key={d.id+":"+d.state} draft={d} reload={load}/>)}{!data.submissions.length&&<p>確認待ちの投稿はありません。</p>}</div>
       <h2 className="mt-10 text-2xl font-black">改善報告</h2><div className="mt-5 grid gap-5">{data.feedback.map(f=><Feedback key={f.id} report={f} reload={load}/>)}{!data.feedback.length&&<p>確認待ちの改善報告はありません。</p>}</div>
@@ -50,6 +52,14 @@ export function AdminClient(){
       <h2 className="mt-10 text-2xl font-black">自動処理の実行履歴</h2><AppButton className="mt-4" variant="secondary" onClick={async()=>{try{await scienceApi("run_jobs",{},"science-admin");await load();}catch(e){setError((e as RequestError).message);}}}>未処理分を実行・再試行</AppButton><div className="mt-5 grid gap-3">{data.jobs.map(j=><AppCard key={j.id}><p className="font-bold">{j.kind} · {j.state}</p><p className="mt-2 text-xs">開始 {j.started_at} / 完了 {j.finished_at??"未完了"}</p><pre className="mt-3 overflow-auto whitespace-pre-wrap text-xs">{JSON.stringify(j.summary,null,2)}</pre></AppCard>)}{!data.jobs.length&&<p>実行記録はまだありません。</p>}</div>
     </>}
   </main>;
+}
+function MailConnection(){
+  const [check,setCheck]=useState<MyaspConnectionCheck|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState("");
+  return <AppCard className="mt-8"><h2 className="text-xl font-black">案内メールの接続</h2><p className="mt-3 text-sm leading-7">MyASPの全分野科学検定シナリオへ接続できるか確認します。読者情報の更新やメール送信は行いません。確認コードのResend接続と、案内の実受信は別に確認します。</p>
+    <AppButton className="mt-4" variant="secondary" disabled={busy} onClick={async()=>{setBusy(true);setError("");setCheck(null);try{setCheck(await scienceApi<MyaspConnectionCheck>("check_mail",{},"science-admin"));}catch(e){setError((e as RequestError).message);}finally{setBusy(false);}}}>{busy?"接続を確認中…":"MyASPの接続を確認"}</AppButton>
+    {check&&<div className="mt-4 text-sm leading-7" role="status"><p>{check.state==="connected"?"対象シナリオへの接続を確認しました。":check.state==="not_configured"?"この環境の接続設定が不足しています。":"接続を確認できませんでした。設定とサービスの状態を確認してください。"}</p><p>確認時刻：{new Date(check.observedAt).toLocaleString("ja-JP")}</p><p>受験情報の同期：{check.syncEnabled?"有効":"停止中"} ／ 案内配信の許可：{check.deliveryEnabled?"有効":"停止中"}</p>{check.errorCode&&<p>エラーコード：{check.errorCode}</p>}<p>この確認は、読者の同期・配信条件・実際の到達の成功を示すものではありません。</p></div>}
+    {error&&<p role="alert" className="mt-4 text-sm">{error}</p>}
+  </AppCard>;
 }
 function QualityCard({signal:q,reload}:{signal:AdminData["quality"][number];reload:()=>Promise<void>}){
   const labels:Record<string,string>={rare_distractor:"ほぼ選ばれない誤答肢",negative_discrimination:"実力が高い群ほど正答が少ない",unexpected_errors:"予測よりも誤答が多い",report_burst:"7日間に複数人からの報告",evidence_report:"根拠付きの正解・権利の報告",source_expired:"出典の確認期限を超過",source_due:"出典の確認期限が近い",similar_stem:"本文が似ている別の問題族"};

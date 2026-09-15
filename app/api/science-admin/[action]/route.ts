@@ -3,14 +3,17 @@ import { z } from "zod";
 import { adminData } from "@/src/lib/science/admin";
 import { questionContent } from "@/src/lib/science/community";
 import { runDailyJobs } from "@/src/lib/science/jobs";
+import { checkMyaspConnection } from "@/src/lib/science/myasp-connection";
 import { checked, context, endpoint, rateLimit, requireAdmin, ScienceError } from "@/src/lib/science/server";
 export const dynamic="force-dynamic";
+export const maxDuration=60;
 export async function POST(request:NextRequest,{params}:{params:Promise<{action:string}>}){
   return endpoint(request,async()=>{
-    const action=z.enum(["list","submission","feedback","run_jobs","propose_correction","approve_correction","reject_correction","revise_correction","reopen_item","quality"]).parse((await params).action);
+    const action=z.enum(["list","submission","feedback","run_jobs","check_mail","propose_correction","approve_correction","reject_correction","revise_correction","reopen_item","quality"]).parse((await params).action);
     const raw=await request.text();if(raw.length>32768)throw new ScienceError("入力が長すぎます。",413);
     const body=JSON.parse(raw),ctx=await context(true),admin=await requireAdmin(ctx);
     await rateLimit(ctx,"admin",60);
+    if(action==="check_mail"){z.object({}).strict().parse(body);await rateLimit(ctx,"check_mail",2,300);return checkMyaspConnection(ctx);}
     if(action==="run_jobs"){z.object({}).strict().parse(body);await rateLimit(ctx,"run_jobs",2,300);return runDailyJobs();}
     if(action==="list"){z.object({}).strict().parse(body);return adminData(ctx);}
     if(action==="quality"){

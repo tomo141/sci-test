@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { MYASP_FIELDS, MYASP_FIELD_LABELS, emailHash, findMyaspSubscriber, mayResumeMyasp, myaspConfiguration, myaspData, myaspFreeFields, subscriber, updateMyaspFields, type MyaspConfiguration, type MyaspSnapshot } from "./myasp";
+import { MYASP_FIELDS, MYASP_FIELD_LABELS, emailHash, findMyaspSubscriber, mayResumeMyasp, myaspConfiguration, myaspData, myaspFreeFields, subscriber, updateMyaspFields, verifyMyaspScenario, type MyaspConfiguration, type MyaspSnapshot } from "./myasp";
 
 const config: MyaspConfiguration = { endpoint: "https://ai.myasp.jp/test", server: "https://email.rikei-talk.com", apiKey: "test-only".repeat(4), scenario: "wTYCnyFi", origin: "https://science.example.invalid" };
 const snapshot: MyaspSnapshot = { userId: "10000000-0000-4000-8000-000000000001", email: "reader@example.invalid", emailHash: emailHash("reader@example.invalid"),
@@ -9,6 +9,19 @@ const snapshot: MyaspSnapshot = { userId: "10000000-0000-4000-8000-000000000001"
 const remote = { subscriber_id: "test-reader", scenario_id: config.scenario, email: snapshot.email!, status: "active", free_fields:
   (Object.keys(MYASP_FIELDS) as (keyof typeof MYASP_FIELDS)[]).map(k => ({ field_key: MYASP_FIELDS[k], field_label: MYASP_FIELD_LABELS[k], field_type: "hidden", editable: true, value: "" })) };
 describe("MyASP synchronization contract (synthetic data, no live mail)", () => {
+  it("verifies only the exact scenario without requesting reader data or accepting incomplete results", async () => {
+    const call = vi.fn().mockResolvedValue({ scenarios: [{ scenario_id: config.scenario }], pagination: { has_more: false } });
+    await expect(verifyMyaspScenario(call, config)).resolves.toBeUndefined();
+    expect(call).toHaveBeenCalledOnce();
+    expect(call).toHaveBeenCalledWith("get_scenarios", { scenario_id: config.scenario, include_inactive: true, include_subscriber_count: false, limit: 2, page: 1 });
+    for (const result of [
+      { scenarios: [], pagination: { has_more: false } },
+      { scenarios: [{ scenario_id: "other" }], pagination: { has_more: false } },
+      { scenarios: [{ scenario_id: config.scenario }], pagination: { has_more: true } },
+      { scenarios: [{ scenario_id: config.scenario }], pagination: { has_more: false }, warnings: ["partial"] },
+      { connected: true }
+    ]) await expect(verifyMyaspScenario(vi.fn().mockResolvedValue(result), config)).rejects.toThrow();
+  });
   it("accepts only secure, expected service endpoints and complete configuration", () => {
     const env = { SCIENCE_MYASP_MCP_URL: config.endpoint, SCIENCE_MYASP_SERVER_URL: config.server, SCIENCE_MYASP_API_KEY: config.apiKey, SCIENCE_MYASP_SCENARIO_ID: config.scenario, SCIENCE_MAIL_ORIGIN: config.origin };
     expect(myaspConfiguration(env)).toEqual(config); expect(myaspConfiguration({})).toBeNull();

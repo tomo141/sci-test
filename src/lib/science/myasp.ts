@@ -33,7 +33,27 @@ export type MyaspSnapshot = {
 };
 export type MyaspSubscriber = { subscriber_id: string; scenario_id: string; email: string; status: string;
   free_fields?: { field_key: string; field_label?: string; editable: boolean; field_type: string; value?: unknown }[] };
-export type MyaspCall = (name: "search_subscribers" | "get_subscriber_details" | "create_subscriber" | "update_subscriber" | "update_subscriber_delivery_status", args: Record<string, unknown>) => Promise<unknown>;
+export type MyaspCall = (name: "get_scenarios" | "search_subscribers" | "get_subscriber_details" | "create_subscriber" | "update_subscriber" | "update_subscriber_delivery_status", args: Record<string, unknown>) => Promise<unknown>;
+
+export type MyaspConnectionCheck = {
+  state: "not_configured" | "connected" | "failed";
+  observedAt: string;
+  syncEnabled: boolean;
+  deliveryEnabled: boolean;
+  errorCode?: string;
+};
+
+// A successful transport handshake alone does not prove access to the intended scenario.
+// This read never requests subscriber counts, addresses, or writes.
+export async function verifyMyaspScenario(call: MyaspCall, config: MyaspConfiguration) {
+  const result = myaspData(await call("get_scenarios", {
+    scenario_id: config.scenario, include_inactive: true, include_subscriber_count: false, limit: 2, page: 1
+  }));
+  const parsed = z.object({ scenarios: z.array(z.object({ scenario_id: z.string() })),
+    pagination: z.object({ has_more: z.boolean() }) }).safeParse(result);
+  if (!parsed.success || parsed.data.pagination.has_more || parsed.data.scenarios.length !== 1 ||
+      parsed.data.scenarios[0].scenario_id !== config.scenario) throw new Error("myasp_scenario_not_verified");
+}
 
 // The official gateway can wrap JSON in `result`. Do not accept prose, warnings, or partial saves as success.
 export function myaspData(input: unknown): Record<string, unknown> {
