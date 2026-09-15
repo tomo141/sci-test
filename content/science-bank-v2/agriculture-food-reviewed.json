@@ -1,0 +1,467 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000067",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "ヨーグルトの発酵中にpHが下がり、乳の凝固が進む主な理由はどれか。",
+      "choices": [
+        "乳酸菌が乳糖から乳酸を生じるため",
+        "酵母が糖からエタノールと二酸化炭素を生じるため",
+        "プロテアーゼがカゼインをペプチドへ分解するため",
+        "リパーゼが乳脂肪を脂肪酸などへ分解するため"
+      ],
+      "correctIndex": 0,
+      "explanation": "乳酸菌によって乳糖から乳酸が作られ、pHが低下する。この酸性化が乳タンパク質の凝固に関与する。アルコール発酵や、タンパク質・脂質の分解を主因とする説明とは区別する。",
+      "distractorRationales": [
+        "乳糖の乳酸発酵による酸性化。",
+        "アルコール発酵の説明で、通常のヨーグルトの酸性化の主因ではない。",
+        "タンパク質分解は起こり得るが、問われたpH低下の主因は乳酸の生成。",
+        "脂肪分解ではなく、乳糖からの乳酸生成が主因。"
+      ],
+      "sources": [
+        {
+          "title": "University of Guelph — Cultured Dairy Products and Cheese",
+          "url": "https://books.lib.uoguelph.ca/dairyscienceandtechnologyebook/chapter/cultured-dairy-products-and-cheese/"
+        }
+      ]
+    },
+    "reason": "食品名の当て物を、発酵・酸性化・凝固の関係へ改訂。",
+    "equivalentLegacyIds": ["10000000-0000-4000-8007-000000000488"],
+    "parameters": {
+      "b": -0.5,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L183の乳糖から乳酸への変化と、L304のヨーグルトのpH低下による凝固を照合。本文の古い加熱条件や安全性に関する一般化は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000064",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "米味噌などに使われる米麹に含まれるアミラーゼの主な役割はどれか。",
+      "choices": [
+        "タンパク質をペプチドなどへ分解する",
+        "デンプンをより小さな糖などへ分解する",
+        "脂質を脂肪酸などへ分解する",
+        "エタノールを酢酸へ酸化する"
+      ],
+      "correctIndex": 1,
+      "explanation": "麹菌が作るアミラーゼはデンプンの分解に関わる。タンパク質を分解するプロテアーゼや、脂質を分解するリパーゼとは作用する対象が異なる。",
+      "distractorRationales": [
+        "主にプロテアーゼの働き。",
+        "アミラーゼがデンプンの加水分解を進める。",
+        "主にリパーゼの働き。",
+        "アミラーゼによるデンプン分解とは異なる反応。"
+      ],
+      "sources": [
+        {
+          "title": "酒類総合研究所 — エヌリブ第20号（麴菌と酵素）",
+          "url": "https://www.nrib.go.jp/sake/nrib/pdf/NRIBNo20.pdf"
+        },
+        {
+          "title": "農研機構 — 嚥下食用米粉「ゼリーノ米粉」の発売（でんぷんの物性・用語解説）",
+          "url": "https://www.naro.go.jp/publicity_report/press/laboratory/nfri/154763.html"
+        }
+      ]
+    },
+    "reason": "発酵食品の名前から、麹の酵素が作用する成分を問う形へ改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NRIB第20号の取得した検索本文とp.1の麹菌による酵素分泌、NARO用語解説L146–147のでんぷん分解酵素を照合。遺伝子改変株の製造方法・実験値は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000159",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "一定温度で、食品と平衡にある水蒸気の圧力が、同じ温度の純水の水蒸気圧の90％だった。水分活性a_wの値とその意味の組合せはどれか。",
+      "choices": [
+        "0.90で、食品の質量の90％が水であることを必ず意味する",
+        "90で、食品中の水の質量そのものを表す",
+        "0.90で、水分含量90％と同じ意味ではない",
+        "0.10で、蒸発しない水の質量割合を表す"
+      ],
+      "correctIndex": 2,
+      "explanation": "水分活性は同じ温度での平衡水蒸気圧の比なのでa_w＝0.90。食品中の水の質量割合とは異なる量であり、同じ水分含量でも水分活性が同じとは限らない。",
+      "distractorRationales": [
+        "比の数値は合うが、水の質量割合と同一視している。",
+        "水分活性は質量ではなく無次元の比で、この場合0.90。",
+        "平衡水蒸気圧の比0.90を示し、水分含量とは別。",
+        "1−0.90を使う定義ではなく、蒸発しない水の質量割合でもない。"
+      ],
+      "sources": [
+        {
+          "title": "FDA — Water Activity (aw) in Foods",
+          "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-technical-guides/water-activity-aw-foods"
+        }
+      ]
+    },
+    "reason": "水分活性の低下と殺菌・水分含量の混同を避け、定義に基づく計算へ改訂。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "DEFINITION L71とSORPTION BEHAVIOR L75–78を照合。同温度の比と水分含量を区別。本文中の全温度でa_wが必ず増えるという記述や古い法規の数値は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000172",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "低アミロース米を通常のうるち米と比較する。デンプン中のアミロペクチンの割合と、同じ条件で炊いた米飯の一般的な傾向の組合せはどれか。",
+      "choices": [
+        "アミロペクチンの割合が高く、粘りが強くなりやすい",
+        "アミロペクチンの割合が高く、粘りが弱くなりやすい",
+        "アミロペクチンの割合が低く、粘りが強くなりやすい",
+        "アミロペクチンの割合が低く、粘りが弱くなりやすい"
+      ],
+      "correctIndex": 0,
+      "explanation": "米のデンプンを構成するアミロースの割合が低いと、相対的にアミロペクチンの割合が高くなる。一般に炊いた米の粘りが強くなりやすいが、食感はデンプンの細かな構造、タンパク質、水分、調理条件にも左右される。",
+      "distractorRationales": [
+        "デンプンの成分比と一般的な粘りの傾向の両方が合う。",
+        "成分比は合うが、一般的な粘りの傾向が逆。",
+        "粘りの傾向は合うが、アミロペクチンの割合が逆。",
+        "成分比と一般的な粘りの傾向の両方が逆。"
+      ],
+      "sources": [
+        {
+          "title": "農研機構 — 冷めてもおいしい低アミロース米",
+          "url": "https://www.naro.go.jp/laboratory/tarc/contents/lamy/index.html"
+        }
+      ]
+    },
+    "reason": "比較条件を加え、食感を単一成分だけで必ず決める説明を避けた。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NARO L73–80のアミロース割合と粘りの一般的関係を確認。全条件の食感や品種評価を一つの割合だけで断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000171",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "食品や作物に含まれる糖・有機酸・アミノ酸などの低分子代謝物を広く測定し、その組成の変化を調べる研究分野はどれか。",
+      "choices": [
+        "ゲノミクス",
+        "トランスクリプトミクス",
+        "プロテオミクス",
+        "メタボロミクス"
+      ],
+      "correctIndex": 3,
+      "explanation": "メタボロミクスは代謝に関わる低分子化合物を広く調べる。DNA、RNA、タンパク質全体の解析とは主な対象が異なる。一つの方法で全代謝物を漏れなく絶対定量できるという意味ではない。",
+      "distractorRationales": [
+        "主にゲノム・DNAを対象にする。",
+        "主にRNAの発現を対象にする。",
+        "主にタンパク質を対象にする。",
+        "糖・有機酸などの代謝物を広く調べる分野。"
+      ],
+      "sources": [
+        {
+          "title": "EMBL-EBI — What is metabolomics?",
+          "url": "https://www.ebi.ac.uk/training/online/courses/metabolomics-introduction/what-is-metabolomics/"
+        }
+      ]
+    },
+    "reason": "『全代謝物を質量分析で網羅定量』という過大な表現と無関係な肢を訂正。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L44–47のsmall molecules・substrates and products of metabolismとDNA/RNAとの対比を照合。測定法を質量分析だけへ限定せず、全物質の定量を保証しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-wheat-gluten-network",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "小麦粉に水を加えてこねたとき、パン生地のグルテンの構造形成に主に関わる二つのタンパク質はどれか。",
+      "choices": [
+        "カゼインとラクトアルブミン",
+        "コラーゲンとエラスチン",
+        "グリアジンとグルテニン",
+        "アミロースとアミロペクチン"
+      ],
+      "correctIndex": 2,
+      "explanation": "小麦のグリアジンとグルテニンが、水和と混練によってグルテンの構造を作る。デンプンの二成分であるアミロース・アミロペクチンとは区別する。",
+      "distractorRationales": [
+        "主に乳に関係するタンパク質で、問われた小麦の組合せではない。",
+        "動物の結合組織に関わるタンパク質。",
+        "小麦のグルテン形成に関わるタンパク質。",
+        "デンプンの成分であり、タンパク質ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Exploratorium — Science of Bread: Great Balls of Gluten",
+          "url": "https://annex.exploratorium.edu/cooking/bread/activity-gluten.html"
+        }
+      ]
+    },
+    "reason": "小麦のタンパク質とデンプンの構造を区別する独自問題。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L45のgliadin/gluteninを確認。科学館のグルテン抽出の実験手順・レシピは転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-maillard-versus-caramelization",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "食品のメイラード反応に直接関わる反応物の組合せはどれか。",
+      "choices": [
+        "還元糖とアミノ基を持つ成分",
+        "デンプンと水だけ",
+        "脂肪酸とグリセロールだけ",
+        "エタノールと酢酸だけ"
+      ],
+      "correctIndex": 0,
+      "explanation": "メイラード反応は還元糖とアミノ基を持つ成分との反応から進む一連の反応で、色や香りの変化に関わる。糖の加熱に伴うカラメル化やデンプンの糊化とは区別する。",
+      "distractorRationales": [
+        "還元糖のカルボニル基とアミノ基の反応が出発点になる。",
+        "デンプンの吸水・糊化の組合せで、メイラード反応の二成分ではない。",
+        "脂質の形成などに関係する組合せで、メイラード反応とは異なる。",
+        "エステル形成に関わる組合せで、糖とアミノ基の反応ではない。"
+      ],
+      "sources": [
+        {
+          "title": "American Chemical Society — Sweet Science: Having Fun with Candy Chemistry",
+          "url": "https://www.acs.org/content/dam/acsorg/events/culinary-chemistry/Slides/2014-10-16-candy-chemistry-final.pdf"
+        }
+      ]
+    },
+    "reason": "酵素的褐変・糖の熱分解・糊化を一括して同じ反応としないための独自問題。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "ACS講演資料PDF pp.19–20のMaillard Browningとsugar-amine condensationを照合。室温でも進行し得ることを保持し、特定温度を必須条件としない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-oil-in-water-emulsion",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "水を主とする連続相の中に、油の微小な液滴が分散している乳化系の分類はどれか。",
+      "choices": [
+        "油中水滴型（W/O）",
+        "水中油滴型（O/W）",
+        "気体が分散する泡",
+        "分子レベルで均一に溶けた油の真の溶液"
+      ],
+      "correctIndex": 1,
+      "explanation": "水中油滴型では水相が連続し、その中に油滴が分散している。分散相と連続相を逆にした油中水滴型や、気泡、分子レベルの溶解とは区別する。",
+      "distractorRationales": [
+        "油が連続相で水滴が分散する場合の分類。",
+        "水の連続相に油滴が分散している。",
+        "分散しているのは気体ではなく液体の油。",
+        "油滴が独立の相として存在するので真の溶液ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Guelph — Dairy Science and Technology eBook: Glossary of Terms",
+          "url": "https://books.lib.uoguelph.ca/dairyscienceandtechnologyebook/part/glossary-of-terms/"
+        }
+      ]
+    },
+    "reason": "見た目の均一さと相の状態を区別する独自問題。",
+    "parameters": {
+      "b": 0,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Guelph用語集L105–107のEmulsionとFoam、分散相と連続相を照合。液滴径を定義に必須な固定範囲とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-starch-gelatinization",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "デンプンを十分な水の存在下で加熱し、デンプン粒が吸水・膨潤して糊状になる変化を何というか。",
+      "choices": [
+        "糖化",
+        "老化",
+        "糊化",
+        "カラメル化"
+      ],
+      "correctIndex": 2,
+      "explanation": "糊化は水と加熱によってデンプン粒が膨潤し、糊状になる変化。糖へ分解する糖化、冷却後などの老化、糖の加熱に伴うカラメル化とは異なる。",
+      "distractorRationales": [
+        "デンプンをより小さな糖へ分解する反応で、糊化と同一ではない。",
+        "糊化後の冷却などに伴う構造変化で、今回の加水・加熱過程とは違う。",
+        "デンプンの糊化を述べている。",
+        "糖の加熱による反応で、デンプン粒の吸水・膨潤とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "農研機構 — 嚥下食用米粉「ゼリーノ米粉」の発売（でんぷんの物性・用語解説）",
+          "url": "https://www.naro.go.jp/publicity_report/press/laboratory/nfri/154763.html"
+        }
+      ]
+    },
+    "reason": "糊化・糖化・老化の用語を区別する独自問題。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "NARO L130–131の加水加熱、糊化、膨潤と冷却後の老化を照合。嚥下障害に適する食事の作り方や商品の推奨は扱わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-apple-enzymatic-browning",
+    "domain": "農学",
+    "subdomain": "食品科学",
+    "content": {
+      "question": "切ったリンゴに見られる酵素的な褐変の初期過程として適切なのはどれか。",
+      "choices": [
+        "還元糖とアミノ基が、酵素を使わず反応する",
+        "ポリフェノール類が、ポリフェノールオキシダーゼの作用で酸素を使って酸化される",
+        "デンプンが吸水・膨潤して糊になる",
+        "脂質がリパーゼによって加水分解される"
+      ],
+      "correctIndex": 1,
+      "explanation": "リンゴの酵素的褐変では、ポリフェノールオキシダーゼによるフェノール性成分の酸化が関わる。その後の反応を経て褐色の成分ができる。メイラード反応とは異なる経路である。",
+      "distractorRationales": [
+        "メイラード反応の説明で、問われた酵素的褐変とは異なる。",
+        "フェノール性基質と酸素を使う酵素的な酸化が関わる。",
+        "デンプンの糊化であり、今回の褐変の初期反応ではない。",
+        "脂質の加水分解で、リンゴの酵素的褐変の初期反応とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Inhibition of Apple Polyphenol Oxidase Activity by Procyanidins and Polyphenol Oxidation Products (2004)",
+          "url": "https://pubs.acs.org/doi/10.1021/jf034461q"
+        }
+      ]
+    },
+    "reason": "メイラード反応と酵素的な褐変を比較する独自問題。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "知識・定義・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "2004年原研究の検索から取得した抄録で、リンゴPPO・フェノール性基質・溶存酸素消費を確認。直接openは未取得。酵素活性の原数値・阻害剤・実験手順は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・研究機関・学会・科学館の公開資料と原研究の取得部分で原理を照合。設問・四択・数値・解説は独自に作成し、図版・実験データ・製造条件・治療用食事の処方は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]

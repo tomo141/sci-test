@@ -1,0 +1,376 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000196",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "葉から抽出したクロロフィルaの可視光の吸収スペクトルで、一般に大きな吸収帯が見られる色の組合せはどれか。",
+      "choices": [
+        "緑と黄",
+        "青と赤",
+        "黄と橙",
+        "緑と赤"
+      ],
+      "correctIndex": 1,
+      "explanation": "クロロフィルaは青と赤の領域に大きな吸収帯を持つ。緑の領域の吸収は相対的に弱いが、このことから葉全体が緑色光を一切利用できないとはいえない。",
+      "distractorRationales": [
+        "緑・黄が主な二つの吸収帯という説明ではない。",
+        "青・赤の領域に大きな吸収帯がある。",
+        "黄・橙が主な二つの吸収帯という説明ではない。",
+        "赤は該当するが、緑ではなく青側にもう一つの大きな吸収帯がある。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Biology 2e §8.2 — The Light-Dependent Reactions of Photosynthesis",
+          "url": "https://openstax.org/books/biology-2e/pages/8-2-the-light-dependent-reactions-of-photosynthesis"
+        }
+      ]
+    },
+    "reason": "抽出色素と葉全体を分け、緑色光の吸収を一律に0とする旧説明を訂正。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000452"
+    ],
+    "parameters": {
+      "b": -0.5,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L50–58の色素ごとの吸収スペクトルと複数色素の存在を照合。本文の『緑は吸収しない』を、葉全体の吸収が厳密に0という説明へ拡張していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000190",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "トマトやリンゴなどのクライマクテリック型果実の成熟で、重要な信号として働く気体の植物ホルモンはどれか。",
+      "choices": [
+        "オーキシン",
+        "サイトカイニン",
+        "ジベレリン",
+        "エチレン"
+      ],
+      "correctIndex": 3,
+      "explanation": "エチレンは気体の植物ホルモンで、クライマクテリック型果実の成熟に関わる。全ての果実が同じ呼吸・エチレン生成の変化を示すわけではない。",
+      "distractorRationales": [
+        "オーキシンは植物ホルモンだが、問われた気体のホルモンではない。",
+        "サイトカイニンは問われた気体のホルモンではない。",
+        "ジベレリンは問われた気体のホルモンではない。",
+        "エチレンが該当する。"
+      ],
+      "sources": [
+        {
+          "title": "University of Maryland Extension — Ethylene and the Regulation of Fruit Ripening",
+          "url": "https://www.extension.umd.edu/resource/ethylene-and-regulation-fruit-ripening"
+        }
+      ]
+    },
+    "reason": "ACC経路に関する旧誤記と一律の成熟の説明を外し、対象果実とホルモンを明確にした。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "What is Ethylene?とL60–62のクライマクテリック型・非クライマクテリック型の区別を照合。実用上の処理濃度・収穫後の日数は扱わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000164",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "リンゴの品種Aの穂木を品種Bの台木へ接いだ一般的な接ぎ木で、台木の役割として適切なのはどれか。",
+      "choices": [
+        "根系を形成し、穂木の生育や樹の大きさにも影響する",
+        "交配によって穂木の全細胞をAとBのF₁遺伝子型へ変える",
+        "台木が違っても樹の大きさや生育には影響しない",
+        "穂木がつける全ての果実を、台木品種Bの果実へ変える"
+      ],
+      "correctIndex": 0,
+      "explanation": "台木は根系を担い、樹勢や大きさなどにも影響する。接ぎ木は通常の有性交配とは違い、穂木と台木はそれぞれの遺伝的背景を持って一体の植物として育つ。",
+      "distractorRationales": [
+        "根系と地上部の生育への影響が台木の重要な役割。",
+        "有性交配で全細胞を雑種第一代へ変える操作ではない。",
+        "同じ穂木でも台木の選択で生育や大きさが変わることがある。",
+        "穂木の果実が一律に台木品種の果実へ置き換わるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota — The Science of Plants §10.1: Grafts and Wounds",
+          "url": "https://open.lib.umn.edu/horticulture/chapter/10-1-grafts-and-wounds/"
+        }
+      ]
+    },
+    "reason": "台木が形質を全て決めるという読み方と有性交配との混同を避ける。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000166"
+    ],
+    "parameters": {
+      "b": 0.1,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "取得された§10.1の穂木と台木の別の遺伝子型、根系、同じHoneycrispでも台木で樹高が異なる記述を照合。本文のキメラの呼び方を組織培養等の全例へ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-apical-dominance-pinching",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "頂芽優勢のある植物で、摘心して茎の先端を取り除くと、一般に腋芽の伸長が促されることがある。主にどの関係が弱まるためか。",
+      "choices": [
+        "根毛による土壌水の吸収",
+        "頂端が腋芽の成長を抑える関係",
+        "根から地上部への全ての通水",
+        "花粉管が子房へ伸びる関係"
+      ],
+      "correctIndex": 1,
+      "explanation": "摘心により頂端側からの腋芽成長の抑制が弱まり、側枝が伸びることがある。オーキシンだけで全てが決まるわけではなく、糖や他のホルモンも枝分かれに関わる。",
+      "distractorRationales": [
+        "根毛の吸水を止めることが摘心による側枝促進の主な説明ではない。",
+        "頂芽優勢が弱まることが腋芽の伸長につながる。",
+        "植物全体の通水をなくすことが目的ではない。",
+        "花粉管の伸長とは別の栄養成長の現象。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota — The Science of Plants §4.2: Plant Hormones",
+          "url": "https://open.lib.umn.edu/horticulture/chapter/4-2-plant-hormones/"
+        }
+      ]
+    },
+    "reason": "摘心と枝分かれの関係を問う独自問題。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引で取得した§4.2の頂端除去とapical dominance解除を照合。直接openは403で未取得。オーキシンだけが唯一の初期要因という断定は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-parthenocarpy-fruit-set",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "園芸でいう単為結果性に当たる現象はどれか。",
+      "choices": [
+        "受精せずに胚が発達し、新しい個体になる",
+        "花粉が同じ個体の柱頭へ運ばれる",
+        "受精を経ずに子房などが発達して果実ができる",
+        "花が開く前に全ての子房が落下する"
+      ],
+      "correctIndex": 2,
+      "explanation": "単為結果は受精を経ない果実の形成を指す。受精せずに胚が発達する単為発生や、同じ個体内の受粉とは区別する。",
+      "distractorRationales": [
+        "単為発生という胚の形成の概念であり、単為結果と同じではない。",
+        "自家受粉の説明で、受精なしの果実形成を意味しない。",
+        "単為結果に当たる。",
+        "果実形成の説明ではない。"
+      ],
+      "sources": [
+        {
+          "title": "農研機構 — 単為結果性に関するイノベーション創出基礎的研究推進事業",
+          "url": "https://www.naro.go.jp/laboratory/brain/inv_up/theme/2011/023551.html"
+        }
+      ]
+    },
+    "reason": "単為結果・単為発生・自家受粉を区別する独自問題。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "農研機構の事業説明にある受粉しなくても果実ができる単為結果性を確認。研究目標を達成済みの技術とは書かず、基本概念だけを使用。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-daily-light-integral-calculation",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "植物に届く光合成光量子束密度（PPFD）が300 μmol m⁻² s⁻¹で一定の時間が1日12時間あり、残り12時間は光が届かない。その1日の積算光量（DLI）は何mol m⁻² day⁻¹か。",
+      "choices": [
+        "0.0036",
+        "12.96",
+        "25.92",
+        "300"
+      ],
+      "correctIndex": 1,
+      "explanation": "300×12×3600＝12,960,000 μmol m⁻²。1 mol＝10⁶ μmolなので、DLIは12.96 mol m⁻² day⁻¹となる。瞬間のPPFDと一日分の積算を区別する。",
+      "distractorRationales": [
+        "時間を秒へ換算する3600を掛けていない。",
+        "12時間の光子量を積算してmolへ換算した値。",
+        "24時間ずっと同じ光が届く場合の値。",
+        "瞬間のPPFDの数値をそのままDLIとしている。"
+      ],
+      "sources": [
+        {
+          "title": "Purdue University — Lighting and Energy",
+          "url": "https://www.purdue.edu/hla/sites/cea/wp-content/uploads/sites/15/2021/01/Light-and-Energy.pdf"
+        }
+      ]
+    },
+    "reason": "光強度と照射時間と単位換算を区別する独自問題。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Purdue資料PDF p.6のDLIの定義・3600・10⁻⁶による単位換算を照合。300と12時間は独自の条件で、推奨栽培条件や原資料の図ではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-seed-dormancy-scarification",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "種子の休眠について、硬い種皮が水を通しにくいため発芽が妨げられている場合と、胚の生理的な休眠がある場合の説明として適切なのはどれか。",
+      "choices": [
+        "両者とも、温度や水が十分なら必ず同時に発芽する",
+        "種皮の透水性の改善と、胚の休眠解除では、必要な条件が異なることがある",
+        "種皮が水を通さないことと、胚の生理的休眠は同じ機構である",
+        "全ての種子の休眠は、同じ日数の低温だけで解除できる"
+      ],
+      "correctIndex": 1,
+      "explanation": "種皮による物理的な障壁と胚の生理的な休眠は区別する。前者では透水性の改善、後者では種類に応じた温度や湿潤条件などが必要となる場合がある。",
+      "distractorRationales": [
+        "休眠の機構が違えば、外部条件をそろえても反応は異なり得る。",
+        "休眠の種類によって必要な条件が異なる。",
+        "種皮の物理的な障壁と、胚の内部の生理的状態は別。",
+        "低温の必要性や期間は種子の種類・休眠機構で異なる。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota — The Science of Plants §9.2: Seed Physiology",
+          "url": "https://open.lib.umn.edu/horticulture/chapter/9-2-seed-physiology/"
+        }
+      ]
+    },
+    "reason": "種子が発芽しない原因と休眠解除の条件を区別する独自問題。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L235–249の種皮の透過性・胚の状態・scarification/stratificationの区別を確認。薬品による処理方法、温度・日数の一律の処方は転載していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-phytochrome-photoconversion",
+    "domain": "農学",
+    "subdomain": "園芸",
+    "content": {
+      "question": "フィトクロムの二つの型PrとPfrの典型的な光変換の向きはどれか。",
+      "choices": [
+        "赤色光でPfr→Pr、遠赤色光でPr→Pfr",
+        "赤色光でPr→Pfr、遠赤色光でPfr→Pr",
+        "赤色光・遠赤色光ともPr→Pfrだけを起こす",
+        "赤色光・遠赤色光とも型の変換に関与しない"
+      ],
+      "correctIndex": 1,
+      "explanation": "典型的にはPrが赤色光を吸収してPfrへ、Pfrが遠赤色光を吸収してPrへ変換される。植物の光応答ではこの変換などが情報として使われるが、全ての生育反応を二状態だけで説明するわけではない。",
+      "distractorRationales": [
+        "二つの変換方向が逆。",
+        "赤色光と遠赤色光による典型的な変換の向き。",
+        "両方が一方向だけに作用する説明は不適切。",
+        "両型は光によって相互変換する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Biology 2e §30.6 — Plant Sensory Systems and Responses",
+          "url": "https://openstax.org/books/biology-2e/pages/30-6-plant-sensory-systems-and-responses"
+        }
+      ]
+    },
+    "reason": "光の波長と受容体の型変換を問う独自問題。",
+    "parameters": {
+      "b": 1,
+      "basis": "知識・前提理解・計算から設定した初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "§30.6 L40のPr/Pfr相互変換を照合。図の代替文には型の活性ラベルの逆転があるため本文に照合。全分子が朝に一斉変換、日陰で必ず伸長が遅くなるという周辺の断定は採用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の教材・普及資料と農研機構の公開資料で定義と原理を照合。設問・四択・数値・解説は独自に記述し、図・実験値・栽培処方を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
