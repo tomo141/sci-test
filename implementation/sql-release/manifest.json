@@ -1,0 +1,27 @@
+{
+  "preparedOn": "2026-09-15",
+  "source": "Previously rehearsed frozen SQL; no backup rows or credentials",
+  "files": [
+    {
+      "name": "additive-schema.sql",
+      "sha256": "e4ebff2ea0f341319265eaeecc330391fbad334a3340f67aa066f0d5fd350540",
+      "utf8Bytes": 94782,
+      "utf16Length": 93128,
+      "fnv1aUtf16": "845425b9"
+    },
+    {
+      "name": "followup-schema-0020-0028.sql",
+      "sha256": "68da0d98203cbbc746875185c4286ba7a81e25421873132fdd2c7f2f80c901db",
+      "utf8Bytes": 74426,
+      "utf16Length": 74354,
+      "fnv1aUtf16": "78a9ec72"
+    },
+    {
+      "name": "security-cutover-after-0028.sql",
+      "sha256": "229fd03c1d48da2ddc08e1796022e3046da0eac15e285d862ce1a15233ab1f82",
+      "utf8Bytes": 9522,
+      "utf16Length": 9514,
+      "fnv1aUtf16": "20c4eb73"
+    }
+  ]
+}

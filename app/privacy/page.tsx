@@ -122,7 +122,7 @@ export default function PrivacyPage() {
         <AppCard>
           <h1 className="text-3xl font-black">プライバシーポリシー</h1>
           <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
-            運営者：{siteConfig.legal.businessName} / 代表者：{siteConfig.legal.representativeName} / 最終更新：{siteConfig.legal.lastUpdated}
+            運営者：{siteConfig.legal.operatorName}（個人事業） / 最終更新：{siteConfig.legal.lastUpdated}
           </p>
           <div className="mt-8 grid gap-7">
             {sections.map((section) => (

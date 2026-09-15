@@ -22,7 +22,7 @@ const sections = [
   {
     title: "第1条（適用）",
     body: [
-      "本利用規約は、理系とーく（以下「運営者」といいます。）が提供する「全分野科学検定 β版」（以下「本サービス」といいます。）の利用条件を定めるものです。",
+      `本利用規約は、${siteConfig.legal.operatorName}（個人事業。以下「運営者」といいます。）が提供する「全分野科学検定 β版」（以下「本サービス」といいます。）の利用条件を定めるものです。`,
       "利用者は、本サービスを利用することにより、本規約に同意したものとみなされます。"
     ]
   },
@@ -142,7 +142,7 @@ export default function TermsPage() {
         <AppCard>
           <h1 className="text-3xl font-black">利用規約</h1>
           <p className="mt-3 leading-8 text-[var(--color-ink-soft)]">
-            運営者：{siteConfig.legal.businessName} / 代表者：{siteConfig.legal.representativeName} / 最終更新：{siteConfig.legal.lastUpdated}
+            運営者：{siteConfig.legal.operatorName}（個人事業） / 最終更新：{siteConfig.legal.lastUpdated}
           </p>
           <p className="mt-4 leading-8">作問・改善文章を提出する際の条件は、<Link href="/contribution-terms" className="underline">投稿条件の全文</Link>で確認できます。</p>
           <div className="mt-8 grid gap-7">
