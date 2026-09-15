@@ -343,8 +343,8 @@
       ],
       "sources": [
         {
-          "title": "NCI — Dictionary of Cancer Terms, blinded study",
-          "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/blinded-study"
+          "title": "EUPATI — Clinical Trial Design, Blinding（NCI公開教材）",
+          "url": "https://ccrod.cancer.gov/confluence/download/attachments/164235639/EUPATI%20Core%20Educational%20Materials%20for%20REiNS%20%28002%29.pdf?api=v2&modificationDate=1539610009020&version=1"
         }
       ]
     },
@@ -364,7 +364,7 @@
       "distractorRationalesChecked": true,
       "releaseApproval": "approved",
       "rightsBasis": "公的機関・大学の公開資料と倫理原典の取得範囲で事実を照合。設問・四択・説明・数値は独自作成。図・症例・実データ・操作手順は転載せず、独立専門家の査読ではない。",
-      "sourceLocation": "blinded studyの定義。補助的にClinicalTrials.gov公開プロトコルのassessor blindingの説明を確認。"
+      "sourceLocation": "NCI公開のEUPATI教材の検索索引：Clinical staff administering treatment、clinical staffの割付情報とdisease status評価のbias、Single blind/Double blindの区別。ClinicalTrials.gov公開プロトコルのOutcome assessors blindedも照合。NCI用語辞典の同名ページは本文が抽出されなかったため根拠から外した。"
     }
   },
   {

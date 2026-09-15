@@ -1,0 +1,468 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000093",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "ある社会や集団で「この場ではこう振る舞うべきだ」と期待される行動のルールを、社会学では何と呼ぶか。",
+      "choices": [
+        "社会規範",
+        "社会的地位",
+        "社会移動",
+        "人口構成"
+      ],
+      "correctIndex": 0,
+      "explanation": "社会規範は、状況に応じて期待される行動のルールである。法律のように明文化されたものと、暗黙に共有されるものがある。",
+      "distractorRationales": [
+        "期待される行動のルールを指す。",
+        "人が社会関係の中で占める位置。",
+        "人や集団の社会的位置が変わること。",
+        "年齢などによる人口の内訳。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Sociology 3e 3.2 — Norms",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "parameters": {
+      "b": -0.8,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "Norms節L44–51。形式的・非形式的な行動規則の説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000098",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "家族・友人・学校・職場などとの関わりを通じて、社会で用いられる規範や価値、役割を学んでいく過程はどれか。",
+      "choices": [
+        "社会階層化",
+        "社会化",
+        "都市化",
+        "官僚制化"
+      ],
+      "correctIndex": 1,
+      "explanation": "社会化は、他者や社会制度との関わりを通じて社会生活の仕方を学ぶ過程である。幼少期だけでなく、新たな職場などでも生じる。",
+      "distractorRationales": [
+        "階層的な位置の分化を指す。",
+        "規範や役割を学ぶ過程。",
+        "都市への集中や都市的生活の拡大を指す。",
+        "規則や職務分担に基づく組織化を指す。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Sociology 3e 5.3 — Agents of Socialization",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/5-3-agents-of-socialization"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の導入と学習目標。家族・仲間・学校・職場などを通じた学習。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000228",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "ウェーバーの支配の正当性の類型で、「合法的・合理的支配」の正当性の根拠となるのはどれか。",
+      "choices": [
+        "長年続いてきた慣習への信頼",
+        "支配者個人の非凡な資質への信仰",
+        "定められた法・規則と職務上の権限",
+        "支配地域の人口や面積の大きさ"
+      ],
+      "correctIndex": 2,
+      "explanation": "合法的・合理的支配では、法や規則に基づく職務上の権限が正当性の根拠となる。伝統的支配やカリスマ的支配とは、その根拠を区別する。",
+      "distractorRationales": [
+        "正当性を長く続く慣習に求める。",
+        "正当性を人物の特別な資質に求める。",
+        "規則と職務上の権限に基づく。",
+        "規模の大小は、この類型の正当性の根拠を定義しない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Sociology 3e 17.1 — Weber’s Types of Authority",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/17-1-power-and-authority"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のTraditional / Charismatic / Legal-Rationalの表と説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000005",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "デュルケームが『社会学的方法の規準』で述べた「社会的事実」の特徴に合うのはどれか。",
+      "choices": [
+        "特定個人の好みと常に同じである",
+        "生物学的反射だけで構成される",
+        "本人が意識すれば直ちに消滅する",
+        "個人の外部にあり、個人に拘束を及ぼしうる"
+      ],
+      "correctIndex": 3,
+      "explanation": "デュルケームは、慣習や法などにみられる個人からの外在性と拘束性によって社会的事実を特徴づけた。これは彼の社会学上の概念を問うものである。",
+      "distractorRationales": [
+        "個人の好みと同一のものには限定しない。",
+        "生理的反射と区別して社会学の対象を定めた。",
+        "個人の意思だけで自由に変えられるとはしない。",
+        "原典が挙げる外在性・拘束性に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "Émile Durkheim — The Rules of Sociological Method, Social Facts",
+          "url": "https://www.d.umn.edu/cla/faculty/jhamlin/4111/Durkheim%20-%20Division%20of%20Labor_files/Durkheim%20-%20Social%20Facts.htm"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "大学公開の原典英訳抜粋。検索取得本文のexternal coercionと個人の意識外での存在の説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000012",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "ブルデューの『資本の諸形態』で、学位などの教育資格として認定される文化資本は、どの形態に当たるか。",
+      "choices": [
+        "身体化された形態",
+        "制度化された形態",
+        "客体化された形態",
+        "経済資本そのもの"
+      ],
+      "correctIndex": 1,
+      "explanation": "教育資格は制度化された文化資本に当たる。身体に身についた性向や技能、書物などの文化財とは形態を区別する。",
+      "distractorRationales": [
+        "身についた性向などの形態。",
+        "教育資格による認定に対応する。",
+        "書物などの文化財として存在する形態。",
+        "資格は所得に影響しうるが、設問の分類は文化資本。"
+      ],
+      "sources": [
+        {
+          "title": "Pierre Bourdieu (1986) — The Forms of Capital",
+          "url": "https://web.stanford.edu/~eckert/Courses/ParisPapers/Bourdieu1986.pdf"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000034"
+    ],
+    "parameters": {
+      "b": 0.9,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "大学公開の原著英訳PDFの検索取得本文。文化資本の三形態とeducational qualificationsの説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000017",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "日本の国勢調査で用いられる「核家族世帯」の区分に含まれる世帯はどれか。",
+      "choices": [
+        "祖父母・親・子の三世代が一緒に暮らす世帯",
+        "親族関係のない友人だけで暮らす世帯",
+        "夫婦だけで暮らす世帯",
+        "兄弟姉妹だけで暮らす世帯"
+      ],
+      "correctIndex": 2,
+      "explanation": "国勢調査では、夫婦のみ、夫婦と子供、男親と子供、女親と子供の各世帯を核家族世帯に区分する。子供がいる夫婦の世帯だけに限定されない。",
+      "distractorRationales": [
+        "核家族以外の親族世帯となる構成。",
+        "核家族世帯の四区分には入らない。",
+        "統計局が明示する四区分の一つ。",
+        "四区分に含まれない親族世帯。"
+      ],
+      "sources": [
+        {
+          "title": "総務省統計局 — 統計FAQ 02B-Q02 核家族世帯の数",
+          "url": "https://www.stat.go.jp/library/faq/faq02/faq02b02.htm"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000008"
+    ],
+    "parameters": {
+      "b": 0.2,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "統計局自身の定義を検索取得本文で照合。四区分を明記。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000014",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "クーリーの「第一次集団」の特徴として、最も適切なのはどれか。",
+      "choices": [
+        "親密で継続的な対人関係が中心となる",
+        "必ず法律に基づく組織である",
+        "一つの短期的業務だけのために構成される",
+        "成員同士が互いを知らないことが条件となる"
+      ],
+      "correctIndex": 0,
+      "explanation": "第一次集団では、親密で継続的な関係や情緒的な結びつきが重要となる。家族などが典型だが、集団の名称だけで機械的に決まるわけではない。",
+      "distractorRationales": [
+        "第一次集団の中心的な特徴。",
+        "法的設立は定義上の条件ではない。",
+        "道具的・業務的関係は第二次集団の特徴に近い。",
+        "互いを知らないことを条件とはしない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Sociology 3e 6.1 — Types of Groups",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/6-1-types-of-groups"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のCooley、primary/secondary groups、境界が固定的ではない旨。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000024",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "マートンの緊張理論における適応類型で、社会的に重視される成功の目標を受け入れながら、制度的に認められた手段には従わないものはどれか。",
+      "choices": [
+        "同調",
+        "儀礼主義",
+        "逃避主義",
+        "革新"
+      ],
+      "correctIndex": 3,
+      "explanation": "「革新」は、文化的な目標を受け入れつつ、制度的に認められた手段から逸脱する適応類型である。ここでの革新は、日常語の技術革新と同じ意味ではない。",
+      "distractorRationales": [
+        "目標と制度的手段の両方を受け入れる。",
+        "目標を切り下げ、制度的手段に従う類型。",
+        "既存の目標と手段の双方を拒む類型。",
+        "目標を維持し、正規の手段から逸脱する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Sociology 3e 7.2 — Robert Merton: Strain Theory",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/7-2-theoretical-perspectives-on-deviance-and-crime"
+        }
+      ]
+    },
+    "reason": "旧問の曖昧な範囲・不適切な選択肢を修正し、定義・学説の文脈を明記。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L40–49、特に適応類型の五項目。事例や図は転載せず、概念の条件を独自に四択化。"
+    }
+  },
+  {
+    "familyKey": "humanities-sociology-symbolic-interaction",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "シンボリック相互作用論が特に注目する分析対象はどれか。",
+      "choices": [
+        "社会の各制度が全体の安定に果たす機能",
+        "相互作用の中で人々が意味を解釈し、共有・修正する過程",
+        "社会全体の資源配分をめぐる階級間の対立だけ",
+        "社会的意味を考慮しない人口の単純な総数だけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "シンボリック相互作用論は、人々が言語や記号を通じて意味を解釈し、相互作用する過程に注目する。意味は物に固定的に備わるものだけとして扱われない。",
+      "distractorRationales": [
+        "構造機能主義の視点に対応する。",
+        "人々の相互作用と意味形成が中心となる。",
+        "対立理論の主要な関心に近い。",
+        "人数だけでは意味の解釈過程を捉えられない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Sociology 2e 1.3 — Symbolic Interactionist Theory",
+          "url": "https://openstax.org/books/introduction-sociology-2e/pages/1-3-theoretical-perspectives"
+        }
+      ]
+    },
+    "reason": "相互作用・役割の概念を比較できる新規問題。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のMead/Blumerと、意味の付与・相互作用・状況での解釈の三前提。3e同節は取得エラーのため根拠にしていない。"
+    }
+  },
+  {
+    "familyKey": "humanities-sociology-role-conflict",
+    "domain": "人文社会科学",
+    "subdomain": "社会学",
+    "content": {
+      "question": "社会学で、同じ人が担う「異なる役割」の要求が互いに両立しにくくなることを、最も直接に表す語はどれか。",
+      "choices": [
+        "役割取得",
+        "社会移動",
+        "役割葛藤",
+        "参照集団"
+      ],
+      "correctIndex": 2,
+      "explanation": "役割葛藤は、異なる役割の要求が衝突することで生じる。同じ一つの役割の中で多くの要求に対応する難しさは、役割緊張として区別される。",
+      "distractorRationales": [
+        "役割を理解し担うことに関わる概念で、衝突そのものではない。",
+        "社会的位置の変化で、役割間の衝突とは異なる。",
+        "異なる役割間の要求の衝突を表す。",
+        "判断や行動の基準とする集団。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Sociology 3e 4.3 — Roles and Status",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/4-3-social-constructions-of-reality"
+        }
+      ]
+    },
+    "reason": "相互作用・役割の概念を比較できる新規問題。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "概念の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・統計実施機関・公開教材の取得範囲で定義を照合。問題・説明は独自作成し、例題・図表・個人の事例を転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L44–48の役割・地位とrole strain / role conflictの区別。原文の家庭・職場の具体例は転載しない。"
+    }
+  }
+]
