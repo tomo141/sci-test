@@ -4,8 +4,11 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {PGlite} from '@electric-sql/pglite';
 import {buildUpgrade} from './lib/science-upgrade.mjs';
+import {rehearseScienceBank} from './lib/rehearse-science-bank.mjs';
 const backup=process.argv[2],output='implementation/local/deployment';
+const bank=process.argv[3];
 if(!backup||!path.resolve(backup).startsWith(path.resolve('implementation/local')+path.sep))throw new Error('Ignored local backup required');
+if(bank&&!path.resolve(bank).startsWith(path.resolve('implementation/local/question-bank')+path.sep))throw new Error('Ignored local candidate required');
 const tables=['profiles','education_profiles','marketing_consents','questions','question_choices','question_sources','exam_sessions','exam_answers','proficiency_estimates','score_history','question_statistics','badges','user_badges','leaderboard_snapshots','event_logs','question_feedback','admin_audit_logs'];
 const db=new PGlite();
 const result={checkedAt:new Date().toISOString(),state:'running',stages:[],tables:[]};
@@ -35,6 +38,10 @@ try{
   const ledger=(await db.query('select name,sha256 from science_migration_history')).rows;
   result.recordedMigrations=ledger.length;
   if([...followups.migrations,...cutover.migrations,...followups.prerequisites].some(q=>!ledger.some(r=>r.name===q.name&&r.sha256===q.sha256)))throw new Error('Migration ledger mismatch');
+  if(bank){
+    result.bank=await rehearseScienceBank(db,bank);
+    result.stages.push('actual_reviewed_bank_passed');
+  }
   for(const table of tables){
     const expected=inputs.get(table),columns=Object.keys(expected[0]??{});
     const actual=(await db.query(`select ${columns.length?columns.map(c=>'"'+c+'"').join(','):'*'} from ${table}`)).rows;

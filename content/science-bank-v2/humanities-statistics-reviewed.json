@@ -1,0 +1,465 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000242",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "仮説検定における第一種の過誤はどれか。",
+      "choices": [
+        "帰無仮説が偽なのに棄却しないこと",
+        "帰無仮説が真のとき棄却しないこと",
+        "帰無仮説が真なのに棄却すること",
+        "帰無仮説が偽のとき棄却すること"
+      ],
+      "correctIndex": 2,
+      "explanation": "第一種の過誤は真の帰無仮説を棄却する誤りである。偽の帰無仮説を棄却しない誤りは第二種。棄却しないという判断だけで、帰無仮説が真と証明されたわけではない。",
+      "distractorRationales": [
+        "第二種の過誤。",
+        "この場合は第一種の過誤を犯していない。",
+        "第一種の過誤の定義。",
+        "偽の帰無仮説を棄却する正しい判断。"
+      ],
+      "sources": [
+        {
+          "title": "NIST — Quantitative Techniques, Hypothesis Tests",
+          "url": "https://itl.nist.gov/div898/handbook/eda/section3/eda35.htm"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000030"
+    ],
+    "parameters": {
+      "b": 0.2,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "L18〜25の帰無仮説・type I・type II・検出力を照合。旧問の「採択誤り」「p値＝棄却基準」という短絡した説明を除く。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000040",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "p値の解釈について、米国統計学会の2016年声明に合うものはどれか。",
+      "choices": [
+        "帰無仮説が真である事後確率を直接表す",
+        "p値が小さいほど効果量も必ず大きい",
+        "同じ研究が再現されない確率を直接表す",
+        "仮定した統計モデルとデータの不整合を評価する指標となる"
+      ],
+      "correctIndex": 3,
+      "explanation": "p値は、指定した統計モデルとデータの不整合を考える指標である。仮説が真である確率、効果の大きさ、追試の成否の確率を直接示すものではない。p値の閾値だけで結論を決めない。",
+      "distractorRationales": [
+        "条件付きの向きを逆にした解釈。",
+        "統計的有意性と効果量は別。",
+        "p値は追試失敗の確率ではない。",
+        "声明の第1原則に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "American Statistical Association — Statement on Statistical Significance and P-Values (2016)",
+          "url": "https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "声明発表文に掲載された6原則、特に1・2・3・5を取得。原論文全文の読了とは扱わない。単なる観察データ一点の確率とする旧表現も使用しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000020",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "観察研究で変数XとYの相関が見られた。この情報だけから因果について述べられることはどれか。",
+      "choices": [
+        "第三の変数や逆向きの因果などもあり得るため、XがYを変えるとは断定できない",
+        "Xを操作すればYが必ず同じ向きに変わる",
+        "XとYには因果関係が存在しないと証明された",
+        "相関が強ければ研究設計や交絡を検討する必要はない"
+      ],
+      "correctIndex": 0,
+      "explanation": "相関は関連を示すが、その方向や原因をそれだけでは特定できない。第三の要因、逆向きの因果などを考える必要がある。因果がないことの証明でもない。",
+      "distractorRationales": [
+        "相関だけでは複数の説明を区別できない。",
+        "観察上の関連と介入の効果を同一視している。",
+        "因果の不在まで証明したわけではない。",
+        "強い相関でも別の説明を除外する必要がある。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Psychology 2e, 2.3 Analyzing Findings",
+          "url": "https://openstax.org/books/psychology-2e/pages/2-3-analyzing-findings"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 0,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Correlation Does Not Indicate Causationの本文。教材の実例・人物・数値は転載せず、相関の強さと因果識別を区別。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000012",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "ポパーの反証可能性という基準で、経験科学の理論に求められる性質はどれか。",
+      "choices": [
+        "既に多数の人が支持していること",
+        "理論と両立しない観察が起こり得ると、原理的に示せること",
+        "どんな観察結果でも必ず理論に合うよう解釈できること",
+        "理論が既に誤りだと実証されていること"
+      ],
+      "correctIndex": 1,
+      "explanation": "反証可能性とは、理論が排除する観察上の可能性があることを意味する。現に反証済みであることや、理論の正しさを保証することとは異なる。これはポパーが提案した境界設定の基準である。",
+      "distractorRationales": [
+        "支持者の数はこの基準ではない。",
+        "起こり得る観察と衝突できるという条件。",
+        "あらゆる結果を許す理論では反証可能性が失われる。",
+        "反証できることと既に反証されたことは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "Karl Popper — Science: Conjectures and Refutations",
+          "url": "https://mechanism.ucsd.edu/bill/teaching/philsci/popper.conjecturesandref.pdf"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "原著抜粋の境界設定・possible or conceivable observationsとの衝突に関する本文を検索取得。科学哲学全体で合意された唯一の基準としない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000021",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "ヒュームが問題にした経験的な帰納の正当化について、適切な説明はどれか。",
+      "choices": [
+        "過去の成功例が一定数あれば、未来の同様の結果は演繹的に証明される",
+        "帰納による予測は全て必ず誤る",
+        "過去の規則性だけでは、それが未来にも続くことの論理的必然性は保証できない",
+        "数学的帰納法の証明によって、経験的な一般化は全て正当化される"
+      ],
+      "correctIndex": 2,
+      "explanation": "過去に観察した事実から、未観察の未来にも同じ規則性が続くという必然性はそのまま導けない。過去に帰納が成功したという根拠も、未来への一般化を含む。数学的帰納法とは別の問題である。",
+      "distractorRationales": [
+        "有限の過去事例だけで未来の必然性は得られない。",
+        "正当化の問題は、予測が全て外れるという主張ではない。",
+        "『人間知性研究』第4節の問題意識に対応する。",
+        "数学の証明法と経験からの一般化を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "David Hume — An Enquiry concerning Human Understanding, Section IV",
+          "url": "https://davidhume.org/texts/e/4"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "原典E4.19を含む過去経験・未来の一致の仮定・循環の議論。原典の固有例は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000045",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "理論Hと補助仮説Aを合わせると観察Oが予測される。しかし実際にはOが成り立たなかった。デュヘム＝クワイン論題に関わる、論理的に適切な判断はどれか。",
+      "choices": [
+        "Hだけが誤りだと、この結果だけで一意に決まる",
+        "Aだけが誤りだと、この結果だけで一意に決まる",
+        "HとAがそれぞれ必ず両方とも誤りだと決まる",
+        "HとAを合わせた前提は維持できないが、どの前提が誤りかはこの結果だけでは決まらない"
+      ],
+      "correctIndex": 3,
+      "explanation": "(HかつA)ならO、かつOでない、からは「HかつAではない」が導かれる。Hだけ、Aだけ、または両方の見直しが候補となる。測定や補助仮説を含む前提の束を検討する必要がある。",
+      "distractorRationales": [
+        "補助仮説側に問題がある可能性を除外していない。",
+        "理論側に問題がある可能性を除外していない。",
+        "前提の連言が偽でも、両方が偽とは限らない。",
+        "前提の束の否定と、個々の前提の特定を区別している。"
+      ],
+      "sources": [
+        {
+          "title": "University of Washington — Experimental Testing: The Rejection of an Hypothesis",
+          "url": "https://courses.washington.edu/phil360/Duhem%20Thesis.pdf"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "大学講義資料の補助前提Aを含める図式と、Aを修正してHを維持する議論を検索取得。デュヘム原典そのものを読了した扱いにはしない。設問の論理式は独自に検算。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000050",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "二値処置の潜在アウトカムで、同じ個人iの処置ありの結果をYᵢ(1)、処置なしの結果をYᵢ(0)とする。個人の因果効果と、その直接観測の限界の説明はどれか。",
+      "choices": [
+        "効果はYᵢ(1)−Yᵢ(0)で定義できるが、同じ対象・機会の両結果を同時に観測できない",
+        "効果は異なる二人の観測値の差と常に等しく、追加の仮定は不要である",
+        "処置の無作為化を行えば、同じ対象・機会の両結果が記録される",
+        "効果は処置を受けた人数だけで定義される"
+      ],
+      "correctIndex": 0,
+      "explanation": "個人の効果は、処置条件だけを変えた二つの潜在的な結果の差として定義する。実際には一方の条件が実現するため、もう一方の結果は反実仮想になる。集団の平均効果を推定するには、研究設計や識別の仮定が必要となる。",
+      "distractorRationales": [
+        "潜在結果による定義と、欠けた反実仮想の問題を区別する。",
+        "個人差があり、別人の結果をそのまま代用できるとは限らない。",
+        "無作為化も個人の両潜在結果を同時観測する装置ではない。",
+        "人数だけでは結果の差は定義できない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Wisconsin–Madison — Causal Inference: Notation and Basic Concepts",
+          "url": "https://pages.cs.wisc.edu/~hyunseung/stat992_sp25/basic.html"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 1.2,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Counterfactual Data Versus Observed DataとFundamental Problem of Causal Inferenceの本文を取得。個人・数値・健康の実例は転載せず、記号で問う。"
+    }
+  },
+  {
+    "familyKey": "humanities-statistics-ecological-fallacy",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "地域ごとの平均所得と図書館利用回数の平均に正の相関がある。その集計だけで、各地域内でも所得の高い個人ほど利用回数が多いと結論する際の問題はどれか。",
+      "choices": [
+        "集計された地域間の相関は、計算方法にかかわらず常にゼロになる",
+        "地域間の関係を、そのまま個人間の関係とみなしている",
+        "平均値は順序を持たないため大小を比較できない",
+        "個人の所得は集計できないため地域平均が存在しない"
+      ],
+      "correctIndex": 1,
+      "explanation": "集団を単位とする関係を、そのまま個人を単位とする関係へ移すと、生態学的誤謬を犯し得る。地域間と地域内の関係は異なる場合があり、集計だけでは個人の関係は確定しない。",
+      "distractorRationales": [
+        "地域間に相関があること自体は可能。",
+        "分析単位が違うことを無視した推論。",
+        "平均値の大小は比較できる。",
+        "適切に定義した個人の所得から地域平均を計算できる。"
+      ],
+      "sources": [
+        {
+          "title": "Te Grotenhuis et al. — Robinson’s Ecological Correlations: methodological corrections",
+          "url": "https://academic.oup.com/ije/article-abstract/40/4/1123/685385"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "研究書簡のExtractにある集団相関と個人相関の相違を取得。原研究の計算訂正を認識し、歴史的人種表現・数値・図は使わず架空の地域例を作成。"
+    }
+  },
+  {
+    "familyKey": "humanities-statistics-preregistration",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "研究の事前登録を行う主な意義として、適切なものはどれか。",
+      "choices": [
+        "登録しただけで研究結果が正しいと保証される",
+        "予想外の結果を発見しても公表できなくなる",
+        "事前に計画した分析と、結果を見て追加した探索的分析を区別しやすくする",
+        "必要なデータの品質確認が不要になる"
+      ],
+      "correctIndex": 2,
+      "explanation": "計画を結果の確認前に記録することで、予定していた検証と、後から考えた分析の区別が明確になる。探索的分析や計画の変更を一律に禁じるものではなく、区別と変更理由を報告することが大切である。",
+      "distractorRationales": [
+        "研究設計・測定・分析の正しさまでは保証しない。",
+        "探索的な発見も区別して報告できる。",
+        "Center for Open Scienceの説明に対応する。",
+        "記録だけでデータ品質が保証されるわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "Center for Open Science — Preregistration",
+          "url": "https://www.cos.io/initiatives/prereg"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "What is Preregistration・planned/unplanned work・confirmatory/exploratoryの説明を取得。登録方式や特定助成金への参加条件は一般化しない。"
+    }
+  },
+  {
+    "familyKey": "humanities-statistics-reproducibility-replicability",
+    "domain": "人文社会科学",
+    "subdomain": "統計学・科学哲学",
+    "content": {
+      "question": "米国科学・工学・医学アカデミーの2019年報告書で区別したreproducibilityとreplicabilityは、それぞれ主に何を確かめるか。",
+      "choices": [
+        "reproducibilityは新規データ、replicabilityは元のデータとコード",
+        "両方とも、論文の引用数が同じになること",
+        "両方とも、研究者の意見が全員一致すること",
+        "reproducibilityは同じデータ・手順等による計算結果、replicabilityは独立に得たデータによる整合した結果"
+      ],
+      "correctIndex": 3,
+      "explanation": "この報告書では、同じ入力データ・コード・手順等を使った計算上の再現と、同じ科学的問いに対して新しく得たデータで結果が整合することを区別する。分野によって用語法が異なるため、出典の定義を指定している。",
+      "distractorRationales": [
+        "報告書の用語の対応が逆。",
+        "引用件数の一致を定義していない。",
+        "意見の一致ではなく、研究結果の確認を扱う。",
+        "2019年報告書が採用した区別。"
+      ],
+      "sources": [
+        {
+          "title": "National Academies — Reproducibility and Replicability in Science, Highlights (2019)",
+          "url": "https://nap.nationalacademies.org/resource/25303/R%26R.pdf"
+        }
+      ]
+    },
+    "reason": "統計的な推論の条件と哲学者・報告書の立場を明示し、過誤・相関・反証・再現の混同を除く。",
+    "parameters": {
+      "b": 0.9,
+      "basis": "推論・研究方法の概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原典・学会声明・研究論文・大学教材・機関の説明を参照した独自問題。固有の事例や図表、試験問題を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "報告書要約L23〜34の二つの定義を取得。数値が完全一致する追試を全分野で要求するとは書かない。"
+    }
+  }
+]

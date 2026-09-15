@@ -111,3 +111,11 @@
 ### 9/15 02:52 JSTの再開時確認
 
 本人の「再開して」を受け、実モデルgpt-6-astra/maxとkinako3の作業ルートを再確認。既存認証を用いたREST読取では、移行台帳とscience_items/admins/profiles/attemptsは引き続きPGRST205。件数はnull、移行状態はunavailableであり、0件や移行未記録と解釈しない。初回SQL・具体的GitHub宛てpush・SMTP・正式運営主体の確認待ちは解消していない。本番への変更やメール送信は行わず、独立した問題審査を継続した。
+
+### 9/15 15:06〜15:07 JSTの実候補検証と本番再確認
+
+新版1,020問の準備を完了し、隔離したローカルDBで初回SQL→0020〜0028→旧権限切替→実候補の取り込み・公開切替を実行した。`scripts/rehearse-science-migration.mjs` に候補ファイルを任意で渡せるようにし、保存された内容・根拠・パラメーター、再投入、2週分の固定問題、新規受験の公開設定不変を検査する。ネットワークへ接続する処理ではない。
+
+結果はGit対象外の `implementation/local/deployment/rehearsal.json`。候補ハッシュ `23a6031a6803d3b782c8c9c7711d58a112aa41e07bcbeaaa22154f60fd715a14`、移行ハッシュ25件、旧17テーブルの全行一致。初回・後続・権限切替のSQLハッシュは01:07の確定版と同じ。受験開始の設定やメール配信を有効にしたものではない。
+
+15:07:48 JSTの本番REST読み取りは、台帳とscience_items/admins/profiles/attemptsがPGRST205、schemaReady=false、件数null。SMTP・権限・実ユーザーの一巡は今回の読取では未検証。初回SQLの手動実行結果、GitHub `tomo141/sci-test` 宛てpushの確認、SMTP・投稿条件の回答は未解消。本番DBの変更、GitHubへの追加送信、本番昇格、メール送信は実施していない。[現在の残件](RELEASE-CANDIDATE.md)へ集約した。

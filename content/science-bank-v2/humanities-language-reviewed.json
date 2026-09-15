@@ -1,0 +1,465 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000095",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "音韻論で、ある言語において語の意味を区別する音の対立に関わる抽象的な単位を何というか。",
+      "choices": [
+        "音素",
+        "形態素",
+        "書記素",
+        "音節"
+      ],
+      "correctIndex": 0,
+      "explanation": "音素は、ある言語で意味を区別する音のカテゴリーとして扱われる。具体的な一回の発音そのものとは区別し、同じ音素が異なる音声として実現することもある。",
+      "distractorRationales": [
+        "意味を区別する音の対立に関わる単位。",
+        "形式と意味・文法機能を対応させる単位。",
+        "文字体系での区別に関わる単位。",
+        "音のまとまりで、音素と同じ区分ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Essentials of Linguistics — 4.1 Phonemes and Contrast",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/4-2-phonemes-and-contrast/"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000233"
+    ],
+    "parameters": {
+      "b": 0.1,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "phonemeの抽象的カテゴリーとcontrastの定義を取得。旧「音素＝物理的音」という解説を訂正し、曖昧な旧音韻問も露出履歴として関連付ける。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000095",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "言語学で、形式と意味または文法機能が対応する最小の単位を何というか。",
+      "choices": [
+        "音素",
+        "形態素",
+        "音節",
+        "段落"
+      ],
+      "correctIndex": 1,
+      "explanation": "形態素は形式と意味・文法機能の最小の対応単位である。独立した語として使えない接辞なども形態素になり得る。音のまとまりや文章の段落とは異なる。",
+      "distractorRationales": [
+        "音の対立に関わる単位で、意味や機能を担う最小単位とは異なる。",
+        "形態素の定義に対応する。",
+        "音声上のまとまりを表す。",
+        "文章を構成する、通常はより大きなまとまり。"
+      ],
+      "sources": [
+        {
+          "title": "Essentials of Linguistics, 2nd edition — 5.1 What is morphology?",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/5-1-what-is-morphology/"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "smallest systematic pairing of form and meaning or grammatical functionの定義を取得。例題の語や対話を転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000100",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "自分がどこまで理解できているかを点検し、それに応じて学習方法を調整する働きに最も関わる概念はどれか。",
+      "choices": [
+        "単純接触効果",
+        "古典的条件づけ",
+        "メタ認知",
+        "感覚順応"
+      ],
+      "correctIndex": 2,
+      "explanation": "メタ認知は、自分の認知についての知識や、その過程の監視・調整に関わる。単に情報を覚えることだけでなく、理解度や方法を点検することが含まれる。",
+      "distractorRationales": [
+        "繰り返し接することと好意などの変化に関わる別の概念。",
+        "刺激間の関連の学習に関わる別の概念。",
+        "自分の認知や学習過程を点検する働きに対応する。",
+        "持続する刺激への感覚系の応答変化に関わる。"
+      ],
+      "sources": [
+        {
+          "title": "John H. Flavell — Metacognition and Cognitive Monitoring (1979)",
+          "url": "https://jwilson.coe.uga.edu/EMAT7050/Students/Wilson/Flavell%20%281979%29.pdf"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "原論文のA Model of Cognitive Monitoring、知識・経験・目標・方略の関係と自己点検の説明を取得。原典の歴史的表現や実験の事例は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000100",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "教育における足場かけ（scaffolding）の説明として適切なものはどれか。",
+      "choices": [
+        "学習者の理解に関係なく、最後まで全課題を教師が代行する",
+        "学習の初めから一切のヒントを与えない",
+        "目標を細分化さえすれば、支援の内容を調整する必要はない",
+        "学習状況に合わせて一時的な支援を行い、自力でできるようになれば支援を減らす"
+      ],
+      "correctIndex": 3,
+      "explanation": "足場かけの支援は一時的で調整可能なものとして設計する。学習者が課題を扱えるようになるにつれて支援を減らし、自立した実行へつなぐ。単なる目標の細分化だけではない。",
+      "distractorRationales": [
+        "自立へ移すための支援という目的に合わない。",
+        "必要に応じた支援を行うという特徴がない。",
+        "学習者の状態に応じた支援の調整を欠いている。",
+        "一時的・調整可能で、習得に応じて減らすという特徴。"
+      ],
+      "sources": [
+        {
+          "title": "Vanderbilt University IRIS Center — What Is Instructional Scaffolding?",
+          "url": "https://iris.peabody.vanderbilt.edu/module/sca/cresource/q1/p01/"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "temporary and adjustable supports、masteryに伴う撤去を述べる本文を取得。Woodら1976の書誌だけを取得したことを原論文の内容確認とはしない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000236",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "ヴィゴツキーの「最近接発達領域」に当たるのはどれか。",
+      "choices": [
+        "独力ではまだ難しいが、適切な他者の支援で取り組める課題の範囲",
+        "独力で既に完全にできる課題だけの範囲",
+        "どのような支援があっても取り組めない課題だけの範囲",
+        "年齢に関係なく全員に共通の固定点数の範囲"
+      ],
+      "correctIndex": 0,
+      "explanation": "独立した問題解決で示す水準と、他者の支援や協働で到達できる水準の間に着目する概念である。足場かけという支援方法そのものの名称とは区別する。",
+      "distractorRationales": [
+        "独力の水準と支援下の可能な水準の間に対応する。",
+        "現在の独力の水準だけを指していない。",
+        "支援下での到達可能性も条件に含む。",
+        "全員で一致する固定点数として定義されない。"
+      ],
+      "sources": [
+        {
+          "title": "Yale National Initiative — Unit 09.03.01, Scaffolding",
+          "url": "https://teachers.yale.edu/curriculum/units/2009/3/1/4"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Scaffolding節でVygotskyのactualとpotential developmental levelを引用・説明する教材本文を取得。書籍全文を読了した扱いにはしない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000234",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "文化人類学の参与観察は、どのような調査方法か。",
+      "choices": [
+        "既存の人口統計表だけを再集計する",
+        "対象となる生活や活動に参加しながら観察し、その記録を残す",
+        "実験室だけで独立変数を操作する",
+        "対象者と関わらず、辞書の語義だけを比較する"
+      ],
+      "correctIndex": 1,
+      "explanation": "参与観察では、活動に参加する経験と、観察・記録を組み合わせる。参加した経験を無批判に真実とみなすのではなく、研究者自身の立場や倫理への配慮も必要である。",
+      "distractorRationales": [
+        "二次的な統計分析であり、活動への参加は含まれない。",
+        "参加と観察・記録を組み合わせる方法。",
+        "統制実験と参与観察は異なる調査方法。",
+        "活動への参加を含まない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Introduction to Anthropology, 2.4 Participant Observation and Interviewing",
+          "url": "https://openstax.org/books/introduction-anthropology/pages/2-4-participant-observation-and-interviewing"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "Participant Observation節の活動参加・観察記録、調査対象者の権利を扱う本文を取得。写真や実例は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000239",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "英雄的な人物の行為や歴史的・神話的な出来事を物語として展開する長い詩に、最も当てはまる名称はどれか。",
+      "choices": [
+        "俳句",
+        "ソネット",
+        "叙事詩",
+        "抒情詩"
+      ],
+      "correctIndex": 2,
+      "explanation": "叙事詩は長い物語詩で、英雄的行為や共同体にとって重要な出来事などを扱う。歴史的・神話的な題材を用いても、内容が全て史実だという意味ではない。",
+      "distractorRationales": [
+        "短い定型詩の一種で、この長い物語詩の説明とは異なる。",
+        "14行を基本とする詩型の名称。",
+        "長い物語詩という特徴に対応する。",
+        "感情や内面の表現を中心とする分類で、この設問の中心である長い物語の展開とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "The Poetry Foundation — Epic",
+          "url": "https://www.poetryfoundation.org/education/glossary/epic"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "詩を扱う機関自身のglossary定義を取得。既存の詩本文・固有の作品説明は転載しない。叙事と抒情が全作品で完全に排他的とはしない。"
+    }
+  },
+  {
+    "familyKey": "humanities-language-pragmatics",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "発話された場面や共有知識を手がかりに、字面だけでは明示されない話者の意図や含意を考察する分野はどれか。",
+      "choices": [
+        "音声学",
+        "形態論",
+        "文字論",
+        "語用論"
+      ],
+      "correctIndex": 3,
+      "explanation": "語用論は、文脈によって意味や発話の働きがどう変わるかを扱う。音の物理的な性質、語の内部構造、文字体系の研究とは焦点が異なる。",
+      "distractorRationales": [
+        "発音・音響などの性質を主に扱う。",
+        "語の内部構造を主に扱う。",
+        "文字体系の性質を主に扱う。",
+        "文脈・含意・発話の働きに関わる。"
+      ],
+      "sources": [
+        {
+          "title": "Essentials of Linguistics, 2nd edition — Chapter 8: Pragmatics",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/part/chapter-8-pragmatics/"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "章冒頭のcontextとmeaning、implicatures、illocutionary meaningの説明を取得。会話例は独自に作ることもせず定義を問う。"
+    }
+  },
+  {
+    "familyKey": "humanities-education-formative-assessment",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "授業中の小テストを形成的評価として使う目的に最も合うものはどれか。",
+      "choices": [
+        "理解やつまずきを把握し、次の指導や学習の進め方を調整する",
+        "最終的な合否を決めることだけに使う",
+        "学習支援には使わず、順位の公表だけに使う",
+        "学習の様子は見ず、採点枚数だけを業務記録に残す"
+      ],
+      "correctIndex": 0,
+      "explanation": "形成的評価では、学習について得られた証拠を次の指導・学習の判断に使う。小テストという形式自体で形成的かどうかが決まるのではなく、結果をどう利用するかが重要となる。",
+      "distractorRationales": [
+        "証拠を次の指導・学習の改善に用いる目的。",
+        "ここでは最終判定という総括的な目的に限られている。",
+        "次の学習や指導への利用がない。",
+        "学習の証拠に基づく判断を行っていない。"
+      ],
+      "sources": [
+        {
+          "title": "Black & Wiliam — Developing the theory of formative assessment (2009)",
+          "url": "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/9119063/Black2009_Developing_the_theory_of_formative_assessment.pdf"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "著者稿p.7の定義と、証拠を次のinstructionの判断に使う説明を検索取得。特定介入の効果量は出題しない。"
+    }
+  },
+  {
+    "familyKey": "humanities-culture-intangible-heritage",
+    "domain": "人文社会科学",
+    "subdomain": "言語・文学・教育・文化",
+    "content": {
+      "question": "UNESCOの無形文化遺産保護条約の定義に合う説明はどれか。",
+      "choices": [
+        "歴史的建造物の材料だけを対象とする",
+        "共同体などが受け継ぐ実践・知識・技能等で、環境や歴史に応じて再創造される",
+        "創始時の形から一切変わってはいけない行為だけを対象とする",
+        "世界中の共同体が同じ形で実践しているものだけを対象とする"
+      ],
+      "correctIndex": 1,
+      "explanation": "条約は共同体等が文化遺産と認める実践・表現・知識・技能などに着目し、継承と再創造の両方を含める。関連する器具や文化空間もあり得るが、単に物体を保存することだけを指すのではない。",
+      "distractorRationales": [
+        "実践・知識・技能などという中心的な対象を除いてしまう。",
+        "第2条の継承され、再創造されるという定義に対応する。",
+        "再創造されるという条文の説明に反する。",
+        "全共同体での同一性は要件ではない。"
+      ],
+      "sources": [
+        {
+          "title": "UNESCO — Convention for the Safeguarding of the Intangible Cultural Heritage",
+          "url": "https://ich.unesco.org/en/convention"
+        }
+      ]
+    },
+    "reason": "言語単位・学習支援・文化と文学の分類を区別し、旧問の誤定義や無関係な誤答肢を改訂。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "言語・学習・文化の基礎概念を比較した仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "研究論文・大学教材・機関の定義・条約本文で照合した独自問題。詩・例題・図表・実例を転載せず、独立専門家の査読ではない。",
+      "sourceLocation": "第2条1・2項の定義を取得。特定の民族・国民全員に同じ文化的性質があると一般化せず、登録済みの具体例も推測しない。"
+    }
+  }
+]
