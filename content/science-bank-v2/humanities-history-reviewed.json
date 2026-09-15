@@ -1,0 +1,471 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000232",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "ある出来事が起きた当時の当事者の認識を調べるとき、一次史料として直接検討するのに適した資料はどれか。",
+      "choices": [
+        "当事者がその当時に書いた日記",
+        "後世の歴史教科書の要約",
+        "その出来事を題材に今書かれた歴史小説",
+        "複数の研究書をもとに作った現代の解説記事"
+      ],
+      "correctIndex": 0,
+      "explanation": "当事者が残した日記は、その時の認識を調べる一次史料となる。ただし、書き手の立場や目的があるため、書かれた内容が全て事実とは限らない。",
+      "distractorRationales": [
+        "当時の認識を示す直接の資料となる。",
+        "後世の整理・解釈を通した資料。",
+        "この研究対象については現代の創作。",
+        "後世の解説である。"
+      ],
+      "sources": [
+        {
+          "title": "Library of Congress — Newspapers as Primary or Secondary Sources",
+          "url": "https://www.loc.gov/ndnp/guidelines/docs/2024-Chronicling-America-NHD.pdf"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の当時の人々が作った記録と、対立する視点を含みうる旨。研究対象を当事者の認識に限定し、小説が常に一次史料でないという断定を避ける。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000097",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "明治新政府の基本方針を示す「五箇条の御誓文」が発せられた明治元年は、西暦何年か。",
+      "choices": [
+        "1603年",
+        "1868年",
+        "1889年",
+        "1947年"
+      ],
+      "correctIndex": 1,
+      "explanation": "五箇条の御誓文は明治元年の1868年に発せられた。明治維新という長い変革全体が一日に始まったという意味ではない。",
+      "distractorRationales": [
+        "徳川家康の将軍任官の年。",
+        "明治元年に対応する。",
+        "大日本帝国憲法の発布の年。",
+        "日本国憲法の施行の年。"
+      ],
+      "sources": [
+        {
+          "title": "国立公文書館 — 五箇条の御誓文が発せられる",
+          "url": "https://www.archives.go.jp/ayumi/kobetsu/m01_1868_02.html"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000006"
+    ],
+    "parameters": {
+      "b": -0.6,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "所蔵資料の説明本文。明治元年1868年と新政府の基本方針。旧暦3月14日を現行暦の日付として使わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000016",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "1603年に征夷大将軍に任じられ、江戸に幕府を開いた人物は誰か。",
+      "choices": [
+        "足利尊氏",
+        "豊臣秀吉",
+        "徳川家康",
+        "源頼朝"
+      ],
+      "correctIndex": 2,
+      "explanation": "徳川家康は1603年に将軍へ任じられた。江戸幕府の将軍職はその後、徳川家で継承された。",
+      "distractorRationales": [
+        "室町幕府に関わる人物。",
+        "関白・太閤として知られ、設問の将軍ではない。",
+        "1603年の将軍任官に対応する。",
+        "鎌倉幕府に関わる人物。"
+      ],
+      "sources": [
+        {
+          "title": "国立公文書館 — 関ヶ原の戦い（徳川家康展）",
+          "url": "https://www.archives.go.jp/exhibition/digital/ieyasu/contents3_01/"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000002"
+    ],
+    "parameters": {
+      "b": -0.7,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文末尾の1603年将軍任官と江戸開幕。任官年と他幕府の成立時期の学説を混同しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000009",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "1919年、第一次世界大戦後にドイツと連合国側の間で結ばれ、国際連盟規約も含んだ講和条約はどれか。",
+      "choices": [
+        "ポーツマス条約",
+        "サン＝ジェルマン条約",
+        "ロカルノ条約",
+        "ヴェルサイユ条約"
+      ],
+      "correctIndex": 3,
+      "explanation": "ヴェルサイユ条約は1919年の対ドイツ講和条約で、国際連盟規約を含む。オーストリアとの講和条約とは区別される。",
+      "distractorRationales": [
+        "1905年の日露戦争の講和条約。",
+        "対オーストリアの講和条約。",
+        "1925年の西欧の安全保障に関わる条約群。",
+        "1919年の対ドイツ講和に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "U.S. National Archives — Records of the American Commission to Negotiate Peace",
+          "url": "https://www.archives.gov/files/research/foreign-policy/related-records/rg-256-inventory.pdf"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000013"
+    ],
+    "parameters": {
+      "b": 0.2,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "原記録群を管理する機関のIntroduction。1919年6月28日の対ドイツ条約とCovenant、他国との講和条約を検索取得本文で照合。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000009",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "歴史上の「シルクロード」の捉え方として、適切なのはどれか。",
+      "choices": [
+        "物品だけでなく人・知識・文化も行き交った、複数の交易路のネットワーク",
+        "絹だけの輸送を目的に一国が全区間を所有した一本の道路",
+        "大西洋の海底に敷かれた近代の通信線",
+        "工業化後に初めて成立した鉄道だけの路線網"
+      ],
+      "correctIndex": 0,
+      "explanation": "シルクロードは陸海の経路を含む交流のネットワークを指す。交易とともに技術、思想、信仰なども伝わった。",
+      "distractorRationales": [
+        "UNESCOが示す複数経路と多様な交流に合う。",
+        "単一の国道や絹専用路に限定されない。",
+        "時代・地域・機能が異なる。",
+        "古代からの交流を工業化後に限定している。"
+      ],
+      "sources": [
+        {
+          "title": "UNESCO — About the Silk Roads",
+          "url": "https://www.unesco.org/en/silk-roads/about-silk-roads?hub=196704"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のnetwork、陸と海、trade/ideas/culturesの説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000018",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "1789年のフランス革命期に国民議会が採択した、人および市民の権利を掲げる文書はどれか。",
+      "choices": [
+        "マグナ・カルタ",
+        "人権宣言",
+        "アメリカ独立宣言",
+        "国際連盟規約"
+      ],
+      "correctIndex": 1,
+      "explanation": "1789年の人権宣言は、フランス革命期に人と市民の権利を示した文書である。",
+      "distractorRationales": [
+        "中世イングランドの文書。",
+        "1789年8月のフランスの文書に対応する。",
+        "1776年の北米の独立に関わる文書。",
+        "第一次世界大戦後の国際秩序に関わる文書。"
+      ],
+      "sources": [
+        {
+          "title": "Conseil constitutionnel — Declaration of Human and Civic Rights of 26 August 1789",
+          "url": "https://qpc360.conseil-constitutionnel.fr/constitutional-block"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "機関自身の公開原文の検索取得範囲。見出しの採択年月日・国民議会・権利を示す前文を照合。直接open/findが失敗した条文の細部は問わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000028",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "18世紀後半から19世紀にかけて英国で進んだ産業革命で、蒸気機関が果たした役割として適切なのはどれか。",
+      "choices": [
+        "工場での動力利用を廃止した",
+        "全ての生産を手作業だけへ戻した",
+        "工場などに動力を供給し、機械を用いる生産の拡大を支えた",
+        "石炭を用いる技術を存在しなくした"
+      ],
+      "correctIndex": 2,
+      "explanation": "蒸気機関は工場などの動力となり、工業化を支えた。産業革命の原因や技術が蒸気機関一つだけだったという意味ではない。",
+      "distractorRationales": [
+        "動力利用を可能にする側の技術である。",
+        "機械利用の拡大と逆の説明。",
+        "博物館の実機研究・展示解説に合う。",
+        "石炭利用をなくす技術ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Science Museum — Remembering James Watt",
+          "url": "https://blog.sciencemuseum.org.uk/remembering-james-watt/"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "博物館自身の展示研究解説、動力をmills/factoriesへ供給した記述。蒸気機関の最初の発明者をワットとする誤りは避ける。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000038",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "ブローデルが論じた「長期持続（ロング・デュレ）」の歴史的な見方に、最も合うのはどれか。",
+      "choices": [
+        "一日の政治的事件だけを原因として全てを説明する",
+        "歴史を著名な個人の意思だけに還元する",
+        "文書の作成年月日だけで研究を完了する",
+        "多くの世代を通じて続く社会や経済などの構造を分析する"
+      ],
+      "correctIndex": 3,
+      "explanation": "長期持続の視点は、短い事件の背後に長く作用する構造や制約に注目する。短期の出来事を史料から除外するという意味ではない。",
+      "distractorRationales": [
+        "短期的な事件だけに限定する説明。",
+        "個人以外の長期的構造を無視する説明。",
+        "時間の長さを史料の日付確認だけへ置き換えている。",
+        "長く持続する構造に注目する視点。"
+      ],
+      "sources": [
+        {
+          "title": "Fernand Braudel (1958) — Histoire et Sciences sociales : La longue durée",
+          "url": "https://www.persee.fr/doc/ahess_0395-2649_1958_num_13_4_2781?pageId=T1_731"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "parameters": {
+      "b": 1,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "原論文の検索取得本文。多世代にわたり持続するstructuresの段落を照合。図や原文の具体例を転載しない。"
+    }
+  },
+  {
+    "familyKey": "humanities-history-archaeological-context",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "遺物を発掘するとき、出土位置や層、周囲の遺物との関係を記録する主な理由はどれか。",
+      "choices": [
+        "遺物の使われ方や時期を、他の証拠との関係から解釈するため",
+        "外見だけで市場価格を決めるため",
+        "取り出した後は場所に関する情報を全て捨てるため",
+        "遺物の年代を見た目だけで確定するため"
+      ],
+      "correctIndex": 0,
+      "explanation": "考古学では遺物の文脈が重要である。場所・時期・他の遺物との関係を保つことで、単体の形だけでは分からない意味を考察できる。",
+      "distractorRationales": [
+        "出土文脈が提供する証拠を生かす。",
+        "調査の目的を商品価格の判定に置き換えている。",
+        "解釈に重要な文脈を失わせる。",
+        "外見だけで年代を確定できるとはしない。"
+      ],
+      "sources": [
+        {
+          "title": "U.S. National Park Service — What Is Archeological Context?",
+          "url": "https://www.nps.gov/articles/000/what-is-archeological-context.htm"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "L22–30、位置・時系列・他の遺物との関係と記録の必要性。"
+    }
+  },
+  {
+    "familyKey": "humanities-history-terminus-post-quem",
+    "domain": "人文社会科学",
+    "subdomain": "歴史学・考古学",
+    "content": {
+      "question": "後からの混入がない堆積層に、製造開始年が1800年と分かる遺物が含まれる。この情報だけからいえる、その層の堆積時期についての判断はどれか。",
+      "choices": [
+        "必ず1799年以前である",
+        "1800年より前ではないが、1800年ちょうどとは限らない",
+        "必ず1800年ちょうどである",
+        "必ず1810年以後である"
+      ],
+      "correctIndex": 1,
+      "explanation": "遺物は製造前に埋まれないため、1800年は堆積の最も早い可能な年を制約する。古い遺物が後年に埋まることはあるので、堆積年そのものを確定しない。",
+      "distractorRationales": [
+        "遺物の製造より前に堆積したことになる。",
+        "terminus post quemが与える下限に対応する。",
+        "長く使用・保管されてから埋まる可能性を除けない。",
+        "1810年という追加の制約の根拠はない。"
+      ],
+      "sources": [
+        {
+          "title": "U.S. National Park Service — How Do Archeologists Date Sites and Artifacts?",
+          "url": "https://www.nps.gov/articles/000/how-do-archeologists-date-sites-and-artifacts.htm"
+        }
+      ]
+    },
+    "reason": "史料・出来事の範囲と年代、解釈に必要な条件を明示した改訂または新規問題。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "年代・史料読解の概念に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "所蔵機関・博物館・原研究・公的教材で歴史事実と方法を照合。原史料の図版・全文・教材の例題を転載しない独自問題。独立専門家の査読ではない。",
+      "sourceLocation": "L35のTPQ、最も新しく現れる遺物が地中に入りうる最初の時点の説明。年と設定は独自。後からの混入を明示的に除外。"
+    }
+  }
+]

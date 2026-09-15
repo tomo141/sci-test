@@ -1,0 +1,473 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000097",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "日本国憲法が「国の唯一の立法機関」と定める機関はどれか。",
+      "choices": [
+        "内閣",
+        "国会",
+        "最高裁判所",
+        "会計検査院"
+      ],
+      "correctIndex": 1,
+      "explanation": "憲法41条は国会を立法機関と定める。内閣の行政権や裁判所の司法権とは区別される。",
+      "distractorRationales": [
+        "行政権を担う。",
+        "41条の規定に対応する。",
+        "司法権を担う。",
+        "国の会計を検査する機関。"
+      ],
+      "sources": [
+        {
+          "title": "衆議院 — 日本国憲法",
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/shiryo/dl-constitution.htm"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000227",
+      "10000000-0000-4000-8005-000000000001"
+    ],
+    "parameters": {
+      "b": -0.8,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の第41条。行政・司法の区別は第65・76条。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000094",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "日本国憲法76条で、司法権が属するとされるのはどれか。",
+      "choices": [
+        "国会と地方議会",
+        "内閣と各省庁",
+        "最高裁判所と法律で設置する下級裁判所",
+        "検察庁と警察"
+      ],
+      "correctIndex": 2,
+      "explanation": "司法権は最高裁判所と法律で設置する下級裁判所に属する。捜査や公訴を担当する機関そのものに司法権が属するわけではない。",
+      "distractorRationales": [
+        "主として立法・議決を担う機関。",
+        "行政機関。",
+        "76条1項に対応する。",
+        "捜査や公訴と、裁判を担う司法権を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "衆議院 — 日本国憲法",
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/shiryo/dl-constitution.htm"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8005-000000000005"
+    ],
+    "parameters": {
+      "b": -0.6,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "第76条本文L502–506。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000027",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "国家の「主権」という概念が主に表すものはどれか。",
+      "choices": [
+        "他国の政府の一部として指示に従う地位",
+        "人口や領土が他国より大きいという事実",
+        "国際取引で使用する通貨の値段",
+        "自国を統治する権限と、他国からの独立性"
+      ],
+      "correctIndex": 3,
+      "explanation": "主権は国家が自国の制度を統治し、他国から独立して決定する権限に関わる。実際に望む結果を何でも実現できる能力とは同一ではない。",
+      "distractorRationales": [
+        "対外的な独立性と反する。",
+        "国家の規模を意味する概念ではない。",
+        "為替相場とは別の概念。",
+        "自国の統治権限と対外的独立を表す。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Political Science 14.3 — Sovereignty and Anarchy",
+          "url": "https://openstax.org/books/introduction-political-science/pages/14-3-sovereignty-and-anarchy"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L30の自国制度・法と他国からの干渉の区別。後続の時事的事例や介入の権利についての一般化は出題しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000238",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "国際関係論のリアリズムで、中心的な行為主体として位置づけられるものはどれか。",
+      "choices": [
+        "国家",
+        "多国籍企業",
+        "非政府組織",
+        "個々の消費者"
+      ],
+      "correctIndex": 0,
+      "explanation": "リアリズムは、国家を中心に権力・安全保障・国益の関係を考える。これは理論の基本視点であり、他の行為主体が存在しないという意味ではない。",
+      "distractorRationales": [
+        "理論が中心に置く主体。",
+        "重要な主体となりうるが、リアリズムの中心単位ではない。",
+        "国家以外の主体である。",
+        "個人中心の分析単位とは区別される。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Political Science — Chapter 14 Summary",
+          "url": "https://openstax.org/books/introduction-political-science/pages/14-summary"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のRealism places states at the center。14.5 L82の国家を主要主体とする説明も照合。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000011",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "ダールが『ポリアーキー』で重視した民主化の二つの次元の組合せはどれか。",
+      "choices": [
+        "領土の広さと軍事費",
+        "公然たる政治的競争と、参加の包括性",
+        "一人当たり所得と人口密度",
+        "宗教の数と公用語の数"
+      ],
+      "correctIndex": 1,
+      "explanation": "ダールは、反対や競争が認められる程度と、政治参加がどれほど広く認められるかを区別した。選挙があるという一点だけで十分とする考え方ではない。",
+      "distractorRationales": [
+        "軍事的・地理的規模の指標である。",
+        "contestationとinclusivenessに対応する。",
+        "社会経済の指標で、二次元の定義ではない。",
+        "文化的多様性の数ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Coppedge, Alvarez & Maldonado (2008) — Two Persistent Dimensions of Democracy",
+          "url": "https://www.journals.uchicago.edu/doi/10.1017/S0022381608080663"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000025",
+      "10000000-0000-4000-8007-000000000037"
+    ],
+    "parameters": {
+      "b": 1.1,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "原研究AbstractがDahlの二次元を明記。著者公開PDFも確認。旧問の八つの制度保障を七つに混在させた列挙は採用しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000017",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "三権分立と相互の抑制・均衡を設ける主なねらいはどれか。",
+      "choices": [
+        "全ての公権力を一人に集中させる",
+        "各機関が他機関の行為に一切関われなくする",
+        "権力の集中や濫用を抑える",
+        "選挙による代表の選出を不要にする"
+      ],
+      "correctIndex": 2,
+      "explanation": "権力を複数の機関に分け、互いに抑制することで濫用を防ぐ。分立は、各機関が全く関わらず独立して何でも決めることではない。",
+      "distractorRationales": [
+        "権力集中を抑える目的に反する。",
+        "相互の抑制・均衡を排除してしまう。",
+        "権力の集中を防ぐねらいに合う。",
+        "選挙を不要にする制度ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax American Government 3e 2.4 — The Ratification of the Constitution",
+          "url": "https://openstax.org/books/american-government-3e/pages/2-4-the-ratification-of-the-constitution"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の権限分割によって一部分の過度な権力を防ぐ記述。2.3のchecks and balancesも照合。"
+    }
+  },
+  {
+    "familyKey": "humanities-politics-parliamentary-confidence",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "英国の議院内閣制で、政府が在職するための基本的な政治上の条件はどれか。",
+      "choices": [
+        "首相が国民の直接選挙で選ばれること",
+        "全議員が同じ政党に属すること",
+        "政府が議会の審議を受けないこと",
+        "政府が下院の信任を得ていること"
+      ],
+      "correctIndex": 3,
+      "explanation": "英国では政府が下院の信任を維持することが在職の基礎となる。全員一致や一党だけの議会を要求する制度ではない。",
+      "distractorRationales": [
+        "首相の国民直接選挙を条件とはしない。",
+        "複数政党や連立・少数政府と両立しうる。",
+        "下院との信任関係を無くす説明。",
+        "下院の信任に基づく政府の在職に合う。"
+      ],
+      "sources": [
+        {
+          "title": "House of Commons Library — Commanding confidence",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10915/"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "議会自身の説明の検索取得本文。government must command the confidence of the House to hold office。現職名や現在の議席は問わない。"
+    }
+  },
+  {
+    "familyKey": "humanities-politics-proportional-representation",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "政党名簿による比例代表制で、議席配分に反映させようとするものはどれか。",
+      "choices": [
+        "各政党の得票の割合",
+        "各候補者の年齢の順序",
+        "各政党の設立年の古さ",
+        "政党の党員数だけ"
+      ],
+      "correctIndex": 0,
+      "explanation": "比例代表制は得票割合を議席割合に反映することを目指す。実際の配分では整数議席や制度上の条件により、完全に同率になるとは限らない。",
+      "distractorRationales": [
+        "得票に応じた議席配分の基本原理。",
+        "年齢で議席を割り振る制度ではない。",
+        "政党の歴史の長さは基本基準ではない。",
+        "投票結果と党員数は異なる。"
+      ],
+      "sources": [
+        {
+          "title": "UK Parliament — Proportional representation",
+          "url": "https://www.parliament.uk/site-information/glossary/proportional-representation/"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "議会自身の用語集本文。distribution of seats corresponds closely with proportion of votes。原文の40%の例は転載しない。"
+    }
+  },
+  {
+    "familyKey": "humanities-politics-federalism",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "連邦制の基本的な特徴として、最も適切なのはどれか。",
+      "choices": [
+        "地方の権限が全て中央政府の都度の委任だけで決まる",
+        "憲法上、連邦政府と州などの構成単位に権限が配分される",
+        "国家全体の政府は存在しない",
+        "全ての行政区域が独立した国際国家になる"
+      ],
+      "correctIndex": 1,
+      "explanation": "連邦制では連邦政府と構成単位の双方が、憲法に基づく権限を持つ。国の中の権限分担であり、各州が全て別の独立国家になるという意味ではない。",
+      "distractorRationales": [
+        "憲法上の権限配分という特徴を捉えていない。",
+        "連邦制の基本構造に対応する。",
+        "連邦政府も存在する。",
+        "州の権限と国家としての独立を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax American Government 3e 3.1 — The Division of Powers",
+          "url": "https://openstax.org/books/american-government-3e/pages/3-1-the-division-of-powers"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の憲法による連邦・州の権限配分と合憲な連邦法の優位。"
+    }
+  },
+  {
+    "familyKey": "humanities-politics-un-article39",
+    "domain": "人文社会科学",
+    "subdomain": "政治学・国際関係",
+    "content": {
+      "question": "国連憲章39条で、平和への脅威・平和の破壊・侵略行為の存在を認定する機関はどれか。",
+      "choices": [
+        "国際司法裁判所",
+        "国連事務局",
+        "国連安全保障理事会",
+        "国連経済社会理事会"
+      ],
+      "correctIndex": 2,
+      "explanation": "39条は安全保障理事会が認定を行い、勧告や憲章に基づく措置の決定を行うことを定める。",
+      "distractorRationales": [
+        "国家間の法的紛争などを扱う裁判機関。",
+        "39条が指定する認定機関ではない。",
+        "条文が認定を行う主体として指定する。",
+        "経済社会分野の機関で、39条の主体ではない。"
+      ],
+      "sources": [
+        {
+          "title": "United Nations Security Council — UN Charter, Article 39",
+          "url": "https://main.un.org/securitycouncil/en/content/working-methods-un-charter"
+        }
+      ]
+    },
+    "reason": "制度の国・条文または理論を明示し、概念の混同と無条件な一般化を避ける。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "制度と理論の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "機関自身の条文・制度説明、原研究、公開教材で照合した独自問題。記事の事例・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "国連自身が公開する憲章の検索取得本文、第39条。従来のabout-us/chapter-7 URLは取得エラーのため採用しない。"
+    }
+  }
+]
