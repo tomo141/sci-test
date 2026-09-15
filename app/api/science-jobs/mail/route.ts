@@ -10,6 +10,6 @@ export async function GET(request: Request) {
   if (given.length !== expected.length || !timingSafeEqual(given, expected)) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   try {
     const result = await runMailJobs();
-    return NextResponse.json(result, { status: result.state === "mail_not_configured" ? 503 : 200, headers: { "Cache-Control": "no-store" } });
+    return NextResponse.json(result, { status: ["myasp_not_configured", "myasp_sync_failed"].includes(result.state) ? 503 : 200, headers: { "Cache-Control": "no-store" } });
   } catch { return NextResponse.json({ error: "mail_job_failed" }, { status: 503, headers: { "Cache-Control": "no-store" } }); }
 }

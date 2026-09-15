@@ -29,6 +29,7 @@
     "security:check": "node scripts/check-security-env.mjs"
   },
   "dependencies": {
+    "@modelcontextprotocol/client": "^2.0.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.49.4",
     "@upstash/ratelimit": "^2.0.8",

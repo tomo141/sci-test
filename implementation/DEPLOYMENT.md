@@ -119,3 +119,33 @@
 結果はGit対象外の `implementation/local/deployment/rehearsal.json`。候補ハッシュ `23a6031a6803d3b782c8c9c7711d58a112aa41e07bcbeaaa22154f60fd715a14`、移行ハッシュ25件、旧17テーブルの全行一致。初回・後続・権限切替のSQLハッシュは01:07の確定版と同じ。受験開始の設定やメール配信を有効にしたものではない。
 
 15:07:48 JSTの本番REST読み取りは、台帳とscience_items/admins/profiles/attemptsがPGRST205、schemaReady=false、件数null。SMTP・権限・実ユーザーの一巡は今回の読取では未検証。初回SQLの手動実行結果、GitHub `tomo141/sci-test` 宛てpushの確認、SMTP・投稿条件の回答は未解消。本番DBの変更、GitHubへの追加送信、本番昇格、メール送信は実施していない。[現在の残件](RELEASE-CANDIDATE.md)へ集約した。
+
+
+## 9/15 16:33〜16:44 JST：本人承認後の本番SQL適用
+
+本人から「SQL、実行して」、指定GitHubへのpush・既存Vercel本番反映、個人事業「理系とーく 川村智祥」の明示回答を受領。実モデルgpt-6-astra/maxを確認し、SQLと送信先を再質問せず進めた。
+
+- `f30bcfafec48f6fa37bf0d667cb347e0076905db` を指定改装ブランチへpush済み。初期1,020問、実装・審査記録、運営者表記、[固定SQL一式](sql-release/README.md)を含む。差分95ファイルを検査し、バックアップ・会員情報・認証情報は対象外。
+- [Vercel Bftpjvz3QaQVSHZvhYGnfJmY1ZAS](https://vercel.com/rikei-talk/sci-test/Bftpjvz3QaQVSHZvhYGnfJmY1ZAS) は46秒でReady。f30bcfa・Preview環境の一致と、[利用規約](https://sci-test-fga96fipw-rikei-talk.vercel.app/terms)・プライバシーの運営者表記を実画面で確認。本番昇格ではない。
+- 初回SQLは固定コミットの可視コード欄から取得し、GitHubが省いた末尾改行だけを復元。93,128 UTF-16文字・FNV-1a `845425b9` が元ファイルと一致。Supabaseへの貼り付け後も全選択・コピーで全文を読み戻し、文字列の完全一致を確認した。
+- 事前検出はSQL内の一括RLS設定を認識しなかったため、自動でSQLを変更する「Run and enable RLS」は使わず、検証済み本文をそのまま実行。16:33:01に初回15件を適用し、16:33:52のRESTで全15件のハッシュ一致を確認。
+- 追加0020〜0028も74,354文字・FNV-1a `78a9ec72` と全文読み戻しの一致を確認して実行。16:39:47のRESTで合計24件のハッシュ一致。0007はアプリ切替時まで未実行で、台帳は `not_recorded`。以前のSQL・pushの拒否は今回の明示承認と全文検証後に解消した。
+- 16:39:51の `verify-science-legacy.mjs` は旧17テーブルの元の列・全行を本番RESTから照合し、件数・値ともバックアップと一致。追加された新列は比較対象外。取得失敗は `unavailable` として一致扱いにしない。結果はGit対象外 `legacy-live-check.json`。
+- 読み取りSQLで新版40テーブルすべてにRLS有効、anon/authenticatedから読めるscienceテーブル・ビュー0、実行できるscience関数0。旧サイト側の権限は0007による切替前であり、旧権限閉鎖済みとは扱わない。
+- 新版の問題・管理者・プロフィール・受験は各0、active releaseなし。newAttempts・mailDelivery・labSubmissionsはfalse。旧プロフィール・利用権・同意の継承は0007で行う。
+
+既存ADMIN_EMAILS 1件、旧プロフィール一致1件、Auth確認済み1件、運営者公開連絡先一致1件を読み取り確認。ただし `science_admins` への引き継ぎは、自動承認レビューが「その具体的な永続権限付与への明示承認不足」として拒否した。権限変更と監査行の追加は未実行。本人へ運営者1件の登録承認を依頼し、別のSQLや経路で迂回していない。
+
+メール方式の説明と選択肢は [MAIL-DECISION.md](MAIL-DECISION.md)。新規契約・支出・実配信は未実施。承認後の問題投入、メール接続・受け入れ試験、その後の0007とアプリ本番切替が残る。現在のSupabaseエディターは読み取り用の権限確認SQLで、移行ファイルではない。
+
+## 2026-09-15：管理者・問題バンクの本番反映、メール方式の採択
+
+前節の管理者確認待ちは解消した。本人が既存の本人確認済み運営者1名へのscience_admins権限を明示承認し、台帳登録とoperator_bootstrap監査記録が成功。旧profiles.roleの値を一括で管理者権限へコピーしていない。
+
+1,020問をcandidateとして投入後、16:59 JSTに全件の本文・審査記録・パラメーターを読み戻して一致を確認。有効化し、17:01 JSTにactive releaseと全件を再確認。各大分野正式100問、週替わり2問、重点20問、10小分野。旧問題との対応1,062件は一致し、既存DBにない旧ID18件は未対応として記録。newAttempts/mailDelivery/labSubmissionsはfalseのまま。読み戻しスクリプトはscripts/verify-science-bank-live.mjs、詳細報告はGit対象外。
+
+メールは本人がResend＋既存MyASP、差出人tomoyoshi@rikei-talk.comを採択。同期SQL0029とコードを追加し、17:21 JSTに全160テスト通過、型の1件を修正して17:25 JSTに型検査・対象11テストとlintを再確認。本番用ビルドも成功。0029はこの記録時点で本番未適用。MyASP専用APIキーの発行は、自動承認レビューが具体的な資格情報・権限範囲への明示承認不足として拒否。本人へ承認を依頼した。別経路でキーを発行・転用していない。
+
+17:42 JST、復旧用バックアップの隔離複製に、本番と同じ固定SQL0004〜0028、0029だけの差分、0007の順で適用した。26件の台帳ハッシュ、旧17テーブルの元の列・全行一致、4会員・4同意の継承、旧権限閉鎖、実際の1,020問と週替わり2週の構築が通過。同じ0029差分の再実行を拒否することも確認した。新しい[固定SQL](sql-release/README.md)を保存し、従来の固定SQLは変更していない。17:44 JSTに最終の対象11テスト・型検査・変更範囲lintが通過。pnpmの起動で応答がない3プロセスを終了し、インストール済みの同じ検証コマンドを直接実行した。
+
+[接続条件](MAIL-DELIVERY.md)。本番アプリはまだ旧版。0007、接続・実受信と受験の一巡、アプリ切替、ジョブ有効化が残る。

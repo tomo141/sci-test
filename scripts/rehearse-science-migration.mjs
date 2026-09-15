@@ -31,9 +31,15 @@ try{
   result.stages.push('local_backup_loaded');
   const bundle=fs.readFileSync(output+'/additive-schema.sql','utf8');result.bundleSha256=createHash('sha256').update(bundle).digest('hex');
   await db.exec(bundle);result.stages.push('additive_schema_passed');
-  const followups=await buildUpgrade('followups');await db.exec(followups.sql);result.followups=followups.migrations;
+  // Replay the same immutable stages as production, then apply only the new delta.
+  const frozen=fs.readFileSync('implementation/sql-release/followup-schema-0020-0028.sql','utf8');
+  await db.exec(frozen);result.frozenFollowupBundleSha256=createHash('sha256').update(frozen).digest('hex');
+  const followups=await buildUpgrade('followups',28);await db.exec(followups.sql);result.followups=followups.migrations;
   result.followupBundleSha256=followups.sha256;
   result.stages.push('followup_migrations_passed');
+  try { await db.exec(followups.sql);throw new Error('Repeated migration accepted'); }
+  catch(error){await db.exec('rollback');if(!String(error).includes('migration_already_recorded'))throw error;}
+  result.stages.push('repeated_delta_rejected');
   const cutover=await buildUpgrade('cutover');await db.exec(cutover.sql);result.cutoverBundleSha256=cutover.sha256;result.stages.push('security_cutover_passed');
   const ledger=(await db.query('select name,sha256 from science_migration_history')).rows;
   result.recordedMigrations=ledger.length;

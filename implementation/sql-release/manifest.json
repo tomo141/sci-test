@@ -22,6 +22,20 @@
       "utf8Bytes": 9522,
       "utf16Length": 9514,
       "fnv1aUtf16": "20c4eb73"
+    },
+    {
+      "name": "followup-schema-0029-0029.sql",
+      "sha256": "5757517c9b96ed5c35fe982d249482f5f5eb6df054be68726247907555d3ce62",
+      "utf8Bytes": 17699,
+      "utf16Length": 17699,
+      "fnv1aUtf16": "48e62580"
+    },
+    {
+      "name": "security-cutover-after-0029.sql",
+      "sha256": "23449521374bf3d426af327eefb5fd16ef4768150567923b7dffa4de445f86ef",
+      "utf8Bytes": 9784,
+      "utf16Length": 9776,
+      "fnv1aUtf16": "875bc8e7"
     }
   ]
 }
