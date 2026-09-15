@@ -1,0 +1,462 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000092",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "需要曲線と供給曲線で表す市場モデルで、「均衡価格」を定める条件はどれか。",
+      "choices": [
+        "需要量と供給量が等しくなる",
+        "全ての企業の売上高が等しくなる",
+        "消費者の所得が全員等しくなる",
+        "商品の在庫が必ずゼロになる"
+      ],
+      "correctIndex": 0,
+      "explanation": "均衡価格では、その価格で買おうとする需要量と売ろうとする供給量が一致する。企業や消費者が全員同じ所得になる条件ではない。",
+      "distractorRationales": [
+        "市場の需要と供給の一致を表す。",
+        "企業間の売上高の一致は要求しない。",
+        "所得分配の平等とは別の条件。",
+        "需要量・供給量の一致から在庫ゼロを必須とはいえない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Economics 2e 3.1 — Demand, Supply, and Equilibrium",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文・需要供給の定義と均衡、超過供給・超過需要の説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000092",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "インフレーションという語が指すのは、通常どのような変化か。",
+      "choices": [
+        "ある一商品の値上がりだけ",
+        "一般的な物価水準の継続的な上昇",
+        "自国通貨の為替相場の上昇だけ",
+        "実質生産量の増加だけ"
+      ],
+      "correctIndex": 1,
+      "explanation": "インフレーションは広い範囲の財・サービスの一般的な物価水準が上昇することをいう。特定商品の値上がりだけや、生産量の増加だけとは区別する。",
+      "distractorRationales": [
+        "個別価格だけでは一般物価の上昇を示さない。",
+        "広範な価格水準の上昇に対応する。",
+        "為替相場と国内物価は別の指標。",
+        "価格の変化と生産量の変化を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "European Central Bank — Price stability: why is it important for you?",
+          "url": "https://www.ecb.europa.eu/home/pdf/students/booklet_en.pdf"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のinflationの定義。broadly-based / extended periodの記述。実際の近年の数値は出題しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000004",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "GDP（国内総生産）が測る対象として、最も適切なのはどれか。",
+      "choices": [
+        "その国の国民が過去に蓄積した全財産",
+        "国内で売買された中古品と金融資産の価格の合計",
+        "一定期間に国内で新たに生産された最終的な財・サービスの価値",
+        "国内企業の株式時価総額の合計"
+      ],
+      "correctIndex": 2,
+      "explanation": "GDPは一定期間の国内の生産を測る。中間投入の重複を除いた付加価値の合計としても捉えられ、既存資産の残高そのものではない。",
+      "distractorRationales": [
+        "蓄積された資産の残高と、期間内の生産を混同している。",
+        "既存資産の売買金額をそのまま新たな生産とはしない。",
+        "期間・国内・新たな生産という範囲に合う。",
+        "株式の評価額は生産額と異なる。"
+      ],
+      "sources": [
+        {
+          "title": "U.S. Bureau of Economic Analysis — Gross Domestic Product",
+          "url": "https://www.bea.gov/data/gdp/gross-domestic-product"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": 0,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "BEA自身のWhat is Gross Domestic Product?の検索取得本文。final goods/servicesと中間投入を二重計上しない旨。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000007",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "他の財の消費量を一定にして、ある財の消費を追加的に増やしたときの効用の増分を表す概念はどれか。",
+      "choices": [
+        "総効用",
+        "平均効用",
+        "限界費用",
+        "限界効用"
+      ],
+      "correctIndex": 3,
+      "explanation": "限界効用は、ある財の追加的な消費による効用の増分を捉える。総効用そのものや、生産側の追加費用とは異なる。",
+      "distractorRationales": [
+        "消費全体から得られる効用。",
+        "効用を消費量などで割った平均。",
+        "追加的な生産に必要となる費用。",
+        "追加消費から得られる効用の増分。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Microeconomics 2e Appendix B — Indifference Curves",
+          "url": "https://openstax.org/books/principles-microeconomics-2e/pages/b-indifference-curves"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の追加的な財から得られるmarginal utilityと、効用一定での交換の説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000009",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "貿易の理論において、ある財の生産に「比較優位」があることを判断する基準はどれか。",
+      "choices": [
+        "その財を生産する機会費用が相手より小さい",
+        "その財の総生産量が相手より大きい",
+        "全ての財の生産性が相手より高い",
+        "人口が相手より多い"
+      ],
+      "correctIndex": 0,
+      "explanation": "比較優位は他の財をどれだけ諦めるかという機会費用で比較する。全ての財で生産性が低い側でも、相対的な機会費用が低い財には比較優位を持ちうる。",
+      "distractorRationales": [
+        "他財で測る相対費用が基準となる。",
+        "総生産量だけでは機会費用は決まらない。",
+        "絶対優位と比較優位を混同している。",
+        "人口の大小は比較優位の定義ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Microeconomics 3e 19.1 — Absolute and Comparative Advantage",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/19-1-absolute-and-comparative-advantage"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文冒頭の他財で測った低い費用とopportunity costによる定義。原文の国別事例・数表は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000004",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "需要の価格弾力性を絶対値で表すとき、弾力性が1を超えることの意味はどれか。",
+      "choices": [
+        "価格変化率の絶対値が、需要量変化率の絶対値を上回る",
+        "需要量変化率の絶対値が、価格変化率の絶対値を上回る",
+        "価格が変わっても需要量は変わらない",
+        "所得変化率と価格変化率が等しくなる"
+      ],
+      "correctIndex": 1,
+      "explanation": "価格弾力性は需要量の変化率を価格の変化率で割った比である。絶対値が1を超える場合、需要量の変化率の絶対値が価格側より大きい。",
+      "distractorRationales": [
+        "弾力性が1未満の関係。",
+        "比の絶対値が1を超える関係。",
+        "価格に対する弾力性が0の場合。",
+        "所得弾力性など別の変数と混同している。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Microeconomics 2e 5.1 — Price Elasticity",
+          "url": "https://openstax.org/books/principles-microeconomics-2e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の絶対値の扱いと、elastic > 1 / inelastic < 1の表。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000022",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "一つの選択をしたときの「機会費用」とは何か。",
+      "choices": [
+        "諦めた全ての選択肢の価値を足したもの",
+        "支払った現金だけ",
+        "諦めた選択肢のうち、最も価値の高い代替案の価値",
+        "選択した結果得られた売上高"
+      ],
+      "correctIndex": 2,
+      "explanation": "機会費用は、選んだ行動のために実現できなくなった最良の代替案の価値である。諦めた全案の価値を合計するものではない。",
+      "distractorRationales": [
+        "互いに同時実現できない全案を足し合わせない。",
+        "現金支出を伴わない時間などの機会費用もある。",
+        "next best alternativeに対応する。",
+        "得られた売上ではなく、断念した代替案の価値。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Economics 3e 2.1 — The Concept of Opportunity Cost",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のnext best alternative、時間の機会費用の説明。元の食品やバスの事例は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000032",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "消費者の無差別曲線上で、効用を一定に保ちながら財Xをわずかに増やす代わりに諦めてもよい財Yの量の比を、正の値で表す概念はどれか。",
+      "choices": [
+        "財Xの所得弾力性",
+        "財Yの市場価格そのもの",
+        "両財の限界生産力",
+        "XをYで測った限界代替率"
+      ],
+      "correctIndex": 3,
+      "explanation": "限界代替率は効用を変えずに一方の財と他方の財を交換できる限界的な比である。ここでは−dY/dXという正の値で表す約束を指定している。",
+      "distractorRationales": [
+        "所得に対する需要の反応で、効用一定の交換比ではない。",
+        "価格は市場での交換条件で、選好から定まる代替率とは別。",
+        "生産技術の指標で、消費者の選好を問うものではない。",
+        "設問の効用一定の限界的交換比を表す。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Microeconomics 2e Appendix B — Indifference Curves",
+          "url": "https://openstax.org/books/principles-microeconomics-2e/pages/b-indifference-curves"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": 1.1,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のMRSの定義と無差別曲線の傾き。有限の大きな1単位差と微小変化、傾きの符号を区別。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000226",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "同じ技術と費用条件を持つ企業が自由に参入・退出できる標準的な完全競争モデルで、長期の経済利潤をゼロへ近づける仕組みはどれか。",
+      "choices": [
+        "正の利潤は参入を、損失は退出を促し、市場供給と価格が調整される",
+        "企業が協調して市場供給を制限し、価格を維持する",
+        "参入障壁によって既存企業だけが供給を続ける",
+        "一定期間が過ぎると、企業の固定費用が自動的に消滅する"
+      ],
+      "correctIndex": 0,
+      "explanation": "正の経済利潤は参入を、損失は退出を誘発し、価格と供給が調整される。経済利潤ゼロは、機会費用を含めた費用をまかなう状態であり、売上ゼロという意味ではない。",
+      "distractorRationales": [
+        "標準モデルの長期調整過程に当たる。",
+        "カルテルのような供給制限で、完全競争の参入退出による調整とは異なる。",
+        "自由参入の仮定と反し、超過利潤が残る原因になりうる。",
+        "長期では投入量を調整できるのであり、支出が時間だけで自動消滅するわけではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Microeconomics 2e 8.3 — Entry and Exit Decisions in the Long Run",
+          "url": "https://openstax.org/books/principles-microeconomics-2e/pages/8-3-entry-and-exit-decisions-in-the-long-run"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文の自由参入退出、価格と平均費用、zero economic profitsの説明。標準モデルの条件を明記。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000244",
+    "domain": "人文社会科学",
+    "subdomain": "経済学",
+    "content": {
+      "question": "公共財の「非排除性」が意味する性質はどれか。",
+      "choices": [
+        "一人の利用が他の人の利用可能量を必ず減らす",
+        "対価を払わない人を利用から排除することが困難または高コストである",
+        "政府が所有しているだけで自動的に満たされる",
+        "利用者が増えても他の人の利用を減らさないという性質だけを指す"
+      ],
+      "correctIndex": 1,
+      "explanation": "非排除性は、利用から人を排除することの難しさに関する性質である。他者の利用可能性を減らさない非競合性とは区別する。",
+      "distractorRationales": [
+        "競合性の説明である。",
+        "排除することの難しさが基準となる。",
+        "所有者の身分だけで財の性質は決まらない。",
+        "非競合性の説明で、非排除性とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Economics 3e 13.3 — Public Goods",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/13-3-public-goods"
+        }
+      ]
+    },
+    "reason": "旧問を概念の範囲・モデルの仮定・隣接概念との区別が明確な四択へ改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・条件の比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "統計作成機関・中央銀行・公開教材の概念を照合し独自作問。原文の演習・数表・図表・投資助言は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文冒頭の二特性。nonexcludableはcostly or impossible to excludeと定義。"
+    }
+  }
+]

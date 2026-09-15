@@ -1,0 +1,471 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8002-000000000091",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "アトキンソンとシフリンの記憶モデルで、感覚記憶から入った情報を一時的に保持し、リハーサルの対象とする貯蔵部はどれか。",
+      "choices": [
+        "意味記憶",
+        "短期記憶",
+        "手続き記憶",
+        "長期記憶"
+      ],
+      "correctIndex": 1,
+      "explanation": "このモデルでは感覚記憶・短期記憶・長期記憶を区別する。短期記憶は一時的な保持を担い、リハーサルなどの処理に関わる。",
+      "distractorRationales": [
+        "長期記憶の内容に関する分類。",
+        "モデル中の一時的な貯蔵部。",
+        "技能などの記憶に関する分類。",
+        "長く保持される情報の貯蔵部。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Psychology 2e 8.1 — How Memory Functions",
+          "url": "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L62–71のAtkinson–Shiffrinモデルと短期記憶の説明。図は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000248",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "ミラーの記憶研究で使われた「チャンク」という考え方の説明として、適切なのはどれか。",
+      "choices": [
+        "記憶の中で常に1ビットに相当する物理的容量",
+        "全ての人で長さが等しい時間の単位",
+        "複数の要素を一つのまとまりとして符号化した情報単位",
+        "長期記憶だけに存在する特定の神経細胞"
+      ],
+      "correctIndex": 2,
+      "explanation": "チャンク化では、複数の要素を意味のあるまとまりなどとして扱う。一つのチャンクが含む情報量は固定ではなく、記憶容量を全員・全課題で一律の個数とみなすべきではない。",
+      "distractorRationales": [
+        "チャンク内のビット数は固定されない。",
+        "時間の単位ではない。",
+        "再符号化によって情報をまとめる考え方。",
+        "特定の一神経細胞を意味しない。"
+      ],
+      "sources": [
+        {
+          "title": "George A. Miller (1956) — The Magical Number Seven, Plus or Minus Two",
+          "url": "https://psychclassics.yorku.ca/Miller/"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "原論文の大学公開本文。検索取得したrecoding、grouping、bits per chunkの説明。7±2を普遍的な作業記憶容量とする旧問を廃止。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000033",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "バッドレーらの作業記憶モデルで、音韻ループが主に保持する情報はどれか。",
+      "choices": [
+        "視覚的な形と空間的位置",
+        "長年にわたる出来事の記録全体",
+        "身体運動の技能だけ",
+        "音声・言語の音韻的な情報"
+      ],
+      "correctIndex": 3,
+      "explanation": "音韻ループは、音声・言語に関わる音韻情報の一時的な保持と復唱の仕組みとして提案された。視覚空間的な保持系とは区別される。",
+      "distractorRationales": [
+        "視空間スケッチパッドの対象に対応する。",
+        "長期のエピソード記憶全体を保存する装置ではない。",
+        "運動技能だけを担う仕組みではない。",
+        "モデルが想定する音韻情報の保持に合う。"
+      ],
+      "sources": [
+        {
+          "title": "Baddeley, Gathercole & Papagno (1998) — The phonological loop as a language learning device",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9450375/"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "著者自身の論文Abstractを検索取得。音パターンを保持し、長期記憶が形成されるまで支える仮説。OpenStax 8.1 L65–66の保持系の区分と、原研究PMID 32734355 Abstractのstore/rehearsalも照合。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000091",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "初めは特定の反応を引き起こさない刺激が、無条件刺激との関連を学習した後、単独でその条件反応を引き起こすようになる学習はどれか。",
+      "choices": [
+        "古典的条件づけ",
+        "オペラント条件づけ",
+        "観察学習",
+        "馴化"
+      ],
+      "correctIndex": 0,
+      "explanation": "古典的条件づけは刺激同士の連合を学ぶ過程である。行動に続く結果によってその行動の頻度が変わるオペラント条件づけとは区別する。",
+      "distractorRationales": [
+        "中性刺激が条件刺激になる過程に対応する。",
+        "行動とその結果の関係が中心となる。",
+        "他者の行動を見ることを通じた学習。",
+        "刺激の反復により反応が弱まる過程。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Psychology 2e 6.2 — Classical Conditioning",
+          "url": "https://openstax.org/books/psychology-2e/pages/6-2-classical-conditioning"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000004"
+    ],
+    "parameters": {
+      "b": 0,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L40–48とL77–78の中性刺激・条件刺激の説明。パブロフの装置が常にベルだったという歴史的断定は行わない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000229",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "フェスティンガーの理論で「認知的不協和」が指すものはどれか。",
+      "choices": [
+        "周囲の意見に自分の判断を合わせること",
+        "信念同士や信念と行動の不一致に伴う心理的な不快・緊張",
+        "目立つ一つの好印象から対象全体を高く評価すること",
+        "刺激の反復によって、その刺激への反応が弱まること"
+      ],
+      "correctIndex": 1,
+      "explanation": "認知的不協和は、認知同士や態度と行動の不整合に伴う心理的不快を指す。この理論では、不整合を減らそうとする動機づけが生じると考える。",
+      "distractorRationales": [
+        "同調に関する説明。",
+        "認知的不整合に伴う不快に対応する。",
+        "ハロー効果に関する説明。",
+        "馴化に関する説明。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Psychology 2e 12.3 — Cognitive Dissonance",
+          "url": "https://openstax.org/books/psychology-2e/pages/12-3-attitudes-and-persuasion"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000023"
+    ],
+    "parameters": {
+      "b": 0.2,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索取得本文のFestinger 1957と、inconsistent attitudes / behaviors / cognitionsによる不快の定義。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000008",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "ピアジェの認知発達理論で、具体的な対象について保存概念や可逆的な操作の理解が成立する段階はどれか。",
+      "choices": [
+        "感覚運動期",
+        "前操作期",
+        "具体的操作期",
+        "形式的操作期に初めて成立する"
+      ],
+      "correctIndex": 2,
+      "explanation": "ピアジェの理論では、具体的操作期に具体的な事物の論理的操作や保存・可逆性の理解が発達するとされる。全ての子供が同じ年齢に一斉に移行するという主張ではない。",
+      "distractorRationales": [
+        "この理論でより早い感覚・運動を中心とする段階。",
+        "保存や可逆的操作がまだ十分でないと位置づける段階。",
+        "設問の特徴に対応する段階。",
+        "形式的操作期は抽象的・仮説的な推論へ広がる段階。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Psychology 2e 9.2 — Piaget’s Theory of Cognitive Development",
+          "url": "https://openstax.org/books/psychology-2e/pages/9-2-lifespan-theories"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L76の年齢範囲はapproximate、L111–114の保存・可逆性と抽象的推論の区別。原典の実験課題は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8005-000000000011",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "フロイトの精神構造のモデルで、「快楽原則」に従い衝動の即時的な満足を求めるとされたものはどれか。",
+      "choices": [
+        "自我（エゴ）",
+        "超自我（スーパーエゴ）",
+        "集合的無意識",
+        "エス（イド）"
+      ],
+      "correctIndex": 3,
+      "explanation": "フロイトはエスを、快楽原則に従う衝動の源として位置づけた。これは精神分析理論の概念であり、解剖学的に区切られた脳部位の名称ではない。",
+      "distractorRationales": [
+        "現実との調整に関わるとされた。",
+        "道徳的な規範・良心に関わるとされた。",
+        "ユングに関連する別の理論上の概念。",
+        "快楽原則と衝動の即時的満足に対応する。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Psychology 2e 11.2 — Freud and the Psychodynamic Perspective",
+          "url": "https://openstax.org/books/psychology-2e/pages/11-2-freud-and-the-psychodynamic-perspective"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L42–44の三つの相互作用するシステム、idのpleasure principle。理論と脳解剖を混同しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000008",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "カーネマンが説明する「システム2」の思考過程の特徴として、最も適切なのはどれか。",
+      "choices": [
+        "注意や努力を要し、意図的に制御される推論",
+        "素早く自動的で、ほとんど努力を要しない連想",
+        "意識的に変えられない単純反射だけ",
+        "常に正しい答えを保証する計算装置"
+      ],
+      "correctIndex": 0,
+      "explanation": "システム2は、比較的遅く努力を要する、意図的に制御された推論を特徴とする。必ず正しいわけでも、特定の一つの脳部位の名称でもない。",
+      "distractorRationales": [
+        "著者自身の講演で挙げる特徴に対応する。",
+        "システム1の特徴に近い。",
+        "制御された推論と合わない。",
+        "推論の誤りが起こらないという意味ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Daniel Kahneman — Nobel Lecture (2002)",
+          "url": "https://www.nobelprize.org/uploads/2018/06/kahnemann-lecture.pdf"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000046"
+    ],
+    "parameters": {
+      "b": 0.3,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "著者の講演本文の検索取得範囲。System 2はslower, serial, effortful, deliberately controlled。図は転載しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000250",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "プロスペクト理論でいう「損失回避」の説明として適切なのはどれか。",
+      "choices": [
+        "損失を得ること自体を好むという性質",
+        "基準点からの同額の利得より損失の方を、価値関数上で強く評価するという性質",
+        "損失の可能性があれば全員が必ずどんな賭けも拒むこと",
+        "金額にかかわらず全ての利得を同じ価値とみなすこと"
+      ],
+      "correctIndex": 1,
+      "explanation": "損失回避は、基準点から同額だけ動く場合に、損失の負の評価が利得の正の評価より強いという性質である。危険を避ける態度全般や、全員に例外なく成立する法則とは同一ではない。",
+      "distractorRationales": [
+        "損失それ自体を好むことではない。",
+        "価値関数の利得側・損失側の非対称性に対応する。",
+        "選択を全員について無条件に決める法則ではない。",
+        "額による価値の違いをなくす性質ではない。"
+      ],
+      "sources": [
+        {
+          "title": "Kahneman & Tversky (1979) — Prospect Theory",
+          "url": "https://kahneman.scholar.princeton.edu/sites/g/files/toruqf3831/files/kahneman/files/prospect_theory.pdf"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "原論文の検索取得本文。losses loom larger than gains、損失側の価値関数が急という説明。実験の金額や設問は転載しない。"
+    }
+  },
+  {
+    "familyKey": "humanities-psychology-negative-reinforcement",
+    "domain": "人文社会科学",
+    "subdomain": "心理学・認知科学",
+    "content": {
+      "question": "行動の結果として不快な刺激が取り除かれ、その行動が起こりやすくなった。この関係をオペラント条件づけでは何と呼ぶか。",
+      "choices": [
+        "正の罰",
+        "負の罰",
+        "負の強化",
+        "正の強化"
+      ],
+      "correctIndex": 2,
+      "explanation": "「負」は刺激を取り除くこと、「強化」は行動の生起が増えることを表す。負の強化は、行動を減らす罰とは異なる。",
+      "distractorRationales": [
+        "刺激を加えて行動を減らす。",
+        "刺激を取り除いて行動を減らす。",
+        "刺激の除去により行動が増える。",
+        "刺激を加えることにより行動が増える。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Psychology 2e 6.3 — Reinforcement and Punishment",
+          "url": "https://openstax.org/books/psychology-2e/pages/6-3-operant-conditioning"
+        }
+      ]
+    },
+    "reason": "旧問の無条件な一般化・定義の混同を除き、対象となる理論と条件を明記。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "概念の区別に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "原研究・著者の講演・公開教材の取得本文で概念を照合した独自問題。実験課題・被験者データ・図表は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L47–54、L65–69の定義。教材の具体的な家庭・動物の事例は使わず条件だけを独自に四択化。"
+    }
+  }
+]
