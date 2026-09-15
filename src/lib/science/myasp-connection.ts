@@ -4,7 +4,12 @@ import { releaseConfig, requireAdmin, type Context } from "./server";
 
 export async function checkMyaspConnection(ctx: Context): Promise<MyaspConnectionCheck> {
   await requireAdmin(ctx);
-  const release = await releaseConfig(ctx.db);
+  return inspectMyaspConfiguration(ctx.db);
+}
+
+// Called only after either administrator authentication or the cron-secret boundary.
+export async function inspectMyaspConfiguration(db: Context["db"]): Promise<MyaspConnectionCheck> {
+  const release = await releaseConfig(db);
   const config = myaspConfiguration();
   const base = { observedAt: new Date().toISOString(), syncEnabled: release.myaspSync === true, deliveryEnabled: release.mailDelivery === true };
   if (!config) return { ...base, state: "not_configured" };

@@ -12,5 +12,5 @@
   "finishedAt": "2026-09-15T17:49:05.005Z",
   "commit": "6c8a444e789fa5d6346756919f481a245e6983da",
   "deployment": "55qPSKjfqKiCjXjdZ7VVkeeoLowf",
-  "cleanup": "pending"
+  "cleanup": "executed_with_exact_anonymous_attempt_guard; remaining_test_attempts=0"
 }
