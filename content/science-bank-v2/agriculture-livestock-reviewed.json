@@ -1,0 +1,469 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000183",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "成牛が牧草のセルロースを栄養として利用できる主な理由はどれか。",
+      "choices": [
+        "膵臓のアミラーゼがセルロースを分解する",
+        "ルーメンの共生微生物がセルロースを分解・発酵する",
+        "第四胃のペプシンがセルロースを分解する",
+        "小腸のリパーゼがセルロースを分解する"
+      ],
+      "correctIndex": 1,
+      "explanation": "ルーメンの微生物がセルロースを分解・発酵し、生じた揮発性脂肪酸などを牛が利用する。宿主のデンプン・タンパク質・脂質の消化酵素だけでは説明できない。",
+      "distractorRationales": [
+        "アミラーゼの主な対象はデンプン。",
+        "共生微生物による線維の発酵が主な仕組み。",
+        "ペプシンの対象はタンパク質。",
+        "リパーゼの対象は脂質。"
+      ],
+      "sources": [
+        {
+          "title": "University of Maryland Extension — Managing Bloat in Pastured Cattle",
+          "url": "https://www.extension.umd.edu/resource/managing-bloat-pastured-cattle"
+        }
+      ]
+    },
+    "reason": "同じ機構を問う旧5IDを整理し、水産・栽培への誤分類と混在表記を解消。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000469",
+      "10000000-0000-4000-8007-000000000466",
+      "10000000-0000-4000-8002-000000000064",
+      "10000000-0000-4000-8004-000000000157"
+    ],
+    "parameters": {
+      "b": -0.7,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "What is bloat and why does it occur? の取得本文。反芻胃微生物と線維の発酵のみを参照し、処置の記述は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-abomasum-glandular-stomach",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "牛の四つの胃区画のうち、塩酸と胃の消化酵素を分泌する「真胃」に当たるものはどれか。",
+      "choices": [
+        "第一胃（ルーメン）",
+        "第二胃（レティキュラム）",
+        "第三胃（オマサム）",
+        "第四胃（アボマサム）"
+      ],
+      "correctIndex": 3,
+      "explanation": "第四胃が腺胃で、塩酸や消化酵素を分泌する。微生物発酵を担う第一胃とは役割が異なる。",
+      "distractorRationales": [
+        "微生物発酵の主要な区画。",
+        "真胃と呼ばれる第四胃ではない。",
+        "第三胃と第四胃を混同している。",
+        "塩酸と胃の消化酵素を分泌する区画。"
+      ],
+      "sources": [
+        {
+          "title": "Penn State Extension — From Feed to Milk: Understanding Rumen Function",
+          "url": "https://extension.psu.edu/from-feed-to-milk-understanding-rumen-function"
+        }
+      ]
+    },
+    "reason": "胃区画の名称だけでなく分泌機能を問う独自問題。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "検索索引のfourth compartment・acids and enzymesの記述。直接openは取得失敗のため全文確認とはしていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000158",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "ある飼料の乾物1 kg当たりの可消化量は、タンパク質0.10 kg、炭水化物0.50 kg、脂肪0.04 kgである。脂肪を2.25倍して合計する定義による可消化養分総量（TDN）は、乾物質量の何％か。",
+      "choices": [
+        "64％",
+        "69％",
+        "60％",
+        "144％"
+      ],
+      "correctIndex": 1,
+      "explanation": "TDN＝0.10＋0.50＋2.25×0.04＝0.69 kg相当。乾物1 kgに対して69％である。",
+      "distractorRationales": [
+        "脂肪を他の成分と同じ1倍で足している。",
+        "可消化脂肪だけを2.25倍して合計する。",
+        "脂肪の寄与を落としている。",
+        "三成分の合計0.64全体を2.25倍している。"
+      ],
+      "sources": [
+        {
+          "title": "Oregon State University — Understanding your forage test results",
+          "url": "https://extension.oregonstate.edu/catalog/em-8801-understanding-your-forage-test-results"
+        }
+      ]
+    },
+    "reason": "略語の当て物を可消化量から計算する問題へ改訂。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Feed L23–44、Protein L53–55、Energy L76の定義を照合。例題の数値と図は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-feed-dry-matter-basis",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "飼料の乾物率が40％で、現物質量に対する粗タンパク質割合が6％だった。同じ飼料の乾物当たりの粗タンパク質割合はいくらか。",
+      "choices": [
+        "2.4％",
+        "6％",
+        "15％",
+        "40％"
+      ],
+      "correctIndex": 2,
+      "explanation": "現物100 gには乾物40 g、粗タンパク質6 gがある。乾物当たりでは6÷40×100＝15％となる。",
+      "distractorRationales": [
+        "6％に乾物率を掛けており、換算方向が逆。",
+        "現物当たりの割合のまま。",
+        "乾物40 gを分母にする。",
+        "乾物率と栄養成分の割合を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "Oregon State University — Understanding your forage test results",
+          "url": "https://extension.oregonstate.edu/catalog/em-8801-understanding-your-forage-test-results"
+        }
+      ]
+    },
+    "reason": "現物と乾物の分母を区別する独自計算。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Feed L23–44、Protein L53–55、Energy L76の定義を照合。例題の数値と図は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-crude-protein-nitrogen-factor",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "乾物中の全窒素が2.0％の飼料で、換算係数6.25を使う粗タンパク質（CP）の値と解釈はどれか。",
+      "choices": [
+        "12.5％で、非タンパク態窒素の寄与も含み得る",
+        "12.5％で、真のタンパク質だけを直接測った値である",
+        "0.32％で、非タンパク態窒素の寄与も含み得る",
+        "2.0％で、全て消化吸収できるタンパク質量を示す"
+      ],
+      "correctIndex": 0,
+      "explanation": "CP＝全窒素割合×6.25＝12.5％。窒素量からの換算値なので、非タンパク態窒素も寄与し得る。",
+      "distractorRationales": [
+        "計算と粗タンパク質の意味が合う。",
+        "窒素からの換算値であり、真のタンパク質だけの直接測定ではない。",
+        "係数で割ってしまっている。",
+        "全窒素割合のままで、消化率も表していない。"
+      ],
+      "sources": [
+        {
+          "title": "Oregon State University — Understanding your forage test results",
+          "url": "https://extension.oregonstate.edu/catalog/em-8801-understanding-your-forage-test-results"
+        }
+      ]
+    },
+    "reason": "粗タンパク質と真のタンパク質・消化可能量の区別を問う独自問題。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Feed L23–44、Protein L53–55、Energy L76の定義を照合。例題の数値と図は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-propionate-gluconeogenesis",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "成牛のルーメン発酵で生じる揮発性脂肪酸のうち、肝臓でグルコースを作る主要な前駆体となるものはどれか。",
+      "choices": [
+        "酢酸",
+        "酪酸",
+        "ステアリン酸",
+        "プロピオン酸"
+      ],
+      "correctIndex": 3,
+      "explanation": "プロピオン酸は肝臓で糖新生の材料になる。酢酸や酪酸は同じ意味での主要な糖新生前駆体ではなく、ステアリン酸は長鎖脂肪酸である。",
+      "distractorRationales": [
+        "主要な糖新生前駆体として問われたVFAではない。",
+        "主要な糖新生前駆体として問われたVFAではない。",
+        "長鎖脂肪酸であり、問われた主要VFAではない。",
+        "ルーメン由来の主要な糖新生前駆体。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota — Vet Med: Applied GI Physiology, Fermentation",
+          "url": "https://open.lib.umn.edu/vetphysioapplied/chapter/fermentation/"
+        }
+      ]
+    },
+    "reason": "発酵の場所だけでなく生成物の利用を問う独自問題。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Foregut fermenters L167–169とHindgut fermenters L175–179を照合。尿素回路で直接タンパク質になるとの周辺記述、ケトン体を貯蔵とする記述、微生物が全必要ビタミンを保証する記述は用いない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-horse-hindgut-fermentation",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "成馬で牧草の線維を微生物発酵によって利用する主要な消化管部位はどれか。",
+      "choices": [
+        "胃と十二指腸",
+        "盲腸と結腸",
+        "食道と胃",
+        "空腸と回腸"
+      ],
+      "correctIndex": 1,
+      "explanation": "馬は後腸発酵動物で、盲腸と結腸が重要な発酵の場になる。反芻動物のルーメンでの発酵と場所が異なる。",
+      "distractorRationales": [
+        "線維の主要な微生物発酵部位ではない。",
+        "発達した後腸が微生物発酵を担う。",
+        "主要な発酵槽となる部位ではない。",
+        "小腸であり、問われた後腸の部位ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota — Vet Med: Applied GI Physiology, Fermentation",
+          "url": "https://open.lib.umn.edu/vetphysioapplied/chapter/fermentation/"
+        }
+      ]
+    },
+    "reason": "反芻動物以外の家畜における発酵の位置を問う独自問題。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Foregut fermenters L167–169とHindgut fermenters L175–179を照合。尿素回路で直接タンパク質になるとの周辺記述、ケトン体を貯蔵とする記述、微生物が全必要ビタミンを保証する記述は用いない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-poultry-gizzard-mechanical-digestion",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "ニワトリで、強い筋肉の働きによって飼料をすりつぶす胃の部分はどれか。",
+      "choices": [
+        "嗉嚢（そのう）",
+        "腺胃",
+        "筋胃（砂嚢）",
+        "盲腸"
+      ],
+      "correctIndex": 2,
+      "explanation": "筋胃は強い筋肉で飼料を粉砕・混合する。嗉嚢の一時貯留、腺胃の分泌、盲腸の発酵とは区別する。",
+      "distractorRationales": [
+        "主に一時的な貯留に関わる。",
+        "主に胃酸や酵素の分泌に関わる。",
+        "機械的な粉砕・混合を担う。",
+        "胃ではなく腸の一部。"
+      ],
+      "sources": [
+        {
+          "title": "University of Kentucky / Poultry Extension — Avian Digestive System",
+          "url": "https://poultry.extension.org/articles/poultry-anatomy/avian-digestive-system/"
+        }
+      ]
+    },
+    "reason": "家禽の機械的消化と分泌を区別する独自問題。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Jacquie Jacobによる教材のL35・L41–46。腺胃と筋胃と嗉嚢を照合。図と飼養処方は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "familyKey": "agri-silage-anaerobic-acidification",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "牧草をサイレージとして保存するとき、望ましい発酵を支える条件と変化の組合せはどれか。",
+      "choices": [
+        "酸素を抑え、乳酸生成でpHを下げる",
+        "酸素を供給し、乳酸生成でpHを下げる",
+        "酸素を抑え、タンパク質分解でpHを上げる",
+        "酸素を供給し、タンパク質分解でpHを上げる"
+      ],
+      "correctIndex": 0,
+      "explanation": "密封などで酸素を抑え、乳酸菌が糖から作る乳酸によってpHを低下させることが基本になる。酸素の侵入は好気的な変敗につながる。",
+      "distractorRationales": [
+        "嫌気条件と酸性化の組合せ。",
+        "pH低下は合うが、酸素の供給を目指す保存法ではない。",
+        "タンパク質の分解とアルカリ化を目指すものではない。",
+        "酸素の供給もアルカリ化も、問われた望ましい保存条件ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Delaware / University of Minnesota archive — A Review on Silage Additives and Enzymes",
+          "url": "https://conservancy.umn.edu/bitstreams/be8d0cee-7f62-4534-86b3-98259c1aef74/download"
+        }
+      ]
+    },
+    "reason": "嫌気条件・乳酸発酵・保存の関係を問う独自問題。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Limin Kung Jr.による資料の取得されたINTRODUCTION（発酵の第二・第三段階）。嫌気条件と乳酸によるpH低下のみを使用。添加剤・工程条件・表の数値は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000193",
+    "domain": "農学",
+    "subdomain": "畜産・飼料",
+    "content": {
+      "question": "乳牛で次の分娩に向けて搾乳を休止する乾乳期を設ける生理的な目的として、最も適切なのはどれか。",
+      "choices": [
+        "排卵を同期させることを主目的とする",
+        "ルーメン内の微生物を入れ替えることを主目的とする",
+        "乳腺組織の更新を支え、次の泌乳に備える",
+        "育成中の骨格の伸長を最優先に促す"
+      ],
+      "correctIndex": 2,
+      "explanation": "乾乳期は乳腺の組織更新を支え、次の泌乳に備える時期でもある。必要な期間や管理は個体と飼養条件に関わるため、一律の日数で産乳量を保証するものではない。",
+      "distractorRationales": [
+        "排卵同期化とは目的が異なる。",
+        "ルーメン微生物の入れ替えが主目的ではない。",
+        "乳腺の更新と次の泌乳への準備に関わる。",
+        "育成期の骨格形成を最優先にする管理ではなく、次の泌乳への準備が問われている。"
+      ],
+      "sources": [
+        {
+          "title": "Penn State Extension — Preventing Dry Cow Mastitis",
+          "url": "https://extension.psu.edu/preventing-dry-cow-mastitis"
+        }
+      ]
+    },
+    "reason": "旧問の一律の60日・必須・感染リスクの断定を除き、乳腺の役割に限定。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "定義・知識・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "取得した導入部のmilk-producing tissue regenerationとThe Dairy Cow節を照合。乾乳日数の一律処方や薬剤投与手順は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学の公開教材・普及資料の取得部分で原理を照合。問題・選択肢・解説・数値は独自に作成し、図・表の実測値・飼養処方・獣医療の処置手順は転載していない。独立専門家の査読ではない。"
+    }
+  }
+]

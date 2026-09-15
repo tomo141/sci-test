@@ -1,0 +1,463 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000500",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "循環式養殖の生物ろ過で、硝化だけが進むときの主な窒素の変化はどれか。",
+      "choices": [
+        "アンモニア態窒素→亜硝酸態窒素→硝酸態窒素",
+        "硝酸態窒素→窒素ガス",
+        "窒素ガス→アンモニア態窒素",
+        "硝酸態窒素→魚体タンパク質"
+      ],
+      "correctIndex": 0,
+      "explanation": "硝化はアンモニア態窒素を亜硝酸態、さらに硝酸態へ酸化する。窒素の形を変える過程であり、硝化だけで窒素ガスとして系外へ出すわけではない。",
+      "distractorRationales": [
+        "硝化の反応系列。",
+        "脱窒に対応する変化。",
+        "窒素固定に対応する方向。",
+        "生物への同化を述べており、硝化とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Recirculating Systems and Re-use of Water in Aquaculture",
+          "url": "https://www.fao.org/4/x5744e/x5744e0g.htm"
+        }
+      ]
+    },
+    "reason": "土壌への誤分類を修正。硝化と脱窒を一括して硝酸除去とする旧設問を改訂。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "取得した§2.2–2.3のアンモニア→亜硝酸→硝酸と酸素消費を照合。硝化を全窒素の除去と扱わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000160",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "養殖魚の総生体重量が100 kgから180 kgへ増え、その間に乾物換算で96 kgの飼料を与えた。死亡・出荷・追加放流はない。飼料乾物量を生体増重量で割る飼料係数（FCR）はいくらか。",
+      "choices": [
+        "0.53",
+        "0.83",
+        "1.20",
+        "1.80"
+      ],
+      "correctIndex": 2,
+      "explanation": "増重量は180−100＝80 kg。FCR＝96÷80＝1.20である。餌の乾物量と魚の生体増重量を区別して計算する。",
+      "distractorRationales": [
+        "最終重量180 kgで割っている。",
+        "80÷96と逆比を取っている。",
+        "96 kgを増重量80 kgで割る。",
+        "最終重量を初期重量で割る成長倍率で、FCRではない。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Why Should I Feed?",
+          "url": "https://www.fao.org/4/s4314e/s4314e03.htm"
+        }
+      ]
+    },
+    "reason": "異分野の誤答を除き、分母・基準・増減条件が明確な独自計算へ改訂。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "FCRの取得本文で飼料量／生体増重量と、餌の水分による比較条件の違いを照合。原例題の数値は使わず、設問で乾物基準を明示。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000490",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "核を用いる真珠養殖で、受け手の貝へ核とともに移植する組織片は、通常、別の貝のどの部分から取るか。",
+      "choices": [
+        "閉殻筋",
+        "鰓",
+        "消化腺",
+        "外套膜"
+      ],
+      "correctIndex": 3,
+      "explanation": "ドナー貝の外套膜片を、核とともに受け手の貝へ移植する。核という物体と、移植する生きた組織片は別のものである。",
+      "distractorRationales": [
+        "貝殻を閉じる筋で、通常の移植片の由来ではない。",
+        "呼吸・摂餌に関わる鰓ではない。",
+        "消化腺ではない。",
+        "移植片はドナー貝の外套膜に由来する。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Pearl Oyster Farming and Pearl Culture, Chapter X",
+          "url": "https://www.fao.org/4/AB726E/AB726E10.htm"
+        }
+      ]
+    },
+    "reason": "土壌への誤分類と無関係な誤答肢を除き、核とドナー組織を区別。",
+    "parameters": {
+      "b": 0.6,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L5と§10.4 L62でドナーの外套膜片と核を受け手へ移すことを確認。核入れの工程・寸法・処置法は転載しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000068",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "アサクサノリやスサビノリなど、板ノリの原料となるアマノリ類は、次のどのグループに属するか。",
+      "choices": [
+        "緑藻類",
+        "紅藻類",
+        "褐藻類",
+        "海草などの被子植物"
+      ],
+      "correctIndex": 1,
+      "explanation": "アマノリ類は紅藻類である。『ノリ』と呼ばれる食品原料には緑藻のアオノリなどもあるため、ここではアマノリ類に対象を限定している。",
+      "distractorRationales": [
+        "アオノリなどが属するが、問われたアマノリ類とは異なる。",
+        "アマノリ類が属するグループ。",
+        "コンブやワカメなどが属するグループ。",
+        "アマノリ類は花をつける海草ではない。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Algae: an introduction to types and uses",
+          "url": "https://www.fao.org/4/i1141e/i1141e01.pdf"
+        }
+      ]
+    },
+    "reason": "生産業種の当て物を海藻の分類へ変更し、『ノリ』の名称の曖昧さを限定。",
+    "parameters": {
+      "b": -0.4,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "取得されたPDFのp.7『The red seaweed Porphyra ... nori』を照合。旧属名を現在の全ノリの分類名として固定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    },
+    "use": "weekly-reserve"
+  },
+  {
+    "familyKey": "agri-oyster-suspension-feeding",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "海中で養殖されるアメリカガキの主な摂餌の仕組みはどれか。",
+      "choices": [
+        "歯舌で岩に付着した藻類を削り取る",
+        "海底の堆積物を塊のまま飲み込む",
+        "水中の植物プランクトンなどの粒子をろ過して取り込む",
+        "小魚を追いかけて捕食する"
+      ],
+      "correctIndex": 2,
+      "explanation": "カキは水を通して植物プランクトンなどの懸濁粒子を捕らえるろ過摂食者である。海中養殖と、餌の培養・供給を行う種苗生産の工程は区別する。",
+      "distractorRationales": [
+        "一部の巻貝などに見られる摂餌様式で、カキには当てはまらない。",
+        "問われた主な摂餌様式は、水中の粒子をろ過する方式。",
+        "水中の餌粒子をろ過して摂食する。",
+        "カキは遊泳する小魚を追跡捕食する生物ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Fisheries — Eastern Oyster",
+          "url": "https://www.fisheries.noaa.gov/species/eastern-oyster"
+        }
+      ]
+    },
+    "reason": "対象種・生産段階を限定して無給餌養殖の仕組みを問う独自問題。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "取得したAquacultureのGrowing oysters requires no feed ... phytoplanktonを参照。海中養殖の摂餌に限定し、全ての二枚貝・幼生培養・水質の安全性へ一般化しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-aquaculture-oxygen-saturation",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "大気圧と塩分を一定にした淡水を空気と十分に平衡にする。水温を10℃から25℃へ上げると、酸素の飽和溶存濃度は一般にどうなるか。",
+      "choices": [
+        "低下する",
+        "上昇する",
+        "温度によらず同じ",
+        "溶存酸素が必ず0になる"
+      ],
+      "correctIndex": 0,
+      "explanation": "この温度範囲では、温度が高い水ほど酸素の飽和溶存濃度は低い。実際の池のDOは、光合成・呼吸・曝気などによって平衡値と異なることがある。",
+      "distractorRationales": [
+        "温度上昇で酸素の溶解度が低下する。",
+        "この条件での溶解度の変化と逆。",
+        "溶解度は温度にも依存する。",
+        "飽和濃度の低下は無酸素になることと同じではない。"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Dissolved Oxygen and Water",
+          "url": "https://www.usgs.gov/water-science-school/science/dissolved-oxygen-and-water"
+        }
+      ]
+    },
+    "reason": "実測値を温度だけで断定せず、平衡条件で比較する独自問題。",
+    "parameters": {
+      "b": -0.3,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Dissolved oxygen, temperature, and aquatic lifeの低温ほど多く溶ける記述を照合。実測DOと平衡の飽和濃度を分ける。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-ammonia-ionization-ph",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "水温・塩分・全アンモニア濃度（NH₃とNH₄⁺の合計）を一定にしてpHを上げると、平衡での非イオン型NH₃の割合はどうなるか。",
+      "choices": [
+        "低下する",
+        "pHによらず一定",
+        "水温を同時に上げなければ、変化の方向は決まらない",
+        "上昇する"
+      ],
+      "correctIndex": 3,
+      "explanation": "pHが上がると、NH₄⁺に対するNH₃の割合が高くなる。全アンモニア濃度が同じでも、化学種の割合は同じとは限らない。",
+      "distractorRationales": [
+        "平衡の変化が逆。",
+        "酸塩基平衡はpHに依存する。",
+        "水温を一定にしても、pH上昇によるNH₃割合の増加を判断できる。",
+        "NH₃の割合が増加する。"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Expert Consultation on Intensification of Food Production through Aquaculture: Ammonia",
+          "url": "https://www.fao.org/4/y5042e/y5042e07.htm"
+        }
+      ]
+    },
+    "reason": "濃度と化学種の割合を区別する独自問題。対処法や致死量は問わない。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Ammonia節のNH₃/NH₄⁺平衡とpH上昇時のNH₃割合増加を確認。種別の毒性閾値・処置・イオン形が完全無害という一般化は使わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-edna-detection-interpretation",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "適切な対照を置いた水の環境DNA検査で、ある魚種に対応するDNAが検出された。この一回の検出結果の解釈として最も適切なのはどれか。",
+      "choices": [
+        "その場所の魚の総重量が直接確定する",
+        "採水試料に対象DNAが認められた。生息量やDNAの由来は追加情報で確かめる",
+        "採水地点にその瞬間、生きた個体が必ずいる",
+        "その魚種の年齢構成が直接確定する"
+      ],
+      "correctIndex": 1,
+      "explanation": "環境DNAの検出は有用だが、量と生物量の対応、輸送、検出誤差を考慮する必要がある。一回の陽性だけで生物量・年齢構成・その場の生存個体を断定できない。",
+      "distractorRationales": [
+        "DNAの検出だけから総重量は確定しない。",
+        "直接の観測と、追加の推定に必要な情報を区別している。",
+        "DNAは移動するため、その時点の局所的な生存を保証しない。",
+        "年齢構成の直接測定ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Fisheries — From Water to Data: A Roadmap for Using eDNA in Stock Assessments",
+          "url": "https://www.fisheries.noaa.gov/feature-story/water-data-roadmap-using-edna-stock-assessments"
+        }
+      ]
+    },
+    "reason": "観測から言えることと資源量推定を区別する独自問題。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Challenges and Solutions L439–447で検出誤差・輸送・生物量との関係・他手法との統合を照合。検出だけから量や時空間を断定しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-otolith-age-validation",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "魚の年齢査定で耳石の成長輪を使うとき、年齢を正しく推定するために必要な確認はどれか。",
+      "choices": [
+        "輪の総数を、魚種や輪の形成周期を問わず年齢とする",
+        "透明な帯と不透明な帯をそれぞれ必ず1年とする",
+        "対象種・条件で、数える輪が年周期に対応するか検証する",
+        "同じ検査者が同じ値を出せれば、既知年齢資料との照合は不要"
+      ],
+      "correctIndex": 2,
+      "explanation": "耳石の輪には年齢推定に使える成長記録があるが、形成周期や輪の読み方は検証が必要。既知年齢の標本による確認と、読み取りの再現性の確認も区別される。",
+      "distractorRationales": [
+        "全ての輪が年1回形成されると決めつけている。",
+        "二種類の帯をそれぞれ年と数える方法が常に正しいわけではない。",
+        "周期と読み方の妥当性が必要。",
+        "読み取りの再現性と、真の年齢への正確さは別の性質。"
+      ],
+      "sources": [
+        {
+          "title": "NOAA Fisheries — Age and Growth",
+          "url": "https://www.fisheries.noaa.gov/national/science-data/age-and-growth"
+        }
+      ]
+    },
+    "reason": "耳石の利用を問う独自問題。既知年齢による妥当性と読取の一致を区別。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Overview、How are Fish Aged?、Consistency of Age Dataの取得本文を照合。全ての輪紋を年輪とみなさず、種・条件ごとの検証を前提とする。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-freshwater-teleost-osmoregulation",
+    "domain": "農学",
+    "subdomain": "水産",
+    "content": {
+      "question": "体液より浸透圧が低い淡水に暮らす典型的な真骨魚について、水の受動的な移動と調節の組合せはどれか。",
+      "choices": [
+        "水が体内に入りやすく、多量の薄い尿を出す",
+        "水が体外へ出やすく、多量の薄い尿を出す",
+        "水が体内に入りやすく、少量の濃い尿を出す",
+        "水が体外へ出やすく、少量の濃い尿を出す"
+      ],
+      "correctIndex": 0,
+      "explanation": "淡水からは浸透によって水が体内へ入りやすい。薄い尿で余分な水を出し、失われる塩類は鰓などで取り込む。海水魚やサメの調節をそのまま当てはめない。",
+      "distractorRationales": [
+        "水の流入と排水の調節が合う。",
+        "水の受動的な移動方向が逆。",
+        "水の移動は合うが、余分な水を多量の薄い尿として排出する調節と異なる。",
+        "水の移動方向も、典型的な排尿による調節も異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax Biology 2e §41.1 — Osmoregulation and Osmotic Balance",
+          "url": "https://openstax.org/books/biology-2e/pages/41-1-osmoregulation-and-osmotic-balance"
+        }
+      ]
+    },
+    "reason": "環境との浸透圧差と調節を対応させる独自問題。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "知識・前提の区別・独自計算に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L58の淡水での吸水・希薄尿・鰓の能動輸送を照合。L54のmOsmの誤定義や図説明の海水魚の濃縮尿、L61のペプチド結合の一般化は使用しない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "FAO・NOAA・USGS・大学教材の取得部分で原理を照合。設問・選択肢・解説・計算値は独自作成。図・実験データ・処置手順・生産量統計を転載していない。独立専門家の査読ではない。"
+    }
+  }
+]
