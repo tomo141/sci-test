@@ -1,0 +1,568 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000184",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "イネのいもち病を引き起こす病原体が属する群はどれか。",
+      "choices": [
+        "細菌",
+        "ウイルス",
+        "線虫",
+        "真菌（糸状菌）"
+      ],
+      "correctIndex": 3,
+      "explanation": "いもち病は真菌であるいもち病菌によって起こる。イネの病害には細菌やウイルスによる別の病気もあるが、いもち病の原因とは区別する。",
+      "distractorRationales": [
+        "いもち病の病原体は細菌ではない。",
+        "いもち病の病原体はウイルスではない。",
+        "いもち病の病原体は線虫ではない。",
+        "いもち病菌は糸状菌に属する。"
+      ],
+      "sources": [
+        {
+          "title": "IRRI Rice Knowledge Bank — Blast (leaf and collar)",
+          "url": "https://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/blast-leaf-collar"
+        }
+      ]
+    },
+    "reason": "病原群を明確にし、同じ知識を問う旧3件を一つの問題族として扱う。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000465",
+      "10000000-0000-4000-8006-000000000197"
+    ],
+    "parameters": {
+      "b": -1,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "What it does節でBlastがfungusによることを確認。名称改訂に伴う異名を別選択肢へ分けていない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000485",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "病害三角（宿主・病原体・環境）で考えると、同じ圃場で栽培品種を、その病害に強い抵抗性品種へ替える対策は、主にどの要素へ働きかけるか。",
+      "choices": [
+        "宿主の感受性",
+        "病原体の分類群",
+        "圃場の気象条件",
+        "病気が進行する時間"
+      ],
+      "correctIndex": 0,
+      "explanation": "抵抗性品種への変更は宿主側の感受性に働きかける。病原性を持つ病原体、感受性のある宿主、発病に適した環境の相互作用で病害を考える枠組みが病害三角である。",
+      "distractorRationales": [
+        "宿主である栽培植物の感受性を変える。",
+        "品種を替えても病原体の分類群そのものが変わるわけではない。",
+        "抵抗性品種への変更は気象条件を直接変える対策ではない。",
+        "時間を加えた病害ピラミッドもあるが、抵抗性品種への変更は主に宿主側への対策。"
+      ],
+      "sources": [
+        {
+          "title": "Francl (2001) — The Disease Triangle: a plant pathological paradigm revisited",
+          "url": "https://www.apsnet.org/edcenter/learningPP/Pages/DiseaseTriangle.aspx"
+        }
+      ]
+    },
+    "reason": "畜産から植物病理へ分類を戻し、三要素と対策の対応を問う。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "抄録L325–327のsusceptible host・virulent pathogen・favorable environmentを照合。全ての抵抗性品種が全条件で完全に感染を防ぐとはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8003-000000000062",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "害虫を捕食する昆虫の働きを利用して被害を減らす方法は、どの防除に分類されるか。",
+      "choices": [
+        "化学的防除",
+        "物理的防除",
+        "生物的防除",
+        "耕種的防除"
+      ],
+      "correctIndex": 2,
+      "explanation": "天敵による捕食など、生物の働きを使って害虫や被害を抑える方法は生物的防除に含まれる。",
+      "distractorRationales": [
+        "化学物質の作用を使う防除とは分類が異なる。",
+        "捕殺器具や遮断などの物理的な方法とは区別する。",
+        "捕食する天敵の働きを利用する生物的防除。",
+        "作付けや栽培管理を調整する方法とは区別する。"
+      ],
+      "sources": [
+        {
+          "title": "University of California IPM — What Is Integrated Pest Management?",
+          "url": "https://ipm.ucanr.edu/what-is-ipm/"
+        }
+      ]
+    },
+    "reason": "蒸留・精米などの肢を、生物的・化学的・物理的・耕種的な防除の比較へ改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8004-000000000156"
+    ],
+    "parameters": {
+      "b": -1,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "Biological control節L74–76のnatural enemiesとpredatorsを確認。天敵の放飼数・具体的な導入手順は扱わない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000155",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "総合的病害虫管理（IPM）の考え方として、最も適切なのはどれか。",
+      "choices": [
+        "被害や発生量を調べず、予定した間隔で同じ薬剤だけを使い続ける",
+        "対象を同定・監視し、必要性を判断して複数の予防・防除法を組み合わせる",
+        "天敵が一匹でもいれば、被害の程度にかかわらず管理は完了とする",
+        "化学的防除だけを使う方式をIPMと呼ぶ"
+      ],
+      "correctIndex": 1,
+      "explanation": "IPMでは対象の同定と監視から管理の必要性を判断し、耕種的・生物的・物理的・化学的な方法などを組み合わせる。特定の方法だけを無条件に使うという意味ではない。",
+      "distractorRationales": [
+        "発生の監視と必要性の判断を欠いている。",
+        "監視に基づいて手段を組み合わせる考え方。",
+        "天敵の存在だけで被害の程度や管理の必要性は決まらない。",
+        "化学的防除だけに限定する定義ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of California IPM — What Is Integrated Pest Management?",
+          "url": "https://ipm.ucanr.edu/what-is-ipm/"
+        }
+      ]
+    },
+    "reason": "輪作・排水改善まで一律に誤答としていた旧問を、統合的な管理の原理へ改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L59の複数手段の組合せとL68–69のmonitoring・identificationを確認。海外の農薬使用基準を日本の処方として引用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-pathogen-sign-versus-symptom",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "植物病理でいう病原体の「標徴（sign）」に当たる観察はどれか。",
+      "choices": [
+        "葉の黄化",
+        "植物全体の萎れ",
+        "病斑上に確認された病原菌の胞子",
+        "節間の短縮"
+      ],
+      "correctIndex": 2,
+      "explanation": "標徴は病原体そのものやその産物の観察で、病原菌の胞子などが含まれる。黄化・萎れ・節間短縮は宿主側の変化である病徴に当たる。",
+      "distractorRationales": [
+        "宿主の葉の色の変化であり病徴。",
+        "宿主の状態の変化であり病徴。",
+        "病原体の構造そのものを観察している。",
+        "宿主の生長の変化であり病徴。"
+      ],
+      "sources": [
+        {
+          "title": "American Phytopathological Society — Signs and Symptoms Point the Way",
+          "url": "https://www.apsnet.org/edcenter/outreachk12/k12Corner/Pages/2006_10.aspx"
+        }
+      ]
+    },
+    "reason": "標徴と病徴という観察対象の違いを問う独自問題。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L299の病原体構造・胞子と、L303–305の宿主応答というsign/symptomの区別を照合。胞子の外見だけで種を確定する手順とはしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000168",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "レタスモザイクウイルス（LMV）はアブラムシによって非永続的に媒介される。この伝搬様式の説明として適切なのはどれか。",
+      "choices": [
+        "ウイルスが口器へ一時的に付着することで媒介され、昆虫体内での増殖を前提としない",
+        "ウイルスが昆虫の体内で増殖してからでないと媒介されない",
+        "媒介には昆虫の核ゲノムへのウイルス配列の組込みが必須である",
+        "一度ウイルスを持ったアブラムシの全ての子孫が、世代を通じて必ず媒介する"
+      ],
+      "correctIndex": 0,
+      "explanation": "LMVの非永続的な伝搬では、ウイルスが口器に一時的に結び付いて媒介される。昆虫の体内で増殖することや、全ての子孫への垂直伝搬を前提としない。",
+      "distractorRationales": [
+        "LMVの非永続的な伝搬の特徴。",
+        "昆虫体内での増殖が必要な伝搬様式と混同している。",
+        "昆虫の核ゲノムへの組込みは必要条件ではない。",
+        "口器での一時的な保持から、全子孫の媒介能力は導けない。"
+      ],
+      "sources": [
+        {
+          "title": "University of Florida IFAS — The Updated Seed Testing Rule for Lettuce mosaic virus in Florida（生物学的説明）",
+          "url": "https://ask.ifas.ufl.edu/publication/IN1455"
+        }
+      ]
+    },
+    "reason": "旧解説の『永続性なら全て体内増殖する』という誤った一般化を削除し、特定の伝搬様式に限定した。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "UF/IFASのL50でnon-persistent・口器での一時的結合・潜伏期間なしを確認。種子検査の法律・検査値は設問へ転用していない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000189",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "植物の過敏感反応（HR）を特徴づける反応として、最も適切なのはどれか。",
+      "choices": [
+        "感染前から存在するクチクラが物理的な障壁として働く",
+        "病原体の認識部位の近くで、局所的な細胞死を生じる",
+        "根毛が形成され、土壌からの養分吸収の表面積が増える",
+        "茎が光の方向へ曲がり、受光条件が変わる"
+      ],
+      "correctIndex": 1,
+      "explanation": "HRは感染・認識部位の近くで見られる局所的な細胞死を特徴とする。全身獲得抵抗性と同じ範囲の現象ではなく、細胞死が全ての病原体に対して有利だとも限らない。",
+      "distractorRationales": [
+        "構成的な物理障壁であり、認識に伴う局所的な細胞死とは異なる。",
+        "局所的な細胞死がHRを特徴づける。",
+        "根の生育・栄養吸収の説明であり、HRの局所細胞死とは異なる。",
+        "光屈性の説明であり、HRの局所細胞死とは異なる。"
+      ],
+      "sources": [
+        {
+          "title": "The Globodera pallida Effector GpPDI1 Is a Functional Thioredoxin and Triggers Defense-Related Cell Death Independent of Its Enzymatic Activity (2020)",
+          "url": "https://apsjournals.apsnet.org/doi/10.1094/PHYTO-02-20-0038-R"
+        }
+      ]
+    },
+    "reason": "不確かな『最初のシグナル』の順序とカロースの誤記を除き、局所反応の定義へ改訂。",
+    "equivalentLegacyIds": [
+      "10000000-0000-4000-8007-000000000496"
+    ],
+    "parameters": {
+      "b": 0.3,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "2020年の原研究について検索から取得した導入部のrapid, localized cell death / HRを照合。出版社の直接openは失敗しており、実験全文・方法を読了した扱いにしない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000495",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "植物の細胞表面受容体による免疫（PTI）と、細胞内受容体による免疫（ETI）の関係として適切なのはどれか。",
+      "choices": [
+        "認識の仕組みが違うため、下流の防御は相互に影響しない",
+        "PTIが働くとETIはどの植物でも完全に停止する",
+        "二つの経路は相互に防御応答を強めることがある",
+        "ETIは細胞表面のPRRによる認識だけを指し、細胞内受容体は関与しない"
+      ],
+      "correctIndex": 2,
+      "explanation": "両者は認識に使う受容体などが異なる一方、下流の防御はつながり、相互に強め合うことが示されている。独立した二本の経路が単に別々に動くとだけ理解するのは不十分。",
+      "distractorRationales": [
+        "受容体の違いから、下流の機能的な独立は導けない。",
+        "どちらかが常に他方を完全停止させるという関係ではない。",
+        "細胞表面と細胞内の免疫の相互増強が示されている。",
+        "ETIには細胞内受容体による認識が関与し、細胞表面のPRRだけの応答を指さない。"
+      ],
+      "sources": [
+        {
+          "title": "Ngou et al. (2021) — Mutual potentiation of plant immunity by cell-surface and intracellular receptors（University of East Anglia研究記録）",
+          "url": "https://research-portal.uea.ac.uk/en/publications/mutual-potentiation-of-plant-immunity-by-cell-surface-and-intrace/"
+        }
+      ]
+    },
+    "reason": "PTIは動物に存在するという旧肢の曖昧さを除き、二経路の機能的な関係を問う。畜産から分類を訂正。",
+    "parameters": {
+      "b": 1.3,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "UEAに掲載されたNgouら2021年原論文抄録L22–25の相互増強を確認。シロイヌナズナの研究を全種・全病原体で同一の応答強度を保証する結果には広げない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-disease-incidence-and-area",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "面積が各100 cm²の葉40枚を調べ、10枚に病斑があり、全葉の病斑面積の合計は100 cm²だった。「病斑がある葉の割合」と「全40枚の葉面積に対する病斑面積の割合」の組合せはどれか。",
+      "choices": [
+        "25％と2.5％",
+        "2.5％と25％",
+        "25％と10％",
+        "10％と25％"
+      ],
+      "correctIndex": 0,
+      "explanation": "発病葉の割合は10/40＝25％。全葉面積は40×100＝4000 cm²なので、病斑面積の割合は100/4000＝2.5％。枚数を分母にする指標と面積を分母にする指標を区別する。",
+      "distractorRationales": [
+        "葉の枚数では25％、全葉面積では2.5％。",
+        "二つの指標を逆にしている。",
+        "10％は病斑のある10枚だけの葉面積を分母にした値。",
+        "病斑のある葉10枚という数をそのまま10％とはできない。"
+      ],
+      "sources": [
+        {
+          "title": "American Phytopathological Society — Plant Disease Epidemiology: Temporal Aspects",
+          "url": "https://www.apsnet.org/edcenter/sites/EpidemiologyTemporal/Pages/default.aspx"
+        },
+        {
+          "title": "Pethybridge & Nelson (2015) — Leaf Doctor: A New Portable Application for Quantifying Plant Disease Severity",
+          "url": "https://apsjournals.apsnet.org/doi/10.1094/PDIS-03-15-0319-RE"
+        }
+      ]
+    },
+    "reason": "発病割合と被害面積割合の分母を比較する独自問題。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "APS Temporal AspectsのL338–339でincidenceとseverityの観測単位を確認。Leaf Doctor原研究の取得された導入部で病斑面積/観測対象の面積という定義を照合。40枚・100 cm²の条件は独自で、実験データではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-economic-action-threshold",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "害虫管理でいう経済的被害許容水準（EIL）と防除要否の判断に使う閾値（ET）の違いとして、最も適切なのはどれか。",
+      "choices": [
+        "EILは害虫が1匹もいない状態、ETは害虫が初めて1匹見つかった状態である",
+        "ETは経済的被害に達するのを防ぐための行動判断の基準で、EILと同じ意味ではない",
+        "ETとEILは常に同じ値で、対応にかかる時間は関係しない",
+        "EILは作物の販売価格や防除費用に関係なく、生物種ごとに固定される"
+      ],
+      "correctIndex": 1,
+      "explanation": "EILは経済的被害が生じる水準、ETはそこへ達する前に対応の要否を判断するための実用的な基準である。発生の変化や対策が効くまでの時間などが関係する。",
+      "distractorRationales": [
+        "害虫がいるかいないかだけの区別ではない。",
+        "将来の被害を防ぐための行動判断と、被害水準を区別する。",
+        "対策に要する時間や個体数の変化を考慮するため、同じ意味ではない。",
+        "経済的被害を基準にするため、価格や費用などでも変わり得る。"
+      ],
+      "sources": [
+        {
+          "title": "University of Minnesota — Radcliffe's IPM World Textbook: Economic Thresholds and Economic Injury Levels",
+          "url": "https://ipmworld.umn.edu/pedigo"
+        }
+      ]
+    },
+    "reason": "単なる個体数の有無と経済的な判断の基準を区別する独自問題。",
+    "parameters": {
+      "b": 0.8,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L41–43のEILとL57–58のETを対照。L50に示される例外があるため『密度ETは例外なくEIL未満』とは書かない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-pesticide-mode-of-action-resistance",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "商品名が異なる二つの薬剤でも、同じ作用機構への抵抗性が問題となる場合がある。この点を判断するとき、直接比較する情報はどれか。",
+      "choices": [
+        "製造会社名",
+        "有効成分の含有率だけ",
+        "有効成分と作用機構の分類コード",
+        "乳剤や水和剤といった製剤の形だけ"
+      ],
+      "correctIndex": 2,
+      "explanation": "異なる商品名でも有効成分や作用機構が共通する場合がある。同じ作用機構への選択圧を考えるには、商品名だけでなく有効成分・作用機構の区分を確認する必要がある。",
+      "distractorRationales": [
+        "会社が違っても同じ有効成分・作用機構を使う場合がある。",
+        "含有率だけでは作用機構を区別できない。",
+        "有効成分と作用機構の区分が、同じ機構かを調べる直接の情報。",
+        "製剤の形が違っても、作用機構が同じ場合がある。"
+      ],
+      "sources": [
+        {
+          "title": "University of California IPM — Managing Pesticide Resistance",
+          "url": "https://ipm.ucanr.edu/agriculture/floriculture-and-ornamental-nurseries/managing-pesticide-resistance/"
+        }
+      ]
+    },
+    "reason": "商品名の変更と作用機構の変更を区別する独自問題。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L43–45の同一作用機構の反復と商品ラベル上の作用機構コード、L50–52を照合。個別薬剤の選定・回数・濃度を指示する設問ではない。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  },
+  {
+    "familyKey": "agri-parasitoid-versus-predator",
+    "domain": "農学",
+    "subdomain": "病害虫・植物病理",
+    "content": {
+      "question": "害虫の天敵として利用される捕食寄生者（parasitoid）の、一般的な昆虫捕食者との違いはどれか。",
+      "choices": [
+        "幼虫が宿主の体内や体表で発育し、通常はその宿主を最終的に死亡させる",
+        "幼虫が複数の獲物を次々と捕らえて食べ、宿主への定着期間を持たない",
+        "宿主の体内で発育するが、宿主を死亡させることはない",
+        "成虫だけが複数の獲物を次々と食べ、幼虫は宿主を利用しない"
+      ],
+      "correctIndex": 0,
+      "explanation": "寄生蜂などの捕食寄生者では、幼虫が宿主を利用して発育し、最終的に宿主を死亡させるのが典型的。一般的な捕食者が複数の獲物を食べる生活様式とは区別する。",
+      "distractorRationales": [
+        "捕食寄生者に見られる典型的な発育様式。",
+        "典型的な捕食者の生活様式で、宿主内や体表で発育する捕食寄生者と区別する。",
+        "宿主を最終的に死亡させる点が典型的な特徴。",
+        "幼虫による宿主の利用を除外しており、捕食寄生者の説明ではない。"
+      ],
+      "sources": [
+        {
+          "title": "University of California IPM — Natural enemies gallery",
+          "url": "https://ipm.ucanr.edu/natural-enemies/"
+        }
+      ]
+    },
+    "reason": "捕食と捕食寄生の生活様式を区別する独自問題。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "知識・条件理解・計算から置いた初期の仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceLocation": "L31のpredatorとL83–85のinsect parasitoidsを対照。宿主あたりの寄生者数を必ず1とするなどの一般化は避けた。",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "大学・IRRI・植物病理学会・原研究の公開部分で基本原理を照合。設問・四択・解説・計算例を独自に記述し、原文・図版・研究データは転載していない。個別農薬の処方や栽培手順ではなく知識問題。独立専門家の査読ではない。"
+    }
+  }
+]
