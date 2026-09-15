@@ -1,0 +1,464 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000055",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "βラクタマーゼによって生じる抗菌薬耐性の直接の機序はどれか。",
+      "choices": [
+        "薬剤を排出ポンプで細胞外へ運ぶ",
+        "薬剤の結合先であるPBPの構造を変える",
+        "薬剤のβラクタム環を加水分解する",
+        "薬剤が通る外膜ポリンの量を減らす"
+      ],
+      "correctIndex": 2,
+      "explanation": "βラクタマーゼはβラクタム環の結合を切って薬剤を不活化する酵素。排出・標的の変化・取り込みの低下は別の耐性機序。",
+      "distractorRationales": [
+        "酵素による分解ではなく能動的排出。",
+        "標的の変化であり、薬剤分子の分解ではない。",
+        "βラクタマーゼの触媒作用を表す。",
+        "細胞への流入を減らす機序。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §14.5 Drug Resistance",
+          "url": "https://openstax.org/books/microbiology/pages/14-5-drug-resistance"
+        }
+      ]
+    },
+    "reason": "旧問の時点・菌種を限定しない「最も広い」の順位付けを廃止。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§14.5 L36–49の酵素的不活化・排出・標的変化の比較。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000206",
+    "equivalentLegacyIds": ["10000000-0000-4000-8007-000000000128"],
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "グラム陰性菌のリポ多糖（LPS）のうち、内毒素活性を担う部分はどれか。",
+      "choices": [
+        "O抗原の多糖鎖",
+        "コア多糖",
+        "ペプチドグリカンのペプチド架橋",
+        "リピドA"
+      ],
+      "correctIndex": 3,
+      "explanation": "LPSの内毒素活性は主にリピドAに由来する。O抗原やコアは糖鎖部分で、ペプチドグリカンはLPSとは別の細胞壁成分。",
+      "distractorRationales": [
+        "抗原性に関わる糖鎖だが、問われた活性の本体ではない。",
+        "リピドAとは別の糖鎖部分。",
+        "LPSの構成部分ではない。",
+        "内毒素としての作用を担う脂質部分。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §15.3 Virulence Factors",
+          "url": "https://openstax.org/books/microbiology/pages/15-3-virulence-factors-of-bacterial-and-viral-pathogens"
+        }
+      ]
+    },
+    "reason": "旧問を脂質の分類から、LPSの構造と内毒素活性の対応へ改訂。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§15.3 L102・110のlipid Aという成分定義。毒性量や加熱条件は不使用。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000217",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "抗菌薬によって腸内細菌叢が乱れたときに増殖しやすくなり、下痢や大腸炎を起こすことで知られる菌はどれか。",
+      "choices": [
+        "Clostridioides difficile",
+        "Helicobacter pylori",
+        "Streptococcus pneumoniae",
+        "Mycobacterium tuberculosis"
+      ],
+      "correctIndex": 0,
+      "explanation": "C. difficileは、腸内の細菌叢が抗菌薬で変化した場合に増殖して感染症を起こすことがある。ただし抗菌薬使用中・使用後の下痢が全てこの菌によるわけではない。",
+      "distractorRationales": [
+        "この関連で知られる細菌。",
+        "主に胃の感染との関連で扱われる菌。",
+        "肺炎などを起こすが、この設問の関連を指す菌ではない。",
+        "結核の原因菌であり、この関連を指さない。"
+      ],
+      "sources": [
+        {
+          "title": "CDC — About C. diff",
+          "url": "https://www.cdc.gov/c-diff/about/index.html"
+        }
+      ]
+    },
+    "reason": "ウイルス名・疾患名を混ぜた旧選択肢を全て菌種にそろえ、全例との誤解を除く。",
+    "parameters": {
+      "b": -0.1,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L29–36・88–93・112の菌種、腸内細菌叢、全ての下痢ではないという限定。"
+    }
+  },
+  {
+    "familyKey": "medical-microbiology-acid-fast-mycolic",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "Mycobacterium属の抗酸性に関係する、細胞壁の特徴的な脂質はどれか。",
+      "choices": [
+        "タイコ酸",
+        "ミコール酸",
+        "リポ多糖",
+        "エルゴステロール"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mycobacterium属の細胞壁にはミコール酸を含む層があり、抗酸染色の性質に関係する。",
+      "distractorRationales": [
+        "典型的なグラム陽性菌の壁に見られる成分だが、指定された脂質ではない。",
+        "抗酸性に関係する特徴的な脂質。",
+        "グラム陰性菌の外膜の成分。",
+        "菌類の膜で重要なステロール。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §3.3 Prokaryotic Cells",
+          "url": "https://openstax.org/books/microbiology/pages/3-3-unique-characteristics-of-prokaryotic-cells"
+        }
+      ]
+    },
+    "reason": "生物のグラム陽性菌問題と別に、抗酸性に関わる構造を問う独自問。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§3.3 L157のmycolic acidsとacid-fastの説明。図や染色操作は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-microbiology-sterilization",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "器具に存在する生存微生物を、細菌の芽胞も含めて除去・死滅させる処理の区分はどれか。",
+      "choices": [
+        "清掃",
+        "通常の消毒",
+        "滅菌",
+        "静菌"
+      ],
+      "correctIndex": 2,
+      "explanation": "滅菌は芽胞を含む生存微生物の除去・死滅を目指す。通常の消毒や、増殖を抑える静菌と同じ意味ではない。",
+      "distractorRationales": [
+        "汚れを除く行為だけでは指定された微生物学的状態を意味しない。",
+        "通常の消毒では芽胞が残ることがある。",
+        "指定された処理区分。",
+        "増殖抑制であり、死滅や除去を意味しない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §13.1 Controlling Microbial Growth",
+          "url": "https://openstax.org/books/microbiology/pages/13-1-controlling-microbial-growth"
+        }
+      ]
+    },
+    "reason": "方法や温度を一律指定せず、処理区分の定義を問う。",
+    "parameters": {
+      "b": -0.7,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§13.1 L68–69・88の滅菌と消毒。食品の商業的無菌、プリオン対策、個別条件とは区別。"
+    }
+  },
+  {
+    "familyKey": "medical-microbiology-mic",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "抗菌薬のMIC（最小発育阻止濃度）が表すものはどれか。",
+      "choices": [
+        "規定した試験条件で、目に見える菌の増殖を抑える最低濃度",
+        "菌数を初期値の99.9％以上減らす最低濃度",
+        "薬剤が血中で到達する最高濃度",
+        "薬剤を投与した後の血中濃度の時間積分"
+      ],
+      "correctIndex": 0,
+      "explanation": "MICは規定した試験条件で、目に見える増殖を阻止する最低濃度。殺菌を評価するMBC、薬物動態のCmaxやAUCとは別。",
+      "distractorRationales": [
+        "MICの定義。",
+        "MBCの評価に対応する。",
+        "Cmaxであり感受性試験のMICではない。",
+        "AUCであり、濃度とは次元も異なる。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §14.6 Testing Antimicrobials",
+          "url": "https://openstax.org/books/microbiology/pages/14-6-testing-the-effectiveness-of-antimicrobials"
+        }
+      ]
+    },
+    "reason": "独自問。MICから投与量や臨床効果を一律に決めない。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§14.6 L50のMICとMBCの定義のみ。周辺の一律血中濃度推奨は使用しない。"
+    }
+  },
+  {
+    "familyKey": "medical-microbiology-viral-envelope",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "エンベロープを持つウイルスで、エンベロープの基本的な構造として適切なのはどれか。",
+      "choices": [
+        "ペプチドグリカンからなる細胞壁",
+        "ウイルスのゲノムそのもの",
+        "タンパク質だけでできたカプシド",
+        "脂質膜を基盤とし、ウイルスのタンパク質などを含む層"
+      ],
+      "correctIndex": 3,
+      "explanation": "エンベロープは脂質膜を基盤とする外被。ゲノムを包むタンパク質性のカプシドとは区別する。全てのウイルスが持つわけではない。",
+      "distractorRationales": [
+        "細菌の細胞壁の特徴を混同している。",
+        "外被ではなく遺伝情報。",
+        "カプシドとエンベロープは別の構造。",
+        "脂質とタンパク質を含む膜構造を表す。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §6.1 Viruses",
+          "url": "https://openstax.org/books/microbiology/pages/6-1-viruses"
+        }
+      ]
+    },
+    "reason": "細菌の細胞壁やカプシドとの違いを問う独自問。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のViral Structure：lipid layer・phospholipid membrane・viral glycoproteins。"
+    }
+  },
+  {
+    "familyKey": "medical-microbiology-prion-propagation",
+    "equivalentLegacyIds": ["10000000-0000-4000-8007-000000000148"],
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "プリオンの増加を説明する基本的な仕組みはどれか。",
+      "choices": [
+        "プリオン自身のDNAを複製する",
+        "異常な立体構造のタンパク質が、正常な同種タンパク質の構造変化を促す",
+        "プリオン自身のRNAを鋳型にタンパク質を翻訳する",
+        "細胞分裂でプリオン細胞が二つになる"
+      ],
+      "correctIndex": 1,
+      "explanation": "プリオンはタンパク質の異常な立体構造が伝わる現象に関わる。プリオン粒子自身の核酸ゲノムの複製や細胞分裂を基本機構としない。",
+      "distractorRationales": [
+        "プリオン粒子がDNAゲノムを持って増えるわけではない。",
+        "正常な同種タンパク質の構造変化を促す。",
+        "プリオン粒子のRNAゲノムを前提にしている点が違う。",
+        "プリオンは細胞ではない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §6.4 Prions",
+          "url": "https://openstax.org/books/microbiology/pages/6-4-viroids-virusoids-and-prions"
+        }
+      ]
+    },
+    "reason": "RNA病原体・ウイルス・細胞性微生物との違いを問う独自問。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "§6.4 L51–53のproteinaceous particleと内在性タンパク質のmisfolding。病型ごとの伝播の一般化は採用しない。"
+    }
+  },
+  {
+    "familyKey": "medical-microbiology-fungal-ergosterol",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "多くの菌類の細胞膜で重要なステロールで、一部の抗真菌薬の標的にもなるものはどれか。",
+      "choices": [
+        "コレステロール",
+        "シトステロール",
+        "エルゴステロール",
+        "カンペステロール"
+      ],
+      "correctIndex": 2,
+      "explanation": "エルゴステロールは多くの菌類の細胞膜を構成する。これ自体への結合や生合成の阻害を利用する抗真菌薬がある。",
+      "distractorRationales": [
+        "動物の膜の代表的なステロール。",
+        "植物で見られるフィトステロール。",
+        "この問いの膜成分に対応する。",
+        "植物で見られるフィトステロール。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §14.4 Antifungal Drugs",
+          "url": "https://openstax.org/books/microbiology/pages/14-4-mechanisms-of-other-antimicrobial-drugs"
+        }
+      ]
+    },
+    "reason": "標的の基礎知識を問う独自問。",
+    "parameters": {
+      "b": 0.4,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のergosterol synthesisとpolyenesの膜ergosterolへの結合。薬剤選択・用量は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-microbiology-biofilm-matrix",
+    "domain": "医歯薬学",
+    "subdomain": "微生物・感染症",
+    "content": {
+      "question": "バイオフィルムの特徴を表す記述はどれか。",
+      "choices": [
+        "微生物が細胞外の高分子の基質に包まれ、集団として存在する",
+        "微生物が互いに独立して液中を浮遊する状態だけを指す",
+        "一個の細菌を囲む莢膜だけを指す",
+        "食細胞が微生物を取り込んだ細胞内小胞だけを指す"
+      ],
+      "correctIndex": 0,
+      "explanation": "バイオフィルムでは細胞外の高分子からなる基質が微生物の集団を支える。単独細胞の莢膜や浮遊状態とは区別する。",
+      "distractorRationales": [
+        "集団と細胞外基質の関係を表す。",
+        "これは浮遊性の状態の説明。",
+        "一個の細胞の被膜と集団の基質を混同している。",
+        "宿主の食細胞内の構造との混同。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Microbiology, §9.1 Biofilm Structure",
+          "url": "https://openstax.org/books/microbiology/pages/9-1-how-microbes-grow"
+        }
+      ]
+    },
+    "reason": "バイオフィルムと単独細胞の被膜を区別する独自問。耐性を一律に遺伝としない。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "基礎機序と比較に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の公開教材の取得範囲で基礎事実を照合し、設問・四択・説明を独自作成。図表・症例・実験手順は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のBiofilm Structure、EPSが多糖・タンパク質・核酸などを含む基質という説明。"
+    }
+  }
+]

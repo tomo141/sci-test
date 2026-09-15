@@ -1,0 +1,462 @@
+[
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000045",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "典型的なアポトーシスの実行段階で、細胞内タンパク質の切断に中心的に関わる酵素群はどれか。",
+      "choices": [
+        "DNAポリメラーゼ",
+        "カスパーゼ",
+        "アデニル酸シクラーゼ",
+        "DNAリガーゼ"
+      ],
+      "correctIndex": 1,
+      "explanation": "カスパーゼはタンパク質を切断する酵素群で、アポトーシスの実行に関わる。",
+      "distractorRationales": [
+        "DNA合成に関わる酵素。",
+        "細胞内の基質タンパク質を切断する。",
+        "cAMPの合成に関わる酵素。",
+        "DNA断片をつなぐ反応に関わる。"
+      ],
+      "sources": [
+        {
+          "title": "University of Utah — WebPath, Cell Injury",
+          "url": "https://webpath.med.utah.edu/CINJHTML/CINJ014.html"
+        }
+      ]
+    },
+    "reason": "旧説明のアポトーシスは例外なく炎症なしという断定を除き、実行酵素に焦点化。",
+    "parameters": {
+      "b": 0.2,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "取得本文・検索索引のcaspasesによる細胞成分の分解。画像固有の形態記述は一般化しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8006-000000000059",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "急性炎症の局所で見られる発赤・熱感に、直接関係する変化はどれか。",
+      "choices": [
+        "血管収縮による局所血流の低下",
+        "血管透過性の亢進による血漿成分の漏出",
+        "血管拡張による局所血流の増加",
+        "痛覚受容器の感作"
+      ],
+      "correctIndex": 2,
+      "explanation": "炎症で血管が拡張して血流が増すことが、局所の発赤や熱感に関係する。腫脹には血管透過性の上昇などが関わる。",
+      "distractorRationales": [
+        "この組合せでは発赤・熱感を説明しない。",
+        "浮腫と血流増加は別の変化。",
+        "発赤と熱感を説明する主要な変化。",
+        "痛みの変化と血流による熱感を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, §4.6 Tissue Injury",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-6-tissue-injury-and-aging"
+        }
+      ]
+    },
+    "reason": "5徴候の歴史的な帰属を問わず、局所の機序へ改訂。",
+    "parameters": {
+      "b": -0.5,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のlocal vasodilation、increased blood flow、redness and heatの対応。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000105",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "上皮性の腫瘍について、悪性を示す性質として適切なのはどれか。",
+      "choices": [
+        "腫瘍が周囲の組織を圧迫することだけ",
+        "肉眼で大きく見えることだけ",
+        "細胞数が増えることだけ",
+        "周囲の組織へ浸潤し、転移する能力を持つこと"
+      ],
+      "correctIndex": 3,
+      "explanation": "浸潤や転移は悪性腫瘍の重要な性質。大きさや圧迫だけでは良性・悪性を決められない。良性でも部位などによって深刻な問題を起こし得る。",
+      "distractorRationales": [
+        "良性でも圧迫は起こり得る。",
+        "良性でも大きくなることがある。",
+        "細胞増加だけでは悪性の判定にならない。",
+        "悪性を特徴づける性質。ただし全例に診断時の転移があるという意味ではない。"
+      ],
+      "sources": [
+        {
+          "title": "NCI — What Is Cancer?",
+          "url": "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+        }
+      ]
+    },
+    "reason": "良性・悪性を大きさや有害性だけで区別しない。誤分類を病理へ修正。",
+    "parameters": {
+      "b": -0.6,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "NCI L25–27の浸潤・転移・良性の大きさと危険性の説明。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000112",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "がんに関係する遺伝子変化と、親からの遺伝の関係について適切なのはどれか。",
+      "choices": [
+        "遺伝子変化が関係していても、その変化が全て親から受け継がれたとは限らない",
+        "がん細胞の遺伝子変化は全て受精時から全身の細胞にある",
+        "後天的に起きたDNA変化はがんに関係しない",
+        "がんに関係する変化は必ず同じ形で子へ伝わる"
+      ],
+      "correctIndex": 0,
+      "explanation": "がんには細胞分裂時の誤りや環境要因で後から生じた遺伝子変化も関わる。遺伝子が関係することと、親から受け継いだ変化であることは同義ではない。",
+      "distractorRationales": [
+        "後天的な体細胞の変化と遺伝性の素因を区別している。",
+        "体細胞で後から生じる変化もある。",
+        "後天的変化も関係し得る。",
+        "がん細胞の体細胞変化がそのまま子へ伝わるとは限らない。"
+      ],
+      "sources": [
+        {
+          "title": "NCI — What Is Cancer?",
+          "url": "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+        }
+      ]
+    },
+    "reason": "感染に関する極端な誤答だけの旧問を、geneticとinheritedの区別へ変更。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "NCI L59–67の細胞分裂・環境要因・親からの継承の区別。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000121",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "腫瘍の組織学的gradeと、解剖学的な広がりを表すstageの対応はどれか。",
+      "choices": [
+        "gradeもstageも分化度などの組織像",
+        "gradeは腫瘍の広がり、stageは分化度などの組織像",
+        "gradeは分化度などの組織像、stageは原発巣や転移の広がり",
+        "gradeもstageも原発巣や転移の広がり"
+      ],
+      "correctIndex": 2,
+      "explanation": "組織学的gradeは分化度などの顕微鏡所見を評価する。解剖学的stageは原発巣・リンパ節・遠隔部位への広がりを扱う。がん種により、病期区分に追加要素を用いる方式もある。",
+      "distractorRationales": [
+        "stageの解剖学的な広がりとの区別がない。",
+        "対応が逆。",
+        "この設問で限定した意味に合う。",
+        "組織学的gradeを広がりと混同している。"
+      ],
+      "sources": [
+        {
+          "title": "NCI — Tumor Grade",
+          "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/tumor-grade"
+        }
+      ]
+    },
+    "reason": "stageはどの体系でも広がりだけ、という誤解を避ける。解剖学から病理へ再分類。",
+    "parameters": {
+      "b": 0.3,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "L17–25。乳がん等で病期に組織学的・分子情報も加える方式があるため、解剖学的な広がりと限定。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000135",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "肉芽腫の構成でいう「類上皮細胞」は、主にどの細胞に由来するか。",
+      "choices": [
+        "血管内皮細胞",
+        "マクロファージ",
+        "赤血球",
+        "角化細胞"
+      ],
+      "correctIndex": 1,
+      "explanation": "肉芽腫の類上皮細胞は、活性化して形態の変わったマクロファージ。上皮に似た見え方から名付けられており、上皮細胞そのものという意味ではない。",
+      "distractorRationales": [
+        "血管を内張りする細胞との混同。",
+        "肉芽腫を構成する類上皮細胞の由来。",
+        "酸素運搬に関わる細胞との混同。",
+        "上皮に似るという名前と上皮細胞の由来を混同している。"
+      ],
+      "sources": [
+        {
+          "title": "University of Utah — WebPath, Granulomatous Inflammation",
+          "url": "https://webpath.med.utah.edu/INFLHTML/INFL048.html"
+        }
+      ]
+    },
+    "reason": "肉芽腫と腫瘍の名称クイズから、類上皮細胞の由来へ焦点化。",
+    "parameters": {
+      "b": 0.7,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "取得本文のepithelioid macrophagesと細胞構成。補助的にLUNG035・LUNG038の検索索引も照合。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8007-000000000145",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "病理学でいう化生（metaplasia）の説明として適切なのはどれか。",
+      "choices": [
+        "細胞が全て壊死して、構造が失われること",
+        "同じ種類の細胞が大きくなること",
+        "同じ種類の細胞の数だけが増えること",
+        "ある分化した細胞型の組織が、別の分化した細胞型へ置き換わること"
+      ],
+      "correctIndex": 3,
+      "explanation": "化生は分化した細胞型の置換を指す。細胞・組織の異型や成熟の乱れを扱う異形成と同義ではない。化生が必ずがんへ進むという意味でもない。",
+      "distractorRationales": [
+        "壊死の説明であり、別の細胞型への置換ではない。",
+        "肥大に対応する。",
+        "過形成に対応する。",
+        "化生の基本的な意味。"
+      ],
+      "sources": [
+        {
+          "title": "University of Utah — WebPath, Cellular Transformation",
+          "url": "https://webpath.med.utah.edu/NEOHTML/NEOPL003.html"
+        }
+      ]
+    },
+    "reason": "異形成を一律に必ず進む前癌病変とする説明を避け、置換と異型を区別。",
+    "parameters": {
+      "b": 0.5,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "取得本文・検索索引のmetaplasiaとdysplasiaの定義。提示症例の不可避の進行は主張しない。"
+    }
+  },
+  {
+    "legacyId": "10000000-0000-4000-8004-000000000204",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "血中CRPが高いという結果だけから判断できる範囲として適切なのはどれか。",
+      "choices": [
+        "炎症の存在を考える材料になるが、原因や場所をこれだけで特定できない",
+        "炎症の原因が細菌感染だと確定する",
+        "炎症が起きている臓器を一つに特定できる",
+        "炎症を起こした病原体の菌種を特定できる"
+      ],
+      "correctIndex": 0,
+      "explanation": "CRPは炎症に応じて増えるタンパク質。さまざまな原因で上がり得るため、単独の数値から原因・部位を確定する検査ではない。",
+      "distractorRationales": [
+        "非特異的な炎症の指標としての限界を表す。",
+        "細菌感染に限らない。",
+        "部位を特定する情報ではない。",
+        "菌種同定の検査ではない。"
+      ],
+      "sources": [
+        {
+          "title": "MedlinePlus — C-Reactive Protein Test",
+          "url": "https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/"
+        }
+      ]
+    },
+    "reason": "CRPという名前を選ぶだけの旧問を、検査の解釈と限界へ改訂。",
+    "parameters": {
+      "b": 0.1,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "What isとWhat do the results meanの炎症反応、原因と部位を示さないという記述。"
+    }
+  },
+  {
+    "familyKey": "medical-pathology-hypertrophy",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "組織を構成する細胞の数は変わらず、一個一個の細胞が大きくなったことによる組織の増大を何というか。",
+      "choices": [
+        "過形成",
+        "化生",
+        "肥大",
+        "萎縮"
+      ],
+      "correctIndex": 2,
+      "explanation": "肥大は細胞の大きさの増加を指す。過形成は細胞数の増加。両方が同時に生じる場合もあるが、設問では数が変わらないと限定している。",
+      "distractorRationales": [
+        "細胞数の増加を指す。",
+        "別の細胞型への置換。",
+        "細胞一個の大きさが増す変化。",
+        "大きさの減少に関係する変化。"
+      ],
+      "sources": [
+        {
+          "title": "University of Utah — WebPath, Hypertrophy and Hyperplasia",
+          "url": "https://webpath.med.utah.edu/NEOHTML/NEOPL001.html"
+        }
+      ]
+    },
+    "reason": "組織の大きさと細胞数を区別する独自問。",
+    "parameters": {
+      "b": -0.2,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "取得本文・検索索引のhypertrophy＝sizeとhyperplasia＝number。原症例・画像は不使用。"
+    }
+  },
+  {
+    "familyKey": "medical-pathology-thromboembolism",
+    "domain": "医歯薬学",
+    "subdomain": "病理・腫瘍学",
+    "content": {
+      "question": "血管内でできた血栓の一部が離れ、血流に運ばれて別の血管をふさいだ。この閉塞はどれか。",
+      "choices": [
+        "血管攣縮",
+        "血栓塞栓症",
+        "血管壁の破裂",
+        "局所の血栓形成だけによる閉塞"
+      ],
+      "correctIndex": 1,
+      "explanation": "血栓の断片が移動して別の場所をふさぐのは血栓塞栓症。閉塞した場所で最初から血栓が作られる場合と区別する。",
+      "distractorRationales": [
+        "血管の収縮であり、血栓片の移動ではない。",
+        "移動した血栓片による閉塞を表す。",
+        "壁の破綻による出血とは異なる。",
+        "別の場所から運ばれたという条件を満たさない。"
+      ],
+      "sources": [
+        {
+          "title": "OpenStax — Anatomy and Physiology 2e, §18.5 Hemostasis",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-5-hemostasis"
+        }
+      ]
+    },
+    "reason": "血栓片の移動の有無を区別する独自問。",
+    "parameters": {
+      "b": 0,
+      "basis": "機序と分類の理解に基づく仮難度。実回答による校正前。",
+      "focus": false,
+      "anchor": false
+    },
+    "review": {
+      "status": "content_checked",
+      "reviewer": "Astra（内容・出典照合）",
+      "observedAt": "2026-09-15",
+      "sourceChecked": true,
+      "uniqueAnswerChecked": true,
+      "distractorRationalesChecked": true,
+      "releaseApproval": "approved",
+      "rightsBasis": "公的機関・大学の基礎説明の取得範囲と照合。設問・四択・説明は独自作成し、症例・図表・治療の指示は転載しない。独立専門家の査読ではない。",
+      "sourceLocation": "検索索引のthrombusが離れて血流に入り閉塞するという説明。全ての塞栓子が血栓という一般化はしない。"
+    }
+  }
+]
