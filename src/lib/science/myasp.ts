@@ -44,6 +44,16 @@ export type MyaspConnectionCheck = {
   fields?: MyaspFieldCheck[];
 };
 export type MyaspFieldCheck = { key: string; label: string | null; type: string | null; editable: boolean; ready: boolean };
+export class MyaspFieldPreparationError extends Error {
+  constructor(public readonly fields: MyaspFieldCheck[]) { super("myasp_fields_not_prepared"); }
+}
+function myaspFieldChecks(detail: MyaspSubscriber): MyaspFieldCheck[] {
+  return (Object.keys(MYASP_FIELDS) as (keyof typeof MYASP_FIELDS)[]).map(key => {
+    const field = detail.free_fields?.find(f => f.field_key === MYASP_FIELDS[key]);
+    return { key: MYASP_FIELDS[key], label: field?.field_label?.slice(0, 100) ?? null, type: field?.field_type.slice(0, 40) ?? null,
+      editable: field?.editable === true, ready: field?.editable === true && field.field_type === "hidden" && field.field_label === MYASP_FIELD_LABELS[key] };
+  });
+}
 
 // A successful transport handshake alone does not prove access to the intended scenario.
 // This read never requests subscriber counts, addresses, or writes.
@@ -66,11 +76,7 @@ export async function inspectMyaspFields(call: MyaspCall, config: MyaspConfigura
   if (!first) return [];
   const found = subscriber(first, config.scenario);
   const detail = subscriber(await call("get_subscriber_details", { subscriber_id: found.subscriber_id }), config.scenario, found.email);
-  return (Object.keys(MYASP_FIELDS) as (keyof typeof MYASP_FIELDS)[]).map(key => {
-    const field = detail.free_fields?.find(f => f.field_key === MYASP_FIELDS[key]);
-    return { key: MYASP_FIELDS[key], label: field?.field_label?.slice(0, 100) ?? null, type: field?.field_type.slice(0, 40) ?? null,
-      editable: field?.editable === true, ready: field?.editable === true && field.field_type === "hidden" && field.field_label === MYASP_FIELD_LABELS[key] };
-  });
+  return myaspFieldChecks(detail);
 }
 
 // The official gateway can wrap JSON in `result`. Do not accept prose, warnings, or partial saves as success.
@@ -133,10 +139,8 @@ export async function findMyaspSubscriber(call: MyaspCall, config: MyaspConfigur
 export async function updateMyaspFields(call: MyaspCall, config: MyaspConfiguration, s: MyaspSnapshot, remote: MyaspSubscriber, beforeSave: () => Promise<void> = async () => {}) {
   const detail = subscriber(await call("get_subscriber_details", { subscriber_id: remote.subscriber_id }), config.scenario, s.email!);
   const fields = myaspFreeFields(s, config);
-  for (const [key, fieldKey] of Object.entries(MYASP_FIELDS)) {
-    const field = detail.free_fields?.find(f => f.field_key === fieldKey);
-    if (!field?.editable || field.field_type !== "hidden" || field.field_label !== MYASP_FIELD_LABELS[key as keyof typeof MYASP_FIELDS]) throw new Error("myasp_fields_not_prepared");
-  }
+  const checks = myaspFieldChecks(detail);
+  if (checks.some(field => !field.ready)) throw new MyaspFieldPreparationError(checks);
   const changed = fields.filter(f => String(detail.free_fields!.find(v => v.field_key === f.field_key)?.value ?? "") !== f.value);
   if (!changed.length) return detail;
   await beforeSave();

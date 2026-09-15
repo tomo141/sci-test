@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-09-15T17:48:54.371Z",
+  "state": "passed",
+  "scope": "Real production UI in an isolated anonymous browser; no API mocks or mail",
+  "attemptId": "b570685f-e06a-47e2-a426-c17eefbfc164",
+  "checks": [
+    "default digits select without submitting",
+    "immediate correctness, explanation and optional details",
+    "saved feedback survives reload",
+    "opt-in digits submit immediately"
+  ],
+  "finishedAt": "2026-09-15T17:49:05.005Z",
+  "commit": "6c8a444e789fa5d6346756919f481a245e6983da",
+  "deployment": "55qPSKjfqKiCjXjdZ7VVkeeoLowf",
+  "cleanup": "pending"
+}

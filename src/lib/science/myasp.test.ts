@@ -84,6 +84,10 @@ describe("MyASP synchronization contract (synthetic data, no live mail)", () => 
     const wrongFields = { ...remote, free_fields: remote.free_fields.map(f => ({ ...f, field_label: "別の用途" })) };
     const wrong = vi.fn().mockResolvedValue(wrongFields);
     await expect(updateMyaspFields(wrong, config, snapshot, remote)).rejects.toThrow("myasp_fields_not_prepared"); expect(wrong).toHaveBeenCalledTimes(1);
+    const diagnostic = await updateMyaspFields(wrong, config, snapshot, { ...remote, email: snapshot.email! }).catch(error => error);
+    expect(diagnostic.fields).toHaveLength(12);
+    expect(diagnostic.fields.every((f: { ready: boolean }) => !f.ready)).toBe(true);
+    expect(JSON.stringify(diagnostic.fields)).not.toMatch(/reader@example|test-reader|subscriber_id|userId|value/);
     const partial = vi.fn().mockResolvedValue(remote);
     await expect(updateMyaspFields(partial, config, snapshot, remote)).rejects.toThrow("myasp_fields_not_saved");
     const revoked = vi.fn().mockResolvedValue(remote);

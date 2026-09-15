@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { checked, releaseConfig, service } from "./server";
 import { withMyasp } from "./myasp-client";
-import { emailHash, findMyaspSubscriber, mayResumeMyasp, myaspConfiguration, myaspData, subscriber, updateMyaspFields, type MyaspSnapshot } from "./myasp";
+import { emailHash, findMyaspSubscriber, mayResumeMyasp, myaspConfiguration, myaspData, MyaspFieldPreparationError, subscriber, updateMyaspFields, type MyaspSnapshot } from "./myasp";
 
 export async function runMyaspSyncJobs() {
   const config = myaspConfiguration();
@@ -84,7 +84,9 @@ export async function runMyaspSyncJobs() {
     return { state: "completed", outcome, synchronized: outcome === "active" ? 1 : 0 };
   } catch (error) {
     const code = error instanceof Error && /^myasp_[a-z_]{3,65}$/.test(error.message) ? error.message : "myasp_sync_failed";
-    try { await finish("failed", code); } finally { await db.rpc("science_end_job", { p_job: job, p_state: "failed", p_summary: { errorCode: code } }); }
-    return { state: "myasp_sync_failed", errorCode: code };
+    // The protected job response records reserved field metadata, never recipient identity or values.
+    const detail = { errorCode: code, ...(error instanceof MyaspFieldPreparationError ? { fields: error.fields } : {}) };
+    try { await finish("failed", code); } finally { await db.rpc("science_end_job", { p_job: job, p_state: "failed", p_summary: detail }); }
+    return { state: "myasp_sync_failed", ...detail };
   }
 }
