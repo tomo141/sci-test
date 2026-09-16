@@ -1,0 +1,28 @@
+{
+  "startedAt": "2026-09-16T05:53:11.267Z",
+  "state": "passed",
+  "attemptId": "omitted_from_public_record",
+  "checks": [
+    "numeric key selects without submission by default",
+    "saved feedback survives reload",
+    "20 real answers completed with immediate feedback",
+    "result uses p70 version and ten equally weighted domain scores",
+    "new maximum 990 and reference definition visible",
+    "completed result survives reload"
+  ],
+  "result": {
+    "version": "science-3pl-p70-linear-v2",
+    "answerCount": 20,
+    "total": 218,
+    "low": 35,
+    "high": 401
+  },
+  "finishedAt": "2026-09-16T05:54:05.727Z",
+  "cleanup": {
+    "state": "completed",
+    "remainingTestAttempts": 0,
+    "existingAttemptCount": 2,
+    "mailSent": false
+  },
+  "visualReview": "Result page screenshot inspected; score, map, range, next step and sharing controls visible"
+}

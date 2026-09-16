@@ -1,10 +1,10 @@
 {
   "observedOn": "2026-09-16",
   "timezone": "Asia/Tokyo",
-  "productionCommit": "835cc39b5b71e60e8506f74895f37a2139dbad5f",
-  "productionDeployment": "EXeXYRiZdfEZ6CAiNbGdBqWRvH7m",
-  "candidateCommit": "835cc39b5b71e60e8506f74895f37a2139dbad5f",
-  "candidateDeployment": "ApHfRskP49TQHmp9fyPhPBAPW4e5",
+  "productionCommit": "472bcfae741d99921c44036bcb967bfdc5d48ef5",
+  "productionDeployment": "9kAJ8NdP5HipgorqG9hm56o76AcZ",
+  "candidateCommit": "472bcfae741d99921c44036bcb967bfdc5d48ef5",
+  "candidateDeployment": "2NF4GM8tAfD4gnXujVdYm4MaSbt2",
   "candidateVerification": {
     "localFullLint": "passed",
     "localTypecheck": "passed",
@@ -12,10 +12,10 @@
     "vercelBuild": "ready",
     "vercelStandaloneLint": "skipped_because_covered_by_build",
     "buildLintObserved": true,
-    "productionPromotion": "completed_after_explicit_force_promote_approval",
-    "approvalReason": "Explicit approval of the Force Promote operation bypassing the standalone Lint requirement is required.",
+    "productionPromotion": "completed_after_fresh_exact_commit_lint_evidence",
+    "approvalReason": "User explicitly approved Force Promote conditional on successful checks; exact-commit local eslint exited 0, preview build Ready, Vercel TypeCheck exited 0, standalone Lint reported covered by build.",
     "previousPromotionRejection": "rejected_by_automatic_approval_review",
-    "readyAt": "2026-09-16T14:07:30+09:00"
+    "readyAt": "2026-09-16T14:46:59+09:00"
   },
   "hourly": {
     "name": "science-overhaul-hourly",
@@ -61,9 +61,22 @@
     "readOnlyCheck": {
       "requestId": 19,
       "requested": true,
-      "result": "not_observed_browser_tab_was_closed"
+      "result": "observed",
+      "httpStatus": 200,
+      "state": "connected",
+      "missingReservedFieldMetadataCount": 12
     }
   },
   "scope": "Operational states and schema metadata only; no recipient identities, field values, credentials or backups.",
-  "previousProductionCommit": "c4f32f6882885b53f7bea99dfb0eb9010bd363bb"
+  "previousProductionCommit": "835cc39b5b71e60e8506f74895f37a2139dbad5f",
+  "scoring": {
+    "model": "science-3pl-p70-linear-v2",
+    "release": "87d471d0-22dd-4a4c-9bb9-ec4bc6182392",
+    "migration32": "applied_hash_matches",
+    "questionParameters": "copied_unchanged",
+    "realTrial": "20_answers_completed_and_result_reloaded",
+    "legacyData": "backup_values_unchanged",
+    "empiricalAccuracy": "not_validated",
+    "abilityDescriptors": "proposal_not_published"
+  }
 }

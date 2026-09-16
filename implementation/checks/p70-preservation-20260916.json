@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-09-16T05:53:17.454Z",
+  "scope": "Existing attempts, issued questions, answers, old frozen parameters and configuration; no row data or identifiers",
+  "checks": [
+    {
+      "table": "science_attempts",
+      "previousRows": 2,
+      "currentRows": 2,
+      "unchanged": true
+    },
+    {
+      "table": "science_issued",
+      "previousRows": 21,
+      "currentRows": 21,
+      "unchanged": true
+    },
+    {
+      "table": "science_answers",
+      "previousRows": 20,
+      "currentRows": 20,
+      "unchanged": true
+    },
+    {
+      "table": "science_release_items",
+      "previousRows": 1000,
+      "currentRows": 1000,
+      "unchanged": true
+    },
+    {
+      "table": "science_config",
+      "previousRows": 2,
+      "currentRows": 2,
+      "unchanged": true
+    }
+  ]
+}
