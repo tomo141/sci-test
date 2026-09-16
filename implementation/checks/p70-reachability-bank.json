@@ -1,0 +1,702 @@
+[
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 2,
+    "c": 0.25,
+    "revisionId": "b215f634-98f3-51fd-96f1-e00bcb1c69e5"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.9,
+    "c": 0.25,
+    "revisionId": "4d65725a-5072-5a39-a43d-fc7a1037d1b7"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.8,
+    "c": 0.25,
+    "revisionId": "2fa17423-57d5-517d-a8e3-b71835fbe7c3"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.8,
+    "c": 0.25,
+    "revisionId": "ca7f9911-7abc-5c71-9572-245a609406a3"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.6,
+    "c": 0.25,
+    "revisionId": "4647816b-869a-5303-bf90-d34dcda2c6a5"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.3,
+    "c": 0.25,
+    "revisionId": "da30b5f2-8df2-5dad-bc26-3c1b017671d5"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.3,
+    "c": 0.25,
+    "revisionId": "ddba7806-7405-588f-b1a9-e1c84a4b2282"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "6b5ad6a5-0ba3-5777-b54f-b9edb993d20b"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "c021f3b0-65eb-5478-b417-913d6a31fd1f"
+  },
+  {
+    "domain": "数学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "f8b8c70e-18e2-54e3-9907-d000683c073a"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 2,
+    "c": 0.25,
+    "revisionId": "8c3bb884-f6bd-5e82-bcb2-976f65f6282d"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.9,
+    "c": 0.25,
+    "revisionId": "5da0b3c2-13ad-5196-ad60-2bea9524e8d6"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.9,
+    "c": 0.25,
+    "revisionId": "a7075e74-67cc-5a3b-bf9c-0b1bfcc11cf3"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.8,
+    "c": 0.25,
+    "revisionId": "3efc6aca-fe7c-5520-8f63-0d5c594acf4c"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.7,
+    "c": 0.25,
+    "revisionId": "74d3ae14-8e83-5262-80ff-d4d37fc8ff0e"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.7,
+    "c": 0.25,
+    "revisionId": "d6516a2a-2e7f-5bf4-9611-ed7aa2e7023f"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.7,
+    "c": 0.25,
+    "revisionId": "ec4d7c91-55ee-5561-ae10-e00c921dd1c5"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.6,
+    "c": 0.25,
+    "revisionId": "8bc66aba-7597-5a6b-844e-142f156c1acd"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.6,
+    "c": 0.25,
+    "revisionId": "fd868b30-2eb4-5f17-98ad-d75cab93c272"
+  },
+  {
+    "domain": "物理",
+    "a": 1,
+    "b": 1.5,
+    "c": 0.25,
+    "revisionId": "0fa4f95c-3f49-539d-9d91-43b5ab101eb4"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.9,
+    "c": 0.25,
+    "revisionId": "3e3abd67-9aa6-5967-843e-40c79bcb68c2"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.7,
+    "c": 0.25,
+    "revisionId": "d25901a4-0dc7-5966-967e-24a570a0cdea"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "0ba8ccdb-fd18-58c0-b738-79460ab38b14"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "11360c25-a42b-5eb3-9546-ba8c8a85f65c"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "dd48529e-9b0f-5067-8b3a-9e017885dc33"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "1785f227-dd48-5049-b114-4a754d0cb8cb"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "1eb529c0-db52-5188-bb5d-9335ded294b2"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "a4445642-a550-54ec-8211-d79c45f340ae"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "c6c7d96e-051c-514b-b18e-251cbd5afc9e"
+  },
+  {
+    "domain": "化学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "7d726665-3d8a-5f2a-ac93-bfcdbe72e20f"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "69ce2a6c-8270-5cf3-9a0e-ce7faa206630"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "1b80a017-f5f5-55dd-b884-48160ec44490"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "473fbc9f-c27f-5c8f-8999-1709c50493b3"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "7504997f-820e-5e5a-8c9a-956990b4641f"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 0.8,
+    "c": 0.25,
+    "revisionId": "79a34f82-4e21-5012-8559-19d8d60a2d38"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 0.8,
+    "c": 0.25,
+    "revisionId": "9fb8a791-7091-5932-b058-b19c02327b45"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 0.8,
+    "c": 0.25,
+    "revisionId": "de3a289a-77b9-5ef4-aabb-a6d1821bfe65"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 0.8,
+    "c": 0.25,
+    "revisionId": "dfdd91ec-01c1-5c68-b138-07719e5c44b2"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 0.7,
+    "c": 0.25,
+    "revisionId": "27679d6b-9736-51b8-8e27-18907771691e"
+  },
+  {
+    "domain": "生物",
+    "a": 1,
+    "b": 0.7,
+    "c": 0.25,
+    "revisionId": "2f7efabf-9741-54cc-ae50-e695f0c3eaeb"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 1.5,
+    "c": 0.25,
+    "revisionId": "ce4f1ee8-3be6-5c45-ac04-28cd3e276b18"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 1.3,
+    "c": 0.25,
+    "revisionId": "fcaab2ae-f6ba-5f58-aca0-afa4f9b58c5e"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "4ffe090f-a45d-598e-9856-01d101c34a98"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "7a669576-63c3-5cf5-b3de-c889249f0a83"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "3e5667d2-77b5-5f7f-98a1-306abe584cbb"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "572620d8-758d-5071-a7f1-3e7b70604d14"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "b9c24b53-a2a8-5d20-b428-b99562e9a73f"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "23352529-30ed-5017-ad57-a297ff7bc66f"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "805bf069-60a0-54a4-abf2-466309a6db6f"
+  },
+  {
+    "domain": "地学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "a7fb5b64-7bce-5c77-ab1c-dede48b13bad"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.8,
+    "c": 0.25,
+    "revisionId": "18702f9b-7961-5318-8ecf-f33870ddb37e"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.6,
+    "c": 0.25,
+    "revisionId": "a8258bbc-3261-5cba-bac2-52424c7aea8a"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.5,
+    "c": 0.25,
+    "revisionId": "ae39764b-6cac-5c79-a7fe-d71d1724240d"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "55f25f8e-1a72-5bad-b5dc-ce9e2535213c"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "88281b9f-08cd-5d3f-826e-8f64f5aa02c7"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "e2757a9e-9ada-5e9f-8eff-cddd64c2e777"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.3,
+    "c": 0.25,
+    "revisionId": "b391ecfd-8ece-5688-a187-a17a9b4b7f69"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.3,
+    "c": 0.25,
+    "revisionId": "d9688f2a-d785-50e1-bb52-489604bed560"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "9d49acc6-d187-5f70-8e7c-a4ac01ba0c78"
+  },
+  {
+    "domain": "工学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "075f3d5d-06d7-56a3-bbc6-e0113bb638fd"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "8d79829f-4464-5c8d-92fd-d5c95f3f1e71"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1.3,
+    "c": 0.25,
+    "revisionId": "b9407604-64c5-5159-a817-924eff3145e8"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "7f2b7739-3f6f-52d4-b8cc-e1802449a065"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "fee0fc5a-c92e-55fe-986f-e9bd19b72841"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "47f4874f-ed7b-59a0-8a69-f5df58819d2e"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "efcca5ab-636b-5349-a552-4a82cb616e02"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "e5bafeff-105e-5cd0-858e-6506d9bf8f46"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "f2d64610-8f98-5f9b-bf86-48ffc348f2e8"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "4e90dd45-25a0-5632-89cc-d97d6a6e4ac6"
+  },
+  {
+    "domain": "農学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "b4884831-8b85-5f24-ac78-1e3b59992e20"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.7,
+    "c": 0.25,
+    "revisionId": "888aa739-de46-560f-92d9-39da42247579"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.4,
+    "c": 0.25,
+    "revisionId": "9f57bf1b-91d2-5220-b6e0-87a7d4a882e9"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.3,
+    "c": 0.25,
+    "revisionId": "48c0df37-3547-563f-9321-68abfe9145f9"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "1d4371ca-2c5d-502e-804a-789863d0acf0"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "475c9d20-4971-5dfd-99f5-6da818e1686d"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "786530a5-5884-5403-b1b1-02a1c6fd1a94"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "946e1273-fbc2-54fd-8c7b-bbd06ad6cbcc"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "f3fe3d0d-912f-58da-9fdb-b5f0cc7c9781"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "7c3d4c10-e7a6-52ba-8aad-f971f4d5c687"
+  },
+  {
+    "domain": "情報・計算機科学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "57a5c138-02cf-57c8-bc30-005965e56208"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "ed5c1e22-a907-5b9d-8463-04acbcad3ab3"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "1c2d5ef7-a685-565c-ace1-9eafd020e230"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "66958f6e-fda7-58b9-91cf-34e216ebac84"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "6f7225e4-8ca8-5373-8375-3ce61f967c86"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.9,
+    "c": 0.25,
+    "revisionId": "d8daba49-6eb2-5f14-8c90-c7fba0123833"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.8,
+    "c": 0.25,
+    "revisionId": "1a8c0f29-d892-5530-9270-2cd675d5ebc4"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.8,
+    "c": 0.25,
+    "revisionId": "4673af79-5948-5b1e-a337-0b214c290ba3"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.7,
+    "c": 0.25,
+    "revisionId": "2e2a5502-3a5d-5a35-b433-bde3c6fff321"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.7,
+    "c": 0.25,
+    "revisionId": "5c8e02c6-d88b-580e-95b9-335e4ca09a72"
+  },
+  {
+    "domain": "医歯薬学",
+    "a": 1,
+    "b": 0.7,
+    "c": 0.25,
+    "revisionId": "6b407f3c-2b1d-5c1f-aca5-c0b13840eb93"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.2,
+    "c": 0.25,
+    "revisionId": "57cc202b-1f97-5b3b-a46e-f6d61caaf5e9"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "0bfd4af0-368f-5ba2-b78d-d758fbd69f1a"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "342c0b67-039f-5e16-8290-4ed3e9b5b53c"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "3760123f-3867-5161-8d30-a87b64f1dc97"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "526c6334-edba-596d-ab4b-fa760b9f8639"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "616ee1ab-9edd-557b-937f-078b24aca8b4"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "adeb40ea-361c-5d29-b043-c070b2828ff2"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1.1,
+    "c": 0.25,
+    "revisionId": "f612f4ee-b28d-55d3-9307-cbafa01ebc3a"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "8ac634cc-9ff5-5215-9900-db2af3447969"
+  },
+  {
+    "domain": "人文社会科学",
+    "a": 1,
+    "b": 1,
+    "c": 0.25,
+    "revisionId": "d43246ff-fbef-5e15-853f-4d34b503b761"
+  }
+]

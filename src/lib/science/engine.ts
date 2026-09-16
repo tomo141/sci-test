@@ -1,3 +1,5 @@
+import { evidenceModels } from "./versions";
+import { activeModel } from "./active-model";
 import { randomInt } from "node:crypto";
 import { correctionState, correctedResult, refreshCorrectedAttempt } from "./corrections";
 import type { ScienceDomain } from "@/src/lib/data/taxonomy";
@@ -41,9 +43,9 @@ async function exposureHistory(ctx: Context) {
   return new Map(seen.map(s => [s.family_id, s.presentation_count]));
 }
 
-async function previousTrialEvidence(ctx: Context, attemptId: string) {
+async function previousTrialEvidence(ctx: Context, attemptId: string, modelVersion: string) {
   const rows = await readAll<{ domain: ScienceDomain; a: number; b: number; c: number; is_correct: boolean; answered_at: string }>((from, to) => {
-    let query = ctx.db.from("science_responses").select("domain,a,b,c,is_correct,answered_at").eq("eligible", true).eq("model_version", MODEL_VERSION).neq("attempt_id", attemptId);
+    let query = ctx.db.from("science_responses").select("domain,a,b,c,is_correct,answered_at").eq("eligible", true).in("model_version", evidenceModels(modelVersion)).neq("attempt_id", attemptId);
     query = ctx.userId ? query.or(`visitor_id.eq.${ctx.visitor.id},user_id.eq.${ctx.userId}`) : query.eq("visitor_id", ctx.visitor.id);
     return query.order("answered_at").order("attempt_id").order("ordinal").range(from, to);
   });
@@ -106,13 +108,13 @@ export async function examState(ctx: Context, id: string, feedbackOrdinal?: numb
     } else {
       const [candidates, history] = await Promise.all([
         candidateBank(ctx, a.release_id, a.kind, new Set(records.issued.map(q => q.family_id))),
-        a.kind === "trial" ? previousTrialEvidence(ctx, a.id) : Promise.resolve([] as Response[])
+        a.kind === "trial" ? previousTrialEvidence(ctx, a.id, a.model_version) : Promise.resolve([] as Response[])
       ]);
       const random=()=>randomInt(2 ** 24)/2 ** 24;
       const leastSeen = Math.min(...candidates.map(c => c.seenCount ?? 0));
       const labCandidates = candidates.filter(c => (c.seenCount ?? 0) === leastSeen);
       const lab=a.kind==="lab"?laboratoryChoice(labCandidates.map(c=>({...c,trustWeight:c.trustWeight??1})),random):null;
-      const next = a.kind==="lab"?(lab?{candidate:lab.candidate,predicted:.625,selectionProbability:lab.probability,reason:`${leastSeen > 0 ? "repeat-fallback-v1:" : ""}lab-trust+25pct-uniform-v1`,candidateCount:labCandidates.length}:null):selectCandidate(candidates, records.responses, a.definition, random, history);
+      const next = a.kind==="lab"?(lab?{candidate:lab.candidate,predicted:.625,selectionProbability:lab.probability,reason:`${leastSeen > 0 ? "repeat-fallback-v1:" : ""}lab-trust+25pct-uniform-v1`,candidateCount:labCandidates.length}:null):selectCandidate(candidates, records.responses, a.definition, random, history, a.model_version);
       if (!next) throw new ScienceError("この条件で出せる問題が不足しています。回答済みの内容は保存されています。", 409, "bank_exhausted");
       revisionId = next.candidate.revisionId; predicted = next.predicted; probability = next.selectionProbability; reason = next.reason; candidateCount = next.candidateCount;
     }
@@ -137,7 +139,7 @@ export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDo
   if (activeResponse.error) checked(activeResponse);
   if (activeResponse.data) throw new ScienceError("中断中の受験があります。再開するか、終了してから新しい受験を始めてください。", 409, "active_attempt", { attemptId: activeResponse.data.id });
   const exam = definition(kind, domain, ctx.visitor.full_length);
-  let releaseId: string | null = null, week: string | null = null;
+  let releaseId: string | null = null, week: string | null = null, modelVersion = await activeModel(ctx.db);
   if (kind === "weekly") {
     week = periodBounds("week").key;
     exam.week=week;exam.label=`${week}週の10問`;
@@ -146,13 +148,14 @@ export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDo
     if (!set.data) throw new ScienceError("今週の問題は準備中です。", 409, "weekly_pending");
   } else {
     if (kind !== "lab") {
-      const release = await ctx.db.from("science_releases").select("id").eq("state", "active").maybeSingle();
+      const release = await ctx.db.from("science_releases").select("id,model_version").eq("state", "active").maybeSingle();
       if (release.error) checked(release);
       releaseId = release.data?.id ?? null;
+      modelVersion = release.data?.model_version ?? MODEL_VERSION;
     }
     if (!hasCapacity(await candidateBank(ctx, releaseId, kind), exam)) throw new ScienceError(kind === "lab" ? "投稿問題を準備しています。みんなの作問をお待ちください。" : "この受験に必要な問題がまだ揃っていません。別の分野や今週の10問をお楽しみください。", 409, "bank_exhausted");
   }
-  const a = checked(await ctx.db.rpc("science_create_attempt", { p_visitor: ctx.visitor.id, p_user: ctx.userId, p_definition: exam, p_release: releaseId, p_model: MODEL_VERSION, p_week: week })) as Attempt;
+  const a = checked(await ctx.db.rpc("science_create_attempt", { p_visitor: ctx.visitor.id, p_user: ctx.userId, p_definition: exam, p_release: releaseId, p_model: modelVersion, p_week: week })) as Attempt;
   return examState(ctx, a.id);
 }
 

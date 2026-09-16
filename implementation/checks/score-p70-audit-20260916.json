@@ -1,0 +1,321 @@
+{
+  "generatedAt": "2026-09-16T05:15:19.068Z",
+  "sourceHash": "2eeea5d1019dc84b192629c01734020f48cd72115ee022e774355eea17e8a354",
+  "model": "science-3pl-p70-linear-v2",
+  "gridUpper": 10,
+  "absoluteTotalCeiling": 990,
+  "parametersAreProvisional": true,
+  "participantsAreSimulated": true,
+  "extreme": [
+    {
+      "count": 20,
+      "pattern": "wrong",
+      "min": 64,
+      "max": 120,
+      "runs": [
+        {
+          "total": 64,
+          "width": 224,
+          "domainWidth": 56.2,
+          "actualCorrect": 0
+        },
+        {
+          "total": 85,
+          "width": 248,
+          "domainWidth": 58.7,
+          "actualCorrect": 0
+        },
+        {
+          "total": 78,
+          "width": 240,
+          "domainWidth": 58.1,
+          "actualCorrect": 0
+        },
+        {
+          "total": 89,
+          "width": 252,
+          "domainWidth": 59.8,
+          "actualCorrect": 0
+        },
+        {
+          "total": 120,
+          "width": 286,
+          "domainWidth": 63,
+          "actualCorrect": 0
+        }
+      ]
+    },
+    {
+      "count": 20,
+      "pattern": "correct",
+      "min": 729,
+      "max": 747,
+      "runs": [
+        {
+          "total": 729,
+          "width": 416,
+          "domainWidth": 94,
+          "actualCorrect": 20
+        },
+        {
+          "total": 741,
+          "width": 420,
+          "domainWidth": 94.3,
+          "actualCorrect": 20
+        },
+        {
+          "total": 735,
+          "width": 420,
+          "domainWidth": 94.3,
+          "actualCorrect": 20
+        },
+        {
+          "total": 740,
+          "width": 422,
+          "domainWidth": 94.3,
+          "actualCorrect": 20
+        },
+        {
+          "total": 747,
+          "width": 428,
+          "domainWidth": 94.9,
+          "actualCorrect": 20
+        }
+      ]
+    },
+    {
+      "count": 50,
+      "pattern": "wrong",
+      "min": 10,
+      "max": 10,
+      "runs": [
+        {
+          "total": 10,
+          "width": 146,
+          "domainWidth": 30.3,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 147,
+          "domainWidth": 30.4,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 148,
+          "domainWidth": 32,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 149,
+          "domainWidth": 34.3,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 147,
+          "domainWidth": 31.7,
+          "actualCorrect": 0
+        }
+      ]
+    },
+    {
+      "count": 50,
+      "pattern": "correct",
+      "min": 952,
+      "max": 977,
+      "runs": [
+        {
+          "total": 974,
+          "width": 187,
+          "domainWidth": 53.9,
+          "actualCorrect": 50
+        },
+        {
+          "total": 972,
+          "width": 188,
+          "domainWidth": 52.9,
+          "actualCorrect": 50
+        },
+        {
+          "total": 968,
+          "width": 193,
+          "domainWidth": 54.4,
+          "actualCorrect": 50
+        },
+        {
+          "total": 952,
+          "width": 209,
+          "domainWidth": 55.6,
+          "actualCorrect": 50
+        },
+        {
+          "total": 977,
+          "width": 183,
+          "domainWidth": 52.9,
+          "actualCorrect": 50
+        }
+      ]
+    },
+    {
+      "count": 100,
+      "pattern": "wrong",
+      "min": 10,
+      "max": 10,
+      "runs": [
+        {
+          "total": 10,
+          "width": 135,
+          "domainWidth": 16.3,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 135,
+          "domainWidth": 16,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 135,
+          "domainWidth": 16.7,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 136,
+          "domainWidth": 17.5,
+          "actualCorrect": 0
+        },
+        {
+          "total": 10,
+          "width": 135,
+          "domainWidth": 16.3,
+          "actualCorrect": 0
+        }
+      ]
+    },
+    {
+      "count": 100,
+      "pattern": "correct",
+      "min": 990,
+      "max": 990,
+      "runs": [
+        {
+          "total": 990,
+          "width": 144,
+          "domainWidth": 25.4,
+          "actualCorrect": 100
+        },
+        {
+          "total": 990,
+          "width": 145,
+          "domainWidth": 26.2,
+          "actualCorrect": 100
+        },
+        {
+          "total": 990,
+          "width": 144,
+          "domainWidth": 25.3,
+          "actualCorrect": 100
+        },
+        {
+          "total": 990,
+          "width": 145,
+          "domainWidth": 27.3,
+          "actualCorrect": 100
+        },
+        {
+          "total": 990,
+          "width": 144,
+          "domainWidth": 24.6,
+          "actualCorrect": 100
+        }
+      ]
+    }
+  ],
+  "simulations": [
+    {
+      "count": 50,
+      "theta": -2,
+      "truth": 100,
+      "mean": 221.41666666666666,
+      "bias": 121.41666666666666,
+      "rmse": 130.556820324843,
+      "meanIntervalWidth": 304.0833333333333,
+      "meanDomainIntervalWidth": 63.20000000000001
+    },
+    {
+      "count": 50,
+      "theta": 0,
+      "truth": 500,
+      "mean": 489.75,
+      "bias": -10.25,
+      "rmse": 45.13036671687922,
+      "meanIntervalWidth": 305.5,
+      "meanDomainIntervalWidth": 81.00833333333334
+    },
+    {
+      "count": 50,
+      "theta": 2,
+      "truth": 900,
+      "mean": 798,
+      "bias": -102,
+      "rmse": 115.4058057465048,
+      "meanIntervalWidth": 312.9166666666667,
+      "meanDomainIntervalWidth": 68.29166666666667
+    },
+    {
+      "count": 50,
+      "theta": 3,
+      "truth": 990,
+      "mean": 889.5,
+      "bias": -100.5,
+      "rmse": 107.10820074423184,
+      "meanIntervalWidth": 267,
+      "meanDomainIntervalWidth": 61.69166666666667
+    },
+    {
+      "count": 100,
+      "theta": -2,
+      "truth": 100,
+      "mean": 153.91666666666666,
+      "bias": 53.91666666666666,
+      "rmse": 65.95010740451198,
+      "meanIntervalWidth": 249.83333333333334,
+      "meanDomainIntervalWidth": 48.40833333333333
+    },
+    {
+      "count": 100,
+      "theta": 0,
+      "truth": 500,
+      "mean": 480.5,
+      "bias": -19.5,
+      "rmse": 42.90299134870046,
+      "meanIntervalWidth": 226.5,
+      "meanDomainIntervalWidth": 67.03333333333333
+    },
+    {
+      "count": 100,
+      "theta": 2,
+      "truth": 900,
+      "mean": 824,
+      "bias": -76,
+      "rmse": 84.13679337840253,
+      "meanIntervalWidth": 236.66666666666666,
+      "meanDomainIntervalWidth": 50.291666666666664
+    },
+    {
+      "count": 100,
+      "theta": 3,
+      "truth": 990,
+      "mean": 926.75,
+      "bias": -63.25,
+      "rmse": 67.55429914767329,
+      "meanIntervalWidth": 193,
+      "meanDomainIntervalWidth": 38.14166666666667
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "observedOn": "2026-09-16",
   "timezone": "Asia/Tokyo",
-  "productionCommit": "c4f32f6882885b53f7bea99dfb0eb9010bd363bb",
-  "productionDeployment": "Hy3nu5ALsjmNnLuNbmLvwbhy7X4m",
+  "productionCommit": "835cc39b5b71e60e8506f74895f37a2139dbad5f",
+  "productionDeployment": "EXeXYRiZdfEZ6CAiNbGdBqWRvH7m",
   "candidateCommit": "835cc39b5b71e60e8506f74895f37a2139dbad5f",
   "candidateDeployment": "ApHfRskP49TQHmp9fyPhPBAPW4e5",
   "candidateVerification": {
@@ -12,28 +12,58 @@
     "vercelBuild": "ready",
     "vercelStandaloneLint": "skipped_because_covered_by_build",
     "buildLintObserved": true,
-    "productionPromotion": "rejected_by_automatic_approval_review",
-    "approvalReason": "Explicit approval of the Force Promote operation bypassing the standalone Lint requirement is required."
+    "productionPromotion": "completed_after_explicit_force_promote_approval",
+    "approvalReason": "Explicit approval of the Force Promote operation bypassing the standalone Lint requirement is required.",
+    "previousPromotionRejection": "rejected_by_automatic_approval_review",
+    "readyAt": "2026-09-16T14:07:30+09:00"
   },
   "hourly": {
     "name": "science-overhaul-hourly",
     "schedule": "17 * * * *",
     "activeReadback": true,
-    "manualHttpCheck": {"requestId": 6, "status": 200, "timedOut": false, "state": "completed"},
+    "manualHttpCheck": {
+      "requestId": 6,
+      "status": 200,
+      "timedOut": false,
+      "state": "completed"
+    },
     "applicationCompletionChecked": true,
     "activationSqlSha256": "34ff5ab25834e51da8376049164475548f3278a8878dbda312d1fb8367ba8987",
-    "firstScheduledExecution": "not_yet_observed"
+    "firstScheduledExecution": "scheduled_runs_and_application_completion_observed",
+    "latestObservedScheduledStart": "2026-09-16T04:17:00.183723Z",
+    "latestObservedAppCompletion": "2026-09-16T04:17:04.578362Z"
   },
   "myasp": {
     "schedulerActiveReadback": false,
     "mailDelivery": false,
-    "uiReservedFields": {"count": 12, "labelsMatch": true, "type": "hidden", "enabled": true, "required": false},
+    "uiReservedFields": {
+      "count": 12,
+      "labelsMatch": true,
+      "type": "hidden",
+      "enabled": true,
+      "required": false
+    },
     "manualChecks": [
-      {"requestId": 7, "status": 503, "error": "myasp_ambiguous_identity"},
-      {"requestId": 8, "status": 503, "error": "myasp_fields_not_prepared", "missingReservedFieldMetadataCount": 12}
+      {
+        "requestId": 7,
+        "status": 503,
+        "error": "myasp_ambiguous_identity"
+      },
+      {
+        "requestId": 8,
+        "status": 503,
+        "error": "myasp_fields_not_prepared",
+        "missingReservedFieldMetadataCount": 12
+      }
     ],
     "duplicateRecipientsMergedOrSelected": false,
-    "apiAndUiDiscrepancyResolved": false
+    "apiAndUiDiscrepancyResolved": false,
+    "readOnlyCheck": {
+      "requestId": 19,
+      "requested": true,
+      "result": "not_observed_browser_tab_was_closed"
+    }
   },
-  "scope": "Operational states and schema metadata only; no recipient identities, field values, credentials or backups."
+  "scope": "Operational states and schema metadata only; no recipient identities, field values, credentials or backups.",
+  "previousProductionCommit": "c4f32f6882885b53f7bea99dfb0eb9010bd363bb"
 }

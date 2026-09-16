@@ -1,3 +1,4 @@
+import { scoreCeiling } from "./versions";
 import React from "react";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -15,7 +16,7 @@ export async function sharedResultImage(shared: SharedResult) {
   const formal = r.definition.formal;
   const field = r.definition.domain ? r.domains[r.definition.domain] : null;
   const score = formal ? field?.score ?? r.total ?? "—" : r.correctCount;
-  const scale = formal ? field ? "/ 100点 · 参考スコア" : "/ 1,000点 · 参考スコア" : `/ ${r.answerCount}問 正解`;
+  const scale = formal ? `/ ${scoreCeiling(r.version,!!field)}点 · 参考スコア` : `/ ${r.answerCount}問 正解`;
   const nickname = Array.from(shared.nickname).slice(0, 12).join("") + (Array.from(shared.nickname).length > 12 ? "…" : "");
   return new ImageResponse(<div style={{ display: "flex", flexDirection: "column", background: "#f3f7ff", color: "#11213f", width: "100%", height: "100%", padding: "42px 50px", fontFamily: "ScienceSans" }}>
     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "2px solid #d3e1f3", paddingBottom: 20 }}><div style={{ display: "flex", fontSize: 40 }}>全分野科学検定</div><div style={{ display: "flex", fontSize: 22, color: "#1558d6" }}>{r.definition.kind === "weekly" ? "今週の10問" : r.definition.kind === "lab" ? "みんなの出題ラボ" : "あなたの科学マップ"}</div></div>

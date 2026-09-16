@@ -1,22 +1,25 @@
+import { evidenceModels } from "./versions";
 import { createHash } from "node:crypto";
 import { checked,releaseConfig,type service } from "./server";
 import { readAll } from "./queries";
-import { MODEL_VERSION } from "./model";
+import { supportedModel } from "./versions";
 import { calibrateDifficulty,calibrationObservations,type CalibrationAnswer } from "./calibration";
 import { calibrationQueue,type CalibrationItem,type CalibrationHistory } from "./calibration-queue";
 import type { ScienceDomain } from "@/src/lib/data/taxonomy";
 type Row={user_id:string|null;visitor_id:string;family_id:string;revision_id:string;domain:ScienceDomain;a:number;b:number;c:number;is_correct:boolean;answered_at:string};
 export async function runCalibration(db:ReturnType<typeof service>,jobId:string){
-  const release=await db.from("science_releases").select("id").eq("state","active").maybeSingle();
+  const release=await db.from("science_releases").select("id,model_version").eq("state","active").maybeSingle();
   if(release.error)checked(release);if(!release.data)return {state:"no_active_bank"};
+  const version=release.data.model_version;
+  if(!supportedModel(version))throw new Error("unsupported_science_model");
   const from=new Date(Date.now()-90*86400000).toISOString(),to=new Date().toISOString();
-  const count=await db.from("science_calibration_responses").select("revision_id",{count:"exact",head:true}).eq("eligible",true).eq("model_version",MODEL_VERSION).gte("answered_at",from).lt("answered_at",to);
+  const count=await db.from("science_calibration_responses").select("revision_id",{count:"exact",head:true}).eq("eligible",true).in("model_version",evidenceModels(version)).gte("answered_at",from).lt("answered_at",to);
   if(count.error)checked(count);if(count.count===null)throw new Error("calibration_count_unavailable");
   if(count.count<1000)return {state:"collecting",eligibleResponses:count.count,from,to};
   if(count.count>20000)return {state:"batch_processing_required",eligibleResponses:count.count,from,to};
   const correctionEpoch=checked<number>(await db.rpc("science_correction_epoch"));
   const [raw,bank,config]=await Promise.all([
-    readAll<Row>((a,b)=>db.from("science_calibration_responses").select("user_id,visitor_id,family_id,revision_id,domain,a,b,c,is_correct,answered_at").eq("eligible",true).eq("model_version",MODEL_VERSION).gte("answered_at",from).lt("answered_at",to).order("answered_at").order("attempt_id").order("ordinal").range(a,b)),
+    readAll<Row>((a,b)=>db.from("science_calibration_responses").select("user_id,visitor_id,family_id,revision_id,domain,a,b,c,is_correct,answered_at").eq("eligible",true).in("model_version",evidenceModels(version)).gte("answered_at",from).lt("answered_at",to).order("answered_at").order("attempt_id").order("ordinal").range(a,b)),
     readAll<CalibrationItem>((a,b)=>db.from("science_release_items").select("revision_id,a,b,c,anchor,focus,parameter_evidence,science_items!inner(domain,status,quality_passed,rights_checked,expires_at)").eq("release_id",release.data!.id).order("revision_id").range(a,b).returns<CalibrationItem[]>()),
     releaseConfig(db)
   ]);
@@ -27,7 +30,7 @@ export async function runCalibration(db:ReturnType<typeof service>,jobId:string)
   const queue=calibrationQueue(bank,owners,history,release.data.id,!!config.automaticCalibration,to,correctionEpoch);
   const qualified:string[]=[],fits:{revisionId:string;state:string;count:number}[]=[];
   for(const item of queue.selected){
-    const observations=calibrationObservations(rows,item.revision_id),fit={...calibrateDifficulty(observations,item),sourceOwnerCount:owners.get(item.revision_id)?.size??0,correctionEpoch};
+    const observations=calibrationObservations(rows,item.revision_id,version),fit={...calibrateDifficulty(observations,item,item.anchor,version),sourceOwnerCount:owners.get(item.revision_id)?.size??0,correctionEpoch};
     const dataVersion=createHash("sha256").update(JSON.stringify(observations.map(o=>[o.owner,o.answeredAt,o.correct,o.prior.mass]))).digest("hex");
     const state=fit.eligible?"qualified":fit.count<200?"collecting":"rejected";
     const candidate=checked<{id:string}>(await db.from("science_calibration_candidates").upsert({revision_id:item.revision_id,release_id:release.data.id,data_version:dataVersion,observed_from:from,observed_to:to,fit,state},{onConflict:"revision_id,release_id,data_version"}).select("id").single());

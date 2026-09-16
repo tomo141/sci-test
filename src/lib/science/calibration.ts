@@ -1,8 +1,9 @@
+import { MODEL_VERSION } from "./versions";
 import { posterior,probability,summarizeDomain,type Parameters,type Response } from "./model";
 
 export type CalibrationAnswer=Response&{owner:string;familyId:string;revisionId:string;answeredAt:string};
 export type CalibrationObservation={owner:string;answeredAt:string;correct:boolean;prior:ReturnType<typeof posterior>;other:Response[];ability:number};
-export function calibrationObservations(rows:CalibrationAnswer[],revisionId:string){
+export function calibrationObservations(rows:CalibrationAnswer[],revisionId:string,version=MODEL_VERSION){
   const byOwner=new Map<string,CalibrationAnswer[]>();
   for(const row of rows.filter(r=>r.eligible).sort((a,b)=>a.answeredAt.localeCompare(b.answeredAt)))byOwner.set(row.owner,[...(byOwner.get(row.owner)??[]),row]);
   const observations:CalibrationObservation[]=[];
@@ -11,7 +12,7 @@ export function calibrationObservations(rows:CalibrationAnswer[],revisionId:stri
     const seen=new Set<string>();
     const other=answers.filter(r=>r.domain===target.domain&&r.familyId!==target.familyId&&r.answeredAt<target.answeredAt&&!seen.has(r.familyId)&&(seen.add(r.familyId),true)).slice(-100);
     if(other.length<8)continue;
-    const distribution=posterior(other),mean=distribution.theta.reduce((sum,x,i)=>sum+x*distribution.mass[i],0);
+    const distribution=posterior(other,false,version),mean=distribution.theta.reduce((sum,x,i)=>sum+x*distribution.mass[i],0);
     const variance=distribution.theta.reduce((sum,x,i)=>sum+(x-mean)**2*distribution.mass[i],0);
     if(variance>1)continue;
     observations.push({owner,answeredAt:target.answeredAt,correct:target.correct,prior:distribution,other,ability:mean});
@@ -21,7 +22,7 @@ export function calibrationObservations(rows:CalibrationAnswer[],revisionId:stri
 const prediction=(r:CalibrationObservation,p:Parameters)=>r.prior.theta.reduce((sum,theta,i)=>sum+probability(theta,p)*r.prior.mass[i],0);
 const loss=(r:CalibrationObservation,p:Parameters)=>-Math.log(Math.max(1e-9,r.correct?prediction(r,p):1-prediction(r,p)));
 const average=(a:number[])=>a.reduce((sum,v)=>sum+v,0)/a.length;
-export function calibrateDifficulty(observations:CalibrationObservation[],parameters:Parameters,anchor=false){
+export function calibrateDifficulty(observations:CalibrationObservation[],parameters:Parameters,anchor=false,version=MODEL_VERSION){
   const base={count:observations.length,a:parameters.a,c:parameters.c,oldB:parameters.b,b:parameters.b,eligible:false,reason:"collecting",trainCount:0,testCount:0,bandCounts:[0,0,0],improvement:null as number|null,lowerImprovement:null as number|null,standardError:null as number|null,maxScoreChange:null as number|null};
   if(anchor)return {...base,reason:"anchor_fixed"};
   if(observations.length<200)return base;
@@ -44,7 +45,7 @@ export function calibrateDifficulty(observations:CalibrationObservation[],parame
   const standardError=curvature>0?1/Math.sqrt(curvature):Infinity;
   const brierChange=average(test.map(r=>(prediction(r,parameters)-Number(r.correct))**2-(prediction(r,next)-Number(r.correct))**2));
   const bandGuard=[0,1,2].every(b=>{const subset=test.filter(r=>band(r)===b);return subset.length>=8&&average(subset.map(r=>loss(r,parameters)-loss(r,next)))>=-.01;});
-  const maxScoreChange=Math.max(...test.map(r=>{const response={...parameters,domain:r.other[0].domain,correct:r.correct,eligible:true};return Math.abs(summarizeDomain([...r.other,response]).mean-summarizeDomain([...r.other,{...response,b:best}]).mean);}));
+  const maxScoreChange=Math.max(...test.map(r=>{const response={...parameters,domain:r.other[0].domain,correct:r.correct,eligible:true};return Math.abs(summarizeDomain([...r.other,response],false,version).mean-summarizeDomain([...r.other,{...response,b:best}],false,version).mean);}));
   const eligible=Math.abs(best-parameters.b)>=.05&&improvement>=.01&&lowerImprovement>0&&brierChange>0&&standardError<=.35&&bandGuard&&maxScoreChange<=3;
   return {...result,b:best,improvement,lowerImprovement,standardError,maxScoreChange,eligible,reason:eligible?"heldout_guards_passed":"validation_needed"};
 }

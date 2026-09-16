@@ -1,10 +1,9 @@
-import { LEGACY_MODEL_VERSION } from "../src/lib/science/versions";
 // Offline simulation of the actual selection and scoring functions. No real respondents or database writes.
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { definition } from "../src/lib/science/definition";
 import { selectCandidate, type Candidate } from "../src/lib/science/selection";
-import { probability, referenceScore, scoreResponses, type Response } from "../src/lib/science/model";
+import { MODEL_VERSION, probability, referenceScore, scoreResponses, type Response } from "../src/lib/science/model";
 import { domains, type ScienceDomain } from "../src/lib/data/taxonomy";
 
 const input = readFileSync("implementation/local/question-bank/candidate.json", "utf8");
@@ -16,13 +15,13 @@ function run(count:20|50|100, seed:number, ability:number | "correct" | "wrong")
   const rng = random(seed), exam = definition(count === 20 ? "trial" : "full", null, count === 100 ? 100 : 50);
   const responses:Response[] = [], used = new Set<string>();
   for (let i=0;i<count;i++) {
-    const next = selectCandidate(bank.filter(q=>!used.has(q.familyId)), responses, exam, rng, [], LEGACY_MODEL_VERSION);
+    const next = selectCandidate(bank.filter(q=>!used.has(q.familyId)), responses, exam, rng);
     if (!next) throw new Error("Selection stopped");
     const q = next.candidate;
     used.add(q.familyId);
     responses.push({...q,eligible:true,correct:typeof ability === "number" ? rng() < probability(ability,q) : ability === "correct"});
   }
-  const score=scoreResponses(responses, false, LEGACY_MODEL_VERSION);
+  const score=scoreResponses(responses);
   return {total:score.total!,width:score.high!-score.low!,domainWidth:domains.reduce((s,d)=>s+score.domains[d].high!-score.domains[d].low!,0)/10,
     actualCorrect:responses.filter(r=>r.correct).length};
 }
@@ -34,10 +33,10 @@ for(const count of [20,50,100] as const)for(const pattern of ["wrong","correct"]
 }
 const simulations=[];
 for(const count of [50,100] as const)for(const theta of [-2,0,2,3]){
-  const runs=Array.from({length:12},(_,i)=>run(count,7300+i,theta)),truth=referenceScore(theta, LEGACY_MODEL_VERSION)*10;
+  const runs=Array.from({length:12},(_,i)=>run(count,7300+i,theta)),truth=Math.max(10,Math.min(990,referenceScore(theta)*10));
   const mean=runs.reduce((s,r)=>s+r.total,0)/runs.length;
   simulations.push({count,theta,truth,mean,bias:mean-truth,rmse:Math.sqrt(runs.reduce((s,r)=>s+(r.total-truth)**2,0)/runs.length),meanIntervalWidth:runs.reduce((s,r)=>s+r.width,0)/runs.length,meanDomainIntervalWidth:runs.reduce((s,r)=>s+r.domainWidth,0)/runs.length});
   console.log(JSON.stringify(simulations.at(-1)));
 }
 mkdirSync("implementation/checks",{recursive:true});
-writeFileSync("implementation/checks/score-audit-20260916.json",JSON.stringify({generatedAt:new Date().toISOString(),sourceHash:createHash("sha256").update(input).digest("hex"),model:"science-3pl-reference-v1",gridUpper:5,absoluteTotalCeiling:10*Math.round(referenceScore(5, LEGACY_MODEL_VERSION)),parametersAreProvisional:true,participantsAreSimulated:true,extreme,simulations},null,2)+"\n");
+writeFileSync("implementation/checks/score-p70-audit-20260916.json",JSON.stringify({generatedAt:new Date().toISOString(),sourceHash:createHash("sha256").update(input).digest("hex"),model:MODEL_VERSION,gridUpper:10,absoluteTotalCeiling:990,parametersAreProvisional:true,participantsAreSimulated:true,extreme,simulations},null,2)+"\n");

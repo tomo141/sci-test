@@ -1,3 +1,4 @@
+import { LEGACY_MODEL_VERSION, MODEL_VERSION } from "./versions";
 import { describe, expect, it } from "vitest";
 import { qualityObservations, qualitySignals, type QualityAnswer, type QualityReport } from "./quality";
 import type { Item } from "./types";
@@ -23,14 +24,15 @@ describe("quality triage",()=>{
     expect(labObservations).toHaveLength(13);
     expect(labObservations.every(r=>r.ability===null&&r.predicted===null)).toBe(true);
   });
-  it("detects reversed performance using only earlier independent ability evidence",()=>{
+  it.each([[LEGACY_MODEL_VERSION,16],[MODEL_VERSION,40]] as const)("detects reversed performance with sufficient earlier ability evidence in %s",(version,count)=>{
     const rows:QualityAnswer[]=[];
     for(let i=0;i<80;i++){
       const strong=i>=40,owner=`p${i}`;
-      for(let k=0;k<16;k++)rows.push(answer(owner,{familyId:`prior${k}`,revisionId:`prior${k}`,correct:strong,choice:strong?3:0,answeredAt:`2026-09-12T10:${String(k).padStart(2,"0")}:00Z`}));
+      // Mixed prior outcomes identify both ability bands; a perfect streak only bounds ability below.
+      for(let k=0;k<count;k++)rows.push(answer(owner,{familyId:`prior${k}`,revisionId:`prior${k}`,correct:version===LEGACY_MODEL_VERSION?strong:(strong?k%5!==0:k%5<2),choice:strong?3:0,answeredAt:`2026-09-12T10:${String(k).padStart(2,"0")}:00Z`}));
       rows.push(answer(owner,{correct:!strong,choice:strong?0:3}));
     }
-    expect(qualitySignals([item],rows,[],now).signals.some(s=>s.code==="negative_discrimination")).toBe(true);
+    expect(qualitySignals([item],rows,[],now,version).signals.some(s=>s.code==="negative_discrimination")).toBe(true);
   });
   it("deduplicates a reporter across categories and distinguishes expiry from similarity",()=>{
     const report=(owner:string,category:string):QualityReport=>({owner,revisionId:"target",category,evidence:"",createdAt:"2026-09-13T00:00:00Z"});

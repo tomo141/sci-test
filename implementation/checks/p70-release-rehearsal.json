@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-16T05:33:31.171Z",
+  "state": "passed",
+  "sqlSha256": "a9127c64d5d7366b0c425c6be006e48e0cfb3bb27e198b4b485054f002caa286",
+  "syntheticAccounts": true,
+  "reviewedFormalItems": 1000,
+  "releases": [
+    {
+      "model_version": "science-3pl-reference-v1",
+      "state": "retired",
+      "count": 1000
+    },
+    {
+      "model_version": "science-3pl-p70-linear-v2",
+      "state": "active",
+      "count": 1000
+    }
+  ],
+  "repeatedRejected": true,
+  "networkUsed": false
+}

@@ -1,10 +1,11 @@
+import { MODEL_VERSION } from "./versions";
 import type { ScienceDomain } from "@/src/lib/data/taxonomy";
 import { expectedScoreVarianceReduction, posterior, type Parameters, type Response } from "./model";
 import type { ExamDefinition } from "./definition";
 
 export type Candidate = Parameters & { revisionId: string; familyId: string; domain: ScienceDomain; authorId: string | null; focus: boolean; anchor: boolean; exposures: number; trustWeight?:number; seenCount?: number };
 
-export function selectCandidate(candidates: Candidate[], answers: Response[], exam: ExamDefinition, random = Math.random, history: Response[] = []) {
+export function selectCandidate(candidates: Candidate[], answers: Response[], exam: ExamDefinition, random = Math.random, history: Response[] = [], version = MODEL_VERSION) {
   const counts = new Map<string, number>();
   answers.forEach((r) => counts.set(r.domain, (counts.get(r.domain) ?? 0) + 1));
   const quotas = Object.entries(exam.quotas) as [ScienceDomain, number][];
@@ -16,8 +17,8 @@ export function selectCandidate(candidates: Candidate[], answers: Response[], ex
   const abilityAnswers = exam.kind === "trial" ? [...history, ...answers] : answers;
   const distributions = new Map<ScienceDomain, ReturnType<typeof posterior>>();
   const scored = available.filter(c => (c.seenCount ?? 0) === leastSeen).map((candidate) => {
-    if (!distributions.has(candidate.domain)) distributions.set(candidate.domain, posterior(abilityAnswers.filter((a) => a.domain === candidate.domain)));
-    const metrics = expectedScoreVarianceReduction(distributions.get(candidate.domain)!, candidate);
+    if (!distributions.has(candidate.domain)) distributions.set(candidate.domain, posterior(abilityAnswers.filter((a) => a.domain === candidate.domain), false, version));
+    const metrics = expectedScoreVarianceReduction(distributions.get(candidate.domain)!, candidate, version);
     return { candidate, ...metrics };
   }).sort((a, b) => b.gain - a.gain || a.candidate.revisionId.localeCompare(b.candidate.revisionId));
   if (!scored.length) return null;

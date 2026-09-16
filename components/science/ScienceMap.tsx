@@ -1,3 +1,4 @@
+import { isP70 } from "@/src/lib/science/versions";
 import { domains } from "@/src/lib/data/taxonomy";
 import type { ScienceResult } from "@/src/lib/science/model";
 
@@ -15,7 +16,7 @@ export function ScienceMap({ result }: { result: ScienceResult }) {
       {complete && <polygon points={domains.map((d,i) => { const p = point(i, 1.25 * result.domains[d].score!); return `${p.x},${p.y}`; }).join(" ")} fill="#2467e82e" stroke="#1558d6" strokeWidth="2" />}
       {domains.map((domain, i) => { const field = result.domains[domain]; if (field.score === null) return null; const p = point(i, field.score*1.25); return <circle key={domain} cx={p.x} cy={p.y} r="4" fill="#1558d6" />; })}
     </svg>
-    <table className="w-full text-left text-sm"><caption className="sr-only">分野別の参考スコア（100点満点）</caption><thead><tr><th className="py-2">分野</th><th>点数</th><th>参考幅</th><th>適格回答</th></tr></thead><tbody>
+    <table className="w-full text-left text-sm"><caption className="sr-only">分野別の参考スコア（{isP70(result.version) ? "1〜99点" : "100点尺度"}）</caption><thead><tr><th className="py-2">分野</th><th>点数</th><th>参考幅</th><th>適格回答</th></tr></thead><tbody>
       {domains.map((domain) => { const d = result.domains[domain]; return <tr key={domain} className="border-t border-[var(--color-border)]"><th className="py-2 font-medium">{domain}</th><td>{d.score ?? "未測定"}</td><td>{d.low === null ? "—" : `${d.low}–${d.high}`}</td><td>{d.count}問</td></tr>; })}
     </tbody></table>
   </div>;

@@ -11,7 +11,7 @@ export function correctedResult(attempt:Attempt,issued:Issued[],answers:Answer[]
     return {...q.snapshot,correct:answer.is_correct===true,eligible:q.eligible&&!excluded.has(q.ordinal)&&!state.ineligibleOrdinals?.has(q.ordinal),answeredAt:answer.answered_at};
   });
   const updates=issued.flatMap(i=>state.updates.has(i.revision_id)?[state.updates.get(i.revision_id)!]:[]);
-  return {...scoreResponses(responses),definition:attempt.definition,originalAnswerCount:attempt.total,
+  return {...scoreResponses(responses, false, attempt.model_version),definition:attempt.definition,originalAnswerCount:attempt.total,
     answerCount:answers.filter(a=>!excluded.has(a.ordinal)).length,correctCount:answers.filter(a=>a.is_correct&&!excluded.has(a.ordinal)).length,
     correctionEpoch:state.epoch,identityAdjustments:{excludedCount:state.ineligibleOrdinals?.size??0},corrections:{count:updates.length,excludedCount:excluded.size,updatedAt:updates.map(u=>u.approved_at).sort().at(-1)??null}};
 }

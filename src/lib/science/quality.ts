@@ -1,3 +1,4 @@
+import { MODEL_VERSION } from "./versions";
 import { posterior, probability } from "./model";
 import { wilson } from "./experiment";
 import type { CalibrationAnswer } from "./calibration";
@@ -11,7 +12,7 @@ const normalize = (s: string) => s.normalize("NFKC").toLowerCase().replace(/\s+/
 const grams = (s: string) => new Set(Array.from({ length: Math.max(0, s.length - 2) }, (_, i) => s.slice(i, i + 3)));
 
 /** Each person contributes once per family. Ability uses only earlier, other families. */
-export function qualityObservations(rows: QualityAnswer[]): Observation[] {
+export function qualityObservations(rows: QualityAnswer[], version = MODEL_VERSION): Observation[] {
   const owners = new Map<string, QualityAnswer[]>();
   for (const row of [...rows].filter(r => r.eligible || r.qualityEligible).sort((a, b) => a.answeredAt.localeCompare(b.answeredAt))) {
     const list = owners.get(row.owner) ?? []; list.push(row); owners.set(row.owner, list);
@@ -25,7 +26,7 @@ export function qualityObservations(rows: QualityAnswer[]): Observation[] {
       const other = previous.filter(r => r.domain === row.domain && r.answeredAt < row.answeredAt).slice(-100);
       let ability: number | null = null, predicted: number | null = null;
       if (other.length >= 8) {
-        const p = posterior(other), mean = p.theta.reduce((sum, t, i) => sum + t * p.mass[i], 0);
+        const p = posterior(other, false, version), mean = p.theta.reduce((sum, t, i) => sum + t * p.mass[i], 0);
         const variance = p.theta.reduce((sum, t, i) => sum + (t - mean) ** 2 * p.mass[i], 0);
         if (variance <= 1) {
           ability = mean;
@@ -39,8 +40,8 @@ export function qualityObservations(rows: QualityAnswer[]): Observation[] {
 }
 
 /** Triage heuristics in an adaptively selected sample; never a verdict on correctness. */
-export function qualitySignals(items: Item[], rows: QualityAnswer[], reports: QualityReport[], now: Date) {
-  const observations = qualityObservations(rows), signals: QualitySignal[] = [];
+export function qualitySignals(items: Item[], rows: QualityAnswer[], reports: QualityReport[], now: Date, version = MODEL_VERSION) {
+  const observations = qualityObservations(rows, version), signals: QualitySignal[] = [];
   const byRevision = new Map<string, Observation[]>();
   for (const row of observations) { const group = byRevision.get(row.revisionId) ?? []; group.push(row); byRevision.set(row.revisionId, group); }
   for (const item of items) {
