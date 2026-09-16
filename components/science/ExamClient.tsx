@@ -4,9 +4,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
 import { AppButton } from "@/components/ui/AppButton";
-import { FeedbackForm } from "./FeedbackForm";
+import { AnswerActions } from "./AnswerActions";
 import { AppCard } from "@/components/ui/AppCard";
-import { ProgressBar } from "@/components/ui/ProgressBar";
+import { CheckCircle2, XCircle } from "lucide-react";
+import { ExamQuestionCard } from "./ExamQuestionCard";
+import { ExamProgressCard } from "./ExamProgressCard";
+import { ScienceText } from "./ScienceText";
 import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { definition, type ExamKind, type ExamDefinition } from "@/src/lib/science/definition";
 import { RequestError, scienceApi } from "@/src/lib/science/client";
@@ -77,9 +80,9 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
     setPending(input);
     try { localStorage.setItem(storageKey(input.attemptId), JSON.stringify(input)); } catch { /* The operation remains available in memory for retry. */ }
     try {
-      const saved = await scienceApi<{ attempt: PublicAttempt; explanation?: ExamState["explanation"] }>("answer", input);
+      const saved = await scienceApi<{ attempt: PublicAttempt; explanation?: ExamState["explanation"]; progress?: ExamState["progress"] }>("answer", input);
       setSaveNote("保存済み"); setPending(null);
-      setState({ ...state, attempt: saved.attempt, question: null });
+      setState({ ...state, attempt: saved.attempt, question: null, progress: saved.progress });
       try { localStorage.removeItem(storageKey(input.attemptId)); } catch { /* Server progress wins when the page is opened again. */ }
       if (saved.explanation) {
         setExplanation(saved.explanation);
@@ -94,10 +97,17 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.defaultPrevented || event.repeat || event.isComposing || event.ctrlKey || event.altKey || event.metaKey || event.shiftKey ||
-          !/^[1-4]$/.test(event.key) || !state?.question || state.attempt.state !== "active" || state.question.withdrawn || explanation || busy || pending || paused || answering.current) return;
+      if (event.defaultPrevented || event.repeat || event.isComposing || event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return;
       const target = event.target;
-      if (target instanceof HTMLElement && (target.isContentEditable || target.closest('textarea, select, input:not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="submit"])'))) return;
+      if (target instanceof HTMLElement && (target.isContentEditable || target.closest('textarea, select, input:not([type="radio"]):not([type="checkbox"]):not([type="button"]):not([type="submit"]), [role="dialog"]'))) return;
+      if (event.key === " " && explanation && !busy && !answering.current) {
+        if (target instanceof HTMLElement && target.closest('button, a, input, summary')) return;
+        event.preventDefault();
+        if (state) void refresh(state.attempt.id);
+        return;
+      }
+      if (
+          !/^[1-4]$/.test(event.key) || !state?.question || state.attempt.state !== "active" || state.question.withdrawn || explanation || busy || pending || paused || answering.current) return;
       const choice = Number(event.key) - 1;
       if (choice >= state.question.choices.length) return;
       event.preventDefault();
@@ -106,7 +116,7 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [answer, busy, explanation, instantKeyboard, paused, pending, state]);
+  }, [answer, busy, explanation, instantKeyboard, paused, pending, refresh, state]);
 
   const errorBox = error && <div className="mt-5 rounded-2xl border border-amber-300 bg-amber-50 p-4" role="alert"><p>{error.message}</p>
     {paused&&<div className="mt-3 flex flex-wrap gap-3"><AppButton href="/mypage" variant="secondary">保存した進捗をマイページで見る</AppButton>{!state&&typeof error.details.attemptId==="string"&&<AppButton onClick={()=>void refresh(error.details.attemptId as string)} disabled={busy}>この受験の再開を確認</AppButton>}</div>}
@@ -122,36 +132,47 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
       <AppButton onClick={() => void start()} disabled={!agreed || busy || !plan?.newAttempts} className="mt-6 w-full">{busy ? "受験を準備中…" : !plan ? "受験条件を確認中…" : !plan.newAttempts ? "公開準備中" : "受験を始める"}</AppButton></>}</>}
     {errorBox}{error&&!initialAttempt&&!plan&&<AppButton onClick={()=>window.location.reload()} className="mt-4">受験条件を再読み込み</AppButton>}{initialAttempt && <AppButton onClick={() => void refresh(initialAttempt)} disabled={busy} className="mt-6">{busy ? "読み込み中…" : "再読み込み"}</AppButton>}
   </AppCard></main>;
-  return <main className="page-container max-w-3xl py-8">
+  const displayed = explanation?.display ?? state.question;
+  return <main className="page-container py-8">
+    <div className="mb-6"><h1 className="text-3xl font-black md:text-4xl">{state.attempt.definition.kind === "trial" ? "腕試し受験ページ" : state.attempt.definition.label}</h1>
+      <p className="mt-2 font-bold text-[var(--color-ink-soft)]">{state.attempt.definition.kind === "domain" ? state.attempt.definition.domain : "科学の知識"}をチェックしよう！</p>
+    </div>
     {state.attempt.definition.kind==="weekly"&&!state.attempt.competitive&&<p className="mb-4 rounded-xl bg-amber-50 p-4 text-sm leading-7">今回は参考参加です。締切後の再開、再挑戦、作問・事前閲覧などの記録があるため、競争順位には入りません。</p>}
-    <div className="mb-5"><p className="font-bold">{state.attempt.definition.label}</p><p className="my-2 text-sm">{state.attempt.ordinal} / {state.attempt.definition.count}問 保存済み</p><ProgressBar value={100*state.attempt.ordinal/state.attempt.definition.count} /></div>
-    <AppCard>
-      {state.attempt.state === "abandoned" && <><h1 className="text-2xl font-black">終了した受験です</h1><p className="mt-4 leading-8">保存済みの回答は残っています。新しい受験はマイページから始められます。</p><AppButton className="mt-5" href="/mypage">マイページへ</AppButton></>}
-      {state.question && !explanation && !paused && <><p className="text-sm text-[var(--color-muted)]">第{state.question.ordinal+1}問 · {state.question.domain} / {state.question.subdomain}</p>
-        <h1 ref={title} tabIndex={-1} className="mt-4 whitespace-pre-wrap text-xl font-bold leading-9 outline-none">{state.question.question}</h1>
-        {state.attempt.definition.kind==="lab"&&<p className="mt-3 text-xs text-[var(--color-muted)]">作問：{state.question.creditName||"匿名の投稿者"}{state.question.aiAssisted&&" · AI補助あり（作者申告）"}</p>}
-        <fieldset disabled={busy || !!pending} className="mt-6 grid gap-3"><legend className="sr-only">答えを一つ選んでください</legend>{state.question.choices.map((text,i) => <label key={i} className={`flex cursor-pointer items-start gap-3 rounded-xl border-2 p-4 ${selected === i ? "border-[var(--color-primary-700)] bg-[var(--color-primary-50)]" : "border-[var(--color-border)]"}`}><input type="radio" name="answer" value={i} checked={selected===i} onChange={() => setSelected(i)} className="mt-1 h-5 w-5" /><span className="font-bold tabular-nums" aria-hidden="true">{i+1}.</span><span className="whitespace-pre-wrap leading-7">{text}</span></label>)}</fieldset>
-        {!state.question.withdrawn && <div className="mt-5 text-sm leading-7"><label className="flex items-start gap-3"><input type="checkbox" checked={instantKeyboard} disabled={busy || !!pending} onChange={e => setInstantKeyboard(e.target.checked)} className="mt-1 h-5 w-5"/><span>キーボードの1,2,3,4で即回答</span></label><p className="mt-2 text-[var(--color-muted)]">{instantKeyboard ? "数字キーを押すと、その回答をすぐに確定します。" : "数字キーは選択だけ。下のボタンで回答を確定します。"}</p></div>}
-        <AppButton disabled={busy || (selected===null && !state.question.withdrawn && !pending)} onClick={() => void answer()} className="mt-6 w-full">{busy ? "保存中…" : pending ? "同じ操作を再送する" : state.question.withdrawn ? "未回答でスキップして次へ" : "この回答を確定する"}</AppButton>
+    <ExamProgressCard state={state} />
+    {state.attempt.state === "abandoned" && <AppCard><h2 className="text-2xl font-black">終了した受験です</h2><p className="mt-4 leading-8">保存済みの回答は残っています。新しい受験はマイページから始められます。</p><AppButton className="mt-5" href="/mypage">マイページへ</AppButton></AppCard>}
+    {displayed && !paused && state.attempt.state !== "abandoned" && <ExamQuestionCard question={displayed}
+      selected={explanation?.display.selectedIndex ?? selected} answered={!!explanation} correctIndex={explanation?.display.correctIndex ?? null}
+      disabled={busy || !!pending} titleRef={title} lab={state.attempt.definition.kind === "lab"}
+      onChoice={index => { setSelected(index); void answer(index); }}>
+      {!explanation && <>
+        {!displayed.withdrawn && <div className="mt-5 text-sm leading-7"><label className="flex items-start gap-3"><input type="checkbox" checked={instantKeyboard} disabled={busy || !!pending} onChange={e => setInstantKeyboard(e.target.checked)} className="mt-1 h-5 w-5"/><span>キーボードの1,2,3,4で即回答</span></label>
+          <p className="mt-2 text-[var(--color-muted)]">{instantKeyboard ? "クリック・タップも数字キーも、すぐに回答を確定します。" : "クリック・タップは即回答。数字キーは選択だけで、下のボタンで確定します。"}</p>
+        </div>}
+        <AppButton disabled={busy || (selected===null && !displayed.withdrawn && !pending)} onClick={() => void answer()} className="mt-6 w-full">{busy ? "保存中…" : pending ? "同じ操作を再送する" : displayed.withdrawn ? "未回答でスキップして次へ" : "この回答を確定する"}</AppButton>
       </>}
-      {explanation && <div key={explanation.ordinal}>
-        <p className="text-sm text-[var(--color-muted)]">第{explanation.ordinal+1}問の答え</p>
-        <h1 ref={title} tabIndex={-1} className="mt-3 text-2xl font-black outline-none">{explanation.correct === null ? "この問題は採点対象外です" : explanation.correct ? "正解！" : "不正解"}</h1>
-        {explanation.correct === false && <p className="mt-4 whitespace-pre-wrap text-sm">あなたの回答：{explanation.selectedAnswer}</p>}
-        <p className="mt-4 whitespace-pre-wrap text-lg font-bold">正解：{explanation.correctAnswer}</p>
-        {explanation.correctionNote && <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm whitespace-pre-wrap">訂正がありました。{explanation.correctionNote}</p>}
-        <p className="mt-4 whitespace-pre-wrap leading-8">{briefExplanation(explanation.content.explanation)}</p>
+      {explanation && <div key={explanation.ordinal} className="mt-6">
+        <p className="sr-only">第{explanation.ordinal+1}問の答え</p>
+        <div className={`flex items-center gap-4 rounded-2xl border p-4 ${explanation.correct === null ? "border-amber-300 bg-amber-50" : explanation.correct ? "border-[var(--color-success-700)] bg-[var(--color-success-100)]" : "border-[var(--color-danger-700)] bg-[var(--color-danger-100)]"}`}>
+          {explanation.correct !== null && (explanation.correct ? <CheckCircle2 aria-hidden="true" size={34} className="shrink-0 text-[var(--color-success-700)]" /> : <XCircle aria-hidden="true" size={34} className="shrink-0 text-[var(--color-danger-700)]" />)}
+          <h2 className="text-xl font-black">{explanation.correct === null ? "この問題は採点対象外です" : explanation.correct ? "正解！" : "不正解"}</h2>
+        </div>
+        {explanation.correct === false && <p className="mt-4 whitespace-pre-wrap text-sm">あなたの回答：<ScienceText>{explanation.selectedAnswer}</ScienceText></p>}
+        <p className="mt-4 whitespace-pre-wrap text-lg font-bold">正解：<ScienceText>{explanation.correctAnswer}</ScienceText></p>
+        {explanation.correctionNote && <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm whitespace-pre-wrap">訂正がありました。<ScienceText>{explanation.correctionNote}</ScienceText></p>}
+        <p className="mt-4 whitespace-pre-wrap break-words leading-8"><ScienceText>{briefExplanation(explanation.content.explanation)}</ScienceText></p>
         <details className="mt-5 rounded-xl border p-4"><summary className="cursor-pointer font-bold">詳しい解説・出典を見る</summary>
-          {briefExplanation(explanation.content.explanation) !== explanation.content.explanation.trim() && <p className="mt-4 whitespace-pre-wrap leading-8">{explanation.content.explanation}</p>}
-          {!!explanation.content.distractorRationales?.some(Boolean) && <div className="mt-4"><h2 className="font-bold">選択肢ごとの理由</h2><dl className="mt-3 grid gap-4">{explanation.content.choices.map((choice, i) => explanation.content.distractorRationales[i] && <div key={i}><dt className="whitespace-pre-wrap font-medium">{choice}{i === explanation.content.correctIndex && "（正解）"}</dt><dd className="mt-1 whitespace-pre-wrap text-sm leading-7">{explanation.content.distractorRationales[i]}</dd></div>)}</dl></div>}
-          <div className="mt-4 text-sm leading-7"><h2 className="font-bold">出典</h2>{explanation.content.sources?.map((source,i) => <p key={i}>{source.url && /^https?:\/\//.test(source.url) ? <a href={source.url} target="_blank" rel="noreferrer" className="break-words underline">{source.title}</a> : source.title}</p>)}</div>
+          {briefExplanation(explanation.content.explanation) !== explanation.content.explanation.trim() && <p className="mt-4 whitespace-pre-wrap break-words leading-8"><ScienceText>{explanation.content.explanation}</ScienceText></p>}
+          {!!explanation.content.distractorRationales?.some(Boolean) && <div className="mt-4"><h3 className="font-bold">選択肢ごとの理由</h3><dl className="mt-3 grid gap-4 md:grid-cols-2">{explanation.content.choices.map((choice, i) => explanation.content.distractorRationales[i] && <div key={i}><dt className="whitespace-pre-wrap break-words font-medium"><ScienceText>{choice}</ScienceText>{i === explanation.content.correctIndex && "（正解）"}</dt><dd className="mt-1 whitespace-pre-wrap break-words text-sm leading-7"><ScienceText>{explanation.content.distractorRationales[i]}</ScienceText></dd></div>)}</dl></div>}
+          <div className="mt-4 text-sm leading-7"><h3 className="font-bold">出典</h3>{explanation.content.sources?.map((source,i) => <p key={i}>{source.url && /^https?:\/\//.test(source.url) ? <a href={source.url} target="_blank" rel="noreferrer" className="break-words underline">{source.title}</a> : source.title}</p>)}</div>
         </details>
-        <AppButton disabled={busy} className="mt-6 w-full" onClick={() => void refresh(state.attempt.id)}>{busy ? "読み込み中…" : state.attempt.state === "completed" ? "結果を見る" : "次の問題へ"}</AppButton>
-        <FeedbackForm key={explanation.ordinal} attemptId={state.attempt.id} ordinal={explanation.ordinal}/>
+        <AnswerActions key={explanation.ordinal} attemptId={state.attempt.id} explanation={explanation} signedIn={state.signedIn} />
       </div>}
-      <p role="status" className="mt-4 text-sm text-[var(--color-muted)]">{saveNote}</p>{errorBox}
-      {(!state.question||paused) && !explanation && state.attempt.state === "active" && <AppButton disabled={busy} className="mt-4" onClick={() => void refresh(state.attempt.id)}>{busy ? "次の問題を取得中…" : paused?"運営の確認後、再開する":"次の問題を読み込む"}</AppButton>}
-      {error?.code === "conflict" && <AppButton className="mt-4" onClick={() => void refresh(state.attempt.id)}>最新の進捗を読み込む</AppButton>}
-    </AppCard><p className="mt-5 text-sm leading-7 text-[var(--color-muted)]">確定した回答は変更できません。このページを閉じても保存済みの回答は残ります。</p><AppButton href="/mypage" variant="ghost" className="mt-4">中断してマイページへ</AppButton>
+      <p role="status" className="mt-4 text-sm text-[var(--color-muted)]">{saveNote}</p>
+    </ExamQuestionCard>}
+    {explanation && <><AppButton disabled={busy} className="mt-6 w-full" onClick={() => void refresh(state.attempt.id)}>{busy ? "読み込み中…" : state.attempt.state === "completed" ? "結果を見る" : "次の問題へ"}</AppButton><p className="mt-3 text-center text-xs font-bold text-[var(--color-muted)]">スペースキーでも{state.attempt.state === "completed" ? "結果へ" : "次の問題へ"}進めます</p></>}
+    {errorBox}
+    {(!state.question||paused) && !explanation && state.attempt.state === "active" && <AppButton disabled={busy} className="mt-4" onClick={() => void refresh(state.attempt.id)}>{busy ? "次の問題を取得中…" : paused?"運営の確認後、再開する":"次の問題を読み込む"}</AppButton>}
+    {error?.code === "conflict" && <AppButton className="mt-4" onClick={() => void refresh(state.attempt.id)}>最新の進捗を読み込む</AppButton>}
+    <p className="mt-5 text-sm leading-7 text-[var(--color-muted)]">確定した回答は変更できません。このページを閉じても保存済みの回答は残ります。</p><AppButton href="/mypage" variant="ghost" className="mt-4">中断してマイページへ</AppButton>
   </main>;
 }

@@ -12,6 +12,8 @@ import { readAll } from "./queries";
 import { authorWeights } from "./community";
 import { laboratoryChoice } from "./trust";
 import { answerExplanation } from "./answer-feedback";
+import { questionLevel } from "./question-level";
+import { examProgress } from "./exam-progress";
 export { readAll } from "./queries";
 
 export async function ownedAttempt(ctx: Context, id: string) {
@@ -70,11 +72,11 @@ export function publicAttempt(a: Attempt): PublicAttempt {
   return { id: a.id, definition: a.definition, ordinal: a.ordinal, state: a.state, competitive: a.competitive, completed_at: a.completed_at, result: a.result };
 }
 function publicQuestion(q: Issued): PublicQuestion {
-  return { ordinal: q.ordinal, token: q.token, domain: q.snapshot.domain, subdomain: q.snapshot.subdomain, question: q.snapshot.content.question, choices: q.choice_order.map((i) => q.snapshot.content.choices[i]),creditName:q.snapshot.creditName,aiAssisted:q.snapshot.aiAssisted };
+  return { ordinal: q.ordinal, token: q.token, domain: q.snapshot.domain, subdomain: q.snapshot.subdomain, question: q.snapshot.content.question, choices: q.choice_order.map((i) => q.snapshot.content.choices[i]),level:questionLevel(q.snapshot),creditName:q.snapshot.creditName,aiAssisted:q.snapshot.aiAssisted };
 }
 async function displayQuestion(ctx: Context, q: Issued): Promise<PublicQuestion> {
   const corrections = await correctionState(ctx.db, [q.revision_id]);
-  if (corrections.updates.get(q.revision_id)?.excluded) return { ordinal:q.ordinal, token:q.token, domain:q.snapshot.domain, subdomain:q.snapshot.subdomain, question:"この問題は運営が取り下げました。採点には含めません。", choices:[], withdrawn:true };
+  if (corrections.updates.get(q.revision_id)?.excluded) return { ordinal:q.ordinal, token:q.token, domain:q.snapshot.domain, subdomain:q.snapshot.subdomain, question:"この問題は運営が取り下げました。採点には含めません。", choices:[], level:questionLevel(q.snapshot), withdrawn:true };
   const item=checked<{status:string}>(await ctx.db.from("science_items").select("status").eq("id",q.revision_id).single());
   if(item.status==="held"&&!corrections.updates.has(q.revision_id))throw new ScienceError("この問題は確認中です。保存済みの回答を残して中断できます。運営の確認後、ここから再開してください。",409,"item_unavailable",{attemptId:q.attempt_id});
   return publicQuestion(q);
@@ -87,20 +89,20 @@ function choiceOrder() {
 
 export async function examState(ctx: Context, id: string, feedbackOrdinal?: number): Promise<ExamState> {
   let a = await ownedAttempt(ctx, id);
+  const records = await attemptRecords(ctx, id);
+  const progress = examProgress(correctedResult(a, records.issued, records.answers, records.corrections));
   if (feedbackOrdinal !== undefined) {
-    const records = await attemptRecords(ctx, id);
     const answer = records.answers.find(r => r.ordinal === feedbackOrdinal);
     const issued = records.issued.find(q => q.ordinal === feedbackOrdinal);
     if (!answer || !issued || answer.selected_index === null) throw new ScienceError("保存済みの回答が見つかりません。", 404, "answer_not_found");
-    return { attempt: publicAttempt(a), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId,
+    return { attempt: publicAttempt(a), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId, progress,
       explanation: answerExplanation(issued, answer.selected_index, records.corrections.updates.get(issued.revision_id)) };
   }
-  if (a.state !== "active") return { attempt: publicAttempt(a), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId };
+  if (a.state !== "active") return { attempt: publicAttempt(a), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId, progress };
   const existing = await ctx.db.from("science_issued").select("*").eq("attempt_id", id).eq("ordinal", a.ordinal).maybeSingle();
   if (existing.error) checked(existing);
   let issued = existing.data as Issued | null;
   if (!issued) {
-    const records = await attemptRecords(ctx, id);
     let revisionId: string, predicted = .5, probability = 1, reason = "fixed-weekly-set-v1", candidateCount = 1;
     if (a.kind === "weekly") {
       const weekly = checked<{ revision_ids: string[]; ends_at: string }>(await ctx.db.from("science_weekly_sets").select("revision_ids,ends_at").eq("id", a.week_id).single());
@@ -126,7 +128,7 @@ export async function examState(ctx: Context, id: string, feedbackOrdinal?: numb
     }
     a = await ownedAttempt(ctx, id);
   }
-  return { attempt: publicAttempt(a), question: await displayQuestion(ctx, issued), group: ctx.visitor.route_group, signedIn: !!ctx.userId };
+  return { attempt: publicAttempt(a), question: await displayQuestion(ctx, issued), group: ctx.visitor.route_group, signedIn: !!ctx.userId, progress };
 }
 
 export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDomain) {
@@ -167,15 +169,28 @@ export async function answerExam(ctx: Context, input: { attemptId: string; ordin
   if (!issued) throw new ScienceError("提示された問題と一致しません。再読み込みしてください。", 409, "not_issued");
   let result: AttemptResult | null = null;
   const previous = records.answers.find((r) => r.operation_id === input.operationId);
+  const candidateAnswer: Answer = { attempt_id:a.id, ordinal:input.ordinal, operation_id:input.operationId, selected_index:input.selectedIndex,
+    is_correct:input.selectedIndex===null ? null : issued.choice_order[input.selectedIndex] === issued.snapshot.content.correctIndex,
+    skip_reason:input.selectedIndex===null?"question_withdrawn":null, answered_at:new Date().toISOString() };
+  const answers = previous ? records.answers : [...records.answers, candidateAnswer];
   if (!previous && a.ordinal + 1 === a.total && a.ordinal === input.ordinal) {
-    const correct = input.selectedIndex===null ? null : issued.choice_order[input.selectedIndex] === issued.snapshot.content.correctIndex;
-    result = correctedResult(a, records.issued, [...records.answers, { attempt_id:a.id, ordinal:input.ordinal, operation_id:input.operationId, selected_index:input.selectedIndex, is_correct:correct, skip_reason:input.selectedIndex===null?"question_withdrawn":null, answered_at:new Date().toISOString() }], records.corrections);
+    result = correctedResult(a, records.issued, answers, records.corrections);
   }
   const committed = checked(await ctx.db.rpc("science_commit_answer", { p_attempt: a.id, p_visitor: ctx.visitor.id, p_user: ctx.userId, p_ordinal: input.ordinal, p_token: input.token, p_operation: input.operationId, p_selected: input.selectedIndex, p_result: result })) as Attempt;
   // Answer commitment is reported independently of issuing the next question, so a later outage
   // cannot make the browser treat an already committed response as unsaved.
   return { attempt: publicAttempt(committed), savedOrdinal: input.ordinal, group: ctx.visitor.route_group, signedIn: !!ctx.userId,
+    ...(committed.ordinal === answers.length ? { progress: examProgress(correctedResult(committed, records.issued, answers, records.corrections)) } : {}),
     ...(input.selectedIndex !== null ? { explanation: answerExplanation(issued, input.selectedIndex, records.corrections.updates.get(issued.revision_id)) } : {}) };
+}
+
+export async function requireAnsweredRevision(ctx: Context, id: string, revisionId: string) {
+  await ownedAttempt(ctx, id);
+  const { issued, answers } = await attemptRecords(ctx, id);
+  const question = issued.find(row => row.revision_id === revisionId);
+  if (!question || !answers.some(row => row.ordinal === question.ordinal && row.selected_index !== null)) {
+    throw new ScienceError("復習できる問題が見つかりません。", 404);
+  }
 }
 
 export async function reviewAttempt(ctx: Context, id: string) {

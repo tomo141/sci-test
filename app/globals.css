@@ -58,6 +58,30 @@ a {
   margin-inline: auto;
 }
 
+.science-accent {
+  display: inline-block;
+  position: relative;
+  padding-inline: 0.04em;
+  margin-top: 0.2em;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.science-accent-mark {
+  position: absolute;
+  top: -0.24em;
+  left: 0;
+  width: 100%;
+  height: 0.25em;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
 @media (max-width: 767px) {
   .page-container {
     width: min(100% - 32px, 1200px);

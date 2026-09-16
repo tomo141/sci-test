@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-16T15:25:18.093858+00:00",
+  "scope": "Answer screen restoration, provisional display, math accents, first-time guide, laboratory navigation",
+  "unitAndDatabase": {
+    "passed": 219,
+    "files": 42
+  },
+  "browser": {
+    "passed": 34,
+    "skipped": 2,
+    "initialPass": 32,
+    "correctedTestLocatorAndRetested": 2,
+    "projects": [
+      "desktop Chrome",
+      "mobile Chrome emulation"
+    ]
+  },
+  "lint": "passed",
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "visualInspection": [
+    "desktop and mobile vector/overbar/dot rendering",
+    "desktop retained question/choices/feedback",
+    "mobile first-time guide"
+  ],
+  "provisionalQuestionLevels": {
+    "count": 1020,
+    "counts": {
+      "1": 1,
+      "2": 27,
+      "3": 101,
+      "4": 245,
+      "5": 497,
+      "6": 130,
+      "7": 19
+    },
+    "boundaries": [
+      150,
+      300,
+      450,
+      600,
+      750,
+      900
+    ],
+    "basis": "existing reviewed a=1, c=.25, initial b; not empirical degree equivalence"
+  },
+  "databaseMigration": "none",
+  "production": "pending"
+}

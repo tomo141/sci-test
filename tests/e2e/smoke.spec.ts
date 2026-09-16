@@ -1,5 +1,25 @@
 import { expect, test } from "@playwright/test";
 
+test("first-time guidance leads to a trial and the laboratory has the shared navigation", async ({ page }) => {
+  await page.goto("/about");
+  await expect(page.getByRole("heading", {name:"まずは、10分野から2問ずつ"})).toBeVisible();
+  await expect(page.getByRole("list", {name:"出題する10分野"}).getByRole("listitem")).toHaveCount(10);
+  await expect(page.getByRole("link", {name:"まずは20問で腕試しする"})).toHaveAttribute("href", "/exam?kind=trial");
+  await expect(page.getByText("作問と自己評価の共通の目安", {exact:true})).toHaveCount(0);
+  await page.screenshot({path:test.info().outputPath("about.png"),fullPage:true});
+  await page.getByRole("link", {name:"みんなの出題ラボへ",exact:true}).click();
+  await expect(page.getByRole("heading", {name:"みんなの出題ラボ",exact:true})).toBeVisible();
+  const header=page.getByRole("banner");
+  const menu=header.getByRole("button", {name:"メニューを開く"});
+  if(await menu.isVisible()) await menu.click();
+  await expect(header.getByRole("link", {name:"検定について",exact:true})).toBeVisible();
+  await expect(header.getByRole("link", {name:"受験する",exact:true})).toHaveAttribute("href","/exam");
+  await expect(header.getByRole("link", {name:"マイページ",exact:true})).toHaveAttribute("href","/mypage");
+  if(await header.getByRole("button",{name:"メニューを閉じる"}).isVisible()) await header.getByRole("button",{name:"メニューを閉じる"}).click();
+  await page.screenshot({path:test.info().outputPath("lab-navigation.png"),fullPage:true});
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
 test("public entrances lead to the selected exam without starting one", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "あなたの科学は、 どこまで広い？" })).toBeVisible();
@@ -63,13 +83,12 @@ test("connected trial preserves progress and supports publishing and withdrawing
   await page.getByRole("checkbox").check();
   await page.getByRole("button", { name: "受験を始める", exact: true }).click();
   for (let ordinal = 0; ordinal < 20; ordinal++) {
-    await expect(page.getByText(`${ordinal} / 20問 保存済み`, { exact: true })).toBeVisible();
+    await expect(page.getByText(new RegExp(`^${ordinal} / 20問 保存済み`))).toBeVisible();
     if (ordinal === 3) {
       await page.reload();
-      await expect(page.getByText("3 / 20問 保存済み", { exact: true })).toBeVisible();
+      await expect(page.getByText(/^3 \/ 20問 保存済み/)).toBeVisible();
     }
-    await page.getByRole("radio").first().check();
-    await page.getByRole("button", { name: "この回答を確定する" }).click();
+    await page.getByRole("group", { name: "回答の選択肢" }).getByRole("button").first().click();
     await expect(page.getByText(`第${ordinal+1}問の答え`, { exact: true })).toBeVisible();
     await page.getByRole("button", { name: ordinal === 19 ? "結果を見る" : "次の問題へ", exact: true }).click();
   }

@@ -33,8 +33,7 @@ export function LabClient(){
     }catch(e){setError((e as RequestError).message);}finally{setBusy(false);}
   }
   return <main className="page-container max-w-5xl py-10">
-    <Link href="/" className="text-sm font-bold text-[var(--color-primary-700)]">全分野科学検定</Link>
-    <p className="mt-8 text-sm font-bold text-[var(--color-primary-700)]">解く人も、つくる人も、研究仲間。</p>
+    <p className="text-sm font-bold text-[var(--color-primary-700)]">解く人も、つくる人も、研究仲間。</p>
     <h1 className="mt-3 text-3xl font-black md:text-5xl">みんなの出題ラボ</h1>
     <p className="mt-5 max-w-3xl leading-8">とっておきの科学を、ひとつの問いに。投稿された問題を解いて、気づきを返して、次の良問を一緒につくりましょう。</p>
     <div className="mt-7 flex flex-wrap gap-3"><AppButton href="/exam?kind=lab">みんなの問題を10問解く</AppButton>{data?.signedIn?<AppButton variant="secondary" onClick={()=>open(emptyDraft())}>問題をつくる</AppButton>:<AppButton variant="secondary" href="/signup?next=%2Flab">無料登録して作問する</AppButton>}</div>

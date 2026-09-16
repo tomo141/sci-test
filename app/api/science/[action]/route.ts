@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { z } from "zod";
 import { domains } from "@/src/lib/data/taxonomy";
-import { answerExam, examState, ownedAttempt, publicAttempt, reviewAttempt, startExam } from "@/src/lib/science/engine";
+import { answerExam, examState, ownedAttempt, publicAttempt, requireAnsweredRevision, reviewAttempt, startExam } from "@/src/lib/science/engine";
 import { checked, context, endpoint, rateLimit, releaseConfig, requireUser, ScienceError } from "@/src/lib/science/server";
 import { accountData } from "@/src/lib/science/account";
 import { definition,requiresAccount } from "@/src/lib/science/definition";
@@ -101,8 +101,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     if (action === "bookmark") {
       const userId = requireUser(ctx);
       const input = z.object({ attemptId: id, revisionId: id, enabled: z.boolean() }).strict().parse(body);
-      const review = await reviewAttempt(ctx, input.attemptId);
-      if (!review.rows.some((r) => r.revisionId === input.revisionId && r.selectedIndex!==null)) throw new ScienceError("復習できる問題が見つかりません。", 404);
+      await requireAnsweredRevision(ctx, input.attemptId, input.revisionId);
       const query = input.enabled ? ctx.db.from("science_bookmarks").upsert({ user_id: userId, revision_id: input.revisionId }, { onConflict: "user_id,revision_id" }).select("revision_id") : ctx.db.from("science_bookmarks").delete().eq("user_id", userId).eq("revision_id", input.revisionId).select("revision_id");
       checked(await query);
       return { saved: true };
