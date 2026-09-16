@@ -10,6 +10,7 @@ import { ResultVersionHistory } from "./ResultVersionHistory";
 import type { RevisionUpdate } from "@/src/lib/science/corrections";
 import { ResultSummary } from "./ResultSummary";
 import { shareCopy } from "@/src/lib/science/share-copy";
+import { KnowledgeAssessment } from "./KnowledgeAssessment";
 
 type Review = { attempt: PublicAttempt; rows: { ordinal: number; revisionId: string; domain: string; content: Content | null; selectedIndex: number | null; correct: boolean | null; creditName?:string; update?:RevisionUpdate|null }[] };
 
@@ -86,6 +87,6 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
         {reportOrdinal===row.ordinal&&<form className="mt-4 grid gap-3 rounded-xl border p-4" onSubmit={async(e)=>{e.preventDefault();const form=new FormData(e.currentTarget);try{await scienceApi("feedback",{attemptId,ordinal:row.ordinal,category:form.get("category"),body:form.get("body"),evidence:form.get("evidence")});setNote("改善提案を保存しました。ありがとうございます。");setReportOrdinal(null);}catch(issue){setError((issue as Error).message);}}}><label>気づいたこと<select name="category" className="mt-2 block w-full rounded border p-3">{[["answer","正解が違う"],["ambiguous","複数の答えに解釈できる"],["explanation","解説について"],["source","出典について"],["rights","権利について"],["typo","誤字・表記"],["good","良い問題だった"]].map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label><label>具体的な内容<textarea name="body" maxLength={2000} className="mt-2 block min-h-24 w-full rounded border p-3"/></label><label>根拠・出典（任意）<textarea name="evidence" maxLength={2000} className="mt-2 block w-full rounded border p-3"/></label><AppButton type="submit">提案を送信する</AppButton></form>}
       </section>)}
       {review&&<div className="mt-5 flex gap-3"><AppButton variant="ghost" disabled={reviewPage===0} onClick={()=>setReviewPage(p=>p-1)}>前の10問</AppButton><AppButton variant="ghost" disabled={(reviewPage+1)*10>=review.rows.length} onClick={()=>setReviewPage(p=>p+1)}>次の10問</AppButton></div>}
-    </AppCard>{error&&<p role="alert" className="mt-4 rounded-xl bg-amber-50 p-4">{error}</p>}<AppButton href="/mypage" className="mt-6" variant="secondary">マイページへ</AppButton>
+    </AppCard>{result.definition.formal&&<KnowledgeAssessment attemptId={attemptId} initialDomain={domain}/>}{error&&<p role="alert" className="mt-4 rounded-xl bg-amber-50 p-4">{error}</p>}<AppButton href="/mypage" className="mt-6" variant="secondary">マイページへ</AppButton>
   </main>;
 }

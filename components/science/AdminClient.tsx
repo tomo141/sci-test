@@ -9,6 +9,7 @@ import { scienceApi, type RequestError } from "@/src/lib/science/client";
 import type { AdminData } from "@/src/lib/science/admin";
 import type { MyaspConnectionCheck } from "@/src/lib/science/myasp";
 import type { Content } from "@/src/lib/science/types";
+import { knowledgeLevels, scopeLabel } from "@/src/lib/science/knowledge-levels";
 const field="mt-2 block min-h-12 w-full rounded-xl border p-3";
 function Question({content}:{content:Content}){return <div className="mt-4 text-sm leading-7"><p className="whitespace-pre-wrap font-bold">{content.question}</p><ol className="mt-3 list-decimal pl-6">{content.choices.map((c,i)=><li key={i}>{c}{i===content.correctIndex?"（正解）":""}<p className="text-[var(--color-muted)]">{content.distractorRationales?.[i]}</p></li>)}</ol><p className="mt-3 whitespace-pre-wrap">{content.explanation}</p>{content.sources?.map((s,i)=><p key={i}>{s.url&&/^https?:\/\//.test(s.url)?<a href={s.url} target="_blank" rel="noreferrer" className="underline">{s.title}</a>:s.title}</p>)}</div>;}
 function Submission({draft,reload}:{draft:AdminData["submissions"][number];reload:()=>Promise<void>}){
@@ -16,6 +17,7 @@ function Submission({draft,reload}:{draft:AdminData["submissions"][number];reloa
   const [checks,setChecks]=useState({rights:false,source:false,uniqueAnswer:false,explanation:false});
   const checkLabels={rights:"投稿者の利用許諾と第三者の権利を確認",source:"信頼できる出典と本文の対応を確認",uniqueAnswer:"正解が一つで、選択肢に曖昧さがない",explanation:"解説と各選択肢の根拠が正しい"};
   return <AppCard><p className="text-xs">{draft.domain} · {draft.state} · {draft.id}</p><Question content={draft.content}/>
+    {draft.level_reference&&<p className="mt-4 rounded-xl bg-[var(--color-page)] p-4 text-sm leading-7">作問者の見積もり · {scopeLabel(draft)}<br/>{knowledgeLevels(draft).find(l=>l.key===draft.level_reference?.level)?.description??"段階は判断できない"} · 目標正答率70%<br/>自信：{{confident:"ある",uncertain:"少し迷う",unknown:"判断できない"}[draft.level_reference.confidence]}。実測難度や学位の申告とは区別して確認してください。</p>}
     <fieldset disabled={busy} className="mt-5">{(Object.keys(checks) as (keyof typeof checks)[]).map(key=><label key={key} className="mt-3 flex gap-3 text-sm"><input type="checkbox" checked={checks[key]} onChange={e=>setChecks({...checks,[key]:e.target.checked})}/>{checkLabels[key]}</label>)}
     <label className="mt-5 block text-sm font-bold">判断<select className={field} value={decision} onChange={e=>setDecision(e.target.value)}><option value="lab">ラボで公開</option><option value="adopted">正式問題への採用候補にする</option><option value="changes_requested">修正を依頼</option><option value="rejected">見送る</option></select></label>
     <label className="mt-5 block text-sm font-bold">根拠・作者への説明<textarea className={field} value={reason} onChange={e=>setReason(e.target.value)} maxLength={2000} rows={3}/></label></fieldset>
