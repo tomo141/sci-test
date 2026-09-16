@@ -28,7 +28,7 @@ describe("committed answer disclosure boundary", () => {
     answers = [];
     commit = vi.fn(async () => ({ data: { ...attempt, ordinal: 1 } }));
     context = { visitor: { id: "owner", route_group: "A" }, userId: null,
-      db: { rpc: commit, from: (table: string) => {
+      db: { rpc: (name: string, input: unknown) => name === "science_correction_epoch" ? Promise.resolve({data:0}) : commit(name, input), from: (table: string) => {
         const result = { data: table === "science_attempts" ? attempt : table === "science_issued" ? [issued] : answers };
         const query = { select: () => query, eq: () => query, order: () => Promise.resolve(result), maybeSingle: () => Promise.resolve(result) };
         return query;

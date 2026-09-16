@@ -4,9 +4,9 @@ export { correctedResult } from "./correction-model";
 import type { Answer, Attempt, Content, Issued } from "./types";
 
 export type RevisionUpdate={source_revision:string;replacement_revision:string;excluded:boolean;reason:string;approved_at:string;content:Content;credit_name:string};
-export async function correctionState(db:Context["db"],revisions:string[],attemptId?:string){
+export async function correctionState(db:Context["db"],revisions:string[],attemptId?:string,capturedEpoch?:number){
   // Read epoch first. A concurrent approval will invalidate the eventual result commit.
-  const epoch=checked(await db.rpc("science_correction_epoch")) as number;
+  const epoch=capturedEpoch ?? checked(await db.rpc("science_correction_epoch")) as number;
   const [rows,excluded]=await Promise.all([
     revisions.length?db.from("science_revision_updates").select("*").in("source_revision",[...new Set(revisions)]).then(r=>checked(r) as RevisionUpdate[]):Promise.resolve([] as RevisionUpdate[]),
     attemptId?db.from("science_response_exclusions").select("ordinal").eq("attempt_id",attemptId).then(r=>checked(r) as {ordinal:number}[]):Promise.resolve([] as {ordinal:number}[])

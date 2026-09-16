@@ -43,21 +43,22 @@ const cookieName = "science-visitor-v2";
 
 export async function context(create = false, refShare?: string): Promise<Context> {
   const db = service();
-  const auth = await createServerSupabaseClient();
-  const userResponse = await auth?.auth.getUser();
-  if(userResponse?.error && (userResponse.error.name==="AuthRetryableFetchError"||(userResponse.error.status??0)>=500))throw new ScienceError("ログイン状態を確認できません。通信の回復後に再試行してください。",503,"auth_unavailable");
-  const user = userResponse?.data.user;
-  const userId = user?.email_confirmed_at ? user.id : null;
+  const authResponse = createServerSupabaseClient().then(auth => auth?.auth.getUser());
   const jar = await cookies();
   let token = jar.get(cookieName)?.value;
   let tokenHash = token ? createHash("sha256").update(token).digest("hex") : "";
-  let visitor: Visitor | null = null;
-  if (token && /^[0-9a-f]{64}$/.test(token)) {
-    const result = await db.from("science_visitors").select("id,user_id,route_group,experiment,full_length,ref_share,created_at").eq("token_hash", tokenHash).maybeSingle();
-    if (result.error) checked(result);
-    visitor = result.data as Visitor | null;
-    if (visitor?.user_id && visitor.user_id !== userId) visitor = null;
-  }
+  const [userResponse, visitorResponse] = await Promise.all([
+    authResponse,
+    token && /^[0-9a-f]{64}$/.test(token)
+      ? db.from("science_visitors").select("id,user_id,route_group,experiment,full_length,ref_share,created_at").eq("token_hash", tokenHash).maybeSingle()
+      : Promise.resolve({data:null,error:null})
+  ]);
+  if(userResponse?.error && (userResponse.error.name==="AuthRetryableFetchError"||(userResponse.error.status??0)>=500))throw new ScienceError("ログイン状態を確認できません。通信の回復後に再試行してください。",503,"auth_unavailable");
+  const user = userResponse?.data.user;
+  const userId = user?.email_confirmed_at ? user.id : null;
+  if (visitorResponse.error) checked(visitorResponse);
+  let visitor = visitorResponse.data as Visitor | null;
+  if (visitor?.user_id && visitor.user_id !== userId) visitor = null;
   if (!visitor) {
     if (!create) throw new ScienceError("受験を始めた端末から開くか、ログインしてください。", 401, "identity_required");
     token = randomBytes(32).toString("hex");

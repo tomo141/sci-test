@@ -34,6 +34,7 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
   const [explanation, setExplanation] = useState<ExamState["explanation"]>();
   const [instantKeyboard, setInstantKeyboard] = useState(false);
   const answering = useRef(false);
+  const prefetched = useRef<{ id: string; ordinal: number; startedAt: number; promise: Promise<ExamState | null> } | null>(null);
   const title = useRef<HTMLHeadingElement>(null);
   const paused=error?.code==="item_unavailable";
   const desired = plan?.definition ?? definition(kind, domain);
@@ -52,10 +53,26 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
   }, [router]);
   const refresh = useCallback(async (id: string, feedbackOrdinal?: number) => {
     setBusy(true); setError(null);
-    try { const next=await scienceApi<ExamState>("state", { attemptId: id, ...(feedbackOrdinal !== undefined ? { feedbackOrdinal } : {}) }); window.history.replaceState(null,"",`/exam?attempt=${next.attempt.id}${next.explanation ? `&feedback=${next.explanation.ordinal}` : ""}`); adopt(next); }
+    const prepared = prefetched.current;
+    prefetched.current = null;
+    try {
+      const cached = feedbackOrdinal === undefined && prepared?.id === id && Date.now() - prepared.startedAt < 30_000 ? await prepared.promise : null;
+      const next = cached ?? await scienceApi<ExamState>("state", { attemptId: id, ...(feedbackOrdinal !== undefined ? { feedbackOrdinal } : {}) });
+      window.history.replaceState(null,"",`/exam?attempt=${next.attempt.id}${next.explanation ? `&feedback=${next.explanation.ordinal}` : ""}`); adopt(next);
+    }
     catch (e) { setError(e as RequestError); }
     finally { setBusy(false); }
   }, [adopt]);
+  useEffect(() => {
+    if (!explanation || !state || state.attempt.state !== "active" || busy) return;
+    const { id, ordinal } = state.attempt;
+    if (prefetched.current?.id === id && prefetched.current.ordinal === ordinal) return;
+    // Select using the newly saved answer while the learner reads its explanation.
+    // Nothing is shown until Next; only the public question is downloaded.
+    prefetched.current = { id, ordinal, startedAt: Date.now(), promise: scienceApi<ExamState>("state", { attemptId: id })
+      .then(next => next.attempt.id === id && next.attempt.ordinal === ordinal && !next.explanation && next.question ? next : null)
+      .catch(() => null) };
+  }, [busy, explanation, state]);
   useEffect(() => { if (initialAttempt) void refresh(initialAttempt, initialFeedback); }, [initialAttempt, initialFeedback, refresh]);
   useEffect(()=>{
     if(initialAttempt)return;
@@ -75,6 +92,8 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
   const answer = useCallback(async (choice: number | null = selected) => {
     if (answering.current || busy || explanation || paused || !state?.question || (choice === null && !state.question.withdrawn && !pending)) return;
     answering.current = true;
+    prefetched.current = null;
+    setSelected(choice);
     setBusy(true); setError(null); setSaveNote("送信中…");
     const input = pending ?? { attemptId: state.attempt.id, ordinal: state.question.ordinal, token: state.question.token, operationId: crypto.randomUUID(), selectedIndex: state.question.withdrawn ? null : choice };
     setPending(input);
@@ -150,6 +169,7 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
         </div>}
         <AppButton disabled={busy || (selected===null && !displayed.withdrawn && !pending)} onClick={() => void answer()} className="mt-6 w-full">{busy ? "保存中…" : pending ? "同じ操作を再送する" : displayed.withdrawn ? "未回答でスキップして次へ" : "この回答を確定する"}</AppButton>
       </>}
+      {busy && !explanation && <div role="status" className="mt-6 rounded-xl bg-[var(--color-page)] p-5"><p>回答を確認しています…</p><div aria-hidden="true" className="mt-3 h-4 w-2/3 animate-pulse rounded bg-slate-200" /></div>}
       {explanation && <div key={explanation.ordinal} className="mt-6">
         <p className="sr-only">第{explanation.ordinal+1}問の答え</p>
         <div className={`flex items-center gap-4 rounded-2xl border p-4 ${explanation.correct === null ? "border-amber-300 bg-amber-50" : explanation.correct ? "border-[var(--color-success-700)] bg-[var(--color-success-100)]" : "border-[var(--color-danger-700)] bg-[var(--color-danger-100)]"}`}>

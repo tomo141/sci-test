@@ -1,0 +1,646 @@
+{
+  "version": "editorial-cues-v1-20260917",
+  "note": "Known pre-existing published content requiring review. This is a debt ledger, not approval; changed or new high-risk content must not enter the next bank. Do not regenerate to bypass a finding.",
+  "existingHighRisk": [
+    {
+      "key": "agri-doubled-haploid-homozygosity",
+      "digest": "94641daf1808c0b50c6f6c018881a881d5dac81f51e777dcf1ceef244477c52b"
+    },
+    {
+      "key": "agri-marker-background-selection",
+      "digest": "2831785aba4d1a62d50616d6a6aa53d0a1fdbd7a0dee6059c8dde72819bec72d"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000494",
+      "digest": "dba51fd88f1c71d0964c503a23f3cdf522c8e3c59f033d38ddbaacb9509280fa"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000174",
+      "digest": "89ed231f245371fc8a911b400292c38119617b14ae0e0519beccb3dff986d750"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000187",
+      "digest": "8e9ae20187f5f7f66a0889f76a578bdb25d1b314bf1a89f9c709a87ab9095b33"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000199",
+      "digest": "b9704c06692f2c0ad6ca70e85458d5ffcdeecc698e8efa055cebc7bfef859b2d"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000467",
+      "digest": "982c0b504920f9cdbce83d7536f60d0ab96c48821734fa5a99bdca53909b86c3"
+    },
+    {
+      "key": "agri-rice-aerenchyma-oxygen",
+      "digest": "b65c5991482ca75aba5e8204c2e2751aff99189bbfabc7f87b1c78d95139d9ff"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000185",
+      "digest": "c56f593c592f7813c45203455f849fb5d56b979f78dab1c171bd9429457a2c7e"
+    },
+    {
+      "key": "agri-maillard-versus-caramelization",
+      "digest": "9e2cd9b444d96286501a3333a35c45bfec908455edf664307f2a5b4d7651418f"
+    },
+    {
+      "key": "agri-coppice-asexual-regeneration",
+      "digest": "3337052eccf5988957dc18bf39f2bde770d9bf92f8ce7e400184c6022f869835"
+    },
+    {
+      "key": "agri-silvopasture-integrated-management",
+      "digest": "b46abc28f52740c00a66fb0dc6a5c8b95f359b953d298edac2196c2efdacf171"
+    },
+    {
+      "key": "agri-seed-dormancy-scarification",
+      "digest": "05ab0954eb860ed41b2ad4a0c20fe72f93446edac137514d5e45cb8b4daafdf9"
+    },
+    {
+      "key": "agri-crude-protein-nitrogen-factor",
+      "digest": "4bd4d9814017fb7ab24430979666b48616267ad744732ee92e3f95d711fac2af"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000155",
+      "digest": "bfca05b045a650756cb50a8431aeaae00b5f9da3481e51457dd736fbf919aedd"
+    },
+    {
+      "key": "agri-pesticide-mode-of-action-resistance",
+      "digest": "7b26c159f8f226cae0a6aa004c060d27d69d52a8c48f8fb0044049d97e18fad7"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000152",
+      "digest": "8fe12fe3cc76ce289380f779266801813d043e6b9481644ebdc28fdecdaa4e1d"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000153",
+      "digest": "9a47997107dcccab034dbd4d79c8a30951d24752c31c3336f9bbed03f3c55b71"
+    },
+    {
+      "key": "10000000-0000-4000-8002-000000000069",
+      "digest": "b7acf989d11ec4808a2ef23f5c3756a1fc23e1b88d95169bcd774f42acf1de55"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000406",
+      "digest": "5b63f00bd4b096f1695e8ba4be280a16c7b0f85e69bf31217d86614c673d95e1"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000174",
+      "digest": "206639d9935b7ff32c29e39bfadafabc39c438dee9f29bab42a81a527ee4ab61"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000415",
+      "digest": "fbd874526b28bc39063eaa1b14a24ac62b61bd8943455bacba96f52f94eb4130"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000087",
+      "digest": "cff86080b4c3c65d97b5fdb002e9bce1df27f623803f09cab729702e632dcf99"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000422",
+      "digest": "03ec10c95b0ca8698129ea28eff67a5460aa345523345aa33297a4326e54a91a"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000163",
+      "digest": "8b006ef0a9ef056b04d80cc23f0c4608629b8e2238ade24722418b86b6c897f7"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000420",
+      "digest": "0095385decb66fed65a6fe0db2a76972fd9c36bc16cdd9c2db08457e40361635"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000426",
+      "digest": "69d38a3bdf81a044980ce2756d9aed164a1a5d3290579988f94dec02a75141f9"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000149",
+      "digest": "2899e764eb2e256bef06f161a08d7e91263ce30c223fc086466ad055416f2249"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000429",
+      "digest": "b3fdcd934ff063d9c0e583bfb868dcfe3985f595a1daf1fc84c10def3df212a9"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000154",
+      "digest": "ae4ee8d8a94469c81670788def4a923a0db2078e7629d6db2f31de42b003403b"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000448",
+      "digest": "40b741d60714a4993487e0d01c9f92d60ec9179bb163ed82c3f5e303340d2fcd"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000179",
+      "digest": "b8b0b5c8ea7c066c84a0300ed23b20974daebbe76d2e80e21824ad0794a8e2b3"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000088",
+      "digest": "536b279a6ce2b884878ea0e74c63594e12866c16e3b618f6d62bdf4b6abd68e6"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000024",
+      "digest": "54832c641259ee26a1daf422e66b6ff6ce24426122a1a1a45ed73dfffaea1793"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000026",
+      "digest": "c4dcda69c80540d769647228b2b5e1a112f4ef73647b6e7f0e3c0bf1bff7ea5c"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000074",
+      "digest": "cdcb8ed9123e204efff76ced989aef93c6f138d834739aedd049ec445114e719"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000087",
+      "digest": "b1532bd211659ff2a55825c1ce31eaac0b3fa5c60bc43dead670053a31e3f308"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000062",
+      "digest": "ddc55ab9671bc706096ef922c7dc7d629e0be5e6e19fc26b66e5a9c7608c52ed"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000063",
+      "digest": "8bd47c58dea491a843874272c1910ed5cd3d1137d664c15e6e1f6744c48e494f"
+    },
+    {
+      "key": "10000000-0000-4000-8010-000000000013",
+      "digest": "34d042c82d47420d5a576ca6e263eceb73cba3d507c297f8c128027af30450c1"
+    },
+    {
+      "key": "10000000-0000-4000-8010-000000000014",
+      "digest": "41d4bfa6a4e3d956aa20a2a2a45f59a451ce7a58dd5ce1f629d23330400604e1"
+    },
+    {
+      "key": "10000000-0000-4000-8010-000000000010",
+      "digest": "24baa0eaffcf89939d0d53d2afb0aad2cc55abf6d814f2286f08f84539b46db7"
+    },
+    {
+      "key": "10000000-0000-4000-8010-000000000021",
+      "digest": "14eb6379850463ebfc675b68e0e6748b92300e4a245bc192ed5cc2264325fc34"
+    },
+    {
+      "key": "10000000-0000-4000-8010-000000000012",
+      "digest": "7095b89a9e68f5081d34d97d5ab07911831761438ba3f8af936a72cae2318ff6"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000066",
+      "digest": "162ec4a92b534884032771750fc49973f0e84c8a6a12bffb2c1de0953e499cf6"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000028",
+      "digest": "a0b4632af603daf4b946f9029e9ddfe247417b188dc17d46138c8975fa75c7b8"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000077",
+      "digest": "0706b6a70079d3de2acb6430a4712303defcc046e4fa9bb45fb8259b3099b892"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000084",
+      "digest": "73a2732a32f758e55adaa805a57cbe85cf4aaf99a980e65874784914f78fecbd"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000075",
+      "digest": "580cfdb66c09a0607f5aa28214bb2b13559dd1a7ea0a622c5a0a877f8527bc75"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000074",
+      "digest": "09f746e21bf11d2e4bbf3ab65627feb890ee5be041e942918846121eec533c09"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000032",
+      "digest": "1b4929998c4d51b3236362c85565628e58e18772ea84ce52ebada66b081cc55e"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000025",
+      "digest": "f4344a29edcb14254d0ee87166493f48b74889130494398aabeb2547f01318d4"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000034",
+      "digest": "05364fab119b7498614b00e3336c96ca3d56fa1dea3ee7eaf8b4c49998bff28a"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000035",
+      "digest": "783dae25fd6f8ae951d87ba36fb6ec2a7bffe04ce5d606078919c19ae7f18d66"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000080",
+      "digest": "eaa0c52975b614ebabc93abc7ed24f41be88a59c6a9dce5069c0f2f67f042516"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000105",
+      "digest": "2acb84052fe6fd944c9f4b3935442f9511f9968970e8084063df4a0173866b50"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000180",
+      "digest": "b9c6ccfc2f6b614b765071a8b53df16ffe4652c8cd52f3c870693cdb4788ac95"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000194",
+      "digest": "0c22506a160160a41071fe1f825601a35ef44f067982b7458dae15ab99d121c3"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000161",
+      "digest": "59734954913e02da716618c5a30f0860adc093e0799e69c936873cbed6f87b28"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000103",
+      "digest": "1a872247e79548430f37cde583589f8719ee7baf3505c33e993a3d717cd87e92"
+    },
+    {
+      "key": "earth-lithosphere-components",
+      "digest": "dc80fdda132790466440240bd110c361bae8082418444560e6899818962fb0d4"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000063",
+      "digest": "a514ec5b2b0fee8133de36b31b01c8b45eda0609e6fcbb7c632392c2531e586f"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000061",
+      "digest": "9b81e696a5c796880946417702db9eab877fc1a7c8ce711f46cda7c76f645581"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000112",
+      "digest": "c3fec145a2e7a87807254bc3e61292af0e950970fcd8791f653e9d3fbea37fda"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000164",
+      "digest": "33cc322f5969b2a397e607b3f96e04e3dff268337bcf82d3443ac893f48141ad"
+    },
+    {
+      "key": "earth-unconfined-water-table",
+      "digest": "201382f6c281095c9016ca4d04a01180f64254b56e1911bc0714b05506d25371"
+    },
+    {
+      "key": "earth-daytime-sea-breeze",
+      "digest": "32f4364c8595188c437de93930fd52336b68236c6d2b752eab2ceb3abc04ddc0"
+    },
+    {
+      "key": "10000000-0000-4000-8002-000000000056",
+      "digest": "bf1b41c98ee5907670d4235b92b2b0e902fb5420cba4b2c6ddbf05bfc1ad1e64"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000094",
+      "digest": "297902a3171982e12b2b08c54c19e1086fe856844f0e3a92fee4e71b8963f8e2"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000206",
+      "digest": "fb20c0c16fff58b89f65685272c5f1df3c3fc009f922724471799fa733c8c275"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000216",
+      "digest": "10817ab933b92e2fec6e691bbe38a60ec43cf91b66d7f4af379c79b051bd610a"
+    },
+    {
+      "key": "10000000-0000-4000-8002-000000000055",
+      "digest": "07adb34a0ac992e9b5661afb1eff815e6d2b1d334d567a3d423e73184701449f"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000211",
+      "digest": "5de5c912b54f145986e73bb3e85fa23eec5e9bf7d26ed37cfd8229a4681274a8"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000205",
+      "digest": "e9213052f01eabe0995b013c09ae5a535f18381aec55e00363ca2359abfb7b3a"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000085",
+      "digest": "3df8ff9c182f4462751d0b3cb534403ec1eabd245b0577b6024cb10a6e06c7cd"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000082",
+      "digest": "a645d9808c7b819d07a59ab53ac301d35816698b69082d3524398682fd252f66"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000244",
+      "digest": "04814bed1c6e2ce8a3b122ea8e45e75664191f5f5c8d42deb6a61ae8183aa6d3"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000138",
+      "digest": "aa6b0481d4ae80b833153fa78373e0831031171b4f2535588b75a529973dce31"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000140",
+      "digest": "8f05720fb0d1a62d8880b56532e5d9c7edb9a582b5786e9d1a11c216a8d43cf5"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000078",
+      "digest": "d82e793225a93e4d55e211e471e4d87cd719029260b5e141b46fcb54761dbd8b"
+    },
+    {
+      "key": "eng-cold-work-hardening",
+      "digest": "c2f0b95ff82b30ae1386512097da3ac735f9508afa2b0bbb9790f7ea53deec39"
+    },
+    {
+      "key": "eng-martensite-tempering",
+      "digest": "c4966ed8df3b13737fe562870727d441191233905cca436606b9e226ccd4218c"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000242",
+      "digest": "2ad86ab25e613536f9faaa48d4fd2e2b73a078b68c2e07aaa073ceed6f3f2812"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000147",
+      "digest": "f4562b9f566ac54be364422233660d3f978115cb72aa391d4de7e4f6b667907c"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000150",
+      "digest": "e26e4afdfa573bd3881871dcc2b9e3124bd74d51368a5c629dc3a65a473e77e8"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000081",
+      "digest": "6cfe6adf2fbdfdd9e9178e65cb034355885b984101515dd2bfd9618bc9a1daf7"
+    },
+    {
+      "key": "10000000-0000-4000-8002-000000000092",
+      "digest": "57400f595405e13499b728d522439273d820004099194e4fcf8ae0f4ecfe7cf2"
+    },
+    {
+      "key": "10000000-0000-4000-8003-000000000092",
+      "digest": "32e859bba4f9d49f5df13fea42bf232568a30bb03089b49f7568acf66b4db398"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000022",
+      "digest": "4bed3760bf68a54db207d299fffd876a12f010f5540b948254c3de9f53124cda"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000244",
+      "digest": "cc420a6fd52eca2e562c749f99a2ef0cbb0a0d36642a0bfe7984cd47989ad418"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000247",
+      "digest": "3e5c3ba168f251180525db0faab46f73df3388275e12da6984065f047946ee33"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000014",
+      "digest": "85b9a6d7dd2762ceedc3d4955647f6b5ab930278cf73ed758ee7d0130a1f8642"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000038",
+      "digest": "1f63735ca25bdb2eee3a6e652cb67905104cff381995b13f6ddac1acd2118e76"
+    },
+    {
+      "key": "humanities-history-archaeological-context",
+      "digest": "b306bdd50051c5f4d03fdeeea47b0da8319707835f89bf3dad66be79617778cb"
+    },
+    {
+      "key": "humanities-history-terminus-post-quem",
+      "digest": "8e22fa74cc19b9b827370b699b47b74cb02b7d8e979e5da9306853b86644c0d9"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000236",
+      "digest": "22c89973849b3097f254bab9d756ef8ddf7f126ebd834df1fad42af6f860dd59"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000234",
+      "digest": "9ee7b5c58eb3678189dd264a722063f19ab3ca2c0f6ee1db858ba82f1ef3b248"
+    },
+    {
+      "key": "humanities-education-formative-assessment",
+      "digest": "60a8928f0580d264c9b3ad2ff9360707ba6018ff2c3b895637287049b383a4af"
+    },
+    {
+      "key": "humanities-culture-intangible-heritage",
+      "digest": "55077a83e4a4eadb49eb8c1fdb9a52543e16c9ed403d55be0b2158dd52b4da4b"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000020",
+      "digest": "9aba07b8a753508bcf9d299d1122c4fbc7162b4ead70301ee57f042d728f0dc4"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000015",
+      "digest": "fbfda04cbcdcabf9e2a9c8d899e4a03231263a8c132e6f7a44885184730e7fe9"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000006",
+      "digest": "b4a2ab2876989691aaa05a03f294fa226cb62d8fccb572365381e050b8d6fc8a"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000019",
+      "digest": "b4497a682f173e65281ad9ef0aca1516d008630b53a21e439bfc33af320c03a0"
+    },
+    {
+      "key": "humanities-philosophy-hume-is-ought",
+      "digest": "ac9305a6b3b66dbdb242e4bd9de6a1dae9725836d0547fb56208c7108c01a192"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000017",
+      "digest": "ed93aa822366032739d7649d186e30e5bd27c4a8b0a86afda34aed6f6a65a652"
+    },
+    {
+      "key": "humanities-politics-federalism",
+      "digest": "9c02fb6c8c05030c524f1baf74133ccc0bc13cb30fd8aee95e9a5aa145de0d1d"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000248",
+      "digest": "11b26476557103d1db23d4a6700268ee269b876fda1242fc9863a9a0fcc8aa94"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000008",
+      "digest": "4768a86eca71c7a63926300161e45d002a6960a90a527d9435560a0d20738e8c"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000250",
+      "digest": "97ad3e2ff1699603448c140b98f213c349950ddd438729a2b093682591b034fa"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000005",
+      "digest": "707736e96f6d1f911f5466856b3b92c5fdb2ea3ef643548c5a462743423e045a"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000014",
+      "digest": "f21c64785d2f69c8c9c93d97ae2ee94831ef383e21b85f0afc2f3c61decdcb5e"
+    },
+    {
+      "key": "humanities-sociology-symbolic-interaction",
+      "digest": "55d27857470a4e59d4af0e18b44425ee4b6af132dd0b2ade75b461f6d18d77de"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000050",
+      "digest": "4d15d12122f7d442c47742e0db158641d5f093c5745004a78b0289cae16fc9e3"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000289",
+      "digest": "9d738b732199a25ad78ef4201bb603a22e240f300bb5185c267b9e044ed7ec47"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000299",
+      "digest": "94a33a2c2266814dfa373265dc784d9cdd32761bcafd9283374b8caa745e91a9"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000272",
+      "digest": "9d1a852d3e47e738db5537d57aceada5f93de38a829367ad4090068cf9a29ebb"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000115",
+      "digest": "132eac9ebf1ffaa9cb5503b57f4d1832678faabc39c855f755387e61f13a0837"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000292",
+      "digest": "0a9ef088137981373f58d20da46ed4937f946ac0ce84c8c7b76d3b3cb28d6bf8"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000119",
+      "digest": "ec156238d31a18a222ea0a89dc9bc6220574d8d17dbfc5dae17564a33345aed1"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000093",
+      "digest": "84fc90b1c076af01002177c7d2ef317067c5fd3923acb41988767d367ef260ee"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000288",
+      "digest": "c05474141fd5dfbccc13531c04f5bc7ef057fd9148d5df4d20f51ba4fb9ca534"
+    },
+    {
+      "key": "info-sql-order-guarantee",
+      "digest": "a02f4bf2f96794068597cfd9cb07b22d9ed4be2785b6b0683e815a93532d8695"
+    },
+    {
+      "key": "info-sql-foreign-key-reference",
+      "digest": "f0ad89161482b967769bcaa62a574049819b6d56711d25c08a763996d4ef19d0"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000278",
+      "digest": "b12acd0487b8f423eb5617e823775e8bcd880818e4bdd5c7c5f1bda4b766290b"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000260",
+      "digest": "cc73663000e6cabcb5aeb4099d147e873151093ec2cb560a358c86d60724ea24"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000196",
+      "digest": "2bcde98e0dafb03eee29632b6a1a194e743a6f4cf6913c015ac9a5158f6e9ca8"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000284",
+      "digest": "f29a3a0b39231578f87420fa9538ffb74f0bfb1a67cbd3cfcdd738e4dd853473"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000181",
+      "digest": "48ef6dbb09b063ec75820278c9531abd0307ac800bb783df22530292c4535f53"
+    },
+    {
+      "key": "info-base64-not-confidentiality",
+      "digest": "178a4338e2a142891500182183281b5d356cce54eae8d469b4b4c20bff1752af"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000176",
+      "digest": "4b6ae0263bef15cd9fc580e17e75ff07cbc9abf77e41967340719ab0119d0765"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000195",
+      "digest": "6644218001cc5a2dcb9e055512327552a91156d269354411bd26a8aa64e0ba52"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000192",
+      "digest": "48661a6403aa637970ce82826a0a9cbb02bdd45fe65d8bc586362d5b32a85329"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000200",
+      "digest": "939b6bc325ae7b38ab5aa1545054662857fc85ace5318cc0ca56ce4f4635f7ef"
+    },
+    {
+      "key": "info-privacy-epsilon-strength",
+      "digest": "de303ed935fd326c75f9647ed876929efe4a43ffe71b78ea97e37296d52ea181"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000339",
+      "digest": "9a245e0ff8f02daa25798b3f635d336ff282da96497c4cc33f4c09d2980699aa"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000337",
+      "digest": "d40e0e60619d3795a1a52e9a10853958a40e57f8fde6e826c3ede8f5ef4b1eb1"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000322",
+      "digest": "552e18c1432a5f29dabebe18e4ee3dfc05c6c0922bf852f6db7dba4d2989616c"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000344",
+      "digest": "bb8d702f4441c428615ec03646a0b535429b336cc10844ff78c6eab73b20b1e2"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000340",
+      "digest": "22f24c35c62d8ae56b5c5ee6e5d86b0ab3f990b11b143dd04593315336992ee6"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000104",
+      "digest": "b5ba62db919041b4224eca7548e29b0b0689c59277435dede8d8418f53aeec82"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000112",
+      "digest": "dc04799787c718a682ffeab0bcdb5c315e2e1e742e0ef1cf60da78304ef9e724"
+    },
+    {
+      "key": "10000000-0000-4000-8003-000000000089",
+      "digest": "99ba91b5570b3dae77e72b75164b48ffb7c6b8a7065f2a747c7d8a162f868401"
+    },
+    {
+      "key": "10000000-0000-4000-8006-000000000048",
+      "digest": "6c2077418cb66e2b84fb4351d29cfc98a7346c050c5f327988df02250d609537"
+    },
+    {
+      "key": "medical-dental-periodontitis-bone",
+      "digest": "1cd0ee1d7edf4c1a2c4de0d79be7e8b1b9c902c321c98f42acb3c1791afd0498"
+    },
+    {
+      "key": "medical-microbiology-biofilm-matrix",
+      "digest": "64148f536ded79ed3107c9c2b6415989bdbf4b0dc16cbe51c4be81a66134bb3b"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000105",
+      "digest": "ad76207d1a4a243612114737277da891a61781679c32bd8424c07f719d28fc10"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000145",
+      "digest": "4c667de53951dbbb65f7598d03507ea6a5043cd5716cefe3ad6d1092372ba0a8"
+    },
+    {
+      "key": "medical-pharmacology-competitive-antagonist",
+      "digest": "7e1ffe41b2ca17f8a92b62de90374bff40874b8bfd9c787c8c11d8019255fcab"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000220",
+      "digest": "25c1364a610a195bea68e76c1d94cf5ede1599c15bf081272b62e62bade26f3f"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000373",
+      "digest": "c4d04191f7edf08126095aaffeea6b0589d1cc64616b8881952729da57c5867c"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000133",
+      "digest": "125679f51496dbd5a2960b7a562428c9b6bc5c0e5fc8decb75392fb5cacdd940"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000370",
+      "digest": "d728531e3a14c34b86ea4f50654c56b7459d24dc4ede18a48e721da46255a0d5"
+    },
+    {
+      "key": "10000000-0000-4000-8005-000000000134",
+      "digest": "e16adfe2c5699fc84c598929a331b81202ac52627d80f62b2a56d4bf7e6f3a65"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000399",
+      "digest": "e7b7e6ab4e059a2ed78a7d7275de6532d22b3b239f1e2ba32ef4c46e8ee009b7"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000040",
+      "digest": "6f87a31ba43516ab6901deaa155b87ca496d2cfd6ba0aec40f59a33c293d37bb"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000034",
+      "digest": "0d7caafd29a1f60abed6e4825a073af9256637a74fe80fe4373ffbd1ab623726"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000036",
+      "digest": "dc693fb60f4d6022cdf2cb5cb038535703a26bc8ded9caef6cc2af1d9652fad2"
+    },
+    {
+      "key": "10000000-0000-4000-8004-000000000043",
+      "digest": "19a4cd756e5cddfebe9009871d9ca83ef524814fb8d34cf7baa67c04a15efd71"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000377",
+      "digest": "3a69cf5af8849140b8e9cd30a00eefd667f0dad06a9830a41a91d7d517489e5f"
+    },
+    {
+      "key": "10000000-0000-4000-8007-000000000395",
+      "digest": "8e15541d9e27fc53c281272cbc48d7426e281847c70f10eea688848ec27c49a9"
+    }
+  ]
+}

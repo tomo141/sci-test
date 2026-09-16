@@ -11,8 +11,9 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "bank:prepare": "node scripts/prepare-science-bank.mjs",
+    "bank:audit": "node scripts/audit-science-editorial.mjs",
     "bank:inspect": "node scripts/import-science-bank.mjs implementation/local/question-bank/candidate.json",
-    "bank:test": "node --test scripts/lib/science-bank.test.mjs",
+    "bank:test": "node --test scripts/lib/science-bank.test.mjs scripts/lib/science-editorial.test.mjs",
     "deployment:check": "node scripts/check-science-deployment.mjs",
     "questions:gaps": "node scripts/pipeline/report-subdomain-gaps.mjs",
     "questions:plan": "node scripts/pipeline/plan-subdomain-batch.mjs",
@@ -26,7 +27,7 @@
     "questions:check": "node scripts/pipeline/ci-question-checks.mjs",
     "questions:report": "node scripts/pipeline/scheduled-audit.mjs",
     "questions:pipeline": "pnpm questions:validate && pnpm questions:build && pnpm questions:audit -- --strict && pnpm questions:gaps && pnpm questions:check",
-    "preflight": "node scripts/preflight.mjs && node scripts/check-science-deployment.mjs",
+    "preflight": "node scripts/preflight.mjs && node scripts/audit-science-editorial.mjs && node scripts/check-science-deployment.mjs",
     "security:check": "node scripts/check-security-env.mjs"
   },
   "dependencies": {

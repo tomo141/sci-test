@@ -3,10 +3,14 @@ import {readFile,readdir,mkdir,writeFile,realpath} from 'node:fs/promises';
 import {resolve,sep} from 'node:path';
 import {createHash} from 'node:crypto';
 import {prepareBank} from './lib/science-bank.mjs';
+import {editorialRegressions} from './lib/science-editorial.mjs';
 const source='supabase/seed/generated/questions-knowledge.json',folder='content/science-bank-v2';
 const raw=await readFile(source,'utf8');
 const files=(await readdir(folder)).filter(n=>n.endsWith('.json')).sort();
 const inputs=await Promise.all(files.map(async name=>({name,text:await readFile(`${folder}/${name}`,'utf8')})));
+const editorialDebt=JSON.parse(await readFile('content/science-editorial-existing-debt.json','utf8'));
+const editorialProblems=editorialRegressions(inputs.flatMap(file=>JSON.parse(file.text)),editorialDebt.existingHighRisk);
+if(editorialProblems.length)throw new Error(`Review giveaway distractors before preparing new or changed items: ${editorialProblems.map(q=>q.legacyId??q.familyKey).join(', ')}`);
 const legacy=new Map(JSON.parse(raw).map(row=>[row.id,{id:row.id,question_text:row.question_text,previous_question_texts:[]}]));
 let productionSource=null;
 if(process.argv[2]){

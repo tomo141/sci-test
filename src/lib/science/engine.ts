@@ -25,13 +25,14 @@ export async function ownedAttempt(ctx: Context, id: string) {
 }
 
 export async function attemptRecords(ctx: Context, id: string) {
-  const [issuedResponse, answerResponse] = await Promise.all([
+  const [issuedResponse, answerResponse, epochResponse] = await Promise.all([
     ctx.db.from("science_issued").select("*").eq("attempt_id", id).order("ordinal"),
-    ctx.db.from("science_answers").select("*").eq("attempt_id", id).order("ordinal")
+    ctx.db.from("science_answers").select("*").eq("attempt_id", id).order("ordinal"),
+    ctx.db.rpc("science_correction_epoch")
   ]);
   const issued = checked(issuedResponse) as Issued[];
   const answers = checked(answerResponse) as Answer[];
-  const corrections = await correctionState(ctx.db, issued.map(q => q.revision_id), id);
+  const corrections = await correctionState(ctx.db, issued.map(q => q.revision_id), id, checked(epochResponse) as number);
   const responses: Response[] = answers.map((answer) => {
     const question = issued.find((q) => q.ordinal === answer.ordinal);
     if (!question) throw new ScienceError("保存記録を確認する必要があります。", 503, "inconsistent_record");
@@ -54,7 +55,7 @@ async function previousTrialEvidence(ctx: Context, attemptId: string, modelVersi
   return rows.map((row): Response => ({ ...row, correct: row.is_correct, eligible: true, answeredAt: row.answered_at }));
 }
 
-type BankRow = { release_id: string; revision_id: string; a: number; b: number; c: number; focus: boolean; anchor: boolean; science_items: Item };
+type BankRow = { revision_id: string; a: number; b: number; c: number; focus: boolean; anchor: boolean; science_items: Pick<Item,"family_id"|"domain"|"status"|"quality_passed"|"rights_checked"|"author_id"|"expires_at"> };
 async function candidateBank(ctx: Context, release: string | null, kind: ExamKind, currentFamilies = new Set<string>()): Promise<Candidate[]> {
   const seen = await exposureHistory(ctx);
   if (kind === "lab") {
@@ -64,7 +65,7 @@ async function candidateBank(ctx: Context, release: string | null, kind: ExamKin
     return candidates.map((q,i)=>({...q,trustWeight:weights[i]}));
   }
   if (!release) throw new ScienceError("問題バンクを準備しています。", 503, "bank_unavailable");
-  const rows = await readAll<BankRow>((from, to) => ctx.db.from("science_release_items").select("*,science_items!inner(*)").eq("release_id", release).order("revision_id").range(from, to));
+  const rows = await readAll<BankRow>((from, to) => ctx.db.from("science_release_items").select("revision_id,a,b,c,focus,anchor,science_items!inner(family_id,domain,status,quality_passed,rights_checked,author_id,expires_at)").eq("release_id", release).order("revision_id").range(from, to).returns<BankRow[]>());
   return rows.filter(({ science_items: q }) => q.status === "published" && q.quality_passed && q.rights_checked && !currentFamilies.has(q.family_id) && (!q.author_id || q.author_id !== ctx.userId) && (!q.expires_at || new Date(q.expires_at) > new Date())).map((r) => ({ revisionId: r.revision_id, familyId: r.science_items.family_id, domain: r.science_items.domain, a: r.a, b: r.b, c: r.c, authorId: r.science_items.author_id, focus: r.focus, anchor: r.anchor, exposures: 0, seenCount: seen.get(r.science_items.family_id) ?? 0 }));
 }
 
@@ -99,9 +100,7 @@ export async function examState(ctx: Context, id: string, feedbackOrdinal?: numb
       explanation: answerExplanation(issued, answer.selected_index, records.corrections.updates.get(issued.revision_id)) };
   }
   if (a.state !== "active") return { attempt: publicAttempt(a), question: null, group: ctx.visitor.route_group, signedIn: !!ctx.userId, progress };
-  const existing = await ctx.db.from("science_issued").select("*").eq("attempt_id", id).eq("ordinal", a.ordinal).maybeSingle();
-  if (existing.error) checked(existing);
-  let issued = existing.data as Issued | null;
+  let issued = records.issued.find(q => q.ordinal === a.ordinal) ?? null;
   if (!issued) {
     let revisionId: string, predicted = .5, probability = 1, reason = "fixed-weekly-set-v1", candidateCount = 1;
     if (a.kind === "weekly") {
@@ -162,8 +161,7 @@ export async function startExam(ctx: Context, kind: ExamKind, domain?: ScienceDo
 }
 
 export async function answerExam(ctx: Context, input: { attemptId: string; ordinal: number; token: string; operationId: string; selectedIndex: number | null }) {
-  await rateLimit(ctx, "answer", 120);
-  const a = await ownedAttempt(ctx, input.attemptId);
+  const [, a] = await Promise.all([rateLimit(ctx, "answer", 120), ownedAttempt(ctx, input.attemptId)]);
   const records = await attemptRecords(ctx, a.id);
   const issued = records.issued.find((q) => q.ordinal === input.ordinal && q.token === input.token);
   if (!issued) throw new ScienceError("提示された問題と一致しません。再読み込みしてください。", 409, "not_issued");

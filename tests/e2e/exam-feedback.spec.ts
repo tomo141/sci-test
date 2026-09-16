@@ -10,6 +10,7 @@ const content = { question: "検証用：1 + 1 は？", choices: ["1", "2", "3",
 
 async function examFixture(page: Page, kind = "trial", count = 20, initialOrdinal = 0, question = content.question) {
   let ordinal = initialOrdinal, failOnce = false;
+  let answerGate: Promise<void> | null = null, failPrefetch = false;
   const answers = new Map<number, number>();
   const writes: { ordinal: number; selectedIndex: number; operationId: string }[] = [];
   const stateReads: number[] = [];
@@ -26,6 +27,7 @@ async function examFixture(page: Page, kind = "trial", count = 20, initialOrdina
     if (action === "state") {
       stateReads.push(ordinal);
       const feedback = input.feedbackOrdinal;
+      if (ordinal > initialOrdinal && feedback === undefined && failPrefetch) { failPrefetch = false; return route.fulfill({status:503,json:{error:"一時的な通信エラー",code:"fixture_unavailable"}}); }
       if (feedback !== undefined && !answers.has(feedback)) return route.fulfill({ status: 404, json: { error: "保存済みの回答が見つかりません。", code: "answer_not_found" } });
       return route.fulfill({ json: { attempt: attempt(), progress: progress(), group: "A", signedIn: false,
         question: feedback === undefined && ordinal < count ? { ordinal, token: questionToken, domain: "数学", subdomain: "数と代数", question, level: 4, choices: ["3", "1", "4", "2"] } : null,
@@ -33,6 +35,7 @@ async function examFixture(page: Page, kind = "trial", count = 20, initialOrdina
     }
     if (action === "answer") {
       writes.push(input);
+      if (answerGate) { await answerGate; answerGate = null; }
       if (!answers.has(input.ordinal)) { answers.set(input.ordinal, input.selectedIndex); ordinal++; }
       if (failOnce) { failOnce = false; return route.abort("failed"); }
       return route.fulfill({ json: { attempt: attempt(), progress: progress(), explanation: explanation(input.ordinal) } });
@@ -41,7 +44,8 @@ async function examFixture(page: Page, kind = "trial", count = 20, initialOrdina
   });
   await page.goto(`/exam?attempt=${attemptId}`);
   await expect(page.getByRole("group", { name: "回答の選択肢" }).getByRole("button")).toHaveCount(4);
-  return { writes, stateReads, failNextResponse: () => { failOnce = true; } };
+  return { writes, stateReads, failNextResponse: () => { failOnce = true; }, failNextPrefetch: () => { failPrefetch = true; },
+    holdAnswer: () => { let release!: () => void; answerGate = new Promise<void>(resolve => { release = resolve; }); return () => release(); } };
 }
 
 test("number keys select by default, opt-in submits once, and feedback waits for an explicit next action", async ({ page }) => {
@@ -70,7 +74,8 @@ test("number keys select by default, opt-in submits once, and feedback waits for
   await page.getByLabel("具体的な内容").pressSequentially("1234");
   await expect(page.getByLabel("具体的な内容")).toHaveValue("1234");
   expect(fixture.writes).toHaveLength(1);
-  expect(fixture.stateReads).toHaveLength(1); // No next question is exposed before the learner advances.
+  await expect.poll(() => fixture.stateReads.length).toBe(2); // Downloaded after saving, kept off screen until Next.
+  await expect(page.getByText("第 1 問", {exact:true})).toBeVisible();
   await page.reload();
   await expect(page.getByRole("heading", { name: "正解！", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "次の問題へ", exact: true }).click();
@@ -133,11 +138,38 @@ test("a choice click immediately commits, while space advances only outside edit
   await page.getByLabel("具体的な内容").fill("報告");
   await page.getByLabel("具体的な内容").press("Space");
   await expect(page.getByLabel("具体的な内容")).toHaveValue("報告 ");
-  expect(fixture.stateReads).toHaveLength(1);
+  await expect.poll(() => fixture.stateReads.length).toBe(2);
   await page.getByRole("heading", { name: content.question, exact: true }).focus();
   await page.keyboard.press("Space");
   await expect(page.getByText("第 2 問", { exact: true })).toBeVisible();
   expect(fixture.stateReads).toHaveLength(2);
+});
+
+test("feedback waits for commitment, then prefetch failure recovers without resubmitting", async ({page}) => {
+  const fixture = await examFixture(page);
+  const release = fixture.holdAnswer();
+  fixture.failNextPrefetch();
+  await page.getByRole("button",{name:"選択肢4：2",exact:true}).click();
+  await expect(page.getByText("回答を確認しています…",{exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"正解！",exact:true})).toBeHidden();
+  expect(fixture.stateReads).toHaveLength(1);
+  release();
+  await expect(page.getByRole("heading",{name:"正解！",exact:true})).toBeVisible();
+  await expect.poll(()=>fixture.stateReads.length).toBe(2);
+  await page.getByRole("button",{name:"次の問題へ",exact:true}).click();
+  await expect(page.getByText("第 2 問",{exact:true})).toBeVisible();
+  expect(fixture.writes).toHaveLength(1);
+  expect(fixture.stateReads).toHaveLength(3);
+});
+
+test("reaction and other scientific indices use subscripts with no visible underscore", async ({page}) => {
+  await examFixture(page,"trial",20,0,"S_N2、SN1、S_{N}2の表記と、K_m、V_max、k_B、Δ_rG、10^−3を確認する。");
+  const heading=page.getByRole("heading",{name:/SN2、SN1/});
+  await expect(heading.locator("sub")).toHaveText(["N","N","N","m","max","B","r"]);
+  await expect(heading.locator("sup")).toHaveText(["−3"]);
+  expect(await heading.innerText()).not.toContain("_");
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.screenshot({path:test.info().outputPath("reaction-notation.png"),fullPage:true});
 });
 
 test("vector, overbar and dot notation render as drawn accents on desktop and mobile", async ({ page }) => {

@@ -8,6 +8,9 @@ export async function middleware(request: NextRequest) {
   const limited = await maybeRateLimitApi(request);
   if (limited) return limited;
 
+  // These route handlers verify the user and refresh cookies themselves.
+  // Avoid making the same authenticated network request twice per answer.
+  if (request.nextUrl.pathname.startsWith("/api/science/")) return NextResponse.next();
   return updateSession(request);
 }
 

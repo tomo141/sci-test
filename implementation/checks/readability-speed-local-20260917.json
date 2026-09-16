@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-09-17",
+  "scope": "Notation, answer request latency, next question preparation and editorial review. No scoring or live question content changes.",
+  "unitAndDatabase": {
+    "passed": 234,
+    "files": 45,
+    "runDescription": "231 existing/new tests plus 3 identity-context tests; updated notation test rechecked"
+  },
+  "bankAndEditorial": {
+    "passed": 8
+  },
+  "lint": "passed",
+  "types": "passed",
+  "productionBuild": "passed",
+  "browser": {
+    "passed": 38,
+    "skipped": 2,
+    "skippedReason": "No isolated connected Supabase test project",
+    "cleanupNote": "All cases passed but one worker remained during shutdown; that worker was stopped. Four new cases reran in one worker and exited normally in 5.1s."
+  },
+  "visual": [
+    "Desktop and mobile subscripts preserve uppercase N and baseline reaction order",
+    "Other explicit indices and exponents display correctly; no horizontal overflow"
+  ],
+  "production": "pending",
+  "editorialStatus": "Existing 157 formal and 3 weekly high-risk cues remain review debt; a changed/new item cannot reuse that exception"
+}

@@ -1,5 +1,6 @@
 "use client";
 import { ScienceText } from "./ScienceText";
+import { EditorialHints } from "./EditorialHints";
 import Link from "next/link";
 import { useCallback,useEffect,useState } from "react";
 import { AppButton } from "@/components/ui/AppButton";
@@ -12,7 +13,7 @@ import type { MyaspConnectionCheck } from "@/src/lib/science/myasp";
 import type { Content } from "@/src/lib/science/types";
 import { knowledgeLevels, scopeLabel } from "@/src/lib/science/knowledge-levels";
 const field="mt-2 block min-h-12 w-full rounded-xl border p-3";
-function Question({content}:{content:Content}){return <div className="mt-4 text-sm leading-7"><p className="whitespace-pre-wrap font-bold"><ScienceText>{content.question}</ScienceText></p><ol className="mt-3 list-decimal pl-6">{content.choices.map((c,i)=><li key={i}><ScienceText>{c}</ScienceText>{i===content.correctIndex?"（正解）":""}<p className="text-[var(--color-muted)]"><ScienceText>{content.distractorRationales?.[i] ?? ""}</ScienceText></p></li>)}</ol><p className="mt-3 whitespace-pre-wrap"><ScienceText>{content.explanation}</ScienceText></p>{content.sources?.map((s,i)=><p key={i}>{s.url&&/^https?:\/\//.test(s.url)?<a href={s.url} target="_blank" rel="noreferrer" className="underline">{s.title}</a>:s.title}</p>)}</div>;}
+function Question({content}:{content:Content}){return <div className="mt-4 text-sm leading-7"><p className="whitespace-pre-wrap font-bold"><ScienceText>{content.question}</ScienceText></p><ol className="mt-3 list-decimal pl-6">{content.choices.map((c,i)=><li key={i}><ScienceText>{c}</ScienceText>{i===content.correctIndex?"（正解）":""}<p className="text-[var(--color-muted)]"><ScienceText>{content.distractorRationales?.[i] ?? ""}</ScienceText></p></li>)}</ol><p className="mt-3 whitespace-pre-wrap"><ScienceText>{content.explanation}</ScienceText></p>{content.sources?.map((s,i)=><p key={i}>{s.url&&/^https?:\/\//.test(s.url)?<a href={s.url} target="_blank" rel="noreferrer" className="underline">{s.title}</a>:s.title}</p>)}<EditorialHints content={content} /></div>;}
 function Submission({draft,reload}:{draft:AdminData["submissions"][number];reload:()=>Promise<void>}){
   const [reason,setReason]=useState(""),[decision,setDecision]=useState("lab"),[busy,setBusy]=useState(false),[error,setError]=useState("");
   const [checks,setChecks]=useState({rights:false,source:false,uniqueAnswer:false,explanation:false});
