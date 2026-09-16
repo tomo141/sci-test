@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-16T15:38:17.346Z",
+  "mode": "verify",
+  "checks": [
+    {
+      "table": "science_submission_drafts",
+      "beforeCount": 0,
+      "currentExistingCount": 0,
+      "matches": true
+    },
+    {
+      "table": "science_attempts",
+      "beforeCount": 3,
+      "currentExistingCount": 3,
+      "matches": true
+    },
+    {
+      "table": "science_issued",
+      "beforeCount": 27,
+      "currentExistingCount": 27,
+      "matches": true
+    },
+    {
+      "table": "science_answers",
+      "beforeCount": 25,
+      "currentExistingCount": 25,
+      "matches": true
+    },
+    {
+      "table": "science_config",
+      "beforeCount": 2,
+      "currentExistingCount": 2,
+      "matches": true
+    },
+    {
+      "table": "science_releases",
+      "beforeCount": 2,
+      "currentExistingCount": 2,
+      "matches": true
+    },
+    {
+      "table": "science_release_items",
+      "beforeCount": 2000,
+      "currentExistingCount": 2000,
+      "matches": true
+    }
+  ],
+  "allMatch": true
+}

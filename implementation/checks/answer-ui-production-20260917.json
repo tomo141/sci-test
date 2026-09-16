@@ -1,0 +1,65 @@
+{
+  "startedAt": "2026-09-16T15:34:14.354Z",
+  "state": "passed",
+  "checks": [
+    "first-time guide contains ten fields and laboratory has shared global navigation",
+    "first answer displays provisional total with nine unmeasured priors",
+    "number keys select by default, choice clicks commit immediately",
+    "saved question, choice order, explanation, score and count survive reload",
+    "twenty real answers reach the completed result",
+    "final score and interval exactly match interim display",
+    "opt-in immediate keyboard answers and provisional levels work on live questions",
+    "mobile laboratory menu opens without overflow"
+  ],
+  "firstScore": {
+    "value": 483,
+    "low": 239,
+    "high": 727,
+    "scale": "total",
+    "unmeasuredDomains": 9
+  },
+  "completedAnswers": 20,
+  "finalProgress": {
+    "answerCount": 20,
+    "correctCount": 4,
+    "score": {
+      "value": 220,
+      "low": 36,
+      "high": 404,
+      "scale": "total",
+      "unmeasuredDomains": 0
+    }
+  },
+  "result": {
+    "total": 220,
+    "low": 36,
+    "high": 404,
+    "answerCount": 20
+  },
+  "finishedAt": "2026-09-16T15:34:57.021Z",
+  "runtimeCommit": "3fdfde4a751741e50a8e773f5ce7ed637808f3cb",
+  "previewDeployment": "DXoLLaLhfdwLJSAhzSCHADaHxBXG",
+  "productionDeployment": "4MwsLMz14EJCSKwUkj2ucQgKjNA7",
+  "productionReadyAt": "2026-09-17T00:33:44+09:00",
+  "testDataCleanup": {
+    "completed": true,
+    "remainingTestAttempts": 0,
+    "auditRetained": true,
+    "sqlSha256": "b2c2041d6d3931666588f1c13f6e5929d632e48009c38974bb383de5fe575f3a"
+  },
+  "existingRecords": "All seven checked collections match the pre-deployment snapshot",
+  "scopeNote": "Anonymous operator test only; no real user data or credentials in this report",
+  "promotionReview": "Initially rejected due to skipped standalone Lint; visible build logs verified Lint ran and the build completed; same authorized Force Promote then succeeded",
+  "finalCopyRelease": {
+    "commit": "aa84222c85f2a838d939ce0b3cb505dbaacc83a0",
+    "scope": "One laboratory description sentence; no exam or scoring behavior changes",
+    "previewDeployment": "4r1MLjhtgfQteB4UPaADq6co5UXC",
+    "previewReadyAt": "2026-09-17T00:40:19+09:00",
+    "localFileLint": "passed",
+    "previewBuildLintAndTypes": "passed; visible build logs and TypeCheck exit code 0 verified before promotion",
+    "productionDeployment": "3xgBkh7s4WjaBwpFqohG8cdeitWe",
+    "productionReadyAt": "2026-09-17T00:48:02+09:00",
+    "checkedAt": "2026-09-17T00:48:43+09:00",
+    "productionReadback": "Corrected laboratory description and shared navigation visible at https://sci-test.rikei-talk.com/lab"
+  }
+}
