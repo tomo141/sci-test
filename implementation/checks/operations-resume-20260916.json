@@ -1,10 +1,10 @@
 {
   "observedOn": "2026-09-16",
   "timezone": "Asia/Tokyo",
-  "productionCommit": "472bcfae741d99921c44036bcb967bfdc5d48ef5",
-  "productionDeployment": "9kAJ8NdP5HipgorqG9hm56o76AcZ",
-  "candidateCommit": "472bcfae741d99921c44036bcb967bfdc5d48ef5",
-  "candidateDeployment": "2NF4GM8tAfD4gnXujVdYm4MaSbt2",
+  "productionCommit": "deec3c9225cc00ccb4630d45d09e4a9165e373e1",
+  "productionDeployment": "BDiYWzWWTEWEZUu8nsm6bS1wUT2j",
+  "candidateCommit": "deec3c9225cc00ccb4630d45d09e4a9165e373e1",
+  "candidateDeployment": "6Kob8m2N4VudX9bnaQRasQEMXLh5",
   "candidateVerification": {
     "localFullLint": "passed",
     "localTypecheck": "passed",
@@ -12,10 +12,13 @@
     "vercelBuild": "ready",
     "vercelStandaloneLint": "skipped_because_covered_by_build",
     "buildLintObserved": true,
-    "productionPromotion": "completed_after_fresh_exact_commit_lint_evidence",
+    "productionPromotion": "completed_under_existing_conditional_force_promote_authorization",
     "approvalReason": "User explicitly approved Force Promote conditional on successful checks; exact-commit local eslint exited 0, preview build Ready, Vercel TypeCheck exited 0, standalone Lint reported covered by build.",
-    "previousPromotionRejection": "rejected_by_automatic_approval_review",
-    "readyAt": "2026-09-16T14:46:59+09:00"
+    "previousPromotionRejection": "previous_release_rejection_only; no_rejection_for_deec3c9",
+    "readyAt": "2026-09-16T20:49:30+09:00",
+    "localUnitAndDatabaseTests": 204,
+    "browserChecks": 28,
+    "connectedBrowserChecksSkipped": 2
   },
   "hourly": {
     "name": "science-overhaul-hourly",
@@ -68,7 +71,7 @@
     }
   },
   "scope": "Operational states and schema metadata only; no recipient identities, field values, credentials or backups.",
-  "previousProductionCommit": "835cc39b5b71e60e8506f74895f37a2139dbad5f",
+  "previousProductionCommit": "472bcfae741d99921c44036bcb967bfdc5d48ef5",
   "scoring": {
     "model": "science-3pl-p70-linear-v2",
     "release": "87d471d0-22dd-4a4c-9bb9-ec4bc6182392",
@@ -77,6 +80,17 @@
     "realTrial": "20_answers_completed_and_result_reloaded",
     "legacyData": "backup_values_unchanged",
     "empiricalAccuracy": "not_validated",
-    "abilityDescriptors": "proposal_not_published"
+    "abilityDescriptors": "five_public_descriptions_without_score_boundaries"
+  },
+  "knowledgeStages": {
+    "definitionVersion": "science-knowledge-stages-v1-20260916",
+    "authoringAndSelfAssessment": 7,
+    "publicDescriptions": 5,
+    "empiricalScoreBoundaries": "not_established",
+    "mastersAndDoctors": "selected_field_explicit",
+    "migration33": "applied_hash_matches",
+    "productionSaveAndReload": "passed_for_major_and_subdomain",
+    "scoreUnchanged": true,
+    "testDataCleanup": "verified"
   }
 }

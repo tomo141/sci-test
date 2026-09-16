@@ -1,0 +1,47 @@
+{
+  "startedAt": "2026-09-16T11:49:58.224Z",
+  "state": "passed",
+  "checks": [
+    "numeric key selects without submission by default",
+    "saved feedback survives reload",
+    "20 real answers completed with immediate feedback",
+    "result uses p70 version and ten equally weighted domain scores",
+    "new maximum 990 and reference definition visible",
+    "real private assessment save and reload for major and subdomain",
+    "idempotent retry and conflict rejection",
+    "invalid scope and missing attempt rejected",
+    "self-assessment never changes result",
+    "completed result survives reload"
+  ],
+  "result": {
+    "version": "science-3pl-p70-linear-v2",
+    "answerCount": 20,
+    "total": 279,
+    "low": 92,
+    "high": 466
+  },
+  "assessment": {
+    "recordCount": 2,
+    "duplicateRetry": "same_response",
+    "conflictingRetry": 409,
+    "invalidScope": 400,
+    "missingAttempt": 404,
+    "score": "unchanged",
+    "reload": "restored_both_scopes",
+    "databaseRows": 2
+  },
+  "finishedAt": "2026-09-16T11:51:00.568Z",
+  "cleanup": {
+    "checkedAt": "2026-09-16T11:54:41.721Z",
+    "remainingTestAttempts": 0,
+    "remainingTestAssessments": 0,
+    "auditRecorded": true,
+    "onlyAgentGeneratedData": true
+  },
+  "production": {
+    "commit": "deec3c9225cc00ccb4630d45d09e4a9165e373e1",
+    "deployment": "BDiYWzWWTEWEZUu8nsm6bS1wUT2j",
+    "readyAt": "2026-09-16T20:49:30+09:00",
+    "url": "https://sci-test.rikei-talk.com"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-09-16T11:55:24.188Z",
+  "backupCreatedAt": "2026-09-16T11:33:51.404Z",
+  "scope": "Existing records only; row data and identities are excluded",
+  "allMatch": true,
+  "checks": [
+    {
+      "table": "science_submission_drafts",
+      "beforeCount": 0,
+      "afterCount": 0,
+      "beforeHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "afterHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "matches": true
+    },
+    {
+      "table": "science_attempts",
+      "beforeCount": 2,
+      "afterCount": 2,
+      "beforeHash": "b607ae3aceb2f19de724343ce1cacac72062343d1bfa7b2f20a424322d7bb262",
+      "afterHash": "b607ae3aceb2f19de724343ce1cacac72062343d1bfa7b2f20a424322d7bb262",
+      "matches": true
+    },
+    {
+      "table": "science_issued",
+      "beforeCount": 21,
+      "afterCount": 21,
+      "beforeHash": "74a9aab1675bfa8d0f76df43cc83e9292b0bef5708f5d5ef4a470a8d95bed6e9",
+      "afterHash": "74a9aab1675bfa8d0f76df43cc83e9292b0bef5708f5d5ef4a470a8d95bed6e9",
+      "matches": true
+    },
+    {
+      "table": "science_answers",
+      "beforeCount": 20,
+      "afterCount": 20,
+      "beforeHash": "00d7b8616e15a048cd0928e230b27823a5314e84d80e2141f7bd41f4d05c5567",
+      "afterHash": "00d7b8616e15a048cd0928e230b27823a5314e84d80e2141f7bd41f4d05c5567",
+      "matches": true
+    },
+    {
+      "table": "science_config",
+      "beforeCount": 2,
+      "afterCount": 2,
+      "beforeHash": "7775fc72a1d84439aa55e5cb9bc5d84847a28cf17fa48702f9cb20f4ea248cfe",
+      "afterHash": "7775fc72a1d84439aa55e5cb9bc5d84847a28cf17fa48702f9cb20f4ea248cfe",
+      "matches": true
+    }
+  ]
+}

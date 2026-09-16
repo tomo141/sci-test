@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-16T11:49:32.574Z",
+  "source": "Supabase SQL Editor; read-only has_table_privilege and has_function_privilege query",
+  "tables": [
+    {
+      "table": "science_item_level_references",
+      "rls": true,
+      "anonymousCrud": false,
+      "authenticatedCrud": false,
+      "serviceUpdate": false,
+      "serviceReadAppend": true
+    },
+    {
+      "table": "science_level_assessments",
+      "rls": true,
+      "anonymousCrud": false,
+      "authenticatedCrud": false,
+      "serviceUpdate": false,
+      "serviceReadAppend": true
+    }
+  ],
+  "authenticatedHistoryExecute": false
+}
