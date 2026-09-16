@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-09-17",
+  "runtimeCandidate": "aeda204a8946ce1795c26187e4e82ac7ab4030f0",
+  "previewDeployment": "FT5igr4jWwF3TuYoPQ1AxdzS2x7E",
+  "previewReadyAt": "2026-09-17T01:41:52+09:00",
+  "candidateChecks": {
+    "buildCommitVisible": "aeda204",
+    "buildLintAndTypes": "passed",
+    "standaloneLocalLint": "exit 0 at exact aeda204",
+    "standaloneLocalTypecheck": "exit 0",
+    "vercelTypeCheck": "exit 0",
+    "vercelStandaloneLint": "skipped because already covered by build"
+  },
+  "productionState": "blocked by automatic approval review; explicit approval for skipped standalone check requested",
+  "liveRuntimeUnchanged": "aa84222",
+  "baseline": {
+    "runtime": "aa84222",
+    "context": "Dedicated anonymous Chrome test; 3 answers; not representative of signed-in users or p95",
+    "observations": [
+      {
+        "mode": "before",
+        "answerMs": 453,
+        "nextMs": 996
+      },
+      {
+        "mode": "before",
+        "answerMs": 620,
+        "nextMs": 991
+      },
+      {
+        "mode": "before",
+        "answerMs": 565,
+        "nextMs": 992
+      }
+    ],
+    "after": null
+  },
+  "testDataCleanup": {
+    "completed": true,
+    "answersRemoved": 3,
+    "remainingTestAttempts": 0,
+    "inputVerified": "All 2607 input characters matched through read-only DOM segments; no clipboard copy used",
+    "sqlSha256": "3745905af636449f2707b8bd8e8c56243200d3512c45b34bbba6f6764fa5a6f8",
+    "guards": "Exact test ID, creation time, anonymous-only, trial length 20, active ordinal 3, isolated visitor, no external/referral/feedback/account activity, no processing jobs; atomic transaction",
+    "auditRetained": true
+  },
+  "exclusions": "No account data, credentials or test ownership tokens in this report"
+}
