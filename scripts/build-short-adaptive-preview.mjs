@@ -1,0 +1,21 @@
+import { createRequire } from 'node:module';
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+const require=createRequire(import.meta.url), vitestRequire=createRequire(require.resolve('vitest/package.json'));
+const viteDirectory=path.dirname(vitestRequire.resolve('vite/package.json'));
+const {build}=await import(pathToFileURL(path.join(viteDirectory,'dist/node/index.js')));
+const built=await build({configFile:false,logLevel:'warn',resolve:{alias:{'@':process.cwd()}},build:{write:false,
+  lib:{entry:path.resolve('scripts/lib/short-adaptive-model.ts'),name:'SciencePreview',formats:['iife']},minify:'esbuild'}});
+const output=(Array.isArray(built)?built:[built]).flatMap(result=>result.output);
+const lib=output.find(file=>file.type==='chunk').code;
+const raw=await readFile('content/science-short-balanced-20260917.json','utf8'),bank=JSON.parse(raw);
+const old=JSON.parse(await readFile('content/science-short-pilot-20260917.json','utf8'));
+const data={...bank,hash:createHash('sha256').update(raw).digest('hex'),pilotV1:old.items.map(q=>({id:q.id,correctIndex:q.correctIndex}))};
+const template=await readFile('scripts/templates/short-adaptive.html','utf8');
+const oldTemplate=await readFile('scripts/templates/short-pilot.html','utf8');
+const style=oldTemplate.match(/<style>([\s\S]*?)<\/style>/)[1];
+const html=template.replace('/*__STYLE__*/',style).replace('/*__LIBRARY__*/',lib.replaceAll('</script','<\\/script')).replace('/*__BANK__*/',JSON.stringify(data).replaceAll('<','\\u003c'));
+await writeFile('implementation/short-questions/adaptive.html',html);
+console.log(JSON.stringify({version:bank.version,questions:bank.items.length,bytes:Buffer.byteLength(html),sourceSha256:data.hash,usesProductionModel:true,networkRequests:0}));

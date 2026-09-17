@@ -1,0 +1,41 @@
+{
+  "observedAt": "2026-09-17T03:00:42.285Z",
+  "version": "short-pilot-v1-20260917",
+  "syntheticBrowserInputs": true,
+  "realUserResponses": false,
+  "productionDataTouched": false,
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 960
+      },
+      "questionsCompleted": 20,
+      "defaultKeyboardSelectOnly": true,
+      "checkedKeyboardImmediate": true,
+      "clickImmediate": true,
+      "resume": true,
+      "notation": true,
+      "feedbackPreserved": true,
+      "noOverflow": true,
+      "externalRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "questionsCompleted": 20,
+      "defaultKeyboardSelectOnly": true,
+      "checkedKeyboardImmediate": true,
+      "clickImmediate": true,
+      "resume": true,
+      "notation": true,
+      "feedbackPreserved": true,
+      "noOverflow": true,
+      "externalRequests": 0,
+      "pageErrors": []
+    }
+  ]
+}

@@ -48,6 +48,21 @@ async function examFixture(page: Page, kind = "trial", count = 20, initialOrdina
     holdAnswer: () => { let release!: () => void; answerGate = new Promise<void>(resolve => { release = resolve; }); return () => release(); } };
 }
 
+test("accepts the first number key as soon as answer choices become interactive", async ({page}) => {
+  await page.addInitScript(() => {
+    const observer = new MutationObserver(() => {
+      const choice = document.querySelector<HTMLButtonElement>('[aria-label="選択肢4：2"]');
+      if (!choice || choice.disabled) return;
+      observer.disconnect();
+      window.dispatchEvent(new KeyboardEvent("keydown", {key:"4",bubbles:true}));
+    });
+    observer.observe(document, {childList:true,subtree:true,attributes:true,attributeFilter:["disabled"]});
+  });
+  const fixture = await examFixture(page,"full",50,49);
+  await expect(page.getByRole("button", {name:"選択肢4：2",exact:true})).toHaveAttribute("aria-pressed","true");
+  expect(fixture.writes).toHaveLength(0);
+});
+
 test("number keys select by default, opt-in submits once, and feedback waits for an explicit next action", async ({ page }) => {
   const fixture = await examFixture(page);
   const quick = page.getByLabel("キーボードの1,2,3,4で即回答");

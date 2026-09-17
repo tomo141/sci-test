@@ -1,14 +1,16 @@
 import { domains, isScienceDomain, type ScienceDomain } from "@/src/lib/data/taxonomy";
+import { TRIAL_POLICY } from "./trial-policy";
 
 export const EXPERIMENT_VERSION = "entry-route-v1";
 export type RouteGroup = "A" | "B" | "C" | "D";
 export type ExamKind = "trial" | "full" | "domain" | "weekly" | "lab";
-export type ExamDefinition = { version: string; kind: ExamKind; label: string; count: number; domain: ScienceDomain | null; quotas: Partial<Record<ScienceDomain, number>>; formal: boolean; immediateExplanation: boolean; week?:string; selectionHistory?: "all-eligible-equal" | "attempt-only"; repeatPolicy?: "unseen-first-then-least-seen" };
+export type ExamDefinition = { version: string; kind: ExamKind; label: string; count: number; domain: ScienceDomain | null; quotas: Partial<Record<ScienceDomain, number>>; formal: boolean; immediateExplanation: boolean; week?:string; selectionHistory?: "all-eligible-equal" | "attempt-only"; repeatPolicy?: "unseen-first-then-least-seen"; selectionPolicy?: typeof TRIAL_POLICY };
 
 export function definition(kind: ExamKind, domain?: string | null, fullLength: 50 | 100 = 50): ExamDefinition {
   if (kind === "domain" && !isScienceDomain(domain)) throw new Error("分野を選択してください。");
   const count = kind === "trial" || kind === "domain" ? 20 : kind === "full" ? fullLength : 10;
-  return { version: "exam-v3-immediate-feedback", kind, count,
+  return { version: kind === "trial" ? "exam-v4-trial-fluency" : "exam-v3-immediate-feedback", kind, count,
+    ...(kind === "trial" ? { selectionPolicy: TRIAL_POLICY } : {}),
     label: { trial: "20問の腕試し", full: `総合本試験 ${fullLength}問`, domain: `${domain}をもう20問`, weekly: "今週の10問", lab: "みんなの出題ラボ" }[kind],
     domain: kind === "domain" ? domain as ScienceDomain : null,
     quotas: kind === "domain" ? { [domain!]: count } : kind === "lab" ? {} : Object.fromEntries(domains.map((d) => [d, count / domains.length])),

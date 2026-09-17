@@ -1,0 +1,67 @@
+{
+  "observedAt": "2026-09-17T03:44:56.862Z",
+  "syntheticResponses": true,
+  "calibrated": false,
+  "allCorrect": {
+    "levels": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "score": {
+      "value": 670,
+      "low": 460,
+      "high": 880,
+      "scale": "total",
+      "unmeasuredDomains": 0
+    }
+  },
+  "allWrong": {
+    "levels": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "score": {
+      "value": 10,
+      "low": 10,
+      "high": 172,
+      "scale": "total",
+      "unmeasuredDomains": 0
+    }
+  }
+}

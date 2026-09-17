@@ -1,0 +1,143 @@
+{
+  "version": "short-balanced-v1-20260917",
+  "sourceSha256": "d810d274b46d980d90f4a00c7e5440ea29a74dba04a78a02ee1cfa779d0c8480",
+  "count": 100,
+  "levelCounts": [
+    15,
+    15,
+    14,
+    14,
+    14,
+    14,
+    14
+  ],
+  "perDomain": [
+    {
+      "domain": "数学",
+      "levels": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "domain": "物理",
+      "levels": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "domain": "化学",
+      "levels": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "domain": "生物",
+      "levels": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "domain": "地学",
+      "levels": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "domain": "工学",
+      "levels": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "domain": "農学",
+      "levels": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "domain": "情報・計算機科学",
+      "levels": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "domain": "医歯薬学",
+      "levels": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "domain": "人文社会科学",
+      "levels": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1
+      ]
+    }
+  ],
+  "meanStem": 23.8,
+  "maxStem": 41,
+  "meanChoice": 4.6,
+  "maxChoice": 14,
+  "editorialHints": [],
+  "published": false,
+  "calibrated": false
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "level": 1,
+    "originalMatch": "最も長い骨",
+    "question": "通常の成人で、最も長い骨は？",
+    "choices": [
+      "大腿骨",
+      "上腕骨",
+      "脛骨",
+      "橈骨"
+    ],
+    "explanation": "太ももの骨である大腿骨が、人体で最も長い骨です。",
+    "reasons": [
+      "太ももにある長骨です。",
+      "上腕の骨です。",
+      "下腿にある骨です。",
+      "前腕にある骨です。"
+    ]
+  },
+  {
+    "level": 1,
+    "originalMatch": "アスピリンが血小板",
+    "question": "血管の傷に集まり、一次止血の栓を作る血球成分は？",
+    "choices": [
+      "血小板",
+      "赤血球",
+      "好酸球",
+      "Bリンパ球"
+    ],
+    "explanation": "血小板は傷ついた血管に粘着・凝集し、一次止血で血小板血栓を作ります。",
+    "reasons": [
+      "一次止血の中心的な成分です。",
+      "主に酸素を運びます。",
+      "寄生虫への応答やアレルギー等に関わります。",
+      "抗体を作る細胞への分化等に関わります。"
+    ],
+    "lineage": "new-concept",
+    "sources": [
+      {
+        "title": "OpenStax Anatomy and Physiology 2e, Hemostasis",
+        "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-5-hemostasis"
+      }
+    ],
+    "subdomain": "生理学",
+    "sourceLocation": "OpenStax Anatomy and Physiology 2e §18.5、Formation of the Platelet Plug。血小板の粘着・凝集を確認。"
+  },
+  {
+    "level": 3,
+    "originalMatch": "胎盤を介して母体から胎児",
+    "question": "胎盤を通り、母体から胎児へ主に移る抗体クラスは？",
+    "choices": [
+      "IgG",
+      "IgM",
+      "IgA",
+      "IgE"
+    ],
+    "explanation": "IgGが胎盤を介して移行し、胎児・新生児の受動免疫に寄与します。",
+    "reasons": [
+      "胎盤移行に重要な抗体クラスです。",
+      "通常は胎盤を通りにくい大きな抗体です。",
+      "母乳等の粘膜免疫で重要です。",
+      "アレルギーや寄生虫応答などに関わります。"
+    ]
+  },
+  {
+    "level": 4,
+    "originalMatch": "化生（metaplasia）",
+    "question": "分化した細胞型が、別の分化した細胞型へ置き換わる変化は？",
+    "choices": [
+      "化生",
+      "肥大",
+      "過形成",
+      "萎縮"
+    ],
+    "explanation": "化生は、ある分化した組織の細胞型が別の分化した細胞型へ置き換わる適応性変化です。",
+    "reasons": [
+      "細胞型の置換を指します。",
+      "個々の細胞が大きくなります。",
+      "細胞数が増えます。",
+      "細胞や組織の大きさが減ります。"
+    ]
+  },
+  {
+    "level": 4,
+    "originalMatch": "CFTRタンパク質",
+    "question": "CFTRの主な分子機能は？",
+    "choices": [
+      "陰イオンチャネル",
+      "陽イオンポンプ",
+      "水チャネル",
+      "糖輸送体"
+    ],
+    "explanation": "CFTRは塩化物イオンや重炭酸イオンの輸送に関わるチャネルです。",
+    "reasons": [
+      "塩化物や重炭酸イオンの輸送に関わります。",
+      "ATPによって制御されますが、この陽イオンポンプではありません。",
+      "アクアポリン等の主な機能です。",
+      "糖を運ぶ輸送体ではありません。"
+    ]
+  },
+  {
+    "level": 5,
+    "originalMatch": "可逆的競合拮抗薬",
+    "question": "平衡・十分な作動薬濃度で、可逆的競合拮抗による反応曲線の変化は？",
+    "choices": [
+      "EC50増・最大反応同じ",
+      "EC50同じ・最大反応減",
+      "EC50減・最大反応同じ",
+      "EC50増・最大反応増"
+    ],
+    "explanation": "同じ部位を競い、作動薬を十分増やせる条件なら、曲線は右へ移動し、最大反応は変わりません。",
+    "reasons": [
+      "競合を高濃度の作動薬で乗り越えられる条件です。",
+      "単純な競合拮抗の典型的な変化ではありません。",
+      "効力が上がる方向の変化ではありません。",
+      "最大反応の増加を起こす関係ではありません。"
+    ]
+  },
+  {
+    "level": 6,
+    "originalMatch": "Fickの原理",
+    "question": "Fick法で酸素消費360 mL/分、動脈−混合静脈差60 mL/L。心拍出量は？",
+    "choices": [
+      "6 L/分",
+      "0.167 L/分",
+      "60 L/分",
+      "300 L/分"
+    ],
+    "explanation": "定常状態で心拍出量＝酸素消費量/動脈血と混合静脈血の酸素含量差。360/60＝6 L/分です。",
+    "reasons": [
+      "消費量を含量差で割ります。",
+      "割る向きが逆です。",
+      "計算の桁が違います。",
+      "単位の異なる二つの値を引く計算ではありません。"
+    ]
+  },
+  {
+    "level": 7,
+    "originalMatch": "Toll様受容体（TLR）",
+    "question": "典型的なNLRP3インフラマソームで活性化する酵素は？",
+    "choices": [
+      "カスパーゼ1",
+      "カスパーゼ3",
+      "カスパーゼ8",
+      "カスパーゼ9"
+    ],
+    "explanation": "古典的なNLRP3インフラマソームはカスパーゼ1の活性化を促し、IL-1β等の成熟と炎症性細胞死に関わります。",
+    "reasons": [
+      "古典的インフラマソームの主要なエフェクターです。",
+      "アポトーシスの実行酵素として知られます。",
+      "外因性アポトーシス経路等に関わります。",
+      "内因性アポトーシス経路等に関わります。"
+    ],
+    "lineage": "new-concept",
+    "sources": [
+      {
+        "title": "Mariathasan et al. (2006), Cryopyrin activates the inflammasome in response to toxins and ATP",
+        "url": "https://www.nature.com/articles/nature04515"
+      }
+    ],
+    "sourceLocation": "Mariathasanら2006年原論文の公開抄録。Cryopyrin/NALP3とcaspase-1活性化・IL-1β成熟の関係を確認。"
+  }
+]

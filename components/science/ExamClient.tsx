@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
 import { AppButton } from "@/components/ui/AppButton";
@@ -114,7 +114,9 @@ export function ExamClient({ initialAttempt, initialFeedback, kind, initialDomai
     finally { answering.current = false; setBusy(false); }
   }, [busy, explanation, paused, pending, refresh, router, selected, state]);
 
-  useEffect(() => {
+  // Install the current handler before the choices can paint. A passive effect left a
+  // small interval in which the visible question still had the previous key handler.
+  useLayoutEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.defaultPrevented || event.repeat || event.isComposing || event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return;
       const target = event.target;

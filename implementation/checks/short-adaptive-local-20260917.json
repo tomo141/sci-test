@@ -1,0 +1,74 @@
+{
+  "recordedAt": "2026-09-17T03:57:46.140032+00:00",
+  "baseCommit": "48831abf386573efefd6c68d4ab02c7b2e01acd8",
+  "status": "locally_verified_not_production_deployed",
+  "testResults": {
+    "unitAndDatabase": {
+      "passed": 246,
+      "skippedOptionalBankAudit": 1
+    },
+    "bankPreparationAndEditorial": {
+      "passed": 8
+    },
+    "applicationBrowser": {
+      "passed": 44,
+      "skippedConnectedDatabase": 2,
+      "includesDesktopAndMobile": true
+    },
+    "standaloneLint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "fixedPilotBrowser": "20 of 20 completed on desktop and mobile",
+    "adaptivePilotBrowser": "20 of 20 completed on desktop and mobile",
+    "existingBankSimulation": "72 synthetic trials; not user-performance evidence"
+  },
+  "reports": [
+    "short-pilot-browser-20260917.json",
+    "short-adaptive-browser-20260917.json",
+    "short-adaptive-simulation-20260917.json",
+    "trial-fluency-simulation-20260917.json"
+  ],
+  "fileSha256": {
+    "content/science-short-balanced-20260917.json": "d810d274b46d980d90f4a00c7e5440ea29a74dba04a78a02ee1cfa779d0c8480",
+    "content/science-short-pilot-20260917.json": "21d333d9e3962ec01ee19d06df364774e4184717de1ff1a8332967aa742703b5",
+    "implementation/short-questions/adaptive.html": "f1b0dcc91bbab02010964ee8d0c7a9b2b0e93897ae9118d8c51cc2e00ff5077e",
+    "src/lib/science/trial-policy.ts": "d3945d09dd76359e278c67b10697adb9f127ca84f77e1d095a8741a5363e3de7",
+    "src/lib/science/definition.ts": "82f362099afcc46dc8f62aae05a0dd774b88c065478f6f26d275d308a32283aa",
+    "src/lib/science/selection.ts": "c5fdd82fe5ca46f7ced21b20e7557679a1d3691a1ead2809effe88dfb637a023",
+    "src/lib/science/engine.ts": "5488b9a9a1a387fbd9372cc7568c0eabe850508404ab386f6c0c77d2fb5174ef",
+    "components/science/ExamClient.tsx": "a989c6979dc2cd0374bc48927f939d2708be31a1ffd8b5cebc460e84b93f7425",
+    "components/science/ScienceVisit.tsx": "76ad62f47252ecc97c145117d89aed69e0708885129080d8385f12ae97ddb7f2",
+    "src/lib/science/visits.ts": "f323886bed3fc195a97e20b28cfd754782d9ebe58cb74ad2e58105ce3df8b41e",
+    "implementation/operations/observe-trial-fluency.sql": "6c2322000094f2be16a7bfd675190afb3b1175a33ffcd2f337734549ff849f86"
+  },
+  "shortBank": {
+    "total": 100,
+    "perDomain": 10,
+    "levelCounts": [
+      15,
+      15,
+      14,
+      14,
+      14,
+      14,
+      14
+    ],
+    "provisionalDifficulty": true,
+    "empiricallyCalibrated": false,
+    "productionImported": false
+  },
+  "unchangedDefinitions": [
+    "p70 difficulty/ability correspondence",
+    "total 10-990",
+    "domain 1-99",
+    "score current attempt only",
+    "full-exam selection"
+  ],
+  "production": {
+    "modifiedDuringThisStage": false,
+    "lastObservedLiveCommit": "aa84222c85f2a838d939ce0b3cb505dbaacc83a0",
+    "promotionExceptionApproval": "pending; do not bypass automatic approval rejection",
+    "candidateTextProjectionConnectedValidation": false,
+    "afterChangeLatencyMeasured": false
+  }
+}

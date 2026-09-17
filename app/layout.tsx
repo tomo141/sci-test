@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/src/lib/site-config";
 import "./globals.css";
+import { ScienceVisit } from "@/components/science/ScienceVisit";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || siteConfig.productionUrl),
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>{children}<ScienceVisit /></body>
     </html>
   );
 }

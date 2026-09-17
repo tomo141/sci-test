@@ -14,6 +14,7 @@ import { laboratoryChoice } from "./trust";
 import { answerExplanation } from "./answer-feedback";
 import { questionLevel } from "./question-level";
 import { examProgress } from "./exam-progress";
+import { readingLoad, TRIAL_POLICY } from "./trial-policy";
 export { readAll } from "./queries";
 
 export async function ownedAttempt(ctx: Context, id: string) {
@@ -55,8 +56,8 @@ async function previousTrialEvidence(ctx: Context, attemptId: string, modelVersi
   return rows.map((row): Response => ({ ...row, correct: row.is_correct, eligible: true, answeredAt: row.answered_at }));
 }
 
-type BankRow = { revision_id: string; a: number; b: number; c: number; focus: boolean; anchor: boolean; science_items: Pick<Item,"family_id"|"domain"|"status"|"quality_passed"|"rights_checked"|"author_id"|"expires_at"> };
-async function candidateBank(ctx: Context, release: string | null, kind: ExamKind, currentFamilies = new Set<string>()): Promise<Candidate[]> {
+type BankRow = { revision_id: string; a: number; b: number; c: number; focus: boolean; anchor: boolean; science_items: Pick<Item,"family_id"|"domain"|"status"|"quality_passed"|"rights_checked"|"author_id"|"expires_at"> & { question?: string; choices?: string[] } };
+async function candidateBank(ctx: Context, release: string | null, kind: ExamKind, currentFamilies = new Set<string>(), includeReading = false): Promise<Candidate[]> {
   const seen = await exposureHistory(ctx);
   if (kind === "lab") {
     const items = await readAll<Item>((from, to) => ctx.db.from("science_items").select("*").in("status", ["lab", "published"]).eq("rights_checked", true).not("author_id", "is", null).order("id").range(from, to));
@@ -65,8 +66,12 @@ async function candidateBank(ctx: Context, release: string | null, kind: ExamKin
     return candidates.map((q,i)=>({...q,trustWeight:weights[i]}));
   }
   if (!release) throw new ScienceError("問題バンクを準備しています。", 503, "bank_unavailable");
-  const rows = await readAll<BankRow>((from, to) => ctx.db.from("science_release_items").select("revision_id,a,b,c,focus,anchor,science_items!inner(family_id,domain,status,quality_passed,rights_checked,author_id,expires_at)").eq("release_id", release).order("revision_id").range(from, to).returns<BankRow[]>());
-  return rows.filter(({ science_items: q }) => q.status === "published" && q.quality_passed && q.rights_checked && !currentFamilies.has(q.family_id) && (!q.author_id || q.author_id !== ctx.userId) && (!q.expires_at || new Date(q.expires_at) > new Date())).map((r) => ({ revisionId: r.revision_id, familyId: r.science_items.family_id, domain: r.science_items.domain, a: r.a, b: r.b, c: r.c, authorId: r.science_items.author_id, focus: r.focus, anchor: r.anchor, exposures: 0, seenCount: seen.get(r.science_items.family_id) ?? 0 }));
+  // Only new trial attempts need text lengths. Never fetch answer keys, explanations or sources
+  // for candidate selection; full exams and capacity checks retain the small metadata projection.
+  const projection = `revision_id,a,b,c,focus,anchor,science_items!inner(family_id,domain,status,quality_passed,rights_checked,author_id,expires_at${includeReading ? ",question:content->>question,choices:content->choices" : ""})`;
+  const rows = await readAll<BankRow>((from, to) => ctx.db.from("science_release_items").select(projection).eq("release_id", release).order("revision_id").range(from, to).returns<BankRow[]>());
+  return rows.filter(({ science_items: q }) => q.status === "published" && q.quality_passed && q.rights_checked && !currentFamilies.has(q.family_id) && (!q.author_id || q.author_id !== ctx.userId) && (!q.expires_at || new Date(q.expires_at) > new Date())).map((r) => ({ revisionId: r.revision_id, familyId: r.science_items.family_id, domain: r.science_items.domain, a: r.a, b: r.b, c: r.c, authorId: r.science_items.author_id, focus: r.focus, anchor: r.anchor, exposures: 0, seenCount: seen.get(r.science_items.family_id) ?? 0,
+    ...(includeReading && typeof r.science_items.question === "string" && Array.isArray(r.science_items.choices) ? { reading: readingLoad({ question: r.science_items.question, choices: r.science_items.choices }) } : {}) }));
 }
 
 export function publicAttempt(a: Attempt): PublicAttempt {
@@ -108,7 +113,7 @@ export async function examState(ctx: Context, id: string, feedbackOrdinal?: numb
       revisionId = weekly.revision_ids[a.ordinal];
     } else {
       const [candidates, history] = await Promise.all([
-        candidateBank(ctx, a.release_id, a.kind, new Set(records.issued.map(q => q.family_id))),
+        candidateBank(ctx, a.release_id, a.kind, new Set(records.issued.map(q => q.family_id)), a.kind === "trial" && a.definition.selectionPolicy === TRIAL_POLICY),
         a.kind === "trial" ? previousTrialEvidence(ctx, a.id, a.model_version) : Promise.resolve([] as Response[])
       ]);
       const random=()=>randomInt(2 ** 24)/2 ** 24;

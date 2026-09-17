@@ -1,0 +1,174 @@
+{
+  "observedAt": "2026-09-17T03:05:49.912Z",
+  "sourceSha256": "2eeea5d1019dc84b192629c01734020f48cd72115ee022e774355eea17e8a354",
+  "parametersAreProvisional": true,
+  "participantsAreSimulated": true,
+  "initialCoverage": [
+    {
+      "domain": "数学",
+      "bank": 100,
+      "short": 50,
+      "inRange": 30,
+      "shortInRange": 27,
+      "minPredicted": 0.418599715844612,
+      "maxPredicted": 0.855549471114589
+    },
+    {
+      "domain": "物理",
+      "bank": 100,
+      "short": 24,
+      "inRange": 3,
+      "shortInRange": 3,
+      "minPredicted": 0.418599715844612,
+      "maxPredicted": 0.7765498066698943
+    },
+    {
+      "domain": "化学",
+      "bank": 100,
+      "short": 34,
+      "inRange": 0,
+      "shortInRange": 0,
+      "minPredicted": 0.42715361310033706,
+      "maxPredicted": 0.735794882640613
+    },
+    {
+      "domain": "生物",
+      "bank": 100,
+      "short": 29,
+      "inRange": 6,
+      "shortInRange": 6,
+      "minPredicted": 0.47345019333010624,
+      "maxPredicted": 0.8140482963936512
+    },
+    {
+      "domain": "地学",
+      "bank": 100,
+      "short": 29,
+      "inRange": 1,
+      "shortInRange": 1,
+      "minPredicted": 0.46374550817024324,
+      "maxPredicted": 0.7666405273341199
+    },
+    {
+      "domain": "工学",
+      "bank": 100,
+      "short": 8,
+      "inRange": 0,
+      "shortInRange": 0,
+      "minPredicted": 0.4359517036063497,
+      "maxPredicted": 0.7144231445528467
+    },
+    {
+      "domain": "農学",
+      "bank": 100,
+      "short": 10,
+      "inRange": 1,
+      "shortInRange": 1,
+      "minPredicted": 0.47345019333010624,
+      "maxPredicted": 0.7765498066698943
+    },
+    {
+      "domain": "情報・計算機科学",
+      "bank": 100,
+      "short": 13,
+      "inRange": 0,
+      "shortInRange": 0,
+      "minPredicted": 0.4449878822887109,
+      "maxPredicted": 0.725180962067868
+    },
+    {
+      "domain": "医歯薬学",
+      "bank": 100,
+      "short": 36,
+      "inRange": 0,
+      "shortInRange": 0,
+      "minPredicted": 0.5142051173593877,
+      "maxPredicted": 0.735794882640613
+    },
+    {
+      "domain": "人文社会科学",
+      "bank": 100,
+      "short": 20,
+      "inRange": 0,
+      "shortInRange": 0,
+      "minPredicted": 0.4934627795507625,
+      "maxPredicted": 0.7462512783391942
+    }
+  ],
+  "scenarios": [
+    {
+      "theta": -2,
+      "policy": "measurement-v1",
+      "runs": 12,
+      "meanCorrect": 7.583333333333333,
+      "meanScore": 303.75,
+      "meanIntervalWidth": 370.25,
+      "meanPredicted": 0.6410081670372666,
+      "meanInRange": 0.4166666666666667,
+      "meanShortInRange": 0,
+      "meanProbabilityFallback": 0
+    },
+    {
+      "theta": -2,
+      "policy": "trial-fluency-v1",
+      "runs": 12,
+      "meanCorrect": 9,
+      "meanScore": 292.6666666666667,
+      "meanIntervalWidth": 365,
+      "meanPredicted": 0.7056331385032709,
+      "meanInRange": 9.583333333333334,
+      "meanShortInRange": 9.583333333333334,
+      "meanProbabilityFallback": 10.416666666666666
+    },
+    {
+      "theta": 0,
+      "policy": "measurement-v1",
+      "runs": 12,
+      "meanCorrect": 13.083333333333334,
+      "meanScore": 486.4166666666667,
+      "meanIntervalWidth": 393,
+      "meanPredicted": 0.6652246861396376,
+      "meanInRange": 0.5833333333333334,
+      "meanShortInRange": 0,
+      "meanProbabilityFallback": 0
+    },
+    {
+      "theta": 0,
+      "policy": "trial-fluency-v1",
+      "runs": 12,
+      "meanCorrect": 15.833333333333334,
+      "meanScore": 532.9166666666666,
+      "meanIntervalWidth": 397.6666666666667,
+      "meanPredicted": 0.74224181832242,
+      "meanInRange": 12.916666666666666,
+      "meanShortInRange": 12.916666666666666,
+      "meanProbabilityFallback": 7.083333333333333
+    },
+    {
+      "theta": 2,
+      "policy": "measurement-v1",
+      "runs": 12,
+      "meanCorrect": 18.666666666666668,
+      "meanScore": 686.1666666666666,
+      "meanIntervalWidth": 415,
+      "meanPredicted": 0.6869188193211756,
+      "meanInRange": 0.8333333333333334,
+      "meanShortInRange": 0,
+      "meanProbabilityFallback": 0
+    },
+    {
+      "theta": 2,
+      "policy": "trial-fluency-v1",
+      "runs": 12,
+      "meanCorrect": 19.333333333333332,
+      "meanScore": 670,
+      "meanIntervalWidth": 412.6666666666667,
+      "meanPredicted": 0.7594780363274816,
+      "meanInRange": 14.666666666666666,
+      "meanShortInRange": 14.666666666666666,
+      "meanProbabilityFallback": 5.333333333333333
+    }
+  ],
+  "model": "science-3pl-p70-linear-v2",
+  "bankReplacementApplied": false
+}

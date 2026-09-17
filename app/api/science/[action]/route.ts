@@ -6,6 +6,7 @@ import { checked, context, endpoint, rateLimit, releaseConfig, requireUser, Scie
 import { accountData } from "@/src/lib/science/account";
 import { definition,requiresAccount } from "@/src/lib/science/definition";
 import { correctionState } from "@/src/lib/science/corrections";
+import { recordScienceVisit } from "@/src/lib/science/visits";
 
 const id = z.string().uuid();
 const attemptInput = z.object({ attemptId: id }).strict();
@@ -13,11 +14,15 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ action: string }> }) {
   return endpoint(request, async () => {
-    const action = z.enum(["plan","start","state","result","answer","review","result_history","abandon","share","feedback","bookmark","event","account","profile","preferences","review_collection","mark_review"]).parse((await params).action);
+    const action = z.enum(["plan","start","state","result","answer","review","result_history","abandon","share","feedback","bookmark","event","account","profile","preferences","review_collection","mark_review","visit"]).parse((await params).action);
     const raw = await request.text();
     if (raw.length > 32_768) throw new ScienceError("入力が長すぎます。", 413);
     const body = z.record(z.unknown()).parse(JSON.parse(raw));
-    const ctx = await context(true, (action === "start" || action === "plan") && typeof body.refShare === "string" ? body.refShare : undefined);
+    const ctx = await context(action !== "visit", (action === "start" || action === "plan") && typeof body.refShare === "string" ? body.refShare : undefined);
+    if (action === "visit") {
+      z.object({}).strict().parse(body);
+      return recordScienceVisit(ctx);
+    }
     if(action==="review_collection"){
       const userId=requireUser(ctx),p=z.object({mode:z.enum(["mistakes","bookmarks"]),page:z.number().int().min(0).max(10000)}).strict().parse(body);
       await rateLimit(ctx,"review_collection",60);

@@ -1,0 +1,167 @@
+[
+  {
+    "level": 1,
+    "originalMatch": "雑種第一代を表す記号",
+    "question": "二つの親系統を交配した、雑種第一代の記号は？",
+    "choices": [
+      "F₁",
+      "F₂",
+      "P₁",
+      "BC₁"
+    ],
+    "explanation": "F₁はfirst filial generation、雑種第一代です。",
+    "reasons": [
+      "最初の雑種世代です。",
+      "F₁の次の子世代です。",
+      "親系統を表す記号です。",
+      "第1回の戻し交配世代を表します。"
+    ]
+  },
+  {
+    "level": 1,
+    "originalMatch": "肥料の「三要素」",
+    "question": "肥料表示のN・P・Kで、Nは？",
+    "choices": [
+      "窒素",
+      "リン",
+      "カリウム",
+      "カルシウム"
+    ],
+    "explanation": "Nは窒素、Pはリン、Kはカリウムを表します。",
+    "reasons": [
+      "元素記号Nです。",
+      "元素記号Pです。",
+      "元素記号Kです。",
+      "元素記号Caです。"
+    ]
+  },
+  {
+    "level": 2,
+    "originalMatch": "イネのいもち病",
+    "question": "イネのいもち病を起こす病原体の仲間は？",
+    "choices": [
+      "真菌",
+      "細菌",
+      "ウイルス",
+      "線虫"
+    ],
+    "explanation": "いもち病は、真菌に分類されるいもち病菌による病害です。",
+    "reasons": [
+      "病原体は糸状菌です。",
+      "別の病害を起こす細菌とは区別します。",
+      "ウイルス性病害ではありません。",
+      "動物に分類される線虫ではありません。"
+    ]
+  },
+  {
+    "level": 4,
+    "originalMatch": "水分活性a_w",
+    "question": "食品の平衡水蒸気圧が同温の純水の90％。水分活性は？",
+    "choices": [
+      "0.90",
+      "0.09",
+      "0.10",
+      "9.0"
+    ],
+    "explanation": "水分活性は、同温の純水の水蒸気圧に対する比です。水分含量が90％という意味ではありません。",
+    "reasons": [
+      "90％を比で表した値です。",
+      "百分率の換算が一桁違います。",
+      "1から差し引く定義ではありません。",
+      "この条件で1を超える値にはなりません。"
+    ]
+  },
+  {
+    "level": 5,
+    "originalMatch": "換算係数6.25",
+    "question": "飼料の全窒素が乾物の2％。係数6.25による粗タンパク質は？",
+    "choices": [
+      "12.5％",
+      "3.125％",
+      "8.25％",
+      "0.32％"
+    ],
+    "explanation": "2×6.25＝12.5％です。全窒素による換算なので、非タンパク態窒素も寄与し得ます。",
+    "reasons": [
+      "窒素割合に係数を掛けます。",
+      "係数を窒素割合で割っていません。",
+      "足し算ではありません。",
+      "窒素割合を係数で割っていません。"
+    ]
+  },
+  {
+    "level": 6,
+    "originalMatch": "背景選抜の主な目的",
+    "question": "戻し交配で、目的領域外を反復親型へ戻すための選抜は？",
+    "choices": [
+      "背景選抜",
+      "前景選抜",
+      "組換え選抜",
+      "無作為選抜"
+    ],
+    "explanation": "背景選抜は、目的領域以外のゲノムを反復親に近づけるためにマーカー等を使います。",
+    "reasons": [
+      "反復親の遺伝的背景の回復を進めます。",
+      "目的遺伝子等を持つ個体の選抜です。",
+      "主に目的遺伝子近傍の連鎖を切る組換えに注目します。",
+      "反復親型への回復を狙った選抜ではありません。"
+    ]
+  },
+  {
+    "level": 7,
+    "originalMatch": "PTI）と、細胞内受容体",
+    "question": "植物のTIR型免疫受容体で、TIRドメインの代表的酵素活性は？",
+    "choices": [
+      "NAD⁺分解",
+      "DNA複製",
+      "セルロース合成",
+      "脂肪酸合成"
+    ],
+    "explanation": "植物TIRドメインのNAD⁺切断活性は免疫シグナルに関与します。TIRという名前を持つすべてのタンパク質に同じ機能を一般化する問題ではありません。",
+    "reasons": [
+      "免疫シグナル分子の生成に関わる活性です。",
+      "DNAポリメラーゼの反応ではありません。",
+      "細胞壁のセルロース合成酵素ではありません。",
+      "脂肪酸合成酵素ではありません。"
+    ],
+    "lineage": "new-concept",
+    "sources": [
+      {
+        "title": "Horsefield et al. (2019), NAD+ cleavage activity by animal and plant TIR domains in cell death pathways",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31439792/"
+      }
+    ],
+    "sourceLocation": "Horsefieldら2019年原論文のPubMed抄録。植物NLRのTIRドメインの自己会合依存的NAD+切断活性を確認。"
+  },
+  {
+    "level": 7,
+    "originalMatch": "六倍体パンコムギ",
+    "question": "活性型ZAR1レジストソームは、ZAR1何分子からなる？",
+    "choices": [
+      "5分子",
+      "4分子",
+      "6分子",
+      "8分子"
+    ],
+    "explanation": "活性化したZAR1が五量体を形成します。この複合体はカルシウム透過性チャネルとして機能することも示されています。",
+    "reasons": [
+      "五量体の複合体です。",
+      "四量体ではありません。",
+      "六量体ではありません。",
+      "八量体ではありません。"
+    ],
+    "lineage": "new-concept",
+    "sources": [
+      {
+        "title": "Bi et al. (2021), The ZAR1 resistosome is a calcium-permeable channel triggering plant immune signaling",
+        "url": "https://doi.org/10.1016/j.cell.2021.05.003"
+      },
+      {
+        "title": "Max Planck Institute for Plant Breeding Research — Plant immunity",
+        "url": "https://www.mpipz.mpg.de/plant-immunity"
+      }
+    ],
+    "subdomain": "病害虫・植物病理",
+    "sourceLocation": "Biら2021年原論文の公開Summaryでpentameric complexesを確認。研究機関の研究紹介本文でもZAR1 5分子を照合。"
+  }
+]

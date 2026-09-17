@@ -1,0 +1,30 @@
+{
+  "version": "short-pilot-v1-20260917",
+  "sourceSha256": "21d333d9e3962ec01ee19d06df364774e4184717de1ff1a8332967aa742703b5",
+  "counts": {
+    "数学": 2,
+    "物理": 2,
+    "化学": 2,
+    "生物": 2,
+    "地学": 2,
+    "工学": 2,
+    "農学": 2,
+    "情報・計算機科学": 2,
+    "医歯薬学": 2,
+    "人文社会科学": 2
+  },
+  "before": {
+    "meanStem": 47,
+    "meanChoice": 15.8
+  },
+  "after": {
+    "meanStem": 22.3,
+    "maxStem": 29,
+    "meanChoice": 3.7,
+    "maxChoice": 8
+  },
+  "editorialFindings": [],
+  "productionPublished": false,
+  "ownerExperienceReviewed": true,
+  "calibrated": false
+}
