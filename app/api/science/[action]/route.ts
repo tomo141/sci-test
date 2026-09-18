@@ -7,6 +7,8 @@ import { accountData } from "@/src/lib/science/account";
 import { definition,requiresAccount } from "@/src/lib/science/definition";
 import { correctionState } from "@/src/lib/science/corrections";
 import { recordScienceVisit } from "@/src/lib/science/visits";
+import { readExperience, saveExperience } from "@/src/lib/science/experience-survey-server";
+import { experienceResponseSchema } from "@/src/lib/science/experience-survey";
 
 const id = z.string().uuid();
 const attemptInput = z.object({ attemptId: id }).strict();
@@ -14,11 +16,16 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ action: string }> }) {
   return endpoint(request, async () => {
-    const action = z.enum(["plan","start","state","result","answer","review","result_history","abandon","share","feedback","bookmark","event","account","profile","preferences","review_collection","mark_review","visit"]).parse((await params).action);
+    const action = z.enum(["plan","start","state","result","answer","review","result_history","abandon","share","feedback","bookmark","event","account","profile","preferences","review_collection","mark_review","visit","experience_read","experience_save"]).parse((await params).action);
     const raw = await request.text();
     if (raw.length > 32_768) throw new ScienceError("入力が長すぎます。", 413);
     const body = z.record(z.unknown()).parse(JSON.parse(raw));
     const ctx = await context(action !== "visit", (action === "start" || action === "plan") && typeof body.refShare === "string" ? body.refShare : undefined);
+    if (action === "experience_read") return readExperience(ctx, attemptInput.parse(body).attemptId);
+    if (action === "experience_save") {
+      const input = z.object({ attemptId: id, response: experienceResponseSchema }).strict().parse(body);
+      return saveExperience(ctx, input.attemptId, input.response);
+    }
     if (action === "visit") {
       z.object({}).strict().parse(body);
       return recordScienceVisit(ctx);

@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { definition } from "./definition";
 import { expectedScoreVarianceReduction, posterior, type Response } from "./model";
 import { selectCandidate, type Candidate } from "./selection";
-import { isShort, readingLoad, TRIAL_POLICY, trialPool } from "./trial-policy";
+import { isShort, readingLoad, TRIAL_POLICY, LEGACY_TRIAL_POLICY, trialPool, trialTarget } from "./trial-policy";
 
 const short = { stem: 30, longestChoice: 10 };
 const long = { stem: 90, longestChoice: 30 };
@@ -41,6 +41,41 @@ describe("adopted trial fluency policy", () => {
     expect(trialPool([hardShort, nearest, entry(.95)]).pool).toEqual([nearest]);
     expect(trialPool([]).pool).toEqual([]);
   });
+  it("starts at 75–85%, shifts opposite to the current accuracy gap and tempers small samples", () => {
+    const answers = (correct: number, count: number) => Array.from({ length: count }, (_, i) => ({ eligible: true, correct: i < correct }));
+    expect(trialTarget([])).toMatchObject({ min: .75, max: .85, count: 0 });
+    expect(trialTarget(answers(8, 10))).toMatchObject({ min: .75, max: .85 });
+    expect(trialTarget(answers(12, 20))).toMatchObject({ min: .8214, max: .9214, count: 20, correct: 12 });
+    expect(trialTarget(answers(19, 20))).toMatchObject({ min: .6964, max: .7964 });
+    expect(trialTarget(answers(0, 1)).shift).toBeLessThan(.05);
+    expect(trialTarget(answers(0, 1)).shift).toBeLessThan(trialTarget(answers(0, 5)).shift);
+    expect(trialTarget(answers(0, 100))).toMatchObject({ min: .85, max: .95 });
+    expect(trialTarget(answers(100, 100))).toMatchObject({ min: .6574, max: .7574 });
+    expect(trialTarget([...answers(8, 10), { eligible: false, correct: false }])).toEqual(trialTarget(answers(8, 10)));
+  });
+  it("prefers the easier side only after quotas/unseen selection, even when the hard side is closer", () => {
+    const hard = withPrediction("hard", .74), easy = withPrediction("easy", .91), easiest = withPrediction("easiest", .96);
+    const current = selectCandidate([hard, easy, easiest], [], definition("trial"), () => 0)!;
+    expect(current.candidate.revisionId).toBe("easy");
+    expect(current.reason).toContain("easier-probability-fallback:target=0.7500..0.8500:feedback=0/0");
+    const legacy = selectCandidate([hard, easy], [], { ...definition("trial"), selectionPolicy: LEGACY_TRIAL_POLICY }, () => 0)!;
+    expect(legacy.candidate.revisionId).toBe("hard");
+    expect(legacy.target).toBeNull(); expect(legacy.reason).toContain(LEGACY_TRIAL_POLICY);
+    const unseen = selectCandidate([hard, { ...easy, seenCount: 1 }], [], definition("trial"), () => 0)!;
+    expect(unseen.candidate.revisionId).toBe("hard");
+    const onlyHard = trialPool([entry(.6), entry(.74)], { min: .75, max: .85 }, true);
+    expect(onlyHard.pool[0].predicted).toBe(.74);
+  });
+  it("uses previous history for ability, but only this attempt for target feedback", () => {
+    const history: Response[] = Array.from({ length: 20 }, () => ({ ...base, eligible: true, correct: false }));
+    const original = structuredClone(history);
+    const selected = selectCandidate([withPrediction("candidate", .8)], [], definition("trial"), () => 0, history)!;
+    expect(selected.target).toMatchObject({ min: .75, max: .85, count: 0 });
+    expect(selected.predicted).toBeLessThan(.8);
+    expect(history).toEqual(original);
+    const full = selectCandidate([withPrediction("candidate", .8)], [], definition("full"), () => 0, history)!;
+    expect(full.predicted).toBeCloseTo(.8); expect(full.target).toBeNull();
+  });
   it("respects domain quotas and unseen-first before fluency, and records repeat fallback", () => {
     const target = withPrediction("target", .8), unseenHard = withPrediction("unseen", .6);
     const repeated = { ...target, seenCount: 1 };
@@ -52,7 +87,7 @@ describe("adopted trial fluency policy", () => {
     expect(selectCandidate([target, otherDomain], current, definition("trial"))!.candidate.domain).toBe("物理");
     const fallback = selectCandidate([repeated, { ...unseenHard, seenCount: 2 }], [], definition("trial"))!;
     expect(fallback.candidate.revisionId).toBe("target");
-    expect(fallback.reason).toMatch(/^repeat-fallback-v1:trial-fluency-v1:/);
+    expect(fallback.reason).toContain(`repeat-fallback-v1:${TRIAL_POLICY}:`);
   });
   it("retains measurement selection in full exams and persisted older trials", () => {
     const candidates = [withPrediction("measurement", .67), withPrediction("fluent", .8)];

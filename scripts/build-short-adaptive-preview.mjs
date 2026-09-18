@@ -3,6 +3,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { Script } from 'node:vm';
 const require=createRequire(import.meta.url), vitestRequire=createRequire(require.resolve('vitest/package.json'));
 const viteDirectory=path.dirname(vitestRequire.resolve('vite/package.json'));
 const {build}=await import(pathToFileURL(path.join(viteDirectory,'dist/node/index.js')));
@@ -16,6 +17,8 @@ const data={...bank,hash:createHash('sha256').update(raw).digest('hex'),pilotV1:
 const template=await readFile('scripts/templates/short-adaptive.html','utf8');
 const oldTemplate=await readFile('scripts/templates/short-pilot.html','utf8');
 const style=oldTemplate.match(/<style>([\s\S]*?)<\/style>/)[1];
-const html=template.replace('/*__STYLE__*/',style).replace('/*__LIBRARY__*/',lib.replaceAll('</script','<\\/script')).replace('/*__BANK__*/',JSON.stringify(data).replaceAll('<','\\u003c'));
+// Callback replacements preserve literal $&, $` and $' in bundled code/content.
+const html=template.replace('/*__STYLE__*/',()=>style).replace('/*__LIBRARY__*/',()=>lib.replaceAll('</script','<\\/script')).replace('/*__BANK__*/',()=>JSON.stringify(data).replaceAll('<','\\u003c'));
+for(const [index,script] of [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].entries()) new Script(script[1],{filename:`adaptive-script-${index}.js`});
 await writeFile('implementation/short-questions/adaptive.html',html);
 console.log(JSON.stringify({version:bank.version,questions:bank.items.length,bytes:Buffer.byteLength(html),sourceSha256:data.hash,usesProductionModel:true,networkRequests:0}));

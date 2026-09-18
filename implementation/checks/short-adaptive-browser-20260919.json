@@ -1,0 +1,73 @@
+{
+  "observedAt": "2026-09-18T15:23:47.527Z",
+  "syntheticInputs": true,
+  "realUserResponses": false,
+  "productionDataTouched": false,
+  "bankVersion": "short-balanced-v1-20260917",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 960
+      },
+      "completed": 20,
+      "counts": {
+        "数学": 2,
+        "物理": 2,
+        "化学": 2,
+        "生物": 2,
+        "地学": 2,
+        "工学": 2,
+        "農学": 2,
+        "情報・計算機科学": 2,
+        "医歯薬学": 2,
+        "人文社会科学": 2
+      },
+      "scoreText": "622 / 990",
+      "historyExcludedFromCurrentScore": true,
+      "keyboard": true,
+      "reload": true,
+      "anotherTrial": true,
+      "surveyPersists": true,
+      "selfAssessmentScopesSeparate": true,
+      "surveyDoesNotChangeAnswers": true,
+      "legacyAttemptPreserved": true,
+      "newTrialFeedback": true,
+      "noOverflow": true,
+      "externalRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "completed": 20,
+      "counts": {
+        "数学": 2,
+        "物理": 2,
+        "化学": 2,
+        "生物": 2,
+        "地学": 2,
+        "工学": 2,
+        "農学": 2,
+        "情報・計算機科学": 2,
+        "医歯薬学": 2,
+        "人文社会科学": 2
+      },
+      "scoreText": "618 / 990",
+      "historyExcludedFromCurrentScore": true,
+      "keyboard": true,
+      "reload": true,
+      "anotherTrial": true,
+      "surveyPersists": true,
+      "selfAssessmentScopesSeparate": true,
+      "surveyDoesNotChangeAnswers": true,
+      "legacyAttemptPreserved": true,
+      "newTrialFeedback": true,
+      "noOverflow": true,
+      "externalRequests": 0,
+      "pageErrors": []
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "observedAt": "2026-09-18T15:25:59.360Z",
+  "syntheticResponses": true,
+  "calibrated": false,
+  "policy": "trial-fluency-v2-feedback",
+  "allCorrect": {
+    "levels": [
+      2,
+      3,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "targets": [
+      {
+        "min": 0.75,
+        "max": 0.85,
+        "count": 0,
+        "correct": 0,
+        "shift": 0
+      },
+      {
+        "min": 0.7389,
+        "max": 0.8389,
+        "count": 1,
+        "correct": 1,
+        "shift": -0.011111111111111108
+      },
+      {
+        "min": 0.73,
+        "max": 0.83,
+        "count": 2,
+        "correct": 2,
+        "shift": -0.019999999999999997
+      },
+      {
+        "min": 0.7227,
+        "max": 0.8227,
+        "count": 3,
+        "correct": 3,
+        "shift": -0.027272727272727258
+      },
+      {
+        "min": 0.7167,
+        "max": 0.8167,
+        "count": 4,
+        "correct": 4,
+        "shift": -0.033333333333333326
+      },
+      {
+        "min": 0.7115,
+        "max": 0.8115,
+        "count": 5,
+        "correct": 5,
+        "shift": -0.038461538461538464
+      },
+      {
+        "min": 0.7071,
+        "max": 0.8071,
+        "count": 6,
+        "correct": 6,
+        "shift": -0.04285714285714283
+      },
+      {
+        "min": 0.7033,
+        "max": 0.8033,
+        "count": 7,
+        "correct": 7,
+        "shift": -0.04666666666666665
+      },
+      {
+        "min": 0.7,
+        "max": 0.8,
+        "count": 8,
+        "correct": 8,
+        "shift": -0.04999999999999999
+      },
+      {
+        "min": 0.6971,
+        "max": 0.7971,
+        "count": 9,
+        "correct": 9,
+        "shift": -0.05294117647058823
+      },
+      {
+        "min": 0.6944,
+        "max": 0.7944,
+        "count": 10,
+        "correct": 10,
+        "shift": -0.05555555555555555
+      },
+      {
+        "min": 0.6921,
+        "max": 0.7921,
+        "count": 11,
+        "correct": 11,
+        "shift": -0.05789473684210524
+      },
+      {
+        "min": 0.69,
+        "max": 0.79,
+        "count": 12,
+        "correct": 12,
+        "shift": -0.05999999999999996
+      },
+      {
+        "min": 0.6881,
+        "max": 0.7881,
+        "count": 13,
+        "correct": 13,
+        "shift": -0.06190476190476189
+      },
+      {
+        "min": 0.6864,
+        "max": 0.7864,
+        "count": 14,
+        "correct": 14,
+        "shift": -0.06363636363636362
+      },
+      {
+        "min": 0.6848,
+        "max": 0.7848,
+        "count": 15,
+        "correct": 15,
+        "shift": -0.06521739130434782
+      },
+      {
+        "min": 0.6833,
+        "max": 0.7833,
+        "count": 16,
+        "correct": 16,
+        "shift": -0.06666666666666665
+      },
+      {
+        "min": 0.682,
+        "max": 0.782,
+        "count": 17,
+        "correct": 17,
+        "shift": -0.06799999999999998
+      },
+      {
+        "min": 0.6808,
+        "max": 0.7808,
+        "count": 18,
+        "correct": 18,
+        "shift": -0.06923076923076922
+      },
+      {
+        "min": 0.6796,
+        "max": 0.7796,
+        "count": 19,
+        "correct": 19,
+        "shift": -0.07037037037037035
+      }
+    ],
+    "score": {
+      "value": 714,
+      "low": 505,
+      "high": 923,
+      "scale": "total",
+      "unmeasuredDomains": 0
+    }
+  },
+  "allWrong": {
+    "levels": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "targets": [
+      {
+        "min": 0.75,
+        "max": 0.85,
+        "count": 0,
+        "correct": 0,
+        "shift": 0
+      },
+      {
+        "min": 0.7944,
+        "max": 0.8944,
+        "count": 1,
+        "correct": 0,
+        "shift": 0.044444444444444446
+      },
+      {
+        "min": 0.83,
+        "max": 0.93,
+        "count": 2,
+        "correct": 0,
+        "shift": 0.08
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 3,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 4,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 5,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 6,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 7,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 8,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 9,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 10,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 11,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 12,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 13,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 14,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 15,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 16,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 17,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 18,
+        "correct": 0,
+        "shift": 0.1
+      },
+      {
+        "min": 0.85,
+        "max": 0.95,
+        "count": 19,
+        "correct": 0,
+        "shift": 0.1
+      }
+    ],
+    "score": {
+      "value": 10,
+      "low": 10,
+      "high": 171,
+      "scale": "total",
+      "unmeasuredDomains": 0
+    }
+  }
+}

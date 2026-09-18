@@ -34,7 +34,7 @@ export function KnowledgeAssessment({ attemptId, initialDomain }: { attemptId: s
     } catch (e) { setError((e as Error).message); } finally { setBusy(false); }
   }
   return <AppCard className="mt-6">
-    <h2 className="text-xl font-black">あなたの感覚で、問題を育てる</h2>
+    <h2 className="text-xl font-black">分野ごとの自己評価</h2>
     <p className="mt-3 text-sm leading-7">どの段階の問題なら解けそうですか？ 任意で1分野ずつ教えてください。回答は非公開で、問題の難度や段階の説明を確かめるために使います。</p>
     {note && <p role="status" className="mt-4 rounded-xl bg-green-50 p-4">{note}</p>}
     {!open && <AppButton className="mt-4" variant="secondary" disabled={busy} onClick={() => void load()}>{busy ? "読み込み中…" : note ? "別の分野を答える・回答を見直す" : "1分野だけ答える（任意）"}</AppButton>}

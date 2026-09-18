@@ -14,7 +14,7 @@ import { laboratoryChoice } from "./trust";
 import { answerExplanation } from "./answer-feedback";
 import { questionLevel } from "./question-level";
 import { examProgress } from "./exam-progress";
-import { readingLoad, TRIAL_POLICY } from "./trial-policy";
+import { readingLoad, isFluencyPolicy } from "./trial-policy";
 export { readAll } from "./queries";
 
 export async function ownedAttempt(ctx: Context, id: string) {
@@ -113,7 +113,7 @@ export async function examState(ctx: Context, id: string, feedbackOrdinal?: numb
       revisionId = weekly.revision_ids[a.ordinal];
     } else {
       const [candidates, history] = await Promise.all([
-        candidateBank(ctx, a.release_id, a.kind, new Set(records.issued.map(q => q.family_id)), a.kind === "trial" && a.definition.selectionPolicy === TRIAL_POLICY),
+        candidateBank(ctx, a.release_id, a.kind, new Set(records.issued.map(q => q.family_id)), a.kind === "trial" && isFluencyPolicy(a.definition.selectionPolicy)),
         a.kind === "trial" ? previousTrialEvidence(ctx, a.id, a.model_version) : Promise.resolve([] as Response[])
       ]);
       const random=()=>randomInt(2 ** 24)/2 ** 24;

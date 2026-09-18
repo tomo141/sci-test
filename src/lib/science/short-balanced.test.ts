@@ -4,6 +4,7 @@ import { domains, type ScienceDomain } from "../data/taxonomy";
 import { choose, progress } from "../../../scripts/lib/short-adaptive-model";
 import { probability } from "./model";
 import { questionLevel } from "./question-level";
+import { TRIAL_POLICY } from "./trial-policy";
 import { difficultyAtProbability, thetaFromScale } from "./measurement-scale";
 import type { Content } from "./types";
 
@@ -30,7 +31,11 @@ describe("100 short questions and the production adaptive model",()=>{
     expect(yes.levels.slice(10).reduce((a,b)=>a+b,0)).toBeGreaterThan(yes.levels.slice(0,10).reduce((a,b)=>a+b,0));
     expect(yes.levels.reduce((a,b)=>a+b,0)).toBeGreaterThan(no.levels.reduce((a,b)=>a+b,0));
     expect(yes.score.score!.value).toBeGreaterThan(no.score.score!.value);
-    if(process.env.SCIENCE_SHORT_AUDIT==='1')writeFileSync('implementation/checks/short-adaptive-simulation-20260917.json',JSON.stringify({observedAt:new Date().toISOString(),syntheticResponses:true,calibrated:false,allCorrect:{levels:yes.levels,score:yes.score.score},allWrong:{levels:no.levels,score:no.score.score}},null,2)+'\n');
+    if(process.env.SCIENCE_SHORT_AUDIT==='1'){
+      const tag=process.env.SCIENCE_CHECK_TAG??new Date().toISOString().slice(0,10).replaceAll("-","");
+      if(!/^\d{8}$/.test(tag))throw new Error("Invalid report date");
+      writeFileSync(`implementation/checks/short-adaptive-simulation-${tag}.json`,JSON.stringify({observedAt:new Date().toISOString(),syntheticResponses:true,calibrated:false,policy:TRIAL_POLICY,allCorrect:{levels:yes.levels,targets:yes.issued.map(q=>q.target),score:yes.score.score},allWrong:{levels:no.levels,targets:no.issued.map(q=>q.target),score:no.score.score}},null,2)+'\n');
+    }
   });
   it("uses prior trial answers for selection but scores only the current answers",()=>{
     const previous=run(true),next=run(true,previous.answers);

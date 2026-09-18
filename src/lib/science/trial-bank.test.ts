@@ -5,7 +5,7 @@ import { domains, type ScienceDomain } from "@/src/lib/data/taxonomy";
 import { definition } from "./definition";
 import { expectedScoreVarianceReduction, posterior, probability, scoreResponses, type Response } from "./model";
 import { selectCandidate, type Candidate } from "./selection";
-import { isShort, readingLoad } from "./trial-policy";
+import { isShort, readingLoad, TRIAL_POLICY } from "./trial-policy";
 import type { Content } from "./types";
 
 // An optional audit of the prepared, frozen bank. Deliberately not a claim about real users.
@@ -26,29 +26,32 @@ it.skipIf(!enabled)("completes balanced trials against the prepared bank and rep
   });
   const random = (seed:number) => () => {seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/2**32;};
   function run(theta:number,seed:number,fluent:boolean) {
-    const rng=random(seed), used=new Set<string>(), responses:Response[]=[], predictions:number[]=[], tiers:string[]=[];
+    const rng=random(seed), used=new Set<string>(), responses:Response[]=[], predictions:number[]=[], inRange:boolean[]=[], tiers:string[]=[];
     const exam={...definition("trial"),...(!fluent?{version:"exam-v3-immediate-feedback",selectionPolicy:undefined}:{})};
     for(let n=0;n<20;n++){
       const next=selectCandidate(bank.filter(q=>!used.has(q.familyId)),responses,exam,rng)!;
       expect(next).not.toBeNull();expect(used.has(next.candidate.familyId)).toBe(false);
       used.add(next.candidate.familyId);predictions.push(next.predicted);tiers.push(next.reason);
+      inRange.push(next.target ? next.predicted >= next.target.min && next.predicted <= next.target.max : next.predicted >= .75 && next.predicted <= .85);
       responses.push({...next.candidate,eligible:true,correct:rng()<probability(theta,next.candidate)});
     }
     domains.forEach(d=>expect(responses.filter(r=>r.domain===d)).toHaveLength(2));
     const score=scoreResponses(responses);
     expect(score.total).toBeGreaterThanOrEqual(10);expect(score.total).toBeLessThanOrEqual(990);
     return {correct:responses.filter(r=>r.correct).length,score:score.total!,width:score.high!-score.low!,predicted:predictions.reduce((a,b)=>a+b,0)/20,
-      inRange:predictions.filter(p=>p>=.75&&p<=.85).length,short:tiers.filter(t=>t.includes("short-in-range")).length,
-      probabilityFallback:tiers.filter(t=>t.includes("nearest-probability-fallback")).length};
+      inRange:inRange.filter(Boolean).length,short:tiers.filter(t=>t.includes("short-in-range")).length,
+      probabilityFallback:tiers.filter(t=>t.includes("probability-fallback")).length};
   }
   const scenarios=[];
   for(const theta of [-2,0,2])for(const fluent of [false,true]){
     const rows=Array.from({length:12},(_,i)=>run(theta,17000+i,fluent));
     const mean=(key:keyof typeof rows[number])=>rows.reduce((s,r)=>s+r[key],0)/rows.length;
-    scenarios.push({theta,policy:fluent?"trial-fluency-v1":"measurement-v1",runs:rows.length,meanCorrect:mean("correct"),meanScore:mean("score"),meanIntervalWidth:mean("width"),meanPredicted:mean("predicted"),meanInRange:mean("inRange"),meanShortInRange:mean("short"),meanProbabilityFallback:mean("probabilityFallback")});
+    scenarios.push({theta,policy:fluent?TRIAL_POLICY:"measurement-v1",runs:rows.length,meanCorrect:mean("correct"),meanScore:mean("score"),meanIntervalWidth:mean("width"),meanPredicted:mean("predicted"),meanInRange:mean("inRange"),meanShortInRange:mean("short"),meanProbabilityFallback:mean("probabilityFallback")});
   }
   const report={observedAt:new Date().toISOString(),sourceSha256:createHash("sha256").update(raw).digest("hex"),parametersAreProvisional:true,participantsAreSimulated:true,
     initialCoverage,scenarios,model:"science-3pl-p70-linear-v2",bankReplacementApplied:false};
-  writeFileSync("implementation/checks/trial-fluency-simulation-20260917.json",JSON.stringify(report,null,2)+"\n");
+  const tag=process.env.SCIENCE_CHECK_TAG??new Date().toISOString().slice(0,10).replaceAll("-","");
+  if(!/^\d{8}$/.test(tag))throw new Error("Invalid report date");
+  writeFileSync(`implementation/checks/trial-fluency-simulation-${tag}.json`,JSON.stringify(report,null,2)+"\n");
   console.log(JSON.stringify(report));
 }, 60000);

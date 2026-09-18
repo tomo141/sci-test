@@ -1,0 +1,37 @@
+{
+  "observedAt": "2026-09-18T15:30:49.618825+00:00",
+  "baseCommit": "b5c8994099098b2d3e8d764ae5ede31b97701d4f",
+  "selectionPolicy": "trial-fluency-v2-feedback",
+  "surveyVersion": "exam-experience-v1",
+  "surveyItems": [
+    "difficulty",
+    "tempo"
+  ],
+  "selfAssessment": "existing 7 groups, whole domain/subdomain recorded separately",
+  "commands": {
+    "npm test": {
+      "passed": 254,
+      "skipped": 1,
+      "skipReason": "optional 1000-item bank simulation not enabled"
+    },
+    "npm run lint": "passed",
+    "npm run typecheck": "passed",
+    "npm run build": "passed",
+    "SCIENCE_E2E_PRODUCTION=1 PLAYWRIGHT_CHANNEL=chrome npx playwright test": {
+      "passed": 52,
+      "skipped": 2,
+      "skipReason": "connected service test not enabled"
+    },
+    "node scripts/verify-short-adaptive.mjs": "passed: two viewport contexts, 20 questions each"
+  },
+  "firstDevelopmentBrowserRun": "51 passed, 1 failed with Next.js dev module error, 2 skipped; entire suite rerun successfully on production build",
+  "shortBankSha256": "d810d274b46d980d90f4a00c7e5440ea29a74dba04a78a02ee1cfa779d0c8480",
+  "bankContentOrParametersChanged": false,
+  "scoreDefinitionChanged": false,
+  "productionDatabaseChanged": false,
+  "productionDeploymentChanged": false,
+  "productionPromotion": "pending explicit exception for separately skipped Lint check; do not bypass",
+  "mailSent": false,
+  "syntheticTestInputsOnly": true,
+  "actualMemberDataCommitted": false
+}

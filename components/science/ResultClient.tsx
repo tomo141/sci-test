@@ -12,6 +12,7 @@ import type { RevisionUpdate } from "@/src/lib/science/corrections";
 import { ResultSummary } from "./ResultSummary";
 import { shareCopy } from "@/src/lib/science/share-copy";
 import { KnowledgeAssessment } from "./KnowledgeAssessment";
+import { ExperienceSurvey } from "./ExperienceSurvey";
 
 type Review = { attempt: PublicAttempt; rows: { ordinal: number; revisionId: string; domain: string; content: Content | null; selectedIndex: number | null; correct: boolean | null; creditName?:string; update?:RevisionUpdate|null }[] };
 
@@ -77,6 +78,8 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
       <div className="mt-4 flex flex-wrap gap-3"><AppButton href={next==="domain"?`/exam?kind=domain&domain=${encodeURIComponent(domain)}`:"/exam?kind=full"}>{next==="domain"?`${domain}をもう20問`:"総合本試験へ"}</AppButton><AppButton href={next==="domain"?"/exam?kind=full":`/exam?kind=domain&domain=${encodeURIComponent(domain)}`} variant="secondary">{next==="domain"?"総合本試験へ":`${domain}をもう20問`}</AppButton><AppButton href="/exam?kind=weekly" variant="ghost">今週の10問</AppButton></div>
       {!state.signedIn&&<p className="mt-4 text-sm leading-7">受験の種類によって無料登録をご案内します。メールの確認コードで登録すると、履歴を別の端末でも見られます。</p>}
     </AppCard>
+    {["trial", "full"].includes(result.definition.kind) && <ExperienceSurvey key={attemptId} attemptId={attemptId} />}
+    {result.definition.formal && <KnowledgeAssessment key={`levels-${attemptId}`} attemptId={attemptId} initialDomain={domain} />}
     <AppCard className="mt-6"><h2 className="text-2xl font-black">解説・出典を読む</h2><p className="mt-3">間違えた問題や気になる問題を、少しずつ復習できます。</p><AppButton variant="secondary" className="mt-4" onClick={async()=>{try{setReview(await scienceApi<Review>("review",{attemptId}));setError("");}catch(e){setError((e as Error).message);}}}>解説を開く</AppButton>
       {review&&review.rows.slice(reviewPage*10,reviewPage*10+10).map((row)=><section key={row.ordinal} className="mt-6 border-t pt-5"><p className="text-sm font-bold">第{row.ordinal+1}問 · {row.domain} · {row.selectedIndex===null||row.update?.excluded?"採点対象外":row.correct?"正解":"不正解"}</p>
         {row.update&&<p className="mt-3 rounded-xl bg-amber-50 p-4 text-sm whitespace-pre-wrap">訂正：{row.update.reason}<br/>{row.selectedIndex!==null&&"以下は受験当時の記録です。"}現在の問題と解説は下に表示します。</p>}
@@ -88,6 +91,6 @@ export function ResultClient({ attemptId }: { attemptId: string }) {
         {reportOrdinal===row.ordinal&&<form className="mt-4 grid gap-3 rounded-xl border p-4" onSubmit={async(e)=>{e.preventDefault();const form=new FormData(e.currentTarget);try{await scienceApi("feedback",{attemptId,ordinal:row.ordinal,category:form.get("category"),body:form.get("body"),evidence:form.get("evidence")});setNote("改善提案を保存しました。ありがとうございます。");setReportOrdinal(null);}catch(issue){setError((issue as Error).message);}}}><label>気づいたこと<select name="category" className="mt-2 block w-full rounded border p-3">{[["answer","正解が違う"],["ambiguous","複数の答えに解釈できる"],["explanation","解説について"],["source","出典について"],["rights","権利について"],["typo","誤字・表記"],["good","良い問題だった"]].map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label><label>具体的な内容<textarea name="body" maxLength={2000} className="mt-2 block min-h-24 w-full rounded border p-3"/></label><label>根拠・出典（任意）<textarea name="evidence" maxLength={2000} className="mt-2 block w-full rounded border p-3"/></label><AppButton type="submit">提案を送信する</AppButton></form>}
       </section>)}
       {review&&<div className="mt-5 flex gap-3"><AppButton variant="ghost" disabled={reviewPage===0} onClick={()=>setReviewPage(p=>p-1)}>前の10問</AppButton><AppButton variant="ghost" disabled={(reviewPage+1)*10>=review.rows.length} onClick={()=>setReviewPage(p=>p+1)}>次の10問</AppButton></div>}
-    </AppCard>{result.definition.formal&&<KnowledgeAssessment attemptId={attemptId} initialDomain={domain}/>}{error&&<p role="alert" className="mt-4 rounded-xl bg-amber-50 p-4">{error}</p>}<AppButton href="/mypage" className="mt-6" variant="secondary">マイページへ</AppButton>
+    </AppCard>{error&&<p role="alert" className="mt-4 rounded-xl bg-amber-50 p-4">{error}</p>}<AppButton href="/mypage" className="mt-6" variant="secondary">マイページへ</AppButton>
   </main>;
 }

@@ -26,20 +26,28 @@ with settings as (
     coalesce((select e.event_name='mail_consent_granted' from science_events e where e.user_id=f.user_id
       and e.event_name in ('mail_consent_granted','mail_consent_revoked') and e.payload->>'topic'='science'
       and e.created_at<=f.started_at+interval '7 days' order by e.created_at desc,e.id desc limit 1),false) consented,
-    case when f.policy='trial-fluency-v1' then exists(select 1 from science_events e where
+    case when f.policy in ('trial-fluency-v1','trial-fluency-v2-feedback') then exists(select 1 from science_events e where
       (e.visitor_id=f.visitor_id or (f.user_id is not null and e.user_id=f.user_id)) and e.event_name='site_visit'
       and e.created_at>=f.started_at+interval '24 hours' and e.created_at<=f.started_at+interval '7 days') end revisited
   from first_trial f cross join settings s
   where f.started_at>=s.starts_from and f.started_at<s.observed_at
-), measurement as (
-  select c.id, count(*) answered, avg(i.predicted) mean_predicted,
-    avg((i.predicted between .75 and .85)::int) target_fraction,
-    avg((i.selection_reason like '%nearest-probability-fallback%')::int) range_fallback_fraction,
-    avg(i.is_repeat::int) repeat_fraction
+), issued_measurement as (
+  select c.id, i.predicted, i.selection_reason, i.is_repeat,
+    case c.policy when 'trial-fluency-v1' then .75 when 'trial-fluency-v2-feedback'
+      then (regexp_match(i.selection_reason,'target=([0-9]+[.][0-9]+)[.][.]([0-9]+[.][0-9]+)'))[1]::numeric end target_min,
+    case c.policy when 'trial-fluency-v1' then .85 when 'trial-fluency-v2-feedback'
+      then (regexp_match(i.selection_reason,'target=([0-9]+[.][0-9]+)[.][.]([0-9]+[.][0-9]+)'))[2]::numeric end target_max
   from cohort c join science_issued i on i.attempt_id=c.id
   join science_answers a on a.attempt_id=i.attempt_id and a.ordinal=i.ordinal
   where a.selected_index is not null and a.answered_at<=c.started_at+interval '7 days'
-  group by c.id
+), measurement as (
+  select id, count(*) answered, count(predicted) predicted_answers, avg(predicted) mean_predicted,
+    count(*) filter(where predicted is not null and target_min is not null and target_max is not null) target_answers,
+    avg((predicted between target_min and target_max)::int) target_fraction,
+    avg((selection_reason like '%probability-fallback%')::int) range_fallback_fraction,
+    avg((selection_reason like '%easier-probability-fallback%')::int) easier_fallback_fraction,
+    avg(is_repeat::int) repeat_fraction
+  from issued_measurement group by id
 )
 select c.policy,c.route_group,c.release_id,c.model_version,
   count(*) starters,count(*) filter(where c.mature) mature_starters,
@@ -47,14 +55,16 @@ select c.policy,c.route_group,c.release_id,c.model_version,
   count(*) filter(where c.mature and c.next_exam) next_exams_7d,
   count(*) filter(where c.mature and c.verified) verified_7d,
   count(*) filter(where c.mature and c.verified and c.consented) registrations_7d,
-  case when c.policy='trial-fluency-v1' then count(*) filter(where c.mature and c.revisited) end revisits_7d,
+  case when c.policy in ('trial-fluency-v1','trial-fluency-v2-feedback') then count(*) filter(where c.mature and c.revisited) end revisits_7d,
   count(*) filter(where c.mature and c.completed and not c.needs_recalculation and c.result->>'low' is not null and c.result->>'high' is not null) precision_sample,
   avg((c.result->>'high')::numeric-(c.result->>'low')::numeric)
     filter(where c.mature and c.completed and not c.needs_recalculation) mean_total_interval_width,
   sum(m.answered) filter(where c.mature) measured_answers,
-  sum(m.mean_predicted*m.answered) filter(where c.mature)/nullif(sum(m.answered) filter(where c.mature),0) mean_predicted,
-  sum(m.target_fraction*m.answered) filter(where c.mature)/nullif(sum(m.answered) filter(where c.mature),0) target_fraction,
+  sum(m.mean_predicted*m.predicted_answers) filter(where c.mature)/nullif(sum(m.predicted_answers) filter(where c.mature),0) mean_predicted,
+  sum(m.target_answers) filter(where c.mature) target_measured_answers,
+  sum(m.target_fraction*m.target_answers) filter(where c.mature)/nullif(sum(m.target_answers) filter(where c.mature),0) target_fraction,
   sum(m.range_fallback_fraction*m.answered) filter(where c.mature)/nullif(sum(m.answered) filter(where c.mature),0) range_fallback_fraction,
+  sum(m.easier_fallback_fraction*m.answered) filter(where c.mature)/nullif(sum(m.answered) filter(where c.mature),0) easier_fallback_fraction,
   sum(m.repeat_fraction*m.answered) filter(where c.mature)/nullif(sum(m.answered) filter(where c.mature),0) repeat_fraction
 from cohort c left join measurement m on m.id=c.id
 group by c.policy,c.route_group,c.release_id,c.model_version

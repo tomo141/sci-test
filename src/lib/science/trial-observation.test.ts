@@ -13,13 +13,14 @@ it("keeps 7-day maturity, consent, return visits and missing precision separate"
       create table science_events(id serial,dedupe_key text,payload jsonb,visitor_id text,user_id text,event_name text,created_at timestamptz);
       create table science_issued(attempt_id text,ordinal int,predicted float,selection_reason text,is_repeat boolean);
       create table science_answers(attempt_id text,ordinal int,selected_index int,answered_at timestamptz);
-      insert into science_visitors values('v1','A'),('v2','A'),('v3','A'),('v4','A');
+      insert into science_visitors values('v1','A'),('v2','A'),('v3','A'),('v4','A'),('v5','A');
       insert into science_attempts(id,visitor_id,user_id,kind,started_at,completed_at,state,definition,release_id,model_version,result) values
        ('new','v1','u1','trial',now()-interval '10 days',now()-interval '9 days','completed','{"selectionPolicy":"trial-fluency-v1"}','r1','p70','{"low":400,"high":600}'),
        ('young','v2','u2','trial',now()-interval '2 days',now()-interval '1 day','completed','{"selectionPolicy":"trial-fluency-v1"}','r1','p70','{"low":450,"high":550}'),
        ('old','v3',null,'trial',now()-interval '10 days',null,'abandoned','{}','r1','p70',null),
        ('existing','v4','u4','trial',now()-interval '10 days',null,'abandoned','{}','r1','p70',null),
-       ('next','v1','u1','full',now()-interval '9 days',null,'active','{}','r1','p70',null);
+       ('next','v1','u1','full',now()-interval '9 days',null,'active','{}','r1','p70',null),
+       ('feedback','v5',null,'trial',now()-interval '10 days',now()-interval '9 days','completed','{"selectionPolicy":"trial-fluency-v2-feedback"}','r1','p70','{"low":300,"high":700}');
       insert into science_profiles values('u1',now()-interval '9 days'),('u2',now()-interval '1 day'),('u4',now()-interval '20 days');
       insert into science_events(payload,visitor_id,user_id,event_name,created_at) values
        ('{}','v1','u1','email_verified',now()-interval '9 days'),
@@ -28,6 +29,10 @@ it("keeps 7-day maturity, consent, return visits and missing precision separate"
        ('{}','v1','u1','site_visit',now()-interval '8 days');
       insert into science_issued values('new',0,.80,'trial-fluency-v1:short-in-range',false),('new',1,.68,'trial-fluency-v1:nearest-probability-fallback',true),('new',2,.81,'trial-fluency-v1:short-in-range',false);
       insert into science_answers values('new',0,1,now()-interval '9 days'),('new',1,2,now()-interval '9 days');
+      insert into science_issued values('feedback',0,.9,'trial-fluency-v2-feedback:short-in-range:target=0.8200..0.9200:feedback=6/10:',false),
+        ('feedback',1,.88,'trial-fluency-v2-feedback:easier-probability-fallback:target=0.7000..0.8000:feedback=9/10:',false),
+        ('feedback',2,.8,'missing-target-fixture',false);
+      insert into science_answers values('feedback',0,1,now()-interval '9 days'),('feedback',1,2,now()-interval '9 days'),('feedback',2,0,now()-interval '9 days');
     `);
     const rows = (await db.query<Record<string, unknown>>(readFileSync("implementation/operations/observe-trial-fluency.sql", "utf8"))).rows;
     const trial = rows.find(r => r.policy === "trial-fluency-v1")!;
@@ -36,6 +41,10 @@ it("keeps 7-day maturity, consent, return visits and missing precision separate"
     expect(Number(trial.mean_total_interval_width)).toBe(200);
     expect(Number(trial.mean_predicted)).toBeCloseTo(.74);
     expect(Number(trial.target_fraction)).toBe(.5);
+    const feedback = rows.find(r => r.policy === "trial-fluency-v2-feedback")!;
+    expect(Number(feedback.target_measured_answers)).toBe(2);
+    expect(Number(feedback.target_fraction)).toBe(.5);
+    expect(Number(feedback.easier_fallback_fraction)).toBeCloseTo(1/3);
     expect(rows.find(r => r.policy === "measurement-v1")).toMatchObject({starters:1,revisits_7d:null,mean_total_interval_width:null,measured_answers:null});
   } finally { await db.close(); }
 }, 15000);

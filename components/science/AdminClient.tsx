@@ -6,6 +6,7 @@ import { useCallback,useEffect,useState } from "react";
 import { AppButton } from "@/components/ui/AppButton";
 import { CorrectionEditor } from "./CorrectionEditor";
 import { ExperimentTable } from "./ExperimentTable";
+import { ExperienceSurveyAdmin } from "./ExperienceSurveyAdmin";
 import { AppCard } from "@/components/ui/AppCard";
 import { scienceApi, type RequestError } from "@/src/lib/science/client";
 import type { AdminData } from "@/src/lib/science/admin";
@@ -47,6 +48,7 @@ export function AdminClient(){
     {error&&<AppCard className="mt-5"><p role="alert">{error}</p><div className="mt-4 flex gap-3"><AppButton onClick={()=>void load()}>再読み込み</AppButton><AppButton href="/login?next=%2Fadmin" variant="secondary">ログイン</AppButton></div></AppCard>}
     {data&&<><p className="mt-4 text-sm">実DBの全期間の件数。取得時刻 {new Date(data.observedAt).toLocaleString("ja-JP")}</p><div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{data.metrics.map(m=><AppCard key={m.label}><h2 className="text-sm">{m.label}</h2><p className="mt-3 text-3xl font-black">{m.value}</p></AppCard>)}</div>
       <ExperimentTable experiment={data.experiment}/>
+      <ExperienceSurveyAdmin/>
       {data.repeats && data.repeats.length > 0 && <AppCard className="mt-6 border-amber-300 bg-amber-50"><div role="alert"><h2 className="text-xl font-black">未見問題の不足による再出題があります</h2><p className="mt-3 text-sm leading-7">ともよしさんの運営アカウントだけに表示しています。再出題も受験スコアに含めています。答えの記憶で高く出る可能性があるため、該当分野の問題追加を検討してください。再出題の回答は問題難度の自動学習から除外します。</p></div><ul className="mt-4 grid gap-3 text-sm">{data.repeats.map(r=><li key={r.attempt_id}><p className="font-bold">{r.domains}：再出題 {r.repeat_count} / 提示済み {r.presented_count}問（{Math.round(100*r.repeat_count/r.presented_count)}%）</p><p className="mt-1 break-all">受験 {r.attempt_id} · {r.kind} · 最大{r.max_presentation_count}回目 · 最終 {new Date(r.last_repeat_at).toLocaleString("ja-JP")}</p></li>)}</ul><p className="mt-3 text-xs">新しい順に最大30受験。一般の受験・結果・共有ページには表示しません。</p></AppCard>}
       <MailConnection/>
       <h2 className="mt-10 text-2xl font-black">自動で見つかった確認候補</h2><p className="mt-3 text-sm leading-7">出題された人のデータ内での傾向です。集団全体の正答率や、誤問の確定ではありません。期限を過ぎた問題は出題対象から外れます。その他の候補は根拠を確認して判断します。</p><div className="mt-5 grid gap-5">{data.quality.map(q=><QualityCard key={q.id} signal={q} reload={load}/>)}{!data.quality.length&&<p>未解決の確認候補はありません。検知を実行した時刻と件数は下の実行履歴で確認できます。</p>}</div>

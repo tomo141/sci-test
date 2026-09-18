@@ -2,7 +2,7 @@ import { MODEL_VERSION } from "./versions";
 import type { ScienceDomain } from "@/src/lib/data/taxonomy";
 import { expectedScoreVarianceReduction, posterior, type Parameters, type Response } from "./model";
 import type { ExamDefinition } from "./definition";
-import { TRIAL_POLICY, trialPool, type ReadingLoad } from "./trial-policy";
+import { TRIAL_POLICY, TRIAL_TARGET, isFluencyPolicy, trialPool, trialTarget, type ReadingLoad } from "./trial-policy";
 
 export type Candidate = Parameters & { revisionId: string; familyId: string; domain: ScienceDomain; authorId: string | null; focus: boolean; anchor: boolean; exposures: number; trustWeight?:number; seenCount?: number; reading?: ReadingLoad };
 
@@ -23,7 +23,8 @@ export function selectCandidate(candidates: Candidate[], answers: Response[], ex
     return { candidate, ...metrics };
   }).sort((a, b) => b.gain - a.gain || a.candidate.revisionId.localeCompare(b.candidate.revisionId));
   if (!scored.length) return null;
-  const trial = exam.kind === "trial" && exam.selectionPolicy === TRIAL_POLICY ? trialPool(scored) : null;
+  const feedback = exam.kind === "trial" && exam.selectionPolicy === TRIAL_POLICY ? trialTarget(answers) : null;
+  const trial = exam.kind === "trial" && isFluencyPolicy(exam.selectionPolicy) ? trialPool(scored, feedback ?? TRIAL_TARGET, !!feedback) : null;
   const pool = trial?.pool ?? scored;
   // Exploration stays inside the adopted trial pool. Its conditional probability is recorded.
   const best = pool.slice(0, 8);
@@ -34,7 +35,7 @@ export function selectCandidate(candidates: Candidate[], answers: Response[], ex
   let roll = Math.min(1 - Number.EPSILON, Math.max(0, random()));
   let index = weights.length - 1;
   for (let i = 0; i < weights.length; i++) { roll -= weights[i]; if (roll < 0) { index = i; break; } }
-  return { ...pool[index], selectionProbability: weights[index], reason: `${leastSeen > 0 ? "repeat-fallback-v1:" : ""}${trial ? `${TRIAL_POLICY}:${trial.tier}:` : ""}posterior-variance+balanced-quota+focus-exploration:${exam.kind === "trial" ? "history-equal-v1" : "attempt-only-v1"}`, candidateCount: pool.length };
+  return { ...pool[index], selectionProbability: weights[index], reason: `${leastSeen > 0 ? "repeat-fallback-v1:" : ""}${trial ? `${exam.selectionPolicy}:${trial.tier}:` : ""}${feedback ? `target=${feedback.min.toFixed(4)}..${feedback.max.toFixed(4)}:feedback=${feedback.correct}/${feedback.count}:` : ""}posterior-variance+balanced-quota+focus-exploration:${exam.kind === "trial" ? "history-equal-v1" : "attempt-only-v1"}`, candidateCount: pool.length, target: feedback };
 }
 
 export function hasCapacity(candidates: Candidate[], exam: ExamDefinition) {
